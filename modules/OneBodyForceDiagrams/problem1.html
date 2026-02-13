@@ -529,6 +529,20 @@ function getCanvasPos(e) {
   };
 }
 
+function startExercise() {
+  if (forceNumber >= 0) return; // already started
+  forceNumber = 0;
+  userPosX = tailPosX;
+  userPosY = tailPosY;
+  forceX = 0;
+  forceY = 0;
+  showForceMessage(forceNumber);
+  redrawUserDraw();
+}
+
+// Clicking the message panel starts the exercise
+document.getElementById("messagePanel").addEventListener("click", startExercise);
+
 userDraw.addEventListener("mousedown", function(e) {
   if (gameOver) {
     // Restart
@@ -536,21 +550,13 @@ userDraw.addEventListener("mousedown", function(e) {
     return;
   }
 
-  var pos = getCanvasPos(e);
-
   if (forceNumber < 0) {
-    // Initial click: start the first force
-    forceNumber = 0;
-    userPosX = tailPosX;
-    userPosY = tailPosY;
-    forceX = 0;
-    forceY = 0;
-    showForceMessage(forceNumber);
-    redrawUserDraw();
+    startExercise();
     return;
   }
 
   mouseIsDown = true;
+  var pos = getCanvasPos(e);
   userPosX = pos.x;
   userPosY = pos.y;
   forceX = p2fX(userPosX);
