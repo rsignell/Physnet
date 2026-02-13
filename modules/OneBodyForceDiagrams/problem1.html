@@ -1,0 +1,631 @@
+<!doctype html>
+<!--
+  Problem 1: A ball hanging on a string
+  Rewrite of the Java applet HangingBall (Peter Signell, 1997)
+  JavaScript/HTML5 Canvas version, 2026
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 1 - Ball Hanging on a String</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app {
+      display: grid;
+      grid-template-columns: 302px 372px;
+      grid-template-rows: auto auto;
+      gap: 5px;
+      width: 684px;
+      margin: 20px auto;
+      background-color: #c0c0c0;
+      padding: 5px;
+    }
+    /* Problem canvas - top left */
+    #problemPanel {
+      grid-column: 1; grid-row: 1;
+      width: 302px; height: 212px;
+      border: 1px solid black;
+      background: #c0c0c0;
+    }
+    #problemCanvas { display: block; }
+    /* Message area - top right */
+    #messagePanel {
+      grid-column: 2; grid-row: 1;
+      width: 372px; height: 37px;
+      border: 1px solid black;
+      background: #c0c0c0;
+      padding: 6px 7px;
+      font-size: 12px;
+      line-height: 1.6;
+      overflow: hidden;
+    }
+    #messagePanel .blink {
+      animation: blink-text 1s step-end infinite;
+      font-weight: bold;
+    }
+    @keyframes blink-text {
+      0%, 50% { color: blue; }
+      50.01%, 100% { color: #c0c0c0; }
+    }
+    #messagePanel .done-blink {
+      animation: blink-done 1s step-end infinite;
+      font-weight: bold;
+    }
+    @keyframes blink-done {
+      0%, 50% { color: #8b0000; }
+      50.01%, 100% { color: #c0c0c0; }
+    }
+    /* Results panel - bottom left */
+    #resultsPanel {
+      grid-column: 1; grid-row: 2;
+      width: 302px; height: 237px;
+      border: 1px solid black;
+      background: #c0c0c0;
+      padding: 10px;
+      font-size: 13px;
+    }
+    #resultsHeader { color: blue; margin-bottom: 8px; }
+    .result-eq { color: black; font-family: monospace; font-size: 13px; margin: 4px 0; }
+    #resultsTrailer { color: #8b0000; font-weight: bold; margin-top: 8px; display: none; }
+    /* User canvas area - bottom right */
+    #userPanel {
+      grid-column: 2; grid-row: 2;
+      position: relative;
+      width: 372px; height: 402px;
+      border: 1px solid black;
+      background: #c0c0c0;
+    }
+    #userPanel canvas {
+      position: absolute; left: 0; top: 0;
+    }
+    #userBkg { z-index: 0; }
+    #userDraw { z-index: 1; }
+    #equationArea {
+      position: absolute; left: 10px; bottom: 120px;
+      z-index: 2; pointer-events: none;
+      font-family: monospace; font-size: 14px; color: blue;
+    }
+    #doneText {
+      position: absolute; left: 10px; top: 250px;
+      z-index: 2; pointer-events: none;
+      font-size: 16px; font-weight: bold; color: #8b0000;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div id="problemPanel">
+    <canvas id="problemCanvas" width="300" height="210"></canvas>
+  </div>
+
+  <div id="messagePanel">
+    <span id="messageText"></span>
+  </div>
+
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+// ============================================================
+// Problem data (from HangingBall.java with default params)
+// ============================================================
+var problem = {
+  title: "A ball hanging on a string",
+  gForce: 20,
+  thetaDeg: 90,
+  pithHalfW: 14,
+  stringL: 130,
+  originX: 130,
+  originY: 0,
+  units: "N",
+  scale: 1 / 5,       // pixels to force: force = scale * pixels
+  numForces: 3,
+  numEquations: 1,
+  matchForceComps: [1, 1, 1],
+  forceNames: ["resultant", "gravity", "string"],
+  blinkerStrings: ["resultant", "gravity", "string"],
+  messageStrings: ["Mouse-draw the ", " force on the ball:"],
+  // true answers: [forceIndex][coordSystem]
+  truAnsX: [[0], [0], [0]],
+  truAnsY: [[0], [20], [-20]],
+  maxTriesEachForce: 2,
+  pithballColor: "#00cc00"
+};
+
+// Derived values
+var theta = problem.thetaDeg * Math.PI / 180;
+var cost = Math.cos(theta);
+var sint = Math.sin(theta);
+// tail = ball center in user canvas
+var tailPosX = Math.round(problem.originX + problem.stringL * cost);
+var tailPosY = Math.round(problem.originY + problem.stringL * sint);
+// tolerance in force units
+var userTolerance = 5; // pixels
+var forceTolerance = Math.round(problem.scale * userTolerance);
+// true head positions in pixels
+var truHdsX = [], truHdsY = [];
+for (var i = 0; i < problem.numForces; i++) {
+  truHdsX[i] = Math.round(tailPosX + problem.truAnsX[i][0] / problem.scale);
+  truHdsY[i] = Math.round(tailPosY + problem.truAnsY[i][0] / problem.scale);
+}
+
+// Force colors for completed vectors
+var doneColors = ["#444", "#444", "#444"];
+var forceColors = ["yellow", "red", "lime"];
+
+// ============================================================
+// State
+// ============================================================
+var forceNumber = -1;       // -1 = waiting for initial click
+var maxForceNumber = problem.numForces - 1;
+var mouseIsDown = false;
+var userPosX = tailPosX, userPosY = tailPosY;
+var forceX = 0, forceY = 0;
+var triesPerForce = [0, 0, 0];
+var gameOver = false;
+
+// ============================================================
+// Canvas elements and contexts
+// ============================================================
+var problemCanvas = document.getElementById("problemCanvas");
+var ctxProblem = problemCanvas.getContext("2d");
+var userBkg = document.getElementById("userBkg");
+var ctxBkg = userBkg.getContext("2d");
+var userDraw = document.getElementById("userDraw");
+var ctxDraw = userDraw.getContext("2d");
+
+// ============================================================
+// Draw the problem panel (left top)
+// ============================================================
+function drawProblemPanel() {
+  var ctx = ctxProblem;
+  var ps = 0.6; // problem scale
+
+  ctx.fillStyle = "#c0c0c0";
+  ctx.fillRect(0, 0, 300, 210);
+
+  // border
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(0, 0, 300, 210);
+
+  // title
+  ctx.fillStyle = "black";
+  ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+
+  // ceiling
+  var pOriginX = 230 * ps;
+  var pOriginY = 50 * ps;
+  var pCeilHalfL = 100 * ps;
+  var pStringL = 100 * ps;
+  var pAnchorY = pOriginY + pStringL * sint;
+  var pPithHalfW = 14 * ps;
+
+  ctx.beginPath();
+  ctx.moveTo(pOriginX - pCeilHalfL, pOriginY);
+  ctx.lineTo(pOriginX + pCeilHalfL, pOriginY);
+  ctx.stroke();
+
+  // string (vertical for 90 degrees)
+  ctx.beginPath();
+  ctx.moveTo(pOriginX, pOriginY);
+  ctx.lineTo(pOriginX, pAnchorY);
+  ctx.stroke();
+
+  // ball
+  ctx.fillStyle = problem.pithballColor;
+  ctx.beginPath();
+  ctx.arc(pOriginX, pAnchorY, pPithHalfW, 0, 2 * Math.PI);
+  ctx.fill();
+  // center dot
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(pOriginX, pAnchorY, 2, 0, 2 * Math.PI);
+  ctx.fill();
+
+  // weight label
+  ctx.fillStyle = "black";
+  ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText("The ball's weight = " + problem.gForce + " " + problem.units, 50, 140);
+
+  // unit vectors label
+  ctx.fillText("Unit vectors:", 52, 170);
+
+  // draw unit vector arrows
+  ctx.strokeStyle = "blue";
+  ctx.fillStyle = "blue";
+  var uOx = 164, uOy = 175;
+  var lineL = 20, arroL = 7, arroS = 3;
+
+  // j (up)
+  ctx.beginPath();
+  ctx.moveTo(uOx, uOy);
+  ctx.lineTo(uOx, uOy - lineL);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(uOx - arroS, uOy - lineL + arroL);
+  ctx.lineTo(uOx, uOy - lineL);
+  ctx.lineTo(uOx + arroS, uOy - lineL + arroL);
+  ctx.stroke();
+
+  ctx.font = "italic 13px 'Times New Roman', serif";
+  ctx.fillText("j", uOx - 12, uOy - 8);
+  // caret over j
+  drawCaret(ctx, uOx - 12, uOy - 8);
+
+  // i (right)
+  ctx.beginPath();
+  ctx.moveTo(uOx, uOy);
+  ctx.lineTo(uOx + lineL, uOy);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(uOx + lineL - arroL, uOy - arroS);
+  ctx.lineTo(uOx + lineL, uOy);
+  ctx.lineTo(uOx + lineL - arroL, uOy + arroS);
+  ctx.stroke();
+
+  ctx.fillText("i", uOx + lineL + 5, uOy + 3);
+  drawCaret(ctx, uOx + lineL + 5, uOy + 3);
+}
+
+function drawCaret(ctx, x, y) {
+  // draw a small ^ above the character at (x, y)
+  ctx.beginPath();
+  ctx.moveTo(x, y - 14);
+  ctx.lineTo(x + 4, y - 18);
+  ctx.lineTo(x + 8, y - 14);
+  ctx.stroke();
+}
+
+// ============================================================
+// Draw the apparatus on the user canvas background
+// ============================================================
+function drawUserApparatus(ctx) {
+  // string from origin to ball center
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(problem.originX, problem.originY);
+  ctx.lineTo(tailPosX, tailPosY);
+  ctx.stroke();
+
+  // ball
+  ctx.fillStyle = problem.pithballColor;
+  ctx.beginPath();
+  ctx.arc(tailPosX, tailPosY, problem.pithHalfW, 0, 2 * Math.PI);
+  ctx.fill();
+
+  // center dot
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(tailPosX, tailPosY, 2, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+// ============================================================
+// Draw a vector arrow from (tx,ty) to (hx,hy)
+// ============================================================
+function drawVector(ctx, tx, ty, hx, hy, color) {
+  var headHalfWidth = 6;
+  var headLength = 20;
+
+  var dx = hx - tx;
+  var dy = hy - ty;
+  var len = Math.sqrt(dx * dx + dy * dy);
+  if (len < 2) return;
+
+  var offsetFactor = headHalfWidth / len;
+  var shankReduction = headLength / len;
+  if (len < headLength) {
+    offsetFactor = offsetFactor * len / headLength;
+    shankReduction = 1;
+  }
+
+  var shankX = hx - dx * shankReduction;
+  var shankY = hy - dy * shankReduction;
+  var offsetX = dy * offsetFactor;
+  var offsetY = dx * offsetFactor;
+
+  // shaft
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(tx, ty);
+  ctx.lineTo(hx, hy);
+  ctx.stroke();
+
+  // arrowhead
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(Math.round(shankX + offsetX), Math.round(shankY - offsetY));
+  ctx.lineTo(Math.round(shankX - offsetX), Math.round(shankY + offsetY));
+  ctx.lineTo(Math.round(hx), Math.round(hy));
+  ctx.closePath();
+  ctx.fill();
+}
+
+// ============================================================
+// Draw a labeled vector (for completed correct forces)
+// ============================================================
+function drawLabeledVector(ctx, forceIndex) {
+  var hx = truHdsX[forceIndex];
+  var hy = truHdsY[forceIndex];
+  drawVector(ctx, tailPosX, tailPosY, hx, hy, "black");
+
+  // label near the head
+  ctx.fillStyle = "black";
+  ctx.font = "11px Helvetica, Arial, sans-serif";
+  var name = problem.forceNames[forceIndex];
+  var labelX = hx + 8;
+  var labelY = hy + 4;
+  // avoid overlapping labels for zero-length resultant
+  if (forceIndex === 0) { labelX = tailPosX + 12; labelY = tailPosY - 4; }
+  ctx.fillText(name, labelX, labelY);
+}
+
+// ============================================================
+// Format force equation as HTML
+// ============================================================
+function formatEquation(forceName, fx, fy) {
+  // Sign convention: canvas Y is down, physics Y is up
+  // forceY from p2fY is positive downward, but display should show
+  // positive j as up. The Java code shows: fy component with sign flipped for display
+  var dispFy = -fy;
+  var signY = dispFy >= 0 ? " + " : " - ";
+  var absFy = Math.abs(dispFy);
+  return "<b>F</b>(" + forceName + ") = (" + fx + " <i>i</i>\u0302" +
+         signY + absFy + " <i>j</i>\u0302) " + problem.units;
+}
+
+// ============================================================
+// Convert pixel position to force units
+// ============================================================
+function p2fX(px) {
+  return Math.round(problem.scale * (px - tailPosX));
+}
+function p2fY(py) {
+  return Math.round(problem.scale * (py - tailPosY));
+}
+
+// ============================================================
+// Update the equation display
+// ============================================================
+function updateEquation() {
+  if (forceNumber < 0 || forceNumber > maxForceNumber) return;
+  var name = problem.forceNames[forceNumber];
+  document.getElementById("equationArea").innerHTML = formatEquation(name, forceX, forceY);
+}
+
+// ============================================================
+// Update message panel
+// ============================================================
+function setMessage(html) {
+  document.getElementById("messageText").innerHTML = html;
+}
+
+function showForceMessage(forceIndex) {
+  if (forceIndex > maxForceNumber) {
+    setMessage('<span style="color:#8b0000;font-weight:bold">PROBLEM DONE! &nbsp;&nbsp;</span>' +
+               '<span class="done-blink">CLICK BELOW TO RESTART</span>');
+    return;
+  }
+  var name = problem.blinkerStrings[forceIndex];
+  setMessage(problem.messageStrings[0] +
+             '<span class="blink">' + name + '</span>' +
+             problem.messageStrings[1]);
+}
+
+// ============================================================
+// Add a correct force to the results panel
+// ============================================================
+function addResult(forceIndex) {
+  var name = problem.forceNames[forceIndex];
+  var fx = problem.truAnsX[forceIndex][0];
+  var fy = problem.truAnsY[forceIndex][0];
+  var eq = formatEquation(name, fx, fy);
+  var div = document.createElement("div");
+  div.className = "result-eq";
+  div.innerHTML = eq;
+  document.getElementById("resultsList").appendChild(div);
+
+  if (forceIndex === maxForceNumber) {
+    document.getElementById("resultsTrailer").style.display = "block";
+  }
+}
+
+// ============================================================
+// Redraw the user draw canvas (live preview layer)
+// ============================================================
+function redrawUserDraw() {
+  // clear the draw canvas
+  ctxDraw.clearRect(0, 0, 370, 400);
+
+  // draw the apparatus
+  drawUserApparatus(ctxDraw);
+
+  // draw all previously completed vectors
+  for (var i = 0; i < forceNumber; i++) {
+    drawLabeledVector(ctxDraw, i);
+  }
+
+  // draw the current user vector
+  if (forceNumber >= 0 && forceNumber <= maxForceNumber) {
+    drawVector(ctxDraw, tailPosX, tailPosY, userPosX, userPosY, "blue");
+  }
+}
+
+// ============================================================
+// Validate the user's drawn force
+// ============================================================
+function validateForce() {
+  var matchIndex = problem.matchForceComps[forceNumber] - 1;
+  var depX = Math.abs(forceX - problem.truAnsX[forceNumber][matchIndex]);
+  var depY = Math.abs(forceY - problem.truAnsY[forceNumber][matchIndex]);
+
+  if (depX <= forceTolerance && depY <= forceTolerance) {
+    // Correct!
+    // Draw the correct vector permanently on the background
+    drawLabeledVector(ctxBkg, forceNumber);
+
+    // Add to results
+    addResult(forceNumber);
+
+    if (forceNumber < maxForceNumber) {
+      // Advance to next force
+      forceNumber++;
+      triesPerForce[forceNumber] = 0;
+      userPosX = tailPosX;
+      userPosY = tailPosY;
+      forceX = 0;
+      forceY = 0;
+      showForceMessage(forceNumber);
+      updateEquation();
+      redrawUserDraw();
+    } else {
+      // All forces done
+      forceNumber++;
+      document.getElementById("doneText").style.display = "block";
+      document.getElementById("equationArea").innerHTML = "";
+      showForceMessage(forceNumber); // shows "PROBLEM DONE!"
+      redrawUserDraw();
+      gameOver = true;
+    }
+  } else {
+    // Incorrect
+    triesPerForce[forceNumber - 0]++;
+    if (triesPerForce[forceNumber] >= problem.maxTriesEachForce) {
+      // In demo mode (mode 1), just let them keep trying
+      // Reset try counter to allow more attempts
+      triesPerForce[forceNumber] = 0;
+    }
+  }
+}
+
+// ============================================================
+// Mouse event handlers
+// ============================================================
+function getCanvasPos(e) {
+  var rect = userDraw.getBoundingClientRect();
+  return {
+    x: Math.round(e.clientX - rect.left),
+    y: Math.round(e.clientY - rect.top)
+  };
+}
+
+userDraw.addEventListener("mousedown", function(e) {
+  if (gameOver) {
+    // Restart
+    location.reload();
+    return;
+  }
+
+  var pos = getCanvasPos(e);
+
+  if (forceNumber < 0) {
+    // Initial click: start the first force
+    forceNumber = 0;
+    userPosX = tailPosX;
+    userPosY = tailPosY;
+    forceX = 0;
+    forceY = 0;
+    showForceMessage(forceNumber);
+    redrawUserDraw();
+    return;
+  }
+
+  mouseIsDown = true;
+  userPosX = pos.x;
+  userPosY = pos.y;
+  forceX = p2fX(userPosX);
+  forceY = p2fY(userPosY);
+  redrawUserDraw();
+  updateEquation();
+});
+
+userDraw.addEventListener("mousemove", function(e) {
+  if (!mouseIsDown) return;
+  var pos = getCanvasPos(e);
+  userPosX = pos.x;
+  userPosY = pos.y;
+  forceX = p2fX(userPosX);
+  forceY = p2fY(userPosY);
+  redrawUserDraw();
+  updateEquation();
+});
+
+document.addEventListener("mouseup", function(e) {
+  if (!mouseIsDown) return;
+  mouseIsDown = false;
+
+  if (forceNumber >= 0 && forceNumber <= maxForceNumber) {
+    validateForce();
+  }
+});
+
+// Also support touch events for mobile
+userDraw.addEventListener("touchstart", function(e) {
+  e.preventDefault();
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent("mousedown", {
+    clientX: touch.clientX, clientY: touch.clientY
+  });
+  userDraw.dispatchEvent(mouseEvent);
+}, { passive: false });
+
+userDraw.addEventListener("touchmove", function(e) {
+  e.preventDefault();
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent("mousemove", {
+    clientX: touch.clientX, clientY: touch.clientY
+  });
+  userDraw.dispatchEvent(mouseEvent);
+}, { passive: false });
+
+userDraw.addEventListener("touchend", function(e) {
+  e.preventDefault();
+  var mouseEvent = new MouseEvent("mouseup", {});
+  document.dispatchEvent(mouseEvent);
+}, { passive: false });
+
+// ============================================================
+// Initialize
+// ============================================================
+function init() {
+  drawProblemPanel();
+
+  // Draw initial apparatus on background
+  drawUserApparatus(ctxBkg);
+
+  // Draw border on user canvas
+  ctxBkg.strokeStyle = "black";
+  ctxBkg.lineWidth = 1;
+  ctxBkg.strokeRect(0, 0, 370, 400);
+
+  // Initial message
+  setMessage('Look left at data and unit vectors. <span class="blink">Then Click Here.</span>');
+
+  // Initial apparatus on draw layer too
+  drawUserApparatus(ctxDraw);
+}
+
+init();
+</script>
+</body>
+</html>
