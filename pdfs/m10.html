@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MISN-0-10: One-Body Diagrams and Contact Forces</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --accent: #2c6fbb;
+    --bg: #fafafa;
+    --text: #222;
+    --border: #ccc;
+    --sidebar-bg: #f0f4f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  header {
+    text-align: center;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  header .project {
+    font-size: 0.85rem;
+    color: #666;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  header h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 0.5rem 0 0.25rem;
+  }
+  header .authors {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+  }
+  header .module-id {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  nav.toc {
+    background: var(--sidebar-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  nav.toc h2 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.75rem; }
+  nav.toc ol { padding-left: 1.25rem; }
+  nav.toc li { margin-bottom: 0.3rem; }
+  nav.toc a { color: var(--accent); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.25rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  p { margin-bottom: 1rem; }
+  ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+
+  .id-sheet {
+    background: var(--sidebar-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.92rem;
+  }
+  .id-sheet h3 { margin-top: 0; }
+  .id-sheet dt { font-weight: bold; }
+  .id-sheet dd { margin-left: 1rem; margin-bottom: 0.5rem; }
+
+  .figure {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    text-align: center;
+    max-width: 28rem;
+  }
+  .figure svg { max-width: 100%; height: auto; }
+  .figure .caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  .example {
+    background: #fdf8ee;
+    border-left: 4px solid #d4a843;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    border-radius: 0 6px 6px 0;
+  }
+  .example strong { color: #8a6b1e; }
+
+  .rule {
+    background: #eef4fb;
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    border-radius: 0 6px 6px 0;
+  }
+  .rule strong { color: var(--primary); }
+
+  .equations {
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+  .eq-table {
+    margin: 0.5rem auto;
+    border-collapse: collapse;
+  }
+  .eq-table td {
+    padding: 0.15rem 0.5rem;
+    vertical-align: middle;
+  }
+  .eq-table td:nth-child(2) { text-align: center; }
+
+  .supplement {
+    background: #f5f0fa;
+    border: 1px solid #d4c4e8;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 2rem;
+  }
+  .supplement h3 { color: #5b3a8a; }
+
+  .problem {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .problem h4 { color: var(--accent); margin-bottom: 0.5rem; }
+
+  .answer {
+    background: #f0f8f0;
+    border-left: 4px solid #4a9;
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+  }
+
+  details { margin: 0.75rem 0; }
+  details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border);
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    header h1 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="project">Project PHYSNET &middot; Michigan State University</div>
+  <div class="module-id">MISN-0-10</div>
+  <h1>One-Body Diagrams and Contact Forces</h1>
+  <div class="authors">
+    by Harry G. Dulaney, Georgia Institute of Technology,
+    and Peter Signell, Michigan State University
+  </div>
+</header>
+
+<div class="id-sheet">
+  <h3>Module Information</h3>
+  <dl>
+    <dt>Version:</dt><dd>10/26/2001</dd>
+    <dt>Length:</dt><dd>1 hr; 24 pages</dd>
+    <dt>Input Skills:</dt>
+    <dd>State Newton's laws of motion and apply them to problems involving constant forces acting on one particle traveling in one dimension (MISN-0-14, MISN-0-15).</dd>
+    <dt>Output Skills (Knowledge):</dt>
+    <dd><strong>K1.</strong> Vocabulary: contact force, non-contact force, surface force, resultant force.</dd>
+    <dt>Output Skills (Rule Application):</dt>
+    <dd><strong>R1.</strong> Given a non-rotating object on a linear trajectory, or two such objects connected by a string or rope, possibly over a pulley, and given the information on the acceleration of the object and all forces except a surface force, determine the magnitude and direction of the surface force:
+      <ol style="margin-top:0.5rem" type="a">
+        <li>Draw a one-body diagram for each object showing the given forces, clearly labeled. Resolve those forces into components with one axis along the direction of acceleration and draw those components on another one-body force diagram.</li>
+        <li>Write Newton's second law in component form for the known forces and the resultant force.</li>
+        <li>Solve for the unknown surface force and add it to the original one-body force diagram.</li>
+      </ol>
+    </dd>
+  </dl>
+</div>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#sec1">Introduction</a></li>
+    <li><a href="#sec2">Identifying, Representing Forces</a></li>
+    <li><a href="#sec3">Drawing a One-Body Force Diagram</a></li>
+    <li><a href="#sec4">Complete Example Solutions</a></li>
+    <li><a href="#sec5">Connected Bodies</a></li>
+    <li><a href="#problems">Problem Supplement</a></li>
+    <li><a href="#assistance">Special Assistance Supplement</a></li>
+    <li><a href="#exam">Model Exam</a></li>
+  </ol>
+</nav>
+
+<!-- ============================================================ -->
+<h2 id="sec1">1. Introduction</h2>
+
+<h3>1a. Overview</h3>
+<p>In this module we help you develop understandings and techniques that are useful in almost any problem in science and engineering where forces are involved, as well as being useful for understanding every-day phenomena. To keep the new understandings and techniques in focus, we will illustrate them with a single type of problem:</p>
+<ul>
+  <li>Given the mass and acceleration of an object, and all but one of the forces acting on it, determine that unknown force.</li>
+</ul>
+<p>For this purpose, one must use Newton's second law.</p>
+
+<h3>1b. Mass, Acceleration, Resultant Force</h3>
+<p>Given an object's mass \(m\) and acceleration \(\vec{a}\), Newton's second law gives the resultant force on the object:</p>
+\[ m\,\vec{a} = \vec{F}_R \]
+<p>where the resultant force on an object, \(\vec{F}_R\), is defined as the sum of all forces which are acting on that object. Mathematically,</p>
+\[ \vec{F}_R = \sum \vec{F}_i \]
+<p>where the sum is over all of the forces \(\vec{F}_i\), \(i = 1, 2, 3, \ldots\) acting on the object.</p>
+
+<h3>1c. Solving Unknown Force Problems</h3>
+<p>To solve the problem of determining an unknown force that is acting on an object we concentrate our attention on that object, call it "object A." Our first task is to determine all of the other objects that are exerting forces on object A and record the characteristics of each of those forces. We do this by making a stylized sketch of object A and adding a labeled vector to the sketch for each force, as we identify it, showing its approximate direction and magnitude. In this manner we draw the vectors for all of the forces acting on object A except for the vector representing the unknown force. Then we merely see what force vector we need to draw so that all of the forces acting on A, including the unknown one, add to the right resultant. The resultant is the force required by Newton's second law (remember that the object's mass and acceleration are given in the type of problem we are considering). We then add the necessary force vector to the diagram and it is the approximate answer.</p>
+<p>To find the precise direction and magnitude of the unknown force, we use the sketch as a guide and solve the component versions of Newton's second law. Finally, we check the precise answer against the approximate answer that we drew on the diagram.</p>
+
+<h3>1d. Straight-line Trajectories, No Explicit Friction</h3>
+<p>In this module we restrict ourselves to treating objects that are following straight-line trajectories and that are not rotating. In addition, we do not consider frictional forces explicitly but simply consider them as hidden parts of the forces exerted on the objects through surfaces with which the objects are in contact. Frictional forces are separated out from surface forces elsewhere. Despite the restrictions imposed in this module, the understandings and techniques we develop here have much wider applicability.</p>
+
+<!-- ============================================================ -->
+<h2 id="sec2">2. Identifying, Representing Forces</h2>
+
+<h3>2a. Identifying Forces</h3>
+<p>The forces acting on an object can be grouped into two categories according to the nature of the interaction involved:</p>
+<ul>
+  <li><strong>Non-contact ("action at a distance") forces:</strong> These forces do not require direct physical contact. The only non-contact force we will deal with is the gravitational force of the earth on the object (its "weight"), directed toward the center of the earth.</li>
+  <li><strong>Contact ("surface") forces:</strong> These forces are exerted on the object by other objects that are in direct physical contact with it. Each object that touches the object of interest exerts a contact force on it.</li>
+</ul>
+
+<h3>2b. Avoid Common Errors</h3>
+<p>Here are some rules:</p>
+
+<div class="rule">
+  <strong>Rule 1:</strong> While identifying the forces acting on an object, include only forces for which you can identify the other objects that exert those forces. For each force that you include, you must be able to answer the question, "What other object exerts that force on the object we are examining?"
+</div>
+
+<div class="example">
+  <strong>Example:</strong> A satellite moves in a circular orbit about the earth (Figure 1). How many forces act on the satellite (assuming the atmosphere is so thin at this altitude that it can be neglected)? There is certainly one non-contact "action at a distance" force: the gravitational force of the earth on the satellite. Since nothing is in contact with the satellite, there are no contact forces. <strong>Final answer:</strong> only one force acting on the satellite &mdash; the non-contact gravitational force.
+</div>
+
+<div class="figure">
+  <svg width="200" height="200" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="40" fill="#b3d4fc" stroke="#2c6fbb" stroke-width="2"/>
+    <text x="100" y="105" text-anchor="middle" font-size="12" fill="#1a3a5c">Earth</text>
+    <circle cx="100" cy="25" r="8" fill="#888" stroke="#333" stroke-width="1.5"/>
+    <ellipse cx="100" cy="100" rx="75" ry="75" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="5,4"/>
+    <line x1="100" y1="33" x2="100" y2="58" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="red"/></marker></defs>
+    <text x="115" y="50" font-size="11" fill="red">\(\vec{F}_g\)</text>
+  </svg>
+  <div class="caption">Figure 1. A satellite orbiting the earth. Only the gravitational force acts on it.</div>
+</div>
+
+<div class="example">
+  <strong>Example:</strong> A skier skis down a steep incline (Figure 2). How many forces act on the skier, neglecting air resistance? First, there is the non-contact gravitational force of the earth on the skier (the skier's "weight") and the contact force of the incline on the skier. The incline is the only thing touching the skier so it exerts the only contact force present. <strong>Final answer:</strong> two forces &mdash; the incline contact force and the gravitational non-contact force.
+</div>
+
+<div class="figure">
+  <svg width="280" height="180" viewBox="0 0 280 180">
+    <polygon points="20,160 260,160 260,40" fill="#e8e0d0" stroke="#999" stroke-width="1.5"/>
+    <rect x="180" y="60" width="25" height="25" fill="#5588bb" stroke="#336" stroke-width="1.5" transform="rotate(-26.5, 192, 72)"/>
+    <line x1="192" y1="72" x2="192" y2="120" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="200" y="110" font-size="11" fill="red">gravity</text>
+    <line x1="192" y1="72" x2="165" y2="42" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <defs><marker id="arrowB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="blue"/></marker></defs>
+    <text x="140" y="38" font-size="11" fill="blue">surface</text>
+  </svg>
+  <div class="caption">Figure 2. A skier on an incline with two forces: gravity and the surface contact force.</div>
+</div>
+
+<div class="rule">
+  <strong>Rule 2:</strong> Include only external forces acting on the object. Omit internal forces, those that are acting only between different parts of the object itself.
+</div>
+
+<div class="example">
+  <strong>Example:</strong> An automobile accelerates along a level road (Figure 3). Neglecting air resistance, how many forces act on the entire auto? Two: the non-contact gravitational force of the earth on the car (its "weight") and the contact force of the road on the car (this force is divided among the four wheels). Do not include the force of the engine on the rest of the car. This is an internal force so it is not to be included in Newton's second law for the car. Only external forces exerted on the car by other objects in its environment can be included when solving for the motion of the entire car.
+</div>
+
+<div class="rule">
+  <strong>Rule 3:</strong> Include only forces exerted <em>on</em> the object. Omit forces exerted <em>by</em> it on other objects.
+</div>
+
+<div class="example">
+  <strong>Example:</strong> A block is suspended by a rope from the ceiling of an elevator that is accelerating vertically upward (Figure 4). How many forces act on the block? Two: the non-contact gravitational force of the earth on the block and the contact force of the rope on the block. Do not include the force of the block on the rope or the force of the elevator on the rope. These forces do not act directly on the block. In order to apply Newton's second law to an object, you must mentally isolate the object and consider only those forces acting directly on the object.
+</div>
+
+<div class="figure">
+  <svg width="140" height="200" viewBox="0 0 140 200">
+    <rect x="30" y="20" width="80" height="160" fill="none" stroke="#999" stroke-width="1.5" rx="4"/>
+    <text x="70" y="15" text-anchor="middle" font-size="10" fill="#666">elevator</text>
+    <line x1="70" y1="40" x2="70" y2="100" stroke="#555" stroke-width="2"/>
+    <rect x="55" y="100" width="30" height="30" fill="#5588bb" stroke="#336" stroke-width="1.5"/>
+    <text x="70" y="120" text-anchor="middle" font-size="11" fill="white">m</text>
+    <line x1="70" y1="115" x2="70" y2="160" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="85" y="150" font-size="11" fill="red">gravity</text>
+    <line x1="70" y1="100" x2="70" y2="65" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="85" y="80" font-size="11" fill="blue">rope</text>
+    <line x1="115" y1="100" x2="115" y2="70" stroke="green" stroke-width="2" marker-end="url(#arrowG)"/>
+    <defs><marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="green"/></marker></defs>
+    <text x="125" y="80" font-size="10" fill="green">\(\vec{a}\)</text>
+  </svg>
+  <div class="caption">Figure 4. Block suspended by rope in an accelerating elevator.</div>
+</div>
+
+<div class="rule">
+  <strong>Rule 4:</strong> Use common sense in reaching conclusions about the nature of particular forces. For instance, do not assume that the force of the elevator on the block (through the rope) cancels the weight of the person. If that were so, the person would have zero resultant force and zero acceleration. This cannot be true, since the person has the same acceleration as the elevator.
+</div>
+
+<p><strong>Avoid the temptation to use intuition to guess answers.</strong> Instead, work through the entire problem systematically, letting numerical values for unknowns come from the simultaneous solution of sets of equations. Then seek intuitive support for the answer.</p>
+
+<h3 id="sec2c">2c. Example: A Pulled Sled</h3>
+<p>A sled is pulled at constant speed along a horizontal surface by means of a rope, as shown in Figure 6. Determine the forces that act on the sled and draw a one-body diagram showing those forces.</p>
+<p>As usual, the non-contact gravitational force of the earth acts on the sled and is directed downward (toward the center of the earth). In addition, two objects (the rope and the snow surface) touch the sled and hence exert contact forces on the sled. Thus there are three forces on the sled: one non-contact force and two contact forces. Our knowledge of ropes tells us that the force of the rope on the sled is along the direction of the rope. The acceleration of the sled is zero ("constant speed") so the resultant force is zero. Then the force of the snow surface on the sled must be such that all three forces add to zero.</p>
+
+<div class="figure">
+  <svg width="320" height="140" viewBox="0 0 320 140">
+    <rect x="20" y="100" width="280" height="20" fill="#e8e8e8" stroke="#999" stroke-width="1"/>
+    <text x="160" y="135" text-anchor="middle" font-size="11" fill="#999">snow surface</text>
+    <rect x="80" y="70" width="80" height="30" fill="#c5853a" stroke="#8a5c1e" stroke-width="1.5" rx="3"/>
+    <text x="120" y="90" text-anchor="middle" font-size="12" fill="white">sled</text>
+    <line x1="160" y1="80" x2="240" y2="50" stroke="#555" stroke-width="2"/>
+    <text x="210" y="45" font-size="11" fill="#555">rope</text>
+    <text x="255" y="52" font-size="11" fill="#555">37&deg;</text>
+  </svg>
+  <div class="caption">Figure 6. A sled pulled at constant speed by a rope at 37&deg; to the horizontal.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="sec3">3. Drawing a One-Body Force Diagram</h2>
+
+<h3>3a. Overview</h3>
+<p>When we start working on a problem involving forces acting on an object, we almost always draw a "one-body force diagram," so called because the diagram shows all of the forces acting on one body. If more than one object is involved, we draw a separate force diagram for each object. The diagrams we draw are somewhat stylized, in that we almost always draw the object as a rectangle. In addition, we draw the forces as though they were all exerted at the same point on the object, usually taken as the "center of mass" of the object.</p>
+<p><em>Note: In current physics this is universally called a "free-body force diagram." We do not use that term because in current physics the term "free body" universally means a body on which no forces are acting.</em></p>
+
+<h3>3b. The Component Diagram</h3>
+<p>Once the one-body force diagram has been drawn, the forces on it must be broken down into component forces. This is because Newton's second law is a vector equation, so it can be expressed as a separate equation for each of the components. That is generally the form one needs for solution of the problem. The orientation of the coordinate axes, usually called the x- and y-axes, is free to be chosen by the problem solver and it is usually chosen on the basis of what would make solution easier. We urge you to draw the force components on a separate diagram right next to the force diagram, with coordinate axes drawn and labeled.</p>
+
+<h3>3c. Orienting the Coordinate System</h3>
+<p>Choose one axis to be along the direction of the object's acceleration. This way Newton's second law will usually produce the simplest possible set of component equations.</p>
+
+<h3>3d. The Diagram Action Point</h3>
+<p>For the type of problem we are considering, the diagram action point is at the center of mass of the object. All force vectors are drawn starting from this point.</p>
+
+<!-- ============================================================ -->
+<h2 id="sec4">4. Complete Example Solutions</h2>
+
+<h3>4a. A Pulled Sled</h3>
+<p>See the sled in <a href="#sec2c">Section 2c</a> (Figure 6). The sled weighs 16 lb and is pulled at constant speed by a 5.0 lb rope force at 37&deg; above the horizontal. We need to find the surface force.</p>
+
+<div class="figure">
+  <svg width="220" height="220" viewBox="0 0 220 220">
+    <rect x="80" y="90" width="50" height="50" fill="#ddd" stroke="#666" stroke-width="1.5"/>
+    <!-- gravity -->
+    <line x1="105" y1="115" x2="105" y2="185" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="115" y="180" font-size="11" fill="red">gravity</text>
+    <!-- rope force -->
+    <line x1="105" y1="115" x2="155" y2="80" stroke="green" stroke-width="2" marker-end="url(#arrowG)"/>
+    <text x="145" y="73" font-size="11" fill="green">rope</text>
+    <!-- surface force -->
+    <line x1="105" y1="115" x2="70" y2="50" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="40" y="48" font-size="11" fill="blue">surface</text>
+    <!-- angle labels -->
+    <text x="125" y="105" font-size="10" fill="green">&theta;</text>
+    <text x="85" y="98" font-size="10" fill="blue">&phi;</text>
+  </svg>
+  <div class="caption">Figure 7. One-body force diagram for the sled showing all three forces.</div>
+</div>
+
+<p>We orient the coordinate system with \(\hat{x}\) to the right (parallel to the snow surface) and \(\hat{y}\) upward. We resolve the known forces into components:</p>
+
+<div class="equations">
+<table class="eq-table">
+  <tr><td>\(F_{\text{rope},x}\)</td><td>=</td><td>\(F_{\text{rope}}\cos\theta = 5.0\,\text{lb}\,\cos 37° = 4.0\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{rope},y}\)</td><td>=</td><td>\(F_{\text{rope}}\sin\theta = 5.0\,\text{lb}\,\sin 37° = 3.0\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{gravity},x}\)</td><td>=</td><td>\(0\)</td></tr>
+  <tr><td>\(F_{\text{gravity},y}\)</td><td>=</td><td>\(-W = -16\,\text{lb}\)</td></tr>
+</table>
+</div>
+
+<p>By Newton's second law both the x- and y-components of the resultant force must be zero (for this zero-acceleration case) so we add in the right amount of surface force to make those resultant components zero:</p>
+
+<div class="equations">
+<table class="eq-table">
+  <tr><td>\(F_{\text{surface},x}\)</td><td>=</td><td>\(-4.0\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{surface},y}\)</td><td>=</td><td>\(13\,\text{lb}\)</td></tr>
+</table>
+</div>
+
+<p>The angle and magnitude of the surface force:</p>
+\[ \phi = \tan^{-1}\!\left(\frac{13\,\text{lb}}{-4.0\,\text{lb}}\right) = 107° \]
+\[ F_{\text{surface}} = \sqrt{(-4.0\,\text{lb})^2 + (13\,\text{lb})^2} = 13.6\,\text{lb} \approx 14\,\text{lb} \]
+
+<p>This angle and magnitude checks against the approximate value drawn earlier in the one-body force diagram.</p>
+
+<h3>4b. The Sled with Acceleration</h3>
+<p>Suppose the sled is accelerating at \(a = 8.0\,\text{ft/s}^2\,\hat{x}\). The mass of the sled is:</p>
+\[ m = \frac{W}{g} = \frac{16\,\text{lb}}{32\,\text{ft/s}^2} = 0.50\,\text{lb}\,\text{s}^2/\text{ft} \]
+<p>Then the resultant force must be \(\vec{F}_R = m\vec{a} = 4.0\,\text{lb}\,\hat{x}\).</p>
+
+<p>Looking at the previous case where the resultant force was zero, we must add the new \(\vec{F}_R\) to the surface force so that the result of adding all the forces equals the new non-zero resultant. The surface force is now at an angle of 90° with a magnitude of 13 lb.</p>
+
+<div class="figure">
+  <svg width="220" height="220" viewBox="0 0 220 220">
+    <rect x="80" y="90" width="50" height="50" fill="#ddd" stroke="#666" stroke-width="1.5"/>
+    <!-- gravity -->
+    <line x1="105" y1="115" x2="105" y2="185" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="115" y="180" font-size="11" fill="red">gravity</text>
+    <!-- rope force -->
+    <line x1="105" y1="115" x2="155" y2="80" stroke="green" stroke-width="2" marker-end="url(#arrowG)"/>
+    <text x="145" y="73" font-size="11" fill="green">rope</text>
+    <!-- surface force (now straight up) -->
+    <line x1="105" y1="115" x2="105" y2="50" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="115" y="55" font-size="11" fill="blue">surface</text>
+  </svg>
+  <div class="caption">Figure 9/10. With acceleration, the surface force is now purely vertical (90&deg;).</div>
+</div>
+
+<h3>4c. Block on Incline</h3>
+<p>A block weighing 98 N is at rest on a 37° incline. Our job is to determine the surface force on the block.</p>
+<p>The forces acting on the block are two: the non-contact force of gravity and the contact force exerted on the block by the surface of the incline. The gravity force is \(F_{\text{gravity}} = -98\,\text{N}\,\hat{y}\) and the resultant is zero (the block is "at rest") so the force exerted on the block by the incline surface must be \(F_{\text{surface}} = +98\,\text{N}\,\hat{y}\).</p>
+
+<div class="figure">
+  <svg width="280" height="200" viewBox="0 0 280 200">
+    <polygon points="20,180 260,180 260,60" fill="#e8e0d0" stroke="#999" stroke-width="1.5"/>
+    <rect x="170" y="85" width="35" height="35" fill="#5588bb" stroke="#336" stroke-width="1.5" transform="rotate(-26.5, 187, 102)"/>
+    <line x1="187" y1="102" x2="187" y2="160" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="197" y="148" font-size="11" fill="red">gravity</text>
+    <line x1="187" y1="102" x2="187" y2="44" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="197" y="52" font-size="11" fill="blue">surface</text>
+    <text x="230" y="175" font-size="12" fill="#666">37&deg;</text>
+  </svg>
+  <div class="caption">Figure 11. A block at rest on an inclined plane. The surface force exactly balances gravity.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="sec5">5. Connected Bodies</h2>
+
+<h3>5a. Introduction</h3>
+<p>A type of problem frequently encountered which deserves special consideration involves two or more bodies that are coupled together by contact or by a rope or by a pole. Such bodies are constrained to move together and will have equal magnitudes of acceleration.</p>
+<p>If the connection is a rope, we can often neglect the weight of the rope since that force is small compared to the forces exerted at the ends of the rope. Now the forces acting on the ends of the rope are in opposite directions so their (vector) sum is just the difference of their magnitudes. By Newton's second law that difference is just the rope's mass times its acceleration. If we consider the rope's mass to be too small to be important, then the rope will always have equal magnitudes of force on its two ends. That is what we almost always assume in determining approximate solutions.</p>
+
+<h3>5b. Connected Blocks: One on Incline, One Hanging</h3>
+<p>Consider the system shown in Figure 12. A block weighing 16 lb is on a 37° incline and is attached to an inextensible massless rope which passes over a frictionless pulley to a second block that weighs 20 lb. The hanging block is accelerating downward at 8 ft/s&sup2;. Our problem is to determine the surface force acting on the block that is on the incline.</p>
+
+<div class="figure">
+  <svg width="300" height="220" viewBox="0 0 300 220">
+    <!-- incline -->
+    <polygon points="20,200 200,200 200,60" fill="#e8e0d0" stroke="#999" stroke-width="1.5"/>
+    <!-- block on incline -->
+    <rect x="130" y="100" width="30" height="30" fill="#5588bb" stroke="#336" stroke-width="1.5" transform="rotate(-36, 145, 115)"/>
+    <text x="110" y="95" font-size="10" fill="#336">16 lb</text>
+    <!-- pulley -->
+    <circle cx="210" cy="50" r="12" fill="none" stroke="#666" stroke-width="2"/>
+    <!-- rope -->
+    <line x1="155" y1="105" x2="200" y2="52" stroke="#555" stroke-width="1.5"/>
+    <line x1="222" y1="52" x2="240" y2="52" stroke="#555" stroke-width="0.5"/>
+    <line x1="240" y1="52" x2="240" y2="130" stroke="#555" stroke-width="1.5"/>
+    <!-- hanging block -->
+    <rect x="225" y="130" width="30" height="30" fill="#bb5555" stroke="#633" stroke-width="1.5"/>
+    <text x="240" y="175" text-anchor="middle" font-size="10" fill="#633">20 lb</text>
+    <text x="180" y="195" font-size="12" fill="#666">37&deg;</text>
+  </svg>
+  <div class="caption">Figure 12. Two blocks connected by a string over a pulley.</div>
+</div>
+
+<p>Since the rope is massless, it will have equal forces on its two ends. This means we can solve for the rope force on the hanging block and that will be the rope force on the incline block. We draw one-body force diagrams for each block separately.</p>
+
+<div class="figure">
+  <svg width="400" height="180" viewBox="0 0 400 180">
+    <!-- Block 2 (hanging) -->
+    <rect x="50" y="60" width="40" height="40" fill="#bb5555" stroke="#633" stroke-width="1.5"/>
+    <text x="70" y="85" text-anchor="middle" font-size="10" fill="white">Block 2</text>
+    <line x1="70" y1="60" x2="70" y2="20" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="80" y="25" font-size="10" fill="blue">rope</text>
+    <line x1="70" y1="100" x2="70" y2="150" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="80" y="145" font-size="10" fill="red">gravity</text>
+    <text x="70" y="170" text-anchor="middle" font-size="10" fill="#666">(b) Block 2</text>
+    <!-- Block 1 (incline) -->
+    <rect x="250" y="60" width="40" height="40" fill="#5588bb" stroke="#336" stroke-width="1.5"/>
+    <text x="270" y="85" text-anchor="middle" font-size="10" fill="white">Block 1</text>
+    <line x1="270" y1="60" x2="300" y2="25" stroke="blue" stroke-width="2" marker-end="url(#arrowB)"/>
+    <text x="310" y="30" font-size="10" fill="blue">rope</text>
+    <line x1="270" y1="100" x2="270" y2="150" stroke="red" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="282" y="145" font-size="10" fill="red">gravity</text>
+    <line x1="270" y1="80" x2="225" y2="50" stroke="purple" stroke-width="2" marker-end="url(#arrowP)"/>
+    <defs><marker id="arrowP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="purple"/></marker></defs>
+    <text x="210" y="42" font-size="10" fill="purple">surface</text>
+    <text x="270" y="170" text-anchor="middle" font-size="10" fill="#666">(a) Block 1</text>
+  </svg>
+  <div class="caption">Figure 13. One-body force diagrams: (a) Block 1 on incline; (b) Block 2 hanging.</div>
+</div>
+
+<p>From the one-body force diagram for the hanging block: the resultant force (\(\vec{F}_R = m\vec{a}\)) is 5 lb downward and the gravity force is 20 lb (given) downward. Then the rope force must be 15 lb upward.</p>
+
+<p>Now we break the gravity force on the incline block into components along axes parallel and perpendicular to the incline:</p>
+
+<div class="equations">
+<table class="eq-table">
+  <tr><td>\(F_{\text{gravity},x}\)</td><td>=</td><td>\(W\sin 37° = -9.6\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{gravity},y}\)</td><td>=</td><td>\(W\cos 37° = -12.8\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{rope},x}\)</td><td>=</td><td>\(15\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{rope},y}\)</td><td>=</td><td>\(0\)</td></tr>
+  <tr><td>\(F_{R,x}\)</td><td>=</td><td>\(ma_x = 4.0\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{R,y}\)</td><td>=</td><td>\(ma_y = 0\)</td></tr>
+</table>
+</div>
+
+<p>Now gravity + rope + surface = resultant, so:</p>
+
+<div class="equations">
+<table class="eq-table">
+  <tr><td>\(F_{\text{surface},x}\)</td><td>=</td><td>\(-1.4\,\text{lb}\)</td></tr>
+  <tr><td>\(F_{\text{surface},y}\)</td><td>=</td><td>\(12.8\,\text{lb}\)</td></tr>
+</table>
+</div>
+
+<p>Then the surface force on the incline block is <strong>13 lb at an angle of 96° from the positive x-axis</strong>.</p>
+
+<!-- ============================================================ -->
+<h2>Acknowledgments</h2>
+<p>Preparation of this module was supported in part by the National Science Foundation, Division of Science Education Development and Research, through Grant #SED 74-20088 to Michigan State University.</p>
+
+<!-- ============================================================ -->
+<h2 id="problems">Problem Supplement</h2>
+
+<p><strong>Important Note:</strong> Make each problem have these three separate parts:</p>
+<ol type="a">
+  <li>Draw a one-body diagram with the forces "as given";</li>
+  <li>Draw a diagram similar to the one in part (a), but with the forces now represented only by their components, where one axis is along the direction of acceleration and the axes are labeled;</li>
+  <li>Write Newton's second-law equations for the force components and solve for the components of the unknown force. Convert the answer components to magnitude and angle-to-the-acceleration direction.</li>
+</ol>
+
+<div class="problem">
+  <h4>Problem 1</h4>
+  <p>A 5.0 kg block is accelerating up a 37° incline at 3.0 m/s&sup2; by an applied force \(\vec{P}\) of 50.0 N. Note that \(\vec{P}\) is at an angle of 74° to the horizontal. Determine the surface force exerted on the block by the incline.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p>\(F_{\text{gravity},x} = -29.49\,\text{N}\); \(F_{\text{gravity},y} = -39.1\,\text{N}\)</p>
+      <p>\(F_{P,x} = 39.93\,\text{N}\); \(F_{P,y} = 30.09\,\text{N}\)</p>
+      <p>\(F_{R,x} = ma_x = 15\,\text{N}\); \(F_{R,y} = ma_y = 0\)</p>
+      <p><strong>\(F_{\text{surface}} = 1.0 \times 10^1\,\text{N}\); \(\theta_{\text{surface}} = 63°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<div class="problem">
+  <h4>Problem 2</h4>
+  <p>A 32 pound child rides on a 16 pound sled. The child and sled are pushed across a horizontal surface by a force \(\vec{P}\) of 50.0 lb applied to the child at 37° below the horizontal. The acceleration is 2.0 ft/s&sup2;. Determine the force of the ground on the sled.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p>\(F_{\text{gravity},x} = 0\); \(F_{\text{gravity},y} = -48\,\text{lb}\)</p>
+      <p>\(F_{P,x} = 4.0 \times 10^1\,\text{lb}\); \(F_{P,y} = -3.0 \times 10^1\,\text{lb}\)</p>
+      <p>\(F_{R,x} = ma_x = 3.0\,\text{lb}\); \(F_{R,y} = ma_y = 0\)</p>
+      <p><strong>\(F_{\text{surface}} = 86\,\text{lb}\); \(\theta_{\text{surface}} = 115°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<div class="problem">
+  <h4>Problem 3</h4>
+  <p>A bob with a mass of 1.0 kg is suspended by a rope from the ceiling of a monorail car. As the car accelerates at 3.6 m/s&sup2; it is observed that the rope makes some angle \(\theta\) measured clockwise from the downward vertical. Determine the (vector) surface force of the rope on the bob.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p>\(F_{\text{gravity},x} = 0\); \(F_{\text{gravity},y} = -9.8\,\text{N}\)</p>
+      <p>\(F_{R,x} = ma_x = 3.6\,\text{N}\); \(F_{R,y} = ma_y = 0\)</p>
+      <p><strong>\(F_{\text{surface}} = 1.0 \times 10^1\,\text{N}\); \(\theta_{\text{surface}} = 200°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<div class="problem">
+  <h4>Problem 4</h4>
+  <p>A 160 pound skier is pulled up a 23° slope by a rope tow. The tension in the rope is \(1.0 \times 10^2\) pounds. The skier's acceleration is 5.0 ft/s&sup2;. Determine the force of the slope on the skier.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p>\(F_{\text{gravity},x} = -62.5\,\text{lb}\); \(F_{\text{gravity},y} = -147.3\,\text{lb}\)</p>
+      <p>\(F_{\text{rope},x} = 100\,\text{lb}\); \(F_{\text{rope},y} = 0\)</p>
+      <p>\(F_{R,x} = ma_x = 25\,\text{lb}\); \(F_{R,y} = ma_y = 0\)</p>
+      <p><strong>\(F_{\text{surface}} = 148\,\text{lb}\); \(\theta_{\text{surface}} = 95°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<div class="problem">
+  <h4>Problem 5</h4>
+  <p>An airplane climbs upward in a direction 53° above the horizontal. At the particular instant illustrated, the acceleration of the plane is 24 ft/sec&sup2; and is parallel to the direction of the velocity. Determine the (surface) force of the plane on the 160 pound pilot.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p>\(F_{\text{gravity},x} = -127.8\,\text{lb}\); \(F_{\text{gravity},y} = -96.3\,\text{lb}\)</p>
+      <p>\(F_{R,x} = ma_x = 120\,\text{lb}\); \(F_{R,y} = ma_y = 0\)</p>
+      <p><strong>\(F_{\text{surface}} = 266\,\text{lb}\); \(\theta_{\text{surface}} = 21°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<div class="problem">
+  <h4>Problem 6</h4>
+  <p>A 16 ton truck has a deceleration of 8.0 ft/s&sup2; as it coasts up a flat 14.5° grade. Determine the force of the road on the truck.</p>
+  <details>
+    <summary>Show Answer</summary>
+    <div class="answer">
+      <p><strong>\(F_{\text{surface}} = 16\,\text{tons}\); \(\theta_{\text{surface}} = 90°\)</strong></p>
+    </div>
+  </details>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="assistance">Special Assistance Supplement</h2>
+
+<div class="supplement">
+  <h3>S-1 (from Section 4a)</h3>
+  <p>If you have trouble with sine, cosine, and/or tangent functions, study the trigonometry section in "Math Review," MISN-0-401 or study the relevant section in any high school trigonometry book.</p>
+
+  <h3>S-2 (from Section 5b)</h3>
+  <p>A rope can be treated just like any other object. If it has mass, then the difference between the magnitudes of the forces at its two ends is just \(ma\) for the rope. If the mass of the rope is negligible, then the difference between the magnitudes of the forces at its two ends is negligible.</p>
+
+  <h3>S-3 (from Section 5b)</h3>
+  <p>
+    \(F_{\text{surface}} = \sqrt{(1.4\,\text{lb})^2 + (12.8\,\text{lb})^2} = 13\,\text{lb}\)
+  </p>
+  <p>
+    \(\phi_{\text{surface}} = \tan^{-1}\!\left(\frac{12.8\,\text{lb}}{-1.4\,\text{lb}}\right) = -84°\) or \(96°\)
+    (all arctangents have a 2-quadrant ambiguity: use other information to deduce which is the right answer).
+  </p>
+
+  <h3>S-10 (from Section 4a)</h3>
+  <p>If you got \(-73°\) then you have run into the "ambiguous quadrant" problem and you must do further work. Calculators generally give the arctangent of a positive number as being between 0° and 90° (first quadrant), although the actual angle may be in either the first or the third quadrant. They give the arctangent of a negative number as being between 0° and \(-90°\) (fourth quadrant), although the actual angle may be in either the second or the fourth quadrant. To resolve either of these "quadrant ambiguities," you must also examine the signs of the x- and y-coordinates of a point at the angle in question.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="exam">Model Exam</h2>
+
+<p><strong>Important Note:</strong> Make each problem have these three separate parts:</p>
+<ol type="a">
+  <li>Draw a one-body diagram with the forces "as given";</li>
+  <li>Draw a diagram similar to the one in part (a), but with the forces now represented only by their components, where one axis is along the direction of acceleration and the axes are labeled;</li>
+  <li>Write Newton's second-law equations for the force components and solve for the components of the unknown force. Convert the answer components to magnitude and angle-to-the-acceleration direction.</li>
+</ol>
+
+<div class="problem">
+  <h4>Exam Problem 1</h4>
+  <p>An airplane climbs upward in a direction 53° above the horizontal. At the particular instant illustrated, the acceleration of the plane is 24 ft/sec&sup2; and is parallel to the direction of the velocity. Determine the (surface) force of the plane on the 160 pound pilot.</p>
+  <p><em>See Problem Supplement, Problem 5 for the answer.</em></p>
+</div>
+
+<div class="problem">
+  <h4>Exam Problem 2</h4>
+  <p>A 16 ton truck has a deceleration of 8.0 ft/s&sup2; as it coasts up a flat 14.5° grade. Determine the force of the road on the truck.</p>
+  <p><em>See Problem Supplement, Problem 6 for the answer.</em></p>
+</div>
+
+<footer>
+  <p>&copy; 2001, Peter Signell for Project PHYSNET, Physics-Astronomy Bldg., Michigan State University, East Lansing, MI 48824.</p>
+  <p>This is a developmental-stage publication of Project PHYSNET.</p>
+</footer>
+
+</body>
+</html>
