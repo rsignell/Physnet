@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: string;
+}
+
+const {
+  title,
+  description = 'Project PHYSNET – A modular physics curriculum for undergraduates.',
+  activePage = '',
+} = Astro.props;
+
+const b = import.meta.env.BASE_URL; // '/Physnet/'
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | PHYSNET</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href={`${b}favicon.svg`} />
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href={b} class="logo">PHYSNET <span>Project Physics Network</span></a>
+      <a href={b}          class={`nav-link ${activePage === 'home'        ? 'active' : ''}`}>Catalog</a>
+      <a href={`${b}interactive/`} class={`nav-link ${activePage === 'interactive' ? 'active' : ''}`}>Interactive</a>
+      <a href="https://physnet.org" class="nav-link" target="_blank" rel="noopener">physnet.org ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <p>Project PHYSNET &bull; Michigan State University &bull;
+      Content by Peter Signell and contributors &bull;
+      <a href="https://physnet.org/modules/license.html" target="_blank" rel="noopener">License</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import { SUBJECTS, PHYSNET_PDF_BASE } from '../data/modules.js';
+
+const b = import.meta.env.BASE_URL;
+const totalModules = SUBJECTS.reduce((n, s) => n + s.modules.length, 0);
+---
+<Base title="PHYSNET – Physics Module Catalog" activePage="home">
+  <!-- Hero -->
+  <section class="hero">
+    <h1>PHYSNET</h1>
+    <p class="subtitle">Project Physics Network</p>
+    <p class="desc">
+      A comprehensive modular physics curriculum developed at Michigan State University.
+      Each module is a self-contained unit covering one topic, with text, problems,
+      and interactive exercises.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">{totalModules}</div>
+        <div class="stat-label">Modules</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{SUBJECTS.length}</div>
+        <div class="stat-label">Subject Areas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Interactive Widget</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#catalog" class="btn btn-primary">Browse Catalog</a>
+      <a href={`${b}interactive/`} class="btn btn-secondary">Interactive Tools</a>
+    </div>
+  </section>
+
+  <!-- Subject quick-nav -->
+  <div class="subject-nav" id="catalog">
+    {SUBJECTS.map(s => (
+      <a href={`#${s.id}`} class="subject-pill" style={`--subject-color: ${s.color}`}>
+        {s.name}
+      </a>
+    ))}
+  </div>
+
+  <!-- Module catalog by subject -->
+  {SUBJECTS.map(subject => (
+    <section class="subject-section" id={subject.id}>
+      <div class="subject-heading">
+        <span class="subject-dot" style={`background: ${subject.color}`}></span>
+        <h2>{subject.name}</h2>
+        <span class="subject-count">{subject.modules.length} modules</span>
+      </div>
+
+      <div class="module-grid">
+        {subject.modules.map(mod => (
+          <div class="module-card">
+            <div class="module-card-top">
+              <span class="module-id" style={`--subject-color: ${subject.color}`}>{mod.id}</span>
+              <span class="module-title">{mod.title}</span>
+            </div>
+            <div class="module-actions">
+              <a
+                href={`${PHYSNET_PDF_BASE}/${mod.id}.pdf`}
+                class="badge badge-pdf"
+                target="_blank"
+                rel="noopener"
+                title="Download PDF"
+              >
+                ↓ PDF
+              </a>
+              {mod.hasHtml && (
+                <a href={`${b}modules/${mod.id}/`} class="badge badge-html">
+                  ⊞ HTML
+                </a>
+              )}
+              {mod.hasInteractive && (
+                <a href={`${b}interactive/force-diagrams/`} class="badge badge-interactive">
+                  ▶ Interactive
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>

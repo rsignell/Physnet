@@ -1,0 +1,135 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const b = import.meta.env.BASE_URL;
+---
+<Base title="Interactive Tools" activePage="interactive">
+  <div class="page-header">
+    <h1>Interactive Tools</h1>
+    <p>Browser-based exercises that let students explore and master physics concepts.</p>
+  </div>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-icon">⃗F</div>
+      <div class="tool-body">
+        <h2><a href={`${b}interactive/force-diagrams/`}>One-Body Force Diagrams</a></h2>
+        <p class="tool-desc">
+          Practice drawing free-body diagrams for various physical scenarios — hanging
+          balls, blocks on inclines, pulley systems, and more. Draw each force vector
+          with your mouse; the exercise checks your direction and magnitude.
+        </p>
+        <div class="tool-meta">
+          <span class="tool-tag">Module m10</span>
+          <span class="tool-tag">12 problems</span>
+          <span class="tool-tag avail">1 of 12 available</span>
+        </div>
+        <a href={`${b}interactive/force-diagrams/`} class="btn btn-blue">Open Exercise →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="coming-soon">
+    <h2>Coming Soon</h2>
+    <p>
+      Additional interactive exercises are being developed for other PHYSNET modules.
+      The original Java applets are being rewritten as modern browser components.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .tool-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    box-shadow: var(--shadow);
+  }
+  .tool-icon {
+    font-size: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-light);
+    border-radius: var(--radius);
+    flex-shrink: 0;
+    color: var(--blue);
+    font-family: Georgia, serif;
+    font-weight: bold;
+  }
+  .tool-body h2 {
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .tool-body h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .tool-body h2 a:hover { color: var(--blue); }
+  .tool-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .tool-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .tool-tag {
+    font-family: system-ui, sans-serif;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+  .tool-tag.avail {
+    background: #dcfce7;
+    border-color: #bbf7d0;
+    color: #166534;
+  }
+  .btn-blue {
+    display: inline-block;
+    font-family: system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    background: var(--blue);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .btn-blue:hover { opacity: 0.85; }
+  .coming-soon {
+    background: var(--bg);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+  }
+  .coming-soon h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  @media (max-width: 500px) {
+    .tool-card { flex-direction: column; }
+  }
+</style>

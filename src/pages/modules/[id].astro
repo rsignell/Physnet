@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SUBJECTS, MODULE_MAP, PHYSNET_PDF_BASE } from '../../data/modules.js';
+
+export function getStaticPaths() {
+  return SUBJECTS.flatMap(s =>
+    s.modules.map(m => ({ params: { id: m.id } }))
+  );
+}
+
+const { id } = Astro.params;
+const mod = MODULE_MAP[id];
+const b = import.meta.env.BASE_URL;
+---
+<Base title={mod.title} description={`PHYSNET module ${id}: ${mod.title}`}>
+  <div class="page-header">
+    <nav class="breadcrumb">
+      <a href={b}>Catalog</a>
+      <span>›</span>
+      <a href={`${b}#${mod.subjectId}`}>{mod.subject}</a>
+      <span>›</span>
+      <span>{id.toUpperCase()}</span>
+    </nav>
+    <h1>{mod.title}</h1>
+    <p class="module-meta">
+      Module {id.toUpperCase()} &bull; {mod.subject}
+    </p>
+  </div>
+
+  <div class="module-actions-bar">
+    <a
+      href={`${PHYSNET_PDF_BASE}/${id}.pdf`}
+      class="action-btn"
+      target="_blank"
+      rel="noopener"
+    >
+      ↓ Download PDF
+    </a>
+    {mod.hasInteractive && (
+      <a href={`${b}interactive/force-diagrams/`} class="action-btn action-btn-purple">
+        ▶ Interactive Exercise
+      </a>
+    )}
+  </div>
+
+  {mod.hasHtml ? (
+    <div class="content-placeholder">
+      <p>HTML content for this module is being prepared from the LaTeX source.</p>
+    </div>
+  ) : (
+    <div class="no-html-notice">
+      <div class="notice-icon">📄</div>
+      <h2>PDF Only</h2>
+      <p>
+        This module is currently available as a PDF only. HTML versions are being
+        generated from the original LaTeX source files.
+      </p>
+      <a
+        href={`${PHYSNET_PDF_BASE}/${id}.pdf`}
+        class="action-btn"
+        target="_blank"
+        rel="noopener"
+      >
+        Open PDF on physnet.org ↗
+      </a>
+    </div>
+  )}
+</Base>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: system-ui, sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+  .breadcrumb a { color: var(--blue); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .module-meta {
+    font-family: system-ui, sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+  .module-actions-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .action-btn {
+    display: inline-block;
+    font-family: system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.55rem 1.25rem;
+    background: var(--blue);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .action-btn:hover { opacity: 0.85; }
+  .action-btn-purple { background: #7c3aed; }
+  .no-html-notice {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  .notice-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .no-html-notice h2 {
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .no-html-notice p {
+    color: var(--text-muted);
+    font-size: 0.925rem;
+    margin-bottom: 1.5rem;
+  }
+  .content-placeholder {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    color: #92400e;
+    font-family: system-ui, sans-serif;
+    font-size: 0.875rem;
+  }
+</style>
