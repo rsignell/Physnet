@@ -10,7 +10,7 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 const mod = MODULE_MAP[id];
-const b = import.meta.env.BASE_URL;
+const b = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title={mod.title} description={`PHYSNET module ${id}: ${mod.title}`}>
   <div class="page-header">
