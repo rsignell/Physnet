@@ -1,0 +1,125 @@
+<!doctype html>
+<!--
+  Problem 3: Horizontally accelerating person (3 forces: resultant, gravity, surface)
+  PersonHorizD class, Peter Signell 1997
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 4 - Person Pushed Horizontally</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app { display:grid; grid-template-columns:302px 372px; grid-template-rows:auto auto; gap:5px; width:684px; margin:20px auto; background-color:#c0c0c0; padding:5px; }
+    #problemPanel { grid-column:1; grid-row:1; width:302px; height:212px; border:1px solid black; background:#c0c0c0; }
+    #problemCanvas { display:block; }
+    #messagePanel { grid-column:2; grid-row:1; width:372px; height:37px; border:1px solid black; background:#c0c0c0; padding:6px 7px; font-size:12px; line-height:1.6; overflow:hidden; cursor:pointer; }
+    #messagePanel .blink { animation:blink-text 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-text { 0%,50%{color:blue} 50.01%,100%{color:#c0c0c0} }
+    #messagePanel .done-blink { animation:blink-done 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-done { 0%,50%{color:#8b0000} 50.01%,100%{color:#c0c0c0} }
+    #resultsPanel { grid-column:1; grid-row:2; width:302px; height:237px; border:1px solid black; background:#c0c0c0; padding:10px; font-size:13px; }
+    #resultsHeader { color:blue; margin-bottom:8px; }
+    .result-eq { color:black; font-family:monospace; font-size:13px; margin:4px 0; }
+    #resultsTrailer { color:#8b0000; font-weight:bold; margin-top:8px; display:none; }
+    #userPanel { grid-column:2; grid-row:2; position:relative; width:372px; height:402px; border:1px solid black; background:#c0c0c0; }
+    #userPanel canvas { position:absolute; left:0; top:0; }
+    #userBkg{z-index:0;} #userDraw{z-index:1;}
+    #equationArea { position:absolute; left:10px; bottom:120px; z-index:2; pointer-events:none; font-family:monospace; font-size:14px; color:blue; }
+    #doneText { position:absolute; left:10px; top:250px; z-index:2; pointer-events:none; font-size:16px; font-weight:bold; color:#8b0000; display:none; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="problemPanel"><canvas id="problemCanvas" width="300" height="210"></canvas></div>
+  <div id="messagePanel"><span id="messageText"></span></div>
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+<script>
+"use strict";
+
+// ---- Problem data: PersonHorizD ("00","16","10") ----
+// theta=0, gForce=16, mA=10
+// phi = atan(10/16), cosp=0.8480, sinp=0.5299
+var gF=16, mA=10;
+var phi = Math.atan2(mA, gF);
+var cosp = Math.cos(phi), sinp = Math.sin(phi);
+var problem = {
+  title: "Horizontally accelerating person",
+  gForce: gF, mA: mA, thetaDeg: 0,
+  units: "N", scale: 1/5,
+  numForces: 3, numEquations: 1,
+  matchForceComps: [1, 1, 1],
+  forceNames: ["resultant", "gravity", "surface"],
+  blinkerStrings: ["resultant", "gravity", "surface"],
+  messageStrings: ["Mouse-draw the ", " force on the person:"],
+  truAnsX: [[mA], [0], [mA]],
+  truAnsY: [[0],  [gF], [-gF]],
+  tailPosX: 146, tailPosY: 110,
+  cost: 1, sint: 0,
+  maxTriesEachForce: 2
+};
+
+// Leaning person (phi angle from vertical)
+function drawLeaningPerson(ctx, uOX, uOY, cosp, sinp, yOffset) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  lPlot(ctx, uOX, uOY, Math.round(-8*sinp), Math.round(-8*cosp), Math.round(14*sinp), Math.round(14*cosp));  // torso
+  cPlot(ctx, uOX, uOY, Math.round(20*sinp), Math.round(20*cosp), 6);  // head
+  fcPlot(ctx, uOX, uOY, Math.round(20*sinp+4), Math.round(20*cosp+2), 1);  // eye
+  fcPlot(ctx, uOX, uOY, 0, 0, 2);  // c.g.
+  // forward leg
+  lPlot(ctx, uOX, uOY, Math.round(-8*sinp), Math.round(-8*cosp), 12, -4);
+  lPlot(ctx, uOX, uOY, 12, -4, 12, -14);
+  lPlot(ctx, uOX, uOY, 12, -14, 15, -12);
+  // back leg
+  lPlot(ctx, uOX, uOY, Math.round(-8*sinp), Math.round(-8*cosp), Math.round(-22*sinp), Math.round(-22*cosp));
+  lPlot(ctx, uOX, uOY, Math.round(-22*sinp), Math.round(-22*cosp), Math.round(-yOffset*sinp/cosp-8), Math.round(-yOffset));
+}
+
+function drawProblemPanel() {
+  var ctx = document.getElementById("problemCanvas").getContext("2d");
+  var ps = 0.6;
+  ctx.fillStyle = "#c0c0c0"; ctx.fillRect(0,0,300,210);
+  ctx.strokeStyle = "black"; ctx.lineWidth=1; ctx.strokeRect(0,0,300,210);
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+
+  var pOriginX = 62*ps, pOriginY = 190*ps; // 37.2, 114
+  var inclineL = 160;
+  ctx.beginPath(); ctx.moveTo(pOriginX, pOriginY); ctx.lineTo(pOriginX+inclineL, pOriginY); ctx.stroke();
+
+  var xOffset = 0.4*inclineL; var yOffset = 26; // theta=0
+  var uOX = Math.round(pOriginX + xOffset);  // 101
+  var uOY = Math.round(pOriginY - yOffset);  // 88
+  drawLeaningPerson(ctx, uOX, uOY, cosp, sinp, yOffset);
+
+  var eqnX = 10, eqnY = 140;
+  ctx.fillStyle = "black"; ctx.font = "12px Helvetica, Arial, sans-serif";
+  ctx.fillText("Person's weight = " + problem.gForce + " " + problem.units, eqnX, eqnY);
+  ctx.fillText("Person's mass\u00d7accel = " + problem.mA + " \u00ee " + problem.units, eqnX, eqnY + 18);
+  ctx.fillText("Unit vectors:", eqnX + 2, eqnY + 40);
+  drawIJArrows(ctx, eqnX + 114, eqnY + 55);
+}
+
+function drawUserApparatus(ctx) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  var yOffset = 26;
+  drawLeaningPerson(ctx, problem.tailPosX, problem.tailPosY, cosp, sinp, yOffset);
+  // ground line (theta=0)
+  lPlot(ctx, problem.tailPosX, problem.tailPosY, 0,-26, Math.round(0.3*160), -26);
+  lPlot(ctx, problem.tailPosX, problem.tailPosY, 0,-26, Math.round(-0.2*160), -26);
+}
+</script>
+<script src="engine.js"></script>
+</body>
+</html>

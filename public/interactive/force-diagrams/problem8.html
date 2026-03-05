@@ -1,0 +1,129 @@
+<!doctype html>
+<!--
+  Problem 8: Accelerating person on inclined plane (4 forces, 2 coord systems)
+  PersonIncliD class, Peter Signell 1997
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 9 - Person on Incline (Dynamic)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app { display:grid; grid-template-columns:302px 372px; grid-template-rows:auto auto; gap:5px; width:684px; margin:20px auto; background-color:#c0c0c0; padding:5px; }
+    #problemPanel { grid-column:1; grid-row:1; width:302px; height:212px; border:1px solid black; background:#c0c0c0; }
+    #problemCanvas { display:block; }
+    #messagePanel { grid-column:2; grid-row:1; width:372px; height:37px; border:1px solid black; background:#c0c0c0; padding:6px 7px; font-size:12px; line-height:1.6; overflow:hidden; cursor:pointer; }
+    #messagePanel .blink { animation:blink-text 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-text { 0%,50%{color:blue} 50.01%,100%{color:#c0c0c0} }
+    #messagePanel .done-blink { animation:blink-done 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-done { 0%,50%{color:#8b0000} 50.01%,100%{color:#c0c0c0} }
+    #resultsPanel { grid-column:1; grid-row:2; width:302px; height:237px; border:1px solid black; background:#c0c0c0; padding:10px; font-size:13px; }
+    #resultsHeader { color:blue; margin-bottom:8px; }
+    .result-eq { color:black; font-family:monospace; font-size:13px; margin:4px 0; }
+    #resultsTrailer { color:#8b0000; font-weight:bold; margin-top:8px; display:none; }
+    #userPanel { grid-column:2; grid-row:2; position:relative; width:372px; height:402px; border:1px solid black; background:#c0c0c0; }
+    #userPanel canvas { position:absolute; left:0; top:0; }
+    #userBkg{z-index:0;} #userDraw{z-index:1;}
+    #equationArea { position:absolute; left:10px; bottom:100px; z-index:2; pointer-events:none; font-family:monospace; font-size:13px; color:blue; }
+    #doneText { position:absolute; left:10px; top:250px; z-index:2; pointer-events:none; font-size:16px; font-weight:bold; color:#8b0000; display:none; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="problemPanel"><canvas id="problemCanvas" width="300" height="210"></canvas></div>
+  <div id="messagePanel"><span id="messageText"></span></div>
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+<script>
+"use strict";
+
+// ---- Problem data: PersonIncliD ("23","20","10") ----
+var thetaDeg = 23, gF = 20, mA = 10;
+var theta = thetaDeg * Math.PI / 180;
+var cost = Math.cos(theta), sint = Math.sin(theta);
+
+var problem = {
+  title: "Accelerating person on inclined plane",
+  gForce: gF, mA: mA, thetaDeg: thetaDeg,
+  units: "N", scale: 1/5,
+  numForces: 4, numEquations: 2,
+  matchForceComps: [2, 1, 2, 2],   // resultant matched in incline frame
+  forceNames: ["resultant", "gravity", "normal", "friction"],
+  blinkerStrings: ["resultant", "gravity", "normal surface", "frictional surface"],
+  messageStrings: ["Mouse-draw the ", " force on the person:"],
+  truAnsX: [
+    [Math.round(mA*cost),  mA],
+    [0, Math.round(-gF*sint)],
+    [Math.round(-gF*cost*sint), 0],
+    [Math.round((gF*sint+mA)*cost), Math.round(gF*sint+mA)]
+  ],
+  truAnsY: [
+    [Math.round(-mA*sint), 0],
+    [gF, Math.round(gF*cost)],
+    [Math.round(-gF*cost*cost), Math.round(-gF*cost)],
+    [Math.round((-gF*sint-mA)*sint), 0]
+  ],
+  tailPosX: 146, tailPosY: 110,
+  cost: cost, sint: sint,
+  maxTriesEachForce: 1
+};
+
+// Running person on incline (PersonIncliD drawing)
+function drawRunningPerson(ctx, uOX, uOY, cost, sint) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  lPlot(ctx, uOX, uOY, 0,-8,  0,14);    // torso
+  cPlot(ctx, uOX, uOY, 0,20, 6);        // head
+  fcPlot(ctx, uOX, uOY, 4,22, 1);       // eye
+  fcPlot(ctx, uOX, uOY, 0,0, 2);        // c.g.
+  lPlot(ctx, uOX, uOY, 0,-8, 12,-4);   // forward leg
+  lPlot(ctx, uOX, uOY, 12,-4, 12,-14);
+  lPlot(ctx, uOX, uOY, 12,-14, 15,-12);
+  lPlot(ctx, uOX, uOY, 0,-8, Math.round(-4*cost), Math.round(-4*sint-26));  // back leg
+}
+
+function drawProblemPanel() {
+  var ctx = document.getElementById("problemCanvas").getContext("2d");
+  var ps = 0.6, pOriginX = 62*ps, pOriginY = 190*ps, inclineL = 160;
+  ctx.fillStyle = "#c0c0c0"; ctx.fillRect(0,0,300,210);
+  ctx.strokeStyle = "black"; ctx.lineWidth=1; ctx.strokeRect(0,0,300,210);
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+
+  ctx.beginPath(); ctx.moveTo(pOriginX,pOriginY); ctx.lineTo(pOriginX+inclineL*cost,pOriginY); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(pOriginX,pOriginY); ctx.lineTo(pOriginX+inclineL*cost,pOriginY-inclineL*sint); ctx.stroke();
+
+  var uOX = Math.round(pOriginX + 0.4*inclineL*cost);
+  var uOY = Math.round(pOriginY - 0.4*inclineL*sint - 26);
+  drawRunningPerson(ctx, uOX, uOY, cost, sint);
+
+  var eqnX = 10, eqnY = 130;
+  ctx.font = "12px Helvetica, Arial, sans-serif";
+  ctx.fillText("Person's weight = " + problem.gForce + " " + problem.units, eqnX, eqnY);
+  ctx.fillText("Person's mass\u00d7accel = " + problem.mA + " " + problem.units, eqnX, eqnY + 16);
+  ctx.fillText("Unit vectors:", eqnX + 2, eqnY + 36);
+  drawIJArrows(ctx, eqnX + 114, eqnY + 52);
+  drawXYArrows(ctx, eqnX + 184, eqnY + 52, cost, sint);
+}
+
+function drawUserApparatus(ctx) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  var inclineL = 160;
+  drawRunningPerson(ctx, problem.tailPosX, problem.tailPosY, cost, sint);
+  lPlot(ctx, problem.tailPosX, problem.tailPosY, 0,-26, Math.round(0.3*inclineL*cost), Math.round(-26+0.3*inclineL*sint));
+  lPlot(ctx, problem.tailPosX, problem.tailPosY, 0,-26, Math.round(-0.2*inclineL*cost), Math.round(-26-0.2*inclineL*sint));
+}
+</script>
+<script src="engine.js"></script>
+</body>
+</html>

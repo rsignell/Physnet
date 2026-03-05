@@ -47,6 +47,13 @@ nav {
   color: white;
   text-decoration: none;
   margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo-img {
+  height: 2.2rem;
+  width: auto;
 }
 .logo span {
   font-weight: 300;
@@ -91,6 +98,14 @@ main {
 }
 
 /* ── Hero ── */
+.hero-logo {
+  height: 5rem;
+  width: auto;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .hero {
   background: linear-gradient(135deg, var(--navy) 0%, #1e4d8c 100%);
   color: white;

@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+  Problem 9: Person holds block over pulley - draw forces on BLOCK
+  PulleyHorizSB class, Peter Signell 1997
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 10 - Pulley System (Block)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app { display:grid; grid-template-columns:302px 372px; grid-template-rows:auto auto; gap:5px; width:684px; margin:20px auto; background-color:#c0c0c0; padding:5px; }
+    #problemPanel { grid-column:1; grid-row:1; width:302px; height:212px; border:1px solid black; background:#c0c0c0; }
+    #problemCanvas { display:block; }
+    #messagePanel { grid-column:2; grid-row:1; width:372px; height:37px; border:1px solid black; background:#c0c0c0; padding:6px 7px; font-size:12px; line-height:1.6; overflow:hidden; cursor:pointer; }
+    #messagePanel .blink { animation:blink-text 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-text { 0%,50%{color:blue} 50.01%,100%{color:#c0c0c0} }
+    #messagePanel .done-blink { animation:blink-done 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-done { 0%,50%{color:#8b0000} 50.01%,100%{color:#c0c0c0} }
+    #resultsPanel { grid-column:1; grid-row:2; width:302px; height:237px; border:1px solid black; background:#c0c0c0; padding:10px; font-size:13px; }
+    #resultsHeader { color:blue; margin-bottom:8px; }
+    .result-eq { color:black; font-family:monospace; font-size:13px; margin:4px 0; }
+    #resultsTrailer { color:#8b0000; font-weight:bold; margin-top:8px; display:none; }
+    #userPanel { grid-column:2; grid-row:2; position:relative; width:372px; height:402px; border:1px solid black; background:#c0c0c0; }
+    #userPanel canvas { position:absolute; left:0; top:0; }
+    #userBkg{z-index:0;} #userDraw{z-index:1;}
+    #equationArea { position:absolute; left:10px; bottom:120px; z-index:2; pointer-events:none; font-family:monospace; font-size:14px; color:blue; }
+    #doneText { position:absolute; left:10px; top:250px; z-index:2; pointer-events:none; font-size:16px; font-weight:bold; color:#8b0000; display:none; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="problemPanel"><canvas id="problemCanvas" width="300" height="210"></canvas></div>
+  <div id="messagePanel"><span id="messageText"></span></div>
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+<script>
+"use strict";
+
+// ---- Problem data: PulleyHorizSB ("00","17","00") ----
+// Draw forces on the BLOCK
+// theta=0, gForce=17. String force = (0,-17) using normal formula.
+var gF = 17;
+var wHang = gF, wPers = 2*wHang;
+var fAngle = Math.atan2(wHang, wPers);
+var fCos = Math.cos(fAngle), fSin = Math.sin(fAngle);
+
+var problem = {
+  title: "Stationary person holds block over pulley",
+  gForce: gF, thetaDeg: 0,
+  units: "N", scale: 1/5,
+  numForces: 3, numEquations: 1,
+  matchForceComps: [1, 1, 1],
+  forceNames: ["resultant", "gravity", "string"],
+  blinkerStrings: ["resultant", "gravity", "string"],
+  messageStrings: ["Mouse-draw the ", " force on the block:"],
+  truAnsX: [[0], [0],  [0]],
+  truAnsY: [[0], [gF], [-gF]],
+  tailPosX: 146, tailPosY: 110,
+  cost: 1, sint: 0,
+  maxTriesEachForce: 1
+};
+
+// Draw the pulley scene in problem panel
+function drawPulleyScene(ctx, uOX, uOY, fCos, fSin, wHang, wPers) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  // body
+  lPlot(ctx, uOX, uOY, Math.round(8+16*fSin), Math.round(-26-16*fCos), Math.round(8-34*fSin), Math.round(-26+34*fCos));
+  // CM
+  fcPlot(ctx, uOX, uOY, Math.round(8-13*fSin), Math.round(-26+13*fCos), 2);
+  // head
+  cPlot(ctx, uOX, uOY, Math.round(8-34*fSin), Math.round(-20+34*fCos), 6);
+  // eye
+  fcPlot(ctx, uOX, uOY, Math.round(10-34*fSin), Math.round(-19+34*fCos), 1);
+  // arms
+  lPlot(ctx, uOX, uOY, Math.round(8-26*fSin), Math.round(-26+26*fCos), Math.round(30-26*fSin), Math.round(-26+13*fCos));
+  // hands
+  cPlot(ctx, uOX, uOY, Math.round(30-26*fSin), Math.round(-26+13*fCos), 2);
+  // string (horiz)
+  lPlot(ctx, uOX, uOY, Math.round(8-13*fSin), Math.round(-26+13*fCos), Math.round(128-13*fSin), Math.round(-26+13*fCos));
+  // pulley
+  cPlot(ctx, uOX, uOY, Math.round(128-13*fSin), Math.round(-36+13*fCos), 10);
+  cPlot(ctx, uOX, uOY, Math.round(128-13*fSin), Math.round(-36+13*fCos), 1);
+  // pulley support
+  lPlot(ctx, uOX, uOY, Math.round(126-34*fSin), Math.round(-26-16*fCos), Math.round(128-13*fSin), Math.round(-36+13*fCos));
+  // vert string
+  lPlot(ctx, uOX, uOY, Math.round(138-13*fSin), Math.round(-36+13*fCos), Math.round(138-13*fSin), Math.round(-66+13*fCos));
+  // block (rectangle)
+  rPlot(ctx, uOX, uOY, Math.round(128-13*fSin), Math.round(-66+13*fCos), 20, 20);
+  fcPlot(ctx, uOX, uOY, Math.round(138-13*fSin), Math.round(-76+13*fCos), 2);
+  // ground
+  lPlot(ctx, uOX, uOY, Math.round(-28+16*fSin), Math.round(-26-16*fCos), Math.round(126-34*fSin), Math.round(-26-16*fCos));
+  lPlot(ctx, uOX, uOY, Math.round(126-34*fSin), Math.round(-26-16*fCos), Math.round(126-34*fSin), Math.round(-66-16*fCos));
+}
+
+function drawProblemPanel() {
+  var ctx = document.getElementById("problemCanvas").getContext("2d");
+  var ps = 0.6, pOriginX = 62*ps, pOriginY = 190*ps;
+  var uOX = Math.round(pOriginX + 35), uOY = Math.round(pOriginY - 75);
+  ctx.fillStyle = "#c0c0c0"; ctx.fillRect(0,0,300,210);
+  ctx.strokeStyle = "black"; ctx.lineWidth=1; ctx.strokeRect(0,0,300,210);
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+  drawPulleyScene(ctx, uOX, uOY, fCos, fSin, wHang, wPers);
+
+  var eqnX = 10, eqnY = 140;
+  ctx.font = "12px Helvetica, Arial, sans-serif";
+  ctx.fillText("Block's weight = " + wHang + " " + problem.units, eqnX, eqnY);
+  ctx.fillText("Unit vectors:", eqnX + 2, eqnY + 20);
+  drawIJArrows(ctx, eqnX + 114, eqnY + 35);
+}
+
+function drawUserApparatus(ctx) {
+  ctx.strokeStyle = "black"; ctx.fillStyle = "black"; ctx.lineWidth = 1;
+  var uOX = problem.tailPosX, uOY = problem.tailPosY;
+  // vert string above block
+  lPlot(ctx, uOX, uOY, 0,10, 0,40);
+  // block
+  rPlot(ctx, uOX, uOY, -10,10, 20,20);
+  fcPlot(ctx, uOX, uOY, 0,0, 2);
+}
+</script>
+<script src="engine.js"></script>
+</body>
+</html>

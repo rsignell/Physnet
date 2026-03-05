@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+  Problem 0: A ball hanging on a string (gravity only)
+  HangingBall0 class, Peter Signell 1997
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 1 - Hanging Ball (Simple)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app {
+      display: grid;
+      grid-template-columns: 302px 372px;
+      grid-template-rows: auto auto;
+      gap: 5px;
+      width: 684px;
+      margin: 20px auto;
+      background-color: #c0c0c0;
+      padding: 5px;
+    }
+    #problemPanel { grid-column:1; grid-row:1; width:302px; height:212px; border:1px solid black; background:#c0c0c0; }
+    #problemCanvas { display:block; }
+    #messagePanel {
+      grid-column:2; grid-row:1; width:372px; height:37px;
+      border:1px solid black; background:#c0c0c0;
+      padding:6px 7px; font-size:12px; line-height:1.6; overflow:hidden; cursor:pointer;
+    }
+    #messagePanel .blink { animation:blink-text 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-text { 0%,50%{color:blue} 50.01%,100%{color:#c0c0c0} }
+    #messagePanel .done-blink { animation:blink-done 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-done { 0%,50%{color:#8b0000} 50.01%,100%{color:#c0c0c0} }
+    #resultsPanel {
+      grid-column:1; grid-row:2; width:302px; height:237px;
+      border:1px solid black; background:#c0c0c0; padding:10px; font-size:13px;
+    }
+    #resultsHeader { color:blue; margin-bottom:8px; }
+    .result-eq { color:black; font-family:monospace; font-size:13px; margin:4px 0; }
+    #resultsTrailer { color:#8b0000; font-weight:bold; margin-top:8px; display:none; }
+    #userPanel {
+      grid-column:2; grid-row:2; position:relative;
+      width:372px; height:402px; border:1px solid black; background:#c0c0c0;
+    }
+    #userPanel canvas { position:absolute; left:0; top:0; }
+    #userBkg { z-index:0; }
+    #userDraw { z-index:1; }
+    #equationArea {
+      position:absolute; left:10px; bottom:120px; z-index:2; pointer-events:none;
+      font-family:monospace; font-size:14px; color:blue;
+    }
+    #doneText {
+      position:absolute; left:10px; top:250px; z-index:2; pointer-events:none;
+      font-size:16px; font-weight:bold; color:#8b0000; display:none;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="problemPanel">
+    <canvas id="problemCanvas" width="300" height="210"></canvas>
+  </div>
+  <div id="messagePanel"><span id="messageText"></span></div>
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+// ---- Problem data: HangingBall0 ("90","17","00") ----
+var problem = {
+  title: "A ball hanging on a string",
+  gForce: 17, thetaDeg: 90,
+  pithHalfW: 14, stringL: 130, originX: 130, originY: 0,
+  units: "N", scale: 1/5,
+  numForces: 1, numEquations: 1,
+  matchForceComps: [1],
+  forceNames: ["gravity"],
+  blinkerStrings: ["gravity"],
+  messageStrings: ["Mouse-draw the ", " force on the ball:"],
+  truAnsX: [[0]],
+  truAnsY: [[17]],
+  tailPosX: 130, tailPosY: 130,   // round(130+130*cos90, 0+130*sin90)
+  cost: 0, sint: 1,
+  maxTriesEachForce: 1
+};
+
+function drawProblemPanel() {
+  var ctx = document.getElementById("problemCanvas").getContext("2d");
+  var ps = 0.6;
+  ctx.fillStyle = "#c0c0c0"; ctx.fillRect(0, 0, 300, 210);
+  ctx.strokeStyle = "black"; ctx.lineWidth = 1; ctx.strokeRect(0, 0, 300, 210);
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+
+  var pOriginX = 230 * ps, pOriginY = 50 * ps;
+  var pCeilHalfL = 100 * ps, pStringL = 100 * ps;
+  var pAnchorY = pOriginY + pStringL; // sin(90)=1
+  var pPithHalfW = 14 * ps;
+
+  ctx.beginPath(); ctx.moveTo(pOriginX - pCeilHalfL, pOriginY); ctx.lineTo(pOriginX + pCeilHalfL, pOriginY); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(pOriginX, pOriginY); ctx.lineTo(pOriginX, pAnchorY); ctx.stroke();
+  ctx.fillStyle = "#00cc00";
+  ctx.beginPath(); ctx.arc(pOriginX, pAnchorY, pPithHalfW, 0, 2*Math.PI); ctx.fill();
+  ctx.fillStyle = "black"; ctx.beginPath(); ctx.arc(pOriginX, pAnchorY, 2, 0, 2*Math.PI); ctx.fill();
+
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText("The ball's weight = " + problem.gForce + " " + problem.units, 50, 140);
+  ctx.fillText("Unit vectors:", 52, 162);
+  drawIJArrows(ctx, 164, 175);
+}
+
+function drawUserApparatus(ctx) {
+  ctx.strokeStyle = "black"; ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(problem.originX, problem.originY);
+  ctx.lineTo(problem.tailPosX, problem.tailPosY);
+  ctx.stroke();
+  ctx.fillStyle = "#00cc00";
+  ctx.beginPath(); ctx.arc(problem.tailPosX, problem.tailPosY, problem.pithHalfW, 0, 2*Math.PI); ctx.fill();
+  ctx.fillStyle = "black"; ctx.beginPath(); ctx.arc(problem.tailPosX, problem.tailPosY, 2, 0, 2*Math.PI); ctx.fill();
+}
+</script>
+<script src="engine.js"></script>
+</body>
+</html>

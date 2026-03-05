@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+  Problem 5: Stationary block on inclined plane (3 forces: resultant, gravity, surface)
+  BoxInclineS class, Peter Signell 1997
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One-Body Force Diagrams: Problem 6 - Box on Inclined Plane</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #ccc; font-family: Helvetica, Arial, sans-serif; }
+    #app { display:grid; grid-template-columns:302px 372px; grid-template-rows:auto auto; gap:5px; width:684px; margin:20px auto; background-color:#c0c0c0; padding:5px; }
+    #problemPanel { grid-column:1; grid-row:1; width:302px; height:212px; border:1px solid black; background:#c0c0c0; }
+    #problemCanvas { display:block; }
+    #messagePanel { grid-column:2; grid-row:1; width:372px; height:37px; border:1px solid black; background:#c0c0c0; padding:6px 7px; font-size:12px; line-height:1.6; overflow:hidden; cursor:pointer; }
+    #messagePanel .blink { animation:blink-text 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-text { 0%,50%{color:blue} 50.01%,100%{color:#c0c0c0} }
+    #messagePanel .done-blink { animation:blink-done 1s step-end infinite; font-weight:bold; }
+    @keyframes blink-done { 0%,50%{color:#8b0000} 50.01%,100%{color:#c0c0c0} }
+    #resultsPanel { grid-column:1; grid-row:2; width:302px; height:237px; border:1px solid black; background:#c0c0c0; padding:10px; font-size:13px; }
+    #resultsHeader { color:blue; margin-bottom:8px; }
+    .result-eq { color:black; font-family:monospace; font-size:13px; margin:4px 0; }
+    #resultsTrailer { color:#8b0000; font-weight:bold; margin-top:8px; display:none; }
+    #userPanel { grid-column:2; grid-row:2; position:relative; width:372px; height:402px; border:1px solid black; background:#c0c0c0; }
+    #userPanel canvas { position:absolute; left:0; top:0; }
+    #userBkg{z-index:0;} #userDraw{z-index:1;}
+    #equationArea { position:absolute; left:10px; bottom:120px; z-index:2; pointer-events:none; font-family:monospace; font-size:14px; color:blue; }
+    #doneText { position:absolute; left:10px; top:250px; z-index:2; pointer-events:none; font-size:16px; font-weight:bold; color:#8b0000; display:none; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="problemPanel"><canvas id="problemCanvas" width="300" height="210"></canvas></div>
+  <div id="messagePanel"><span id="messageText"></span></div>
+  <div id="resultsPanel">
+    <div id="resultsHeader">Your list of correctly drawn force vectors:</div>
+    <div id="resultsList"></div>
+    <div id="resultsTrailer">ALL OF YOUR FORCES ARE CORRECT!</div>
+  </div>
+  <div id="userPanel">
+    <canvas id="userBkg" width="370" height="400"></canvas>
+    <canvas id="userDraw" width="370" height="400"></canvas>
+    <div id="equationArea"></div>
+    <div id="doneText">Done!</div>
+  </div>
+</div>
+<script>
+"use strict";
+
+// ---- Problem data: BoxInclineS ("23","19","00") ----
+// theta=23 deg, gForce=19
+var thetaDeg = 23;
+var theta = thetaDeg * Math.PI / 180;
+var cost = Math.cos(theta), sint = Math.sin(theta);
+var gF = 19;
+
+// User canvas box geometry
+var userOriginX = 110, userOriginY = 170;
+var inclineL = 160, boxHalfL = 20, boxHalfH = 14, inclineHalfL = 80;
+var ULLX = Math.round(userOriginX + (inclineHalfL-boxHalfL)*cost);
+var ULLY = Math.round(userOriginY - (inclineHalfL-boxHalfL)*sint);
+var ULRX = Math.round(userOriginX + (inclineHalfL+boxHalfL)*cost);
+var ULRY = Math.round(userOriginY - (inclineHalfL+boxHalfL)*sint);
+var UULX = Math.round(ULLX - 2*boxHalfH*sint);
+var UULY = Math.round(ULLY - 2*boxHalfH*cost);
+var UURX = Math.round(ULRX - 2*boxHalfH*sint);
+var UURY = Math.round(ULRY - 2*boxHalfH*cost);
+var userXs = [ULLX, ULRX, UURX, UULX];
+var userYs = [ULLY, ULRY, UURY, UULY];
+var tailX = Math.round((UULX+ULRX)/2);
+var tailY = Math.round((UULY+ULRY)/2);
+
+// Problem canvas box geometry
+var ps = 0.6;
+var problemOriginX = 82*ps, problemOriginY = 190*ps;
+var pInc = inclineL, pHalfL = inclineHalfL, pHL = boxHalfL, pHH = boxHalfH;
+var PLLX = Math.round(problemOriginX + (pHalfL-pHL)*cost);
+var PLLY = Math.round(problemOriginY - (pHalfL-pHL)*sint);
+var PLRX = Math.round(problemOriginX + (pHalfL+pHL)*cost);
+var PLRY = Math.round(problemOriginY - (pHalfL+pHL)*sint);
+var PULX = Math.round(PLLX - 2*pHH*sint);
+var PULY = Math.round(PLLY - 2*pHH*cost);
+var PURX = Math.round(PLRX - 2*pHH*sint);
+var PURY = Math.round(PLRY - 2*pHH*cost);
+var probXs = [PLLX, PLRX, PURX, PULX];
+var probYs = [PLLY, PLRY, PURY, PULY];
+
+var problem = {
+  title: "Stationary block on an inclined plane",
+  gForce: gF, thetaDeg: thetaDeg,
+  units: "N", scale: 1/5,
+  numForces: 3, numEquations: 1,
+  matchForceComps: [1, 1, 1],
+  forceNames: ["resultant", "gravity", "surface"],
+  blinkerStrings: ["resultant", "gravity", "surface"],
+  messageStrings: ["Mouse-draw the ", " force on the block:"],
+  truAnsX: [[0], [0], [0]],
+  truAnsY: [[0], [gF], [-gF]],
+  tailPosX: tailX, tailPosY: tailY,
+  cost: cost, sint: sint,
+  maxTriesEachForce: 1
+};
+
+function drawProblemPanel() {
+  var ctx = document.getElementById("problemCanvas").getContext("2d");
+  ctx.fillStyle = "#c0c0c0"; ctx.fillRect(0,0,300,210);
+  ctx.strokeStyle = "black"; ctx.lineWidth=1; ctx.strokeRect(0,0,300,210);
+  ctx.fillStyle = "black"; ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText(problem.title + ":", 10, 16);
+
+  // ground and incline lines
+  ctx.beginPath(); ctx.moveTo(problemOriginX, problemOriginY); ctx.lineTo(problemOriginX+inclineL*cost, problemOriginY); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(problemOriginX, problemOriginY); ctx.lineTo(problemOriginX+inclineL*cost, problemOriginY-inclineL*sint); ctx.stroke();
+
+  // green box
+  ctx.fillStyle = "#00cc00";
+  ctx.beginPath();
+  ctx.moveTo(probXs[0], probYs[0]);
+  for (var k=1; k<4; k++) ctx.lineTo(probXs[k], probYs[k]);
+  ctx.closePath(); ctx.fill();
+  ctx.strokeStyle="black"; ctx.stroke();
+
+  // center dot
+  var pcx = Math.round((PULX+PLRX)/2), pcy = Math.round((PULY+PLRY)/2);
+  ctx.fillStyle = "black"; ctx.beginPath(); ctx.arc(pcx, pcy, 1, 0, 2*Math.PI); ctx.fill();
+
+  // labels
+  ctx.font = "13px Helvetica, Arial, sans-serif";
+  ctx.fillText("Block's weight = " + problem.gForce + " " + problem.units, 50, 140);
+  ctx.fillText("Unit vectors:", 52, 162);
+  drawIJArrows(ctx, 164, 175);
+}
+
+function drawUserApparatus(ctx) {
+  ctx.strokeStyle = "black"; ctx.lineWidth = 1;
+  // incline line
+  ctx.beginPath(); ctx.moveTo(userOriginX, userOriginY); ctx.lineTo(userOriginX+inclineL*cost, userOriginY-inclineL*sint); ctx.stroke();
+  // green box
+  ctx.fillStyle = "#00cc00";
+  ctx.beginPath();
+  ctx.moveTo(userXs[0], userYs[0]);
+  for (var k=1; k<4; k++) ctx.lineTo(userXs[k], userYs[k]);
+  ctx.closePath(); ctx.fill(); ctx.strokeStyle="black"; ctx.stroke();
+  // center dot
+  ctx.fillStyle = "black"; ctx.beginPath(); ctx.arc(tailX, tailY, 2, 0, 2*Math.PI); ctx.fill();
+}
+</script>
+<script src="engine.js"></script>
+</body>
+</html>

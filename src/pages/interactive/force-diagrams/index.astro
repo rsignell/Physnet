@@ -4,18 +4,18 @@ import Base from '../../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const problems = [
-  { no: 0,  title: 'Hanging Ball (Simple)',           desc: 'A ball hanging vertically on a string. Identify weight and tension.', available: false },
-  { no: 1,  title: 'Ball on Angled String',           desc: 'A ball hanging on a string at an angle. Identify resultant, gravity, and string forces.', available: true },
-  { no: 2,  title: 'Person on Horizontal Surface',    desc: 'A person standing still on a level floor. Static case.', available: false },
-  { no: 3,  title: 'Person Pushed Horizontally',      desc: 'A person being pushed along a level surface with acceleration.', available: false },
-  { no: 4,  title: 'Person Pushed (Variant)',         desc: 'Variant of problem 3 with different force geometry.', available: false },
-  { no: 5,  title: 'Box on Inclined Plane',           desc: 'A stationary block on an inclined surface. Gravity and normal force.', available: false },
-  { no: 6,  title: 'Box on Incline (Variant)',        desc: 'Variant of problem 5 with different incline angle.', available: false },
-  { no: 7,  title: 'Person on Incline (Static)',      desc: 'A person standing still on an inclined surface.', available: false },
-  { no: 8,  title: 'Person on Incline (Dynamic)',     desc: 'A person accelerating along an inclined surface.', available: false },
-  { no: 9,  title: 'Pulley System',                   desc: 'Two blocks connected by a rope over a frictionless pulley.', available: false },
-  { no: 10, title: 'Pulley System (Variant)',         desc: 'Pulley system with different block arrangement.', available: false },
-  { no: 11, title: 'Four-Block Pulley System',        desc: 'Complex pulley system with four blocks.', available: false },
+  { no: 0,  title: 'Hanging Ball (Simple)',           desc: 'A ball hanging vertically on a string. Draw just the gravity force (1 force).', available: true },
+  { no: 1,  title: 'Ball on Angled String',           desc: 'A ball hanging on a string at an angle. Draw resultant, gravity, and string forces.', available: true },
+  { no: 2,  title: 'Person on Horizontal Surface',    desc: 'A stationary person on a level floor. Draw resultant, gravity, and surface forces.', available: true },
+  { no: 3,  title: 'Person Pushed Horizontally',      desc: 'A person accelerating on a level floor. Draw resultant, gravity, and surface forces.', available: true },
+  { no: 4,  title: 'Person on Floor (4 Forces)',      desc: 'Accelerating person on level floor. Draw resultant, gravity, normal, and friction forces.', available: true },
+  { no: 5,  title: 'Box on Inclined Plane',           desc: 'A stationary block on an inclined surface. Draw resultant, gravity, and surface force.', available: true },
+  { no: 6,  title: 'Box on Incline (4 Forces)',       desc: 'Stationary block on incline. Draw resultant, gravity, normal, and friction in two coordinate systems.', available: true },
+  { no: 7,  title: 'Person on Incline (Static)',      desc: 'A stationary person on an inclined surface. Draw 4 forces in two coordinate systems.', available: true },
+  { no: 8,  title: 'Person on Incline (Dynamic)',     desc: 'A person accelerating up an inclined surface. Draw 4 forces in two coordinate systems.', available: true },
+  { no: 9,  title: 'Pulley: Forces on Block',         desc: 'Person holds a block via a horizontal pulley. Draw forces on the block (resultant, gravity, string).', available: true },
+  { no: 10, title: 'Pulley: Forces on Person',        desc: 'Person holds a block via a horizontal pulley. Draw 4 forces on the person including surface reaction.', available: true },
+  { no: 11, title: 'Pulley: Person (No Resultant)',   desc: 'Pulley problem with person. Draw gravity, string, normal, and friction — no resultant.', available: true },
 ];
 ---
 <Base title="One-Body Force Diagrams" activePage="interactive">
@@ -46,7 +46,7 @@ const problems = [
 
   <h2 class="problems-heading">
     Problems
-    <span class="avail-badge">1 of 12 available</span>
+    <span class="avail-badge">12 of 12 available</span>
   </h2>
 
   <div class="problem-grid">
@@ -56,7 +56,7 @@ const problems = [
         <h3>{p.title}</h3>
         <p>{p.desc}</p>
         {p.available
-          ? <a href={`${b}interactive/force-diagrams/problem${p.no + 1}.html`} class="btn btn-start">
+          ? <a href={`${b}interactive/force-diagrams/problem${p.no}.html`} class="btn btn-start">
               Start →
             </a>
           : <span class="btn-disabled">Coming Soon</span>
