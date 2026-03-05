@@ -355,6 +355,177 @@ footer {
 }
 footer a { color: rgba(255,255,255,0.8); }
 
+/* ── Module content ── */
+.module-content {
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.module-content .module-header {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.module-content .module-id-badge {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+.module-content .module-title {
+  font-size: 1.75rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+.module-content .module-author {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.module-content .meta-pill {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  color: var(--text-muted);
+}
+.module-content .module-section {
+  margin-bottom: 2.5rem;
+}
+.module-content h2 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+.module-content h3 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin: 1.5rem 0 0.5rem;
+}
+.module-content h4 {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 1.25rem 0 0.4rem;
+}
+.module-content p { margin: 0.75rem 0; }
+.module-content ul, .module-content ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+.module-content li { margin: 0.3rem 0; }
+.module-content .item-label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+/* Display math */
+.module-content .katex-display {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+}
+/* Figure layouts */
+.figure-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.figure-row figure, .figure-full {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  background: var(--surface);
+}
+.physnet-fig {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+.physnet-fig-inline { height: 1.2em; vertical-align: middle; }
+.physnet-fig-item   { max-width: 120px; float: right; margin-left: 1rem; }
+.fig-item { max-width: 140px; float: right; margin-left: 1rem; }
+figure figcaption {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.fig-ref { color: var(--blue); text-decoration: none; }
+.fig-ref:hover { text-decoration: underline; }
+/* Examples */
+.example {
+  border-left: 3px solid var(--blue);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background: #f8faff;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.example-label { color: var(--blue); font-style: italic; margin-bottom: 0.25rem; }
+.icap { font-style: normal; }
+/* Skills blocks */
+.skills-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background: var(--surface);
+}
+.skills-block h4 {
+  color: var(--navy);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+/* Help / assistance */
+.help-link {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: #7c3aed;
+  text-decoration: none;
+  vertical-align: super;
+}
+.help-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.help-num { font-weight: 700; color: var(--navy); flex-shrink: 0; }
+/* Footnotes */
+.footnotes {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+.fn-ref { font-size: 0.7em; vertical-align: super; }
+.fn-back { margin-left: 0.25rem; }
+/* Acknowledgment */
+.acknowledgment {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+.module-content .unit { font-style: normal; }
+.section-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+.brief-ans { color: var(--navy); margin-top: 1.5rem; }
+.item-text { display: inline; }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .hero { padding: 2.5rem 1rem; }
