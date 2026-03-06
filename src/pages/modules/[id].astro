@@ -200,9 +200,13 @@ function drawGraph() {
       fill:'white', 'font-size':'10', 'font-weight':'bold',
       'font-family':'system-ui,sans-serif' });
     label.textContent = n.id.toUpperCase();
-    const title = el('text', { 'text-anchor':'middle', dy:'2.2em',
+    // Place title beside circle (inward toward center), below for current node
+    const titleAnchor = n.type === 'prereq' ? 'start' : n.type === 'unlocks' ? 'end' : 'middle';
+    const titleDx = n.type === 'prereq' ? '22' : n.type === 'unlocks' ? '-22' : '0';
+    const titleDy = (n.type === 'prereq' || n.type === 'unlocks') ? '0.35em' : '2.8em';
+    const title = el('text', { 'text-anchor': titleAnchor, dx: titleDx, dy: titleDy,
       fill:'#334155', 'font-size':'9', 'font-family':'system-ui,sans-serif' });
-    title.textContent = n.title.length > 22 ? n.title.slice(0,20)+'…' : n.title;
+    title.textContent = n.title.length > 28 ? n.title.slice(0,26)+'…' : n.title;
     g.appendChild(circle); g.appendChild(label); g.appendChild(title);
     g.addEventListener('click', () => { window.location.href = `${b}modules/${n.id}/`; });
     svg.appendChild(g);
