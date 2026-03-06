@@ -516,7 +516,8 @@ class PhysnetConverter:
 
         if name == 'inits':
             arg, i = get_arg(text, i)
-            return f'{arg}.', i
+            # arg may already end with a period (e.g. "M."), don't double it
+            return arg if arg.endswith('.') else f'{arg}.', i
 
         if name == 'ph':
             # \ph{text} - phantom / invisible text; just render it

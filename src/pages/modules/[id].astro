@@ -17,9 +17,21 @@ const b = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 // Load pre-generated HTML content if available
 const contentPath = join(process.cwd(), 'src/content/modules', `${id}.html`);
-const generatedHtml = existsSync(contentPath)
-  ? readFileSync(contentPath, 'utf-8')
-  : null;
+const rawHtml = existsSync(contentPath) ? readFileSync(contentPath, 'utf-8') : null;
+
+// Split at </header> so we can render the module-header block first, then pathway bar, then body
+let moduleHeaderHtml = null;
+let moduleBodyHtml = null;
+if (rawHtml) {
+  const splitTag = '</header>';
+  const idx = rawHtml.indexOf(splitTag);
+  if (idx !== -1) {
+    moduleHeaderHtml = rawHtml.slice(0, idx + splitTag.length);
+    moduleBodyHtml = rawHtml.slice(idx + splitTag.length);
+  } else {
+    moduleBodyHtml = rawHtml;
+  }
+}
 
 // Prerequisite graph data
 const prereqs  = (prereqData.prereqs[id] || []).map(pid => ({
@@ -41,7 +53,7 @@ const graphLinks = [
 ];
 ---
 <Base title={mod.title} description={`PHYSNET module ${id}: ${mod.title}`}>
-  <div class="page-header">
+  <div class="top-bar">
     <nav class="breadcrumb">
       <a href={b}>Catalog</a>
       <span>›</span>
@@ -49,23 +61,22 @@ const graphLinks = [
       <span>›</span>
       <span>{id.toUpperCase()}</span>
     </nav>
-    <div class="header-row">
-      <div class="header-text">
-        <h1>{mod.title}</h1>
-        <p class="module-meta">Module {id.toUpperCase()} &bull; {mod.subject}</p>
-      </div>
-      <div class="header-actions">
-        <a href={`${PHYSNET_PDF_BASE}/${id}.pdf`} class="action-btn" target="_blank" rel="noopener">
-          ↓ PDF
-        </a>
-        {mod.hasInteractive && (
-          <a href={`${b}interactive/force-diagrams/`} class="action-btn action-btn-purple">
-            ▶ Interactive
-          </a>
-        )}
-      </div>
+    <div class="top-actions">
+      <a href={`${PHYSNET_PDF_BASE}/${id}.pdf`} class="action-btn" target="_blank" rel="noopener">↓ PDF</a>
+      {mod.hasInteractive && (
+        <a href={`${b}interactive/force-diagrams/`} class="action-btn action-btn-purple">▶ Interactive</a>
+      )}
     </div>
   </div>
+
+  {moduleHeaderHtml ? (
+    <div class="module-header-block" set:html={moduleHeaderHtml} />
+  ) : (
+    <div class="module-header-fallback">
+      <h1>{mod.title}</h1>
+      <p class="module-meta">Module {id.toUpperCase()} &bull; {mod.subject}</p>
+    </div>
+  )}
 
   {(prereqs.length > 0 || unlocks.length > 0) && (
     <div class="pathway-bar">
@@ -100,8 +111,8 @@ const graphLinks = [
     </div>
   )}
 
-  {generatedHtml ? (
-    <div class="module-content" set:html={generatedHtml} />
+  {moduleBodyHtml ? (
+    <div class="module-content" set:html={moduleBodyHtml} />
   ) : (
     <div class="no-html-notice">
       <div class="notice-icon">📄</div>
@@ -219,6 +230,13 @@ function drawGraph() {
 </script>
 
 <style>
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
   .breadcrumb {
     display: flex;
     align-items: center;
@@ -226,43 +244,44 @@ function drawGraph() {
     font-family: system-ui, sans-serif;
     font-size: 0.875rem;
     color: var(--text-muted);
-    margin-bottom: 0.75rem;
   }
   .breadcrumb a { color: var(--blue); text-decoration: none; }
   .breadcrumb a:hover { text-decoration: underline; }
+  .top-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+  .module-header-fallback {
+    margin-bottom: 1.5rem;
+  }
   .module-meta {
     font-family: system-ui, sans-serif;
     font-size: 0.9rem;
     color: var(--text-muted);
     margin-top: 0.25rem;
   }
-  .header-row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .header-text { flex: 1; min-width: 0; }
-  .header-actions {
-    display: flex;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    padding-top: 0.25rem;
-  }
   .action-btn {
     display: inline-block;
     font-family: system-ui, sans-serif;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    padding: 0.55rem 1.25rem;
-    background: var(--blue);
-    color: white;
+    padding: 0.35rem 0.8rem;
+    background: none;
+    color: var(--blue);
+    border: 1px solid var(--blue);
     border-radius: var(--radius);
     text-decoration: none;
-    transition: opacity 0.15s;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
   }
-  .action-btn:hover { opacity: 0.85; }
-  .action-btn-purple { background: #7c3aed; }
+  .action-btn:hover { background: var(--blue); color: white; }
+  .action-btn-purple { color: #7c3aed; border-color: #7c3aed; }
+  .action-btn-purple:hover { background: #7c3aed; color: white; }
+  /* Module header block (generated HTML <header>) */
+  .module-header-block {
+    margin-bottom: 1.5rem;
+  }
   .no-html-notice {
     text-align: center;
     padding: 4rem 2rem;

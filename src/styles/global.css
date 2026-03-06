@@ -386,12 +386,12 @@ footer a { color: rgba(255,255,255,0.8); }
   font-size: 1rem;
   line-height: 1.8;
 }
-.module-content .module-header {
+.module-header-block .module-header {
   border-bottom: 2px solid var(--border);
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
 }
-.module-content .module-id-badge {
+.module-header-block .module-id-badge {
   font-family: system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -399,18 +399,18 @@ footer a { color: rgba(255,255,255,0.8); }
   color: var(--blue);
   margin-bottom: 0.5rem;
 }
-.module-content .module-title {
+.module-header-block .module-title {
   font-size: 1.75rem;
   color: var(--navy);
   margin-bottom: 0.4rem;
 }
-.module-content .module-author {
+.module-header-block .module-author {
   color: var(--text-muted);
   font-style: italic;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-.module-content .meta-pill {
+.module-header-block .meta-pill {
   font-family: system-ui, sans-serif;
   font-size: 0.8rem;
   background: var(--bg);
