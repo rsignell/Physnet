@@ -22,7 +22,7 @@ body {
 }
 
 /* ── Navigation ── */
-header {
+body > header {
   background: var(--navy);
   color: white;
   padding: 0 2rem;

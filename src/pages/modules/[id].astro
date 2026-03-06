@@ -49,26 +49,22 @@ const graphLinks = [
       <span>›</span>
       <span>{id.toUpperCase()}</span>
     </nav>
-    <h1>{mod.title}</h1>
-    <p class="module-meta">
-      Module {id.toUpperCase()} &bull; {mod.subject}
-    </p>
-  </div>
-
-  <div class="module-actions-bar">
-    <a
-      href={`${PHYSNET_PDF_BASE}/${id}.pdf`}
-      class="action-btn"
-      target="_blank"
-      rel="noopener"
-    >
-      ↓ Download PDF
-    </a>
-    {mod.hasInteractive && (
-      <a href={`${b}interactive/force-diagrams/`} class="action-btn action-btn-purple">
-        ▶ Interactive Exercise
-      </a>
-    )}
+    <div class="header-row">
+      <div class="header-text">
+        <h1>{mod.title}</h1>
+        <p class="module-meta">Module {id.toUpperCase()} &bull; {mod.subject}</p>
+      </div>
+      <div class="header-actions">
+        <a href={`${PHYSNET_PDF_BASE}/${id}.pdf`} class="action-btn" target="_blank" rel="noopener">
+          ↓ PDF
+        </a>
+        {mod.hasInteractive && (
+          <a href={`${b}interactive/force-diagrams/`} class="action-btn action-btn-purple">
+            ▶ Interactive
+          </a>
+        )}
+      </div>
+    </div>
   </div>
 
   {(prereqs.length > 0 || unlocks.length > 0) && (
@@ -240,11 +236,18 @@ function drawGraph() {
     color: var(--text-muted);
     margin-top: 0.25rem;
   }
-  .module-actions-bar {
+  .header-row {
     display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .header-text { flex: 1; min-width: 0; }
+  .header-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
   }
   .action-btn {
     display: inline-block;
