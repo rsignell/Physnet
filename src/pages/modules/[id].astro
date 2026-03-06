@@ -133,32 +133,36 @@ const generatedHtml = existsSync(contentPath)
   }
   /* ── Module content styles ── */
   .module-content :global(.skills-block) {
-    margin: 0.75rem 0 1rem;
-    padding: 0.75rem 1rem;
-    background: #f8faff;
-    border-left: 3px solid var(--blue);
-    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 0.6rem 0 0.75rem 0;
   }
   .module-content :global(.skills-block h4) {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--blue);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+  }
+  .module-content :global(.skills-block h4::after) {
+    content: ':';
   }
   .module-content :global(.skills-block ul),
   .module-content :global(.skills-block ol) {
     list-style: none;
     padding-left: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
   }
   .module-content :global(.skills-block li) {
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.55;
+    padding-left: 2.5rem;
+    position: relative;
+    margin-bottom: 0.2rem;
+  }
+  .module-content :global(.skills-block li .item-label),
+  .module-content :global(.skills-block li strong:first-child) {
+    position: absolute;
+    left: 0;
+    width: 2.2rem;
+    font-weight: 600;
   }
   .content-placeholder {
     background: #fefce8;
