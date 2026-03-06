@@ -790,11 +790,12 @@ def convert_module(module_dir, module_id):
 
     # ── Header ──
     parts.append(f'<header class="module-header">')
-    parts.append(f'  <div class="module-id-badge">{module_id.upper()}</div>')
-    if meta.get('title'):
-        parts.append(f'  <h1 class="module-title">{meta["title"]}</h1>')
-    if meta.get('author'):
-        parts.append(f'  <p class="module-author">{meta["author"]}</p>')
+    title = meta.get('title', '')
+    author = meta.get('author', '')
+    if title and author:
+        parts.append(f'  <h1 class="module-title">{title} <span class="module-author">({author})</span></h1>')
+    elif title:
+        parts.append(f'  <h1 class="module-title">{title}</h1>')
     parts.append(f'  <div class="module-meta-row">')
     if meta.get('hours'):
         parts.append(f'    <span class="meta-pill">⏱ {meta["hours"]} hour(s)</span>')
