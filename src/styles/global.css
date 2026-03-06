@@ -61,6 +61,25 @@ nav {
   font-size: 0.9em;
   margin-left: 0.5rem;
 }
+.nav-search { display: flex; align-items: center; margin-left: 0.5rem; }
+.nav-search-input {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.825rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  width: 160px;
+  font-family: system-ui, sans-serif;
+  outline: none;
+}
+.nav-search-input::placeholder { color: rgba(255,255,255,0.6); }
+.nav-search-input:focus {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.6);
+  width: 220px;
+  transition: width 0.2s;
+}
 nav a.nav-link {
   color: rgba(255,255,255,0.8);
   text-decoration: none;

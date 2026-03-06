@@ -40,6 +40,9 @@ const b = import.meta.env.BASE_URL.replace(/\/?$/, '/'); // ensure trailing slas
       <a href={b}          class={`nav-link ${activePage === 'home'        ? 'active' : ''}`}>Catalog</a>
       <a href={`${b}interactive/`} class={`nav-link ${activePage === 'interactive' ? 'active' : ''}`}>Interactive</a>
       <a href="https://physnet.org" class="nav-link" target="_blank" rel="noopener">physnet.org ↗</a>
+      <form class="nav-search" action={`${b}search/`} method="get">
+        <input name="q" type="search" placeholder="Search modules…" class="nav-search-input" />
+      </form>
     </nav>
   </header>
 

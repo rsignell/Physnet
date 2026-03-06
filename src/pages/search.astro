@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+import { SUBJECTS, PHYSNET_PDF_BASE } from '../data/modules.js';
+
+const b = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+// Flatten all modules with subject info for the search index
+const allModules = SUBJECTS.flatMap(s =>
+  s.modules.map(m => ({
+    id: m.id,
+    title: m.title,
+    subject: s.name,
+    subjectColor: s.color,
+    hasHtml: m.hasHtml || false,
+    hasInteractive: m.hasInteractive || false,
+  }))
+);
+---
+<Base title="Search" activePage="">
+  <div class="search-page">
+    <h1>Search Modules</h1>
+    <div class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search by title, module ID, or subject…" autofocus />
+      <span id="resultCount" class="result-count"></span>
+    </div>
+    <div id="results" class="results-grid"></div>
+    <p id="noResults" class="no-results" style="display:none">No modules found.</p>
+  </div>
+</Base>
+
+<script define:vars={{ allModules, b, PHYSNET_PDF_BASE }}>
+const input = document.getElementById('searchInput');
+const resultsEl = document.getElementById('results');
+const noResults = document.getElementById('noResults');
+const countEl = document.getElementById('resultCount');
+
+// Pre-fill from URL ?q=
+const params = new URLSearchParams(window.location.search);
+const q = params.get('q') || '';
+if (q) input.value = q;
+
+function render(query) {
+  const q = query.trim().toLowerCase();
+  const matches = q
+    ? allModules.filter(m =>
+        m.id.toLowerCase().includes(q) ||
+        m.title.toLowerCase().includes(q) ||
+        m.subject.toLowerCase().includes(q)
+      )
+    : allModules;
+
+  countEl.textContent = q ? `${matches.length} result${matches.length !== 1 ? 's' : ''}` : '';
+  noResults.style.display = matches.length === 0 ? 'block' : 'none';
+  resultsEl.innerHTML = matches.map(m => `
+    <div class="result-card">
+      <div class="result-top">
+        <span class="result-id" style="--subject-color:${m.subjectColor}">${m.id}</span>
+        <span class="result-subject">${m.subject}</span>
+      </div>
+      <div class="result-title">${m.title}</div>
+      <div class="result-actions">
+        <a href="${PHYSNET_PDF_BASE}/${m.id}.pdf" class="badge badge-pdf" target="_blank" rel="noopener">↓ PDF</a>
+        ${m.hasHtml ? `<a href="${b}modules/${m.id}/" class="badge badge-html">⊞ HTML</a>` : ''}
+        ${m.hasInteractive ? `<a href="${b}interactive/force-diagrams/" class="badge badge-interactive">▶ Interactive</a>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+render(q);
+
+input.addEventListener('input', () => {
+  const newQ = input.value.trim();
+  const url = new URL(window.location);
+  if (newQ) url.searchParams.set('q', newQ);
+  else url.searchParams.delete('q');
+  history.replaceState({}, '', url);
+  render(newQ);
+});
+</script>
+
+<style>
+  .search-page { max-width: 900px; margin: 0 auto; }
+  .search-page h1 { font-size: 1.5rem; color: var(--navy); margin-bottom: 1.25rem; }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  #searchInput {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    font-family: system-ui, sans-serif;
+  }
+  #searchInput:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #bfdbfe; }
+  .result-count { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.75rem;
+  }
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .result-top { display: flex; align-items: center; gap: 0.5rem; }
+  .result-id {
+    font-family: system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--subject-color, var(--blue));
+  }
+  .result-subject { font-size: 0.72rem; color: var(--text-muted); }
+  .result-title { font-size: 0.875rem; color: var(--navy); line-height: 1.35; flex: 1; }
+  .result-actions { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem; }
+  .no-results { color: var(--text-muted); text-align: center; padding: 3rem 0; }
+</style>
