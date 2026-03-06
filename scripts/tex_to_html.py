@@ -626,16 +626,16 @@ class PhysnetConverter:
             return self._skill_env(content, 'Input Skills'), i
 
         if env == 'KnowledgeSkills':
-            return self._skill_env(content, 'Knowledge Skills (K)'), i
+            return self._skill_env(content, 'Output Skills (Knowledge)'), i
 
         if env == 'RuleApplicationSkills':
-            return self._skill_env(content, 'Rule Application Skills (R)'), i
+            return self._skill_env(content, 'Output Skills (Rule Application)'), i
 
-        if env == 'ProblemApplicationSkills':
-            return self._skill_env(content, 'Problem Application Skills (P)'), i
+        if env in ('ProblemApplicationSkills', 'ProblemSolvingSkills'):
+            return self._skill_env(content, 'Output Skills (Problem Solving)'), i
 
-        if env in ('ProblemSolvingSkills', 'PostOptions'):
-            return self._list(content, 'ol'), i
+        if env == 'PostOptions':
+            return self._skill_env(content, 'Post-Options'), i
 
         if env in ('tabular', 'table', 'table*'):
             return f'<!-- table omitted -->', i
