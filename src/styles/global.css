@@ -40,27 +40,18 @@ nav {
   gap: 0.5rem;
 }
 .logo {
-  font-family: system-ui, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: white;
   text-decoration: none;
   margin-right: auto;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  letter-spacing: 0.12em;
+  font-family: system-ui, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
 }
-.logo-img {
-  height: 2.2rem;
-  width: auto;
-}
-.logo span {
-  font-weight: 300;
-  opacity: 0.75;
-  font-size: 0.9em;
-  margin-left: 0.5rem;
-}
+.logo-phys { color: white; }
+.logo-net  { color: #2dd4bf; }
 .nav-search { display: flex; align-items: center; margin-left: 0.5rem; }
 .nav-search-input {
   padding: 0.3rem 0.7rem;

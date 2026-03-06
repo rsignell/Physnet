@@ -36,7 +36,7 @@ const b = import.meta.env.BASE_URL.replace(/\/?$/, '/'); // ensure trailing slas
 <body>
   <header>
     <nav>
-      <a href={b} class="logo"><img src={`${b}physnet2.png`} alt="PHYSNET" class="logo-img" /><span>Project Physics Network</span></a>
+      <a href={b} class="logo"><span class="logo-phys">PHYS</span><span class="logo-net">NET</span></a>
       <a href={b}          class={`nav-link ${activePage === 'home'        ? 'active' : ''}`}>Catalog</a>
       <a href={`${b}interactive/`} class={`nav-link ${activePage === 'interactive' ? 'active' : ''}`}>Interactive</a>
       <a href="https://physnet.org" class="nav-link" target="_blank" rel="noopener">physnet.org ↗</a>
