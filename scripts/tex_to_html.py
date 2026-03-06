@@ -539,6 +539,22 @@ class PhysnetConverter:
     # ── Section handler ───────────────────────────────────────────────────────
 
     def _sect(self, text, i):
+        # Skip optional [index entries] argument if present
+        n = len(text)
+        j = i
+        while j < n and text[j] in ' \t\n':
+            j += 1
+        if j < n and text[j] == '[':
+            depth = 0
+            while j < n:
+                if text[j] == '[': depth += 1
+                elif text[j] == ']':
+                    depth -= 1
+                    if depth == 0:
+                        j += 1
+                        break
+                j += 1
+            i = j
         (num, title, sect_type_raw, content), i = get_n_args(text, i, 4)
         inner      = self._process(content)
         title_html = self._process(title)
