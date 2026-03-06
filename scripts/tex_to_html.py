@@ -297,7 +297,7 @@ class PhysnetConverter:
 
         if name == 'Figssref':
             num, i = get_arg(text, i)
-            return f'<a href="#fig-{num}" class="fig-ref">Figs.&nbsp;{num}</a>', i
+            return f'<a href="#fig-{num}" class="fig-ref">Fig.&nbsp;{num}</a>', i
 
         if name == 'Eqnref':
             num, i = get_arg(text, i)
