@@ -99,9 +99,9 @@ main {
 
 /* ── Hero ── */
 .hero-logo {
-  height: 5rem;
+  height: 10rem;
   width: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
