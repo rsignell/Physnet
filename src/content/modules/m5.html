@@ -1,0 +1,948 @@
+<header class="module-header">
+  <div class="module-id-badge">M5</div>
+  <h1 class="module-title">Tools for Static Equilibrium</h1>
+  <p class="module-author">Leonard M..Valley, St..John's University</p>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Given two or more forces, find their vector sum <a href="../m14/" class="module-ref">MISN-0-14</a>.</li><li><strong>2.</strong> Resolve any force into perpendicular components <a href="../m72/" class="module-ref">MISN-0-72</a>.</li><li><strong>3.</strong> Evaluate the vector product of two vectors <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>4.</strong> State the relationship between torque and angular acceleration
+    <a href="../m33/" class="module-ref">MISN-0-33</a>.</li><li><strong>5.</strong> State the relationship between force and acceleration
+    specifically including contact forces <a href="../m16/" class="module-ref">MISN-0-16</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Knowledge Skills (K)</h4><ul><li><strong>K1.</strong> Distinguish a set of concurrent forces from a set of
+    nonconcurrent ones.</li><li><strong>K2.</strong> State the equilibrium condition for an object which is acted
+    upon by a set of concurrent forces.</li></ul></div>
+
+    
+    <ol>
+<li><span class="item-label">S1.</span> Given an object in static equilibrium and its environment,
+    determine the forces that act on the object and draw a one-body force
+    diagram (“free-body diagram”) indicating these forces.</li>
+<li><span class="item-label">S2.</span> Using the force diagram for an object, apply the conditions for
+    static equilibrium to determine the unknown magnitudes and/or directions of
+    forces in a set of concurrent forces.</li>
+</ol>
+
+    
+    <ol>
+<li><span class="item-label">1.</span> “Static Equilibrium; Centers of Force, Gravity, and Mass”
+    (MISN-0-6).</li>
+</ol>
+
+
+</section>
+
+
+<p><section id="" class="module-section section-text">
+</section>
+[]1Force Diagrams
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m5gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Typical examples of static equilibrium:
+(a) A weight suspended from cords;
+(b) A ladder resting against a wall;
+(c) A uniform beam held by a cord and a support.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-a">1a. The Importance of Force Diagrams</h3>
+
+In simplest terms, a system in static equilibrium is one that does not move.
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> shows examples of common types of systems studied in this
+subject.
+<p>We never begin calculations to determine unknown forces in such
+systems as those shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> without first constructing
+a one-body force diagram.
+This gives us added assurance that we understand the system being analyzed
+and that we are using all the forces pertinent to our calculations.
+In addition, such diagrams aid us in determining whether the forces acting
+are concurrent or non-concurrent.
+The forces acting on an object are concurrent if the lines of action of the
+forces all meet at a common point (otherwise they are non-concurrent).
+In <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> and <a href="#fig-4" class="fig-ref">Figs.&nbsp;4</a> dashed lines extended from the arrows indicate the lines of
+action.
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>a the forces are concurrent while in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> the forces on the
+beam are non-concurrent.
+The importance of this distinction will be considered in a later section.
+<p><h3 id="pcap-1-b">1b. Example: A Hanging Weight</h3>
+
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(a) shows a weight suspended by cords connected to point \(P\) and
+attached at two points \(A\) and \(B\) on the ceiling.
+Our force diagram for the point \(P\) is shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The three cords are the only force contacts with point \(P\).
+If we know the weight being supported we can represent the tension in the
+vertical cord by a force \(\vec{W}\) acting downward on \(P\).
+For the other two cords we know the directions of the forces but not the
+magnitudes.
+They are drawn as wavy arrows to indicate the known directions but unknown
+lengths.
+Note: The directions are discerned from certain properties of cords.
+A flexible cord can only sustain a tension, that is, it can pull on point \(P\)
+but not push.
+Furthermore, the cord will align itself in the same direction as the force
+which it exerts.
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m5gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Force diagram for point \(P\) of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(a).</figcaption></figure><figure id="fig-3"><img src="figures/m5gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Force diagram of the ladder in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(b).</figcaption></figure></div>
+
+<p><h3 id="pcap-1-c">1c. Example: A Leaning Ladder</h3>
+
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(b) shows a ladder of given weight \(W\) resting against a wall.
+In this case we choose the ladder as the object of interest.
+We assume the weight of the ladder to act at its center \(C\).
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The other two force contacts are at the floor and the wall.
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> shows our force diagram for the ladder.
+\(\vec{F}_a\) is the force exerted on the ladder by the floor and \(\vec{F}_b\) is
+the force exerted on the ladder by the wall.
+The direction and magnitude of forces \(\vec{F}_a\) and \(\vec{F}_b\) may be unknown.
+We use wavy arrows to indicate a lack of knowledge of both direction
+and magnitude.
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m5gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Force Diagram for the beam in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(c).</figcaption></figure>
+
+<p><h3 id="pcap-1-d">1d. Example: A Balanced Beam</h3>
+
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(c) shows a uniform beam resting on a support near one end and
+suspended by a cord near the other end.
+We construct a force diagram for the beam.
+Again we assume the weight to act at the center of the beam.
+In this case the cord is assumed to be vertical and therefore the forces
+exerted by the cord and the support are both vertically upward.
+In <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> these two forces are shown as \(\vec{F}_a\) and \(\vec{F}_b\).
+We use wavy arrows to indicate the unknown magnitudes but known direction.
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> shows our force diagram.
+<p><h3 id="pcap-1-e">1e. Action/Reaction Forces</h3>
+
+<p>The concept of action-reaction forces is useful in determining the forces
+that act on different parts of a system.
+Experiment and intuition shows us that when one object exerts a force on a
+second object, the second object always reacts by exerting a force on the
+first.
+The forces in this “pair” always have the same magnitudes but opposite
+directions.
+For example, looking at <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(b) and <a href="#fig-3" class="fig-ref">Figs.&nbsp;3</a>, \(\vec{F}_a\) is the force that the
+floor exerts on the ladder and hence the ladder pushes on the floor with a
+force of \(- \vec{F}_a\) (same magnitude, opposite direction).
+This was summarized by Newton in his third law of motion: for every
+action there is always an equal and opposite reaction.
+<p><span class="tryit">Try it:</span>  A lamp hangs from a ceiling, supported by two strings (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>a).
+The tension in string \(AB\) is 4.0<span class="unit">&thinsp;lb</span>, while the tension in string \(BC\) is
+5.35<span class="unit">&thinsp;lb</span>.
+Construct the force diagram for point \(B\).
+<p><span class="tryit">Try it:</span>  A telecommunications tower is erected (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>b.).
+If the tension in the left side cable is 7500<span class="unit">&thinsp;lb</span>, construct the force
+diagram for the tower.
+(Data from Cook Communications Inc., Lansing, MI)
+<p><span class="tryit">Try it:</span>  For more examples see this module's <em>Special Assistance
+Supplement</em>, Sect.&thinsp;2-3.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m5gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. (a) A lamp hanging from a ceiling; (b) a telecommunications tower.</figcaption></figure></div>
+
+
+<p><section id="" class="module-section section-text">
+</section>
+[]2Concurrent Forces
+<p><h3 id="pcap-2-a">2a. Static Equilibrium for a Point</h3>
+
+Newton stated his first law as something like this: every body persists in
+its state of rest or constant velocity unless it is compelled to change
+by forces applied to it.
+One interpretation of Newton's first law as applied to objects staying at
+rest is: the net force (the vector sum of all forces) acting on the body
+must be zero.
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(a) and <a href="#fig-2" class="fig-ref">Figs.&nbsp;2</a> we show a point \(P\) which is at rest and hence the net force
+must be zero.
+In other words, the vector sum of the forces acting must be zero:
+<p>\[\vec{F}_a + \vec{F}_b + \vec{W} = 0\]
+<p>Because the forces all act at the same point \(P\), this is the only condition
+necessary for \(P\) to remain at rest.
+This is the condition for static equilibrium of a point.
+<p><h3 id="pcap-2-b">2b. Concurrent Forces on an Extended Object</h3>
+
+There is a special case of static equilibrium for extended (non-point)
+objects: if all the lines of force intersect at some point \(P\), the forces act
+just as if they all originated at \(P\).
+Even if \(P\) is geometrically not located on the object, as in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>, this
+statement is still true (if it makes you feel better, you can consider the
+object to be part of a much larger rigid structure that includes point \(P\)).
+Such forces are said to be “concurrent.”
+<p>Based on the above, we now state this equilibrium condition: If the
+forces acting on a rigid object are concurrent, then the only condition
+necessary for equilibrium is that the vector sum of the forces is zero.
+In the case of the object in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>,
+<p>\[\vec{F}_a + \vec{F}_b + \vec{W} = 0\,.\]
+<p>is the equation for equilibrium.
+<p>In general, if a rigid object is acted upon by N concurrent forces the
+equilibrium condition gives us:
+<p>\[\vec{F}_1 + \vec{F}_2 + \ldots +
+                   \vec{F}_N \equiv \sum_{i = 1}^N \vec{F}_i = 0\,.\]
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m5gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Forces can intersect outside the object.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Cartesian Component Equations</h3>
+
+If \(\vec{F}_R = 0\), \(F_{Rx}\) and \(F_{Ry}\) must also be zero.
+Thus, taking components of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> gives:
+<p>\[F_{Rx} = F_{1x} + F_{2x} + \ldots + F_{Nx} =
+                                     \sum_{i = 1}^N F_{ix} = 0\,,\]
+<p>\[F_{Ry} = F_{1y} + F_{2y} + \ldots F_{Ny} =
+                              \sum_{i = 1}^N F_{iy} = 0\,.\]
+<p>The equilibrium condition, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, in component form is:
+<p>\[F_{ax} + F_{bx} + W_x = 0\,,\]
+<p>\[F_{ay} + F_{by} + W_y = 0\,.\]
+<p>These equations involve components of vectors and hence
+there may be positive or negative values.
+In this case the values for \(F_{ax}\) and \(W_y\) will be negative while the
+others will be positive.
+(\(W_x = 0\), as there is no component of weight in the \(x\)-direction).
+Equationsref5 become:
+<p>\[- F_a \cos 60^\circ + F_b \cos 30^\circ = 0\,,\]
+<p>\[ F_a \sin 60^\circ + F_b \sin 30^\circ - W = 0\,.\]
+<p>We thus have two equations and two unknowns, allowing us to solve for \(F_a\)
+and \(F_b\) if given \(W\).
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m5gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. A traction device for setting broken bones.</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. Example: A Broken Leg</h3>
+
+<p><span class="tryit">Try it:</span>  A Patient with a broken leg is in the Health Center.
+To allow his leg to set, a “Bucks” traction device (nothing to do with the
+cost involved) is used, as shown in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+If the traction required for the bone to set is 22<span class="unit">&thinsp;lb</span>, find the weight
+needed to produce this traction.
+(Data from the Michigan State University College of Osteopathic Medicine.)
+(Ans. 14<span class="unit">&thinsp;lb</span>; <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a> near the end of the <em>Special Assistance
+Supplement</em>).
+<p><span class="tryit">Try it:</span>  For more examples see this module's <em>Special Assistance
+Supplement</em>, Sect.&thinsp;4.
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m5gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Illustration of force amplification.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Example: A Ditched Car</h3>
+
+<p><span class="tryit">Try it:</span>  A driver runs off the road in a snowstorm (the kind we have
+in April) and becomes stranded in a ditch.
+She knows she can't use brute strength to pull the car out, so she tries an
+alternate method.
+First, she ties a length of rope to a huge boulder, and then connects it to
+her car.
+When a 40&nbsp;lb force is exerted perpendicular to the rope, the rope is
+displaced to an angle of 6° (see <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>).
+What force is then being exerted on the car?
+(Data from Southend Total, Lansing, MI)
+(Ans.: 192<span class="unit">&thinsp;lb</span>.)
+
+<p><section id="" class="module-section section-text">
+</section>
+[]3Non-Concurrent Forces
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m5gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Force, \(\vec{F}\), with given line of
+                              action and position vector \(\vec{r}\).</figcaption></figure>
+
+<p><h3 id="pcap-3-a">3a. Torque for Non-Concurrent Forces</h3>
+
+If the forces acting on a body are not concurrent, there is a possibility
+that the object is not in rotational equilibrium.
+Consider a door you are pushing open.
+The forces exerted by the hinges and your hand are not concurrent and the
+door is rotating.
+In contrast, the beam shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> and <a href="#fig-4" class="fig-ref">Figs.&nbsp;4</a> is acted upon by forces which
+are not concurrent and it is not rotating.
+Thus a rigid body which is acted upon by a set of non-concurrent forces
+may or may not rotate.
+The statement of the conditions necessary to extend static equilibrium to
+include non-rotation uses the concept of torque.
+In anticipation of the discussion of rotational equilibrium in another
+module,
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>we here define torque and calculate its value for simple cases.
+<p><h3 id="pcap-3-b">3b. Definition of Torque</h3>
+
+The torque, sometimes called the “moment” of a force, is defined to be
+(see <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>):
+<p>\[\vec{\tau} = \vec{r} \times \vec{F}\,,\]
+<p>where \(\vec{\tau}\) is the torque, \(\vec{r}\) is the position vector from the
+“center of torque” to any point on the line of action of the force, and
+\(\vec{F}\) is the force.
+Torque is a vector because it is the vector product (“cross product”) of
+\(\vec{r}\) and \(\vec{F}\).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>From the definition of the vector product, the magnitude of
+\(\vec{r} \times \vec{F}\) is \(r F \sin\theta\) and its direction is determined
+by the right-hand rule (into the page in this case).
+\(F\,\sin\theta\) is just the component of the force \(\vec{F}\) perpendicular
+to the position vector \(\vec{r}\).
+Letting \(F\,\sin\theta \equiv F_{\perp}\), the magnitude of the torque is
+just \(r\,F_{\perp}\).
+<p><div class="figure-full"><figure id="fig-10"><img src="figures/m5gr10.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. A force, \(\vec{F}\), shown with three possible position vectors.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. Torque is Independent of Choice for \(\vec{r}\)</h3>
+
+The vector \(\vec{r}\) that is used to find a torque is not unique.
+<a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a> shows only three of an infinite number of \(\vec{r}\) vectors which
+could be drawn from point \(O\) to the line of action of the force \(\vec{F}\).
+Based on this diagram and the definition of torque, <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, we
+get:
+<p>\[\vec{\tau} = \vec{r}_1 \times \vec{F} = \vec{r}_2 \times \vec{F} =
+\vec{r}_3 \times \vec{F}\,.\]
+<p>This \(\vec{\tau}\) is directed into the page and has magnitude:
+<p>\[\tau = r_1\,F \sin\theta_1 = r_2\,F \sin\theta_2 =
+r_3\,F \sin\theta_3\,.\]
+<p>Using <a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a>, we see that:
+<p>\[r_1\,\sin\theta_1 = r_2\,\sin\theta_2 = r_3\,\sin\theta_3 =
+\ell\,,\]
+<p>and hence from <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>, any one of the three could be used.
+Simpler still is the equivalent expression:
+<p>\[\tau = \ell\,F\,.\]
+<p>Here \(\ell\), the perpendicular distance from point \(O\) to the line of action
+of the force, is called the force's “lever arm” or “moment arm.”
+As a result, the magnitude of the torque is always equal to the product of
+the lever arm and the magnitude of the force.
+<p><figure id="fig-11" class="fig-left-framed"><img src="figures/m5gr11.svg" alt="Figure 11" class="physnet-fig"><figcaption>Fig.&nbsp;11. Two forces producing a resultant torque.</figcaption></figure>
+
+<p><h3 id="pcap-3-d">3d. Torque from Two or More Forces</h3>
+
+Since torque is a vector, if there are two or more torques relative to point
+\(O\), the resultant torque about
+point \(O\) is just the vector sum of the individual torques.
+From <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a>,
+<p>\[\begin{aligned}\vec{\tau}_1 & = \vec{r}_1 \times \vec{F}_1 \\ \vec{\tau}_2 & = \vec{r}_2 \times \vec{F}_2\end{aligned}\]
+
+<p>yielding a resultant torque:
+\(\vec{\tau} = \vec{\tau}_1 + \vec{\tau}_2\).<br>
+
+<p><h3 id="pcap-3-e">3e. Example: A Gearbox</h3>
+
+<p><span class="tryit">Try it:</span>  A reduction gearbox is shown in <a href="#fig-12" class="fig-ref">Fig.&nbsp;12</a>.
+The torques on it, about the point of intersection of the shafts, a point in
+the \(xz\)-plane, are 20&thinsp;\(\hat{z}\)<span class="unit">&thinsp;ft&thinsp;lb</span> and 4&thinsp;\(\hat{x}\)<span class="unit">&thinsp;ft&thinsp;lb</span>.
+Find the total resultant torque on the gearbox.
+(Ans. The vector sum.)
+<p><h3 id="pcap-3-f">3f. Example: A Test of Strength</h3>
+
+<p><span class="tryit">Try it:</span>  At a local count fair, a barker challenges you to the “game” shown
+in <a href="#fig-13" class="fig-ref">Fig.&nbsp;13</a>.
+You place your wrist in the strap, flex your arm, and try to exert a force
+of 200<span class="unit">&thinsp;lb</span> on the spring scale.
+If the distance from your wrist to your elbow is 9<span class="unit">&thinsp;inches</span>, find the torque
+exerted by the strap about your elbow and the force on your muscle.
+(Ans. 1800<span class="unit">&thinsp;in&thinsp;lb</span> and 1800<span class="unit">&thinsp;lb</span>.)
+<p><div class="figure-row figure-row-2"><figure id="fig-12"><img src="figures/m5gr12.svg" alt="Figure 12" class="physnet-fig"><figcaption>Fig.&nbsp;12. A gearbox.</figcaption></figure><figure id="fig-13"><img src="figures/m5gr13.svg" alt="Figure 13" class="physnet-fig"><figcaption>Fig.&nbsp;13. A test of strength.</figcaption></figure></div>
+
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The reasons are examined in “Static Equilibrium” (MISN-0-6). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">“Static Equilibrium, Center of Mass” (MISN-0-6). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Vectors: Sums, Differences, and Products” (MISN-0-2).
+Actually, torque is a psuedovector, which means that it behaves like a
+vector except under a mirror-like inversion. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-AS1">See “Non-Concurrent Forces; Centers of Force, Gravity, Mass”
+MISN-0-6. <a href="#fnref-AS1" class="fn-back">↩</a></li><li id="fn-AS2">See “Static Equilibrium, Centers of Force, Gravity and Mass”
+(MISN-0-6). <a href="#fnref-AS2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Problems&nbsp;5, 9 and 10 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> You are pulling someone on a sled across a horizontal field.
+           If you are exerting a force of 50 pounds directed 30°
+           above the horizontal, what are the horizontal and vertical
+           components of this force?</li>
+<li><span class="item-label">2.</span> <span class="item-text">Three people pull on ropes attached to a single
+           point on a trunk as shown in the figure.
+           The ropes are in the same vertical \(xy\)-plane.
+           The forces are: \(F_1 = 10\,\text{lb}\) at an angle of 30° with
+           the \(x\)-axis; \(F_2 = 25\,\text{lb}\), upward; and \(F_3 = 30\,\text{lb}\) at an
+           angle of 220° with the \(x\)-axis.
+           Find the \(x\)-component of the resultant force; the \(y\)-component
+           of the resultant force; the magnitude and direction of the
+           resultant force.</span><img src="figures/m5gr14.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">3.</span> <span class="item-text">A Titan rocket booster (with payload) weighs
+           250,000<span class="unit">&thinsp;lb</span>.
+           The engines produce a total thrust of 400,000<span class="unit">&thinsp;lb</span>.
+           Due to air resistance there is a force of 10,000<span class="unit">&thinsp;lb</span> acting at a
+           15° angle (as shown).
+           If the angle of the thrust, from the horizontal (the dotted line
+           in the sketch), is \(\phi = 85^\circ\), find the resultant force
+           on the rocket.
+           (Data from NASA).</span><img src="figures/m5gr15.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">4.</span> <span class="item-text">A patient needs cervical traction to set a jaw
+           fracture.
+           The desired upward force is 6<span class="unit">&thinsp;lb</span>.
+           What weight is needed to produce this?
+           Treat this problem as if all forces act at one point.
+           Ignore the net horizontal force of the device.</span><img src="figures/m5gr16.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">5.</span> As the Quadriceps tendon is stretched over the patella (knee cap),
+           it makes angles of 39 and 79 degrees with the horizontal.
+           The tension in the tendon is 250<span class="unit">&thinsp;lb</span>.
+           Find the force exerted by the bones on the patella (\(F_c\)).
+           (Data from the Michigan State University Dept. of Biomechanics).
+           <img src="figures/m5gr17.svg" alt="" class="fig-inline">
+           <img src="figures/m5gr18.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">6.</span> A coupling for a “semi” truck-trailer is shown
+           in the sketch.
+           The forces at \(B\) and \(C\) are directed along
+           (\(\cos 45^\circ \hat{x} + \sin 45^\circ \hat{z}\)) and are
+           500<span class="unit">&thinsp;lb&thinsp;in</span> magnitude.
+           The force at \(D\) is directed along
+           (\(\cos 30^\circ \hat{x} + \sin 30^\circ \hat{y}\)) and is
+           750<span class="unit">&thinsp;lb</span>. in magnitude.
+           Find the resultant force on the coupling, due to these three
+           forces, and the resultant torque about the origin on it.
+           <figure class="fig-centered"><img src="figures/m5gr19.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">7.</span> <span class="item-text">The beam and weight in the figure are supported by
+           a cord that makes an angle of 60° with the wall.
+           What torque does the cord produce on the beam about the point \(O\)
+           if the tension in the cord is 100<span class="unit">&thinsp;N</span> and the beam is 1.5<span class="unit">&thinsp;meters</span>
+           long?</span><img src="figures/m5gr20.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">8.</span> In the sketch, a uniform horizontal bar 10<span class="unit">&thinsp;ft</span> long, weighing
+           5<span class="unit">&thinsp;lb</span>, is hinged about a horizontal axis at \(O\) and is acted on
+           by three additional forces.
+           All forces are in the vertical plane.
+           Find the total torque tending to rotate the bar about \(O\).
+           Assume the weight vector of the beam to act at its center.
+           <figure class="fig-centered"><img src="figures/m5gr21.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">9.</span> <span class="item-text">A \(1.0 \times 10^2\,\text{lb}\) crate rests on an
+           inclined plane which makes an angle of 20.0° with the
+           horizontal.
+           What are the components of the weight parallel and perpendicular
+           to the incline?</span><img src="figures/m5gr22.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">10.</span> <span class="item-text">The Queen Elizabeth is being maneuvered into her
+            berth in Los Angeles.
+            Each of the four ocean-going tugs assisting her exerts a force
+            of \(5.0 \times 10^4\,\text{lb}\).
+            Find the resultant torque about the point \(O\).
+            (Data from C.&thinsp;Lyman, Naval Architect, South Bristol, Maine).</span><img src="figures/m5gr23.svg" alt="" class="fig-item"></li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> <span class="item-text">
+            \(\text{horizontal component } = (50\,\text{lb})(\cos 30^\circ) = 43.3\,\text{lb}\)<br>
+
+            \(\text{vertical component } = (50\,\text{lb})(\sin 30^\circ) = 25\,\text{lb}\).</span><img src="figures/m5gr24.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">2.</span> \(\vec{F}_1 = 10\,\text{lb} (\cos 30^\circ \hat{x} + \sin 30^\circ \hat{y}\))<br>
+
+           \(\vec{F}_2 = 25\,\text{lb}(\hat{y})\)<br>
+
+           \(\vec{F}_3 = 30\,\text{lb}(\cos 220^\circ \hat{x} + \sin 220^\circ \hat{y})\)<br>
+
+           \(\sum\vec{F} = (-14.3 \hat{x} + 10.7 \hat{y})\,\text{lb}\),
+                                   \(|\vec{F}| = 17.9\,\text{lb}\); \(\theta = 143.2^\circ\)</li>
+<li><span class="item-label">3.</span> \(\vec{T} = 400,000\,\text{lb} \hat{y}\)<br>
+
+           \(\vec{W} = 250,000\,\text{lb}\,[\cos(180^\circ + \phi) \hat{x}
+                         + \sin(265^\circ) \hat{y}]\)<br>
+
+           \(\vec{F} = 10,000\,\text{lb}\,[\cos (270^\circ +
+                 15^\circ) \hat{x} + \sin(285^\circ) \hat{y}]\)<br>
+
+           \(\vec{T} + \vec{W} + \vec{F} =
+                          (-1.92 \times 10^4\,\text{lb}) \hat{x} +
+                          (1.41 \times 10^5\,\text{lb}) \hat{y}\)<br>
+
+           \(|\vec{T} + \vec{W} + \vec{F}| = 1.42 \times 10^5\,\text{lb}\)<br>
+
+           <figure class="fig-centered"><img src="figures/m5gr25.svg" alt="" class="physnet-fig"></figure>
+
+<p>           OR:
+<p>           <figure class="fig-centered"><img src="figures/m5gr26.svg" alt="" class="physnet-fig"></figure>
+
+           \(\vec{T} = (400,000\,\text{lb})\,[\cos(180^\circ -
+                      \phi)\,\hat{x} + \sin(95^\circ)\,\hat{y}]\)<br>
+
+           \(\vec{F} = (10,000\,\text{lb})\,[\cos(275^\circ +
+               15^\circ)\,\hat{x} + \sin(290^\circ)\,\hat{y}]\)<br>
+
+           \(\vec{W} = (250,000\,\text{lb})(-\hat{y})\)<br>
+
+           \(\vec{T} + \vec{F} + \vec{W} = (-3.14 \times 10^4 \hat{x} +
+                                       39 \times 10^5 \hat{y})\)<span class="unit">&thinsp;lb</span><br>
+
+           \(|\vec{T} + \vec{F} + \vec{W}| = 1.42 \times 10^5\,\text{lb}\)</li>
+<li><span class="item-label">4.</span> <span class="item-text">\(6\,\text{lb} = T (2 + \cos 45^\circ)\)<br>
+
+                       \(T = 2.22\,\text{lb} = W\)</span><img src="figures/m5gr27.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">5.</span> \(\vec{T}_1 = (250\,\text{lb})\,[\cos(141^\circ) \hat{x} +
+           \sin(141^\circ) \hat{y}]\)
+<p>           \(\vec{T}_2 = (250\,\text{lb})\,[\cos(-79^\circ) \hat{x} +
+           \sin(-79^\circ) \hat{y}]\)
+<p>           \(\vec{T}_1 + \vec{T}_2 + \vec{F}_c = 0\)
+<p>           \(\vec{F}_c = -(\vec{T}_1 + \vec{T}_2) =
+           (146.6 \hat{x} + 88.1 \hat{y})\,\text{lb}\)</li>
+<li><span class="item-label">6.</span> \(\vec{F}_B = (500\,\text{lb})\,[\cos(45^\circ) \hat{x} +
+           \sin(45^\circ) \hat{z}]\)
+<p>           \(\vec{F}_C = \vec{F}_B\)
+<p>           \(\vec{F}_D = (750\,\text{lb})\,[\cos(30^\circ) \hat{x} +
+           \sin(30^\circ)] \hat{y}\)
+<p>           \(\sum \vec{F} = \vec{F}_B + \vec{F}_C + \vec{F}_D =
+                  1357\,\text{lb} \hat{x} + 375\,\text{lb} \hat{y} +
+                                                707\,\text{lb} \hat{z}\)
+<p>           \(\vec{r}_B = 3\,\text{in} \hat{x} + 4\,\text{in} \hat{y} +
+           2\,\text{in} \hat{z}\)
+<p>           \(\vec{r}_C = 3\,\text{in} \hat{x} + 4\,\text{in} \hat{y} -
+           2\,\text{in} \hat{z}\)
+<p>           \(\vec{r}_D = 4\,\text{in} \hat{x}\)
+<p>           \(\vec{\tau}_B = \vec{r}_B \times \vec{F}_B = \left|
+           \begin{array}[c]{c c c}
+              \hat{x} & \hat{y} & \hat{z} \\
+                3     &    4    &      2    \\
+               353.6  &    0    &    353.6
+           \end{array} \right| \,\text{in\,lb}\)
+<p>           \(\phantom{\vec{\tau}_B} = \left[
+           (1414) \hat{x} + (-353.6) \hat{y} +
+           (-1414) \hat{z} \right]\,\text{in\,lb}\)
+<p>           \(\vec{\tau}_C = \vec{r}_C \times \vec{F}_C = \left|
+           \begin{array}[c]{c c c}
+              \hat{x} & \hat{y} & \hat{z} \\
+                3     &    4    &    - 2    \\
+               353.6  &    0    &    353.6
+           \end{array} \right| \,\text{in\,lb}\)
+<p>           \(\phantom{\vec{\tau}_C} = \left[
+           (1414) \hat{x} + (-1768) \hat{y} +
+           (-1414) \hat{z} \right]\,\text{in\,lb}\)
+<p>           \(\vec{\tau}_D = 4\,\text{in} \hat{x} \times (750\,\text{lb})
+           (\sin 30^\circ \hat{y}) = (1500\,\text{in\,lb}) \hat{z}\)
+<p>           \(\sum\vec{\tau} = (2828\,\text{in\,lb}) \hat{x} +
+             (-2121\,\text{in\,lb}) \hat{y} + (-1328\,\text{in\,lb}) \hat{z}\)</li>
+<li><span class="item-label">7.</span> \(\vec{\tau} = \vec{r} \times \vec{F}\)
+<p>           \(\phantom{\vec{\tau}} =
+                (1.5\,\text{m}) \hat{x} \times (100\,\text{N})
+                [\cos(150^\circ) \hat{x} + \sin(150^\circ) \hat{y}]\)
+<p>           \(\phantom{\vec{\tau}} = (75\,\text{N\,m}) \hat{z}\) (out of page)</li>
+<li><span class="item-label">8.</span> \(\sum \vec{\tau} = r_A F_A \hat{z} + r_{W_3} W_3 \hat{z} +
+                              r_T T \sin(45^\circ) \hat{z} +
+                      \left( \dfrac{\ell}{2} \right) (W_B) \hat{z}\)
+<p>           \(\phantom{\sum \vec{\tau}} = (-10\,\text{ft})(-4\,\text{lb}) \hat{z}
+              + (-7.5\,\text{ft})(-3\,\text{lb})\,\hat{z}\)
+<p>           \(\phantom{\sum \vec{\tau} = } + (- 5\,\text{ft})(10\,\text{lb})
+                                          (\sin45^\circ) \hat{z} +
+                                 (- 5\,\text{ft})(- 5\,\text{lb}) \hat{z}\)
+<p>           \(\phantom{\sum \vec{\tau}} = 52\,\text{ft\,lb} \hat{z}\)</li>
+<li><span class="item-label">9.</span> 93.97<span class="unit">&thinsp;lb</span> perpendicular and 34.20<span class="unit">&thinsp;lb</span> parallel</li>
+<li><span class="item-label">10.</span> \( - 1.01 \times 10^7\,\text{ft\,lb} \hat{z}\)</li>
+</ol>
+
+</section>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> A LOOK BACK AT UNDERSTANDING FORCE
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Statement and example <span class="dotfill">&thinsp;·····&thinsp;</span> AS1</li>
+<li><span class="item-label">b.</span> Properties <span class="dotfill">&thinsp;·····&thinsp;</span> AS2</li>
+<li><span class="item-label">c.</span> Example 1 <span class="dotfill">&thinsp;·····&thinsp;</span> AS2</li>
+<li><span class="item-label">d.</span> Example 2 <span class="dotfill">&thinsp;·····&thinsp;</span> AS2</li>
+<li><span class="item-label">e.</span> Example 3 <span class="dotfill">&thinsp;·····&thinsp;</span> AS3
+</li>
+<li><span class="item-label">2.</span> UNDERSTANDING A FORCE DIAGRAM
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Statement and Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS5</li>
+<li><span class="item-label">b.</span> Applicability <span class="dotfill">&thinsp;·····&thinsp;</span> AS6</li>
+<li><span class="item-label">c.</span> Problem Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS6
+</li>
+<li><span class="item-label">3.</span> UNDERSTANDING EQUILIBRIUM
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Statement and Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS7</li>
+<li><span class="item-label">b.</span> Interpretation <span class="dotfill">&thinsp;·····&thinsp;</span> AS7</li>
+<li><span class="item-label">c.</span> Problem Solution <span class="dotfill">&thinsp;·····&thinsp;</span> AS8
+</li>
+<li><span class="item-label">4.</span> UNDERSTANDING TORQUE
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Statement and Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS8</li>
+<li><span class="item-label">b.</span> Properties <span class="dotfill">&thinsp;·····&thinsp;</span> AS9</li>
+<li><span class="item-label">c.</span> Interpretation <span class="dotfill">&thinsp;·····&thinsp;</span> AS9</li>
+<li><span class="item-label">d.</span> Comparison <span class="dotfill">&thinsp;·····&thinsp;</span> AS10</li>
+<li><span class="item-label">e.</span> Problem Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS10
+</li>
+</ol>
+
+<p><a href="#as-1" class="as-ref">AS&nbsp;1</a>A Look Back at Understanding Force
+<p><h3 id="pcap-1-a">1a. Statement and example</h3>
+
+A force is a push or pull which alone would cause an object to accelerate.
+For instance, if when you push on a closed but unfastened, door expect it to
+acquire a velocity.
+Your push remains a force even if the door is latched and so does not move.
+<p><h3 id="pcap-1-b">1b. Properties</h3>
+
+Force is a vector quantity and hence is not specified unless we
+know both its magnitude and direction.
+An arrow over a letter, such as \(\vec{F}\), is the symbol for a vector.
+In the same context, the letter standing alone, \(F\), or the vector symbol
+confined in bars \(|\vec{F}|\), represents the magnitude of the vector \(\vec{F}\).
+An arrow is used to represent a force graphically.
+Forces may be added vectorially and/or resolved into components.
+The resultant of several given forces has components which are exactly equal
+to the sum of the components of the original forces.
+Common units of force are newtons (N) and pounds (lb).
+<p><h3 id="pcap-1-c">1c. Example 1</h3>
+
+Determine which of these statements completely specifies a force:
+<ul>
+<li><span class="item-label">a.</span> \(\vec{F}\) (on a diagram)</li>
+<li><span class="item-label">b.</span> \(F\) (on a diagram)</li>
+<li><span class="item-label">c.</span> 10 pounds acting vertically upward</li>
+<li><span class="item-label">d.</span> 10 pounds acting horizontally</li>
+<li><span class="item-label">e.</span> magnitude and direction</li>
+</ul>
+
+Answers: a, c and e
+<p><div class="figure-full"><figure id="fig-S1"><img src="figures/m5gr28.svg" alt="Figure S1" class="physnet-fig"><figcaption>Fig.&nbsp;S1. Resolution of the force acting on the crate into components.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-d">1d. Example 2</h3>
+
+A crate is being pulled up a ramp which makes an angle of 10.0° with
+the horizontal.
+If the force acting is \(1.00 \times 10^2\) pounds directed
+30° above the ramp, what are the components of this force
+parallel to the ramp and perpendicular to the ramp?
+<p>Solution: First construct a drawing (see <a href="#fig-S1" class="fig-ref">Fig.&nbsp;S1</a>), to be sure that
+we understand the problem.
+To use regular \(x\),\(y\) components, superimpose an \(x\),\(y\)
+coordinate system such that the origin is at the point of
+application of the force, the \(x\)-axis is directed up the ramp, and
+the \(y\)-axis is perpendicular to the ramp.
+The component parallel to the ramp is F\(_x\hat{x}\) and the
+component perpendicular to the ramp is F\(_y\hat{y}\).
+<p>Using the right triangles formed, we can write:
+<p>\[F_x = (100.\,\text{lb}) \cos 30^\circ = 86.6\,\text{lb}, \qquad
+F_y = (100\,\text{lb}) \sin 30^\circ = 50.0\,\text{lb},\]
+<p>where \(F_x\) and \(F_y\) are the magnitudes of the components.
+<p>The vector components are:
+<p>
+\(F_x \hat{x} = 86.8 \hat{x}\) pounds (directed up the ramp
+in the positive \(x\)-direction);
+<p>
+\(F_y \hat{y} = 50.0 \hat{y}\) pounds (directed perpendicular to the
+ramp in the positive \(y\)-direction).
+<p>Three significant figures are kept because the values given in the
+problem had three significant figures.
+<p><div class="figure-full"><figure id="fig-S2"><img src="figures/m5gr29.svg" alt="Figure S2" class="physnet-fig"><figcaption>Fig.&nbsp;S2. Force vectors to be added.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-e">1e. Example 3</h3>
+ Add the three forces shown in <a href="#fig-S2" class="fig-ref">Fig.&nbsp;S2</a> by using
+vector components.
+Express your final answer by giving the magnitude and direction of
+the resultant.
+Let: \(F_1 = 1.00 \times 10^2\,\text{N}\),
+     \(F_2 = 8.0 \times 10^1\,\text{N}\),
+     \(F_3 = 8.0 \times 10^1\,\text{N}\).
+<p>First, recall the properties of vector addition using vector
+components.
+The resultant will be determined by equations
+<p>\[\begin{aligned}\sum F & = \left( \sum F_x^2 + \sum F_y^2 \right)^{1/2}\,, \\ \tan\theta & = \dfrac{\sum F_y}{\sum F_x}\,,\end{aligned}\]
+
+<p>where
+<p>\[\begin{aligned}\sum F_x & = F_{1x} + F_{2x} + F_{3x}\,, \\ \sum F_y & = F_{1y} + F_{2y} + F_{3y}\,.\end{aligned}\]
+
+<p>Therefore, we begin by finding the components of the given forces
+and then add these to find the components of the resultant.
+<p>\[\begin{aligned}F_{1x} & = F \cos 30^\circ = (100\,\text{N})(0.866) = 86.6\,\text{N} \\ F_{1y} & = F_1 \sin 30^\circ = (100\,\text{N})(0.500) = 50.0\,\text{N} \\ F_{2x} & = - F_2 \cos 45^\circ = -(80\,\text{N})(0.707) = - 57\,\text{N}\end{aligned}\]
+
+\[\begin{aligned}F_{2y} & = F_2 \sin 45^\circ = (80\,\text{N})(0.707) = 57\,\text{N} \\ F_{3x} & = - F_3 \cos 45^\circ = - (80\,\text{N})(0.707) = - 57\,\text{N} \\ F_{3y} & = - F_3 \sin 45^\circ = - (80\,\text{N})(0.707) = - 57\,\text{N}\end{aligned}\]
+
+<p>The negative sign indicate that these particular components are in
+either the negative \(x\) or negative \(y\) directions.
+<p>Hence, for example, \(F_{2x} \hat{x} = - 57\,\text{N} \hat{x} =
+57\,\text{N}\,(-\hat{x})\) means a 57<span class="unit">&thinsp;newton</span> force in the negative
+\(x\)-direction.
+Now, if we add the \(x\)-components algebraically, we get
+<p>\[\sum F_x = (86.6 - 57 - 57)\,\text{N} = - 27.4\,\text{N}\,.\]
+<p>Similarly
+<p>\[\sum F_y = 50\,\text{N}\,.\]
+<p>Note that the <a href="#eqn-22" class="eqn-ref">Eqs.&nbsp;(22)</a> written in symbolic form have all positive
+signs.
+<p>It is only when we substitute in numbers that we introduce the
+negative signs to indicate the negative direction [<a href="#eqn-23" class="eqn-ref">Eqs.&nbsp;(23)</a>].
+<p><a href="#fig-S3" class="fig-ref">Fig.&nbsp;S3</a> shows these components and their resultant,
+\(\sum \vec{F}\).
+<p>Using <a href="#eqn-21" class="eqn-ref">Eqs.&nbsp;(21)</a>,
+<p>\[\begin{aligned}\left| \sum \vec{f}\,\right| & = \left[ (-27.4)^2 + (50)^2 \right]^{1/2}\,\text{N} \\                              & = 57\,\text{N}\,,\end{aligned}\]
+
+<p>and
+<p>\[\tan\theta = \dfrac{50\,\text{N}}{27.4\,\text{N}}\,;\]
+<p>\[\theta = \tan^{-1}\left( \dfrac{50\,\text{N}}{27.4\,\text{N}}
+\right) = 61\,.\]
+<p>Hence \(\sum \vec{F}\) is 57&thinsp;N directed 61° above the
+negative \(x\)-axis.
+<p>We have retained only two significant figures in the resultant
+because the data had only two significant figures in most cases.
+<p><div class="figure-row figure-row-2"><figure id="fig-S3"><img src="figures/m5gr30.svg" alt="Figure S3" class="physnet-fig"><figcaption>Fig.&nbsp;S3. The components and resultant of the forces shown in <a href="#fig-S2" class="fig-ref">Fig.&nbsp;S2</a>.</figcaption></figure><figure id="fig-S4"><img src="figures/m5gr31.svg" alt="Figure S4" class="physnet-fig"><figcaption>Fig.&nbsp;S4. Force diagram for a three hinged door.</figcaption></figure></div>
+
+
+<p><a href="#as-2" class="as-ref">AS&nbsp;2</a>Understanding a Force Diagram
+<p><h3 id="pcap-2-a">2a. Statement and Example</h3>
+
+A force diagram is a drawing showing an isolated object and all forces
+acting on it.
+For example, an ordinary door which is hung by three hinges has four forces
+acting on it.
+The force diagram is shown in <a href="#fig-S4" class="fig-ref">Fig.&nbsp;S4</a>.
+Note that the forces exerted by the hinges are represented by wavy arrows
+with round tips to indicate unknown magnitudes and directions.
+<p><div class="figure-row figure-row-2"><figure id="fig-S5"><img src="figures/m5gr32.svg" alt="Figure S5" class="physnet-fig"><figcaption>Fig.&nbsp;S5. Child on a Swing.</figcaption></figure><figure id="fig-S6"><img src="figures/m5gr33.svg" alt="Figure S6" class="physnet-fig"><figcaption>Fig.&nbsp;S6. Force diagram for the child.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Applicability</h3>
+
+In studying a force system for the possible determination
+of some unknown forces, we begin by constructing a force diagram.
+Actual calculations of unknown forces are carried out in Sect.&thinsp;3, the next
+section.
+<p><h3 id="pcap-2-c">2c. Problem Example</h3>
+
+A child of known weight is swinging on a swing which
+consists of a swing board supported by two ropes.
+A side view is shown in <a href="#fig-S5" class="fig-ref">Fig.&nbsp;S5</a> where the two ropes are treated as one for
+consideration of motion in the plane of the swinging.
+<p>When the swing is located at 30°, draw two force diagrams, one for
+the child and one for the seat of the swing.
+<p>Assume that the ropes are straight and that they do not exert any force
+directly on the child.
+Under the conditions given, the child experiences only two forces:
+weight, \(\vec{W}_c\), and the force exerted by the seat, \(\vec{F}_s\).
+The weight has a known magnitude and direction while the seat force has
+unknown direction and magnitude.
+<a href="#fig-S6" class="fig-ref">Fig.&nbsp;S6</a> shows the force diagram for the child.
+<p>For the swing seat there are three forces acting: the force exerted by the
+child, \(\vec{F}_c\), the force exerted by the ropes, \(F_r\), and the weight of
+the seat, \(\vec{W}_s\).
+The forces, \(\vec{F}_r\) and \(\vec{W}_s\) have known directions.
+\(\vec{F}_c\) has unknown magnitude and direction.
+<a href="#fig-S7" class="fig-ref">Fig.&nbsp;S7</a> shows the force diagram for the swing seat.
+<p>The forces \(\vec{F}_s\) and \(\vec{F}_c\) discussed above are action-reaction
+forces between the child and the seat.
+Recall that a single isolated force cannot exist: every force must have a
+partner that has the same magnitude but is in the opposite direction.
+This application of Newton's third law of motion tells us that:
+\(\vec{F}_s = - \vec{F}_c\).
+<p><figure id="fig-S7" class="fig-left-framed"><img src="figures/m5gr34.svg" alt="Figure S7" class="physnet-fig"><figcaption>Fig.&nbsp;S7. Force diagram for the seat.</figcaption></figure>
+
+ /AsSect
+<p><a href="#as-3" class="as-ref">AS&nbsp;3</a>Understanding Equilibrium
+<p><h3 id="pcap-3-a">3a. Statement and Example</h3>
+
+The only condition necessary for the static 
+equilibrium of a point acted upon by forces or for the static equilibrium
+of an extended, rigid object acted upon by concurrent forces is that the
+vector sum of the forces on the object is zero.
+(There will be no need to use rotational considerations in the cases
+included in this section.)
+<p>For example, a picture with a cord attached near each side is hung by
+catching the cord over a nail on the wall (see <a href="#fig-S8" class="fig-ref">Fig.&nbsp;S8</a>).
+The nail is in equilibrium.
+The picture is an extended object which is in equilibrium under the action
+of concurrent forces.
+These forces are not acting at a point but have lines of action that
+intersect at a common point, the nail.
+<p><h3 id="pcap-3-b">3b. Interpretation</h3>
+
+<a href="#fig-S8" class="fig-ref">Fig.&nbsp;S8</a> shows a view from behind the picture.
+There are three concurrent forces acting on the picture: two of the forces
+are exerted by the cord and the third by the weight.
+(Any reaction of the wall directly on the picture itself has been
+neglected.)
+<p>The force diagram showing the concurrent forces is presented in <a href="#fig-S9" class="fig-ref">Fig.&nbsp;S9</a>.
+The vector equilibrium equation is:
+<p>\[\vec{F}_A + \vec{F}_B + \vec{W} = 0\,.\]
+<p><h3 id="pcap-3-c">3c. Problem Solution</h3>
+
+The algebraic equations which we would use to solve
+for the unknown magnitudes of \(\vec{F}_a\) and \(\vec{F}_b\), given the weight
+of the picture, \(W = 10\,\text{pounds}\), are components of <a href="#eqn-24" class="eqn-ref">Eq.&nbsp;(24)</a>,
+<p>\[\begin{aligned}x\text{-dir:} & \  F_a \cos 50^\circ - F_b \cos 50^\circ = 0, \\ y\text{-dir:} & \  F_a \sin 50^\circ + F_b \sin 50^\circ - 10\,\text{lb} = 0\,.\end{aligned}\]
+
+<p>(Remember that when putting the selected information from the force diagram
+into the component equations we use negative signs to indicate negative \(x-\)
+or \(y\)-directions.)
+From the first of <a href="#eqn-25" class="eqn-ref">Eqs.&nbsp;(25)</a>, \(F_a = F_b\) and using this in the second
+equation yields
+<p>\[F_a \sin 50^\circ + F_a \sin 50^\circ - 10\,\text{lb} = 0\,,\]
+<p>or
+<p>\[F_a = \dfrac{10\,\text{lb}}{2\sin 50^\circ} = 6.5\,\text{lb}\,.\]
+<p>Since \(F_a = F_b\), we get: \(F_b = 6.5\,\text{pounds}\).
+<p><div class="figure-row figure-row-2"><figure id="fig-S8"><img src="figures/m5gr35.svg" alt="Figure S8" class="physnet-fig"><figcaption>Fig.&nbsp;S8. A hanging picture.</figcaption></figure><figure id="fig-S9"><img src="figures/m5gr36.svg" alt="Figure S9" class="physnet-fig"><figcaption>Fig.&nbsp;S9. Force diagram for picture.</figcaption></figure></div>
+
+
+<p><a href="#as-4" class="as-ref">AS&nbsp;4</a>Understanding Torque
+<p><h3 id="pcap-4-a">4a. Statement and Example</h3>
+
+Torque is defined as the cross product of two vectors,
+\(\vec{r} \times \vec{F}\).
+As an example consider exerting a 500<span class="unit">&thinsp;newton</span> force on a flag pole as shown in
+<a href="#fig-S10" class="fig-ref">Fig.&nbsp;S10</a>.
+The torque about the base of the pole produced by this force has a magnitude
+<p>\[\tau = r F \sin\theta\,.\]
+<p>A diagram showing the force \(\vec{F}\) and the position vector \(\vec{r}\) is
+given in <a href="#fig-S11" class="fig-ref">Fig.&nbsp;S11</a>.
+The magnitude of \(\vec{F}\) is 500<span class="unit">&thinsp;newtons</span> and the magnitude of \(\vec{r}\) is
+3.0<span class="unit">&thinsp;meters</span>.
+Then the magnitude of the torque is
+<p>\[\begin{aligned}\tau & = (3.0\,\text{m})(500\,\text{N}) \sin 120^\circ \\      & = (3.0\,\text{m})(500\,\text{N})(0.866) \\      & = 1.3 \times 10^3\,\text{N\,m}\,.\end{aligned}\]
+
+<p><figure id="fig-S10" class="fig-left-framed"><img src="figures/m5gr37.svg" alt="Figure S10" class="physnet-fig"><figcaption>Fig.&nbsp;S10. Flagpole with force acting.</figcaption></figure>
+
+<p><h3 id="pcap-4-b">4b. Properties</h3>
+
+Torque is a vector quantity with units of newton-meter or pound-feet.
+The common symbol is the Greek letter \(\tau\).
+The direction of \(\vec{\tau}\) is determined by the right-hand rule.
+For example, in <a href="#fig-S10" class="fig-ref">Fig.&nbsp;S10</a> and <a href="#fig-S11" class="fig-ref">Figs.&nbsp;S11</a> the torque vector is directed into the
+page but this actually means a tendency to rotate clockwise.
+(A torque directed into the page does not mean that the flagpole tends to
+turn into the page.)
+<p><h3 id="pcap-4-c">4c. Interpretation</h3>
+
+The position vector, \(\vec{r}\), runs from the reference
+point \(O\) to any point on the line of action of the force (not necessarily to
+the point of application of the force).
+The magnitude of \(\vec{\tau}\) is \(r F \sin\theta\), where \(r\) is the magnitude
+of the position vector, \(F\) is the magnitude of the force, and \(\theta\) is
+the angle between the vectors \(\vec{F}\) and \(\vec{r}\).
+When the directions of \(\vec{r}\) and \(\vec{F}\) are fixed (\(\theta\) = constant)
+the magnitude of the torque is directly proportional to \(r\) and \(F\).
+(These are magnitudes.)
+<p>For example if \(\vec{F}\) is constant but is moved twice as far from the
+reference point \(O\) as it was originally, the torque will double.
+Or if \(\vec{r}\) is constant and the force is doubled, the torque will double.
+The magnitude of the torque can also be written as \(\tau = h F\), where
+\(h(= r \sin\theta)\) is the lever arm, or as \(\tau = r F_\perp\), where \(F_\perp\)
+is the component of \(\vec{F}\) perpendicular to \(\vec{r}\).
+The lever arm is the perpendicular distance from the reference point \(O\) to
+the line of action of the force.
+Hence another view of torque is that for a given force the torque is directly
+proportional to the lever arm.
+<p><h3 id="pcap-4-d">4d. Comparison</h3>
+
+Force and torque are both vector quantities.
+For a system of forces acting on the body, the resultant force tells if the
+body has a translational acceleration while the resultant torque tells if
+the body has a rotational acceleration.
+<p><sup class="fn-ref"><a href="#fn-AS1" id="fnref-AS1">AS1</a></sup>
+<p><div class="figure-row figure-row-2"><figure id="fig-S11"><img src="figures/m5gr38.svg" alt="Figure S11" class="physnet-fig"><figcaption>Fig.&nbsp;S11. Diagram of force and position vector.</figcaption></figure><figure id="fig-S12"><img src="figures/m5gr39.svg" alt="Figure S12" class="physnet-fig"><figcaption>Fig.&nbsp;S12. Lower leg, foot, and deLorme boot with weight.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-e">4e. Problem Example</h3>
+
+You have just torn the cartilage in your knee as the result of a skiing
+accident.
+What is in store for you?
+You may have surgery to remove the cartilage and then as soon as possible
+begin exercises to restore your leg to full strength and normal functioning.
+The exercise can be done by using a DeLorme boot and weights.
+In <a href="#fig-S12" class="fig-ref">Fig.&nbsp;S12</a> assume the total weight, \(W\) of the boot assembly to be
+40&nbsp;pounds.
+Calculate the torque produced by the weight about your knee (reference point
+\(O\)) when
+<ol>
+<li><span class="item-label">a.</span> your foot hangs straight down,</li>
+<li><span class="item-label">b.</span> your foot is raised to the point where your lower leg makes a
+           45° angle with the horizontal and</li>
+<li><span class="item-label">c.</span> your lower leg is extended horizontally.</li>
+</ol>
+
+We are only concerned with the weight \(W\) and reference point \(O\) located
+2.0&nbsp;feet away.
+<a href="#fig-S13" class="fig-ref">Fig.&nbsp;S13</a> shows the three cases in question.
+<p><div class="figure-full"><figure id="fig-S13"><img src="figures/m5gr40.svg" alt="Figure S13" class="physnet-fig"><figcaption>Fig.&nbsp;S13. Force diagram, three leg positions.</figcaption></figure></div>
+
+<p>To calculate torque, we begin by looking at the definition of torque,
+<p>\[\vec{\tau} = \vec{r} \times \vec{F}\,.\]
+<p><h3 id="pcap--">. Part a</h3>
+ Foot hangs straight down (<a href="#fig-S13" class="fig-ref">Fig.&nbsp;S13</a>a):
+<p>\[\vec{\tau}_1 = \vec{r}_1 \times \vec{W}\,.\]
+<p>The magnitude of \(\vec{\tau}_1\) is \(\tau_1 = r_1 W \sin\theta\).
+But in this case, \(\vec{r}_1\) and \(\vec{W}\) have the same direction and hence
+the angle between then is zero degrees.
+The result is \(\tau_1 = 0\), because the \(\sin 0^\circ = 0\).
+<p><h3 id="pcap--">. Part b</h3>
+ Raised 45° (<a href="#fig-S13" class="fig-ref">Fig.&nbsp;S13</a>b):
+<p>\[\vec{\tau}_2 = \vec{r}_2 \times \vec{W}\,,\]
+<p>with magnitude
+<p>\[\tau_2 = r_2 W \sin \theta_2 = (2.0\,\text{ft})(40\,\text{lb}) \sin 45^\circ =
+(2.0)(40)(0.707)\,\text{ft\,lb} = 57\,\text{ft\,lb}\,.\]
+<p>The direction of \(\vec{\tau}_2\) is into the page (use the right-hand rule).
+<p><h3 id="pcap--">. Part c</h3>
+ Horizontal (<a href="#fig-S13" class="fig-ref">Fig.&nbsp;S13</a>c):
+<p>\[\vec{\tau}_3 = \vec{r}_3 \times \vec{W}\,,\]
+<p>with magnitude
+<p>\[\tau_3 = r_3 W \sin\theta_3 = (2.0\,\text{ft})(40\,\text{lb}) \sin 90^\circ =
+80\,\text{ft\,lb}\,.\]
+<p>The direction of \(\tau_3\) is also into the page.
+<p>The implications of this for determining muscle strength can be considered
+following a discussion of rotational equilibrium.
+<p><sup class="fn-ref"><a href="#fn-AS2" id="fnref-AS2">AS2</a></sup>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Analyze the forces exerted on the pulley attached to the bottom of the foot:
+ they should add to zero so the foot doesn't accelerate off somewhere
+ (that would be quite a surprise to the patient!).
+<p> The tensions in the rope are just \(W\), the Weight's weight.
+<p> The force exerted by the leg on the pulley is 22&nbsp;pounds, in some unknown
+ direction below the horizontal (we can designate it by some symbol).
+ Thus there are forces acting in three directions on the pulley.
+ They should add to zero for static equilibrium.
+ Note that static equilibrium will occur unless the leg is pulled off the
+ patient: what we are solving for is static equilibrium with the angles and
+ leg-force desired.
+</div></div>
+
+</section>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m5gr22.svg" alt="" class="physnet-fig"><figcaption>A \(1.0 \times 10^2\,\text{pound}\) crate rests on an inclined
+           plane that makes an angle of 20.0° with the horizontal.
+           What are the components of the weight parallel and perpendicular to
+           the incline?</figcaption></figure>
+</li>
+<li><span class="item-label">3.</span> As the Quadriceps tendon is stretched over the patella (knee cap),
+           it makes angles of 39 and 79 degrees with the horizontal.
+           The tension in the tendon is 250<span class="unit">&thinsp;lb</span>.
+           Find the force exerted by the bones on the patella (\(F_c\)).
+           (Data from the Michigan State University Dept. of Biomechanics).
+           <figure class="fig-centered"><img src="figures/m5gr18.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m5gr23.svg" alt="" class="physnet-fig"><figcaption>The Queen Elizabeth is being maneuvered into her berth in Los
+           Angeles.
+           Each of the four ocean-going tugs assisting her exerts a force of
+           \(5.0 \times 10^4\,\text{lb}\).
+           Find the resultant torque about the point \(O\).
+           (Data from C.&thinsp;Lyman, Naval Architect, South Bristol, Maine).</figcaption></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;9.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;5.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;10.</li>
+</ol>
+
+</section>
+

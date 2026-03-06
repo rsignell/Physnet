@@ -291,6 +291,26 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             return f'<a href="#fig-{num}" class="fig-ref">Fig.&nbsp;{num}</a>', i
 
+        if name in ('Figsref', 'Figureref'):
+            num, i = get_arg(text, i)
+            return f'<a href="#fig-{num}" class="fig-ref">Fig.&nbsp;{num}</a>', i
+
+        if name == 'Figssref':
+            num, i = get_arg(text, i)
+            return f'<a href="#fig-{num}" class="fig-ref">Figs.&nbsp;{num}</a>', i
+
+        if name == 'Eqnref':
+            num, i = get_arg(text, i)
+            return f'<a href="#eqn-{num}" class="eqn-ref">Eq.&nbsp;({num})</a>', i
+
+        if name == 'Eqnsref':
+            num, i = get_arg(text, i)
+            return f'<a href="#eqn-{num}" class="eqn-ref">Eqs.&nbsp;({num})</a>', i
+
+        if name == 'AsSect':
+            num, i = get_arg(text, i)
+            return f'<a href="#as-{num}" class="as-ref">AS&nbsp;{num}</a>', i
+
         if name == 'help':
             num, i = get_arg(text, i)
             return (f'<a href="#help-{num}" class="help-link">'
@@ -307,7 +327,7 @@ class PhysnetConverter:
         if name == 'Sect':
             return self._sect(text, i)
 
-        if name == 'pcap':
+        if name in ('pcap', 'xpcap'):
             (sec, letter, title), i = get_n_args(text, i, 3)
             title_html = self._process(title)
             pid = f'pcap-{sec}-{letter}'
@@ -324,6 +344,12 @@ class PhysnetConverter:
                     f'<p class="example-label"><strong>{self._process(title)}</strong></p>'
                     f'{inner}</div>\n'), i
 
+        if name == 'tryit':
+            return '<span class="tryit">Try it:</span> ', i
+
+        if name == 'dotfill':
+            return '<span class="dotfill">&thinsp;·····&thinsp;</span>', i
+
         # ── Figures ──
         if name == 'ThreeCaptionedFramedFigures':
             return self._figures(text, i, 3)
@@ -333,6 +359,39 @@ class PhysnetConverter:
 
         if name == 'CaptionedFullFramedFigure':
             return self._figures(text, i, 1, full=True)
+
+        if name == 'CaptionedLeftFramedFigure':
+            # args: {fig_num}{caption}{filename}
+            num,   i = get_arg(text, i)
+            cap,   i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            return (f'<figure id="fig-{num}" class="fig-left-framed">'
+                    f'<img src="{self.figures_path}/{fname}.svg" '
+                    f'alt="Figure {num}" class="physnet-fig">'
+                    f'<figcaption>Fig.&nbsp;{num}. {cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        if name == 'CenteredUnframedFixedFigure':
+            # args: {filename} optional {caption}
+            fname, i = get_arg(text, i)
+            # peek for optional caption arg
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '{':
+                cap, i = get_arg(text, i)
+                cap_html = self._process(cap)
+                return (f'<figure class="fig-centered">'
+                        f'<img src="{self.figures_path}/{fname}.svg" '
+                        f'alt="" class="physnet-fig">'
+                        f'<figcaption>{cap_html}</figcaption>'
+                        f'</figure>\n'), i
+            else:
+                return (f'<figure class="fig-centered">'
+                        f'<img src="{self.figures_path}/{fname}.svg" '
+                        f'alt="" class="physnet-fig">'
+                        f'</figure>\n'), i
 
         if name == 'CharacterUnframedFigure':
             fname, i = get_arg(text, i)
@@ -346,6 +405,48 @@ class PhysnetConverter:
             return (f'<span class="item-text">{inner}</span>'
                     f'<img src="{self.figures_path}/{fname}.svg" '
                     f'alt="" class="fig-item">'), i
+
+        if name == 'TwoEqns':
+            _label, i = get_arg(text, i)
+            eq1, i    = get_arg(text, i)
+            eq2, i    = get_arg(text, i)
+            return (f'\\[\\begin{{aligned}}{convert_math(eq1)} \\\\ '
+                    f'{convert_math(eq2)}\\end{{aligned}}\\]\n'), i
+
+        if name == 'ThreeEqns':
+            _label, i = get_arg(text, i)
+            eq1, i    = get_arg(text, i)
+            eq2, i    = get_arg(text, i)
+            eq3, i    = get_arg(text, i)
+            return (f'\\[\\begin{{aligned}}{convert_math(eq1)} \\\\ '
+                    f'{convert_math(eq2)} \\\\ '
+                    f'{convert_math(eq3)}\\end{{aligned}}\\]\n'), i
+
+        # ── Standard math macros appearing outside $ (pass through to KaTeX) ──
+        _MATH_NO_ARGS = {
+            'sin','cos','tan','sec','csc','cot',
+            'sinh','cosh','tanh','log','ln','exp',
+            'max','min','sup','inf','lim','det','deg',
+            'sum','prod','int','oint','iint',
+            'times','cdot','div','pm','mp',
+            'leq','geq','neq','approx','equiv','propto',
+            'rightarrow','leftarrow','Rightarrow','Leftarrow',
+            'leftrightarrow','Leftrightarrow',
+            'infty','partial','nabla','forall','exists',
+            'alpha','beta','gamma','delta','epsilon','varepsilon',
+            'zeta','eta','theta','vartheta','iota','kappa',
+            'lambda','mu','nu','xi','pi','varpi','rho','varrho',
+            'sigma','varsigma','tau','upsilon','phi','varphi',
+            'chi','psi','omega',
+            'Gamma','Delta','Theta','Lambda','Xi','Pi',
+            'Sigma','Upsilon','Phi','Psi','Omega',
+            'hbar','ell','Re','Im','wp','aleph',
+            'ldots','cdots','ddots','vdots',
+            'left','right','big','Big','bigg','Bigg',
+            'quad','qquad',
+        }
+        if name in _MATH_NO_ARGS:
+            return f'\\{name} ', i
 
         # ── Environments triggered by \begin ──
         if name == 'begin':
@@ -532,6 +633,9 @@ class PhysnetConverter:
 
         if env == 'ProblemApplicationSkills':
             return self._skill_env(content, 'Problem Application Skills (P)'), i
+
+        if env in ('ProblemSolvingSkills', 'PostOptions'):
+            return self._list(content, 'ol'), i
 
         if env in ('tabular', 'table', 'table*'):
             return f'<!-- table omitted -->', i
