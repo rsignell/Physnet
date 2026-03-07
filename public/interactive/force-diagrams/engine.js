@@ -162,10 +162,10 @@ function formatEquation(forceName, fx, fy, coordSys) {
   var dispFy = -fy;
   var sign = dispFy >= 0 ? " + " : " - ";
   var absDispFy = Math.abs(dispFy);
-  var xhat = coordSys === 2 ? "<i>x</i>\u0302" : "<i>i</i>\u0302";
-  var yhat = coordSys === 2 ? "<i>y</i>\u0302" : "<i>j</i>\u0302";
-  return "<b>F</b>(" + forceName + ") = (" + fx + " " + xhat +
-         sign + absDispFy + " " + yhat + ") " + problem.units;
+  var xhat = coordSys === 2 ? "<i>x&#x0302;</i>" : "<i>i&#x0302;</i>";
+  var yhat = coordSys === 2 ? "<i>y&#x0302;</i>" : "<i>j&#x0302;</i>";
+  return "<b>F</b>(" + forceName + ") = (" + fx + xhat +
+         sign + absDispFy + yhat + ") " + problem.units;
 }
 
 // ---- State ----
@@ -366,9 +366,21 @@ userDraw.addEventListener("touchend", function(e) {
   document.dispatchEvent(new MouseEvent("mouseup", {}));
 }, { passive: false });
 
+// ---- Nav bar ----
+
+function insertNavBar() {
+  var nav = document.createElement("div");
+  nav.style.cssText = "width:684px;margin:8px auto 4px;font-family:Helvetica,Arial,sans-serif;font-size:13px;display:flex;gap:1.5em;";
+  nav.innerHTML = '<a href="/Physnet/interactive/force-diagrams/" style="color:#1e3a5f;text-decoration:none;">&#8592; Problem Index</a>' +
+                  '<a href="/Physnet/" style="color:#1e3a5f;text-decoration:none;">&#8962; PHYSNET Home</a>';
+  var app = document.getElementById("app");
+  app.parentNode.insertBefore(nav, app);
+}
+
 // ---- Init ----
 
 function init() {
+  insertNavBar();
   drawProblemPanel();
   drawUserApparatus(ctxBkg);
   ctxBkg.strokeStyle = "black"; ctxBkg.lineWidth = 1;

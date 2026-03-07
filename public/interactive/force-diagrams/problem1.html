@@ -390,8 +390,8 @@ function formatEquation(forceName, fx, fy) {
   var dispFy = -fy;
   var signY = dispFy >= 0 ? " + " : " - ";
   var absFy = Math.abs(dispFy);
-  return "<b>F</b>(" + forceName + ") = (" + fx + " <i>i</i>\u0302" +
-         signY + absFy + " <i>j</i>\u0302) " + problem.units;
+  return "<b>F</b>(" + forceName + ") = (" + fx + "<i>i&#x0302;</i>" +
+         signY + absFy + "<i>j&#x0302;</i>) " + problem.units;
 }
 
 // ============================================================
@@ -613,7 +613,17 @@ userDraw.addEventListener("touchend", function(e) {
 // ============================================================
 // Initialize
 // ============================================================
+function insertNavBar() {
+  var nav = document.createElement("div");
+  nav.style.cssText = "width:684px;margin:8px auto 4px;font-family:Helvetica,Arial,sans-serif;font-size:13px;display:flex;gap:1.5em;";
+  nav.innerHTML = '<a href="/Physnet/interactive/force-diagrams/" style="color:#1e3a5f;text-decoration:none;">&#8592; Problem Index</a>' +
+                  '<a href="/Physnet/" style="color:#1e3a5f;text-decoration:none;">&#8962; PHYSNET Home</a>';
+  var app = document.getElementById("app");
+  app.parentNode.insertBefore(nav, app);
+}
+
 function init() {
+  insertNavBar();
   drawProblemPanel();
 
   // Draw initial apparatus on background
