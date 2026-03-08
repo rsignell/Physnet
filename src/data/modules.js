@@ -38,7 +38,7 @@ export const SUBJECTS = [
     name: 'Classical Mechanics',
     color: '#0284c7',
     modules: [
-      { id: 'm5',   title: 'Statics: Equilibrium of a Point Particle', hasHtml: true },
+      { id: 'm5',   title: 'Statics: Equilibrium of a Point Particle', hasHtml: true, hasInteractive: true },
       { id: 'm6',   title: 'Tools for Static Equilibrium' },
       { id: 'm7',   title: 'One-Dimensional Kinematics' },
       { id: 'm8',   title: 'Two-Dimensional Kinematics' },
