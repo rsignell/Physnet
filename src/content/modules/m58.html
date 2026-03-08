@@ -1,0 +1,173 @@
+<header class="module-header">
+  <h1 class="module-title">Derivation of the Constants of the Motion for Central Forces <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State the Law of Conservation of Angular Momentum <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>2.</strong> State the Law of Conservation of Energy <a href="../m21/" class="module-ref">MISN-0-21</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K2.</strong> Separate the polar-coordinate variables in Newton's Second Law
+    and thereby derive the constants of motion, angular momentum and
+    energy, for central forces.</li><li><strong>K3.</strong> Derive the time derivatives of the polar coordinate unit vectors.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Derivation of Inverse Square Law Force Field Orbits” (MISN-0-106).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In this module the constancy of angular momentum and energy for central forces
+is derived from Newton's Second Law in a straightforward manner using vector
+algebra.
+Elsewhere the results of this module are used to derive the equations for
+planetary orbits.
+<sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Motion In a Plane</h2>
+
+<p><div class="figure-row figure-row-2"><figure id="fig-1"><img src="figures/m58gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Polar coordinate symbols used here.</figcaption></figure><figure id="fig-2"><img src="figures/m58gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The radial unit vector at two times.</figcaption></figure></div>
+
+<p>We will deal only with motion in a plane, which is the general case for motion
+of an object in a central force.
+The coordinates used will be polar, as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Unit vectors will be denoted \(\hat{r}\) and \(\hat{s}\) as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Thus \(\vec{r} = r\hat{r}\).
+For motion at fixed \(\theta\), which is radial motion, both \(\hat{r}\) and
+\(\hat{s}\) remain constant (unchanged) as time increases.
+However if \(\hat{s}\) changes with time, then in time \(dt\) the unit vector
+\(\hat{r}\) will change by an amount \((d\theta)\hat{s}\) as shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p>That is: \(\hat{r}(t + dt) = r(t) + (d\theta)\hat{s}\).
+Then:
+<p>\[\frac{d\hat{r}}{dt} = \frac{\hat{r}(t+dt)-\hat{r}(t)}{dt}=
+\frac{d\theta}{dt}\hat{s}.\]
+<p>We will henceforth use the “dot” notation for time derivatives.
+Then the above equation becomes:
+<p>\[\dot{\hat{r}} = \dot{\theta}\hat{s}\,.\]
+<p>Similarly, you can easily derive that
+<p>\[\dot{\hat{s}} = -\dot{\theta}\hat{r}\,.\]
+<p>Then returning to \(\vec{r} = r\hat{r}\), we can easily find its derivative by
+taking the derivative of the product:
+<p>\[\vec{v} = \dot{\vec{r}} = \dot{r}\hat{r} + r\dot{\hat{r}} =
+\dot{r}\hat{r} + r\dot{\theta}\hat{s}\,.\]
+<p>Taking the derivative again,
+<p>\[\vec{a} = \dot{\vec{v}} = \ddot{\vec{r}} =
+\ddot{r}\hat{r} + \dot{r}\dot{\theta}\hat{s} +
+\dot{r}\dot{\theta}\hat{s} + r\ddot{\theta}\hat{s} -
+r\dot{\theta}^2\hat{r} = (\ddot{r} - r\dot{\theta}^2)\hat{r} +
+(2\dot{r}\dot{\theta} + r\ddot{\theta})\hat{s}\,.\]
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Central Forces</h2>
+
+<p><h3 id="pcap-3-a">3a. Definition</h3>
+
+A central force is one that is completely radial:
+<p>\[\vec{F}_c = f(r,\theta)\hat{r}.\]
+<p>Then by Newton's Second Law:
+<p>\[\vec{F}_c = f(r,\theta)\hat{r} = m\vec{a} =
+m(\ddot{r}-r\dot{\theta}^2)\hat{r}
++ m(2\dot{r}\dot{\theta}+r\ddot{\theta})\hat{s}\,.\]
+<p><h3 id="pcap-3-b">3b. Angular Component: Conserv. of Angular Momentum</h3>
+
+Taking angular components by taking the dot product of both sides of
+<p><a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> by \(\hat{s}\):
+<p>\[0 = m(2\dot{r}\dot{\theta} + r\ddot{\theta})\,.\]
+<p>In order to form a complete differential, we multiply both sides by r:
+<p>\[0 = m(2r\dot{r}\dot{\theta} + r^2\ddot{\theta}) =
+\frac{d}{dt}(mr^2\dot{\theta})\,.\]
+<p>Thus the time derivative of \(m r^2 \dot{\theta}\) is zero, so
+<p>\[m r^2 \dot{\theta} = \text{ constant};\]
+<p>it is, in fact, the angular momentum about an axis normal (perpendicular) to
+the plane of motion and passing through the origin:
+<p>\[L = mr^2\dot{\theta} = I\omega = \text{ constant}.\]
+<p><h3 id="pcap-3-c">3c. Radial Components: Conservation of Energy</h3>
+
+Taking radial components by taking the dot product of both sides of
+<p><a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> with \(\hat{r}\):
+<p>\[f(r,\theta) = m(\ddot{r} - r\dot{\theta}^2)\,.\]
+<p>We can eliminate \(\dot{\theta}\) by solving <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> for it.
+Then
+<p>\[f(r,\theta) = m\left(\ddot{r} - \frac{L^2}{m^2r^3}\right) =
+
+m\ddot{r} - \frac{L^2}{mr^3}\,.\]
+<p>If the force function \(f(r,\theta)\) is a function of radius alone,
+then
+<p>\[m\ddot{r} - \frac{L^2}{mr^3} - f(r) = 0.\]
+<p>In order to form a complete differential we multiply both
+sides by \(\dot{r}\) to get:
+<p>\[m\dot{r}\ddot{r} - \frac{L^2}{mr^3}\dot{r} - \dot{r}f(r) = 0.\]
+<p>To see that this is a complete differential, form:
+<p>\[v^2 = \vec{v}\cdot\vec{v} = \dot{r}^2 + r^2\dot{\theta}^2 =
+\dot{r}^2 + \frac{L^2}{m^2r^2},\]
+<p>so that:
+<p>\[\frac{d}{dt}v^2 = 2\dot{r}\ddot{r} - \frac{2L^2}{m^2r^3}\dot{r}.\]
+<p>Then <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> can be written:
+<p>\[\frac{d}{dt}\left(\frac{1}{2}mv^2\right) - \dot{r}f(r) = 0.\]
+<p>The last term can also be converted to differential form by defining:
+<p>\[E_p(r) = \int \,f(r)\,dr,\]
+<p>so that:
+<p>\[f(r) = - \frac{dE_p(r)}{dr}.\]
+<p>Then:
+<p>\[\frac{dE_p(r)}{dt} = \frac{dE_p(r)}{dr}\,\dot{r} = - f(r) \dot{r},\]
+<p>and <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> can be written:
+<p>\[\frac{d}{dt}\left[\frac{1}{2}mv^2 + E_p(r)\right] = 0.\]
+<p>Then:
+<p>\[\frac{1}{2}mv^2 + E_p(r) = \text{ constant},\]
+<p>where \(E_p(r) = - \int f(r)dr\) is the potential energy.
+The equation is sometimes written in the “radial plus angular kinetic energy”
+form, obtained by substituting <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> into
+<p><a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
+<p>\[\frac{1}{2}m\dot{r}^2 + \frac{L^2}{2mr^2} + E_p(r) = \text{ constant}.\]
+<p>This, in turn, can be written in terms of radial momentum and moment of
+inertia as:
+<p>\[\frac{p_r^2}{2m} + \frac{L^2}{2I} + E_p(r) = \text{ constant}.\]
+<p>Then <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> is the sum of radial kinetic, angular kinetic, and
+potential energy.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Conclusion</h2>
+
+<p>The appearance of Conservation of Angular Momentum from the angular equation
+and Conservation of Energy from the radial equation is very interesting.
+A whole different formulation, called the Hamiltonian formalism, uses such
+ideas as its basis.
+Identification of the constants of motion is thereby greatly simplified,
+especially in cases of complex motions.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Derivation of Inverse Square Law Force Field
+Orbits” (MISN-0-106). <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+Credit may be received by taking a written exam (closed
+book, no notes) or by means of a lecture (closed book,
+one 3<span class="unit">&thinsp;inch</span> by 5<span class="unit">&thinsp;inch</span> card of notes). For lecture credit, there
+must be no gaps, erasures, or pauses. Be sure to include
+diagrams in either exam mode.</li>
+</ol>
+
+<p></section>
+
+<p>

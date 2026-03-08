@@ -1,0 +1,592 @@
+<header class="module-header">
+  <h1 class="module-title">Relativistic Space-Time: Four-Vectors <span class="module-author">(Frank Zerilli)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Write a given system of linear equations in matrix form <a href="../m301/" class="module-ref">MISN-0-301</a>.</li><li><strong>2.</strong> State down the Lorentz transformation and use it to transform given
+    positions and times <a href="../m12/" class="module-ref">MISN-0-12</a>.</li><li><strong>3.</strong> Define relativistic energy and momentum in terms of mass and velocity <a href="../m24/" class="module-ref">MISN-0-24</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: event, four-vector, world line.</li><li><strong>K2.</strong> Write the Lorentz transformation in matrix form.</li><li><strong>K3.</strong> Show that relativistic energy and momentum are the components of a
+    four-vector.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Transform the coordinates of a given event from one inertial frame to another.</li><li><strong>S2.</strong> Transform given energy-momentum four-vectors from one given Lorentz (inertial)
+    frame to another.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Topics in Relativity: Doppler Effect and Pair Production” (MISN-0-308).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Description</h2>
+
+<p><h3 id="pcap-1-a">1a. Events in Spacetime</h3>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m75gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An “event” in spacetime.</figcaption></figure></div>
+
+<p>The term “event” is used to specify a point in what we will call spacetime
+which consists of the usual three-dimensional euclidean space of
+location plus the one-dimensional axis of time.
+As an example, suppose we fire a flashbulb (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The firing of the flashbulb is an event and to specify its location in
+spacetime we must give four quantities - three quantities (for example,
+rectangular coordinates \(x\), \(y\), \(z\) in some inertial frame) which specify its
+location in space, plus one quantity which specifies its “location” in time
+(in some inertial frame).
+<p><h3 id="pcap-1-b">1b. Four-vectors</h3>
+
+The four quantities constitute a vector called a “four-vector” in this
+four-dimensional space.
+We will, for convenience, choose to use (\(ct\)) as the fourth component of the
+four-vector rather than \(t\), since the equations we will write are then a
+little simpler.
+Also, the four components of the vector then all have the same dimension:
+length.
+Note: (\(ct\)) is the distance light travels in time \(t\).
+<p><h3 id="pcap-1-c">1c. World Lines</h3>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m75gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. “World lines” in spacetime.</figcaption></figure></div>
+
+<p>The trajectory of a point object in spacetime is called its “world line.”
+For example, the world line of the point object stationary in the frame
+described by coordinates (\(x\), \(y\), \(z\), \(ct\)) is a straight line parallel to the
+\(t\)-axis and could be described by the set of equations:
+<p>\[x(t) = x_0\]
+<p>\[y(t) = y_0\]
+<p>\[z(t) = z_0\]
+<p>\[ct = ct\]
+<p>where \(x_0\), \(y_0\), \(z_0\) are the space coordinates of the stationary point
+object.
+Or, we can say that the four-vector of the point object at any time \(t\) is:
+<p>\[(x_0, y_0, z_0, ct)\]
+<p>In general, a world line can be specified by giving a four-vector which
+is a function of time, or some other parameter, call it \(\tau\):
+<p>\[[\,x(\tau), y(\tau), z(\tau), ct(\tau)\,].\]
+<p>All physical objects have some extension: we speak of the length, width, and
+height of objects.
+Upon reflection we see that for a complete specification of the extension
+of an object we should specify not only its spatial dimensions but also its
+extension in time.
+For example, we might specify the dimension of the building as: 100&thinsp;ft long,
+50&thinsp;ft wide, 30&thinsp;ft high, and 20&nbsp;years extended in time (it was built in 1910
+and demolished in 1930).
+In a spacetime diagram, we might describe the object by giving the world
+lines for each point of the object (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m75gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A collection of world lines for an
+extended object.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Lorentz Transformation as a Matrix</h2>
+
+<p>We know that the space and time coordinates of a point with respect to one
+Lorentz (inertial) frame are related to the coordinates with respect to a
+second Lorentz (inertial) frame by Lorentz transformation.
+Let L be a Lorentz frame with coordinates \(x\), \(y\), \(z\), \(ct\) and let L\('\)
+be a Lorentz
+frame with coordinate axes \(x'\), \(y'\), \(z'\), \(ct'\) moving uniformly with velocity v
+parallel to the \(z\)-axis of L.
+Also let the \(x'\), \(y'\), \(z'\) axes of L\('\) be parallel to the \(x\), \(y\), \(z\) axes,
+respectively, of L.
+Then the Lorentz transformation may be written:
+<p>\[x' = x\]
+<p>\[y' = y\]
+<p>\[z' = \gamma z - \beta \gamma ct\]
+<p>\[ct' = - \beta \gamma z + \gamma ct\]
+<p>where we have utilized the widely used notation:
+<p>\[\beta \equiv \frac{v}{c}; \qquad \gamma \equiv (1 - \beta^2)^{-1/2}.\]
+<p>This may be written as a matrix equation:
+<div class="centered">\(\left( \begin{array}[c]{c}
+ x' \\ 
+ y' \\ 
+ z' \\
+ct'	 
+\end{array} \right) = \left( \begin{array}[c]{c c c c}
+ 1 & 0 & 0              & 0              \\	     
+ 0 & 1 & 0              & 0              \\ 
+ 0 & 0 & \gamma	        & - \beta \gamma \\     
+ 0 & 0 & - \beta \gamma &  \gamma
+\end{array} \right) \cdot \left( \begin{array}[c]{c}
+ x \\
+ y \\
+ z \\
+ ct\\
+\end{array} \right)\)</div>
+
+Since the \(x\) and \(y\) coordinates are not affected in 
+this case we may suppress them and write:
+<div class="centered">
+\(\left( \begin{array}[c]{c}
+z'  \\
+ct' 
+\end{array} \right) = \left( \begin{array}[c]{c c}
+\gamma         & -\beta \gamma \\
+-\beta \gamma  &   \gamma      
+\end{array} \right) \cdot \left( \begin{array}[c]{c}
+ z \\
+ ct\\
+\end{array} \right)\)
+</div>
+
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m75gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Two inertial frames and a relative
+velocity.</figcaption></figure></div>
+
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Precise Definition of a 4-Vector</h2>
+
+<p>Any set of four quantities which transforms from one Lorentz frame to another
+just like the coordinates (\(x\), \(y\), \(z\), \(ct\)) of a point in spacetime is called a
+four-vector.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Thus (\(x\), \(y\), \(z\), \(ct\)) is a four-vector.
+<p>One example of a very important four-vector is the energy-momentum
+four-vector
+whose spatial components are the three components of relativistic momentum
+and whose fourth component is the relativistic energy (divided by \(c)\):
+<p>\[\left( p_x,p_y,p_z,\frac{E}{c} \right).\]
+<p>Knowing that the components of momentum and energy transform like
+a four-vector,
+we can find the momentum and energy of an object as viewed in any
+Lorentz frame
+if we are given the values in any one Lorentz frame.
+For example, suppose we have a particle of mass m at rest in one Lorentz
+frame.
+Consider a Lorentz frame moving with velocity \(v\) along the \(x\)-direction.
+Then, in this new frame, the particle is moving with velocity \(-v\) along
+\(x'\)-axis and:
+<div class="centered">
+\(\left( \begin{array}[c]{c}
+p_x' \\
+E'/c 
+\end{array} \right) = \left( \begin{array}[c]{c c}
+\gamma         & -\beta \gamma \\
+-\beta \gamma  &   \gamma      
+\end{array} \right) \cdot \left( \begin{array}[c]{c}
+ 0 \\
+ m_0 c\\
+\end{array} \right) = \left( \begin{array}[c]{c}
+- \beta \gamma m_0 c \\
+ \gamma m_0 c
+\end{array} \right)\)
+</div>
+
+So:
+<p>\[p_x' = - \frac{m_0 v}{\left( 1 - v^2/c^2 \right)^{1/2}} \qquad \text{and}
+\qquad E' = \frac{m_0 c^2}{\left( 1 - v^2/c^2 \right)^{1/2}}.\]
+<p>This gives us just the expected values for momentum and energy of a particle
+of mass \(m_0\) moving with velocity \(-v\).
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Proof of the Momentum-Energy 4-Vector</h2>
+
+<p>The most straightforward way of showing that momentum and energy are the
+components of a 4-vector is to write the momentum and energy of a particle
+in terms of its real mass and velocity in one Lorentz frame and then use the
+Lorentz transformation for velocity (that is, the velocity addition law)
+to find the form of the momentum and energy of the particle in a second
+Lorentz frame.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m75gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. A velocity as seen from a stationary
+frame and from a moving frame.</figcaption></figure></div>
+
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(\vec{p} = \frac{m_0 \vec{u}}{\sqrt{1 - (u/c)^2}}\)</td><td>\qquad </td><td>\(\vec{p}' = \frac{m_0 \vec{u}'}{\sqrt{1 - (u'/c)^2}}\)</td></tr><tr><td>\(\frac{E}{c} = \frac{m_0 c}{\sqrt{1 - (u/c)^2}}\)</td><td>\qquad </td><td>\(\frac{E'}{c} = \frac{m_0 c}{\sqrt{1 - (u'/c)^2}}\)</td></tr></tbody></table>
+</div>
+
+<p><a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> shows a particle of mass \(m_0\) moving with velocity \(\vec{u}\) in the
+first frame.
+The second frame is moving at velocity \(v\) with respect to the first frame,
+along the \(x\)-axis, and the particle has a velocity \(\vec{u}'\) as seen in the
+second frame.
+<p>As usual, let \(\beta = v/c\) and \(\gamma = \left( 1 - \beta^2 \right)^{-1/2}\).
+<span class="tex-unknown" title="unknown macro">\enlargethispage</span>1pc
+The velocity addition law gives us:
+<p>\[u_x' =
+\frac{u_x - v}{1 - \frac{u_x v}{c^2}} =
+\frac{u_x - \beta c}{1 - \frac{u_x}{c} \beta}\]
+<p>\[u_y' =
+\frac{1}{\gamma}\,\frac{u_y}{1 - \frac{u_x v}{c^2}} =
+\frac{1}{\gamma}\,\frac{u_y}{1 - \frac{u_x}{c} \beta}\]
+<p>\[u_z' =
+\frac{1}{\gamma}\,\frac{u_z}{1 - \frac{u_x v}{c^2}} =
+\frac{1}{\gamma}\,\frac{u_z}{1 - \frac{u_x}{c} \beta}\]
+<p>The quantity \(\sqrt{1 - (u'/c)^2)}\) occurs several times in the energy and
+momentum formulas so let us calculate it in terms of the velocity in the first
+(unprimed) frame:
+\[\begin{aligned}(u')^2 & = & (u'_x)^2 + (u'_y)^2 + (u'_z)^2 \\
+       & = & \frac{(u_x - \beta c)^2 + \gamma^{-2} (u_y^2 + u_z^2)}{\left( 1 - \frac{u_x}{c} \beta \right)^2}\end{aligned}\]
+
+So:
+\[\begin{aligned}1 - \left( \frac{u'}{c} \right)^2 & = &
+       1 - \frac{\left( \frac{u_x}{c} - \beta \right)^2 +
+       \gamma^{-2} \left( \frac{u_y^2 + u_z^2}{c^2}\right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
+ & = & \frac{1 - \frac{u_x^2}{c^2} - \beta^2 +
+       \frac{u_x^2 \beta^2}{c^2} -
+       (1 - \beta^2) \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
+ & = & \frac{\left( 1 - \beta^2 \right)
+       \left( 1 - \frac{u_x^2}{c^2} \right) -
+       \left( 1 - \beta^2 \right)
+       \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
+ & = & \frac{1}{\gamma^2}
+       \frac{1 - \frac{u_x^2 + u_y^2 + u_z^2}{c^2}}{\left( 1 - \frac{u_x}{c} \beta \right)^2} =
+       \frac{1}{\gamma^2} \frac{1 - \frac{u^2}{c^2}}{\left( 1 - \frac{u_x}{c} \beta \right)^2}\end{aligned}\]
+
+So, finally, we have the relation we want:
+<p>\[\frac{1}{\left[ 1 - (u'/c)^2 \right]^{1/2}} =
+\gamma \frac{1 - \frac{u_x}{c} \beta}{\left[ 1 - (u/c)^2 \right]^{1/2}}\]
+<p>Now we can easily express the components of momentum and energy as seen in the
+second (primed) frame in terms of the values as seen in the first (unprimed)
+frame:
+<p>\[p_x = \frac{m_0 u_x}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
+p_x' = \frac{m_0 u_x'}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
+<p>\[\begin{aligned}p_x' & = & m_0 \gamma \frac{u_x - \beta c}{\left( 1 - \frac{u_x}{c} \beta \right)}
+               \frac{\left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
+     & = & \frac{\gamma m_0 u_x - \gamma \beta m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} =
+            \gamma p_x - \beta \gamma \frac{E}{c}\end{aligned}\]
+
+<p>\[p_y = \frac{m_0 u_y}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
+p_y' = \frac{m_0 u_y'}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
+<p>\[p_y' = m_0 \frac{1}{\gamma} \frac{u_y}{\left( 1 - \frac{u_x}{c} \beta \right)}
+               \frac{\gamma \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} = p_y\]
+<p>\[p_z = \frac{m_0 u_z}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
+p_z' = \frac{m_0 u_z'}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
+<p>\[p_z' = m_0 \frac{1}{\gamma} \frac{u_z}{\left( 1 - \frac{u_x}{c} \beta \right)}
+               \frac{\gamma \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} = p_z\]
+<p>\[\frac{E}{c} = \frac{m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
+\frac{E'}{c} = \frac{m_0 c}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
+\[\begin{aligned}\frac{E'}{c} & = & \frac{m_0 c \gamma
+                     \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
+     & = & - \beta \gamma \frac{m_0 u_x}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} +
+           \gamma \frac{m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
+     & = & -\beta \gamma p_x + \gamma \frac{E}{c}.\end{aligned}\]
+
+If we write the above equations in matrix form we obtain:
+<p>\(\left( \begin{array}[c]{c}
+ p_x' \\ 
+ p_y' \\ 
+ p_z' \\
+ E'/c	 
+\end{array} \right) = \left( \begin{array}[c]{c c c c}
+ \gamma        & 0 & 0 & -\beta \gamma \\	     
+   0           & 1 & 0 &       0       \\ 
+   0           & 0 & 1 &       0       \\
+ -\beta \gamma & 0 & 0 &   \gamma      \\
+\end{array} \right) = \left( \begin{array}[c]{c}
+ p_x \\
+ p_y \\
+ p_z \\
+ E/c
+\end{array} \right)\)
+<p>This is precisely the equation for a Lorentz transformation along the \(x\)-axis.
+Thus, the components of momentum and energy transform exactly like the
+coordinates (\(x\), \(y\), \(z\), \(ct\)) and so form a four-vector.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">This definition is correct only for flat spacetime.
+In non-flat spacetimes, coordinates are not the components of four-vectors. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Problems&nbsp;10-11 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A star 1000 light years away explodes at \(t = 0\) (as described in
+           our (earth) coordinate system).
+           Write out the event vector (as column matrix).
+           [Note that \(c = 1\) is units of light years/year.]</li>
+<li><span class="item-label">2.</span> A space ship is passing earth at \(t = 0\).
+           The space ship is moving (at 1/2&thinsp;\(c\)) in the direction of the star
+           (from problem&nbsp;1).
+           If the space ship observers also agree that \(t = 0\) when the space
+           ship passes earth, what is the event vector for the star explosion
+           in the space ship's coordinate system?</li>
+<li><span class="item-label">3.</span> An electron passes at 0.98&thinsp;\(c\) through an accelerator tube.
+           The tube has length \(L_2\) according to the electron.
+           In the electron frame what are the event vectors for:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the event where the electron enters the tube;</li>
+<li><span class="item-label">b.</span> the event where the electron leaves the tube.
+           Note that x component is measured from the electron (i.e., with the
+           vectors in the electron frame).
+</li>
+<li><span class="item-label">4.</span> The above accelerator tube has length \(L_1\) according to a
+           stationary observer.
+           Give the two event vectors corresponding to the two events of
+           problem&nbsp;3 in the stationary coordinate frame.</li>
+<li><span class="item-label">5.</span> Referring again to problems&nbsp;3 and 4, transform according to the
+           Lorentz transformation events of problem&nbsp;4 into the events of
+           problem&nbsp;3.
+           Find a relation between \(L_2\) and \(L_1\).
+           Note that the electron sees the accelerator tube to be contracted
+           because it is moving relative to him.</li>
+<li><span class="item-label">6.</span> An object follows a circular path in the \(x-y\) plane.
+           The radius of the circle is \(6\)r and at \(t = 0\), \(x = r\), \(y = 0\).
+           It completes the circle in time \(T\).
+           Write the world line for this object.</li>
+<li><span class="item-label">7.</span> a. Transform the world line of problem&nbsp;6 to a frame moving at \(v\) in
+           the \(+ z\) direction.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> In this frame the object moves in a helical path.
+           What is the period (the time for one revolution)?</li>
+<li><span class="item-label">c.</span> Write the world line in the moving coordinate frame using the time
+           in the moving frame as a parameter.
+</li>
+<li><span class="item-label">8.</span> A particle of mass \(m\) moving relativistically with momentum \(p\) is
+           projected at a second stationary particle also of mass \(m\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the total 4-momentum (i.e., momentum-energy 4-vector) of the
+           system.</li>
+<li><span class="item-label">b.</span> Find a coordinate frame in which the total 3-mom (i.e., 3 space-like
+           components which are the momentum) is zero.
+</li>
+<li><span class="item-label">9.</span> Two particles leave a collision point at 90° to the initial
+           direction in the C.M. frame.
+           If the velocity of the C.M. frame is c what are the angles in the
+           lab frame?
+           What is the magnitude of the momentum in the lab frame?</li>
+<li><span class="item-label">10.</span> An event is seen in \(S_1\) to be at the spacetime point
+           (10.0&thinsp;m, 0, 0, \(t c\)), where \(t = 1.0 \times 10^{-6}\)&thinsp;s.
+           At what spacetime point is this event in \(S_2\), which is moving at
+           0.6&thinsp;\(c\) (in the \(y\)-direction) with respect to \(S_1\)?</li>
+<li><span class="item-label">11.</span> A particle of mass \(m_0\), momentum \(p = m_0 c\), hits an unknown
+           object in such a way that it is stopped.
+           Write its initial and final momentum 4-vectors.
+           Transform the difference of these 4-vectors to find a frame where
+           the collision appears to be elastic (i.e., the energy is the same
+           before as after so that the energy component of the 4-vector
+           difference is zero).
+           Give \(\beta\) for the frame.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(\left ( \begin{array}[c]{c} 1000 \\ 0 \end{array} \right)\)</li>
+<li><span class="item-label">2.</span> \(\left( \begin{array}[c]{c c}
+ \gamma             & -\frac{1}{2}\gamma \\
+ -\frac{1}{2}\gamma & \gamma             \end{array} \right)
+\cdot \left ( \begin{array}[c]{c}
+     1000 \\ 0 \end{array} \right)
+ = \left( \begin{array}[c]{c} 1000 \gamma \\
+   -\frac{1}{2} 1000 \gamma \end{array} \right)
+ = \left( \begin{array}[c]{c} \frac{2}{\sqrt{3}} \times 1000 \\
+                       -\frac{1}{\sqrt{3}} \times 1000 \end{array} \right)\)
+<p>which used:
+<p>\(\gamma = \frac{1}{\left[ 1 - (1/4) \right]^{1/2}} =
+          \frac{1}{\left( 3/4 \right)^{1/2}} =
+          \frac{2}{\sqrt{3}}\)</li>
+<li><span class="item-label">3.</span> a. \(\left( \begin{array}[c]{c} 0 \\ 0 \end{array} \right)\) \qquad 
+           b. \(\left( \begin{array}[c]{c} 0 \\ \frac{c}{v} L_2 \end{array} \right)\)</li>
+<li><span class="item-label">4.</span> a. \(\left( \begin{array}[c]{c} 0 \\ 0 \end{array} \right)\) \qquad 
+           b. \(\left( \begin{array}[c]{c} L_1 \\ \frac{c}{v} L_1 \end{array} \right)\)</li>
+<li><span class="item-label">5.</span> \(\left( \begin{array}[c]{c} 0 \\
+                   \frac{L_2}{\beta} \end{array} \right) =
+           \left( \begin{array}[c]{c c}
+                                 \gamma   & -\beta \gamma \\
+                            -\beta \gamma &    \gamma     \end{array} \right)
+           \cdot \left( \begin{array}[c]{c}
+                   L_1 \\ \frac{L_1}{\beta}\end{array} \right)
+           = \left( \begin{array}[c]{c} 0 \\
+                         -\beta \gamma L_1 + \frac{\gamma L_1}{\beta}
+             \end{array} \right)\)
+<p>           \(\Longrightarrow L_2 = \gamma L_1 (1 - \beta^2) =
+                                 (1 - \beta^2)^{1/2} L_1\)</li>
+<li><span class="item-label">6.</span> \(\left[ r \cos \left(2 \pi \frac{t}{T} \right),
+                   r \sin \left(2 \pi \frac{t}{T} \right),0,ct \right]\)</li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Lorentz Transformation in the \(z\)-direction:</li>
+<li>\(\left( \begin{array}[c]{c c c c}
+ 1 & 0 & 0             & 0              \\
+ 0 & 1 & 0             & 0              \\ 
+ 0 & 0 & \gamma        & - \beta \gamma \\
+ 0 & 0 &- \beta \gamma &     \gamma     \end{array} \right) \cdot
+ \left( \begin{array}[c]{c}
+ r \cos(2 \pi t/T) \\
+ r \sin(2 \pi t/T) \\
+          0        \\
+     ct            \end{array} \right)\)
+<p> = \(\left( \begin{array}[c]{c}
+ r \cos( 2 \pi t/T ) \\ 
+ r \sin( 2 \pi t/T ) \\ 
+ - v \gamma t        \\ 
+   c \gamma t        \end{array} \right)\)
+= \(\left( \begin{array}[c]{c} 
+ x' \\
+ y' \\
+ z' \\
+ ct' \end{array} \right) \)</li>
+<li><span class="item-label">b.</span> From answer to part (a):
+<p><div class="env-lefteqnarray">
+	t' & = \gamma  t<br>
+    x' & = r \cos \left (\(\dfrac{2 \pi t'}{\gamma T}\) \right )<br>
+    y' & = r \sin \left (\(\dfrac{2 \pi t'}{\gamma T}\) \right )<br>
+    z' & = - v t'
+</div>
+
+<p>Therefore the period is: \(\gamma T = T'.\)</li>
+<li><span class="item-label">c.</span> <span class="tex-unknown" title="unknown macro">\dropmatrix</span>r \cos (2 \pi  t' / T') <br>
+                       r \sin (2 \pi  t' / T') <br>
+                       - v t'                <br>
+                       c t'                  
+</li>
+<li><span class="item-label">8.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\left(\begin{array}[c]{c} p \\ E_1/c \end{array} \right) +
+              \left(\begin{array}[c]{c} 0 \\ m c   \end{array} \right) =
+              \left(\begin{array}[c]{c} p \\
+                  \left( m^2 c^2 + p^2 \right)^{1/2} + mc \end{array} \right)\)</li>
+<li><span class="item-label">b.</span> \(\left(\begin{array}[c]{c c}
+             \gamma         & - \beta \gamma     \\
+             - \beta \gamma & \gamma \end{array} \right) \cdot
+           \left(\begin{array}[c]{c} p \\ E/c  \end{array} \right) =
+           \left(\begin{array}[c]{c}
+             \gamma (p - \beta E/c) \\ (-\beta p + E/c) \gamma
+           \end{array} \right) =
+           \left(\begin{array}[c]{c} 0 \\ \neq 0  \end{array} \right)\)
+<p>           where:  \(E = \left( m^2 c^2 + p^2 \right)^{1/2} + mc\)
+
+<p>Therefore we obtain \(\beta = p c/E\), which is different from the single
+particle formula.
+Note that this \(\beta\) is not the velocity for any particular particle since
+\(E/c = m c + (m^2 c^2 + p^2)^{1/2}\).</li>
+<li><span class="item-label">9.</span> \(\left(\begin{array}[c]{c c c}
+       \gamma         & 0 & + \beta \gamma \\
+          0           & 1 &      0         \\
+       + \beta \gamma & 0 & \gamma \end{array} \right) \cdot
+      \left(\begin{array}[c]{c}
+            0 \\ p \\ \left( m^2 c^2 + p^2 \right)^{1/2} \end{array} \right)\) =
+<p> \(\left(\begin{array}[c]{c}
+              \beta \gamma \left( m^2 c^2 + p^2 \right)^{1/2} \\
+                                   p                         \\
+              \gamma \left( m^2 c^2 + p^2 \right)^{1/2} \end{array} \right)\)
+<p>       \(|p_L|^2 = p^2 + \frac{\beta^2}{1 - \beta^2}
+                        \left( m^2 c^2 + p^2 \right)\)
+<p>      \(\theta = \tan^{-1}\left( \frac{p (1 - \beta^2)^{1/2}}{\beta \left( m^2 c^2 + p^2 \right)^{1/2}} \right)\)</li>
+<li><span class="item-label">10.</span> \(\beta = 0.6\);
+           \(\gamma =
+                    \frac{1}{\left( 1 - 0.36 \right)^{1/2}} =
+                    \frac{1}{0.8}\)
+<p>           The Lorentz transformation in the \(y\)-direction is:
+<p>           \(\left( \begin{array}[c]{c c c c}
+           1   &   0  &    0  &     0   \\
+           0   & \gamma &  0  & - \beta \gamma \\
+           0   &   0    &  1  &     0          \\
+           0   & - \beta \gamma & 0 &  \gamma \end{array} \right)\).
+    The event is: \(\left( \begin{array}[c]{c}
+                               x_1 \\ 0 \\ 0 \\ c t_1 \end{array} \right)\),
+<p>    where: \(x_1 = 10\)&thinsp;m, \(t_1 = 10^{-6}\)&thinsp;sec.
+<p>           \(\left( \begin{array}[c]{c c c c}
+           1   &   0  &    0  &     0   \\
+           0   & \gamma &  0  & - \beta \gamma \\
+           0   &   0    &  1  &     0          \\
+           0   & - \beta \gamma & 0 &  \gamma \end{array} \right) \cdot
+           \left( \begin{array}[c]{c}
+                               x_1 \\ 0 \\ 0 \\ c t_1 \end{array} \right)
+       =  \left( \begin{array}[c]{c}
+            x_1 \\ - v \gamma t_1 \\ 0 \\ \gamma c t_1 \end{array} \right)\)
+<p>       =  \(\left( \begin{array}[c]{c}
+            10\,\text{m} \\
+ - \frac{0.6}{0.8} \left( 3 \times 10^8 \right) \times 10^{-6}\,\text{m}\\
+               0        \\
+  \left( \frac{1}{0.8} \times 10^{-6}\,\text{s} \right) c
+            \end{array} \right)
+       =  \left( \begin{array}[c]{c}
+            10\,\text{m} \\
+            -225\,\text{m} \\
+               0        \\
+           c\,1.25 \times 10^{-6} \,\text{s} \end{array} \right)\)</li>
+<li><span class="item-label">11.</span> \(\left( \begin{array}[c]{c} m_0 c \\ \sqrt{2} m_0 c \end{array} \right)
+          - \left( \begin{array}[c]{c} 0 \\ m_0 c \end{array} \right)
+ = \left( \begin{array}[c]{c} m_0 c \\ (\sqrt{2} - 1) m_0 c \end{array} \right)\)
+<p> \(\left( \begin{array}[c]{c c}
+       \gamma  & - \beta \gamma \\
+ -\beta \gamma &       \gamma   \end{array} \right) \cdot
+  \left( \begin{array}[c]{c}
+         m_0 c \\ \left(\sqrt{2} - 1 \right) m_0 c \end{array}\right) =
+  \left( \begin{array}[c]{c}
+      \gamma m_0 c \left( 1 - \beta \left( \sqrt{2} - 1 \right) \right) \\
+      \gamma m_0 c \left( - \beta + \sqrt{2} - 1 \right) \end{array}\right)\)
+<p>  \(\Longrightarrow \beta = \sqrt{2} - 1\)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Show that energy and momentum of a particle are the components
+           of a four-vector.
+           Let the particle have velocity \(u_x\), \(u_y\), \(u_z\) in one Lorentz
+           frame and \(u_x'\), \(u_y'\), \(u_z'\) in a second frame moving with
+           velocity \(v\) along the \(x\)-axis with respect to the first frame.
+           The velocity addition law is:
+<p>\[u_x' = \frac{u_x - \beta c}{(1-\frac{u_x}{c}\beta)}\hspace{0.2in}\]
+<p>\[u_y' = \frac{1}{\gamma}\,\frac{u_y}{(1-\frac{u_x}{c}\beta)}\]
+<p>\[u_z' = \frac{1}{\gamma}\,\frac{u_z}{(1-\frac{u_x}{c}\beta)}\]
+<p>\[\frac{1}{\sqrt{1 - (\frac{u'}{c})^2}} =
+\gamma\,\frac{1 - \frac{u_x}{\ds c} \beta}{\sqrt{1 - (\frac{u}{\ds c})^2}}\]
+<p>           where \(\beta = v/c\) and \(\gamma = (1 - \beta^2)^{-1/2}\).</li>
+<li><span class="item-label">3.</span> An event is seen in \(S_1\) to be at the spacetime point
+           (10.0&thinsp;m, 0, 0, \(t c\)), where \(t = 1.0 \times 10^{-6}\)&thinsp;s.
+           At what spacetime point is this event in \(S_2\), which is moving at
+           0.6&thinsp;\(c\) (in the \(y\)-direction) with respect to \(S_1\)?</li>
+<li><span class="item-label">4.</span> A particle of mass \(m_0\), momentum \(p = m_0 c\), hits an unknown
+           object in such a way that it is stopped.
+           Write its initial and final momentum 4-vectors.
+           Transform the difference of these 4-vectors to find a frame where
+           the collision appears to be elastic (i.e., the energy is the same
+           before as after so that the energy component of the 4-vector
+           difference is zero).
+           Give \(\beta\) for the frame.</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;10.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;11.</li>
+</ol>
+
+</section>
+
+<p>

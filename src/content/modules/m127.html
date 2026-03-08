@@ -1,0 +1,248 @@
+<header class="module-header">
+  <h1 class="module-title">A Charged Particle Trajectory in a Magnetic Field: Cyclotron Orbits (A Computer Project) <span class="module-author">(J.S.Kovacs and P. Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: trajectory <a href="../m72/" class="module-ref">MISN-0-72</a>, magnetic field <a href="../m122/" class="module-ref">MISN-0-122</a>.</li><li><strong>2.</strong> State the expression for the Lorentz force and state its
+    significance for a moving charged particle in a magnetic field
+    <a href="../m122/" class="module-ref">MISN-0-122</a>.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Use a canned computer program to solve a design problem involving
+    the trajectory of a charged particle in a magnetic field.
+    <br>
+ Explain why the solution found is reasonable in terms of the
+    forces involved.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> Canned computer program M127-P.BAS, 2 sheets of graph paper.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction and Description</h2>
+
+<p>The trajectories of charged particles in zero and in uniform magnetic
+fields are obviously easy to obtain in terms of well-known functions,
+but such solutions are not known for more than a few other such simple
+fields.
+For the general case of an arbitrarily varying magnetic field,
+one must obtain or derive an approximate numerical technique
+to find the trajectory.
+Then either a hand calculator or a 
+computer can be used to effect the solution, 
+but use of the computer is by far the less
+tedious method.
+Computers are used both to determine charged
+particle trajectories in existing fields and to design magnetic
+fields in order to produce particular desired trajectories.
+The specific task in this module is that of using a Runge-Kutta
+algorithm in a computer program to find a unique orbit in a 3-sector
+cyclotron similar to the one at Michigan State University.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Problem</h2>
+
+<p>The general problem is to determine the trajectory of a charged particle
+in an arbitrary magnetic field.
+Your specific problem here is to find a unique orbit in a simplified
+version of a 3-sector cyclotron similar to the one at Michigan State 
+University or its carbon copy at Princeton University.
+The charged particle to be tracked is a proton; the cyclotron's
+magnetic field is illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m127gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The magnetic field 
+configuration <br> in the MSU cyclotron.</figcaption></figure></div>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m127gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Non-Solution  Solution</figcaption></figure></div>
+
+<p>Given that the starting point for the proton is at a point along
+the positive \(x\)-axis and the initial velocity is a vector
+pointing along the positive \(y\)-axis, your job is to find the
+proper initial radius such that the trajectory of the proton closes on
+itself in one revolution.
+A solution and a non-solution (not meant to be realistic) are shown
+in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p>How does one find the proper initial radius in order to get a single
+orbit?
+Call an initial trial radius \(r_0\) and the radius resulting from a
+transit of one complete orbit \(r_1\), as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+(The value of \(r_0\)<span class="tex-unknown" title="unknown macro">\</span> was read into the computer; the value of \(r_1\) was
+taken from the computer output.)
+Plot the pair (\(r_0\),\(r_1\)) as a point on a graph of \(r_0\) vs \(r_1\), as
+in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+Then input another value of \(r_0\) and get its corresponding 
+value of \(r_1\) from the output.
+Plot this pair as a point on the same graph.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m127gr04.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. An example of successive pairs of radii. </figcaption></figure>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m127gr05.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Cyclotron <br> Parameters</figcaption></figure>
+
+<p>Your points on the graph will not define a smooth curve because the
+numerical method of solution cannot deal properly with the sharp edges of
+the magnetic field.
+However, the points will define a crude curve.
+<p>Through choosing judicious values for \(r_0\), you should soon be able
+to draw a crude curve through the points and find where the curve crosses
+the \(45\deg\) line.
+You should need only 3 or 4 points for this.
+The point where the crude curve crosses the \(45\deg\) line is a crude solution
+value for \(r_0\).
+Explain why this is so, on the graph.
+<p>Finally, put this solution value of \(r_0\) into the computer program
+to obtain the cartesian coordinates of a closed orbit.
+Since the curve is crude, you should only expect your value of \(r_1\) to agree
+with your value of \(r_0\) to within about 5%.
+Plot the trajectory and the sector boundaries on a piece
+of graph paper and explain, on the graph paper, the various shapes
+you see in the orbit (straight lines, circular arcs, elliptical arcs,
+hyperbolic arcs, etc.).
+Then, on the graph paper, explain why those particular shapes occur for the
+case at hand.
+<p>The program M127-P.EXE assumes the cyclotron parameters in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>. as well as  
+these parameters for the proton:
+<p>\[q\,*\,B\,/\,m = 2/sec.\]
+\[\vec{v}_0 = v_0 \hat{y}\]
+\[\vec{r}_0 = r_0 \hat{x}.\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Procedure</h2>
+
+<ol>
+<li><span class="item-label">a.</span> Obtain 2 sheets of linear (regular) graph paper from some source,
+such as a friend or a bookstore.
+There might or might not be some available in our Consulting Room or
+from our Exam Manager at the entrance to our Exam Room.</li>
+<li><span class="item-label">b.</span> Go to our Consulting Room and get a copy of CBI Document #8-100,
+which tells you how to use a University microcomputer for this project.
+Use of the micro is free.</li>
+<li><span class="item-label">c.</span> In order to run the program, follow the directions on #8-100.
+When you have reached the Microlab Class Menu - Page 2, select PHYCBI by
+hitting the 2 key.
+That will cause the program M127-P.EXE to be downloaded from a remote hard
+disk to the one in your machine.
+Your hard disk is called drive C (note the “<span class="tex-unknown" title="unknown macro">\lstset</span>language=[LaTeX]TeX<span class="tex-unknown" title="unknown macro">\lstinline</span>�C:<br>>� ”
+prompt that appears on the screen).</li>
+<li><span class="item-label">d.</span> If all went well, lights will blink and the program will start running.</li>
+<li><span class="item-label">e.</span> The first run of the program establishes the initial velocity,
+\(v_0\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>  Initial values for the radial and tangential
+components of the velocity are assigned by the computer, using your CBI ID.
+An initial trial radius \(r_0\) will be requested  (<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>&thinsp; ) and a value of \(r_1\)
+will be returned. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a> The run will be quite slow, since these machines do not have
+a math chip.
+There is no need to see the whole orbit until you have a solution.
+Determine as many pairs of (\(r_0\),\(r_1\)) values as you need to construct the
+graph of successive radii and determine a value of \(r_0\) which yields
+a closed orbit (to within 5% or so).
+Then run again, this time asking for the whole orbit (we usually prefer to
+see every tenth point on this run).</li>
+<li><span class="item-label">f.</span> At the “ <span class="tex-unknown" title="unknown macro">\lstinline</span>!C:<br>WORK<br>PHYCBI>! ” prompt, type <span class="tex-unknown" title="unknown macro">\lstinline</span>!EXIT! so the screen looks
+like this <span class="fbox"><span class="tex-unknown" title="unknown macro">\lstinline</span>�C:<br>WORK<br>PHYCBI>EXIT�</span> and then hit the RETURN key.
+That should take you back to the “classes” menu.
+Look at the menu and hit the key that takes you back to the “main menu.”</li>
+<li><span class="item-label">g.</span> Annotate your two graphs, showing the information asked for in the
+previous section of this module.</li>
+<li><span class="item-label">h.</span> When finished annotating your two graphs, \(r_0\) vs \(r_1\) and x vs y
+(the crude solution orbit), bring them and the original of your computer
+output to the exam room and ask for your exam.
+Staple your annotated output to the exam answer sheet as the
+“exam answers” for this unit.
+Make sure your graphs are neat and well labeled.
+Axes should be labeled and units should be specified.
+The notations on the graphs should cover all aspects requested in the unit.
+You will receive zero credit for the unit if you do the computer and
+graphical parts but do not give the physics explanation.</li>
+</ol>
+
+<p><em>Questions for Additional Understanding</em>:
+<ol>
+<li><span class="item-label">*1.</span> What makes the 240° and 360° radii equal to the \(0^\circ\) and
+120° radii for the solution-orbit?
+Is it related to the symmetry properties of the magnetic field geometry?</li>
+<li><span class="item-label">*2.</span> How could you have solved this cyclotron problem exactly, in terms
+of common functions?</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">A cyclotron is a device that accelerates atomic nuclei in increments as the nuclei
+travel in roughly circular orbits inside the machine.  In particular, a nucleus coasts
+around its orbit through approximately 180°, is accelerated through a very short distance,
+coasts through another 180°, is accelerated through another very short distance, and
+repeats the cycle.  Every time the particle goes around it is accelerated to a higher
+speed and kinetic energy.  After reaching a desired speed, the accelerations can be turned off
+and the nuclei will coast around their orbit (as in this module).  The coasting segments obey
+the rules for charged particles in magnetic fields, while the acceleration segments obey the
+rules for charged particles in electric fields.  The electric-field acceleration segments are
+not shown in the figures of this module. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+The speed \(v_{0}\), called <span class="tex-unknown" title="unknown macro">\lstset</span>language=Basic<span class="tex-unknown" title="unknown macro">\lstinline</span>�V0� in the program, is assigned by M127-P.BAS from your Physics
+Course ID number during your first run, 
+and is kept at that value on succeeding runs as long as you do not leave the program.</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+The maximum value \(r_{0}\) can have is the radius of the cyclotron (See <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>&thinsp;).
+Note that the program assumes values of \(r_{0}\) that are in meters and \(v_{0}\) in 
+meters/sec.</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+If the value of \(r_{1}\) is greater than the dimensions of the cyclotron the prgram will print:
+“YOUR PARTICLE HAS EXCEEDED THE CYCLOTRON BOUNDARIES”
+and the program execution will terminate.  If this occurs, start over again.</div></div>
+
+<p></section>
+
+<p>
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Submit your hand-annotated output showing the \((r_{0},r_{1})\) pairs.
+Be sure it shows that you homed in on rough agreement between the
+two numbers.</li>
+<li><span class="item-label">b.</span> Submit your graph showing the plotted \((r_{0},r_{1})\) pairs.</li>
+<li><span class="item-label">c.</span> Submit your hand-annotated output showing equal-time points along
+the roughly-consistent trajectory.
+</li>
+<li><span class="item-label">2.</span> Submit your graph showing the roughly-consistent trajectory.
+Be sure you have hand annotated the graph to point out the shapes and
+the physics reasons for those particular shapes.</li>
+</ol>
+
+<p>
+<p>
+<p>
+<p></section>

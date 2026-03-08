@@ -1,0 +1,280 @@
+<header class="module-header">
+  <h1 class="module-title">Energy and Momentum in Electromagnetic Waves <span class="module-author">(J.S.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: electromagnetic wave <a href="../m210/" class="module-ref">MISN-0-210</a>, charge density
+    <a href="../m147/" class="module-ref">MISN-0-147</a>, current density <a href="../m144/" class="module-ref">MISN-0-144</a>.</li><li><strong>2.</strong> Describe the storage of energy in a capacitor <a href="../m135/" class="module-ref">MISN-0-135</a>.</li><li><strong>3.</strong> Describe the storage of energy in an inductor <a href="../m144/" class="module-ref">MISN-0-144</a>.</li><li><strong>4.</strong> Relate the electromagnetic wave's electric and magnetic fields to
+    each other and to the direction of propagation of the wave. <a href="../m210/" class="module-ref">MISN-0-210</a>.</li><li><strong>5.</strong> Relate force to rate of change of momentum <a href="../m15/" class="module-ref">MISN-0-15</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: electric energy current density,
+    magnetic energy current density, energy current density, momentum
+    current density.</li><li><strong>K2.</strong> Given the energy density in an electric fields,
+    and the knowledge that the electric field energy is given by
+    \(E_e = (1/8 \pi k_e) E^2\) where \(E\) is the electric field, derive the
+    expression for the time-average energy current density in the wave.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Relate the electric and magnetic field amplitudes to the
+    intensity, energy density, and momentum density associated with an
+    electromagnetic wave of a given frequency.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Brewster's Law and Polarization” (MISN-0-225).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Description</h2>
+
+<p>Electromagnetic waves travel at the speed of light, and they transport
+energy and momentum from the places where they originate to the places
+they travel to.
+The energy and momentum they carry can be easily computed from a knowledge
+of their amplitudes.
+Knowing the energy carried by a wave, one can calculate the heating produced
+when an electromagnetic wave is absorbed by a material object.
+Similarly, knowing the momentum being carried by a wave allows us to
+calculate the pressure exerted on an object that absorbs, deflects, or
+reflects the wave.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Static Fields</h2>
+
+<p><h3 id="pcap-2-a">2a. Energy in Static Fields</h3>
+
+Elsewhere we have shown that the energy stored in the electric field of
+a capacitor is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[E_e = \frac{1}{2} C V^2\,.\]
+<p>This amount of energy can be recovered if the capacitor is discharged
+so its voltage and hence its internal electric field drops to zero.
+<p>Similarly, the energy stored in the magnetic field of an inductor is:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[E_m = \frac{1}{2} L I^2\,,\]
+<p>and this amount of energy can be recovered if the current through the
+inductor is shut off so its magnetic field drops to zero.
+<p>A crucial point is that one can prove in general that the energy stored
+in electric and magnetic fields, including the examples shown above, can be
+calculated from:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[E_e = \int_\text{all space} \left(\frac{1}{8 \pi k_e}\right) E^2 dV\,,\]
+<p>where \(E\) is the electric field, and
+<p>\[E_m = \int_\text{all space} \left(\frac{1}{8 \pi k_m}\right) B^2 dV\,,\]
+<p>where \(B\) is the magnetic field.
+<p><h3 id="pcap-2-b">2b. Energy Density in Static Fields</h3>
+
+The integrands in the right hand sides of <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>
+are over all space, so their integrands can be interpreted as energy
+densities, energy per unit volume:
+<p>\[\frac{dE_e}{dV} = \frac{1}{8 \pi k_e} E^2\,,\]
+<p>and
+<p>\[\frac{dE_m}{dV} = \frac{1}{8 \pi k_m} B^2\,.\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Electromagnetic Waves</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]3aEnergy Density
+For the case of an electromagnetic wave the electric and magnetic amplitudes
+are related:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[E = c B\,,\]
+<p>so we can use that and the relation between the electric and magnetic
+force constants:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[k_m = k_e/c^2\]
+<p>to rewrite <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> as the magnetic energy density in an
+electromagnetic wave:
+<p>\[\frac{dE_m}{dV} = \frac{1}{8 \pi k_e} E^2\,.\]
+<p>Note that this is exactly the same as the electric energy density,
+<a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>, so the total energy density for the electromagnetic wave
+is:
+<p>\[\frac{dE}{dV} = \frac{1}{4 \pi k_e} E^2\,.\]
+<p><h3 id="pcap--">. </h3>
+[]3bEnergy Current Density
+As an electromagnetic wave travels at the speed of light, the energy
+it carries can be expressed as an <em>energy current</em> in analogy with
+electric current.
+Recall that electric current density \(\vec{j}\) is defined as the amount
+of charge crossing unit area perpendicular to the current direction, per
+second.
+This current density can be expressed in terms of its charge density \(\rho\)
+and the drift velocity \(\vec{v}\) of the charges:
+<p>\[\vec{j} = \rho \vec{v}\,.\]
+<p>Similarly, we can define the energy current density \({\cal E}\) as the energy
+per unit area perpendicular to the current direction, per second.
+Then it is given by the analog of <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>:
+<p>\[\vec{\cal E} = \frac{1}{4 \pi k_e} E^2 \vec{v}\,.\]
+<p>Making use of the directions of the fields, this is usually written:
+<p>\[\vec{\cal E} = \frac{c^2}{4 \pi k_e} \vec{E} \times \vec{B}\,.\]
+<p><h3 id="pcap-3-c">3c. Momentum Current Density</h3>
+
+For particles that are traveling at high speeds, speeds not negligible
+compared to the speed of light, momentum and energy are related by:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[\vec{p} = \frac{E}{c^2} \vec{v}\,.\]
+<p>Applying this equation to our electromagnetic wave, where \(v = c\), we get,
+from <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, the momentum current density:
+<p>\[\vec{\cal P} = \frac{c}{4 \pi k_e} \vec{E} \times \vec{B}\,.\]
+<p><h3 id="pcap-3-d">3d. Time-Average Quantities</h3>
+
+The electric and magnetic amplitudes in the energy and momentum current
+densities, <a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, are oscillating functions
+of time while in most applications we are interested in time-averaged
+quantities.
+The conversion is easy because the time averages that occur in those
+equations are simply cosine-squared functions of time, and any
+cosine-squared function has an average value of one-half (0.500).
+Thus:
+<p>\[\overline{\vec{\cal E}} =
+                       \frac{c^2}{8 \pi k_e} \vec{E}_0 \times \vec{B}_0\,.\]
+<p>\[\overline{\vec{\cal P}} =
+                        \frac{c}{8 \pi k_e} \vec{E}_0 \times \vec{B}_0\,.\]
+<p><h3 id="pcap-3-e">3e. Pressure From Absorption and Reflection</h3>
+
+Since force is change of momentum per unit time, the time-average pressure
+exerted on a surface by an electromagnetic wave is the change of the wave's
+time-average momentum current density due to its interaction with the
+surface:
+<p>\[\overline{\vec{P}} = \Delta \overline{\vec{\cal P}}\,.\]
+<p>For the case of absorption of the wave,
+<p>\[\overline{\vec{P}} = \overline{\vec{\cal P}} =
+                      \frac{c}{8 \pi k_e} \vec{E_0} \times \vec{B_0}\,.\]
+<p>For the case of perfect reflection where the wave's momentum is simply
+reversed in direction:
+<p>\[\overline{\vec{P}} = 2 \overline{\vec{\cal P}} =
+                      \frac{c}{4 \pi k_e} \vec{E}_0 \times \vec{B}_0\,.\]
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>the electric-field energy
+being transported, normal to a plane, per second per unit area in the plane.
+The SI unit is watts per square meter.
+<p>the magnetic-field energy
+being transported, normal to a plane, per second per unit area in the plane.
+The SI unit is watts per square meter.
+<p>the energy being transported, normal
+to a plane, per second per unit area in the plane.
+The SI unit is watts per square meter.
+<p>the normal component of the momentum
+at a plane, per unit area in the plane.
+The SI unit is kilogram meters per second per square meter.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Capacitance and Capacitors,” (MISN-0-135). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Inductance and Inductors,” (MISN-0-144). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See any advanced <em>Electricity and Magnetism</em> textbook. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Electromagnetic Waves From Maxwell's Equations,”
+MISN-0-110. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Magnetic Interactions,” (MISN-0-124). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Relativistic Momentum,” MISN-0-24. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;3 also appears in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> The electric field of a plane electromagnetic wave in vacuum is
+represented by:</li>
+<li>\(E_x = 0\)&thinsp;,</li>
+<li>\(E_y = 0.50\,\text{(N/C)} \cos\left[2.09 \,\text{m}^{-1}
+                                                     (x - ct)\right]\)&thinsp;,</li>
+<li>\(E_z = 0\)&thinsp;.</li>
+<li>Determine the wave's “intensity,” its average energy per unit
+area per unit time.</li>
+<li><span class="item-label">2.</span> Solve Problem&nbsp;1 for the wave represented by:</li>
+<li>\(E_x = 0\,,\)</li>
+<li>\(E_y = 0.50\,\text{(N/C)}
+            \cos\left[0.419 \,\text{m}^{-1}(x - ct)\right]\)&thinsp;,</li>
+<li>\(E_z = 0.50\,\text{(N/C)}
+            \cos\left[0.419 \,\text{m}^{-1}(x - ct)\right]\)&thinsp;.</li>
+<li><span class="item-label">3.</span> The amplitude of the electric field of an electromagnetic wave
+is \(\sqrt{180\pi}\) volts per meter.
+The electric field is in the \(\hat{x}\)-direction, the magnetic field in
+the \(\hat{z}\)-direction.
+Determine:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The average energy current density associated with this wave. [C]</li>
+<li><span class="item-label">b.</span> The average momentum current density carried by this wave. [F]</li>
+<li><span class="item-label">c.</span> The direction of this momentum. [A]</li>
+<li><span class="item-label">d.</span> The energy incident in one day upon a surface oriented in the
+           \(x\)-\(z\) plane that has an area of 2.7<span class="unit">&thinsp;m<sup>2</sup></span>. [D]</li>
+<li><span class="item-label">e.</span> The energy incident upon this surface if the surface is oriented
+           in the \(x\)-\(y\) plane. [G]</li>
+<li><span class="item-label">f.</span> The force exerted on this surface by the radiation if it is
+           completely absorbed by the surface. [B]</li>
+<li><span class="item-label">g.</span> The direction of this force. [E]
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> \(3.32 \times 10^{-4}\unit{watts/m^{2}}\)</li>
+<li><span class="item-label">2.</span> \(6.64 \times 10^{-4}\unit{W/m^{2}}\)</li>
+<li><span class="item-label">A.</span> \(-\hat{y}\).</li>
+<li><span class="item-label">B.</span> \(6.75 \times 10^{-9}\,\text{N}\).</li>
+<li><span class="item-label">C.</span> \(0.750\unit{J/(m^{2}\,s)}\).</li>
+<li><span class="item-label">D.</span> \(1.75 \times 10^5\,\text{joules}\) falls on area.</li>
+<li><span class="item-label">E.</span> \(-\hat{y}\).</li>
+<li><span class="item-label">F.</span> \(0.250 \times 10^{-8}\unit{J/m^{3}}\).</li>
+<li><span class="item-label">G.</span> Zero.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\vec{\cal E} = \frac{c^2}{4 \pi k_e} \vec{E} \times \vec{B}\,.\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> The amplitude of the electric field of an electromagnetic wave
+is \(\sqrt{180\pi}\) volts per meter.
+The electric field is in the \(\hat{x}\)-direction, the magnetic field in
+the \(\hat{z}\)-direction.
+Determine:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The average energy current density associated with this wave.</li>
+<li><span class="item-label">b.</span> The average momentum current density carried by this wave.</li>
+<li><span class="item-label">c.</span> The direction of this momentum.</li>
+<li><span class="item-label">d.</span> The energy incident in one day upon a surface oriented in the
+           \(x\)-\(z\) plane that has an area of 2.7<span class="unit">&thinsp;m<sup>2</sup></span>.</li>
+<li><span class="item-label">e.</span> The energy incident upon this surface if the surface is oriented
+           in the \(x\)-\(y\) plane.</li>
+<li><span class="item-label">f.</span> The force exerted on this surface by the radiation if it is
+           completely absorbed by the surface.</li>
+<li><span class="item-label">g.</span> The direction of this force. 
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;3 in this module's <em>Problem Supplement</em>,</li>
+</ol>
+
+<p></section>
+

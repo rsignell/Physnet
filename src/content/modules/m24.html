@@ -1,0 +1,247 @@
+<header class="module-header">
+  <h1 class="module-title">Relativistic Momentum: Particle Decays <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Work simple conservation of momentum problems <a href="../m14/" class="module-ref">MISN-0-14</a>.</li><li><strong>2.</strong> Use the relativistic form for total energy in conservation of energy
+    problems <a href="../m23/" class="module-ref">MISN-0-23</a>.</li><li><strong>3.</strong> Expand the square root function in a Taylor series about a given point
+    <a href="../m4/" class="module-ref">MISN-0-4</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Reduce the expression for relativistic momentum to its non-relativistic
+    form, using the general expression for Taylor's Series for the expansion of a
+    function about a point.</li><li><strong>K2.</strong> Show that \(\vec{F}\,=\,m\vec{a}\) is generally valid only for
+    \(v^2\,\ll\,c^2\).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a particle's rest mass and velocity, calculate its relativistic
+    momentum and energy.</li><li><strong>S2.</strong> Use conservation of energy and momentum to work decay problems,
+    1 particle \(\Rightarrow\) 2 particles, in the center of mass frame.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley (1970),
+    or R.&thinsp;Resnick, <em>Basic Concepts in Relativity and Early Quantum Theory</em>,
+    John Wiley &amp; Sons (1972), or R.&thinsp;T.&thinsp;Weidner and R.&thinsp;L.&thinsp;Sells,
+    <em>Elementary Modern Physics</em>, Allyn and Bacon (1980).
+    For availability, see this module's <em>Local Guide</em>.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Readings Alternatives: Choose One</h2>
+
+<p><h3 id="pcap-1-a">1a. Alternative 1: AF</h3>
+
+Read in AF:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Sections 12.4, 12.5, and 12.6.
+Optional Chapter 12 problems: 2, 15, 22, 28.
+<p><h3 id="pcap-1-b">1b. Brief Answers</h3>
+
+<ol>
+<li><span class="item-label">2.</span> When \(v = \frac{1}{\sqrt 2}c\)</li>
+<li>\(E_\text{total} = \sqrt{2} m_0 c^2\)</li>
+<li>\(E_\text{kin} = (\sqrt{2} - 1) m_0 c^2\)</li>
+<li><span class="item-label">15.</span> Electron: 0.788<span class="unit">&thinsp;MeV</span>, 0.761<span class="unit">&thinsp;c</span></li>
+<li>Proton: 938.3<span class="unit">&thinsp;MeV</span>, \(1.92 \times 10^5\,\text{m/s} = 6.39 \times 10^{-4}\,\text{c}\)</li>
+<li><span class="item-label">22.</span> \(\vec{p}_1\hspace{-1pt}\prime = \vec{p}\)</li>
+<li>\(\vec{p}_2\hspace{-1pt}\prime = - \vec{p}\)</li>
+<li>where</li>
+<li>\(p = \frac{c}{2m_0} \left( m_0^4 + m_1^4 + m_2^4 -
+                   2 m_0^2 m_1^2 - 2 m_0^2 m_2^2 \right)^{1/2}\)</li>
+</ol>
+
+<p><h3 id="pcap-1-c">1c. Alternative 2: RR</h3>
+
+Read in RR:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Sections 3.2, 3.3, and 3.4 with the exception of those areas in
+3.4 pertaining to electric and magnetic fields.
+Optional Problems: 20, 24, and 29 on pp.&thinsp;106-109.
+<p><h3 id="pcap-1-d">1d. Brief Answers</h3>
+
+<ol>
+<li><span class="item-label">20.</span> \(4.42 \times 10^{-36}\,\text{kg}\); \(2.208 \times 10^{-32}\,\text{kg}\).</li>
+<li><span class="item-label">24.</span> b. 0.511<span class="unit">&thinsp;MeV</span></li>
+<li>c. 938<span class="unit">&thinsp;MeV</span>.</li>
+<li><span class="item-label">29.</span> a. (7/12)<span class="unit">&thinsp;M<sub>0</sub>c</span></li>
+<li>b. (1/5)<span class="unit">&thinsp;M<sub>0</sub>c</span></li>
+<li>c. (32/12)<span class="unit">&thinsp;M<sub>0</sub>c<sup>2</sup></span></li>
+<li>d. (34.29/12)<span class="unit">&thinsp;M<sub>0</sub></span></li>
+<li>e. (0.71/12)<span class="unit">&thinsp;M<sub>0</sub>c<sup>2</sup></span></li>
+</ol>
+
+<p><h3 id="pcap-1-e">1e. Alternative 3: WSM</h3>
+
+Read in WSM:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Sections 3-1, 3-2, and 3-3, including the examples.
+For the purposes of this module it is not necessary to learn the derivations
+given in Section 3-1; only the results.
+<p> Optional Chapter 3 problems: 1, 8, 25, pp.&thinsp;83-4.
+<p><h3 id="pcap-1-f">1f. Brief Answers</h3>
+
+<ol>
+<li><span class="item-label">1.</span> 0.87<span class="unit">&thinsp;c</span></li>
+<li><span class="item-label">8.</span> \(8.3 \times 10^4\)</li>
+<li><span class="item-label">25.</span> \(5.6 \times 10^{19}\,\text{J}\) for spaceship alone</li>
+</ol>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Work These Problems</h2>
+
+<p><h3 id="pcap-2-a">2a. Problem A</h3>
+
+The rest mass of a <em class="meson">π</em><sup>+</sup> (“pi-plus”) meson is about
+140<span class="unit">&thinsp;MeV/c<sup>2</sup></span>.
+If a <em class="meson">π</em><sup>+</sup> is traveling at 0.8<span class="unit">&thinsp;c</span>, compute its energy in <span class="unit">&thinsp;MeV</span> and momentum
+in <span class="unit">&thinsp;MeV/c</span>.
+<p><h3 id="pcap-2-b">2b. Problem B</h3>
+
+In the decay of a <em class="baryon">Λ</em><sup>0</sup> (“lambda-zero”)
+particle, at rest, to a neutron (<em class="baryon">n</em>) and a <em class="meson">π</em><sup>0</sup> (“pi-zero”), use
+conservation of energy and momentum to show that the momentum of the neutron is
+104<span class="unit">&thinsp;MeV/c</span>.
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>mass of <em class="baryon">Λ</em><sup>0</sup></td><td>=</td><td>1115.63<span class="unit">&thinsp;MeV/c<sup>2</sup></span></td></tr><tr><td>mass of <em class="baryon">n</em></td><td>=</td><td>939.5656<span class="unit">&thinsp;MeV/c<sup>2</sup></span></td></tr><tr><td>mass of <em class="meson">π</em><sup>0</sup></td><td>=</td><td>134.9739<span class="unit">&thinsp;MeV/c<sup>2</sup></span></td></tr></tbody></table>
+</div>
+
+<p><ul>
+<li><span class="item-label">Note:</span> \(\text{(momentum)}^2 = k^2 v^2 m_0^2 = (k^2 - 1) m_0^2 c^2\) is a useful
+identity that you can easily prove.</li>
+<li><span class="item-label">Note:</span> For further decay problems see, “Review of Particle
+Properties,” <em>Physics Letters</em>, Vol.&thinsp;239, April 12, 1990.</li>
+</ul>
+
+<p>You might also like to try Problem&nbsp;12.28, AF.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>We wish to thank Ben Oh, J.&thinsp;Whitmore and G.&thinsp;A.&thinsp;Smith of Michigan State
+University for the cover photograph showing two 2-body decays as well as
+a 5-body one.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="answers-to-problems" class="module-section section-text"><h2 id="answers-to-problems">Answers to Problems</h2>
+
+<p><ol>
+<li><span class="item-label">A.</span> 233<span class="unit">&thinsp;MeV</span>, 187<span class="unit">&thinsp;MeV/c</span>.</li>
+<li><span class="item-label">B.</span> Consv. of \(E\):  \(m_\bLambda = k_\bn m_\bn + k_\mpi m_\mpi\)
+<p>           Consv. of \(\vec{p}\):
+                \(0 = k_\bn \vec{v}_\bn m_\bn + k_\mpi \vec{v}_\mpi m_\mpi\)
+<p>           Squaring the second equation and using the identity in the Note,
+<p>           (a) \((k_\bn^2 - 1) m_\bn^2 = (k_\mpi^2 - 1) m_\mpi^2\).
+<p>           Squaring the first equation after solving it for \(k_\mpi m_\mpi\):
+<p>           (b) \(k_\mpi^2 m_\mpi^2 =
+                   m_\bLambda^2 - 2 m_\bLambda k_\bn m_\bn + k_\bn^2 m_\bn^2\).
+<p>           Then putting (b) into (a) to eliminate \(k_\mpi\) gives:
+<p>           \[k_\bn = \frac{m_{\bLambda}^2 - m_{\mpi}^2 + m_\bn^2}
+                          {2 m_{\bLambda} m_\bn}\,.\]
+<p>           Again using the identity we find:
+<p>           \[\text{(momentum)}_\bn = \left( k_\bn^2 - 1 \right)^{1/2} m_\bn c =
+                                      103.9\,\text{MeV/c}\,.\]</li>
+</ol>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn,  Physics, Addison-Wesley (1970)
+(see this module's Local Guide for details on obtaining this reference). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">R.&thinsp;Resnick, <em>Basic Concepts in Relativity and Early
+Quantum Theory</em>, Wiley(1972)
+(see this module's Local Guide for details on obtaining this reference). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">R.&thinsp;Weidner and R.&thinsp;Sells,  Elementary Modern Physics, 3rd
+Edition, Allyn and Bacon (1980)
+(see this module's Local Guide for details on obtaining this reference). <a href="#fnref-3" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problems 1, 3, and 4 also occur on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> The rest mass of a <em class="baryon">Σ</em><sup>+</sup> (“sigma-plus”) particle is
+           1189.37<span class="unit">&thinsp;MeV/c<sup>2</sup></span>.
+           If it is traveling at speed 0.8000<span class="unit">&thinsp;c</span>, compute its energy in <span class="unit">&thinsp;MeV</span>
+           and its momentum in <span class="unit">&thinsp;MeV/c</span>.</li>
+<li><span class="item-label">2.</span> Reduce the expression for relativistic momentum to its
+           non-relativistic form, using the general expression for Taylor's
+           Series for the expansion of a function about a point.</li>
+<li><span class="item-label">3.</span> In the decay of a <em class="baryon">Σ</em><sup>+</sup> particle at rest, to a proton and a
+           <em class="meson">π</em><sup>0</sup> particle, calculate the momentum of the proton in <span class="unit">&thinsp;MeV/c</span>.
+           \[\begin{aligned}m_\bp             & = & 938.2592\unit{MeV/c^{2}} \\
+           m_{\mpi^{0}}    & = & 134.9645\unit{MeV/c^{2}} \\
+           m_{\bSigma^{+}} & = & 1189.37 \unit{MeV/c^{2}} \\\end{aligned}\]
+
+           Compare your answer to the (189<span class="unit">&thinsp;MeV/c</span>) listed in “Review of Particle
+           Properties,” <em>Physics Letters</em>, Vol.&thinsp;239, April 12, 1990.</li>
+<li><span class="item-label">4.</span> Show that \(\vec{F} = m \vec{a}\) is generally valid only for \(v^2 \ll c^2\).</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 1982<span class="unit">&thinsp;MeV</span>, 1586<span class="unit">&thinsp;MeV/c</span>.</li>
+<li><span class="item-label">2.</span> Taylor's Series:
+<p>           \(f(x)=f(0) + \frac{f'(0)}{1!} x +
+                                 \frac{f}{2!} x^2 + \ldots\)
+<p>           \(k(x) = (1 - x)^{-1/2}\) where \(x \equiv v^2/c^2\) for our case
+<p>           \(k'(x) = (1/2)(1 - x)^{-3/2}\)
+<p>           \(k''(x) = (3/4)(1 - x)^{-5/2}\)
+<p>           \(k(x) = 1 + (1/2)x + (3/8)x^2 + \ldots\)
+<p>           \(k(v^2) = 1 + (1/2)(v^2/c^2) + (3/8)(v^4/c^4) + \ldots\)
+<p>           \(\text{mom.} = k v m_0 = m_0 v + (1/2) m_0 (v^3 / c^2) + \ldots\)
+<p>           Then if \(v^2 \ll c^2\) we can neglect the second term and get:
+           \[\text{mom.} = m_0 v, \qquad \text{for } v^2 \ll c^2.\]</li>
+<li><span class="item-label">3.</span> As in Problem B, derive:
+		   
+           \[k_p = \frac{m_\bSigma^2 - m_{\mpi}^2 + m_\bp^2}{2 m_{\bSigma} m_bp}\]
+           
+           and find the numerical value of the momentum.</li>
+<li><span class="item-label">4.</span> Newton's Second Law, verified relativistically, is:
+           
+           \[\vec{F} = \frac{d\vec{p}}{dt},\]
+           
+           but then:
+           
+           \[\begin{aligned}\vec{F} & = \frac{d(m\vec{v})}{dt} \\         & = m \vec{a} + \vec{v} \frac{dm}{dt}, \qquad \text{where } m \equiv k m_0 \\         & \neq m \vec{a}, \text{ unless } v^2 \ll c^2 \text{ so } dm/dt = 0\,.\end{aligned}\]
+</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 on this module's <em>ID Sheet</em>.
+           One or both of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;1.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;3.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;4.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1-4.</span> See this module's <em>text</em> and <em>Problem Supplement</em>.</li>
+</ol>
+
+</section>
+

@@ -1,0 +1,571 @@
+<header class="module-header">
+  <h1 class="module-title">Intensity and Energy in Sound Waves <span class="module-author">(William C.Lane, J.Kovacs and O.McHarris,<br> Michigan State University and Lansing Community College)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: compressions, rarefactions, longitudinal wave, transverse
+    wave, sound wave <a href="../m202/" class="module-ref">MISN-0-202</a>; energy, power <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>2.</strong> For transverse waves in a stretched string and longitudinal
+    compressional waves in a solid, relate the wave speed and the force
+    on the individual particles of the medium to the physical
+    properties of the material transmitting the wave <a href="../m202/" class="module-ref">MISN-0-202</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: decibel, plane wave, spherical wave, wave intensity, wave
+    vector, wave front.</li><li><strong>K2.</strong> State the expression for the intensity of a plane wave and the power
+    transmitted across a given cross-sectional area of the medium through which
+    the wave travels.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> For intensity calculations associated with plane and spherical waves,
+    use the unit of intensity level, the decibel.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> For an acoustic plane wave of given amplitude and frequency, traveling
+    through an elastic medium of given mass density and elasticity, calculate the
+    wave's intensity, energy density, and rate at which it propagates energy.</li><li><strong>S2.</strong> Given the intensity of a spherical wave at one radial distance from the
+    wave source, calculate the wave's intensity at any other radial distance.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In a previous module we have seen that sound (acoustic) waves are the
+result of periodic disturbances of an elastic medium.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>These disturbances may be represented by variations in the local pressure
+of a region in the medium (compressions and rarefactions) or by the
+displacement of portions of the medium from their equilibrium position.
+However, this displacement is in the form of a simple harmonic oscillation,
+whether it be a transverse displacement as with waves on a stretched string
+or a longitudinal displacement as with sound waves in a gas.
+Either way there is no net movement of matter.
+It would seem appropriate then to ask what it is that is “traveling” when
+a traveling wave passes through a medium.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. One-Dimensional Elastic Waves</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aEnergy is What is Propagated
+When a one-dimensional traveling wave propagates through an elastic
+medium, the wave carries energy in the direction that the wave travels.
+This energy is the kinetic and potential energy of the deformation
+of the elastic medium.
+The total mechanical energy of an infinitesimal mass element \(dm\) in the
+elastic medium is
+<p>\[dE = \frac{1}{2} \omega^2 \xi_0^2 \, dm\,,\]
+<p>where \(\omega\) is the angular frequency of the wave and \(\xi_0\) is the
+displacement amplitude of the wave.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Depending on the geometry of the medium this energy may be expressed
+as one of several energy densities.
+For a stretched wire of linear mass density \(\mu\), the mass element \(dm\)
+may be expressed as:
+<p>\[dm = \mu\,dx\,.\]
+<p>Substituting this expression for \(dm\) into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and dividing by
+\(dx\),
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>we may define a linear energy density \(E_{\ell}\):
+<p>\[E_{\ell} = \frac{dE}{dx} = \frac{1}{2}\mu\omega^2\xi_0^2\,.\]
+<p>Similarly, for energy propagating through a three-dimensional elastic medium
+of constant cross-sectional area, such as a solid rod or a column of gas, a
+volume energy density \(E_v\) may be defined as
+<p>\[E_v = \frac{dE}{dV} = \frac{1}{2}\rho\omega^2\xi_0^2\,,\]
+<p>where \(\rho\) is the volume density of the elastic medium.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m203gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An infinitesimal volume element of an elastic
+medium of constant cross-sectional area.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]2bPower is Required to Maintain a Train of Waves
+For a continuous series of sinusoidal pulses, called a “wave train,” to
+be maintained in an elastic medium, the energy that propagates in the
+medium must be supplied by some external agent.
+The rate at which this energy is supplied is the “power” of the wave
+source, defined as
+<p>\[P=\frac{dE}{dt}\,.\]
+<p>For a transverse wavetrain propagating on a stretched wire, we may
+use the chain-rule of differential calculus to express <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> as
+<p>\[P=\frac{dE}{dt}=\frac{dE}{dx}\frac{dx}{dt}= E_{\ell} v\,,\]
+<p>or
+<p>\[P=\frac{1}{2}\mu\omega^2\xi_0^2 v\,,\]
+<p>where \(v = (T/\mu)^{1/2}\) is the speed with which energy propagates along
+the wire, the wave speed.
+A similar expression may be derived for a wave traveling through a
+three-dimensional medium of constant cross-sectional area.
+If an infinitesimal volume element \(dV\) is chosen with cross-sectional
+area \(A\) and thickness \(dx\), where the \(x\)-direction is chosen parallel
+to the direction of wave propagation, then \(dV = A\,dx\).
+Thus
+<p>\[P=\frac{dE}{dt}=\frac{dE}{dx}\frac{dx}{dt}=
+                  \frac{dE}{dV}\frac{dx}{dt}A\,,\]
+<p>so:
+<p>\[P = E_v\,A\,v\,,\]
+<p>or
+<p>\[P=\frac{1}{2}\rho\omega^2\xi_0^2 A v\,,\]
+<p>where \(v = (Y/\rho)^{1/2}\) for longitudinal waves on a solid rod or
+\(v = (K/\rho_0)^{1/2}\) for longitudinal waves in a column of gas.
+<p><h3 id="pcap--">. </h3>
+[]2cDefinition of Wave Intensity
+For cases of a one-dimensional wave traveling in a three-dimensional medium
+of constant cross-sectional area, an important quantity called the “wave
+intensity” may be defined as the power per unit cross-sectional area, \(I\):
+<p>\[I=\frac{P}{A}\,.\]
+<p>Substituting <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>, the intensity of a
+one-dimensional wave propagating in an elastic medium of constant
+cross-sectional area may be written as:
+<p>\[I=\frac{1}{2}\rho\omega^2\xi_0^2 v\,,\]
+<p>which is constant for waves of given amplitude and frequency.
+Intensity is the physical quantity which, for a sound wave, roughly
+corresponds to the “loudness” or “softness” of the sound.
+Since the MKS unit power is the watt (W), the MKS unit of intensity
+is the watt per square meter (<span class="unit">&thinsp;W/m<span class="unit">&thinsp;2</span></span>).
+<p><h3 id="pcap-2-d">2d. The Intensity Level of Sound</h3>
+
+Because the range of intensities of audible sounds is so wide, sound
+intensities are often expressed using a logarithmic scale, referred to as
+the “intensity level.”
+Intensity levels are determined using the following equation:
+<p>\[I(\,\text{db})=10 \log\left(\frac{I}{I_\text{ref}}\right)\,,\]
+<p>where \(I\) is the intensity of interest, \(I_{ref}\) is a reference intensity,
+and \(I(\,\text{db})\) is the intensity level of the intensity \(I\) in units of
+“decibels,” abbreviated “db.”
+For sound waves in air, \(I_\text{ref}\) has arbitrarily been chosen to be
+\(10^{-12}\unit{W/m^{2}}\).
+A list of typical sounds and their corresponding intensities and intensity
+levels are shown in Table 1.
+<p>
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1. The Intensities of Some Sounds.</td></tr><tr><td></td><td></td><td></td><td></td><td>RELATIVE</td></tr><tr><td>SOUND</td><td>INTENSITY</td><td>INTENSITY</td></tr><tr><td></td><td></td><td>(<span class="unit">&thinsp;W/m<sup>2</sup></span>)</td><td></td><td></td><td>(db)</td><td></td></tr><tr><td>Threshold of hearing</td><td></td><td>\(10^{-12}\)</td><td></td><td></td><td>0</td><td></td></tr><tr><td>Rustling leaves</td><td></td><td>\(10^{-10}\)</td><td></td><td></td><td>20</td><td></td></tr><tr><td>Talking (at 3&thinsp;ft.)</td><td></td><td>\(10^{-8}\)</td><td></td><td></td><td>40</td><td></td></tr><tr><td>Noisy Office or Store</td><td></td><td>\(10^{-6}\)</td><td></td><td></td><td>60</td><td></td></tr><tr><td>Elevated train</td><td></td><td>\(10^{-4}\)</td><td></td><td></td><td>80</td><td></td></tr><tr><td>Subway car</td><td></td><td>\(10^{-2}\)</td><td></td><td></td><td>100</td><td></td></tr><tr><td>Threshold of pain</td><td></td><td>1</td><td></td><td></td><td>120</td><td></td></tr></tbody></table>
+</div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Plane Waves</h2>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m203gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. An illustration of a plane wave: a) oblique
+view; b) cross-sectional view.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3aDefinition of a Plane Wave
+A one-dimensional wave for which the wave disturbance is distributed
+uniformly over a planar surface (either finite or infinite), is called a
+“plane wave.”
+If the surface is of finite extent, the plane wave is said to be
+“collimated.”
+The wave is still one-dimensional as long as it travels in a single
+direction.
+Figure&thinsp;2a is an illustration of how we visualize a plane wave as a
+series of parallel plane surfaces, called “wave fronts” moving in the
+direction indicated.
+A wave front is a surface over which the wave disturbance has the same
+phase, i.e. for a plane wave traveling in the \(x\)-direction:
+<p>\[\phi = k x - \omega t + \phi_0 = \text{ constant}\,.\]
+<p>Figure&thinsp;2b shows a cross-sectional view of the wave fronts of a plane wave.
+We typically draw such a sketch with the wavefronts one wavelength
+apart, so that they are all crests, or all troughs, or any other
+given wave disturbance.
+<p><h3 id="pcap-3-b">3b. The Wave Vector</h3>
+
+In order to describe a plane wave propagating in any direction, we will
+define a quantity called the “wave vector.”
+The wave vector, symbolized by \(\vec{k}\), is a quantity whose magnitude is
+the wave number, \(k\), of the wave, and whose direction is the direction of
+propagation of the wave.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Using the wave vector we may define the phase of a plane wave as:
+<p>\[\phi = \vec{k}\cdot\vec{r} - \omega t + \phi_0\,,\]
+<p>where \(\vec{r}\) is the position vector of a point on a particular wave front
+with respect to a specified coordinate system.
+Thus the wave function for a plane wave may be written as:
+<p>\[\xi = \xi_0\sin(\vec{k}\cdot\vec{r} - \omega t + \phi_0)\,.\]
+<p><h3 id="pcap--">. </h3>
+[]3cThe Intensity of a Plane Wave
+The intensity of a plane wave is defined as the power propagated per unit
+area of wave front.
+Since the power is distributed uniformly over the wave front, the intensity
+is constant for plane waves of given amplitude, frequency, and wave speed.
+Thus one-dimensional waves travelling in an elastic medium of constant
+cross-sectional area are examples of collimated plane waves, and the
+relations derived for the energy density and the intensity of these waves
+are applicable to plane waves in general.
+Note that if the wave front of the plane wave is of infinite extent, the
+total power propagating across its surface is also infinite, although the
+energy density and intensity are not.
+However, for systems of physical interest, only a finite portion of the wave
+front impinges on a system capable of detecting the power propagated, so
+the power detected is finite.
+Furthermore, the concept of a plane wave front of infinite area is usually
+an idealized approximation.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Spherical Waves</h2>
+
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m203gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. (a) A spherical wave propagating outward;
+(b) a spherical wave propagating inward.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-a">4a. Wave Front of a Spherical Wave</h3>
+
+Another type of wave frequently encountered is the “spherical wave.”
+In contrast to a plane wave, the wave fronts of a spherical wave are
+concentric spherical surfaces.
+The surfaces travel radially outward or inward, depending on the sign
+of the frequency term in the phase of the wave function (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><h3 id="pcap--">. </h3>
+[]4bIntensity of a Spherical Wave
+The intensity of a spherical wave is defined as the power propagated
+per unit area of wave front, just as for a plane wave.
+However, the power and energy are distributed over a spherical wave front of
+area \(4\pi r^2\).
+Since each wave front is expanding radially outward (or contracting inward)
+as the wave propagates, the intensity varies as \(r^{-2}\) for a spherical
+wave.
+Assuming the power output of the wave source, \(P_0\), is a constant, the
+intensity of the spherical wave is given by
+<p>\[I=\frac{P_0}{4\pi r^2}\,.\]
+<p>If the intensity is known at a specific radial distance \(r_0\), then since
+\(P_0 = I_0 4 \pi r_0^2\), the intensity at any other radial distance \(r\) may
+be expressed as:
+<p>\[I = I_0 \left(\frac{r_0}{r}\right)^2\,.\]
+<p><h3 id="pcap--">. </h3>
+[]4cThe Wave Function of a Spherical Wave
+By solving the wave equation for a wave source of spherical symmetry,
+the wave function for a spherical wave can be shown to be:
+<p>\[\xi(r,t) =
+     \xi_0 \left(\frac{r_0}{r}\right)\sin (kr - \omega t + \phi_0)\,,\]
+<p>where \(\xi_0\) and \(\phi_0\) are determined from the boundary conditions.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>If we consider the entire coefficient of the sine function to be the
+“amplitude,” then we see that the amplitude of a spherical wave decays as
+\(r^{-1}\).
+Since the wave intensity is proportional to the square of the wave
+amplitude, for a spherical wave the intensity is:
+<p>\[I = \beta \xi_0^2 \left(\frac{r_0}{r}\right)^2\,.\]
+<p>This expression is equivalent to <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> if \(I_0 = \beta \xi_0^2\).
+The constant of proportionality, \(\beta\), depends on the specific medium
+through which the wave travels and the physical nature of \(\xi_0\).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a unit of intensity on a logarithmic scale of
+“intensity level,” abbreviated as “db.”
+An additive increase in the intensity level of 10&thinsp;db implies a
+multiplicative increase in the actual intensity by a factor of 10.
+a one-dimensional wave traveling in a direction
+defined by the wave vector \(\vec{k}\), whose surfaces of equal phase are
+parallel planes of finite or infinite extent.
+a three-dimensional wave emanating from a wave
+source of spherical symmetry, whose surfaces of equal phase are concentric
+spheres.
+the power propagated by the wave per unit area
+perpendicular to the propagation direction; the units of intensity are
+<span class="unit">&thinsp;W/m<sup>2</sup></span>.
+a continuous surface of wave disturbances of the
+same phase, such as a crest or a trough.
+a vector whose magnitude is the wave number \(k\)
+and whose direction is the direction of wave propagation.
+</section>
+
+<p><section id="energy-density-of-a-1d-elastic-wave" class="module-section section-text"><h2 id="energy-density-of-a-1d-elastic-wave">Energy Density of a 1D Elastic Wave</h2>
+
+<p><h3 id="pcap--">. Only For Those Interested</h3>
+
+To derive the energy density of a one-dimensional elastic wave traveling in
+an elastic medium of constant cross-sectional area, consider an
+infinitesimal volume element of the medium.
+The total energy in this element is:
+<p>\[dE = dE_K + dE_P\]
+<p>where \(dE_K\) is the kinetic energy due to the motion of the infinitesimal
+volume element and \(dE_P\) is the potential energy of the element's
+displacement from equilibrium.
+If the infinitesimal volume element has mass \(dm\), the kinetic energy may be
+represented as
+<p>\[dE_K = \frac{1}{2} \dot{\xi}^2\,dm\]
+<p>where \(\dot{\xi} = \partial\xi / \partial t\), the speed of the medium's
+deformation.
+For a one-dimensional sinusoidal wave, \(\xi\) may be represented as:
+<p>\[\xi(x,t) = \xi_0 \sin (k x - \omega t + \phi_0 )\]
+<p>so
+<p>\[\dot{\xi} =
+      \pm \omega \xi_0 \cos (k x - \omega t + \phi_0 ).\]
+<p>The potential energy of the mass element may be represented as:
+<p>\[dE_P=\frac{1}{2}\xi^2\,dk\]
+<p>where \(dk\) is the elastic constant of the restoring force acting on the
+infinitesimal mass element.
+This force constant may be identified by applying Newton's second law to the
+mass element.
+The force on the mass element is given by:
+<p>\[dF = dm \frac{\partial^2\xi}{\partial t^2} =
+  -\omega^2 dm \xi_0 \sin (k x - \omega t + \phi_0 ) =
+  - \omega^2 dm \xi.\]
+<p>This result is a form of Hooke's law, so the force constant must be
+<p>\[dk = \omega^2 dm.\]
+<p>Therefore the potential energy of the mass element is:
+<p>\[dE_P = \frac{1}{2} \xi^2 \omega^2 \, dm =
+\frac{1}{2} dm \omega^2 \xi_0^2 \sin^2 (kx - \omega t + \phi_0 ),\]
+<p>and the kinetic energy of the mass element is:
+<p>\[dE_K =
+ \frac{1}{2} dm \omega^2 \xi_0^2 \cos^2 (k x - \omega t + \phi_0 ).\]
+<p>Since \(\sin^2\theta + \cos^2\theta = 1\), the total energy of the mass
+element is:
+<p>\[dE = \frac{1}{2}\omega^2 \xi_0^2 dm.\]
+<p>The results of Eqs.&thinsp;(27) - (29) are illustrated in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+You can see that at a given point in the medium the energy oscillates
+between kinetic and potential energy; yet the total energy remains
+constant, dependent only on the mass of the infinitesimal element, the
+angular frequency of the harmonic oscillation, and the amplitude of the
+wave displacement.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m203gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The energy of a mass element \(dm\) in an
+elastic medium, as a function of time, as a one-dimensional wave passes by.</figcaption></figure></div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Sound Waves and Small Transverse Waves on a String”
+(MISN-0-202). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">For a detailed derivation of this relation, see the Appendix. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Sound Waves and Small Transverse Waves on a String”
+(MISN-0-202). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Note: \(k = \omega/v\). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Note that the actual value of \(\phi_0\) will depend on whether a
+sine or a cosine function is used. <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><div class="centered">
+\(Y(\text{iron}) = 2.06 \times 10^{11}\unit{N/m^{2}}\) <br>
+\(\rho(\text{iron}) = 7.86 \times 10^3\unit{kg/m^{3}}\) <br>
+</div>
+
+<p>Problems&nbsp;4 and 5 also occur on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m203gr00.svg" alt="" class="physnet-fig"></figure>
+
+Consider a string of length \(L\), mass \(M\) (mass per unit length \(\mu = M/L\))
+under tension \(T\).
+Suppose the left end of the string is being moved up and down (transversely)
+such that a sinusoidal wave, of angular frequency \(\omega\) and wave number
+\(k\), travels away from this end along the string.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the component of the applied force in the transverse
+direction at any particular time, written in terms of the tension \(T\) in
+the string and the angle \(\theta\) the string makes with the string axis at
+that time?
+The energy of motion of the particles on the string is all transverse so
+that's the direction of the component of the force which provides this
+energy.</li>
+<li><span class="item-label">b.</span> For small displacements \(\xi\) the angle \(\theta\) will always be
+small such that \(\sin\theta \approx \tan\theta \approx \theta\) is a good
+approximation.
+Therefore, express your answer to (a) in terms of the slope of the curve
+traced by the string at the point where the driving force acts.</li>
+<li><span class="item-label">c.</span> Write down the functional form of \(\xi\)(\(x\),\(t\)) for a sinusoidal
+wave propagating to the right.</li>
+<li><span class="item-label">d.</span> Substitute this into your answer to (b).
+This tells you the time dependence of the transverse force required to
+generate a traveling sine wave to the right along the string.</li>
+<li><span class="item-label">e.</span> If this force displaces the point at the end of the string (at
+\(x = 0\)) by an amount \(d\xi\), how much work is done by the agent exerting
+this force?</li>
+<li><span class="item-label">f.</span> Determine the amount of work done by this driving force during one complete
+period of motion.</li>
+<li><span class="item-label">g.</span> Find the average rate at which this work is done using the fact
+that, for transverse waves on a stretched string, \(v = \sqrt{T/\mu}\).
+Express this rate in terms of the mass density of the string.
+</li>
+<li><span class="item-label">2.</span> Longitudinal sound waves propagate down a length of iron rod of
+cross-sectional area 30<span class="unit">&thinsp;cm<sup>2</sup></span>.
+The average sound energy density distributed throughout the volume of this
+iron rod is \(4\unit{J/m^{3}}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> How is this energy density distributed between kinetic energy of
+oscillation (of the atoms of the rod) and potential energy?</li>
+<li><span class="item-label">b.</span> What is the speed of sound along this rod?</li>
+<li><span class="item-label">c.</span> What is the wave intensity along the rod?</li>
+<li><span class="item-label">d.</span> What power must be supplied to one end of this rod to maintain
+this energy density in the rod?
+</li>
+<li><span class="item-label">3.</span> The intensity of a spherical sound wave emanating from a point
+source is observed to be \(4 \times 10^{-8}\unit{W/m^{2}}\) at a distance of one
+meter from the source.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the intensity in decibels of the sound that reaches a point
+10 meters from the source.</li>
+<li><span class="item-label">b.</span> Find the total power supplied by the source.</li>
+<li><span class="item-label">c.</span> What is the total energy per second crossing the sphere of radius
+1 meter with the source at the center?</li>
+<li><span class="item-label">d.</span> Repeat (c) for the sphere of 10 meters.</li>
+<li><span class="item-label">e.</span> What is the intensity in decibels 100 meters from the source?
+</li>
+<li><span class="item-label">4.</span> The differential equation satisfied by transverse waves along a
+stretched string of mass \(M\), length \(L\), under tension \(T\) is,
+when the string is aligned parallel to the \(x\)-direction:
+<p>\[\frac{\partial^2 \xi(x,t)}{\partial t^2} =
+  \frac{TL}{M}\frac{\partial^2 \xi(x,t)}{\partial x^2}\,.\]
+<p>The string's length is 10&nbsp;meters, it has a mass of 5&nbsp;grams, and it is
+under a tension of 30&nbsp;newtons.
+A sinusoidal source at one end of the string sends sinusoidal waves of
+wavelength 2&nbsp;meters down the length of the string.
+The power supplied by the driving oscillator is 3 watts.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the speed with which waves propagate along this string?</li>
+<li><span class="item-label">b.</span> What is the amplitude of the transverse waves propagating along
+the string?
+</li>
+<li><span class="item-label">5.</span> A point source of sound emits 50,000&nbsp;joules of sound energy every
+20&nbsp;seconds.
+At a distance 100 meters from the source, what is the intensity of
+the sound (in decibels), if no energy is lost in the intervening space?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(F_y = - T \sin\theta\) <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">b.</span> \(F_y = - T (\partial\xi/\partial x)\) at \(x = 0\)</li>
+<li><span class="item-label">c.</span> \(\xi (x,t) = \xi_0 \sin(kx - \omega t + \phi_0)\)</li>
+<li><span class="item-label">d.</span> \(F_y = - k T \xi_0 \cos(\omega t - \phi_0)\)</li>
+<li><span class="item-label">e.</span> \(dW = F_y d\xi\)</li>
+<li><span class="item-label">f.</span> \(W = \omega T \xi_0^2 \pi/v\) \qquad  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">g.</span> \(P = \omega^2 T \xi_0^2 /(2v)\) \qquad  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Evenly distributed between kinetic and potential.</li>
+<li><span class="item-label">b.</span> \(v = 5119\,\text{m/s}\)</li>
+<li><span class="item-label">c.</span> \(I = 2.05 \times 10^4\unit{W/m^{2}}\)</li>
+<li><span class="item-label">d.</span> 61.4 watts
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 26&thinsp;db</li>
+<li><span class="item-label">b.</span> \(5.03 \times 10^{-7}\,\text{watts}\)</li>
+<li><span class="item-label">c.</span> \(5.03 \times 10^{-7}\,\text{watts}\)</li>
+<li><span class="item-label">d.</span> \(5.03 \times 10^{-7}\,\text{watts}\)</li>
+<li><span class="item-label">e.</span> 6&thinsp;db
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(v = 245\,\text{m/s}\).</li>
+<li><span class="item-label">b.</span> \(\xi_0 = 9\,\text{millimeters}\).
+</li>
+<li><span class="item-label">5.</span> 103&thinsp;db.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+
+\(\begin{array}{r c l}
+W_\text{one cycle} & = & \oint\,F_y\,d\xi \\
+                  & = & k T \xi_0 \, \oint \cos\omega t
+                        d(\xi_0\sin\omega t) \\
+                  & = & k \omega T \xi_0^2 \, \int_0^{2\pi/\omega}
+                        \cos^2 (\omega t)\,dt \\
+                  & = & k T \xi_0^2 \, \int_0^{2\pi}
+                        \cos^2 (\omega t)\,d(\omega t) \\
+                  & = & k T \xi_0^2 \pi \\
+                  & = & \frac{\omega}{v} T \xi_0^2 \pi \\
+\end{array}\)
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+\(\Delta t_\text{one cycle} = 2 \pi / \omega\)
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+See Module 202, Sect.&thinsp;3b.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><div class="centered">
+\(I_{ref} = 10^{-12}\)&thinsp;W/\(m^2\)
+</div>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+One or more of these skills may be on the actual exam.</li>
+<li><span class="item-label">2.</span> The differential equation satisfied by transverse waves along a
+stretched string of mass \(M\), length \(L\), under tension \(T\) is,
+when the string is aligned parallel to the \(x\)-direction:
+<p>\[\frac{\partial^2 \xi(x,t)}{\partial t^2} =
+  \frac{TL}{M}\frac{\partial^2 \xi(x,t)}{\partial x^2}\,.\]
+<p>The string's length is 10&nbsp;meters, it has a mass of 5&nbsp;grams, and it is
+under a tension of 30&nbsp;newtons.
+A sinusoidal source at one end of the string sends sinusoidal waves of
+wavelength 2&nbsp;meters down the length of the string.
+The power supplied by the driving oscillator is 3 watts.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the speed with which waves propagate along this string?</li>
+<li><span class="item-label">b.</span> What is the amplitude of the transverse waves propagating along
+the string?
+</li>
+<li><span class="item-label">3.</span> A point source of sound emits 50,000&nbsp;joules of sound energy every
+20&nbsp;seconds.
+At a distance 100 meters from the source, what is the intensity of
+the sound (in decibels), if no energy is lost in the intervening space?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;4 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;5 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+</section>
+

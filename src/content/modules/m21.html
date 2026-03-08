@@ -1,0 +1,844 @@
+<header class="module-header">
+  <h1 class="module-title">Potential Energy, Conservation of Energy <span class="module-author">(Joe Aubel, University of Southern Florida)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: friction <a href="../m16/" class="module-ref">MISN-0-16</a>, line integral <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>2.</strong> Calculate the work done by a force along a prescribed path.</li><li><strong>3.</strong> State Newton's second and third laws <a href="../m14/" class="module-ref">MISN-0-14</a>.</li><li><strong>4.</strong> Solve a system of \(n\) simultaneous equations in \(n\) unknowns <a href="../m1/" class="module-ref">MISN-0-1</a>
+    and calculate the dot (scalar) product of any two vectors <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the potential energy function associated with a conservative
+    force.
+    Explain what a “conservative” force conserves, using examples of both
+    conservative and non-conservative forces.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given any one dimensional conservative force, determine the
+    potential energy function using standard reference points.</li><li><strong>S2.</strong> Solve problems involving both conservative and non-conservative
+    forces using the general form of the law of conservation of energy.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In this module we are primarily concerned with the concept of conservation of
+energy.
+We first introduce the concept of potential energies to replace those line
+integrals in the work definition that produce path-independent work.
+We then state the Law of Conservation of Energy, which is perhaps
+the most useful unifying concept of science.
+<p>Understanding Conservation of Energy will give you insight into many ordinary
+experiences from everyday life (such as why some people get fat!).
+You will also be better prepared to analyze the “energy crisis” and some of
+the proposed cures.
+(Don't waste time with schemes that promise more energy out than you put
+in!)
+In addition, you will develop an extremely powerful tool for solving a large
+class of physics problems with a minimum of mathematical manipulation.
+In order to further restrict the mathematics needed, we shall only deal with
+one-dimensional motion in this module.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Potential Energy</h2>
+
+<p><h3 id="pcap-2-a">2a. Overview</h3>
+
+When work is performed on a system,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>and the energy thus transferred into the system is stored internally in such
+a way that it can later be converted back to mechanical energy by reversing
+the storage process, we call the stored energy “potential energy.”
+That is because it has the <em>potential</em> to be recovered by reversing the
+storage process.
+Good examples are the energy stored through raising water against the force of
+gravity and the energy stored through compressing a spring in a mechanical
+clock.
+In the case of the elevated water the stored energy can be reclaimed to run
+electrical generators while in the case of the clock spring the stored energy
+is used to move the hands.
+<p><h3 id="pcap-2-b">2b. Frictional Forces</h3>
+
+Work done against <em>the force of friction</em> does not cause a gain in
+mechanical <em>potential</em> energy because the process is not mechanically
+reversible.
+For example, running a car at constant speed in reverse gear does not enable
+you to regain the mechanical energy you previously expended running the car
+at the same speed in forward gear.
+In fact, running the car in reverse gear requires the same <em>expenditure</em>
+of energy as running it in forward gear.
+While running the car at constant speed, in either gear, <em>all</em> of the
+energy expended goes into overcoming friction.
+<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-2-c">2c. Conditions for Potential Energy</h3>
+
+There are several  equivalent ways of describing the situations in which
+potential energy can be gained or lost.
+Two of them are: (i) the work done is reversible; and (ii) the work integral
+is independent of path.
+<p><h3 id="pcap-2-d">2d. A Conservative Force</h3>
+
+When the above conditions are fulfilled, the storage force involved in the
+energy storage is universally said by professionals to be a “conservative”
+force.
+By this they mean that the energy involved is conserved, with no losses, as
+<em>mechanical</em> energy.
+The energy-storage force is <em>not</em> the force you apply as you do work
+on the system; rather, it is an opposing force that is internal to the
+system, a loss-less mechanical storage force.
+The main two examples we will deal with here are the force of gravity
+and the restoring force of springs.
+<p>Whether the force is “conservative” or not, <em>total</em> energy is
+<em>always</em> conserved.
+<p><h3 id="pcap-2-e">2e. Potential Energy Difference</h3>
+
+The work done <em>by</em> a lossless mechanical storage force whose point of
+application moves from \(A\) to \(B\) is:
+<p>\[W_{A \rightarrow B} = \int_A^B \vec{F}_c \cdot d\vec{s}.\]
+<p>where the subscript “c” explicitly shows that the force is a
+“conservative” one.
+The negative of this work is the work done <em>on</em> the force and hence is
+the change in stored energy.
+We call this change the “potential energy difference,
+\(\Delta E_p\), at point \(B\) relative to point \(A\)”:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\Delta E_p \equiv - \int_A^B \vec{F}_c \cdot d\vec{s} =
+- W_{c, A \rightarrow B}\]
+<p>Note the significance of the signs of the terms: because the line integral
+does not depend on path, \(W_{A \rightarrow B} = - W_{B \rightarrow A}\):
+i.e., the work done against \(\vec{F}\) in moving from \(A\) to \(B\) can be
+retrieved by moving back from \(B\) to \(A\).
+Thus the net path-independent work done around any <em>closed</em> path is
+<em>zero</em>.
+Actually, this should be obvious since one possible path from a point \(A\) to
+the same point \(A\) is no movement at all and that certainly involves zero
+work.
+<p><h3 id="pcap-2-f">2f. Path-Dependent Work</h3>
+
+When a non-conservative force, \(\vec{F}_{nc}\), is involved, the value
+of the line integral,
+<p>\[\int_A^B \vec{F}_{nc} \cdot d\vec{s},\]
+<p>depends on the actual path of integration. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+The integration path in such cases must follow the actual physical path taken
+by the point of application of the force.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Potential Energy Function</h2>
+
+<p><h3 id="pcap-3-a">3a. Standard Reference Points</h3>
+
+We often dispense with the cumbersome \(A \rightarrow B\) terminology and
+choose a “standard reference point,” a point which often turns out to be
+the lower limit of the integral in practical problems.
+We then integrate from this point as the lower limit to an arbitrary space
+point (\(x\),\(y\),\(z\)) as the upper limit of the integral.
+The resulting function of (\(x\),\(y\),\(z\)) is called the “potential energy
+function” and, for an object at (\(x\),\(y\),\(z\)), \(E_p(x,y,z)\) is called the
+object's “potential energy.”
+<p>If you have a potential energy function and you wish to know the difference
+in potential energy between a space point and the reference point, merely
+evaluate the function at the point in question.
+If you wish to know the difference in potential energy between the point in
+question and a point that is not the reference point, merely evaluate the
+function at both points and take the difference.
+If you see a potential energy function and you are uncertain as to the
+reference point that was used to generate it, just set the potential energy
+function equal to zero and solve for (\(x\),\(y\),\(z\)).
+That will be the reference point that was used.
+<p><h3 id="pcap-3-b">3b. Gravitational Potential Energy</h3>
+
+Near the surface of the earth, the gravitational force on mass \(m\) (i.e., its
+weight) is essentially constant and is given by \(m\vec{g}\).
+Choosing a coordinate system with unit vectors \(\hat{x}\), \(\hat{y}\), and
+\(\hat{z}\) along east, north and up, respectively, and choosing the coordinate
+origin (wherever we might have put it) as the reference point, the
+gravitational potential energy at the point \(z_0\) is:
+<p>\[E_{p,\text{grav}}(z_0) =
+             - \int_0^{z_0} m (-g)\,dz = m g \int_0^{z_0} \,dz = m g z_0\,.\]
+<p>where \(z_0\) is height above the coordinate origin (which we have taken as the
+zero of potential energy for this case).
+We usually prefer to talk about the potential energy at some point \(z\) so we
+make a change of notation in the equation above to get the usually-used form:
+<p>\[E_{p,\text{grav}}(z) =
+             - \int_0^z m (-g)\,dz' = m g \int_0^z \,dz' = m g z\,.\]
+<p>where \(z\) is now height above the coordinate origin, our chosen
+zero of potential energy.  The variable \(z'\) is called the “dummy variable of
+integration.” <a href="#help-30" class="help-link"><span title="Special Assistance">[help&nbsp;30]</span></a>
+<p>Suppose an object of mass \(m\) is located at the point (\(x_1\),\(y_1\),\(z_1\)) and
+is then moved to the point (\(x_2\),\(y_2\),\(z_1 + h\)).
+Using <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> we find that its increase in gravitational potential
+energy is just \(m g h\).
+Note also that this is equal to the work done by an outside force
+\(\vec{F} = m g \hat{z}\) that raises the mass \(m\) through height \(h\) against
+the gravitational force that is pulling the mass and the earth toward each
+other.
+So \(m g h\) is called the gravitational potential energy of the mass \(m\) at
+height \(h\) above some coordinate origin, the reference level we have chosen.
+<p>Thus a typical concrete block with a weight of 175&thinsp;N will have a potential
+energy of 175&thinsp;N&thinsp;m relative to your toe if you are holding it at a height of
+1.00 meter above your toe.
+<p>Note that the gravitational potential energy in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> is <em>not</em>
+a property of the object of mass \(m\): instead, it is a property of the
+object-plus-earth system and that system's gravitational interaction.
+The gravitational potential energy of that system increases when the distance
+between the object and the earth is increased, and it decreases when that
+distance is decreased.
+<p><h3 id="pcap-3-c">3c. Other Illustrative Forces</h3>
+
+<ul>
+<li><span class="item-label">1.</span> Consider a conservative force of the form \(F_c = - k x\), a
+spring-type force, acting on some particle.
+Using <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>:
+<p>\[E_p = - \int_0^x - k x'\,dx' = k x^2/2.\]
+<p>Just looking at the result, it is clear that the reference point is \(x = 0\)
+since that is the point where \(E_p = 0\).</li>
+<li><span class="item-label">2.</span> Consider \(F_c = k/r^2\).
+Using <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>:
+<p>\[E_p = - \int_{\infty}^r k/r'^2\,dr' = k/r.\]
+<p>The reference point, the point where \(E_p = 0\), is at infinity, so \(E_p\)
+represents the work that is done by \(F_c\) on a particle as it moves from
+any point at radius infinity to any point at radius \(r\).</li>
+</ul>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Conservation of Energy</h2>
+
+<p>Many of the great turning points in the history of physics have been
+characterized by the discovery of situations that appeared at first to
+violate <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+But, in every case, it has been found that some form of \(E_k\) or \(E_p\) had
+been overlooked and total energy was actually conserved.
+We can write Conservation of Energy this way:
+<p><table class="physnet-table"><tbody><tr><td>The total energy in a system at time \(t\)</td></tr><tr><td>\(+\)</td></tr><tr><td>the energy entering the system during time \(\Delta t\)</td></tr></tbody></table>
+
+<p>
+\[ = \]
+
+<p><table class="physnet-table"><tbody><tr><td>the total energy in the system at time \(t + \Delta t\)</td></tr><tr><td>\(+\)</td></tr><tr><td>the energy leaving the system during time \(\Delta t\).</td></tr></tbody></table>
+
+<p>Note the close analogy with your financial affairs:
+<p><table class="physnet-table"><tbody><tr><td>Your total money at the beginning of some time interval</td></tr><tr><td>\(+\)</td></tr><tr><td>money you acquired during the time interval</td></tr></tbody></table>
+
+<p>\[=\]
+<p><table class="physnet-table"><tbody><tr><td>money you have at the end of the time interval</td></tr><tr><td>\(+\)</td></tr><tr><td>money you spent during the time interval.</td></tr></tbody></table>
+
+<p>Just as “the money you have” at a given time may be stored in various
+places and in various forms, so “the energy in a system” may be stored
+in many forms. <a href="#help-23" class="help-link"><span title="Special Assistance">[help&nbsp;23]</span></a>
+Fortunately, we need only consider those forms that change for systems we
+study during the time interval being considered.
+We will only study two forms here: kinetic energy and mechanical potential
+energy.
+<p><span class="tryit">Try it:</span>  Rephrase each of the four terms in <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> in terms of the change in a system's
+kinetic energy, \(\Delta E_k\), the change in its potential energy, \(\Delta E_p\), and
+the work done <em>on</em> the system by non-conservative forces, \(W_{nc,on}\).
+<a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a>
+<p><span class="tryit">Try it:</span>  Suppose we have a 60.0&thinsp;kg box that we wish to unload from a truck.
+Suppose this will require lowering the box through a height of 1.0&thinsp;m.
+Use kinematics to find the speed of the box just before hitting the ground
+if the box is simply pushed off the end of the truck. <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a>
+<p><span class="tryit">Try it:</span>  In the above exercise assume that the velocity of impact is
+unacceptable, so we must find a gentler way of unloading the box.
+It is too heavy to lift by hand, but the truck is equipped with a ramp
+that is 3.0&thinsp;m long.
+Use <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> and proper problem solving techniques to find the
+average force up the incline, \(F\), that must be applied to the box to let
+it arrive at the bottom of the incline with negligible speed. <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Examples</h2>
+
+<p><h3 id="pcap-5-a">5a. Energy in the Morning</h3>
+
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Your total energy in the morning</td></tr><tr><td>\(+\)</td></tr><tr><td>energy taken in during the day (from food, etc.)</td></tr><tr><td> = </td></tr><tr><td>your total energy at the end of the day.</td></tr><tr><td>\(+\)</td></tr><tr><td>energy leaving during the day (work, heat, etc.)</td></tr></tbody></table>
+</div>
+
+<p>Note that significant increases in internal energy are stored as fat!
+<p><h3 id="pcap-5-b">5b. Concrete Block Drops on Toe</h3>
+
+Consider what would happen if you let go of the concrete block mentioned near
+the end of Sect.&thinsp;3b.
+It started with 175<span class="unit">&thinsp;J</span> of gravitational \(E_p\) relative to your toe.
+The only significant force on the block while falling is mg, which is
+conservative, so when the block first touches your toe it will have \(E_k = 175\,\text{J}\).
+A short time later the block is at rest at \(h = 0\) so it has \(E_k = 0\) and
+\(E_p = 0\).
+At first glance it appears that 175<span class="unit">&thinsp;J</span> of energy was “lost.”
+Actually, this energy went into breaking chemical bonds (change in chemical
+potential energy) and into random kinetic energy of molecules (increase in
+temperature).
+<p><h3 id="pcap-5-c">5c. Box Slides Down Incline</h3>
+
+A box slides 5.0&thinsp;m down a 36.87° incline in a region where \(g\) is
+9.8<span class="unit">&thinsp;m/s<sup>2</sup></span>.
+The velocities of the box at the beginning and end of this interval are
+4.0<span class="unit">&thinsp;m/s</span> and 6.0<span class="unit">&thinsp;m/s</span>, respectively, down the incline.
+<p><span class="tryit">Try it:</span>  Find the coefficient of friction, assuming it is independent of velocity:
+<br>
+
+<span class="fbox">
+ <table class="physnet-table"><tbody><tr><td>[t]r c l
+ \(L\)</td><td>=</td><td>5.0<span class="unit">&thinsp;m</span></td></tr><tr><td>\(\theta\)</td><td>=</td><td>36.87°</td></tr><tr><td>\(v_0\)</td><td>=</td><td>4.0<span class="unit">&thinsp;m/s</span></td></tr><tr><td>\(v\)</td><td>=</td><td>6.0<span class="unit">&thinsp;m/s</span></td></tr><tr><td>\(g\)</td><td>=</td><td>9.8<span class="unit">&thinsp;m/s<sup>2</sup></span></td></tr><tr><td>\(\mu\)</td><td>=</td><td>?</td></tr></tbody></table>
+
+<img src="figures/m21gr01.svg" alt="" class="fig-inline"></span><br>
+
+<p>
+From <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>:
+<p>\[(m g h + \frac{1}{2} m v_0^2) + 0 = \frac{1}{2 }m v^2 + f L,\]
+<p>where \(f\) is the frictional force and \(h\) is \(L \sin\theta\).
+From Newton's second law:
+<p>\[N = m g \cos\theta.\]
+<p>Then:
+\[\begin{aligned}\mu=\frac{f}{N} & = \frac{mg \sin\theta - m(v^2-v_0^2)/(2L)}{mg \cos\theta} \\                  & = \tan\theta - \frac{(v^2 - v_0^2)}{2 L g \cos\theta} \\                  & = \frac{3}{4}-\frac{(36\unit{m^{2}}/\unit{s^{2}}-16\unit{m^{2}}/\unit{s^{2}})}{2(5\,\text{m})(9.8\unit{m/s^{2}})(0.80)}=0.49\,.\end{aligned}\]
+
+<p><h3 id="pcap-5-d">5d. Other Examples</h3>
+
+Potential energy curves are useful in analyzing motion and can be used to
+display complete information about the dynamical motion of a one-dimensional
+conservative system.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The application of conservation of energy to fluids is the basis of fluid
+dynamics.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Conservation of energy is used to determine the motion of oscillating systems.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Energy concepts are applied to the analysis of the rotation of rigid
+bodies.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to thank Richard Hagan, Angelite Arnold, Richard Jones, and
+Tom Hudson for their helpful reviews of this module.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+<p><span class="tex-unknown" title="unknown macro">\enlargethispage*</span>4pt</section>
+
+<p><section id="some-symbols-used" class="module-section section-text"><h2 id="some-symbols-used">Some Symbols Used</h2>
+
+<p><ul>
+<li>\(A\), an arbitrary fixed point</li>
+<li>\(B\), an arbitrary fixed point</li>
+<li>\(d\vec{s}\), a differential displacement</li>
+<li>\(E_k\), kinetic energy</li>
+<li>\(\Delta E_k\), change in kinetic energy</li>
+<li>\(E_p\), potential energy</li>
+<li>E\(_{p,grav}\), gravitational potential energy</li>
+<li>\(\Delta E_p\), change in potential energy</li>
+<li>\(\vec{F}_c\), conservative force</li>
+<li>\(\vec{F}_{nc}\), non-conservative force</li>
+<li>\(\vec{F}\), force</li>
+<li>\(\vec{f}\), frictional force</li>
+<li>\(g\), acceleration of gravity</li>
+<li>\(h\), height</li>
+<li>\(m\), mass</li>
+<li>\(\vec{r}\), radius</li>
+<li>\(\hat{r}\), unit vector in the radial direction (away from origin)</li>
+<li>\(W_{A\rightarrow B}\), work done by a force moving from \(A\) to \(B\)</li>
+<li>\(W_{nc,on}\), the work done on a system by non-conservative forces</li>
+<li>\(\hat{x}\), a unit vector in the \(x\)-direction</li>
+</ul>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Work, Power, Kinetic Energy” (MISN-0-20). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Some authors use \(U\), \(V\) or \(PE\).
+Our notation, \(E_p\), emphasizes that this is just a particular form of
+energy. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Potential Energy and Motion; Potential Curve, Turning Points”
+(MISN-0-22). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Fluids, Static and Dynamic” (MISN-0-48). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Simple Harmonic Motion” (MISN-0-25). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Translational and Rotational Motion of a Rigid Body”
+(MISN-0-43). <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Use: \(g = 9.8\unit{m/s^{2}}\)
+<p> Use Conservation of Energy in each problem marked with an asterisk (*).
+<p> If no Reference Point is given, use the standard one for that
+type of problem.
+<p>- Problems&nbsp;20-22 are also in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> In the example of Sect.&thinsp;5b in the text, we found that 175<span class="unit">&thinsp;J</span> of
+energy was converted to heat and breaking of chemical bonds, primarily in
+your toe.
+If it requires an average of \(10^{-18}\,\text{J}\) to break one molecular bond and
+4/7 of the “lost” energy went into breaking molecular bonds, how many
+bonds were broken?* </li>
+<li><span class="item-label">2.</span> The useful output power from a certain water pump is 80.0% of
+the electrical power supplied to it.
+This pump is used to raise 4.0<span class="unit">&thinsp;kg/s</span> of water from a well.
+If the water leaves the system at a speed of 8.0<span class="unit">&thinsp;m/s</span> at a height of 12.0<span class="unit">&thinsp;m</span>
+above the water level in the well, find the electrical power being supplied
+to the pump.*  <a href="#help-24" class="help-link"><span title="Special Assistance">[help&nbsp;24]</span></a></li>
+<li><span class="item-label">3.</span> The high-dive at an Olympic swimming pool is 10.0<span class="unit">&thinsp;m</span> (32.8<span class="unit">&thinsp;ft</span>)
+above water level.
+Neglecting air resistance, with what speed will a diver hit the water if he
+or she starts with a speed of 5.0<span class="unit">&thinsp;m/s</span> at an angle of 36.87° above
+the horizontal?*  <a href="#help-25" class="help-link"><span title="Special Assistance">[help&nbsp;25]</span></a></li>
+<li><span class="item-label">4.</span> A girl of mass 49.0<span class="unit">&thinsp;kg</span> is on a swing which has a mass of
+1.0<span class="unit">&thinsp;kg</span>.
+Suppose you pull her back until her center of mass is 2.0<span class="unit">&thinsp;m</span> above the
+ground.
+You let her go and she swings out and returns to the same point.
+Are all forces acting on the system conservative?
+(Caution: this question deserves a carefully qualified answer.) </li>
+<li><span class="item-label">5.</span> Assume that all forces in the previous problem are conservative,
+and that the center of mass of the girl-plus-swing system is 0.75<span class="unit">&thinsp;m</span> off the
+ground at its lowest point.
+Find the girl's maximum speed.* </li>
+<li><span class="item-label">6.</span> Suppose you push the girl in problem&nbsp;5 and add 490<span class="unit">&thinsp;J</span> of energy
+to the system.
+Find her new maximum height above the ground.* </li>
+<li><span class="item-label">7.</span> A certain toboggan with its riders has a mass of 305<span class="unit">&thinsp;kg</span> and goes
+down a hill which is 25<span class="unit">&thinsp;m</span> high.
+The toboggan starts from rest and attains a final speed at the bottom of the
+hill of 12<span class="unit">&thinsp;m/s</span>.
+Find the energy lost to friction.* </li>
+<li><span class="item-label">8.</span> One bit of advice that bowlers often hear is “let the weight of
+the ball do the work.
+Don't force it.”
+For each of the following two cases, find the percentage of the ball's final
+energy which is supplied by the bowler:*<a href="#help-26" class="help-link"><span title="Special Assistance">[help&nbsp;26]</span></a>
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Good bowler, \(\text{average } = 200\), \(\text{backswing height } = 1.10\,\text{m}\), release
+                        \(\text{speed } = 6.76\,\text{m/s}\).  </li>
+<li><span class="item-label">b.</span> Average bowler, \(\text{average} = 120\), \(\text{backswing height } = 0.70\,\text{m}\),
+                           \(\text{release speed } = 7.70\,\text{m/s}\).  
+           (Data from Murose, “Biomechanics of Bowling,” Nelson, ed.,
+            Biomechanics IV, 1974.
+</li>
+<li><span class="item-label">9.</span> A rubber ball is dropped from a height of 1.5<span class="unit">&thinsp;m</span> onto a concrete
+           floor and rebounds to a height of 1.2<span class="unit">&thinsp;m</span>.
+           What fraction of its original energy was lost to friction?* </li>
+<li><span class="item-label">10.</span> Given a conservative force defined by \(\vec{F} = - k x^2 \hat{x}\)
+find the corresponding potential energy function.
+State the reference point. </li>
+<li><span class="item-label">11.</span> Given a conservative force, \(\vec{F} = k/r^3 \hat{r}\), find the
+associated potential energy function.
+State the reference point. </li>
+<li><span class="item-label">12.</span> Given the conservative force \(\vec{F} = x y_0 \hat{x}\) find the
+associated potential energy function.
+State the reference point. </li>
+<li><span class="item-label">13.</span> Given the conservative force, \(\vec{F} = A \cos x\,\hat{x}\),
+find the potential energy function.
+State the reference point. </li>
+<li><span class="item-label">14.</span> A man at the scene of an accident claims that he was traveling
+on a level road at 25<span class="unit">&thinsp;m/s</span> (56<span class="unit">&thinsp;mph</span>) when he saw the car pull out in front
+of him.
+He says he skidded for about 30<span class="unit">&thinsp;m</span> and hit the other car with a
+speed of about 5<span class="unit">&thinsp;m/s</span>.
+If he is telling the truth, what was the coefficient of friction, assuming
+it to be independent of speed?  <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a></li>
+<li><span class="item-label">15.</span> A car with a mass of 1500<span class="unit">&thinsp;kg</span> accelerates from rest to a speed
+of 21<span class="unit">&thinsp;m/s</span> in a time of 8.0<span class="unit">&thinsp;s</span>.
+Neglecting losses due to friction and assuming a level road, what horsepower
+is required?
+(<span class="unit">&thinsp;hp</span> = 746<span class="unit">&thinsp;W</span>) </li>
+<li><span class="item-label">16.</span> Re-do the previous problem for the car on a hilly road if its
+increase in height is 8<span class="unit">&thinsp;m</span>.* </li>
+<li><span class="item-label">17.</span> A 40.0<span class="unit">&thinsp;kg</span> mass is traveling horizontally with velocity
+2.0&thinsp;\(\hat{x}\)<span class="unit">&thinsp;m/s</span> as it crosses the coordinate origin and encounters the
+force \(\vec{F} = - k x \hat{x}\) due to a spring.
+If \(k = 250\)&thinsp;N/m, at what value of \(x\) will the mass stop?*  <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a></li>
+<li><span class="item-label">18.</span> A system consists of particles \(A\) and \(B\) with masses 11<span class="unit">&thinsp;kg</span>
+and 21<span class="unit">&thinsp;kg</span> respectively.
+At time zero: \(A\) has a velocity of (5.0<span class="unit">&thinsp;m/s</span>, east) at height \(h = 0.0\).
+\(B\) has a velocity of (4.0<span class="unit">&thinsp;m/s</span> at 23° north of east) and
+\(h = 2.0\,\text{m}\).
+One hour later: \(A\) is at rest at \(h = 3.0\,\text{m}\).
+\(B\) has a velocity of (8.0<span class="unit">&thinsp;m/s</span>, north) at \(h = 0.0\).
+Find the net work done on the system during the hour.*  <a href="#help-29" class="help-link"><span title="Special Assistance">[help&nbsp;29]</span></a></li>
+<li><span class="item-label">19.</span> How many times could a 72<span class="unit">&thinsp;kg</span> person climb the Empire State
+Building while using up \(2.0 \times 10^3\) food calories of energy, if her or
+his body were 100% efficient in turning food energy into useful mechanical
+energy?
+The Empire State Building is 381&thinsp;m high, and a \(\text{food calorie } = 4186\,\text{J}\). 
+(It should be clear from the answer to this problem that very little of the
+body's energy is converted into useful mechanical energy.
+Most of it goes into heat.)</li>
+<li><span class="item-label">20.</span> A nonconstant force, \(F\), directed vertically upward (the force
+varies in magnitude as some unknown function of altitude) is exerted on an
+object of mass \(m\).
+Under the action of this force, the object moves straight up from ground
+level to a distance \(h\), above the ground.
+It starts at rest and when it gets to height \(h\) it is moving with speed \(v\)
+upward.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw the free-body diagram of forces that act on this mass during
+the course of its motion upward.
+Label the unknown force vector with a symbol but point it in the proper
+direction. </li>
+<li><span class="item-label">b.</span> Write down the Work-Force integral for this system, expressing
+the work of each of the forces separately. </li>
+<li><span class="item-label">c.</span> Evaluate the integrals that can be evaluated. </li>
+<li><span class="item-label">d.</span> Draw the appropriate picture(s) for solving this problem using
+conservation of energy. </li>
+<li><span class="item-label">e.</span> Write the conservation of energy relation for this object. </li>
+<li><span class="item-label">f.</span> How much work was done by the force \(F\)? 
+</li>
+<li><span class="item-label">21.</span> A nail partially driven into a board, is driven in further by
+dropping a mass onto it.
+The mass, \(m\), is released a distance \(y_0\) above the head of the nail and
+drives the nail an additional distance \(s\) into the board.
+Neglect the mass of the nail.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Defining the zero of potential at the top of the nail, find
+the potential energy of the mass \(m\) at the instant \(m\) is released.
+Assume the nail's mass is negligible. </li>
+<li><span class="item-label">b.</span> What is the kinetic energy at that instant? </li>
+<li><span class="item-label">c.</span> Find the potential energy after the mass has driven the nail the
+additional distance \(s\) into the board. </li>
+<li><span class="item-label">d.</span> What is the kinetic energy at that instant? </li>
+<li><span class="item-label">e.</span> Write the conservation of energy relation for this problem. </li>
+<li><span class="item-label">f.</span> How much work is done on the mass \(m\) by the
+nail-plus-board-plus-earth mechanically resistive system? </li>
+<li><span class="item-label">g.</span> How much work is done on the nail-plus-board-plus-earth
+mechanically resistive system by the mass-plus-earth gravitational system? </li>
+<li><span class="item-label">h.</span> Assuming that the nail exerts a constant force on the mass during
+the interval that the nail is slowing the mass to a stop, determine the
+magnitude of this force, \(F_N\).* 
+</li>
+<li><span class="item-label">22.</span>  <figure class="fig-centered"><img src="figures/m21gr02.svg" alt="" class="physnet-fig"></figure>
+<br>
+
+An artillery shell fired from a gun at ground level leaves the muzzle of the
+gun with a speed of \(5.0 \times 10^1\,\text{m/s}\).
+The shell strikes a direct hit at a site on the top of a hill which is at an
+altitude of 45<span class="unit">&thinsp;m</span> above ground level.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Assuming no friction, use energy conservation to find the speed
+with which the shell hits at the site. </li>
+<li><span class="item-label">b.</span> If the shell strikes the ground at the site with a speed of
+38<span class="unit">&thinsp;m/s</span>, what percentage of its original energy was lost (to friction with
+the air) by the shell in its flight? 
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 14.9<span class="unit">&thinsp;m/s</span></li>
+<li><span class="item-label">2.</span> Possibly yes, if there is no friction.
+But in the more likely real case, there will be friction, which is a
+non-conservative force.
+Thus if she does indeed return to the same point, there must have been a
+non-conservative force acting on the system, e.g., the girl “pumping.”</li>
+<li><span class="item-label">3.</span> \(10^{20}\).  Ouch!</li>
+<li><span class="item-label">4.</span> 3.0<span class="unit">&thinsp;m</span></li>
+<li><span class="item-label">5.</span> a) 53%;  b) 77%</li>
+<li><span class="item-label">6.</span> \(k x^3/3\); \(x = 0\)</li>
+<li><span class="item-label">7.</span> \(7.5 \times 10^2\,\text{W}\)</li>
+<li><span class="item-label">8.</span> 5.0<span class="unit">&thinsp;m/s</span></li>
+<li><span class="item-label">9.</span> \(k/(2 r^2)\); \(x = \infty\)</li>
+<li><span class="item-label">10.</span> 53<span class="unit">&thinsp;kJ</span></li>
+<li><span class="item-label">11.</span> 1/5</li>
+<li><span class="item-label">12.</span> 1.0</li>
+<li><span class="item-label">13.</span> \(- x^2 y_0/2\); \(x = 0\)</li>
+<li><span class="item-label">14.</span> \(- A \sin x\); \(x = 0\)</li>
+<li><span class="item-label">15.</span> 55<span class="unit">&thinsp;hp</span></li>
+<li><span class="item-label">16.</span> \(2.8 \times 10^2\,\text{J}\)</li>
+<li><span class="item-label">17.</span> 75<span class="unit">&thinsp;hp</span></li>
+<li><span class="item-label">18.</span> 0.80<span class="unit">&thinsp;m</span></li>
+<li><span class="item-label">19.</span> 31 times</li>
+<li><span class="item-label">20.</span>  <figure class="fig-centered"><img src="figures/m21gr03.svg" alt="" class="physnet-fig"></figure>
+<br>
+</li>
+<li><span class="item-label">21.</span> Zero</li>
+<li><span class="item-label">22.</span> \(\int_\text{ground}^h \vec{F} \cdot d\vec{r} +
+           \int_\text{ground}^h (- m g) ds = \frac{1}{2} m v^2\)</li>
+<li><span class="item-label">23.</span> \( m g y_0\)</li>
+<li><span class="item-label">24.</span> \(m g \left(1+\frac{y_0}{s}\right)\)</li>
+<li><span class="item-label">25.</span> \(m g y_0 = - m g s + \) energy dissipated in heat and ruptured
+bonds</li>
+<li><span class="item-label">26.</span> \(\approx\) 7% (6% or 7%)</li>
+<li><span class="item-label">27.</span> \(4.0\times10^1\,\text{m/s}\)</li>
+<li><span class="item-label">28.</span> Second integral is \(- m g h\)</li>
+<li><span class="item-label">29.</span> \(- m g s\)</li>
+<li><span class="item-label">30.</span> \(- m g (y_0 + s)\)</li>
+<li><span class="item-label">31.</span> \(m g (y_0 + s)\)</li>
+<li><span class="item-label">32.</span> \(\int_\text{ground}^h \vec{F} \cdot d\vec{r} =
+\frac{1}{2} m v^2 + m g h\).
+<p>Note that \(E_k\text{(ground)} = 0\) and \(E_p\text{(ground)} = 0\).</li>
+<li><span class="item-label">33.</span> Zero</li>
+<li><span class="item-label">34.</span> \(\frac{1}{2} m v^2 + m g h\)</li>
+<li><span class="item-label">35.</span> See diagram: <br>
+<figure class="fig-centered"><img src="figures/m21gr04.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Write the general definition for the work \(W\) done by force \(F\) in moving
+from \(A\) to \(B\).
+<br>
+
+*&thinsp;STOP&thinsp;* &amp; WRITE THE ANSWER BEFORE PROCEEDING!
+<br>
+
+<a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Let \(W_{nc} \equiv \int_A^B \vec{F}_{nc} \cdot \,d\vec{s} \equiv\) the work
+done by a non-conservative force.
+You will then have different values for \(W_{nc}\) depending on the actual
+path taken between points \(A\) and \(B\).
+For example, consider moving a 50&thinsp;kg box from point \(A\) to point \(B\) on a
+level floor, if \(B\) is 4&thinsp;m north and 3&thinsp;m east of \(A\).
+Assume the coefficient of friction between the box and the floor is \(\mu = 0.40\).
+If you apply a horizontal force \(\vec{F}\), find the work which you do in
+moving the box from \(A\) to \(B\).
+<p>This problem has as many different answers as there are paths between \(A\)
+and \(B\).
+The shortest path is the straight line from \(A\) and \(B\) of length 5&thinsp;m.
+The only horizontal forces are \(F\) and \(f\), i.e., the applied force and
+friction.
+If we assume the initial and final velocities are zero, the average
+acceleration must be zero.
+It follows from Newton's second law that the average resultant force must be
+zero, so \(\vec{F} = - \vec{f} = \mu\,\text{N}\,\hat{s}\).
+The only vertical forces are \(N\) up and mg down, so again from Newton's
+second law, \(N = m g\).
+Thus \(\vec{F} = \mu m g \hat{s}\).
+Then we have
+\[W = \int_A^B \mu m g\,\hat{s} \cdot d\vec{s} = \mu m g \int_A^B ds =
+\mu m g S,\]
+
+where \(S\) is the total distance traveled between \(A\) and \(B\).
+Clearly \(S\) could be any number \(\geq 5\)&thinsp;m depending on the path; e.g., for
+the shortest path, \(W = (0.4)(50)(9.8)5 = 980\,\text{J}\).
+But if you traveled 4<span class="unit">&thinsp;m</span> north and then 3<span class="unit">&thinsp;m</span> east, \(S = 7\,\text{m}\), and
+\(W = 1372\,\text{J}\).
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\(f = F = 200\,\text{N}\) when \(F = \mu m g \cos\theta\).
+ Here \(\theta\) is the angle the normal to the incline makes with the
+ vertical.
+ It is also the angle the incline makes with the horizontal.
+ Now \(\cos\theta = (L^2 - h^2/L)^{1/2}\).
+ So \(\mu = F L/\left(m g(L^2 h^2)^{1/2}\right) = 1/(8)^{1/2} = 0.35\).
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\[W \equiv \int_A^B  \vec{F} \cdot \,d\vec{s}\]
+
+<p>If you did not put down exactly this result, review MISN-0-20.
+</div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">\(m = 60.0\,\text{kg}\), \(v_0 = 0\), \(g = 9.8\unit{m/s^{2}}\), \(h = 1.0\,\text{m}\), \(v = \)?
+<p>From kinematics (See “Kinematics in One Dimension,” MISN-0-7):
+\(v^2 - v_0^2 = 2as\), so in the \(y\)-direction, for this problem,
+\(v^2 = 2 g h\).
+So \(v = (2 g h)^{1/2} = 4.4\,\text{m/s}\).
+</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body"><table class="physnet-table"><tbody><tr><td>[t]r c l
+  \(h\)</td><td>=</td><td>1.0<span class="unit">&thinsp;m</span>; \(m = 60.0\,\text{kg}\)</td></tr><tr><td>\(L\)</td><td>=</td><td>3.0<span class="unit">&thinsp;m</span>;</td></tr><tr><td>\(v\)</td><td>=</td><td>0</td></tr><tr><td>\(F\)</td><td>=</td><td>?</td></tr><tr><td>\(\Delta E_k\)</td><td>=</td><td>0.<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> \(\Delta E_p = 0 - m g h\).</td></tr></tbody></table>
+
+  m21gr05
+<p>\(W_{nc} = - F L\), where the negative sign comes from the fact that the force
+\(F\) is in the opposite direction to the displacement.
+Alternatively, one could say that the negative sign comes from the fact that the work done by the non-conservative force is work done on the environment (including the block) by the block's surface.
+<p>Thus from <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> we have:
+\(- F L = 0 - m g h\), from which \(F = m g h/L = 2.0 \times 10^{2}\,\text{N}\).
+<p>Most of this force will probably be supplied by friction.
+Indeed, if the coefficient of friction is greater than 0.35 you will need to
+push the box if you want it to go down the incline! <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p>Note that the work done by \(F\) is \(- 600\,\text{J}\) and the work done by gravity is
+\(+ 600\,\text{J}\), so the total work done on the box is zero, which equals
+\(\Delta E_k\).
+</div></div>
+
+<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">Here are various correct equations:
+ 
+ \[E_k(t) + \Delta E_k = E_k(t + \Delta t),\]
+ 
+ \[E_p(t) + \Delta E_p = E_p(t + \Delta t),\]
+ 
+ \[E_k(t) + E_p(t) + \Delta E_k + \Delta E_p = E_k(t + \Delta t) + E_p(t + \Delta t),\]
+ 
+ \[\Delta E_k + \Delta E_p = W_{nc,on}.\]
+ 
+ Here \(\Delta E_k\) is the <em>net</em> change in the system's kinetic energy over the time interval \(\Delta t\), \(\Delta E_p\) is the <em>net</em> change in the system's potential energy over that same time interval, and \(W_{nc,on}\) is the work done <em>on</em> the system by non-conservative forces during that same interval.
+</div></div>
+
+<p><div id="help-22" class="help-item"><span class="help-num">22.</span><div class="help-body">Consider the particles \(A\) and \(B\).
+Here are some of their properties (the \(F\)'s are different forces):
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Property</td><td>Time</td><td>\(A\)</td><td>\(B\)</td></tr><tr><td>kinetic energy</td><td>0</td><td>7.0<span class="unit">&thinsp;J</span></td><td>0.0<span class="unit">&thinsp;J</span></td></tr><tr><td>kinetic energy</td><td>\(t\)</td><td>2.0<span class="unit">&thinsp;J</span></td><td>4.0<span class="unit">&thinsp;J</span></td></tr><tr><td>potential energy due to \(F_1\)</td><td>0</td><td>3.0<span class="unit">&thinsp;J</span></td><td>0.0<span class="unit">&thinsp;J</span></td></tr><tr><td>potential energy due to \(F_1\)</td><td>\(t\)</td><td>1.0<span class="unit">&thinsp;J</span></td><td>11.0<span class="unit">&thinsp;J</span></td></tr><tr><td>potential energy due to \(F_2\)</td><td>0</td><td>0.0<span class="unit">&thinsp;J</span></td><td>5.0<span class="unit">&thinsp;J</span></td></tr><tr><td>potential energy due to \(F_2\)</td><td>\(t\)</td><td>0.0<span class="unit">&thinsp;J</span></td><td>8.0<span class="unit">&thinsp;J</span></td></tr></tbody></table>
+</div>
+
+<p>Problem: find the work \(W\) done on the system.
+<p>We find: \((7 + 0 + 3 + 0 + 0 + 5)\,\text{J} + W =
+                                (2 + 4 + 1 + 11 + 0 + 8)\,\text{J}\).
+<p>\(W = 11\,\text{J}\).
+</div></div>
+
+<p><div id="help-23" class="help-item"><span class="help-num">23.</span><div class="help-body">Let us further develop the analogy following <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.
+Kinetic energy is like cash.
+Potential energy is like a checking account --- one for each conservative
+force acting in the problem.
+Moving money from one checking account to another or to cash does not change
+your total assets.
+But you must not include money taken from a checking account as “money
+acquired” during time \(\Delta t\).
+Similarly, the total energy in a free falling ball is constant; energy is
+being taken out of the gravitational potential energy checking account and
+turned into kinetic energy (cash) but the total assets are constant.
+Looked at from this point of view, the work done by gravity while the ball
+falls is not energy entering the system (not money acquired) since it was
+already there as potential energy (i.e., in the checking account) at the
+beginning of the time interval.
+</div></div>
+
+<p><div id="help-24" class="help-item"><span class="help-num">24.</span><div class="help-body">Write conservation of energy between points \(A\) and \(B\): at point \(A\),
+water is at rest at the bottom of the well; at point \(B\), it is at height
+\(h\) and moving with speed \(v\).
+Recall that power is energy (here, work) per unit time.
+</div></div>
+
+<p><div id="help-25" class="help-item"><span class="help-num">25.</span><div class="help-body">At \(t = 0\), the diver has potential and kinetic energy.
+Note that the result is independent of \(\theta\).
+</div></div>
+
+<p><div id="help-26" class="help-item"><span class="help-num">26.</span><div class="help-body">The unknown is \(W_m/E_{kf}\) where \(W_m\) is the work done by the man and
+\(E_{kf}\) is the final kinetic energy.
+</div></div>
+
+<p><div id="help-27" class="help-item"><span class="help-num">27.</span><div class="help-body">Recall that the frictional force is the coefficient of friction times
+the normal force.
+</div></div>
+
+<p><div id="help-28" class="help-item"><span class="help-num">28.</span><div class="help-body">Use conservation of energy to show that \(x = v_0 (m/k)^{1/2}\).
+</div></div>
+
+<p><div id="help-29" class="help-item"><span class="help-num">29.</span><div class="help-body">See [S-22] for a similar problem.
+</div></div>
+
+<p><div id="help-30" class="help-item"><span class="help-num">30.</span><div class="help-body">We changed to primed symbols for the variables of integration because we
+ wanted to use unprimed symbols for the upper limit of integration and
+ hence for the function on the left side of the equation (our real goal).
+<p> The term “dummy variable of integration” is standard usage.
+ It indicates that the symbol used for the variable of integration is
+ immaterial in a definite integral because it does not appear in the final
+ answer.
+ Thus
+ 
+ \[\int_0^1 x\,dx \qquad \text{and} \qquad \int_0^1 y\,dy\]
+ 
+ give exactly the same answer.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> A nonconstant force, \(F\), directed vertically upward (the force
+varies in magnitude as some unknown function of altitude) is exerted on an
+object of mass \(m\).
+Under the action of this force, the object moves straight up from ground
+level to a distance \(h\), above the ground.
+It starts at rest and when it gets to height \(h\) it is moving with speed \(v\)
+upward.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw the free-body diagram of forces that act on this mass during
+the course of its motion upward.</li>
+<li><span class="item-label">b.</span> Write down the Work-Energy relation (in its original form without
+potential energies) for this system, expressing the work of each of the
+forces separately.</li>
+<li><span class="item-label">c.</span> Evaluate the integrals that can be evaluated.</li>
+<li><span class="item-label">d.</span> Draw the appropriate picture(s) for solving this problem using
+conservation of energy.</li>
+<li><span class="item-label">e.</span> Write the conservation of energy relation for this object.</li>
+<li><span class="item-label">f.</span> How much work was done by the force \(F\) in lifting the mass to the
+height \(h\)?
+</li>
+<li><span class="item-label">3.</span> A nail partially driven into a board, is driven in further by
+dropping a mass onto it.
+The mass, \(m\), is released a distance \(y_0\) above the head of the nail and
+drives the nail an additional distance \(s\) into the board.
+Neglect the mass of the nail.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Defining the zero of potential at the top of the nail, find
+the potential energy of the system (take the mass \(m\) as the system) at the
+instant \(m\) is released.</li>
+<li><span class="item-label">b.</span> What is the kinetic energy at that instant?</li>
+<li><span class="item-label">c.</span> Find the potential energy after the mass has driven the nail the
+additional distance \(s\) into the board.</li>
+<li><span class="item-label">d.</span> What is the kinetic energy at that instant?</li>
+<li><span class="item-label">e.</span> Write the conservation of energy relation for this problem.</li>
+<li><span class="item-label">f.</span> How much work is done on the mass by the nail?</li>
+<li><span class="item-label">g.</span> How much work is done on the nail by the mass?</li>
+<li><span class="item-label">h.</span> Assuming that the nail exerts a constant force on the mass during
+the interval that the nail is slowing the mass to a stop, determine the
+magnitude of this force, \(F_N\).
+</li>
+<li><span class="item-label">4.</span>  <figure class="fig-centered"><img src="figures/m21gr02.svg" alt="" class="physnet-fig"></figure>
+<br>
+
+An artillery shell fired from a gun at ground level leaves the muzzle of the
+gun with a speed of 50&thinsp;m/s.
+The shell strikes a direct hit at a site on the top of a hill which is at an
+altitude of 45&thinsp;m above ground level.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Assuming no friction, use energy conservation to find the speed with
+which the shell hits at the site.</li>
+<li><span class="item-label">b.</span> If the shell strikes the ground at the site with a speed of 38
+meters per second, what percentage of its original energy was lost (to
+friction) by the shell in its flight?
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;20 in this module's Problem Supplement.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;21 in this module's Problem Supplement.</li>
+<li><span class="item-label">4.</span> See Problem&nbsp;22 in this module's Problem Supplement.</li>
+</ol>
+
+<p></section>
+

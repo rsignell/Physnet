@@ -1,0 +1,746 @@
+<header class="module-header">
+  <h1 class="module-title">The First Law of Thermodynamics <span class="module-author">(Jerzy Borysowicz <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: temperature, equation of state, ideal gas
+    constant, ideal gas, mole, <a href="../m157/" class="module-ref">MISN-0-157</a>; work <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>2.</strong> Express temperatures using both the Celsius and Kelvin scales <a href="../m157/" class="module-ref">MISN-0-157</a>.</li><li><strong>3.</strong> Solve two algebraic equations in two unknowns <a href="../m401/" class="module-ref">MISN-0-401</a>.</li><li><strong>4.</strong> Evaluate \(\int_a^b x^k\,dx\) for arbitrary \(k\) <a href="../m1/" class="module-ref">MISN-0-1</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: adiabatic, calorie, cycle, heat, heat reservoir, heat capacity, internal energy, isothermal, P-V diagram.</li><li><strong>K2.</strong> State the expression for the internal energy of an ideal gas.</li><li><strong>K3.</strong> State the first law of thermodynamics.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Compute the work done during isothermal and adiabatic expansions
+    (or compressions) of a given amount of an ideal gas.</li><li><strong>S2.</strong> Apply the first law of thermodynamics to compute the heat transferred
+    in processes involving ideal gases.
+    Consider processes in which volume, pressure and temperature may change at
+    the same time.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Entropy” (MISN-0-160).</li><li><strong>2.</strong> “Energy Distribution Functions: the Boltzmann Distribution” (MISN-0-159).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Examples of Energy Dissipation</h2>
+
+<p>A medium size car weighing 4000&thinsp;lbs and moving with a speed of 55&thinsp;mph
+carries a large amount of kinetic energy.
+This energy is roughly equal to the energy needed for an average person to
+climb a 2000&thinsp;ft high mountain, which is equivalent to 2&thinsp;hrs of hard work;
+and yet, with a medium hard pressure on the brake pedal, the car can be
+stopped in 20 seconds.
+After the brakes are cooled off there is no trace of the kinetic energy left.
+There are many instances of the disappearance of kinetic energy: a stone
+dropped on the ground; a collision of trains; gems polished in a grinder; a
+man trying to warm himself up in cold weather, beating his arms against his
+body.
+In some of the cases, the energy loss seems to be accompanied by a heating
+of the surroundings.
+Careful examination would show that some heat is produced in all cases.
+Is the heat a form of energy?
+Is energy lost?
+What is heat?
+We shall discuss these questions now.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Internal Energy</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aDisordered Nature of Molecular Motion
+Consider the motion of a stone thrown into the air.
+The molecules of the air are in a constant motion and so are the molecules
+from which the stone is built.
+However, there is a difference between the two kinds of motion.
+The air molecules are very fast, as fast as 500&thinsp;m/s, and they move
+randomly in all directions.
+Because of this randomness, it is difficult to observe their motion.
+Only when a very small region containing not too many molecules is observed
+can the motion be detected.
+The molecules of the stone move all together and therefore their motion is
+quite noticeable even though their speed is small; on the order of, say,
+40&thinsp;m/s.
+Due to collisions with the air molecules, the stone will experience a force
+called “air resistance.”
+It is quite interesting to consider the effect of these collisions on the
+speeds of the air molecules.
+<p><h3 id="pcap--">. </h3>
+[]2bMechanical Energy into Molecular Motion Energy
+During the head-on collision of a molecule, of speed \(v\), with a stone,
+of speed \(V\), the speed of the molecule will increase by \(2 V\) (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+A molecule chasing the stone from behind and then colliding will decrease
+its speed by \(2 V\).
+The change in the molecule's kinetic energy in the head-on collision will be
+<p>\[\Delta E_k = \frac{1}{2} m(v+2V)^2-\frac{1}{2} m v^2 = +2 m v V\;,\]
+<p>where we have neglected the small term \(2 m V^2\) (we assume \(V \ll v\)).
+Similarly, for a collision from behind, we have:
+<p>\[\Delta E_k = \frac{1}{2} m(v-2V)^2-\frac{1}{2} m v^2 = -2 m v V\;,\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m158gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A molecule, velocity \(\vec{v}\), hits a stone
+that has velocity \(\vec{V}\).  Two cases are shown: (a) the molecule approaches from the
+left; (b) the molecule approaches from the right.
+In each case the upper line shows the molecule's velocity before the collision,
+the lower line after it.</figcaption></figure></div>
+
+<p>The first impression is that the average kinetic energy of the air molecules
+should remain constant.
+However, it takes more time to chase the stone from behind than to meet it
+head-on, therefore the number of head-on collisions in which energy is gained
+by the air molecules is larger.
+Consequently, the average kinetic energy of the air molecules should
+increase.
+This is not surprising.
+We assume that only elastic collisions take place and that the total kinetic
+energy must be conserved.
+Because the stone is slowing down, its kinetic energy must be transferring
+to the disordered motion of the air molecules.
+<p><h3 id="pcap-2-c">2c. Temperature and Molecular Motion</h3>
+
+Although the motion of the molecules of a gas is difficult to observe, a
+change in their average kinetic energy is easily detected by monitoring the
+temperature of the gas.
+For many gases this average kinetic energy is, to a good approximation,
+proportional to their temperature.
+In liquids and solids the random motion of molecules is more complicated
+because they are close together and are interacting with each other most of
+the time.
+In spite of the complicated nature of these internal motions their total
+average energy (kinetic plus interactions) can be entirely determined by
+measuring the temperature and volume of a solid or liquid.
+<p><h3 id="pcap--">. </h3>
+[]2dInternal Energy
+This total average energy of internal molecular motion is called “internal
+energy” and should always be taken into account when considering the
+conservation of energy.
+For an ideal gas, there is no potential energy since there are no
+interactions.
+Furthermore there is no “structure” to the gas molecules, so the kinetic
+energy is simply \(m v^2/2\) for each molecule.
+The internal energy of an ideal gas of \(N\) molecules can be expressed in
+terms of the average kinetic energy of the molecules
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[U = N E_\text{k,ave} = \frac{1}{2} N m v_\text{RMS}^2\,,\]
+<p>or in terms of temperature:
+<p>\[U = \frac{3}{2}N k T = \frac{3}{2} n R T\,.\]
+<p>For a non-ideal gas, the internal energy is usually expressed as:
+<p>\[U = C_v T\,,\]
+<p>where \(C_v\) is called the “heat capacity” of the gas.
+It is a quantity which is proportional to the amount of gas in the system.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Heat and Its Mechanical Equivalent</h2>
+
+<p><h3 id="pcap-3-a">3a. Intensive Character of Internal Energy</h3>
+
+It has been explained in the previous section that the internal energy is
+not related to the global motion of a system but to its temperature.
+In everyday language, we would say that a body with increased internal
+energy has higher temperature or is hotter.
+<p><h3 id="pcap--">. </h3>
+[] as Internal Energy Transfer[]3bHeat
+The transfer of internal energy can take place directly (without exchange of
+mechanical energy) when two bodies are in contact.
+The internal energy will be transferred from the higher temperature body to
+the lower temperature one.
+Again we would say that there was flow of heat.
+It took a long time to recognize the nature of heat and its relationship
+with energy and work.
+In textbooks, heat is explained as a “form of energy” or a “form of
+energy transfer.”
+The second definition of heat, as an energy transfer, is more precise.
+<p><h3 id="pcap--">. </h3>
+[]3cHeat Unit: Calories
+The unit of heat is the “calorie.”
+It is defined as the amount of heat needed to increase the temperature of
+one gram of water from 14.5°C to 15.5°C.
+It is a good approximation to assume that one calorie will increase the
+temperature of one gram of water by 1°C at any initial temperature in the
+liquid phase.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m158gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Apparatus used to measure the mechanical
+equivalent of heat.  The weight is let drop, thereby forcing the shaft to
+turn and the paddles to stir the liquid.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]3dHeat's Mechanical Equivalent
+In the case of the stone thrown into the air, we noticed that the mechanical
+energy of the stone was changed into the internal energy of the air and
+that the temperature of the air would be changed by the heat flow.
+One should be able to determine precisely the amount of heat produced when a
+definite amount of mechanical energy is converted into internal energy.
+The experiment with the stone flying in the air is not well suited for this
+purpose.
+The kinetic energy of the stone could be determined by measuring its mass and
+by controlling its initial velocity.
+However, the amount of heat produced would be very difficult to measure
+because of the large volume of air involved.
+The first careful measurement of the heat equivalent of mechanical energy was
+made by James Joule (1818-1889).
+In his experiment, a falling weight pulled a string which rotated on a shaft
+with attached paddles immersed in a water container (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+The lost mechanical energy is known from the distance the weight falls and
+from the weight's mass.
+The gain in heat can be determined from the mass of water and the increase in
+its temperature.
+The results obtained by Joule were quite accurate in his time.
+The value accepted today is:
+<p>\[1\,\text{cal} = 4.184\,\text{joules}\,.\]
+<p>In whatever manner the mechanical energy \(E\) is changed into heat---by
+stirring, rubbing, friction or during an inelastic collision---the amount
+of heat transferred, \(Q\), is always found to be:
+<p>\[4.184 \times Q \text{[in calories]} = E \text{[in joules]}.\]
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Mechanical Work of Gases</h2>
+
+<p><h3 id="pcap-4-a">4a. Change of Internal Energy into Work</h3>
+
+The internal energy of a system can be increased at the expense of
+mechanical energy as was demonstrated in Joule's experiment.
+The direct transfer of internal energy from one body to another is possible
+when the two bodies have different temperatures and are in contact with
+each other.
+Is it possible to obtain mechanical energy from the internal energy of a gas
+or some other substance?
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m158gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Changes in state of the gas in an engine
+cylinder during the piston stroke.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]4bWork Done by a Gas: The Steam Engine
+Indeed, such a process can take place in machines which produce mechanical
+work while burning some fuel.
+Let us consider the work stroke of a steam engine.
+At the beginning of the stroke the steam is contained in a small part of the
+cylinder and its pressure and temperature are high.
+When the stroke is finished, the volume is larger and the pressure and
+temperature are smaller.
+For example, in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> the force \(F\) on the piston is
+<p>\[F = P A\,,\]
+<p>where \(P\) is the pressure of the gas and \(A\) the surface area of the piston
+exposed to the gas.
+If the displacement \(\Delta S\) of the piston is small, the pressure can be
+assumed to be approximately constant, and the work done on the piston by
+the gas is:
+<p>\[W = F \Delta S = P A \Delta S = P \Delta V\,,\]
+<p>where \(\Delta V\) is the change in the volume of the gas during expansion.
+<p>For large displacements where \(P\) is not constant over the change in volume,
+one should integrate over variable pressure with the result:
+<p>\[W = \int^{V_f}_{V_0} P\,dV\,.\]
+<p>This formula can be used if we know the pressure of the gas as a
+function of its volume, either by mathematical formula or
+by a graphical representation known as a \(P-V\) diagram.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m158gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. \(P-V\) diagram of an isothermal
+expansion.  Note that pressure decreases as volume increases while
+temperature is held constant.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]4cWork in an Isothermal Process
+There are many ways in which gas pressure may vary during an expansion.
+Let us imagine that the expanding mass of gas is in thermal contact
+with a large body which has a constant temperature.
+Such a body is often called a “heat reservoir.”
+Because heat is allowed to flow freely between the gas and the heat
+reservoir, the temperature of the gas will remain constant.
+An expansion during which the temperature is constant is called an
+“isothermal” expansion and if the system is closed, i.e. the amount of gas
+remains fixed, the pressure will be inversely proportional to the volume:
+<p>\[P V = n R T = \text{ constant } = P_0 V_0\,,\]
+<p>so
+<p>\[P = \frac{P_0 V_0}{V}\,,\]
+<p>where \(P_0\) and \(V_0\) are initial values of the pressure and volume.
+The work done during a isothermal expansion can be calculated now using
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>:
+\[W = \int_{V_0}^{V_f} P\,dV = \int_{V_0}^{V_f} \frac{P_0 V_0}{V}\,dV =
+             P_0 V_0 \ell n \left(\frac{V_f}{V_0}\right)\,.\]
+<p>We have assumed here that the gas expanded from the initial volume V\(_0\) to
+the final volume \(V_f\) and that the initial pressure was \(P_0\).
+The isothermal expansion is illustrated graphically in the \(P-V\)
+diagram of <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The shaded area is the integral of \(P\) with respect to \(V\) and thus
+represents the work done by the gas during the expansion.
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m158gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. \(P-V\) diagram of an adiabatic process.
+Note that pressure decreases as volume increases and energy is held constant.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]4dWork in a Adiabatic Process
+When the cylinder and piston are good thermal insulators and/or the expansion
+is fast, the heat flow to the expanding gas can be neglected.
+A process in which the gas does not receive or produce any heat is called
+an “adiabatic” process.
+The pressure in the adiabatic process depends on the volume in a more 
+complicated manner:
+<p>\[P V^\gamma = \text{ constant } = P_0 V_0^\gamma\,,\]
+<p>so,
+<p>\[P = \frac{P_0 V_0^\gamma}{V^\gamma}\,,\]
+<p>where \(P_0\) and \(V_0\) are the initial values of the pressure and volume and
+\(\gamma\) is a constant.
+The constant \(\gamma\) is equal to approximately 1.4 for all gases with
+molecules composed of two atoms.
+This type of expansion is also illustrated in a \(P-V\) diagram (see
+<a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+<p><h3 id="pcap--">. </h3>
+[]4eNegative Value for Work Done <em>on</em> a Gas
+Let us notice that the work as defined in <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> is the work done <em>by</em>
+a gas.
+If the gas is compressed, however, work is done <em>on</em> the gas by its
+surroundings.
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> still holds, but note that its value will be negative.
+In general, a negative value of the integral shows that work is done <em>on</em>
+the system, rather than <em>by</em> the system.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The First Law of Thermodynamics</h2>
+
+<p><h3 id="pcap-5-a">5a. Conserving Mechanical \(+\) Internal Energy</h3>
+
+We have learned about a new form of energy (internal energy) and about
+different ways in which mechanical and internal energy can be exchanged.
+We are ready to introduce the “first law of thermodynamics,” which is
+nothing more than the conservation law for these two kinds of energy.
+<p><h3 id="pcap--">. </h3>
+[]5bEnergy Conservation in an Adiabatic Process
+Consider first a well insulated cylinder, with a well insulated piston,
+containing a compressed gas that can only expand or contract adiabatically
+(see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+If the gas is allowed to expand, the piston may carry a load and mechanical
+work will be performed.
+This work is done entirely by the gas in the cylinder, which is thermally
+insulated from its surroundings.
+Conservation of energy requires that the work \(W\) done by the gas be
+equal to the loss of its internal energy \(U\):
+<p>\[W = - \Delta U\,,\]
+<p>where the minus sign means that the internal energy is lost when the gas
+expands and does work.
+<p><h3 id="pcap--">. </h3>
+[]5cEnergy Conservation in an Isothermal Process
+Let us now consider an isothermal expansion of the gas.
+In this case the cylinder is made from a good thermal conductor
+and is in contact with a heat reservoir.
+During the expansion the temperature of the gas will remain constant and
+equal to the temperature of the heat reservoir.
+Therefore its internal energy will remain constant too.
+This means that the work of the expanding gas must come from some other
+source than the gas itself.
+The only other source of energy is the heat reservoir.
+The energy will flow in the form of heat from the heat reservoir to the gas.
+The work W done by the gas must be equal to the heat \(Q\) absorbed by it:
+<p>\[W = Q\,.\]
+<p><h3 id="pcap-5-d">5d. Energy Conservation in a General Process</h3>
+
+In a real life process usually both heat and internal energy are converted
+into work.
+Such would be the case with a cylinder which is neither a perfect thermal
+conductor nor a perfect insulator.
+The total balance of work, heat and internal energy is:
+<p>\[W = Q - \Delta U\,.\]
+<p>Traditionally, this equation is written as
+<p>\[\Delta U = Q - W\,,\]
+<p>and is known as the first law of thermodynamics.
+It says that the internal energy gained by a system must be equal to the
+heat absorbed by the system minus work done by the system.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m158gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A piston moving in a cylinder: (a) an
+adiabatic expansion; (b) an isothermal expansion.</figcaption></figure></div>
+
+<p><h3 id="pcap-5-e">5e. Generalization to Other Substances</h3>
+
+We arrived at <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> by assuming that energy is conserved and
+considering all possible ways in which it can be exchanged.
+We should not be surprised to find that <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> is valid, not only
+for an expanding gas, but also for all processes in which work is produced,
+heat is exchanged and internal energy is gained or lost.
+As with the simpler law of conservation for mechanical energy, the first law
+of thermodynamics cannot be proved or derived.
+It was discovered as a result of many observations and experiments.
+No violation of the law has ever been observed.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>The assistance of J.&thinsp;Kovacs, P.&thinsp;Signell and F.&thinsp;Zerelli during the
+preparation of this module is acknowledged.
+<p><p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>an adjective describing a process in which a system
+does not experience any heat transfer.
+This means that the system is thermally insulated from its environment.
+<p>a unit of heat energy; the amount of internal energy
+transfer necessary to raise the temperature of one gram of water from
+14.5°C to 15.5°C; abbreviated “cal.”
+<p>a series of changes of state in a system resulting in a
+return to the initial state.
+<p>a form of energy transfer involving the internal energy of
+a system and mechanical work done on or by the system.
+The unit of heat is the calorie.
+<p>a large system with enough constituents so that
+transfers of heat to or from the reservoir do not significantly change its
+temperature.
+<p>a quantity used to express the internal energy of
+a system as a function of temperature.
+<p>the total average energy of internal motion of a
+system.
+At thermal equilibrium the internal energy can be expressed as a function of
+temperature.
+<p>an adjective describing a process in which a system
+undergoing a change in state does not experience a change in temperature.
+For an ideal gas under closed conditions this implies that the product of
+pressure and volume is constant.
+<p>a two-dimensional graph of the pressure of a
+system as a function of volume.
+The work done on or by the system can be represented as the area under the
+\(P(V)\) curve between the initial and final volumes.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For the connection between average kinetic energy, RMS speed and
+temperature, see “Temperature and Pressure of an Ideal Gas: The Equation
+of State” (MISN-0-157). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">If the \(P-V\) diagram is given, the work is equal to the
+area under the curve.
+See the relevant problems in this module's <em>Problem Supplement</em>. <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><div class="centered">\[\begin{aligned}1\,\text{atm}   & = & 1.013 \times 10^5\unit{N/m^{2}} = 1.013 \times 10^5\unit{J/m^{3}} \\
+1\,\text{liter} & = & 1000\unit{cm^{3}} = 10^{-3}\unit{m^{3}} \\
+1\,\text{N}     & = & 4.45\,\text{lb} \\
+1\,\text{watt}  & = & 1\,\text{joule/sec} \\
+1\,\text{mi/hr} & = & 0.447\,\text{m/s} \\
+1\,\text{cal}   & = & 4.184\,\text{J} \\
+T/^\circC   & = & \frac{5}{9}\, [(T/^\circF) - 32] \\
+          T/K & = & T/^\circC + 273\end{aligned}\]
+</div>
+
+Note: \(T\) denotes temperature
+<p>Note: Problem&nbsp;7 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A closed vessel contains 32&thinsp;g of oxygen gas at 1.00&thinsp;atm
+pressure.
+The gas is heated with its volume kept constant.
+It is found that 5.0&thinsp;calories of heat are needed to raise the temperature of
+the oxygen by 1.00°C.
+<p>Compute how much heat is needed to raise the temperature of 1.00&thinsp;liter of
+oxygen, initially at 1.00&thinsp;atm pressure, from 0.0°C to
+\(1.00 \times 10^2^\circC\) with its volume remaining constant? <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">2.</span> The internal energy of the oxygen gas in Problem&thinsp;1 changes
+according to the formula \(\Delta U = C_v \Delta T\).
+Compute the heat capacity, \(C_v\):
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> for 32&thinsp;g of oxygen</li>
+<li><span class="item-label">b.</span> for 1.0&thinsp;liter of oxygen at a pressure of 1.0&thinsp;atm and a
+temperature of 0.0°C (STP).
+</li>
+<li><span class="item-label">3.</span> Compute the heat produced when a car weighing
+\(4.0\times10^3\)&thinsp;lbs brakes and its velocity decreases from 55&thinsp;mph to
+\(2.0\times10^1\)&thinsp;mph, assuming all of the lost mechanical energy is
+converted to heat. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">4.</span> A gas vessel with a piston is heated up and is allowed to expand
+in such a way that its pressure remains constant and equal to 2.0&thinsp;atm.
+The initial volume of gas is 6.0&thinsp;liters and the final volume is
+10.0&thinsp;liters.
+Find the work done by the gas. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">5.</span> An ideal gas with volume 5.0&thinsp;liters and pressure 2.5&thinsp;atm
+undergoes an adiabatic expansion.
+The final volume is 7.5&thinsp;liters.
+Find the work done by the gas during the expansion. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p></li>
+<li><span class="item-label">6.</span> One mole of an ideal gas goes through the cycle shown here in
+this \(P-V\) diagram: 
+<p><figure class="fig-centered"><img src="figures/m158gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Use the equation of state of an ideal gas, \(PV = nRT\), and the
+following data to find the temperature of the gas at points \(a\), \(b\), and
+\(c\).
+The answers we give follow from this “ideal gas” assumption.<br>
+
+\(P_0 = 1.00 \times 10^6\unit{N/m^{2}}\)<br>
+
+\(V_0 = 1.00 \times 10^{-3}\)<span class="unit">&thinsp;m<sup>3</sup></span><br>
+
+\(R = 8.314\,\text{J/(mole\,K)}\)</li>
+<li><span class="item-label">b.</span> What is the internal energy (in joules) of the gas at points
+\(a\), \(b\), and \(c\)? <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">c.</span> Calculate the work done by the gas as it goes from \(a\) to \(b\);
+\(b\) to \(c\); \(c\) to \(a\). <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></li>
+<li><span class="item-label">d.</span> Calculate \(\Delta U\) for each step: \(a\) to \(b\); \(b\) to \(c\);
+\(c\) to \(a\).</li>
+<li><span class="item-label">e.</span> Calculate \(Q\) for each step: \(a\) to \(b\); \(b\) to \(c\); \(c\) to \(a\).</li>
+<li><span class="item-label">f.</span> Calculate \(\Delta U\), \(W\) and \(Q\) for one complete cycle.
+Where does the energy come from for the work output?</li>
+<li><span class="item-label">g.</span> If this apparatus is to be used as an engine, how rapidly should
+it complete each cycle for it to have a power output of 3.0&thinsp;HP?
+(1&thinsp;HP = 746&thinsp;watts)
+
+<p></li>
+<li><span class="item-label">7.</span> <img src="figures/m158gr08.svg" alt="" class="fig-inline">
+<table class="physnet-table"><tbody><tr><td>[t]| c | c | c | c |
+Pt.</td><td>Volume</td><td>Pressure</td><td>Temp.</td></tr><tr><td></td><td>(<span class="unit">&thinsp;m<sup>3</sup></span>)</td><td>(<span class="unit">&thinsp;N/m<sup>2</sup></span>)</td><td>(<span class="unit">&thinsp;°C</span>)</td></tr><tr><td>\(a\)</td><td>1.245</td><td>2000</td><td>\(\phantom{3}\)27</td></tr><tr><td>\(b\)</td><td>1.245</td><td>4000</td><td>327</td></tr><tr><td>\(c\)</td><td>2.490</td><td>4000</td><td>927</td></tr><tr><td>\(d\)</td><td>2.490</td><td>3000</td><td>627</td></tr></tbody></table>
+
+<p>A gas goes through the cycle illustrated above.
+The starting point is at “\(a\).”
+The values of the volume, pressure and temperature of the gas during the
+cycle are shown in the table.
+The heat capacity of the gas is \(C_V = 5\,\text{cal/K}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the internal energy for each of the states \(a\), \(b\),
+           \(c\) and \(d\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">b.</span> Calculate the net work done by the gas during one complete cycle.
+           <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">c.</span> How much heat is absorbed or liberated by the gas during the part
+           of the cycle from \(a \rightarrow b\)? <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+           Repeat for the parts of the cycle from \(b \rightarrow c\),
+           \(c \rightarrow d\), \(d \rightarrow a\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">d.</span> Where does the energy come from for the work done during the
+           complete cycle? 
+           Substantiate your answer quantitatively.</li>
+<li><span class="item-label">e.</span> If the system going through this cyclic process is to be used as
+           an engine, how rapidly should it complete this cycle for its
+           output to be 30&thinsp;kilowatts?
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(Q = 22.3\)&thinsp;cal</li>
+<li><span class="item-label">2.</span> Heat capacity:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 5<span class="unit">&thinsp;cal/°C</span></li>
+<li><span class="item-label">b.</span> 0.223<span class="unit">&thinsp;cal/°C</span>
+</li>
+<li><span class="item-label">3.</span> 113.6&thinsp;Kcal</li>
+<li><span class="item-label">4.</span> 808&thinsp;J</li>
+<li><span class="item-label">5.</span> \(W = 474\)&thinsp;J  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">6.</span> An ideal gas cycle:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(T_a = 120\,\text{K}\);
+           \(T_b = 481\,\text{K}\);
+           \(T_c = 361\,\text{K}\)</li>
+<li><span class="item-label">b.</span> \(U_a = 1.50 \times 10^3\)&thinsp;J  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a> <br>
+
+           \(U_b = 6.00 \times 10^3\)&thinsp;J;
+           \(U_c = 4.50 \times 10^3\)&thinsp;J</li>
+<li><span class="item-label">c.</span> \(W_{ab} =  1.50 \times 10^3\)&thinsp;J  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a> <br>
+
+           \(W_{bc} =  1.50 \times 10^3\)&thinsp;J;
+           \(W_{ca} = -2.00 \times 10^3\)&thinsp;J; negative, compression</li>
+<li><span class="item-label">d.</span> \(\Delta U_{ab} = 4.50 \times 10^3\)&thinsp;J;
+           \(\Delta U_{bc} = -1.50 \times 10^3\)&thinsp;J;
+           \(\Delta U_{ca} = -3.00 \times 10^3\)&thinsp;J</li>
+<li><span class="item-label">e.</span> \(a\) to \(b\): \(Q_{ab} = \Delta U_{ab} +
+                                 W_{ab}=6.00 \times 10^3\)&thinsp;J <br>
+
+           \(b\) to \(c\): \(Q_{bc} = 0\) <br>
+
+           \(c\) to \(a\): \(Q_{ca} = -5.00 \times 10^3\)&thinsp;J</li>
+<li><span class="item-label">f.</span> \(\Delta U = 0\) for one cycle, since the gas returns to its
+           original condition.
+           Summing the results of part (d) will verify this.<br>
+
+           Using part (c) gives W = 1000&thinsp;J.<br>
+
+           Part (e) gives Q = 1000&thinsp;J.<br>
+
+           All the work output energy comes from heat input energy.</li>
+<li><span class="item-label">g.</span> \(P = W/t\) so that \(t = W/P\). <br>
+
+           Using 1000&thinsp;J as the work for one cycle, \(P\) as 3.0&thinsp;HP = 2238&thinsp;W
+           gives t = 0.45&thinsp;sec, the time for one cycle.
+</li>
+<li><span class="item-label">7.</span> A gas cycle:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> point \(a\), 1500&thinsp;cal; point \(b\), 3000&thinsp;cal; point \(c\), 6000&thinsp;cal;
+           point \(d\), 4500&thinsp;cal</li>
+<li><span class="item-label">b.</span> 1868&thinsp;joules</li>
+<li><span class="item-label">c.</span> \(a \rightarrow b\), 1500&thinsp;cal absorbed;
+           \(b \rightarrow c\), 4190&thinsp;cal absorbed;
+           \(c \rightarrow d\), 1500&thinsp;cal liberated;
+           \(d \rightarrow a\), 3744&thinsp;cal liberated</li>
+<li><span class="item-label">d.</span> Net heat absorbed =
+           1500&thinsp;cal \(+\) 4190&thinsp;cal \(-\) 1500&thinsp;cal \(-\) 3744&thinsp;cal =
+           446&thinsp;cal = 1868&thinsp;J = net work done</li>
+<li><span class="item-label">e.</span> 16.1 cycles per second
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Note that there are two different quantities of oxygen in this problem, heated
+ by different amounts: first 32&nbsp;grams heated 1 degree and then 1 liter heated
+ 100 degrees.
+<p> The molecular weight of oxygen is 32, so 32&thinsp;g of oxygen is one mole of
+ oxygen.
+ To find out how many moles of oxygen are in 1&thinsp;liter at 1&thinsp;atm pressure,
+ (initially at 0°C) use the equation of state for an ideal gas,
+ \(PV\,=\,nRT\), or recall that at STP (0°C, 1&thinsp;atm) a mole of ideal gas
+ occupies a volume of 22.4&thinsp;liters.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Since the pressure is constant, the integral for work reduces to the
+ following simple form:
+ 
+ \[ W = \int^{V_f}_{V_i} P dV = P \int^{V_f}_{V_i} dV = P (V_f - V_i) .\]
+ 
+ On the \(P-V\) diagram, below, the shaded area represents this integral and is
+ easy to compute.
+ 
+ UnframedEpsFigurem158gr09
+<p> Use: area&thinsp;=&thinsp;width&thinsp;\(\times\)&thinsp;height&thinsp;=
+                              &thinsp;(2&thinsp;atm)(4&thinsp;\(\ell\))&thinsp;=&thinsp;8&thinsp;atm&thinsp;\(\ell\).
+ Using the appropriate conversion factors this can be converted to joules.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Here is the \(P-V\) diagram for this adiabatic expansion:
+<br>
+
+<p><figure class="fig-centered"><img src="figures/m158gr10.svg" alt="" class="physnet-fig"></figure>
+
+<p> The work done by the expanding gas is still represented by the area under the
+ curve, but there is no simple geometrical formula for computing it.
+ You must use the integral definition of work and integrate
+ \(P\,=\,P_0 V_0^\gamma/V^\gamma\) with
+ respect to \(V\) from \(V = 5.0\)&nbsp;liters to \(V = 7.5\)&nbsp;liters.
+ <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">The equation for the internal energy of the ideal gas is given, in terms
+ of the gas's temperature, in the text part of this module.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\(\text{integral } = \frac{p_0 V_0^\gamma}{-\gamma+1}
+ \left(V_f^{-\gamma + 1} - V_0^{-\gamma + 1}\right) = 4.676\,\text{atm}\,\ell\)
+ </div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Advice: first convert to MKS and find: \(m = 1805\)&thinsp;kg, \(v_i = 24.59\)&thinsp;m/s,
+ \(v_f = 8.94\)&thinsp;m/s.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Successfully work and thoroughly understand Problems&nbsp;1-6, for which help
+ is provided, before attempting this problem.
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">You could compute the work done on/by the gas for each segment of the
+ cycle by finding
+ the mathematical equation expressing pressure as a function of volume and
+ integrating between the appropriate limits.
+ For example from \(a\) to \(b\) the pressure varies linearly with volume so the
+ equation of a straight line is used:
+ 
+ \[ P = \alpha V + \beta \]
+ 
+ where \(\alpha\) is the slope of the line and \(\beta\) is the intercept.
+ These two parameters are determined by evaluating the expression at two
+ points where the pressure is known, [obviously at point \(a(V_0 P_0)\) and
+ point \(b(2V_0, 2P_0)\)]
+ and solving the two resulting expressions for \(\alpha\) and \(\beta\):
+ 
+ \[ P_0 = \alpha V_0 + \beta\;; \hspace{0.5in} \alpha = \frac{P_0}{V_0} =
+         1.00\times10^9\unit{N\,m^{-5}}\]
+ 
+ hence:
+ 
+ \[ 2P_0 = 2\alpha V_0 + \beta \hspace{0.5in} \beta = 0 \]
+ 
+ Thus \(P = (P_0/V_0) V\) and this may be integrated from \(a\) to \(b\).
+ Similarly the pressure from \(b\) to \(c\) is
+ \(P = -(P_0/V_0)V + 4 P_0\), and the pressure from \(c\) to \(a\) is simply \(P_0\).
+ If this seems too complicated you may use simple
+ geometry to calculate the relevant areas under each \(P(V)\) curve.
+ For example from \(a\) to \(b\), the area under the curve is shown below:
+ 
+ <figure class="fig-centered"><img src="figures/m158gr11.svg" alt="" class="physnet-fig"></figure>
+
+ 
+ The work done by the gas in expanding from \(V_0\) to \(2 V_0\) is simply the
+ area of the shaded triangle and the shaded rectangle:
+<p> <div class="centered">\[\begin{aligned}\text{Area} & = & \frac{1}{2}\text{(base) } \times \text{ (height) } + \text{ (width) } \times \text{( height)} \\
+            & = & \frac{1}{2}(V_0)(P_0) + V_0 P_0 = \frac{3}{2} P_0 V_0\end{aligned}\]
+</div>
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <img src="figures/m158gr08.svg" alt="" class="fig-inline">
+<table class="physnet-table"><tbody><tr><td>[t]| c | c | c | c |
+Pt.</td><td>Volume</td><td>Pressure</td><td>Temp.</td></tr><tr><td></td><td>(<span class="unit">&thinsp;m<sup>3</sup></span>)</td><td>(<span class="unit">&thinsp;N/m<sup>2</sup></span>)</td><td>(<span class="unit">&thinsp;°C</span>)</td></tr><tr><td>\(a\)</td><td>1.245</td><td>2000</td><td>\(\phantom{3}\)27</td></tr><tr><td>\(b\)</td><td>1.245</td><td>4000</td><td>327</td></tr><tr><td>\(c\)</td><td>2.490</td><td>4000</td><td>927</td></tr><tr><td>\(d\)</td><td>2.490</td><td>3000</td><td>627</td></tr></tbody></table>
+
+<p>A gas goes through the cycle illustrated above.
+The starting point is at “\(a\).”
+The values of the volume, pressure and temperature of the gas during the
+cycle are shown in the table.
+The heat capacity of the gas is \(C_V = 5\,\text{cal/K}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the internal energy for each of the states \(a\), \(b\),
+           \(c\) and \(d\).</li>
+<li><span class="item-label">b.</span> Calculate the net work done by the gas during one complete cycle.</li>
+<li><span class="item-label">c.</span> How much heat is absorbed or liberated by the gas during the part
+           of the cycle from \(a \rightarrow b\)?
+           Repeat for the parts of the cycle from \(b \rightarrow c\),
+           \(c \rightarrow d\), \(d \rightarrow a\).</li>
+<li><span class="item-label">d.</span> Where does the energy come from for the work done during the
+           complete cycle? 
+           Substantiate your answer quantitatively.</li>
+<li><span class="item-label">e.</span> If the system going through this cyclic process is to be used as
+           an engine, how rapidly should it complete this cycle for its
+           output to be 30&thinsp;kilowatts?
+</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;7.</li>
+</ol>
+
+<p></section>
+

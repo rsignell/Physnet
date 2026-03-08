@@ -1,0 +1,775 @@
+<header class="module-header">
+  <h1 class="module-title">The Interference of Two Coherent Wave Sources <span class="module-author">(William C.Lane <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: spherical wave, wave front, intensity <a href="../m203/" class="module-ref">MISN-0-203</a>.</li><li><strong>2.</strong> State the expression for the wave function of a spherical wave
+    <a href="../m203/" class="module-ref">MISN-0-203</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: central maximum, coherent wave sources, constructive
+    interference, destructive interference, free spectral range, interference
+    pattern, interference order, maxima, minima, path difference, phase
+    difference, phasor.</li><li><strong>K2.</strong> State the conditions for destructive and constructive interference,
+    both in terms of phase difference and in terms of path difference.</li><li><strong>K3.</strong> State the expression for the intensity of the net wave disturbance
+    produced by two equal coherent sources, as a function of phase difference.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given two equal coherent wave sources, determine by mathematical
+    and graphical methods the amount of net wave disturbance at a given point
+    in space.</li><li><strong>S2.</strong> Sketch the wave disturbances, produced at a given point in space
+    by two equal coherent wave sources, as functions of time.
+    Include both the individual disturbances and the net disturbance.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> Ruler, protractor.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Overview</h3>
+
+The interference of waves is one of the most important and useful phenomena
+in physics.
+Historically, interference effects helped confirm the wave nature of light.
+The bending of sound and light waves around obstacles and corners, the
+fundamental limitation of the resolving power of optical instruments, the
+existence of “dead spots” in an auditorium or a living room, the appearance
+of colored rings in oil slicks, and the non-reflective properties of
+thin-metal coatings on lenses are all examples of interference and its
+related phenomenon, diffraction.
+<p><h3 id="pcap-1-b">1b. “Coherent” Wave Sources</h3>
+
+If two or more wave sources produce waves of the same frequency and
+wavelength, with the same phase at the same time at their respective
+origins, the sources are synchronized, or “coherent.”
+As an illustration, think of an infinitely large swimming pool.
+Out in the middle are two flat discs just under the surface of the water
+and parallel to the surface.
+A rod is connected to each disc.
+The two rods go straight up to an overhead crankshaft that causes the discs
+to move up and down with the same phase, so they are coherent wave
+sources.
+They move up and down with the same amplitude so they are equal sources of
+waves.
+Given the frequency and amplitude of these two sources, along with the
+distance between them, how can we predict and explain the observed wave
+pattern at all points of the water's surface?
+How can we do the same for audio waves from multiple sources, or from
+reflections off walls that can also be considered sources?
+This unit develops the basic approach for solving such problems.
+<p><div class="figure-row figure-row-2"><figure id="fig-1"><img src="figures/m205gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A rotating phase vector and its \(x\)-component.</figcaption></figure><figure id="fig-2"><img src="figures/m205gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Two phasors of different phase.</figcaption></figure></div>
+
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Rotating Phase Vectors</h2>
+
+<p><h3 id="pcap-2-a">2a. Definition of a Phasor</h3>
+
+To geometrically visualize the combination of disturbances from two or more
+coherent wave sources, we will introduce the idea of an imaginary rotating
+phase vector, also called a “phasor.”
+<p>Consider a vector \(\vec{A}_1\) lying in the \(x\)-\(y\) plane of a Cartesian coordinate
+system, as illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The magnitude of \(\vec{A}_1\) is simply \(A\) and the vector makes an angle
+\(\phi_1\) with the positive \(x\)-axis.
+If \(\vec{A}_1\) is made to rotate counterclockwise with angular velocity
+\(\omega\) while its tail is fixed at the origin, \(A_{1x}\) will vary sinusoidally
+between values of \(A\) and \(-A\).
+The \(x\)-component of \(\vec{A}_1\) can therefore represent the disturbance
+produced by a wave at some fixed point in space if the magnitude \(A\) is the
+wave's amplitude, and if \(\phi_1\) is the phase of the wave disturbance, i.e.
+<p>\[A_{1x} = A\,\cos{\phi_1} = A\,\cos{(\omega t + kr_1 + \phi_0)}\,,\]
+<p>where \(\omega\) is both the angular frequency of the wave and the angular
+velocity of the rotating vector, \(k\) is the wave number of the wave, and
+\(\phi_0\) is the phase constant.
+The distance from the wave's source to the point of disturbance is \(r_1\).
+Keep in mind that it is only the \(x\)-component of the phasor that is
+physically meaningful.
+The \(y\)-component does not represent any real quantity.
+<p><h3 id="pcap-2-b">2b. The Phase Difference of Two Phasors</h3>
+
+Now consider the disturbance at the same point in space produced by another
+wave from a wave source coherent with the first source.
+The second wave is identical to the first wave, except it travels a different
+distance \(r_2\).
+The wave disturbance at the point in question will have a different phase
+\(\phi_2\) and be represented by a function
+\(\xi = A \cos{(\omega t + k r_2 + \phi_0)}\), which can be associated with the
+\(x\)-component of another vector \(\vec{A}_2\) as illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Since the two vectors both rotate counterclockwise at the same angular
+rate \(\omega\), the angular separation between the phasors remains constant, and
+is given by:
+<p>\[\begin{aligned}\delta & = \phi_2 - \phi_1 \\        & = \left(\omega t + k r_2 + \phi_0\right) - \left(\omega t + k r_1 + \phi_0\right) \\        & = k(r_2-r_1) = \frac{2\pi}{\lambda}(r_2-r_1).\end{aligned}\]
+
+<p>Since \(\delta\) is the difference between two phases, \(\phi_2\) and \(\phi_1\), it
+is given the name “phase difference,” and is independent of time, as seen
+above.
+It depends only on the “path difference,” \(r_2 - r_1\), which is the extra
+distance that one wave travels relative to the other to reach the point
+in question.
+Writing the path difference as \(\Delta\), the phase difference \(\delta\) may be
+rewritten as:
+<p>\[\delta=\left(\frac{\Delta}{\lambda}\right)2\pi
+     \text{  or  } \delta=\left(\frac{\Delta}{\lambda}\right)360^\circ\]
+<p>depending on whether \(\delta\) is expressed in radians or degrees.
+The phase difference is interpreted as the fraction or multiple of a
+complete wave oscillation that one wave has advanced relative to the other.
+As an example, if \(\lambda\) is 9.0 meters and \(\Delta\) is 3.0 meters, \(\delta\)
+is 120\(\deg\) or 2\(\pi\)/3 radians.
+We say that the two wave disturbances are “out of phase” by 120\(\deg\) or
+2\(\pi\)/3&thinsp;radians.
+The fact that \(\delta\) is independent of time means that \(\vec{A}_1\) and
+\(\vec{A}_2\) do not change direction relative to each other and may be combined
+by vector addition to yield the net result of both wave disturbances.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m205gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Vector addition of two phasors</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Vector Sum of the Rotating Phase Vectors</h3>
+
+The combination of the disturbances produced by two waves, out of
+phase by a phase difference \(\delta\), can be represented as a problem in
+the vector addition of two phasors on a phasor diagram.
+The two phasors illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> represent the disturbance at a fixed
+point in space produced by two waves of equal amplitude originating from
+coherent sources.
+The magnitude of the phasors represents the amplitude of the waves, and
+the angle between their directions represents the phase difference \(\delta\)
+between the wave disturbances.
+The entire triangle of phasors is rotating counter-clockwise
+with angular frequency \(\omega\).
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> is a “snapshot” taken of the diagram when the phasor \(\vec{A}_1\) is
+aligned with the positive \(x\)-axis.
+The vector sum of \(\vec{A}_1\) and \(\vec{A}_2\)&thinsp;, represented by \(\vec{A}'\),
+may be found by resolving the vectors into \(x\)- and \(y\)-components:
+<p>\[\begin{aligned}A'_x & = A_{1x} + A_{2x} = A + A \cos{\delta} \\ A'_y & = A_{1y} + A_{2y} = 0 + A \sin{\delta}\end{aligned}\]
+
+<p>The magnitude of \(A'\) may be found by applying the Pythagorean theorem:
+\[\begin{aligned}A' & = \left[ {A'}^2_x + {A'}^2_y \right]^{1/2} \\    & = \left[ (A + A \cos{\delta})^2 + (A \sin{\delta})^2 \right]^{1/2} \\    & = \left[ A^2 + 2 A^2 \cos{\delta} + A^2 \cos^2{\delta} +
+                          A^2 \sin^2{\delta} \right]^{1/2} \\    & = \left[ 2 A^2 + 2 A^2 \cos{\delta} \right]^{1/2}\end{aligned}\]
+
+<p>where use has been made of the fact that: \(\cos^2{\delta} + \sin^2{\delta} = 1\).
+We conclude that:
+<p>\[A' = \left[ 2 A^2 (1 + \cos{\delta)} \right]^{1/2}\,.\]
+<p>The extension of this method to the addition of wave disturbances from three
+or more coherent sources is conceptually a simple problem in vector
+addition, although the algebraic result may not be as concise.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Two Coherent Point Sources</h2>
+
+<p><h3 id="pcap-3-a">3a. Representing the Spherical Waves</h3>
+
+Given two coherent point sources, each source will produce a spherical wave
+of the form:
+<p>\[\xi(r,t)= \xi_0(r) \cos{(kr - \omega t + \phi)}\,.\]
+<p>We call these “spherical” waves because the crests and troughs
+of the waves have the form of concentric outgoing spheres.
+Of course the waves will become weaker with increasing distance from their
+sources, but we have neglected this effect in the above equation.
+We really only care about the two waves at the receiver, and there the
+two waves have about the same amplitudes if the receiver is at a large
+distance from the sources.
+We will assume that this is true, that the amplitudes from the two sources
+are equal in magnitude at the receiver, and that interference effects are due
+to phase differences between the waves.
+<p><h3 id="pcap-3-b">3b. The Amplitude of the Resulting Wave Disturbance</h3>
+
+The amplitude of the net wave disturbance of two spherical waves can be
+expressed using <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> if we let \(A = \xi_0\) and
+\(A' = \xi'_0\), where \(\xi'_0\) is the amplitude of the net wave disturbance.
+Using another trigonometric identity, \(2 \cos^2{(\delta/2)} =
+1 + \cos{\delta}\), <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> becomes:
+<p>\[A' =
+      \left[2 A^2 \left(2 \cos^2{\frac{\delta}{2}}\right)\right]^{1/2} =
+              \left[4 A^2 \cos^2{\frac{\delta}{2}}\right]^{1/2}\]
+<p>so,
+<p>\[\xi'_0 = 2 \xi_0\cos{\frac{\delta}{2}}\,.\]
+<p>Thus when \(\cos(\delta/2)\) is zero, the amplitude of the net wave disturbance is
+zero.
+This situation is called “destructive interference.”
+When \(\cos{(\delta/2)}\) takes its maximum value of \(\pm 1\), the net wave
+disturbance has an amplitude twice the size of either individual wave
+disturbance.
+This situation is called “constructive interference.”
+For cases where \(0 < |\cos{(\delta/2)}| < 1\), the interference is neither
+totally destructive nor totally constructive.
+Thus the interference pattern consists of variations in the wave
+disturbance from points where the amplitude is doubled, called “maxima,”
+to points where the amplitude is zero, called “minima.”
+<p><h3 id="pcap-3-c">3c. The Intensity of the Net Wave Disturbance</h3>
+
+In a previous module, we have seen that the intensity of a wave is
+proportional to the square of its amplitude.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>From <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> we can see that the net wave disturbance at a given point
+in space has a phase of (\(\omega t + \delta/2\)), assuming that the figure
+is a snapshot of the rotating phasors at time \(t = 0\).
+Thus the total expression for the net wave disturbance at a given point
+in space as a function of time is:
+<p>\[\xi'(t)=2 \xi_0 \cos\left(\frac{\delta}{2}\right)
+                     \cos\left(\omega t + \frac{\delta}{2}\right).\]
+<p>The intensity of the wave disturbance as a function of time is therefore
+expressed as:
+<p>\[I(\delta,t) = 4 I_0 \cos^2{\left(\frac{\delta}{2}\right)}
+                      \cos^2{\left(\omega t + \frac{\delta}{2}\right)},\]
+<p>where \(I_0\) is a combination of \(\xi_0^2\) and whatever constants of
+proportionality are necessary to convert amplitude to intensity.
+According to <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>, the wave intensity at a given point fluctuates
+between its peak value and zero with frequency \(\omega/(2 \pi)\), unless the
+intensity is always zero due to the \(\cos^2{(\delta/2)}\) factor.
+Typically such fluctuations occur too rapidly to be detected, so it is the
+intensity “time-averaged” over a single period that is of interest.
+It can be shown that the time-average of \(I(\delta t)\) results in the
+replacement of the \(\cos^2{\left(\omega t + \delta/2\right)}\) factor in
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> with a factor of 1/2.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Thus the average intensity, represented by \(I(\delta)\), can by expressed as:
+<p>\[I(\delta) =
+             2 I_0 \cos^2{\left(\frac{\delta}{2}\right)}\,.\]
+<p>This quantity depends only on the phase difference \(\delta\), which in turn
+depends only on the path difference \(\Delta\).
+<p><h3 id="pcap-3-d">3d. Conditions for Maximum and Minimum Intensity</h3>
+
+As we have seen, the quantity which determines the amount of
+interference that occurs when combining wave disturbances from two equal
+coherent sources is the phase difference \(\delta\).
+The intensity of the net wave disturbance will be zero when
+\(\cos^2{(\delta/2)}\) is zero.
+This occurs when \(\delta\) is 180\(\deg\) or \(\pi\)&thinsp;radians, and when \(\delta\)
+is 180\(\deg\) plus any integer multiple of 360\(\deg\), i.e. when \(\delta =
+2 \pi (n\,+\,1/2)\)&thinsp;radians or \(\delta = 360\deg(n + 1/2)\), where \(n\) can
+take the possible values 0, 1, 2, \(\ldots\)
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Similarly, the intensity is maximized when \(\cos^2{(\delta/2)} = 1\).
+A few moments consideration reveal that this occurs when \(\delta\) is 0\(\deg\),
+360\(\deg\), or any integer multiple of 360\(\deg\), i.e. \(\delta =
+2 \pi n\)&thinsp;radians or \(\delta = (360\deg)n\) for \(n\,=\,0,\,1,\,2,\ldots\).
+Thus to summarize, the intensity of the wave disturbance is maximized
+or minimized according to the following conditions:
+<p>\[\delta = \left\{\begin{array}{l l}
+        2 \pi n,                          & \text{for maxima} \\
+                                          &  \\
+      2 \pi \left(n + \frac{1}{2}\right),& \text{for minima} \\
+\end{array}\right\} n\,=\,0,\,1,\,2,\,3, \ldots\]
+<p>Alternatively we can express the conditions in terms of the path
+difference \(\Delta\), using the relationship between \(\delta\) and \(\Delta\) given
+in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+Using this relationship, the interference conditions may be written as:
+<p>\[\Delta = \left\{\begin{array}{l l}
+                            n\,\lambda, & \text{for maxima} \\
+                                        & \\
+  \left(n + \frac{1}{2}\right)\lambda, & \text{for minima} \\
+\end{array}\right\} n\,=\,0,\,1,\,2,\,3, \ldots \]
+<p>where the path difference \(\Delta\) is given by:
+<p>\[\Delta = r_2 - r_1\]
+<p>where \(r_1\) and \(r_2\) are the distances traveled by waves 1 and 2
+respectively.
+<p><h3 id="pcap-3-e">3e. Calculating the Path Difference</h3>
+
+Our problem has now reduced to calculating the path difference for the
+particular situation we are involved with.
+This is essentially a problem of geometry and will be different for each
+situation.
+Many well known interfering systems have been worked out in detail by
+physicists and mathematicians over the years.
+As an example, such a system is discussed in the next section.
+However you should realize that
+<a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)–(13)</a> are the principal results of
+our derivations and constitute the real physics content of this module.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m205gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A schematic diagram of a two-source
+experiment.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. A Two-Source Experiment</h2>
+
+<p><h3 id="pcap-4-a">4a. Coherent Sources are the Key</h3>
+
+An absolutely essential requirement for interference to be observed
+is the availability of coherent sources of waves.
+By using two small coherent sources, separated by distance \(d\) (measured from
+the center of each source), an interference pattern can be observed with
+a receiver a distance \(L\) meters away from and moving parallel to the plane
+of the two sources (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+<div class="figure-full"><figure id="fig-5"><img src="figures/m205gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The calculation of the path difference
+for parallel path distances.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-b">4b. An Approximation For the Path Difference</h3>
+
+Here is an approximation sometimes used to compute the path difference of
+any two waves that combine at a receiver.
+If \(L\) is very much larger than either \(d\) or \(\lambda\), the two path
+distances, \(r_1\) and \(r_2\) are essentially parallel.
+Thus as can be seen in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, the path difference is simply:
+<p>\[\Delta = r_2 - r_1 \simeq d\sin{\theta} \text{  for } L \gg d\,,\]
+<p>where \(\theta\) is the “angular position” of the point \(P\) on the screen where the
+waves are combining.
+Combining this geometrical expression for the path difference of two waves
+with the criteria for interference maxima and minima, we obtain the result:
+<p>\[d \sin{\theta_n} = \left\{\begin{array}{l l}
+                      n\,\lambda,    & \text{for maxima} \\
+                                     & \\
+\left(n + \frac{1}{2}\right)\lambda, & \text{for minima} \\
+\end{array}\right\} n\,=\,0,\,1,\,2, \ldots\]
+<p>where \(\theta_n\) is the angular position of the n<sup>th</sup> maximum or
+minimum.
+Remember that <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> is an approximation, good only if
+\(L \gg d\).
+The exact path difference will depart from the one calculated using
+<a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> if \(d\) becomes comparable to \(L\), resulting in errors
+in the predicted positions of the maxima and minima.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m205gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The position of maxima for the
+two-source experiment.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-c">4c. Positions of Maxima and Minima</h3>
+
+For fixed source separation \(d\) and wavelength \(\lambda\), the angular
+positions of the maxima and minima depends only on the value of \(n\).
+The value of \(n\) determines the “interference order” of maxima and minima
+at the receiver.
+For \(n = 0\), there is only one angle at which there is a maximum;
+at \(\theta = 0\).
+This maximum is called the “central maximum” and lies on the perpendicular
+bisector of the line connecting the sources (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+There is a minimum on either side of the central maximum at the angular
+positions \(\theta = \pm \sin^{-1}{(\lambda/2d)}\).
+Further maxima and minima appear along the receiver-line at larger angles.
+These are referred to as the “n<sup>th</sup> order” maxima and minima,
+corresponding to the number of complete wavelengths in the path difference.
+Figure&nbsp;7 shows a graph of intensity as a function of phase difference,
+corresponding to a form of <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> suitably modified to ignore any
+\(r^{-2}\) dependence of the amplitude.
+The maxima and minima are evenly spaced, characteristic of a cosine-squared
+function.
+We could equally well have expressed the intensity as a function of
+angular or even linear position along the receiver-line, using the
+relationship between phase difference and path difference and some simple
+geometry.
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m205gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The intensity as a function of phase
+difference for the two-source experiment.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-d">4d. Overlapping Orders of Interference</h3>
+
+If the two sources are producing different wavelengths, we obtain two
+separate interference patterns superimposed on oneanother.
+Since the path difference from the source-line to the receiver-line
+is zero for all wavelengths, the central maxima for both patterns
+coincide for all wavelengths.
+However the positions and spacings of other maxima depend on the wavelength,
+\(\lambda\), of the waves that are interfering.
+As the interference order increases, the maxima corresponding to the longer
+of the two wavelengths are located at greater angular positions from the
+central maximum than the maxima corresponding to the shorter wavelength.
+Eventually, the n<sup>th</sup> maximum of the longer wavelength will overlap
+the (n + 1)<sup>th</sup> maximum of the shorter wavelength.
+This is known as “overlapping orders of interference.”
+In <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a> two interference patterns are present in which the \(n = 3\)
+maxima of one pattern occurs at the same position as the \(n = 2\) maxima of the
+other.
+The difference between a wavelength \(\lambda\) and another, longer wavelength
+\(\lambda '\) whose n<sup>th</sup> order maximum coincides with the
+(n + 1)<sup>th</sup> order maximum of the shorter wavelength is called the
+“free spectral range” of wavelength \(\lambda\).
+This quantity defines the range of wavelengths that can produce interference
+maxima for an order \(n\) without overlapping maxima from other interference
+orders.
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m205gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Two overlapping interference patterns.</figcaption></figure></div>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to thank Dr.&thinsp;J.&thinsp;S.&thinsp;Kovacs for his contributions to an earlier
+version of this module.<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the intensity peak in the interference pattern
+produced by two or more coherent wave sources that corresponds to a
+combination of waves that have all traveled the same distance, i.e. the
+path difference is zero.
+wave sources that produce waves of the same
+frequency and wavelength, with the same phase at the same time at their
+respective origins.
+Also referred to as “synchronized” wave sources.
+a combination of two or more wave
+disturbances at a particular point in space where the net wave intensity
+is greater than the intensity of any of the individual wave disturbances.
+a combination of two or more wave
+disturbances at a particular point in space where the net wave intensity is
+less than the intensity of any of the individual wave disturbances.
+the range of wavelengths above a given wavelength
+that can produce interference maxima of a given order that do not overlap
+maxima of another order of interference.
+a spatial variation in the net intensity of the
+combined wave disturbance due to two or more coherent sources of waves.
+the number of complete wavelengths in the path
+difference between waves from two successive coherent wave sources that
+combine at a point in space to form an interference maximum.
+This number is used to count the maxima, e.g. the third order maxima are the 
+third intensity peaks in the interference pattern on either side of the
+central maximum.
+points of total constructive interference, where the intensity
+of the interference pattern is at its greatest.
+These points occur when the wave disturbances from the various coherent
+sources present are completely in phase.
+points of destructive interference, where the intensity of
+the interference pattern is at its weakest.
+These points occur when the phase difference of the individual wave
+disturbances results in a net disturbance of minimal amplitude.
+the difference in the distance that two waves from
+successive coherent wave sources travel to reach a given point in space
+where the wave disturbances combine.
+the difference in the phase of two wave disturbances
+that combine at a given point in space.
+The phase difference is related to the path difference through the
+wavelength of the wave.
+a fictitious vector that rotates in an imaginary plane and
+whose component in the \(x\)-direction may be used to represent the disturbance
+produced by a wave at a given point in space.
+The length of the phasor represents the amplitude of the disturbance and
+the angle the phasor makes with the \(x\)-axis represents the phase of the
+disturbance.
+</section>
+
+<p><section id="time-averaged-intensities" class="module-section section-text"><h2 id="time-averaged-intensities">Time-Averaged Intensities</h2>
+
+<p><h3 id="pcap--">. Only for Those Interested</h3>
+
+The intensity of the net wave disturbance produced by two or more coherent
+wave sources may be written as:
+<p>\[I(\vec{r},t) = I(\vec{r})\,\cos^2{(\omega t\,+\,\phi)}\]
+<p>where all spatial coordinate dependencies are included in the
+time-independent factor \(I(\vec{r})\).
+Since the maximum value of \(\cos^2{\theta}\) is 1 and its minimum value is
+zero, the intensity at a fixed value of \(\vec{r}\) oscillates back and forth
+between its peak value of \(I(\vec{r})\) and its minimum value of zero.
+The angular frequency of this oscillation is \(\omega\) (see <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>).
+These fluctuations are usually too rapid to be easily measured, so
+measurements are made of the time-averaged intensity.
+<p>The long term time-average is the same as the average over one wave period,
+since all wave periods are duplicates of each other, so
+we need only calculate the average over one period.
+The time-average of the intensity is denoted \(I_{av}(\vec{r})\) and is defined
+by:
+<p>\[I_{av}(\vec{r}) = \frac{1}{T} \int_0^T I(\vec{r},t)\,dt =
+      \frac{1}{T} \int_0^T I(\vec{r})\,\cos^2{(\omega t + \phi)}\,dt,\]
+<p>where \(T = 2 \pi /\omega\), which is one period of the wave oscillation.
+For radio waves, one period is in the region of microseconds (\(10^{-6}\)&thinsp;s).
+<p>If we let \(\omega t + \phi = x\) so \(\omega dt = dx\), and use
+\(\omega T = 2\pi\), the integral assumes this form:
+<p>\[I_{av} =
+     \frac{I(\vec{r})}{2\pi} \int_{\phi}^{2\pi + \phi} \cos^2{x} \,dx
+           = \frac{I(\vec{r})}{2\pi} \int_{0}^{2\pi} \cos^2{x} \,dx\]
+<p>where we have used the fact that the integral over any one period of extent
+\(T\) is the same as the integral over any other period of extent \(T\).
+<p>We now use the fact that the integral of \(\cos^2\) over a complete period
+is exactly the same as the integral of \(\sin^2\) over a complete period
+(one looks just like the other, on a graph, but shifted.)
+Then we can rewrite the integral over \(\cos^2\) as half the integral over
+the sum of the \(\sin^2\) plus the \(\cos^2\).
+However, the sum of those two quantities is just 1, so we get:
+<p>\[I_{av} = \frac{I(\vec{r})}{2\pi}\,\frac{1}{2}\,\int_{0}^{2\pi} 1\,dx =
+                     \frac{1}{2}\,I(\vec{r}).\]
+<p>Thus the time-average of an intensity varying as
+\(cos^2(\omega t\,+\,\phi)\) is one-half the peak intensity.
+Of course the same result holds if the time dependence is
+\(\sin^2{(\omega t\,+\,\phi)}\).
+<p><div class="figure-full"><figure id="fig-9"><img src="figures/m205gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. The variation in wave intensity as a
+function of time at a given point in space at which interference occurs.
+The time origin was arbitrarily chosen to coincide with an intensity peak.</figcaption></figure></div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The method is used to derive the angular sensitivity of a linear-array radio
+telescope.
+See “The Interference of Many Coherent Sources: Radio Interferometry”
+(MISN-0-231). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Intensity and Energy in Sound Waves” (MISN-0-203). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See Appendix: Time-Averaged Intensities. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">You should take a moment and convince yourself that these
+values of \(\delta\) do indeed produce a zero value for \(\cos{(\delta/2)}\). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Problem&nbsp;8 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m205gr10.svg" alt="" class="physnet-fig"></figure>
+
+Two identical speakers are connected to the left and right channel output of
+a stereo amplifier.
+A single-frequency tone, \(\nu\)&thinsp;=&thinsp;660&thinsp;Hz, is played over the system.
+A point \(P\) is 12.0&thinsp;m from speaker #1 and 10.0&thinsp;m from speaker #2.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Assuming the speakers are properly connected to the amplifier,
+i.e. “in phase,” they constitute two coherent sources of sound waves.
+Is the interference occurring at point \(P\) constructive or destructive?</li>
+<li><span class="item-label">b.</span> By reversing the connections on one of the speakers, the speakers
+are 180° “out of phase”: when speaker #1 is producing a wave
+“crest,” speaker #2 is producing a wave “trough.”
+Describe the type of interference now taking place at point \(P\).
+</li>
+<li><span class="item-label">2.</span> The wave disturbances, at a particular point in space, produced by
+two wave sources, are given by the equations:
+<p>\[\begin{aligned}\xi_1(r_1,t) & = \xi_0\,\sin(kr_1 + \omega t + \phi_1) \\ \xi_2(r_2,t) & = \xi_0\,\sin(kr_2 + \omega t + \phi_2)\end{aligned}\]
+
+<p>The sources are coherent if the frequencies are the same (they are) and if
+the phase constants are the same, i.e. \(\phi_1\,=\,\phi_2\).
+Suppose that \(\phi_1 = \phi_2 = -\pi/2\).
+This means that, at \(t = 0\) and \(r_1 = r_2 = 0\):
+<p>\[\xi_1(0,0) = \xi_2(0,0) = \xi_0\,\sin(-\pi/2) = -\xi_0\]
+<p>which means that a wave “trough” is leaving each source.
+Sketch \(\xi_1\), \(\xi_2\) and the net wave disturbance, \(\xi = \xi_1 + \xi_2\),
+as functions of \(\omega t\)
+when:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(r_1 = \lambda /4,\;r_2 = 3 \lambda /4 \)</li>
+<li><span class="item-label">b.</span> \(r_1 = \lambda /4,\;r_2 = 5 \lambda /4 \)</li>
+<li><span class="item-label">c.</span> \(r_1 = \lambda /4,\;r_2 = \lambda \).
+Characterize the type of interference for each situation.
+</li>
+<li><span class="item-label">3.</span> A point in space is 45.0&thinsp;meters from one wave source and
+45.4&thinsp;meters from another wave source.
+The two wave sources are equal and coherent, and produce waves of frequency
+165&thinsp;Hz and wavelength 2.00&thinsp;meters.
+Use the phasor method to graphically compute the net wave intensity at the
+given point in terms of the intensity of either individual wave.
+Include an accurate phasor diagram constructed with a ruler and a protractor
+and measure the length of the resultant with the ruler.
+Compare your graphically obtained answer to the one obtained by using
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> from the module text, assuming that \(r = r_0\).</li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m205gr11.svg" alt="" class="physnet-fig"></figure>
+
+Two equal coherent wave sources are located at (\(x_0\),0) and (\(-x_0\),0),
+separated by a distance \(d\).
+Using geometry and the condition for constructive interference,
+derive a formula for the exact positions, \(x\), of interference maxima
+along the line \(y = L\).
+Use no approximations.</li>
+<li><span class="item-label">5.</span> Derive the result of Problem&nbsp;4 a different way by noting that the
+constructive interference condition, \(r_1 - r_2 = n \lambda\), where \(n \lambda\)
+is a  constant for a given \(n\), is the equation of an hyperbola (actually a
+family of hyperbolas, since \(n\)&thinsp;=&thinsp;0,&thinsp;1,&thinsp;2,\ldots ).
+The Cartesian coordinate equation of an hyperbola, centered at the origin
+with foci at \(x_0\) and \(-x_0\), is:
+<p>\[\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1,\]
+<p>where \(a\) and \(b\) are the semi-major and semi-minor axes of the hyperbola.
+In terms of \(r_1\) and \(r_2\) an hyperbola can be written:
+<p>\[r_1 - r_2 = 2a\]
+<p>so \(a = n \lambda /2\).
+Finally the relation \(x_0 = (a^2 + b^2)^{1/2}\) defines \(b\), given \(a\) and
+\(x_0\).
+Use the above information to solve for the positions \(x\) where the hyperbolas
+intersect the line \(y = L\).
+These are the locations of interference maxima along \(y = L\).
+Note that the same type of derivation could be carried out to locate
+interference minima using the relation:
+<p>\[r_1 - r_2 = \left(n + \frac{1}{2}\right) \lambda,\;n\,=\,0,\,1,\,2\ldots\]</li>
+<li><span class="item-label">6.</span> Repeat the derivation of Problem&nbsp;4 assuming that
+\(L \gg d \gg \lambda\), and by dropping negligibly small terms, derive the
+large-distance result:
+<p>\[d\,\sin\theta = n\,\lambda. \qquad \help{2}\]</li>
+<li><span class="item-label">7.</span> In the two-source interference pattern, maxima and minima are
+determined by the equations:
+<p>\[d \sin{\theta_n} = \left\{\begin{array}{l l}
+                      n\,\lambda,    & \text{for maxima} \\
+                                     & \\
+\left(n + \frac{1}{2}\right)\lambda, & \text{for minima} \\
+\end{array}\right\} n\,=\,0,\,1,\,2, \ldots \]
+<p>with the condition that \(L \gg d \gg \lambda\) (see diagram below).
+Thus for reasonably small \(n\), \(\sin\theta \ll 1\), so
+\(\sin\theta \approx \tan\theta \approx \theta\), where \(\theta\) is in radians.
+Use these relations plus the basic geometrical setup below to determine the
+spacing between adjacent maxima and between adjacent minima.
+<p><figure class="fig-centered"><img src="figures/m205gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">8.</span> Consider two equal coherent wave sources with wavelength
+\(\lambda = 5.86\)&thinsp;m, located at \(x = \pm 4.00\)&thinsp;m, \(y = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine whether the amount of wave disturbance at the point
+\(x_0 = 8.00\)&thinsp;m, \(y_0 = 6.93\)&thinsp;m is a minimum or a maximum.
+Draw a rough sketch of the geometrical layout and show all the steps involved
+in obtaining the answer.</li>
+<li><span class="item-label">b.</span> Sketch a rough graph of the wave disturbance at the point
+\(x_1 = 1.00\)&thinsp;m, \(y_1 = 3.00\)&thinsp;m as a function of time.
+Make \(t = 0\) be the time at which a wave crest from the source at
+\(x = -4.00\)&thinsp;m, \(y = 0\) arrives at the point (\(x_1\),\(y_1\)).
+Also show on the graph the disturbance which each source alone would have
+produced.</li>
+<li><span class="item-label">c.</span> Locate a point of minimum intensity along the line
+\(y_2 = 3.00\)&thinsp;m if the two sources are located as above but have wavelengths
+of \(\lambda = 2.00\)&thinsp;m.
+Show all necessary reasoning.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> constructive interference</li>
+<li><span class="item-label">b.</span> destructive interference
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Total Destructive Interference
+<p>           <figure class="fig-centered"><img src="figures/m205gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> Total Constructive Interference
+<p>           <figure class="fig-centered"><img src="figures/m205gr14.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> “Intermediate” Interference <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p>           <figure class="fig-centered"><img src="figures/m205gr15.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">3.</span> By formal calculation: \(I = 1.309\,I_0\)
+<p>           <figure class="fig-centered"><img src="figures/m205gr16.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">4.</span> \[x_n = \pm \left(\frac{n \lambda}{2}\right)
+   \left[1 + \frac{L^2}{\left(\frac{d}{2}\right)^2 -
+   \left(\frac{n \lambda}{2}\right)^2}\right]^{1/2} \qquad \help{1}\]</li>
+<li><span class="item-label">5.</span> Same as Answer 4.</li>
+<li><span class="item-label">6.</span> \(d \sin\theta = n \lambda\).</li>
+<li><span class="item-label">7.</span> \(\Delta x = \lambda L/d\) for adjacent maxima;
+\(\Delta x = \lambda L/d\) for adjacent minima.</li>
+<li><span class="item-label">8.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Maximum</li>
+<li><span class="item-label">b.</span> The wave from (-4.00&thinsp;m,0) will be slightly behind the wave from
+           (\(+\)4.00&thinsp;m,0) hence:
+<p>           <figure class="fig-centered"><img src="figures/m205gr17.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> \(x = \pm 0.63\)&thinsp;m are the closest minima to the \(y\)-axis.
+Of course there are other minima further out.
+If you get an answer other than the one given, substitute your answer
+into your original expressions for the two paths.
+Then either: (i) their difference is not the half wavelength it should be
+so your algebra was wrong;
+or (ii) your original expressions were wrong.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\(r_1 - r_2 = n \lambda\), where \(r_1\) and \(r_2\) are defined in terms of
+ somewhat unwieldy square roots.
+ Be sure to move \(r_2\) to the other side of the equation before squaring to
+ solve  for \(x\), i.e.
+ 
+ \[r_1^2 = (r_2 + n \lambda)^2 = r_2^2 + 2 n \lambda r_2 + (n \lambda)^2.\]
+ 
+ Substituting the expressions for \(r_1^2\) and \(r_2^2\) (leaving \(r_2\)
+ as is, temporarily) several terms cancel.
+ You can then isolate \(r_2\) on one side and square again, then solve for \(x\).
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Somewhere in your derivation you should get a term similar to:
+ 
+ \[x^2 \left[ \frac{d^2}{n^2 \lambda^2} - 1 \right] =
+   L^2 + \left( \frac{d}{2} \right)^2 - \left(\frac{n \lambda}{2} \right)^2.\]
+ 
+ For \(L \gg d \gg \lambda\), the \(2^\text{nd}\) and \(3^\text{rd}\) terms of the right
+ side of this equation are
+ negligible, particularly after squaring each term.
+ To convince your self, substitute some typical numbers:
+ \(L = 10\,\text{m}\), \(d = 0.1\,\text{mm}\), \(\lambda = 500\,\text{nm}\)
+ for \(n = 1\) (any reasonable low value of \(n\) will do).
+ Therefore dropping these two terms and noting that
+ \(x = L \tan\theta\) exactly, and that
+ 
+ \[1 + \tan^2\theta = sec^2\theta,\]
+ 
+ where \(\sec\theta = 1/\cos\theta\), the derivation can easily be finished.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The curves plotted represent:
+ \[\begin{aligned}\xi_1 & = \xi_0 \sin(\omega t) \\ \xi_1 & = \xi_0 \sin(\omega t + 3 \pi / 2) \\       & = \xi_0 \sin(\omega t - \pi / 2).\end{aligned}\]
+
+ 
+ Note that one must use: \(k = 2 \pi / \lambda\).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> Consider two equal coherent wave sources with wavelength
+\(\lambda = 5.86\)&thinsp;m, located at \(x = \pm 4.00\)&thinsp;m, \(y = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine whether the amount of wave disturbance at the point
+\(x_0 = 8.00\)&thinsp;m, \(y_0 = 6.93\)&thinsp;m is a minimum or a maximum.
+Draw a rough sketch of the geometrical layout and show all the
+steps involved in obtaining the answer.</li>
+<li><span class="item-label">b.</span> Sketch a rough graph of the wave disturbance at the point
+\(x_1 = 1.00\)&thinsp;m, \(y_1 = 3.00\)&thinsp;m as a function of time.
+Make \(t = 0\) be the time at which a wave crest from the source at
+\(x = - 4.00\)&thinsp;m, \(y = 0\) arrives at the point (\(x_1\), \(y_1\)).
+Also show on the graph the disturbance which each source alone would have
+produced.</li>
+<li><span class="item-label">c.</span> Locate a point of minimum intensity along the line \(y_2 = 3.00\)&thinsp;m
+if the two sources are located as above but have wavelengths of
+\(\lambda = 2.00\)&thinsp;m.
+Show all necessary reasoning.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;8.</li>
+</ol>
+
+<p></section>
+

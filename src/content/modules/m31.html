@@ -1,0 +1,323 @@
+<header class="module-header">
+  <h1 class="module-title">Damped Driven Oscillations; Mechanical Resonances <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Show: \(x(t)\,=\,A\,e^{-\gamma t}\,\sin{(\omega t\,+\,\alpha)}\)
+    solves \(F\,=\,-kx-\lambda v\) <a href="../m29/" class="module-ref">MISN-0-29</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Given the damped driven oscillator force,
+    \(F\,=\,-kx-\lambda v + F_0 \cos{(\omega t)}\), and the steady-state
+    solution, \(x(t)\,=\,B(\omega)\,+\, \sin{[\omega t\,+\,\beta(\omega)]}\),
+    derive expressions for \(B(\omega)\) and \(\beta(\omega)\).</li><li><strong>K2.</strong> Show that \(x(t)\,=\,x_T(t)\,+\,x_S(t)\) is a
+    solution to the damped, driven oscillator problem, where the
+    “transient solution” \(x_T(t)\) is known to be a solution to the
+    undriven case, and \(x_S\) is the steady-state solution.</li><li><strong>K3.</strong> Derive the time-average steady-state power
+    transferred into a damped driven oscillator (from a cosine driving
+    force):<br>
+
+    \(P_{ave}(\omega)\,=\,(F^2_0 \lambda \omega^2/2)\,
+    [m^2 (\omega^2_0\,-\,\omega^2)^2\,+\,\lambda^2
+    \omega^2]^{-1}\).</li><li><strong>K4.</strong> Sketch \(P_{ave}\) vs. \(\omega\) in the vicinity of the
+    resonant frequency of a damped driven oscillator, both for a broad resonance
+    and for a narrow one.
+    Label each curve as to relative size of damping constant.</li></ul></div>
+
+    
+    <div class="env-OptionalResources">
+    <br>
+ You might like to see an alternative presentation in some General
+    Physics textbook (for availability, see this module's <em>Local Guide</em>).
+    </div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The concept of “resonance” is one of the most important in all of 
+science and technology.
+There are many processes where resonance is essential: other processes 
+where it is to be avoided at all cost.
+Included in the former category are the parts of instruments which produce 
+music; in the latter, the recording and playback apparatus.
+In the former, the vocal cords of a person speaking or a bird singing; in 
+the latter, most parts of the ear of a person or a bird listening.
+Here we assume the existence of a Hooke's Law type single-frequency 
+driving force and examine the power transfer relationships in a realistic 
+model of driven devices.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Transient &amp; Steady-State Equations</h2>
+
+<p><h3 id="pcap-2-a">2a. Combining \(F = m a\) and the Oscillator Force</h3>
+
+We combine Newton's second law, \(F = m a\), with the damped driven oscillator 
+force,
+<p>\[F = kx - \lambda v + F_0 \cos\omega t,\]
+<p>to obtain the basic equation for the damped driven oscillator:
+<p>\[mx'' + \lambda x' + k x - F_0 \cos\omega t = 0\]
+<p>where primes indicate derivatives with respect to time.
+<p><h3 id="pcap-2-b">2b. Steady-State/Transient Separation</h3>
+
+The unique solution to this equation is
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[x(t) = x_t(t) + x_s(t)\]
+<p>where the transient part is
+<p>\[x_t(t) = A e^{-\gamma t} \sin(\omega_1 t + \alpha)\]
+<p>and the steady state part is
+<p>\[x_s(t) = B(\omega) \sin[\omega t + \beta(\omega)]\]
+<p>The amplitude \(A\) and phase \(\alpha\) of the transient part can be specified by, for 
+example, displacement and velocity at time zero.
+However, the amplitude \(B\) and phase \(\beta\) of the steady state part are 
+independent of such conditions and remain to be found.
+<p><h3 id="pcap-2-c">2c. The Transient Solution</h3>
+
+If <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is substituted into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and
+\(x_t\) terms are separated from \(x_s\) terms, one gets:
+<p>\[(m x_t'' + \lambda x_t' + k x_t) + (m x_s'' + \lambda x_s' + k x_s - F_0 \cos\omega t) = 0\]
+<p>Now it can be demonstrated
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>that
+\[m x_t'' + \lambda x_t' + k x_t = 0\]
+<p>if
+<p>\[x_t(t) = A e^{-\gamma t} \sin(\omega_1 t + \alpha)\]
+<p>where
+<p>\[\gamma \equiv \lambda / 2 m\]
+<p>\[\omega_1 \equiv \sqrt{\omega^2 - \gamma^2}\]
+<p>\[\omega_0 \equiv \sqrt{k/m}\]
+<p>and \(A\) and \(\alpha\) are still undetermined.
+<p><h3 id="pcap-2-d">2d. The Steady State Equation</h3>
+
+Without further ado we assume <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> and write
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> as:
+<p>\[m x_s'' + \lambda x_s' + k x_s - F_0 \cos\omega t = 0\]
+<p>We offer two methods for the solution of this equation.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Solving the Steady-State Equation</h2>
+
+<p><h3 id="pcap-3-a">3a. Algebraic Method</h3>
+
+Substitute \(x_s(t) = B \sin(\omega t + \beta)\) into <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> and get:
+<p>\[(\omega_0^2 - \omega^2) m B \sin(\omega t + \beta) +
+ \lambda\, \omega B \cos(\omega t + \beta) - F_0 \cos(\omega t) = 0\]
+<p>Now use the identity
+<p>\[\cos(A - B) = \cos A \cos B + \sin A \sin B,\]
+<p>which should be on instant recall, with \(A = \omega t + \beta\) and \(B = \beta\)
+to get
+<p>\[\cos\omega t = ( \sin\beta ) \sin(\omega t + \beta) +
+(\cos\beta) \cos(\omega t + \beta).\]
+<p>Put that into <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> and collect terms:
+<p>\[[(\omega_0^2 - \omega^2) B m - F_0 \sin\beta ] \sin(\omega t + \beta) +
+   (\lambda\,\omega B - F_0 \cos\beta) \cos(\omega t + \beta) = 0\]
+<p>Since the sine and cosine are independent functions of time, each of their 
+constant coefficients must separately be zero in order to make the sum of 
+the terms stay zero at all times.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Then:
+<p>\[(\omega_0^2 - \omega^2) B m = F_0 \sin\beta\]
+<p>\[\lambda\,\omega B = F_0 \cos\beta\]
+<p>Dividing these two equations gives \(\tan\beta\) and summing their squares
+gives \(B\).
+<p><h3 id="pcap-3-b">3b. Phasor Method</h3>
+
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>First, since \(x_s(t) = B \sin(\omega t + \beta)\),
+<p>\[F_s = m a_s  = m x_s'' = - \omega^2 m x_s\]
+<p>\[F_s = - k x_s \qquad \text{where } k \equiv \omega^2 m\]
+<p>so we can draw a phasor diagram for \(t = 0\):
+<p><figure class="fig-centered"><img src="figures/m31gr01.svg" alt="" class="physnet-fig"></figure>
+
+<p> Now draw a force-phasor diagram for \(t = 0\), noting that each force phasor is 
+a constant times one of the phasors in the above diagram.
+At \(t = 0\),
+<p><figure class="fig-centered"><img src="figures/m31gr02.svg" alt="" class="physnet-fig"></figure>
+
+<p> where \(\vec{F}_k = - k \vec{x}_s\) \qquad  (opposite to \(\vec{x}_s\))
+<p> and \(\vec{F}_v = - \lambda \vec{v}_s\) \qquad  (opposite to \(\vec{v}_s\)).
+<p> Using
+<p>\[\vec{F}_{net} = \vec{F}_k + \vec{F}_v + \vec{F}_{DR}\]
+<p>we equate components \(\parallel\)  and \(\perp\) to \(\vec{F}_{net}\) and obtain 
+<a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a>.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Average Power Dissipation</h2>
+
+<p><h3 id="pcap-4-a">4a. Setting Up the Time-Average Integral</h3>
+
+<p>The time-average steady-state  power transferred into the oscillator from 
+the driving force can be determined via the power-force-velocity relation:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[P(t) = F(t) v(t)\]
+<p>Then over one period \(P\) the average power is:
+<p>\[P_{ave} = \frac{1}{P} \int_0^P\;  P(t)\,dt =
+            \frac{1}{P} \int_0^P\; F_{DR}(t) v(t) \;dt\]
+where the driving force is used because we are trying to obtain the average
+power expended by that force.
+Substituting \(F_{DR}(t)\) and \(v(t)\):
+<p>\[P_{ave} =
+\frac{1}{P} \int_0^P F_0 (\cos\omega t) B \omega \cos(\omega t + \beta)\,dt.\]
+<p>Again use: \(\cos(A + B) = \cos A \cos B - \sin A \sin B\), now with
+\(A = \omega t\) and \(B = \beta\):
+<p>\[P_{ave} = \frac{F_0\, \omega}{P} \left[ \int_0^P \cos^2\omega t\,dt -
+\sin\beta \int_0^P \cos\omega t \sin\omega t\,dt \right]\]
+<p><h3 id="pcap-4-b">4b. Integrating</h3>
+
+The second integral is zero, as can be easily seen by writing it as:
+<p>\[\int_0^P \frac{1}{2} (\sin 2 \omega t)\,dt\]
+<p><figure class="fig-centered"><img src="figures/m31gr03.svg" alt="" class="physnet-fig"></figure>
+
+<p>The value of the first integral is \(P/2\) because the average value of
+\(\cos^2\) is 1/2.
+This is easily seen by making use of the fact that the average 
+values of \(\sin^2\) and \(\cos^2\) are obviously equal:
+<p><figure class="fig-centered"><img src="figures/m31gr04.svg" alt="" class="physnet-fig"></figure>
+
+<p>
+Then:
+<p>\[\int_0^{2 \pi}\;\cos^2x\,dx = \int_0^{2 \pi}\;sin^2x\,dx\]
+<p>which can be used to evaluate the average value of \(\cos^2 x\):
+\[\begin{aligned}(\cos^2x)_{ave} & = &\frac{\int_0^{2\pi} \cos^2x\,dx}{2 \pi} =
+\frac{1}{2}\cdot\frac{\int_0^{2\pi}\cos^2x\,dx}{2 \pi} +
+\frac{1}{2}\cdot\frac{\int_0^{2\pi}\sin^2x\,dx}{2 \pi} \\
+ & = & \frac{\int_0^{2\pi}(\cos^2x + \sin^2 x)\,dx}{4 \pi} =
+\frac{\int_0^{2\pi} (1) \,dx}{4 \pi} = \frac{2\pi}{4\pi} = \frac{1}{2}.\\\end{aligned}\]
+
+<p>Then:
+<p>\[P_{ave} = \frac{F_0 B \omega \cos\beta}{2}\]
+<p><h3 id="pcap-4-c">4c. Eliminating the Phase Angle</h3>
+
+We can evaluate \(\cos\beta\) from
+<p>\[\begin{aligned}\cos\beta & = & \frac{1}{\sqrt{1 + \tan^2\beta}} =
+                \left[ 1 + \frac{m^2(\omega_0^2 - \omega^2)^2}{\lambda^2\omega^2} \right]^{-1/2} \\
+          & = & \frac{\lambda \omega}{\left[ \lambda^2\omega^2 + m^2(\omega_0^2 -
+                \omega^2)^2 \right]^{1/2}} \\\end{aligned}\]
+
+<p>However, rather than working out \(\cos\beta\) from \(\tan\beta\) as above,
+physicists often use a triangle.
+If \(\tan\beta = a/b\) than \(a\) and \(b\) can be drawn as the legs of a
+right-angle triangle shown in the sketch at the right.
+The hypotenuse is obviously \(\sqrt{a^2 + b^2}\)  and so
+\(\cos\beta = b/\sqrt{a^2 + b^2}\).m31gr05
+<p>In our case:
+<p>\[\tan\beta = \frac{m (\omega_0^2 - \omega^2)}{\lambda\omega}\]
+<p>hence
+<p>\[\cos\beta = (\lambda\omega) / \sqrt{\lambda^2\omega^2 +
+m^2(\omega_0^2 - \omega^2)^2}\]
+<p>Using either derivation, the final answer is:
+<p>\[P_{ave} = \frac{F_0^2\, \omega^2 \lambda}
+{2 \left[ m^2 ( \omega_0^2 - \omega^2)^2 + \lambda^2\omega^2 \right] }\]
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Resonances</h2>
+
+<p><h3 id="pcap-5-a">5a. Power Spectrums with Resonances</h3>
+
+The resonant frequency is \(\omega_0\).
+If \(\omega\) is swept through a range of frequencies, we get:
+<p><figure class="fig-centered"><img src="figures/m31gr06.svg" alt="" class="physnet-fig"></figure>
+
+<p><h3 id="pcap-5-b">5b. Resonance Width (Approximate)</h3>
+
+It is easy to derive a formula for the width of the resonance in the 
+“narrow width approximation.”
+The width \(\Gamma\) of the resonance is defined at half the maximum resonance
+height \(h\):
+<p><figure class="fig-centered"><img src="figures/m31gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p> Then:
+<p>\[P_{ave}(\omega_{1/2}) = \frac{1}{2} P_{ave}(\omega_0)\]
+<p>Substituting in both sides:
+<p>\[\frac{F_0^2 \omega_{1/2}^2 \lambda}{m^2(\omega_0^2 -
+\omega_{1/2}^2)^2 + \lambda^2\omega_{1/2}^2} =
+\frac{1}{2} \cdot \frac{F_0^2 \omega_0^2 \lambda}{\lambda^2 \omega_0^2},\]
+<p>which results in:
+<p>\[\omega_0^2 - \omega_{1/2}^2 = \pm \lambda\, \omega_{1/2}/m.\]
+<p>Factor the left hand side:
+<p>\[\omega_0^2 - \omega_{1/2}^2 =
+(\omega_0 - \omega_{1/2}) \cdot (\omega_0 + \omega_{1/2})\]
+<p>and use the narrow width approximation
+<p>\[\omega_0 \approx \omega_{1/2}\]
+<p>to get:
+<p>\[\omega_0 + \omega_{1/2} \approx 2 \omega_0,\]
+<p>\[\omega_0 - \omega_{1/2} = \pm 2 \lambda/2 m,\]
+<p>\[\omega_{1/2} = \omega_0 \pm \lambda/ 2 m.\]
+<p>The full width at half maximum is then:
+<p>\[\Gamma = \lambda / m.\]
+<p>This shows that the width is directly proportional to the damping strength.
+The average power put into the oscillator by the driving force is often 
+written:
+<p>\[P_{ave} (\omega ) = \frac{F_0^2 \Gamma/(8 m)}{(\omega - \omega_0)^2 +
+(\Gamma/2)^2}\]
+<p>but you should realize that this is only valid in the narrow-width
+approximation.
+An interesting relation between the height and width of the resonance can 
+be obtained by evaluating the height at \(\omega_0\):
+<p>\[P_{ave}(\omega_0) = \frac{F_0^2}{2 \Gamma m},\]
+<p>so the height varies inversely as the width.
+<p><h3 id="pcap-5-c">5c. What Happens as Damping Goes to Zero</h3>
+
+A dramatic example of damping going to zero is a car wheel that is coming
+loose.
+As the damping constant fades, power gets
+increasingly fed in at the resonant frequency of vibration of the wheel until
+it is too much for the restraining system.
+Crack!
+<p><h3 id="pcap-5-d">5d. Resonances as Complex-Plane Poles</h3>
+
+A broad resonance is the shoulder of a far-away pole in the complex plane.
+As the damping constant decreases, the pole moves closer to the real axis.
+This causes the shoulder to narrow and heighten.
+In fact, the width of the resonance is the distance of the pole from the 
+real axis.
+These matters are discussed and illustrated elsewhere.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Solving Inhomogeneous Differential Equations</h2>
+
+<p>There is a general approach to equations like (1), which are called 
+inhomogeneous because not all terms contain the solution \(x\) (here, the 
+final term omits it).
+The general solution is the sum of two terms: (a) the
+“homogeneous-part” solution that is adjusted to match boundary conditions;
+and (b) an entire-equation solution that has no adjustable parameters.
+In our case, the homogeneous part of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>: it's solution, following <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>,
+shows the two adjustable constants.
+The unadjustable entire-equation solution, <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, obeys <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>.
+The sum of these two “solutions” is our solution to the entire equation.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Resource Supplement</h2>
+
+<p> We suggest you look in General Physics textbooks (for availability,
+see this module's <em>Local Guide</em> under the
+subjects: (1) Forced Oscillations; and (2) Mechanical Resonances.
+There is usually at least a section on these topics.
+Skim the words or read them carefully, as is your pleasure, but we suggest
+you examine the illustrations carefully.
+In this subject it may be helpful to see other authors' presentations.
+You might also be interested in looking at the presentations in Mechanics
+textbooks such as Barger and Olsson, <em>Classical Mechanics</em>, Section 1-9,
+and Marion, <em>Classical Dynamics of Particles and Systems</em>, Section
+4.2.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See Appendix A. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Damped Mechanical Oscillations” (MISN-0-29). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Damped Mechanical Oscillations” (MISN-0-29). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “ SHM Phasors” (MISN-0-27). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Work,Kinetic Energy, Power” (MISN-0-20. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Resonances and Poles: Relationship Between the Real and
+Imaginary Worlds” (MISN-O-49). <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>

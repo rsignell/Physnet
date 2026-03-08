@@ -1,0 +1,361 @@
+<header class="module-header">
+  <h1 class="module-title">Continuous Spectra: Planck's Law <span class="module-author">(Peter Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: spectrum, wavelength, radiant energy <a href="../m212/" class="module-ref">MISN-0-212</a>,
+                tristimulus values <a href="../m227/" class="module-ref">MISN-0-227</a>, chromaticity coordinates <a href="../m229/" class="module-ref">MISN-0-229</a>,
+                absolute temperature <a href="../m157/" class="module-ref">MISN-0-157</a>, angstrom (Å) <a href="../m405/" class="module-ref">MISN-0-405</a>,
+                nanometer (nm) <a href="../m212/" class="module-ref">MISN-0-212</a>, watt <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>2.</strong> Given the wavelength distribution of light energy coming from
+    an object, and a table of tristimulus values, compute the light's
+    chromaticity coordinates <a href="../m229/" class="module-ref">MISN-0-229</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: black body or ideal absorber or emitter;
+    black body spectrum; spectral and total emittance; Planck's Law,
+    optical pyrometer.</li><li><strong>K2.</strong> Sketch the black body spectrum for a progression of
+    temperatures, paying particular attention to the peak shift and to the
+    general height shift.</li><li><strong>K3.</strong> Describe in detail how one computes the locus of black body
+    points on the Chromaticity Diagram.</li><li><strong>K4.</strong> Describe how an optical pyrometer works.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given the integrated form of Planck's law, determine temperature
+    from total emittance and vice versa.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Construct an appropriate computer or spreadsheet program and
+    use it to calculate the chromaticity coordinates for a black body a
+    given temperature.
+    </div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>A solid begins to glow visibly when its temperature approaches
+800<span class="unit">&thinsp;K</span>.
+Why does its color appear dull red, then orange, yellow, and finally
+“white hot” as its temperature is raised?
+What does this tell us about the temperature of the sun's surface and the
+night sky?
+To the extent that objects approximate “black body” emission, this module
+answers those kinds of questions.
+<p>We also note that the failure of the laws of classical mechanics to describe
+this kind of emission and the subsequent discovery of Planck's Law
+constituted one of the foundations of modern Quantum Mechanics.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Temperature and Color</h2>
+
+<p><h3 id="pcap-2-a">2a. The Temperature-Color Correlation</h3>
+
+As a solid is heated higher and higher above room temperature, it eventually
+begins to glow visibly.
+For common metals and other “black” bodies this occurs at about
+800<span class="unit">&thinsp;K</span>.
+As the temperature is raised higher and higher, the object turns from dull
+red to, successively: red-orange, “straw yellow,” white, then blue-white.
+There is a one-to-one correspondence between temperature and color so
+the temperature of the object can be estimated from its glow color.
+For example, a blacksmith wishing to harden a piece of iron will heat it
+to “white-hot,” then wait until it has cooled to “straw yellow” and
+at that precise moment will plunge it into a water bath.
+As another example of the correspondence of color and temperature,
+incandescent light bulbs are often rated in “degrees kelvin,”
+written \(\,\text{K}\), in order to specify the colors of their glowing
+filaments.
+Home light bulbs are usually stated to have colors in the
+\(2600\,\text{K}\)-\(3000\,\text{K}\) range.
+The quoted temperature of a bulb is of course the temperature of its
+glowing filament.
+Such temperatures are not far from the melting point of the bulbs' tungsten
+filaments, \(3500\,\text{K}\).
+<p><h3 id="pcap-2-b">2b. The Ideal Emitter</h3>
+
+Throughout this module we will be discussing the attributes of an “ideal
+emitter.”
+In the literature an ideal emitter is often called a “black body” because
+the ideal emitter is also an ideal absorber, one that absorbs all light that
+reaches its surface.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Real metals are quite good absorbers, or at least their graphs of
+absorption versus wavelength are fairly constant throughout the visible
+region at “glowing” temperatures, so metals are mainly what we will
+be thinking of as we study emission in this module.
+That means that although they may not absorb and emit with as much intensity
+as a true ideal emitter, the <em>shapes</em> of their emission curves are
+still close to those of an ideal emitter at those temperatures.
+Thus for those temperatures their perceived colors are close to being those
+of an ideal emitter.
+Thus we will be thinking mainly of metals as we study emission in this
+module.
+<p><h3 id="pcap-2-c">2c. The Emission Mechanism</h3>
+
+The correlation between the color of light from a glowing material and its
+temperature is due to the fact that the conduction electrons in the
+material are at the “temperature” of the material.
+This means that their distributions of energy are characteristic of that
+temperature.
+If we plot the distribution of the electron or ion energies (number of
+particles versus particle energy) versus energy, it is very close to the
+distribution one can calculate for a collection of independent particles at
+that temperature.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The photons are constantly being emitted and absorbed as the charged
+particles jump up and down between essentially continuous
+energy levels, and the more charged particles there are jumping between two
+particular levels the more photons there will be at the corresponding
+wavelength.
+Thus the photon distribution in wavelength is a direct product of the
+charged-particle distribution in energy, and the latter is a known function
+of the temperature of the material.
+This means the photon distribution in wavelength, its “spectrum,” is a
+known function of the temperature of the material.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Spectrum</h2>
+
+<p><h3 id="pcap-3-a">3a. Emittance and Spectral Emittance</h3>
+
+A body that is glowing, because of its elevated temperature, is emitting
+light of all wavelengths and of course these can be displayed as a spectrum.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>We can produce a table of the amount of power emitted into various spectral
+regions or we can plot a graph of emitted power versus wavelength.
+<p>The power emitted by the body per unit radiating area is called the body's
+“emittance” \(R\) and it varies with the temperature of the body.
+If we break that emitted radiation down into its spectral components, we
+get the body's “spectral emittance” \(R_\lambda\) which can be plotted
+as a spectrum.
+If we integrate over the spectral emittance we get the emittance:
+<p>\[R = \int_0^\infty R_\lambda \,d\lambda\,.\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m218gr00.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The spectral emittance of an ideal
+emitter at three different temperatures.
+The visible region is expanded in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+<p>
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m218gr01.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Same as <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, but showing the visible
+region expanded.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3bPlanck's Law
+If we plot a glowing body's spectral emittance versus wavelength we find
+that the graph's curve follows Planck's law:
+<p>\[R_{\lambda} =
+         \frac{C_1}{\lambda^5 \left( e^{C_2/\lambda T} - 1 \right)}\,.\]
+<p>where \(R\) is the radiant power emitted per unit radiating surface area
+per unit wavelength (\(\lambda\) is wavelength), and the two constants are:
+<p>\[\begin{aligned}C_1 & = 3.7402 \times 10^{-16}\unit{W/m^{2}}\,, \\ C_2 & = 1.43848 \times 10^{-2}\,\text{m}\,\text{K}\,.\end{aligned}\]
+
+<p>The spectral emittance of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is plotted in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>
+for three temperatures.
+<p>
+If we integrate over all wavelengths we get the total power radiated per
+unit radiating surface area:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[R = \sigma T^4\,,\]
+<p>where:
+<p>\[\sigma = 
+   5.672 \times 10^{-8}\,\text{W}\,\text{m}^{-2}\,\text{K}^{-4}\,.\]
+<p>Finally, the wavelength position of the peak of the curve in
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is obtained by setting the function's derivative with
+respect to \(\lambda\) equal to zero.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>This produces:
+<p>\[\lambda_\text{max} = \frac{C_3}{T}\,,\]
+<p>where:
+<p>\[C_3 = 0.28978 \times 10^{-2}\,\text{m}\,\text{K}\,.\]
+<p><h3 id="pcap--">. </h3>
+[]3cThe Optical Pyrometer
+When a fairly precise measurement of temperature is needed, as in
+steel making, an optical pyrometer is used.
+This device obtains the temperature of an incandescent body by measuring its
+emittance in a narrow band of wavelengths (in the red, using a filter).
+This is accomplished by means of a comparison filament, in the instrument,
+which is heated by an electric current passing through it.
+The filament is viewed, in the instrument, against the background of the
+object whose temperature is being measured.
+The current is varied and when the filament appears neither darker nor
+brighter than the background, so it seems to disappear, the filament is at
+the same temperature as the object.
+The temperature of the filament is a known function of the current going
+through it.
+An optical pyrometer for “close up” work relies on the source being, in
+effect, a semi-infinite plane so the intensity has not yet started falling
+off with distance.
+For further-away work, a telescope in the instrument is focused on the
+source in order to compensate for the falling off of the intensity with
+distance.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Color as a Function of Temperature</h2>
+
+<p>The usual techniques for finding the color of a spectral distribution
+entering the eye can be used to find the color of a glowing ideal emitter
+as a function of temperature.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>All one need do is produce the curve implied by <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>,
+at some specific temperature, and then multiply it by each of the CIE
+tristimulus curves, wavelength-by-wavelength (the CIE values are given in
+Appendix A of this module).
+<p>Integrating each of the three responses and converting them to relative
+responses then gives us the Chromaticity coordinates, \(x\) and \(y\), of
+the color of an ideal emitter at that temperature.
+One can repeat the process for a series of temperatures and thereby produce
+the “black-body” trajectory usually shown in Chromaticity Diagrams (see
+Appendix B of this module).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+an ideal emitter/absorber.
+It is called a “black body” because a body that truly is “black” must
+absorb all light reaching it;
+it must thereby also be an ideal emitter/absorber, one that obeys Planck's
+law.
+<p>an object which absorbs all electromagnetic
+energy that falls upon it, reflecting none of it.
+<p>an object that emits electromagnetic energy
+according to Planck's law.
+<p>the spectral distribution of
+electromagnetic energy emitted by a black body.
+The spectral the distribution is given by Planck's law.
+<p>the spectral distribution of
+electromagnetic energy being emitted by an object.
+The SI unit is watts per square meter per meter (of wavelength).
+<p>the electromagnetic energy being emitted by
+an object, with units of power per unit area; it is the integral over
+wavelength of the spectral emittance.
+The SI unit is watts per square meter.
+<p>the equation giving the spectral emittance of
+a black body, it is derived from quantum mechanics.
+<p>a device that obtains the temperature of
+an incandescent body by measuring its emittance in a narrow band of
+wavelengths (in the red, using a filter).
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. CIE Tristimulus Values</h2>
+
+
+<div class="centered">  tristimv.dat </div>
+
+<p>
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. The Chromaticity Diagram</h2>
+
+<p><figure class="fig-centered"><img src="figures/m218gr02.svg" alt="" class="physnet-fig"></figure>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The radiation from an ideal emitter is usually called
+“black-body radiation.”[] <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Fermi-Dirac Distribution,” MISN-0-168. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The word “spectrum” implies that we have broken a quantity
+(here the emitted electromagnetic energy) into its single-wavelength
+components and have probably made a graph showing intensity versus
+wavelength.
+ <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Defining \(x \equiv \lambda T/C_2\), the integral becomes:
+<p>\[R = T^4 \frac{C_1}{C_2^4}
+                    \int_0^{\infty} \frac{1}{exp^{(1/x)} - 1}\,dx\,,\]
+<p>and then the integration on \(x\) is performed numerically.
+ <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Defining \(x \equiv C_2/(\lambda_\text{max} T)\), and setting the
+ derivative of \(R_\lambda\) with respect to \(\lambda\) equal to zero, results
+ in this transcendental equation:
+ 
+ \[5 - x = 5 e^{-x}\,,\]
+ 
+ It has the numerical solution: \(x = 4.965\).
+ <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Colors From Spectral Distributions,” MISN-0-229. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Problems&nbsp;2 and 3 also occur on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> On a surface perpendicular to the incoming rays the earth
+receives solar radiation at the rate of about 1.4<span class="unit">&thinsp;KW/m<sup>2</sup></span>.
+Assume the earth is an ideal radiator so the total energy received is
+radiated back into space.
+However, the total surface of the earth radiates and it is four times the
+earth's cross-sectional area that receives the radiation.
+Determine the average surface temperature of the earth.</li>
+<li><span class="item-label">2.</span> A red hot burner on a stove is consuming 2.8<span class="unit">&thinsp;KW</span> of power.
+Its element has a rectangular cross section 3.0<span class="unit">&thinsp;mm</span> by 8.0<span class="unit">&thinsp;mm</span> and its
+length is 60.0<span class="unit">&thinsp;cm</span>.
+Determine its temperature, making the quite good assumption that
+it radiates as a black body.</li>
+<li><span class="item-label">3.</span> Construct an appropriate computer or spreadsheet program and
+use it to calculate the chromaticity coordinates for a black body at this
+temperature:
+<p>\[T = 1400\,\text{K} + (CBI\;ID) \times 6.0\,\text{K}\,,\]
+<p>where \((CBI\;ID)\) is  your CBI ID number (which is somewhere in the
+range 1-999).
+For computer or spreadsheet assistance, ask for MISN-8-100 and MISN-8-218
+in the CBI Consulting Room during your class's regularly scheduled hours.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 45&thinsp;°F</li>
+<li><span class="item-label">2.</span> \(1.4 \times 10^3\)&thinsp;K</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\begin{aligned}R           & = &  \sigma T^4 \\
+R_{\lambda} & = &  \frac{C_1}{\lambda^5 \left( e^{C_2/\lambda T} - 1 \right)} \\
+\sigma      & = &  5.672 \times 10^{-8}\unit{Watts\,m^{-2}}\unit{K^{-4}} \\
+C_1         & = &  3.7402 \times 10^{20}\unit{nm^{4}}\unit{W/cm^{2}} \\
+C_2         & = &  1.43848 \times 10^7\,\text{nm}\,\text{K} \\\end{aligned}\]
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.
+One or more, or none of these skills may be on the actual exam.</li>
+<li><span class="item-label">2.</span> A red hot burner on a stove is consuming 2.8&thinsp;KW of power.
+Its element has a rectangular cross section 3.0&thinsp;mm by 8.0&thinsp;mm and its
+length is 60.0&thinsp;cm.
+Determine its temperature, making the quite good assumption that
+it radiates as a black body.</li>
+<li><span class="item-label">3.</span> Staple your project report for problem&nbsp;3 in the <em>Problem
+Supplement</em> to your exam pack, between the Exam Answer Sheet(s) and the
+scratch paper.
+Include the annotated original of your computer output and a copy of the
+program or spreadsheet function you used.
+The annotations should be in sufficient detail so another person could
+exactly repeat your calculation from them alone.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;2.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;3.</li>
+</ol>
+
+</section>
+

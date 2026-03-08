@@ -1,0 +1,494 @@
+<header class="module-header">
+  <h1 class="module-title">Conductivity and Resistance <span class="module-author">(Frank Zerilli)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: ampere, current <a href="../m117/" class="module-ref">MISN-0-117</a>.</li><li><strong>2.</strong> Explain how an electron can gain energy from an electric
+                field <a href="../m117/" class="module-ref">MISN-0-117</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: average thermal speed, conductance, conduction 
+                electrons, conductivity, conductor, current density, drift
+                velocity, joule heating, lattice, mho, ohm, resistance,
+                resistivity.</li><li><strong>K2.</strong> Derive Ohm's law, starting from the motion of a conduction
+                electron under the influence of both an electric field and
+                a retarding force proportional to the electron's velocity.</li><li><strong>K3.</strong> Give approximate values for the average thermal speed and drift
+                velocity for a conduction electron.</li><li><strong>K4.</strong> Explain how energy from an electric field is changed into
+                heat in a resistor.</li><li><strong>K5.</strong> Give two examples of non-ohmic systems.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a wire or conducting cylinder of known length, diameter,
+                and resistivity (or conductivity), calculate its resistance (or
+                conductance).</li><li><strong>S2.</strong> Given two of the four quantities associated with ohmic systems
+                (current, voltage, resistance and power dissipation), calculate
+                the other two.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Ohm's Law</h2>
+
+<p><h3 id="pcap-1-a">1a. General Statement of Ohm's Law</h3>
+
+In most solid materials at constant temperatures, an applied electric field
+causes an electrical current to flow which is proportional to the magnitude
+of, and in the same direction as, the field.
+This relationship is known as Ohm's law.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Metals obey Ohm's law very accurately for electric fields which are much
+less than \(10^8\)&thinsp;volts/meter in magnitude.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m118gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The definition of current density.</figcaption></figure>
+
+<p><h3 id="pcap-1-b">1b. Current Density vs. Electric Field</h3>
+
+Ohm's law may be written in terms of “current density” and electric field
+strength.
+Current flow in a conducting material may be described in terms of current
+density \(\vec{j}\), which is the current
+flow per unit cross-sectional area perpendicular to the direction of charge
+flow (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+In terms of current density, the statement of Ohm's law is:
+<p>\[\vec{j} = \sigma \vec{E}\,,\]
+<p>where \(\vec{E}\) is the applied electric field and \(\sigma\) is a
+constant, characteristic of the material, called the “conductivity.”
+<p><a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> relates the current density at a point in the material to
+the electric field at that point.  
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m118gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A cylindrical conductor under a potential
+<p>difference.</figcaption></figure>
+
+<p><h3 id="pcap-1-c">1c. Current vs. Potential Difference</h3>
+
+Ohm's law may also be expressed in terms of current and potential difference.
+Consider a cylindrical conducting material of length \(\ell\) and
+cross-sectional area \(A\) (a “wire”) in which a steady current \(i\) is
+flowing due to a uniform electric field \(\vec{E}\) along the length of the
+conductor (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+The potential difference between the two ends of the conductor is
+\(V = E \ell\) and the magnitude of the current density is \(j = i/A\), so Ohm's
+law can be written
+<p>\[V = i\,R\,,\]
+<p>where \(R = \ell/(\sigma A)\) is a constant called the “resistance.”
+Whereas conductivity is a characteristic of a given material (like specific
+gravity is characteristic of a material), resistance is a property of a
+given object, determined not only by the material but also by the structure
+into which it is formed (analogous to the mass of an object).
+<p><h3 id="pcap-1-d">1d. Resistivity, Resistance, Conductivity, Conductance</h3>
+
+<p>The reciprocal of conductivity, \(\sigma\), is called “resistivity,” \(\rho\):
+<p>\[\rho=\frac{1}{\sigma}\,.\]
+<p>The reciprocal of resistance, \(R\), is called “conductance,” \(G\):
+<p>\[G=\frac{1}{R}\,.\]
+<p>The MKS unit of resistance is the volt/ampere which is given the name
+“ohm,” symbolized by \(\Omega\).
+The unit of conductance is the <span class="unit">&thinsp;ohm<sup>-1</sup></span> which is given the
+name “mho”
+(“ohm” spelled backward).
+<p><span class="tryit">Try it:</span>  Show that the units of resistivity are ohm-meters.  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p>Table I shows some resistivities of typical metals and insulators.
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table I. Some Resistivities</td></tr><tr><td></td><td>Resistivity</td></tr><tr><td>Material</td><td>at \(20^\circC\)</td></tr><tr><td></td><td>(ohm-cm)</td></tr><tr><td>Aluminum</td><td>\(2.8 \times 10^{-6}\)</td></tr><tr><td>Copper</td><td>\(1.7 \times 10^{-6}\)</td></tr><tr><td>Silver</td><td>\(1.6 \times 10^{-6}\)</td></tr><tr><td>Iron</td><td>\(10  \times 10^{-6}\)</td></tr><tr><td>Bismuth</td><td>\(120 \times 10^{-6}\)</td></tr><tr><td>Sulfur</td><td>\(1   \times 10^{17}\)</td></tr><tr><td>Maple</td><td>\(3   \times 10^{10}\)</td></tr><tr><td>Slate</td><td>\(1   \times 10^{8}\)</td></tr><tr><td>Plate Glass</td><td>\(2   \times 10^{13}\)</td></tr></tbody></table>
+</div>
+
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m118gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Current vs. voltage across a p-n
+junction.</figcaption></figure>
+
+<p><h3 id="pcap-1-e">1e. Non-Ohmic Systems</h3>
+
+Although many solid materials obey Ohm's law very accurately over a wide
+range of conditions, there are many examples of systems in which Ohm's Law
+is not valid.
+For example, when a current flows through an ionized gas the relation
+between voltage and current is highly non-linear, that is, the ratio \(V/i\)
+is not a constant but varies with the value of \(i\).
+The same is true for current flowing through the junction of a p-doped
+semiconductor and an n-doped semiconductor.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Figure&thinsp;3 shows the non-linear relation of current to voltage in a p-n
+junction.
+Another example is the non-linear relation of current to voltage in a radio
+vacuum tube.
+Still another example is the tungsten filament incandescent lamp.
+The current which flows through the tungsten filament of the lamp causes
+significant temperature changes in the material.
+Since the resistivity of the tungsten increases with temperature, an
+increase in current leads to an increase in the resistance of the filament.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Derivation of Ohm's Law</h2>
+
+<p><h3 id="pcap-2-a">2a. Definition of Drift Velocity</h3>
+
+The charge carrier drift velocity in a conducting material is proportional
+to the applied electric field strength.
+We can picture a conducting material as a “lattice” of atoms within which
+charge carrying particles (conduction electrons) move with a thermal
+distribution of velocities, every so often colliding with defects in the
+lattice.
+In the absence of an external electric field, the average thermal velocity
+of the charge carriers is zero since every direction of motion is equally
+likely.
+The average thermal speed (magnitude of the average thermal velocity) is not
+zero.
+For the conduction electrons in copper, the average thermal speed is about
+\(1.6 \times 10^6\)&thinsp;m/s.
+When an external electric field is applied, the electrons are accelerated by
+the field producing an average “drift velocity” in the direction opposite
+to the field.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The effect of random collisions between the charge carriers and defects in
+the lattice produces an effective “frictional drag” force which is
+proportional to the drift velocity.
+Thus the drift velocity approaches a limiting velocity at which the
+frictional drag force balances the force due to the electric field.
+An analogy useful in understanding why the collisions lead to a limiting
+drift velocity is the case of a marble rolling down a staircase.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The gravitational field accelerates the marble, but the kinetic energy
+gained by the marble is given up in collisions with the steps (imagine that
+there is zero rolling friction, but that the collisions are inelastic), so
+that the marble rolls down the stairs at approximately constant average
+speed.
+The time it takes to approach the limiting drift velocity is of the order of
+the mean time between collisions (about \(10^{-14}\)&thinsp;s in copper).
+The expression for the frictional drag force is
+<p>\[\vec{F}_\text{drag} = k \vec{v}\!_D\,,\]
+<p>where \(k\) is a constant, and the force due to the electric field is
+<p>\[\vec{F}_\text{field} = e \vec{E}\,,\]
+<p>where \(e\) is the charge of the carrier, so by equating the two we find that
+the limiting drift velocity is proportional to the electric field:
+<p>\[\vec{v}\!_D = \frac{e}{k} \vec{E}\,.\]
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m118gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A cylindrical element of conducting
+material.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Relating Drift Velocity to Current Density</h3>
+
+Current density \(\vec{j}\) is proportional to the charge
+carrier drift velocity \(\vec{v}\!_D\) and to the number of charge
+carriers per unit volume n:
+<p>\[\vec{j} = n\,e\,\vec{v}\!_D\,,\]
+<p>where \(e\) is the charge of the carrier.
+To derive this relation, consider a cylindrical element of conducting
+material of length \(\ell\) and cross-sectional area \(A\) (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>)
+containing n charge carriers per unit volume, moving with drift velocity
+\(\vec{v}\!_D\) to the right.
+The time it takes one charge to move a distance \(\ell\) is:
+<p>\[t=\frac{\ell}{v\!_D}\,.\]
+<p>Thus, in a time t, all the charge Q initially contained in the cylindrical
+element will have passed out the right end.
+The charge \(Q\) is the amount of charge per unit volume, \(ne\), times the
+volume of the cylindrical element, \(A \ell\).
+Therefore the current is
+<p>\[i = \frac{Q}{t} = \frac{neA\ell}{t} = n e v\!_D A\,,\]
+<p>and the current density is:
+<p>\[j=\frac{i}{A} = n e v\!_D\,.\]
+<p><span class="tryit">Try it:</span>  What is the drift velocity of the conduction electrons in a copper
+wire of 1&thinsp;mm diameter carrying a current of 1&thinsp;ampere?  There are
+\(8.5 \times 10^{22} \unit{\text{conduction electrons}/cm^{3}}\) in copper.
+Answer: \(9.3 \times 10^{-5}\,\text{m/s}\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><h3 id="pcap-2-c">2c. Ohm's Law</h3>
+
+Since current density \(j\) is proportional to the drift velocity \(v\!_D\) of
+<p>the charge carriers [<a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>] and the drift velocity is
+proportional to the applied electric field [<a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>], we have
+<p>derived one form of Ohm's law, \(j = \sigma E\), where \(\sigma = n e^2/k\).
+<p><h3 id="pcap-2-d">2d. Validity of Ohm's Law</h3>
+
+It is reasonable to assume that, when a charge carrier undergoes a collision
+with a lattice defect the velocity of the charge carrier is changed in a
+random manner.
+Thus any memory of the previous state of motion of the charge is lost.
+The average drift velocity of the carriers in the presence of the external
+electric field is then, simply, the velocity gained by the acceleration of
+the electric field in a time \(\tau\) equal to the average time between
+collisions.
+If m is the mass of the charge carriers, then
+<p>\[\vec{v}\!_D = \vec{a} \tau = \frac{q\tau}{m} \vec{E}\,.\]
+<p>Thus Ohm's law is valid as long as the mean time
+between collisions does not depend on \(E\).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Power Dissipation In Current Flow</h2>
+
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m118gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Power dissipation in an arbitrary system.</figcaption></figure>
+
+<p><h3 id="pcap-3-a">3a. The General Expression</h3>
+
+We wish to derive a general expression for the power dissipated when a
+current flows through a potential difference.
+Consider a “black box” (an arbitrary system) as shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> with a
+current \(i\) flowing through it.
+Suppose the left end of the box is at a potential \(V\) and the right end is
+at zero potential.
+In a time \({\Delta}t\), an amount of charge \({\Delta}Q = i {\Delta}t\) passes
+through the box.
+It goes in with potential energy \(V {\Delta}Q\) and comes out with potential
+energy zero.
+Since the kinetic energy has not changed,
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>the charge carriers have done work on something in the box.
+The power (rate at which work is done) is
+<p>\[P = \frac{V {\Delta}Q}{{\Delta}t} = V i\,.\]
+<p>This is a general result and is merely a statement of conservation of
+energy.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p><span class="tryit">Try it:</span>  Show that power dissipated per unit volume equals \(Ej\) where \(j\) is
+the magnitude of the current density and \(E\) is the magnitude of the
+electric field. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-3-b">3b. Where the Dissipated Power Goes</h3>
+
+What happens to the power dissipated depends on what is in the black box.
+If it contains a solid conducting material, the energy gets converted into
+heat energy.
+The work that the electric field does in accelerating the charge carriers is
+transferred to the atomic lattice when the charge carriers collide with the
+lattice defects.
+This increases the thermal energy of the lattice.
+This type of heating is called “joule heating.”
+If the box contains a “storage battery” the energy gets converted to
+chemical energy via electrochemical reactions.
+On the other hand, the box might contain a motor which does mechanical work.
+<p><h3 id="pcap-3-c">3c. If Ohm's Law Holds</h3>
+
+If the box contains a system for which Ohm's law is valid, then
+<p><a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> can be written in two alternate forms by using Ohm's law
+(<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> to eliminate either \(V\) or \(i\) from <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>:
+<p>\[P = V\,i\,,\]
+<p>but
+<p>\[V = i\,R\,,\]
+<p>so
+<p>\[P = i^2\,R\,,\]
+<p>or
+<p>\[P=\frac{V^2}{R}\,.\]
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the average speed of randomly moving
+charge carriers which move, with a thermal distribution of velocities,
+within a conductor.
+<p>the property of a system that specifies the ease
+with which charge carriers pass through the system.
+Technically, conductance is the mathematical reciprocal of resistance.
+It is not a characteristic property of a given material but of a given
+object since it depends on the amount and shape of the conducting material
+in the object.
+<p>the electrons of a material that are
+responsible for current flow; these are the charge carriers.
+In a conductor these electrons are not associated with a single atom, but
+with the entire conducting material.
+<p>a characteristic property of a given material
+that specifies the current flow in the material for a given applied electric
+field.
+Mathematically, conductivity is the reciprocal of resistivity.
+It depends on the material composing the conducting object but is
+independent of the size or shape of the object.
+<p>a material that allows charge carriers to pass
+through it.
+A material that is a poor conductor is usually called an “insulator.”
+<p>a vector quantity whose magnitude at a point
+in space is the current per unit area normal to the direction of current
+flow, and whose direction is the direction of current flow.
+<p>the average velocity, in the direction of the
+current, of the charge carriers in a conductor subjected to an electric
+field.
+<p>the process whereby heat is produced by the
+inelastic collision of conduction electrons with the lattice defects in a
+conductor.
+The energy transferred to the lattice causes the lattice atoms to vibrate
+more violently, raising the thermal energy of the lattice.
+<p>a three-dimensional array of atoms or ions
+held together by chemical bonds (e.g. ionic, covalent, or metallic bonds).
+<p>a unit of conductance, equal to an \(\,\text{ohm}^{-1}\) (an
+inverse ohm).  “mho” is “ohm” spelled backward.
+<p>a unit of resistance, defined by Ohm's law as a
+resistance that causes a one-ampere current to drop in potential by one volt;
+denoted by the symbol \(\Omega\).
+<p>the property of a system that specifies the
+difficulty with which the system passes charge carriers.
+The numerical value of the resistance \(R\) of an object is usually obtained
+by measuring the current \(I\) produced through the object by a known voltage
+\(V\) placed across the object: then \(R = V/I\).
+Resistance is not a characteristic property of the object since it depends
+on the object's size and shape.
+Resistance is the reciprocal of conductance.
+<p>a characteristic property of a material that
+specifies the material's current-carrying capabilities, irrespective
+of the size and shape of the material.
+Resistivity is the reciprocal of conductivity.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">After George Simon Ohm (1787-1854), a German physicist. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Transistors and diode rectifiers utilize p-n junctions. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">Since electrons have a negative charge, they are accelerated in the
+direction opposite to the field.
+However, the transport of negative charges in one direction is equivalent
+to the transport of positive charges in the opposite direction and, by
+convention, the direction of current flow is the direction in which the
+equivalent positive charge is transported, so that the direction of current
+flow is the same as the field direction. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See D.&thinsp;Halliday and R.&thinsp;Resnick,  Physics (Wiley and Sons,
+1966) chapter 31. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The charge carriers come out with the same distribution of
+velocities they had when they went in. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Particle Energy in an Electrostatic Field” (MISN-0-117). <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;3 and 4 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Assuming that there is one conduction electron per atom in
+copper, calculate the number of conduction electrons per unit volume for
+copper.
+The density of copper is \(8.94\unit{grams/cm^{3}}\) and its atomic mass is
+\(63.54\,\text{amu}\).
+Note: \(1\unit{amu\text{(atomic mass unit)}} = 1.657 \times 10^{-27}\,\text{kg}\).</li>
+<li><span class="item-label">2.</span> A rod and a disc pictured below are composed of the same
+material and are at the same temperature.
+If the end-to-end resistance of the rod is \(2.0\times10^{-3}\)&thinsp;ohm, what is
+the resistance between opposing round faces of the disc?  
+The rod is 2.0&thinsp;m long and 5.0&thinsp;mm in diameter.  
+The disc is 5.0&thinsp;cm long and 3.0&thinsp;cm in radius.
+<figure class="fig-centered"><img src="figures/m118gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">3.</span> A 10.0&thinsp;ohm resistor produces heat at a rate of
+\(2.5 \times 10^2\)&thinsp;watts.
+What current is flowing through it?
+What is the voltage across the resistor?
+What current would produce heat at half the present rate?</li>
+<li><span class="item-label">4.</span> At \((2.0 \times 10^1)\,^\circC\), copper has a resistivity of
+\(1.7 \times 10^{-6}\)&thinsp;ohm-cm.
+What is the resistance of a 1.0&nbsp;meter length of copper wire that has a
+diameter of 1.0&thinsp;mm?</li>
+<li><span class="item-label">5.</span> If a potential difference of 1.2&thinsp;volts exists between the ends
+of the wire in Problem&nbsp;4, what current is flowing in the wire?</li>
+<li><span class="item-label">6.</span> How much current flows through the filament of a 36&thinsp;watt
+automobile headlamp that is connected to a 12&thinsp;volt battery?</li>
+<li><span class="item-label">7.</span> A current of 0.10&nbsp;ampere flows through a conductor whose
+resistance is 47&thinsp;ohms.
+What is the power dissipated in the conductor?</li>
+<li><span class="item-label">8.</span> A potential difference of 15<span class="unit">&thinsp;volts</span> exists across the ends of a 
+conductor whose resistance is 22&thinsp;ohms.  
+What is the power dissipated in the conductor?</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(8.53 \times 10^{22} \unit{\text{conduction electrons}/cm^{3}}\) <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">2.</span> \(3.5 \times 10^{-7}\)&thinsp;ohm <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">3.</span> 5.0&thinsp;amperes; \(5.0\times10^1\,\text{volts}\); for half power dissipation,
+            3.5&thinsp;amperes</li>
+<li><span class="item-label">4.</span> 0.022&thinsp;ohm <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">5.</span> \(5.5\times10^1\,\text{amperes}\) <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">6.</span> 3.0&thinsp;amperes</li>
+<li><span class="item-label">7.</span> 0.47&thinsp;watt</li>
+<li><span class="item-label">8.</span> 10.2&thinsp;watts</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">resistance = length\(\times\)resistivity/area [see <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> of module text] so
+ MKS units of <em>resistivity</em> are:
+ 
+ \[\text{unit of resistivity } = \frac{\unit{meters^{2}} \times \,\text{ohms}}{\,\text{meters}} =
+        \,\text{ohm-meters}\]
+ 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m118gr07.svg" alt="" class="physnet-fig"></figure>
+</div></div>
+
+ If the potential difference across the ends of the conductor shown in the
+ drawing is \(V\), then \(P = Vi\).
+ But \(V=E\ell\) and \(i=jA\) so<br>
+
+ \(P = EjA\ell = Ej\times\) volume,<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> so: power/volume \(= Ej\)
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">mass of one copper atom = \(63.54(1.657\times10^{-24}\)&thinsp;grams)
+ and 1<span class="unit">&thinsp;cm<sup>3</sup></span> of copper = 8.94&thinsp;grams so there are
+ 
+ \[\frac{8.94\,\text{grams}}{63.54\times1.65\times10^{-24}\,\text{grams}}=8.53\times10^{22}\,\text{atoms}\]
+ 
+ in one<span class="unit">&thinsp;cm<sup>3</sup></span> of copper; so if there is one conduction electron per atom, then
+ there are \(8.5\times10^{22}\) conduction electrons per <span class="unit">&thinsp;cm<sup>3</sup></span>.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">\[
+ \frac{R_\text{disc}}{R_\text{rod}} = \frac{\ell_\text{disc}}{\ell_\text{rod}}
+ \cdot \frac{A_\text{rod}}{A_\text{disc}} = \frac{\ell_\text{disc}}{\ell_\text{rod}}
+ \cdot \left(\frac{r_\text{rod}}{r_\text{disc}}\right)^2\]
+ 
+ \[R_\text{disc} = \frac{5\times10^{-2}\,\text{m}}{2\,\text{m}}\ \cdot\ 
+        \left(\frac{\frac{5\times10^{-3}\,\text{m}}{2}}
+                    {3\times10^{-2}\,\text{m}}\right)^2\;\cdot\;2\times10^{-3}\,\text{ohms}\]
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\[R = \frac{\rho \ell}{A} =
+ \frac{(1.7\times10^{-6}\,\text{ohm}\times10^{-2}\,\text{m})\cdot (1\,\text{m})}
+ {\pi \left[\frac{1\times10^{-3}\,\text{m}}{2}\right]^2}\]
+
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\[I = \frac{V}{R} = \frac{(1.2\,V)\cdot
+ \pi\,\left[\frac{1\times10^{-3}\,\text{m}}{2}\right]^2}
+ {(1.7\times10^{-6}\,\text{ohm}\times10^{-2}\,\text{m})\cdot(1\,\text{m})}\]
+
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">The answer is the quotient of a numerator and a denominator.
+ The numerator is:
+ \[1\,\text{A} = 1 \,\text{C/s}\]
+ and the denominator is the product of these three expressions (with the
+ value of the electron charge taken from this volume's <em>Appendix</em>):
+  \[\begin{aligned}&(\pi)(0.5\,\text{mm})^2(10^{-3}\,\text{m/mm})^2 \\ &(8.5 \times 10^{22}\unit{electrons/cm^{3}})(10^2\,\text{cm/m})^3 \\ &(1.602 \times 10^{-19}\,\text{C/electron})\end{aligned}\]
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1&thinsp;-&thinsp;K5 in this module's <em>ID Sheet</em>.
+The exam may have one or more of these skills, or none.</li>
+<li><span class="item-label">2.</span> At 20°C, copper has a resistivity of
+\(1.7 \times 10^{-6}\)&thinsp;ohm&thinsp;cm.
+What is the resistance of a 1.0&nbsp;meter length of copper wire of 1.0&thinsp;mm
+diameter?</li>
+<li><span class="item-label">3.</span> A 10.0&thinsp;ohm resistor produces heat at a rate of
+\(2.5 \times 10^2\)&thinsp;watts.
+What current is flowing through it?
+What is the voltage across the resistor?<span class="tex-unknown" title="unknown macro">\</span>  
+What current would produce heat at half the present rate?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;4, this modules's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;3, this modules's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

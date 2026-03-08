@@ -1,0 +1,965 @@
+<header class="module-header">
+  <h1 class="module-title">Two-Dimensional Motion <span class="module-author">(H.T.Hudson and Ray G.Van Ausdal)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: displacement, velocity and acceleration vectors
+    <a href="../m7/" class="module-ref">MISN-0-7</a>.</li><li><strong>2.</strong> Differentiate an expression which includes unit vectors \(\hat{x}\)
+    and \(\hat{y}\).
+    <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>3.</strong> Find velocity, given the time-dependent position of an object
+    <a href="../m7/" class="module-ref">MISN-0-7</a>.</li><li><strong>4.</strong> Find acceleration, given the time-dependent velocity.
+    <a href="../m7/" class="module-ref">MISN-0-7</a>.</li><li><strong>5.</strong> Find position given initial conditions and either velocity
+    or acceleration in one dimension <a href="../m7/" class="module-ref">MISN-0-7</a>.</li><li><strong>6.</strong> Write the specific equations describing motion in one
+    dimension with constant acceleration <a href="../m7/" class="module-ref">MISN-0-7</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Write the vector equations relating position, velocity and
+    acceleration in component form.</li><li><strong>K2.</strong> Explain how the motion of component vectors can be used to
+    describe the motion of an object.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given (either graphically or analytically) one of the functions
+    \(\vec{r}(t)\), \(\vec{v}(t)\), or \(\vec{a}(t)\), plus initial conditions, find the
+    two other functions.</li><li><strong>S2.</strong> Given \(\vec{r}(t)\), derive the equation of the trajectory for an
+    object.</li><li><strong>S3.</strong> Given a special case of constant velocity or constant
+    acceleration for one component, write the appropriate equations
+    of motion by using pre-derived one dimensional relationships.</li><li><strong>S4.</strong> Determine the range, maximum height and equation of the trajectory
+    for an object in ballistic motion.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]1aWhy We Study Motion in Two Dimensions
+The real world is three-dimensional, so why do we bother with
+two-dimensional motion?
+First, two-dimensional motion is easier to describe, easier to deal with
+mathematically, and easier to sketch on a piece of flat paper.
+This makes two-dimensional motion a good place for introducing concepts that
+are peculiar to motion in more than one dimension.
+Second, many objects actually do exhibit motion in a plane, motion that
+needs only two dimensions for its complete description.
+Any motion under constant acceleration can always be described in terms of
+just two dimensions.
+Even if the acceleration is not constant, many objects still move in a plane
+(e.g., a tractor on a level field, a rider on a ferris wheel).
+<p><h3 id="pcap-1-b">1b. The Job at Hand</h3>
+
+Our basic kinematical problem is to give quantitative information about the
+time-dependent positions, velocities, and accelerations of objects.
+This information is to be specified either formally (“analytically”),
+in words, or graphically.
+<p><h3 id="pcap-1-c">1c. The Fundamental Relationship</h3>
+
+Here are the equations that summarize the fundamental relationships
+used in this module:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\text{position } = \vec{r}\]
+<p>\[\text{displacement } = \Delta \vec{r} = \vec{r}_2 - \vec{r}_1\]
+<p>\[\Index{velocity, average}\text{average velocity } =  \vec{v}_{av} = \Delta \vec{r}/\Delta t\]
+<p>\[\Index{velocity, instantaneous}\text{inst. vel. } = \vec{v} = d\vec{r}/dt\]
+<p>\[\Index{acceleration, average}\text{av. accel. } = \vec{a}_{av} = \Delta \vec{v}/\Delta t\]
+<p>\[\Index{acceleration, instantaneous}\text{inst. accel. } =  \vec{a}   = d\vec{v}/dt = d^2\vec{r}/dt^2\]
+<p><a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> can be inverted, giving:
+<p>\[\vec{r}(t) = \int_0^t \vec{v}(t')\,dt' + \vec{r}(0).\]
+<p><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> can be inverted, giving:
+<p>\[\vec{v}(t) = \int_0^t \vec{a}(t')\,dt' + \vec{v}(0).\]
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Analysis by Components</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aVector Equations Reduce to Component Equations
+Equationstoref18 are vector equations.
+Each equation could be rewritten as two \(x\) and \(y\) component equations,
+so that the two dimensional motion of the object could also be
+treated as two simultaneous one-dimensional problems.
+For instance, <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> is equivalent to the two one-dimensional
+equations \(v_{x,av} = \Delta x/\Delta t\) and \(v_{y,av} = \Delta y/\Delta t\).
+Equation (4) is equivalent to the two one-dimensional equations
+\(v_x = dx/dt\) and \(v_y = dy/dt\).
+<p><h3 id="pcap--">. </h3>
+[]2bComponent Descriptors Relate to Actual Motion
+The \(x\) and \(y\) position, in terms of components, displacement, velocity
+and acceleration vectors can be related more graphically to the
+actual motion of the object.
+The component description is more than a mere exercise in
+mathematical symbolism.
+<p><h3 id="pcap-2-c">2c. Motion of the \(x\)- and \(y\)-Component Vectors</h3>
+
+As a particle moves along a complicated path, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>,
+its position vector \(\vec{r}\) and the component vectors \(\vec{x}\) and
+\(\vec{y}\) also move.
+Envision in your mind how each component vector tip moves as the
+particle moves from \(A\) to \(B\).
+<p><h3 id="pcap-2-d">2d. Describing the Component Motion</h3>
+
+The one-dimensional motion of the tip of the \(\vec{x}\) vector can be
+described
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>by its position \(x\), velocity \(v_x\), and acceleration \(a_x\).
+Similarly, the motion of the \(\vec{y}\) vector can be described by \(y\), \(v_y\)
+and \(a_y\).
+You can thus use two one-dimensional motions to completely
+describe one two-dimensional motion.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m8gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A particle moving on a two dimensional path
+has \(x\) and \(y\) component vectors that each move in one dimension.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Dual Roles of Component Descriptors</h3>
+
+The quantities \(x\), \(y\), \(v_x\), \(v_y\), \(a_x\), and \(a_y\) can be used in two
+different ways.
+They can either describe the motion of the tips of the \(\vec{x}\) and
+\(\vec{y}\) vectors, or they can describe the components of the actual
+displacement, velocity and acceleration vectors of the moving object.
+Problem-solving techniques can take advantage of this dual meaning.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Problem-Solving Techniques</h2>
+
+<p><h3 id="pcap-3-a">3a. Methods of Specifying Information</h3>
+
+Typically, information about the motion of an object is specified
+in either analytical or graphical form.
+The position, velocity or acceleration, or some combination of
+their components, might be given.
+We can detail some differences between the handling of analytical
+vs. graphical data.
+<p><h3 id="pcap-3-b">3b. Analytical Method: General Approach</h3>
+
+<a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)–(8)</a> analytically relate the variables \(\vec{a}\), \(\vec{v}\), and
+\(\vec{r}\).
+If an analytical form for \(\vec{a}(t)\), \(\vec{v}(t)\) or \(\vec{r}(t)\) can be
+found, the derivatives or integrals can be performed so that \(\vec{a}\),
+\(\vec{v}\) and \(\vec{r}\) will all be known.
+The path or “trajectory” of the object can be found in the form
+of an equation for \(y(x)\) by eliminating \(t\) between the equations for \(x(t)\)
+and \(y(t)\).
+The trajectory could also be found by plotting \((x,y)\) points for appropriate
+time values and then drawing a smooth curve through those points.
+<p><h3 id="pcap-3-c">3c. Two Special Cases</h3>
+
+Often, an object moves in such a way that the \(x\)- and/or \(y\)-component vector
+tip moves with either constant velocity or constant acceleration.
+In these cases \(x\), \(v_x\), \(a_x\) (and/or \(y\), \(v_y\), \(a_y\)) are related by the
+previously derived equations for an object with one dimensional constant
+acceleration.
+The need for differentiation and integration is bypassed.
+<p><h3 id="pcap-3-d">3d. Graphical Method</h3>
+
+Sometimes the time dependence for the components of one of the quantities
+\(\vec{a}(t)\), \(\vec{v}(t)\) or \(\vec{r}(t)\) is given in graphical form.
+The interpretation of the derivative as the (physical) slope
+of a curve and integral as the (physical) area under a
+curve could then be used to find \(\vec{a}\), \(\vec{v}\) and \(\vec{r}\).
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Examples and Cautions</h2>
+
+<p><h3 id="pcap-4-a">4a. Sample Problem: Analytical Method</h3>
+
+A sample problem will illustrate the techniques of the
+analytical method.
+Suppose that you are given that the velocity of an object
+is a constant 2<span class="unit">&thinsp;m/s</span> in the x-direction, and that it increases
+linearly with \(t\) in the y-direction: \(v_y = (3\unit{m/s^{2}})\,t\).
+Then:
+<p>\[\vec{v}(t) = (2\,\text{m/s}) \hat{x} + (3\unit{m/s^{2}})\,t \hat{y}.\]
+<p>The acceleration is:
+<p>\[\vec{a} = \frac{d\vec{v}}{dt} = 0 \hat{x} + 3\unit{m/s^{2}}\,\hat{y}.\]
+<p>That is, the object has a constant acceleration in the
+\(y\)-direction.
+The position of the particle is:
+<p>\[\begin{aligned}\vec{r}(t) & = \int_0^t \vec{v}(t')\,dt' + \vec{r}(0) \\            & = \int_0^t (2\,\text{m/s}\,\hat{x} + 3\unit{m/s^{2}}\,t'\,\hat{y})\,dt' + \vec{r}(0) \\            & = (2\,\text{m/s})\,t\,\hat{x} + \frac{1}{2}(3\unit{m/s^{2}})t^2 \hat{y} + \vec{r}(0).\end{aligned}\]
+
+<p>If the problem further stated \(\vec{r}(0)\); for example, as “initially the
+object is at \(x = 4\,\text{m}\), \(y = 5\,\text{m}\),” we could write:
+<p>\[\vec{r}(t) = (2\,\text{m/s}\,t + 4\,\text{m})\hat{x} +
+\left(\frac{3}{2}\unit{m/s^{2}}\,t^2 + 5\,\text{m}\right)\,\hat{y}.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m8gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The relations \(v_x(t)\) and \(v_y(t)\) specified
+graphically.</figcaption></figure></div>
+
+<p>The path can now be found.
+The above vector equation gives the component equations:
+\(x(t) = (2\,\text{m/s})\,t + 4\,\text{m}\); \(y(t) = [(3/2)\unit{m/s^{2}}]\,t^2 + 5\,\text{m}\).
+Solving \(x(t)\) for \(t\) and substituting that into \(y(t)\) gives \(y(x)\):
+<p>\[y(x) = \frac{3}{2}\unit{m/s^{2}}\,
+\left(\frac{x - 4\,\text{m}}{2\,\text{m/s}}\right)^2 + 5\,\text{m},\]
+<p>which is the equation of a parabola: the object moves in a parabolic path.
+<p><h3 id="pcap--">. Note for those interested</h3>
+
+The integration could have been bypassed by noting that the \(x\)-component
+motion is at constant velocity and the \(y\)-component motion is at constant
+acceleration.
+Thus \(x(t)\) and \(y(t)\) fit the general form of the one-dimensional constant
+acceleration equation: \(x = x_0 + v_0t + a t^2/2\).
+For example, for the \(y\)-direction:
+\(a = 3\unit{m/s^{2}}\), \(v_0 = 0\), \(x_0 \equiv y_0 = 5\,\text{m}\),
+so: \(y = 5\,\text{m} + 0 + (3\unit{m/s^{2}})\,t^2/2\).
+<p><h3 id="pcap-4-b">4b. Sample Problem: Graphical Method</h3>
+
+The previous problem could have specified the velocity components
+graphically, as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Now \(a_x\) is the slope of the tangent line to the \(v_x\)(t) curve:
+in this case, <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, the slope is always zero.
+Similarly, \(a_y\) is the slope of the \(v_y\)(t) curve, which in this case is
+always 3<span class="unit">&thinsp;m/s<sup>2</sup></span>.
+<p>The \(x\) and \(y\) coordinates can be found using the area under the curve.
+For example, to calculate \(y\)(1<span class="unit">&thinsp;sec</span>), <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> gives:
+<p>\[y(1\,\text{s}) = \int_0^{1\,\text{s}} v_y(t')\,dt' + y(0).\]
+<p>The integral is given by the shaded area
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, so that:
+<p>\[y(1\,\text{s}) = \frac{3}{2}\,\text{m} + 5\,\text{m} = \frac{13}{2}\,\text{m},\]
+<p>which can be verified from the previous analytical solution for \(y(t)\).
+<p><h3 id="pcap-4-c">4c. The Artificial Nature of the Examples</h3>
+
+The real world does not usually present motion problems so neatly
+specified as the previous examples.
+These examples have presented information as given that in
+actuality must have been derived from other information.
+For example, knowledge of applied forces gives information about
+the acceleration.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Also, coordinate systems and initial times have been implicitly chosen.
+<p><h3 id="pcap-4-d">4d. Choice of Coordinates</h3>
+
+If the coordinate system is unspecified in a problem, you may
+choose to use any system you desire.
+The motion of the object will not depend on the coordinate system
+that you use to describe the motion.
+Be prepared to try different coordinate systems; the “best”
+choice will ease the mathematical manipulation in the problem.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Ballisitic Motion</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]5aFalling and Free Falling
+The acceleration of an object falling above the Earth
+depends upon its distance from the Earth's surface and upon
+air resistance.
+You are familiar with this motion, for example, when you
+observe a baseball in flight.
+If the speed of the object is sufficiently low, the effects of the air
+resistance are negligible.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>If the object's path does not vary significantly in altitude,
+the effects of gravity are constant.
+Under these special conditions, called
+ballistic motion, the
+object is “free falling” and will have a constant acceleration of
+\(g = 9.8\unit{m/s^{2}}\) vertically downward, and will therefore move
+in a plane.
+<p><h3 id="pcap-5-b">5b. Ballistic Motion Example</h3>
+
+A projectile is fired with initial velocity \(\vec{v}_0\)
+making an angle \(\theta\) with the horizontal (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+Ignore the height of the end of the barrel.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m8gr00.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A cannon fires a projectile at an angle
+\(\theta\) above the horizontal.</figcaption></figure></div>
+
+<p>We choose a coordinate system such that the horizontal coordinate
+is \(x\), the origin is at the cannon (so \(\vec{r}_0 \equiv \vec{r}_0 = 0\)), and
+the vertical coordinate \(y\) is positive upward (with result
+\(\vec{a} = - g \hat{y}\)).  We choose time zero to be when the cannon was fired.
+Then at time zero we have:
+<p>\[\vec{a}(0) = - g \hat{y}; \quad \vec{v}(0) = \vec{v}_0; \quad \vec{r}(0) = 0 \,.\]
+<p>We can get these quantities as a function of time by integrating the acceleration to
+get the velocity and by integrating the velocity to get the position (see <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>).
+The result for the velocity is:
+<p>\[\vec{v} = \vec{v}_0 + \int_0^t \vec{a(t'})\,dt' =
+                   \vec{v}_0 - \int_0^t g\,dt'\,\hat{y} =
+                   \vec{v}_0 - g t \hat{y}\,.\]
+<p>In the following three exercises, illustrate by using or changing <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p><span class="tryit">Try it:</span>  Suppose gravity is turned off.  Show that the object would follow a
+straight-line trajectory at constant speed and that its distance from the origin
+would increase linearly with time.
+<p><span class="tryit">Try it:</span>  suppose that gravity is increased until it is so large that its terms in
+<a href="#eqn-15" class="eqn-ref">Eqs.&nbsp;(15)</a> overwhelm the \(\vec{v}_0\) terms.  Show that under those circumstances
+the object would appear to simply fall to the ground.
+<p><span class="tryit">Try it:</span>  Describe a real projectile's path as being between the trajectories
+that would result from zero gravity and from very large gravity.
+<p><h3 id="pcap-5-c">5c. The Example in Cartesian Coordinates</h3>
+
+<a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> and <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> for ballistic motion can be written in terms
+of the projectile's non-accelerated \(x\)-components and constantly-accelerated
+\(y\)-components:
+<p>\[\begin{aligned}\vec{a}(t) & = - g \hat{y}\,, \\ \vec{v}(t) & = (v_0\,\cos\theta_0)\, \hat{x} + (- g t + v_0 \sin\theta_0)\,\hat{y}\,, \\ \vec{r}(t) & = v_0 t \cos\theta_0 \hat{x} + (- g t^2/2 + v_0 t \sin\theta_0)\,\hat{y}.\end{aligned}\]
+
+<p>Notice that each component can be integrated separately because the Cartesian unit vectors
+are independent of time (they stay fixed as time progresses).
+<p><h3 id="pcap-5-d">5d. Equation of the Path: the Trajectory</h3>
+
+The Cartesian trajectory equation, \(y(x)\), can be found by eliminating \(t\) in the two equations
+\(x(t)\) and \(y(t)\).
+From the above we get:
+<p>\[x(t) = v_0 t \cos\theta_0\,,\]
+<p>and
+<p>\[y(t) = - g t^2/2 + v_0 t \sin\theta_0\,.\]
+<p>Solving the first for \(t\) and substituting that into the second, gives
+<p>\[y = \left[- g / (2 v_0^2 \cos^2\theta_0)\right] x^2 + [\tan\theta_0]\,x\,.\]
+<p>This is the equation of a parabola, which is indeed the path of a
+projectile undergoing idealized ballistic motion
+(see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m8gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. An object in ballistic motion follows
+a parabolic trajectory.
+The acceleration and velocity are indicated at three different places.
+Noticer how the object “falls” as it moves from left to right.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]5eThe Range
+The trajectory equation, \(y(x)\), is useful in answering questions that relate
+to position coordinates only.
+Will the object clear a wall?
+How far will it go?
+How high will it go?
+For example, the range \(R\) of a ballistic missile is the distance travelled
+in \(x\) before the projectile strikes the ground.
+In <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, \(x\) is \(R\) when \(y(x) = 0\).
+Thus you can set \(y(R) = 0\) in the quadratic expression,
+<p>\[y(x) = \left[ - g / (2 v_0^2 \cos^2\theta)\right]\,x^2 + [\tan\theta]\,x\,,\]
+<p>and, using the identity \(\sin 2\theta = 2 \sin\theta \cos\theta\), find:
+<p>\[R = \frac{2 v_0^2 \sin\theta \cos\theta}{g} = \frac{v_0^2 \sin 2\theta}{g}.\]
+<p>▶  This equation gives \(R(v_0,\theta)\).
+Show that for <em>any</em> fixed \(v_0\) the maximum range occurs for
+\(\theta = 45^\circ\).
+<p><h3 id="pcap--">. </h3>
+[]5fMaximum Height of a Projectile
+The equation of the path can also be used to develop an
+equation relating the maximum height to the initial velocity
+of the projectile.
+At the point of maximum height, \(dy/dx = 0\).
+Differentiating the equation for the trajectory \(y(x)\)
+gives \(dy/dx = 0\) at \(x = (v_0^2/g)(\sin\theta \cos\theta)\).
+<p>
+▶  Show that substituting this into the equation for \(y\) gives
+the maximum height as \(y_\text{max} = (v_0^2 \sin^2\theta)/(2g)\).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+We wish to thank Kristen Schalm and Prof. James Linnemann for pointing out typos.  <p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See also “Kinematics in Three Dimensions” (MISN-0-37). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Kinematics in One Dimension” (MISN-0-7). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">This area must be calculated as the “physical” area, not the
+geometric area.
+See “The Counting Squares Technique for Numerical Integration”
+(MISN-0-250, Appendix A). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Particle Dynamics” (MISN-0-14). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">How low is “sufficiently low”?
+The answer depends upon how precisely you wish to describe the motion,
+and the relative magnitudes of the force of gravity and the force of the
+air. <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>▶  If you get really stuck on a problem, turn to the appropriate
+hint in this module's <em>Special Assistance Supplement</em> and then try to
+continue with the solution.
+For example, problem&nbsp;1a, below, has a hint in the box labeled [S-1] in
+the <em>Special Assistance Supplement</em>.
+If you still can't solve problem&nbsp;1a after using the hint, the [S-1] box
+contains a reference to another box containing a further hint.
+<p>▶  Problems&nbsp;11, 13-15 also occur in this module's <em>Model Exam</em>.
+<p>▶  Look out! Units and <em>variables</em> are set in
+different typefaces. <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a>
+<p><ol>
+<li><span class="item-label">1.</span> The position of a particle is given by the expression:
+\[\vec{r} = (2\unit{m/s^{2}}) t^2 \hat{x} + (3\,\text{m/s}) t \hat{y}\,.\]
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the shape of the path? <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">b.</span> What is the velocity at the point \(x = 2\,\text{m}\), \(y = 3\,\text{m}\)? <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+<li><span class="item-label">2.</span> Which of the following time-dependent positions are
+consistent with a constant but non-zero acceleration? <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \((3\unit{m/s^{3}}) t^3 \hat{x} + (1\unit{m/s^{2}}) t^2 \hat{y}\)</li>
+<li><span class="item-label">b.</span> \((2\,\text{m/s}) t \hat{x} + (1\,\text{m}) \hat{y}\)</li>
+<li><span class="item-label">c.</span> \((2\unit{m/s^{2}}) t^2 \hat{x} + (1\,\text{m}) \hat{y}\)</li>
+<li><span class="item-label">d.</span> \((5\unit{m/s^{2}}) t^2 \hat{y}\)</li>
+<li><span class="item-label">e.</span> \((4\,\text{m}) \hat{x} + (3\,\text{m}) \hat{y}\)
+</li>
+<li><span class="item-label">3.</span> Which of the above (a - e, Prob.&thinsp;2) correspond to constant but
+non-zero velocity? <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">4.</span> Which of the above (a - e, Prob.&thinsp;2) correspond to an object at
+rest? <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">5.</span> A particle has the following information given about its motion:
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">\m{x}-dir.:</span> A constant velocity of 5<span class="unit">&thinsp;m/s</span>, with initial condition
+\(x_0 = 0\)&thinsp;m.</li>
+<li><span class="item-label">\m{y}-dir.:</span> A constant acceleration of \(- 2\unit{m/s^{2}}\), with initial
+conditions \(y_0 = 10\,\text{m}\), \(v_{0y} = - 3\,\text{m/s}\).
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Recognizing that these motions fit the special cases of constant
+velocity and constant acceleration, write the equations \(x(t)\), \(v_x(t)\),
+\(a_x(t)\), \(y(t)\), \(v_y(t)\) and \(a_y(t)\). <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">b.</span> Write the vector equations for \(\vec{r}(t)\), \(\vec{v}(t)\) and
+\(\vec{a}(t)\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+</li>
+<li><span class="item-label">6.</span> A particle is at rest at \(t = 0\).
+After \(t = 0\), the acceleration of the particle is given by
+\(\vec{a} = (3\unit{m/s^{2}}) \hat{x} - (2\unit{m/s^{2}}) \hat{y}\).
+What is the shape of the trajectory? <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></li>
+<li><span class="item-label">7.</span> The \(x\) and \(y\) components of velocity of a particle
+are given below.
+<figure class="fig-centered"><img src="figures/m8gr05.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the average velocity over the time interval
+\(0 \leq t \leq 40\,\text{s}\)? <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a></li>
+<li><span class="item-label">b.</span> What is the acceleration at \(t = 20\,\text{s}\)? <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+<li><span class="item-label">c.</span> What is the average acceleration over the interval
+\(20\,\text{s} \leq t \leq 60\,\text{s}\)? <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+</li>
+<li><span class="item-label">8.</span> A parachutist jumps from an airplane at a height of 300<span class="unit">&thinsp;m</span>.
+The parachute immediately opens and she descends at a constant
+rate of 8<span class="unit">&thinsp;m/s</span>.
+As she descends, a steady wind of 3<span class="unit">&thinsp;m/s</span> is blowing toward the south.
+How far south of the point where she left the airplane will the parachutist
+strike the earth? <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a></li>
+<li><span class="item-label">9.</span> A particle starts from rest and moves with constant acceleration
+\(\vec{a} = A \hat{x} + B \hat{y}\), where \(A\) and \(B\) are constants.
+Show that the average velocity over the time interval 0 to \(t\)
+is half the instantaneous velocity at \(t\). <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a></li>
+<li><span class="item-label">10.</span> A boy stands on an inclined surface which makes an angle
+of 30° with the horizontal (see sketch).
+He throws a ball so that it leaves his hand horizontally, down near the
+surface of the incline, with a speed of 10<span class="unit">&thinsp;m/s</span>.
+At what distance down the incline (measured from the boy) will the ball
+strike the incline?
+(Assume he releases the ball from a point at the surface and assume that
+the only acceleration is that of gravity.)
+<p><figure class="fig-centered"><img src="figures/m8gr07.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">11.</span> The velocity of a particle is given by the expression:
+<p>\[\vec{v} = [2 (t/\,\text{s}) \hat{x} + \hat{y}]\,\text{m/s}\,.\]
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At \(t = 0\) the particle is at \(x = 0\), \(y = 0\).
+What is the position of the particle at a later time \(t\)?</li>
+<li><span class="item-label">b.</span> What is the average velocity over the interval \(t = 2\,\text{s}\) to
+\(t = 3\,\text{s}\)?
+</li>
+<li><span class="item-label">12.</span> A particle moves with position vector
+<p>\[\vec{r} = \left[\left(\frac{t}{\,\text{s}}\right) \hat{x} +
+                       \left(\frac{4}{3} \frac{t^3}{\unit{s^{3}}} -
+                             4\frac{t}{\,\text{s}}\right)
+                       \hat{y} \right]
+                 \,\text{m}\,.\]
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Plot the path on the graph below.
+Hint: First, fill in the table.<a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a>
+
+ <table class="physnet-table"><tbody><tr><td>[t]|r r r|
+   t(s)</td><td>x(m)</td><td>y(m)</td></tr><tr><td>\(-2.1\)</td><td>\(-2.1\)</td><td>\(-3.9\)</td></tr><tr><td>\(-2.0\)</td><td></td><td></td></tr><tr><td>\(-1.0\)</td><td></td><td></td></tr><tr><td>\( 0.0\)</td><td></td><td></td></tr><tr><td>\( 1.0\)</td><td></td><td></td></tr><tr><td>\( 2.0\)</td><td></td><td></td></tr><tr><td>\( 2.1\)</td><td></td><td></td></tr></tbody></table>
+
+ 
+<figure class="fig-centered"><img src="figures/m8gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> On the same curve, plot the velocity at \(t = 1\,\text{s}\).
+ The scale for plotting the velocity can be any you choose.
+ A convenient scale for velocity is 1 unit of velocity = 1/2&thinsp;unit of length.
+ <a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a></li>
+<li><span class="item-label">c.</span> On the same curve, plot the velocity at \(t = - 2\,\text{s}\). <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a></li>
+<li><span class="item-label">d.</span> On the same curve, plot the acceleration at \(t = - 1\,\text{s}\). <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a>
+ </li>
+<li><span class="item-label">13.</span> <span class="item-text">A block is projected up an inclined surface which
+makes an angle \(\theta\) with the horizontal.
+The initial speed is \(v_0\) and the inclined surface is frictionless.
+Use a coordinate system defined by \(x\) positive to the right
+in a horizontal direction, \(y\) positive up (as illustrated).</span><img src="figures/m8gr09.svg" alt="" class="fig-item">
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the initial velocity?</li>
+<li><span class="item-label">b.</span> The acceleration of the block is observed to be:
+<p>\[\vec{a} = - g \sin\theta\,\cos\theta\,\hat{x} - g \sin^2\theta\,\hat{y}.\]
+<p>Develop expressions for \(x(t)\) and \(y(t)\).
+Divide one by the other to check that they (properly) predict that y(x) is a
+straight-line function with slope \(\tan\theta\).
+</li>
+<li><span class="item-label">14.</span> A particle moves with acceleration:
+<p>\[\vec{a} = \left[- 6\,(t/\,\text{s})^2 \hat{x} + (t/\,\text{s}) \hat{y}\right]\unit{m/s^{2}}\,.\]
+<p>At \(t = 0\) the particle is at rest at the origin.
+What is the equation of the path (i.e., the trajectory)?</li>
+<li><span class="item-label">15.</span> A football is thrown by a quarterback at a speed of
+20<span class="unit">&thinsp;m/s</span> at an angle of 45° with the horizontal.
+A receiver is running such that he will pass under the
+ball downfield from the point where it was released.
+Assuming the quarterback and the receiver are the same
+height, and the receiver can jump or reach one meter higher
+than the point of release by the quarterback, what is the
+minimum distance from the quarterback the ball can be caught?
+<figure class="fig-centered"><img src="figures/m8gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p>
+<p>If you do not understand an answer, refer to the last comment (after
+the “Hints”) in the Special Assistance Supplement for that problem.
+<ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(x = (2\unit{m/s^{2}}) t^2;\; y = (3\,\text{m/s}) t\);</li>
+<li>\(t = y/(3\,\text{m/s})\);</li>
+<li>\(x = (2\unit{m/s^{2}}) \cdot [y/(3\,\text{m/s})]^2 =
+              \left[ 2/(9\,\text{m}) \right] y^2\),
+           which is a parabola.</li>
+<li><span class="item-label">b.</span> From \(x = (2\unit{m/s^{2}}) t^2\), \(y = (3\,\text{m/s}) t\), the
+particle will pass through the point \(x = 2\,\text{m}\), \(y = 3\,\text{m}\) at \(t = 1\,\text{s}\).
+From part (a), \(\vec{v}(1\,\text{s}) = (4 \hat{x} + 3 \hat{y})\,\text{m/s}\).
+</li>
+<li><span class="item-label">2.</span> In order to have a constant acceleration, \(d^2\vec{r}/dt^2 = \text{ constant}\).
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\frac{d\vec{r}}{dt} = \vec{v} =
+              [9\frac{t^2}{\unit{s^{2}}} \hat{x} +
+              2 \frac{t}{\,\text{s}} \hat{y}]\,\text{m/s}\)<br>
+
+<p>           \(\frac{d^2{\vec{r}}}{dt^2} = \frac{d\vec{v}}{dt} = \vec{a} =
+              [18\frac{t}{\,\text{s}} \hat{x} + 2 \hat{y}]\unit{m/s^{2}}\):
+           This is not constant in time.</li>
+<li><span class="item-label">b.</span> \(\vec{v} = 2 \hat{x}\,\text{m/s}\);
+           \(\vec{a} = 0\).
+           This is constant, but zero.</li>
+<li><span class="item-label">c.</span> \(\vec{v} = 4 t \hat{x}\unit{m/s^{2}}\);
+           \(\vec{a} = 4 \hat{x}\unit{m/s^{2}}\).
+           This is constant, and \(\neq\) zero.</li>
+<li><span class="item-label">d.</span> \(\vec{v} = 10 t \hat{y}\unit{m/s^{2}}\);
+           \(\vec{a} = 10 \hat{y}\unit{m/s^{2}}\).
+           This is constant and \(\neq\) zero.</li>
+<li><span class="item-label">e.</span> \(\vec{v} = 0\);
+           \(\vec{a} = 0\).
+           This is a zero acceleration and a zero velocity.
+</li>
+<li><span class="item-label">3.</span> Answer: b.</li>
+<li><span class="item-label">4.</span> Answer: e.</li>
+<li><span class="item-label">5.</span> a. \(a_x = 0\);
+              \(v_x = 5\,\text{m/s}\);
+              \(x = 5\,\text{m/s}\,t\);
+<ol>
+
+</ol>
+</li>
+<li>\(a_y = - 2\unit{m/s^{2}}\);
+         \(v_y = - 3\,\text{m/s} - (2\unit{m/s^{2}}) t\);</li>
+<li>\(y = 10\,\text{m} - (3\,\text{m/s}) t - (2\unit{m/s^{2}}) t^2/2\)</li>
+<li><span class="item-label">b.</span> \(\vec{r}(t) = \hat{x} x(t) + \hat{y} y(t)\)
+           with \(x(t)\) and \(y(t)\) given in part a.
+           \(\vec{v}(t) = \hat{x} v_x(t) + \hat{y} v_y(t)\), etc.
+</li>
+<li><span class="item-label">6.</span> Given: \(\vec{v}_0 = 0\).
+           Choose the origin so \(\vec{r}_0 = 0\).
+           Then:<br>
+
+<span class="item-text">\(\vec{v} = (3 t \hat{x} - 2 t \hat{y})\unit{m/s^{2}}\);<br>
+
+            \(\vec{r} = \left[ (3/2) t^2 \hat{x} - t^2 \hat{y} \right] \unit{m/s^{2}}\).<br>
+
+From this,
+<p><span class="tex-unknown" title="unknown macro">\eqnline</span>x = (3/2) t^2<span class="unit">&thinsp;m/s<sup>2</sup></span>;
+<span class="tex-unknown" title="unknown macro">\eqnline</span>y = - t^2<span class="unit">&thinsp;m/s<sup>2</sup></span>;
+<span class="tex-unknown" title="unknown macro">\eqnline</span>x = - (3/2) y.
+Straight line slope \( = - 2/3\).</span><img src="figures/m8gr11.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">7.</span> a. \(\vec{v}_{av} = (\Delta x/\Delta t) \hat{x} +
+(\Delta y/\Delta t) \hat{y}\).
+<ol>
+
+</ol>
+</li>
+<li>The quantities \(\Delta x\) and \(\Delta y\) are the respective areas under the
+\(v(t)\) curves for each component.
+The area is just the area of a triangle.
+
+<span class="item-text">
+ 
+ <table class="physnet-table"><tbody><tr><td>\(\Delta x\):</td><td></td><td></td></tr><tr><td>Area</td><td>=</td><td>\(\Delta x\)</td></tr><tr><td></td><td>=</td><td>(40<span class="unit">&thinsp;s</span>)(20<span class="unit">&thinsp;m/s</span>)/2</td></tr><tr><td></td><td>=</td><td>400<span class="unit">&thinsp;m</span>.</td></tr></tbody></table>
+
+ 
+<p> <table class="physnet-table"><tbody><tr><td>\(\Delta y\):</td><td></td><td></td></tr><tr><td>Area 1</td><td>=</td><td>displacement</td></tr><tr><td></td><td></td><td>(0 to 20<span class="unit">&thinsp;s</span>)</td></tr><tr><td></td><td>=</td><td>(20<span class="unit">&thinsp;s</span>)(20<span class="unit">&thinsp;m/s</span>)/2</td></tr><tr><td></td><td>=</td><td>200<span class="unit">&thinsp;m</span>.</td></tr><tr><td>Area 2</td><td>=</td><td>displacement</td></tr><tr><td></td><td></td><td>(20<span class="unit">&thinsp;s</span> to 40<span class="unit">&thinsp;s</span>)</td></tr><tr><td></td><td>=</td><td>(20<span class="unit">&thinsp;s</span>)(\(- 20\,\text{m/s}\))/2</td></tr><tr><td></td><td>=</td><td>\(- 200\,\text{m}\).</td></tr></tbody></table>
+
+</span><img src="figures/m8gr12.svg" alt="" class="fig-item">
+<p>Total Area = Area 1 + Area 2 = 0.
+<p>\(\vec{v}_{av} = (400\,\text{m}/40\,\text{s}) \hat{x} +
+(0\,\text{m}/40\,\text{s}) \hat{y} = 10 \hat{x}\,\text{m/s}\).</li>
+<li><span class="item-label">b.</span> \(\vec{a}(20\,\text{s}) = (dv_x/dt) \hat{x} + (dv_y/dt) \hat{y}\).
+<br>
+
+Using the fact that the derivative of a straight line is the slope
+of the line,
+\(\vec{a}(20\,\text{s}) = \left[- (1/2) \hat{x} - \hat{y}\right]\unit{m/s^{2}}\)</li>
+<li><span class="item-label">c.</span> \(\vec{a}_{av} = \Delta v/\Delta t = \left[\vec{v}(60\,\text{s}) -
+\vec{v}(20\,\text{s})\right]/\,\left[60\,\text{s} - 20\,\text{s}\right]\)<br>
+
+\(\vec{v}\) at \(t = 60unit{s}\) is (from the graph) \((10 \hat{x} - 20 \hat{y})\,\text{m/s}\).
+<br>
+
+\(\vec{v}\) at \(t = 20\,\text{s}\) is \((10 \hat{x} + 0 \hat{y})\,\text{m/s}\).<br>
+
+\(\vec{a}_{av} = - (1/2) \hat{y}\unit{m/s^{2}}\).
+</li>
+<li><span class="item-label">8.</span> Let \(y\) be positive down, \(x\) be positive south.<br>
+
+<table class="physnet-table"><tbody><tr><td>\(a_x = 0\)</td><td>\(a_y = 0\)</td></tr><tr><td>\(v_x = 3\,\text{m/s}\)</td><td>\(v_y = 8\,\text{m/s}\)</td></tr><tr><td>\(x = 3\,\text{m/s} t\)</td><td>\(y = 8\,\text{m/s} t\)</td></tr></tbody></table>
+
+<p>The time of descent is given by putting \(y = 300\,\text{m}\), and solving
+for \(t\): \(t = 37.5\,\text{s}\).
+The displacement is obtained by putting \(t = 37.5\,\text{s}\) into
+the equation for \(x\): \(x = 112.5\,\text{m\,south}\).</li>
+<li><span class="item-label">9.</span> \(\vec{v}(t) = \int_0^t \vec{a}(t')\,dt' + \vec{v}_0\)
+<p>\(\phantom{\vec{v}(t)} = \hat{x} \int_0^t A\,dt' + \hat{y} \int_0^t B\,dt' + 0\)
+<p>\(\phantom{\vec{v}(t)} = A t \hat{x} + B t \hat{y} = (A \hat{x} + B \hat{y}) t\)
+<p>\(\vec{v}_{av} = \frac{\int_0^t \vec{v}(t')\,dt'}{t - 0}\)
+<p>\(\phantom{\vec{v}} = \frac{\hat{x}}{t}\left(\frac{1}{2} A t^2 \right) +
+\frac{\hat{y}}{t} \left( \frac{1}{2} B t^2 \right)\)
+<p>\(\phantom{\vec{v}} = \frac{1}{2}(A \hat{x} + B \hat{y}) t =
+\frac{1}{2} \vec{v}(t)\)
+<p>This is a very special result that holds true only for constant acceleration
+from rest.
+Any other set of conditions must be treated by the above method to find any
+special relation between \(\vec{v}_{av}\) and \(\vec{v}(t)\).</li>
+<li><span class="item-label">10.</span> Choose a coordinate system with axes parallel and perpendicular to
+the inclined surface.
+Choose this coordinate system because then it is easy to
+state the mathematical condition corresponding to the ball hitting the
+incline: it is when (again) \(y = 0\).
+In such a system the acceleration of the ball, the acceleration of gravity,
+is: \(\vec{a} = \vec{g} = - g \sin30^\circ \hat{x} - g \cos30^\circ \hat{y}\).
+<a href="#help-41" class="help-link"><span title="Special Assistance">[help&nbsp;41]</span></a><br>
+
+Using the equations for constant acceleration (the origin is at the boy):
+\[\begin{aligned}a_x & = & - g \sin30^\circ \\
+v_x & = & - g \sin30^\circ t - v_0 \cos30^\circ \\
+x   & = & - (g/2) \sin30^\circ t^2 - v_0 \cos30^\circ t \\
+a_y & = & - g \cos30^\circ \\
+v_y & = & - g \cos30^\circ t + v_0 \sin30^\circ \\
+y   & = & - (g/2) \cos30^\circ t^2 + v_0 \sin30^\circ t\end{aligned}\]
+
+Putting \(y = 0\) and solving for \(t\) gives two solutions:
+either \(t = 0\) or \(t = 1.18\,\text{s}\).
+There are two times when the ball is at \(y = 0\): when it is released and when
+it strikes the surface.
+The time in question is \(t = 1.18\,\text{s}\).
+At this time, \(x = - 13.62\,\text{m}\).</li>
+<li><span class="item-label">11.</span> a. \(\vec{r}(t) = [(t/\,\text{s})^2 \hat{x} +
+(t/\,\text{s}) \hat{y}]\,\text{m}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(\vec{v}_{av} = (5 \hat{x} + \hat{y})\,\text{m/s}\)                           &thinsp;&thinsp;
+</li>
+<li><span class="item-label">12.</span> a. \(x = t\,\text{m/s}\) 
+<ol>
+
+</ol>
+</li>
+<li>\(y = \left[\left(\frac{4}{3}\right) \frac{t^3}{\unit{s^{2}}} - 4 t\right]\,\text{m/s}\) .</li>
+<li>Completing the table:
+
+<table class="physnet-table"><tbody><tr><td>[t]|r r r|
+  t(s)</td><td>x(m)</td><td>y(m)</td></tr><tr><td>\(-2.1\)</td><td>\(-2.1\)</td><td>\(-3.9\)</td></tr><tr><td>\(-2.0\)</td><td>\(-2.0\)</td><td>\(-2.7\)</td></tr><tr><td>\(-1.0\)</td><td>\(-1.0\)</td><td>\( 2.7\)</td></tr><tr><td>\( 0.0\)</td><td>\( 0.0\)</td><td>\( 0.0\)</td></tr><tr><td>\( 1.0\)</td><td>\( 1.0\)</td><td>\(-2.7\)</td></tr><tr><td>\( 2.0\)</td><td>\( 2.0\)</td><td>\( 2.7\)</td></tr><tr><td>\( 2.1\)</td><td>\( 2.1\)</td><td>\( 3.9\)</td></tr></tbody></table>
+
+</li>
+<li>See the graph in part (d).</li>
+<li><span class="item-label">b.</span> \(\vec{v} =
+\left[\hat{x} + \left(4 \frac{t^2}{\unit{s^{2}}} - 4\right) \hat{y}\right]\,\text{m/s}\).
+\(\vec{v}(1\,\text{s}) = \hat{x}\,\text{m/s}\).
+At \(t = 1\)&thinsp;s, the particle is at \(x = 1\,\text{m}\), \(y = - 2.7\,\text{m}\).
+The velocity at this time is indicated on the graph.
+The point \(x = 1\,\text{m}\), \(y = - 2.7\,\text{m}\) is the turn around point and the slope
+\(dy/dx = 0\).
+The velocity is tangent to the curve.</li>
+<li><span class="item-label">c.</span> \(\vec{v}(- 2\,\text{s}) = ( \hat{x} + 12 \hat{y} )\,\text{m/s}\).
+The particle is at \(x = - 2\,\text{m}\), \(y = -2.7\,\text{m}\) and the velocity is as
+indicated.
+The velocity is tangent to the curve.</li>
+<li><span class="item-label">d.</span> \(\vec{a} = 8 t \hat{y}\unit{m/s^{3}}\).
+At \(t = - 1\,\text{s}\), \(\vec{a} = - 8 \hat{y}\unit{m/s^{2}}\),
+\(\vec{v} = \hat{x}\,\text{m/s}\) and \(\vec{r} = (- \hat{x} + 2.7 \hat{y})\,\text{m}\).
+The velocity is horizontal at this point, and the acceleration is vertical.
+Have you noted that \(v_x\) = constant in this problem?
+See sketch below.
+<figure class="fig-centered"><img src="figures/m8gr14.svg" alt="" class="physnet-fig"></figure>
+
+<p></li>
+<li><span class="item-label">13.</span> a. \(\vec{v}_0 = v_0 \cos\theta \hat{x} + v_0 \sin\theta \hat{y}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(v = - g t \sin\theta \cos\theta \hat{x} -
+g t \sin^2\theta \hat{y} + v_0 \cos\theta \hat{x} + v_0 \sin\theta \hat{y}\)
+<p>With the origin chosen so that \(\vec{r}_0 = 0\):
+<p>\(x = - \frac{1}{2} g t^2 \sin\theta\,\cos\theta + v_0 t \cos\theta\),
+<p>\(y = - \frac{1}{2} g t^2 \sin^2\theta + v_0 t \sin\theta\),
+<p>\(x/\cos\theta = -\frac{1}{2} g t^2 \sin\theta + v_0 t\), and
+<p>\(y/\sin\theta = -\frac{1}{2} g t^2 \sin\theta + v_0 t\).
+<p>Therefore, \(\frac{x}{\cos\theta} =
+\frac{y}{\sin\theta}\), \(y = x \tan\theta\), a straight line.
+</li>
+<li><span class="item-label">14.</span> \(\vec{r}_0 = 0\);
+            \(\vec{v}_0 = 0\);
+            \(v = [-2 (t/\,\text{s})^3 \hat{x} + \frac{(t/\,\text{s})^2}{2} \hat{y}]\,\text{m/s}\);
+<p>\(x = -\frac{(t/\,\text{s})^4}{2}\,\text{m}\);
+<p>\(y = \frac{(t/\,\text{s})^3}{6}\,\text{m}\);
+<p>\(x = -\frac{(6 y/\,\text{m})^{4/3}}{2}\,\text{m}\)
+<p>or:  \((x/\,\text{m})^3 = - 162 (y/\,\text{m})^4\)</li>
+<li><span class="item-label">15.</span> Choose the origin at the point of release, choose \(\hat{y}\) upward.
+<p>\(a_x = 0\); \(v_x = v_{0,x} = 20\,(\,\text{m/s}) \cos45^\circ\);
+<p>\(x = 20 (\cos45^\circ)\,\text{m} (t/\,\text{s})\); \(a_y = - g\); \(v_y = v_{0,y} - g t\)
+<p>\(\phantom{x} = [20 \sin45^\circ - 9.8 (t/\,\text{s})] \,\text{m/s}\);
+<p>\(y = \left[- 4.9 (t/\,\text{s})^2 + 20 \sin45^\circ (t/\,\text{s})\right]\,\text{m}\).
+<p>The range for the ball to be caught is \(y \leq 1\,\text{m}\).
+<p>Putting \(y = 1\,\text{m}\) into the equation gives these two solutions:
+\(t = 2.81\,\text{s}\) and \(t = 0.072\,\text{s}\). <a href="#help-42" class="help-link"><span title="Special Assistance">[help&nbsp;42]</span></a>
+<p>At \(t = 2.81\,\text{s}\), \(x = 39.7\,\text{m}\), but at \(t = 0.072\,\text{s}\), \(x = 1.02\,\text{m}\).
+Picture each of these in your mind's eye!</li>
+</ol>
+
+<p></section>
+
+<p>
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Find \(x(t)\), \(y(t)\) for the given \(\vec{r}(t)\). <a href="#help-19" class="help-link"><span title="Special Assistance">[help&nbsp;19]</span></a></div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Find the time when \(x = 2\,\text{m}\).
+This is the same time as when \(y = 3\,\text{m}\).</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(\vec{a} = d^2\vec{r}/dt^2\). <a href="#help-20" class="help-link"><span title="Special Assistance">[help&nbsp;20]</span></a></div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">\(\vec{v} = d\vec{r}/dt\).</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">The object is at rest if the coordinates describing
+its position do not change in time. <a href="#help-21" class="help-link"><span title="Special Assistance">[help&nbsp;21]</span></a></div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Partial information about each component is given.
+Solve for the motion of each component vector separately. <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a></div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Using vector rotation, add the components of part (a).</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">The trajectory is determined by the curve of \(y(x)\) or
+(equivalently) \(x(y)\). <a href="#help-23" class="help-link"><span title="Special Assistance">[help&nbsp;23]</span></a></div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">Average velocity is defined as:
+\(\int_{t_1}^{t_2} \vec{v}(t')\,dt'/(t_2 - t_1) = \Delta \vec{r}/\Delta t\). <a href="#help-24" class="help-link"><span title="Special Assistance">[help&nbsp;24]</span></a></div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">See problem&nbsp;1(b). <a href="#help-25" class="help-link"><span title="Special Assistance">[help&nbsp;25]</span></a></div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">See problem&nbsp;1(b). <a href="#help-26" class="help-link"><span title="Special Assistance">[help&nbsp;26]</span></a></div></div>
+
+<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">\(a_x = 0\) and \(a_y = 0\). <a href="#help-27" class="help-link"><span title="Special Assistance">[help&nbsp;27]</span></a></div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">This is a constant acceleration with \(x\)- and
+\(y\)-components. <a href="#help-28" class="help-link"><span title="Special Assistance">[help&nbsp;28]</span></a></div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">For example, in \((t/\,\text{s})\) the “\(t\)” is the
+variable “time” and the “s” is the unit “seconds.”
+For example: if \(t = 3\,\text{s}\), then \((t/\,\text{s}) = (3\,\text{s})/(\,\text{s}) = 3\).</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">The path has zero slope at \(t = \pm 1\,\text{s}\).</div></div>
+
+<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">\(\vec{v} =
+\left[\hat{x} + \left(4 \frac{t^2}{\unit{s^{2}}} -
+4\right) \hat{y} \right]\,\text{m/s}\). <a href="#help-29" class="help-link"><span title="Special Assistance">[help&nbsp;29]</span></a></div></div>
+
+<p><div id="help-17" class="help-item"><span class="help-num">17.</span><div class="help-body">See method of part (b).</div></div>
+
+<p><div id="help-18" class="help-item"><span class="help-num">18.</span><div class="help-body">\(\vec{a} = 8 t \hat{y}\unit{m/s^{3}}\).</div></div>
+
+<p><div id="help-19" class="help-item"><span class="help-num">19.</span><div class="help-body">Solve for \(t(y)\) and substitute into \(x(t)\).</div></div>
+
+<p><div id="help-20" class="help-item"><span class="help-num">20.</span><div class="help-body">\(\vec{a} = d\vec{v}/dt = (d/dt)(d\vec{r}/dt)\).
+If these give trouble, review how to differentiate a vector.</div></div>
+
+<p><div id="help-21" class="help-item"><span class="help-num">21.</span><div class="help-body">To meet the above requirement, \(\vec{v} = 0\) and
+\(\vec{a} = 0\) for all times.</div></div>
+
+<p><div id="help-22" class="help-item"><span class="help-num">22.</span><div class="help-body">The motion of each vector is one dimensional. <a href="#help-30" class="help-link"><span title="Special Assistance">[help&nbsp;30]</span></a></div></div>
+
+<p><div id="help-23" class="help-item"><span class="help-num">23.</span><div class="help-body">\(x\) and \(y\) are components of \(\vec{r}\). <a href="#help-31" class="help-link"><span title="Special Assistance">[help&nbsp;31]</span></a></div></div>
+
+<p><div id="help-24" class="help-item"><span class="help-num">24.</span><div class="help-body">\(\int_{t_1}^{t_2} v_x\,dt' =\) area under the \(v_x(t)\) vs. \(t\)
+curve from \(t_1\) to \(t_2\). <a href="#help-32" class="help-link"><span title="Special Assistance">[help&nbsp;32]</span></a></div></div>
+
+<p><div id="help-25" class="help-item"><span class="help-num">25.</span><div class="help-body">\(\vec{a} = d\vec{v}/dt\). <a href="#help-33" class="help-link"><span title="Special Assistance">[help&nbsp;33]</span></a></div></div>
+
+<p><div id="help-26" class="help-item"><span class="help-num">26.</span><div class="help-body">\(\vec{a}_{av} = \left[\vec{v}(60\,s) -
+\vec{v}(20\,\text{s})\right]/(60\,\text{s} - 20\,\text{s})\),<br>
+
+\(\vec{a}_{av} \neq \left[\vec{a}(60\,\text{s}) + \vec{a}(20\,\text{s})\right]/2\).
+<a href="#help-34" class="help-link"><span title="Special Assistance">[help&nbsp;34]</span></a></div></div>
+
+<p><div id="help-27" class="help-item"><span class="help-num">27.</span><div class="help-body">Both \(v_x\) and \(v_y\) are constant. <a href="#help-35" class="help-link"><span title="Special Assistance">[help&nbsp;35]</span></a></div></div>
+
+<p><div id="help-28" class="help-item"><span class="help-num">28.</span><div class="help-body">\(v_x = A t\). <a href="#help-36" class="help-link"><span title="Special Assistance">[help&nbsp;36]</span></a></div></div>
+
+<p><div id="help-29" class="help-item"><span class="help-num">29.</span><div class="help-body">\(\vec{v}(1\,\text{s}) = \hat{x}\,\text{m/s}\).</div></div>
+
+<p><div id="help-30" class="help-item"><span class="help-num">30.</span><div class="help-body">Some equations for motion in one dimension with constant
+acceleration are:  \(x = x_0 + v_0 t + a t^2/2\), \(v = v_0 + a t\),
+\(v^2 = v_0^2 + 2 a (x - x_0)\).</div></div>
+
+<p><div id="help-31" class="help-item"><span class="help-num">31.</span><div class="help-body">\(\vec{r}(t) =
+\int_0^t\,dt'\,\int_0^{t'} \vec{a}(t'')\,dt'' + \vec{r}_0\). <a href="#help-37" class="help-link"><span title="Special Assistance">[help&nbsp;37]</span></a></div></div>
+
+<p><div id="help-32" class="help-item"><span class="help-num">32.</span><div class="help-body">The area of a triangle is \((1/2)b h\). <a href="#help-38" class="help-link"><span title="Special Assistance">[help&nbsp;38]</span></a></div></div>
+
+<p><div id="help-33" class="help-item"><span class="help-num">33.</span><div class="help-body">At \(t = 20\,\text{s}\), \(dv_x/dt = - (20/40)\unit{m/s^{2}} = - (1/2)\unit{m/s^{2}}\).
+This problem requires a derivative to be taken from a curve, which is the
+slope of the line at the time given.</div></div>
+
+<p><div id="help-34" class="help-item"><span class="help-num">34.</span><div class="help-body">\(\vec{v}(60\,\text{s}) =
+(10 \hat{x} - 20 \hat{y})\,\text{m/s}\).
+In this problem, \(\vec{v}(t)\) must be found from the graphical representations
+of the components.
+If you had trouble with parts&nbsp;(b) and (c), review problem&nbsp;1(b).</div></div>
+
+<p><div id="help-35" class="help-item"><span class="help-num">35.</span><div class="help-body">The parachutist will reach the ground in 37.5<span class="unit">&thinsp;s</span>.</div></div>
+
+<p><div id="help-36" class="help-item"><span class="help-num">36.</span><div class="help-body">\(v_{x,av} = \frac{1}{t} \int_0^t A\,t'\,dt'\).</div></div>
+
+<p><div id="help-37" class="help-item"><span class="help-num">37.</span><div class="help-body">For the particle to be at rest at \(t = 0\), \(\vec{v} = 0\).
+<a href="#help-39" class="help-link"><span title="Special Assistance">[help&nbsp;39]</span></a></div></div>
+
+<p><div id="help-38" class="help-item"><span class="help-num">38.</span><div class="help-body">If \(v_y < 0\), area has a negative sign, indicating
+a displacement in the negative direction.</div></div>
+
+<p><div id="help-39" class="help-item"><span class="help-num">39.</span><div class="help-body">For simplicity, put \(\vec{r}_0 = 0\). <a href="#help-40" class="help-link"><span title="Special Assistance">[help&nbsp;40]</span></a></div></div>
+
+<p><div id="help-40" class="help-item"><span class="help-num">40.</span><div class="help-body">\(\vec{v} = (3\unit{m/s^{2}}) t \hat{x} -
+(2\unit{m/s^{2}}) t \hat{y}\) and \(\vec{r}(t) = \int_0^t v(t')\,dt'\).
+If this problem gives trouble, work on how to make transformations of the type
+\(x(t) \leftrightarrow t(x)\).</div></div>
+
+<p><div id="help-41" class="help-item"><span class="help-num">41.</span><div class="help-body">Draw a graph with a single vector extending out from the
+origin at an angle of 240° CCW from the positive \(x\)-axis.
+Label this vector \(\vec{g}\).
+Then:
+\(\vec{g} = g \cos240^\circ \,\hat{x} + g \sin240^\circ \,\hat{y}\).
+Alternatively, simply look at the diagram and write:
+\(\vec{g} = -g \sin30^\circ \,\hat{x} - g \cos30^\circ \,\hat{y}\).
+</div></div>
+
+<p><div id="help-42" class="help-item"><span class="help-num">42.</span><div class="help-body">We let \(b \equiv t/\,\text{s}\) so the \(y\)-equation
+ above becomes:
+ 
+ \[4.9 b^2 - 14.4 b + 1.0 = 0\,.\]
+ 
+ Then solving this quadratic equation (see any high school or college
+ algebra book):
+ 
+ \[b = \frac{14.4 \pm \sqrt{(-14.4)^2 -4(4.9)(1.0)}}
+                  {(2)(4.9)}\,.\]
+ 
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 on this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> The velocity of a particle is given by the expression:
+<p>\[\vec{v} = [2 (t/\,\text{s}) \hat{x} + \hat{y}]\,\text{m/s}.\]
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At \(t = 0\) the particle is at \(x = 0\), \(y = 0\).
+What is the position of the particle at a later time \(t\)?</li>
+<li><span class="item-label">b.</span> What is the average velocity over the interval \(t = 2\,\text{s}\) to
+\(t = 3\,\text{s}\)?
+</li>
+<li><span class="item-label">3.</span> <span class="item-text">A block is projected up an inclined surface which
+makes an angle \(\theta\) with the horizontal.
+The initial speed is \(v_0\) and the inclined surface is frictionless.
+Use a coordinate system defined by \(x\) positive to the right
+in a horizontal direction, \(y\) positive up (as illustrated).</span><img src="figures/m8gr09.svg" alt="" class="fig-item">
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the initial velocity?</li>
+<li><span class="item-label">b.</span> The acceleration of the block is observed to be:
+\[\vec{a} = - (g \sin\theta\,\cos\theta)\,\hat{x} - (g \sin^2\theta)\,\hat{y}.\]
+Develop expressions for \(x(t)\) and \(y(t)\).
+Divide one by the other to check that they (properly) predict that y(x) is a
+straight-line function with slope \(\tan\theta\).
+</li>
+<li><span class="item-label">4.</span> A particle moves with acceleration:
+<p>\[\vec{a} = [- 6\,(t/\,\text{s})^2 \hat{x} +
+(t/\,\text{s}) \hat{y}]\unit{m/s^{2}}.\]
+<p>At \(t = 0\) the particle is at rest at the origin.
+What is the equation of the path (i.e., the trajectory)?</li>
+<li><span class="item-label">5.</span> A football is thrown by a quarterback at a speed of
+20<span class="unit">&thinsp;m/s</span> at an angle of 45° with the horizontal.
+A receiver is running such that he will pass under the
+ball downfield from the point where it was released.
+Assuming the quarterback and the receiver are the same
+height, and the receiver can jump or reach one meter higher
+than the point of release by the quarterback, what is the
+minimum distance from the quarterback the ball can be caught?
+<figure class="fig-centered"><img src="figures/m8gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;11.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;13.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;14.</li>
+<li><span class="item-label">5.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;15.</li>
+</ol>
+
+</section>
+

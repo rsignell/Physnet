@@ -1,0 +1,97 @@
+<header class="module-header">
+  <h1 class="module-title">Numerical Integration <span class="module-author">(Robert Ehrlich <br> George Mason University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: linear charge density <a href="../m147/" class="module-ref">MISN-0-147</a>.</li><li><strong>2.</strong> Write (or modify) and run programs that utilize advanced programming
+    features such as type declarations and loop in FORTRAN <a href="../m347/" class="module-ref">MISN-0-347</a> or in
+    BASIC.</li><li><strong>3.</strong> Express the net electric potential at some point in space as an integral
+    over a continuous charge distribution <a href="../m147/" class="module-ref">MISN-0-147</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: interpolating polynomial, Simpson's rule, finite sum rule,
+    Simpson's 3/8 rule, trapezoidal rule, weighting coefficients.</li><li><strong>K2.</strong> Discuss the relative merits of the various interpolating polynomials from
+    the point of view of the accuracy of the approximation and the amount of
+    computer time required.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Compute and graph the error for the approximate electric potential
+    resulting from a numerical integration using interpolating polynomials of
+    zeroth order (finite sum rule), first order (trapexoidal rule), and second
+    order (Simpson's rule).
+    <br>
+ Determine the convergence of the approximate electric potential resulting
+    from a numerical integration for third order interpolating polynomial
+    (Simpson's 3/8 rule) and fourth order interpolating polynomial (Bode's rule).
+    <br>
+ Calculate and explain the convergence and the dependence of the errors on
+    k, when calculating the approximate electric potential for a non-uniform
+    charge density of the form \(\lambda(x) = cos (k \pi x)\)  via second, third and fourth order
+    polynomials.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> A computer with BASIC or FORTRAN.</li>
+</ol>
+</div>
+
+
+</section>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">For the third order plonomial which passes through the four points \((x_1,y_1)\), \((x_2,y_2)\),
+\((x_3,y_3)\), \((x_4,y_4)\), the correct form is:
+<p>\[y(x) = Ay_1 + By_2 + Cy_3 + Dy_4\]
+<p>where:
+\[\begin{aligned}A & = (x - x_2)(x - x_3)(x - x_4)/\Delta x^3 \\ B & = (x - x_1)(x - x_3)(x - x_4)/\Delta x^3 \\ C & = (x -x_1)(x - x_2)(x - x_3)/\Delta x^3 \\ D & = (x - x_1)(x - x_2)(x - x_3)/\Delta x^3\end{aligned}\]
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<ol>
+<li><span class="item-label">1-2.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+
+<ol>
+<li><span class="item-label">3.</span> Submit your annotated computer output that shows your runs of the
+original program in the module, pointing out how the errors in the three lowest
+order approximations for the integrals depend on:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the number of intervals, <code>N</code>, and</li>
+<li><span class="item-label">b.</span> the \(y\)-coordinate of the point at which the potential is found.
+</li>
+<li><span class="item-label">4.</span> Submit your annotated computer output that shows how the higher order
+approximations to the integral depend on <code>N</code>, the number of terms in the sum.</li>
+<li><span class="item-label">5.</span> Submit your annotated computer output that shows results and relevant
+discussion of them for the modified program that calculates the potential at a 
+point in space due to a charged wire with a linear charge distribution given by
+\(\lambda(x) = cos(k \pi x)\).</li>
+</ol>
+
+
+</section>

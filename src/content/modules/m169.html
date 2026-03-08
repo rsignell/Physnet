@@ -1,0 +1,256 @@
+<header class="module-header">
+  <h1 class="module-title">DC Conduction Along a Nerve <span class="module-author">(Mary Blair and Peter Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State Ohm's law <a href="../m118/" class="module-ref">MISN-0-118</a>.</li><li><strong>2.</strong> State the two node rules for resistive D.&thinsp;C.&thinsp;circuits
+    <a href="../m119/" class="module-ref">MISN-0-119</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Describe the differences between the responses of an axon to
+    stimuli that are below and above the threshold for action potential response.</li><li><strong>K2.</strong> Derive the voltage, current, and resistance distributions
+    along a nerve axon due to a voltage applied at one point, where the applied
+    potential is below the threshold for action potential response.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction to Neurons</h2>
+
+<p><h3 id="pcap-1-a">1a. Neurons Transmit Information</h3>
+
+Neurons, or nerve cells, are cells that transmit information in the nervous
+system.
+Such transmission is accomplished by the conduction of electrical impulses
+along the neuron and by the release of chemical messenger packets that carry
+the information across gaps, called synapses,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>between neurons.
+The activity of the neuron is a fascinating topic in biology, medicine,
+chemistry, and physics.
+<p><h3 id="pcap-1-b">1b. Neurons Have Three Components</h3>
+
+Basically, a nerve cell is composed of three distinct parts:
+<ul>
+<li><span class="item-label">(i)</span> dendrites, that collect information from neighboring neurons and from
+the environment;</li>
+<li><span class="item-label">(ii)</span> a cell body, containing the nucleus and other structures necessary
+for metabolic activity in the cell; and</li>
+<li><span class="item-label">(iii)</span> an axon that carries the nerve impulse, called the action potential.</li>
+</ul>
+
+
+A cross-section view of an axon is shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><h3 id="pcap-1-c">1c. Above Threshold: the “Action Potential” Response</h3>
+
+The normal mode of transmission of the action potential along an axon is
+essentially independent of the magnitude of the stimulus.
+For this reason, it is sometimes called an “all or nothing” phenomenon.
+During the response, the trans-membrane potential of the axon rapidly
+switches from negative to positive and then recovers, creating a “pulse.”
+The regenerative action that creates this pulse is due to changes in the
+permeability of the membrane to various ions.
+To trigger this response, the stimulus must be above a threshold value.
+<p><h3 id="pcap-1-d">1d. Below Threshold: A Passive Response</h3>
+
+If a stimulus is below the threshold for an action potential response, the
+permeability of the axon membrane does not change significantly and the axon
+response is passive.
+Study of this response is interesting in its own right and it also provides
+a good basis for understanding the propagation of action potentials.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m169gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Cross-sectional and longitudinal views of a
+nerve axon.</figcaption></figure></div>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m169gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Sub-threshold stimulus of a nerve axon.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Passive-Case Circuit</h2>
+
+<p><h3 id="pcap-2-a">2a. Description of Nerves</h3>
+
+Nerve trunks, often called simply “nerves,” will be considered here to
+be cylindrical and infinite in length, and to consist of a large number of
+axons of uniform diameter, evenly spaced within a sheath.
+It is reasonable to suppose that the physical environments of the axons are
+essentially identical and uniform, so we need only consider a single
+representative axon.
+We will only deal here with the sub-threshold passive case, where the stimulus
+is provided by a battery as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m169gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Discrete-element approximation for an axon.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Electrical Model for a Nerve Axon</h3>
+
+We consider the case where the battery has been connected long enough for a
+steady state to be established.
+Then a current continually flows away from the battery, down the axon, and
+some of it continually leaks “sideways” through the membrane as it goes.
+Thus the current gradually decreases as it goes.
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> shows how the axon would look if its parts were discrete instead of
+continuous.
+Here \(R_i\) is the resistance to longitudinal flow inside the axon, \(R_o\) the
+resistance to longitudinal flow outside, and \(R_m\) the resistance of the
+membrane to “sideways” current leakage.
+This circuit can be replaced by the equivalent one in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>a, where we
+have combined \(R_o\) and \(R_i\) and called the sum \(R_a\):
+<p>\[R_o + R_i \equiv R_a.\]
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m169gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. An element from <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>: (a) discrete
+                              approximation; (b) continuous axon (infinitesimal element).</figcaption></figure></div>
+
+<p>In the real axon the material can be considered to be continuous so we can
+treat the circuit as linear only if we evaluate an infinitesimal length
+of it as in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>b.
+The resistance to longitudinal flow increases with the length of the element,
+so we define the resistance per unit length along the axon as \(\rho_a\)
+and we write:
+<p>\[dR_a = \rho_a \, dx.\]
+<p>The (longitudinal) voltage drop across this resistance is:
+<p>\[dV(x) = I(x) dR_a = I(x) \rho_a \, dx,\]
+<p>For leakage across the membrane, the quantity that increases proportionally
+to the length of the segment is the conductance:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>increasing the length of the membrane provides more surface area over which
+leakage can occur.
+We denote the leakage conductance per unit length of the axon by \(g_m\) so the
+leakage conductance of our element is:
+<p>\[dG_m = g_m \, dx\,,\]
+<p>and the leakage current in our element is:
+<p>\[dI(x) = V(x) dG_m = V(x) g_m \, dx.\]
+<p>An easy way to solve the above equations is to write <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> as
+a differential equation and then to differentiate it and substitute
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> into it.
+<p>This gives:
+<p>\[\frac{d^2V(x)}{dx^2} = V(x) g_m \rho_a,\]
+<p>for which the solution is:
+<p>\[V(x) = A e^{\gamma x} + B e^{-\gamma x}.\]
+<p>Here \(\gamma \equiv \sqrt{g_m \rho_a}\) as can be easily seen by substituting
+<p><a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> into <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+<p>The constants \(A\) and \(B\) must be determined by boundary conditions.
+<p><h3 id="pcap-2-c">2c. The “Long Axon” Voltage</h3>
+
+Since a physical axon is very long compared to its diameter, a commonly
+used approximation is to assume the axon to be infinitely long, in which
+case we must have \(A = 0\) in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> or the potential will be
+infinite at infinity!
+Then evaluating <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> at the position \(x_0\) where the battery
+potential \(V_0\) is applied, we get:
+<p>\[V(x) = V(x_0) e^{-\gamma (x - x_0)}.\]
+<p><span class="tryit">Try it:</span>  Verify <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> by substituting it into <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>
+and by evaluating <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> at infinity and at \(x_0\).
+Note that two values must be checked because <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> is of second
+order.
+<p>By symmetry, the voltage will decay in the same way in each direction from
+the point of application so we write:
+<p>\[V(x) = V(x_0) e^{- \gamma |x - x_0|} .\]
+<p>This voltage distribution is shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m169gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The voltage along the passive axon.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. The “Long Axon” Current</h3>
+
+We now put the solution for the potential, <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>, into \(dI/dx\)
+from <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> and we get:
+<p>\[I(x) = I(x_0) e^{-\gamma (x - x_0)},\]
+<p>where \(I(x_0) = V(x_0) \sqrt{g_m/\rho_a}\).
+Thus both the potential and the current fall off exponentially as one moves
+away from the source point and this fall off is due, of course, to the
+leakage of current through the membrane.
+<p><span class="tryit">Try it:</span>  Show that the voltage and current fall to \(1/e\) in \(0.8\,\text{mm}\),
+using typical values of \(\rho_a = 1.27 \times 10^{10}\,\text{ohms/m}\) and
+\(g_m = 1.25 \times 10^{-4}\,\text{mhos/m} = 1.25 \times 10^{-4}\unit{ohms^{-1}/m}\).
+<p><h3 id="pcap-2-e">2e. The “Long Axon” Resistance</h3>
+
+Given the voltage across the nerve and the current through it at any point,
+the quotient of the two gives the resistance produced by the axon beyond
+that point.
+Dividing <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> by <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> we get, for the resistance
+beyond point \(x\):
+<p>\[R(x) = \sqrt{\rho_a/g_m}.\]
+<p>Note that the resistance is independent of \(x\), meaning the resistance of the
+axon beyond any point \(x\) is independent of what point you pick as \(x\).
+<p><span class="tryit">Try it:</span>  Show that the electrical resistance of a “long axon” is 10&nbsp;Megohms
+(\(1.0 \times 10^7\,\Omega\)).
+Data are in Sect.&thinsp;2d.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>This presentation is based one by Russell K. Hobbie in <em>The American
+Journal of Physics</em>  41, 1176 (1973).
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Resistance Ladder Derivation</h2>
+
+<p><div class="figure-full"><figure id="fig-A1"><img src="figures/m169gr06.svg" alt="Figure A1" class="physnet-fig"><figcaption>Fig.&nbsp;A1. The circuit equivalent to that of <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> for an
+                                    infinite resistance ladder.</figcaption></figure></div>
+
+<p>A very interesting alternative derivation treats the nerve as a resistance
+ladder (the name coming from the appearance of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+The derivation begins by noting that the element in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> is part of
+a resistance ladder that is considered to be infinitely long.
+In that case, the resistance of the part of the ladder to the right in the
+figure is the same, whether the element is included or not (the ladder
+is “the same”).
+Of course the ladder is not really infinitely long but the potential and
+current die off as one goes away from the points of interest, so distant
+parts of the ladder have no influence.
+Thus we get the equivalent circuit shown in <a href="#fig-A1" class="fig-ref">Fig.&nbsp;A1</a>, for which the
+resistance is:
+<p>\[\begin{aligned}R & = \rho_a\,dx + \left( g_m\,dx + \frac{1}{R} \right)^{-1} = 
+                   \rho_a\,dx + \frac{R}{R g_m\,dx + 1} \\   & = \rho_a\,dx + R (1 - R\, g_m\, dx) = \rho_a\,dx + R - R^2 \, g_m \, dx. \end{aligned}\]
+
+<p>where we have used the fact that
+\((1 + \epsilon)^{-1} \approx (1 - \epsilon)\)
+for \(\epsilon\) being any small quantity and where the approximation improves
+as \(\epsilon\) becomes smaller (\(dx\) is infinitesimally small).
+<p>Finally, the last equation above is solved for \(R\) to get:
+<p>\[R = \sqrt{\frac{\rho_a}{g_m}},\]
+<p>which agrees with <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">“Synapse” is pronounced “sin\('\) - aps.” <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Conductance \(G\) is defined as the reciprocal of resistance, so
+Ohm's law, \(V = I R\), becomes \(I = G V\).
+The parallel resistance addition law,
+<p>\[\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2},\]
+<p>becomes:
+<p>\[G = G_1 + G_2.\]
+<p>Conductance is measured in mhos, where a mho is the reciprocal of the ohm.
+Thus \(\,\text{mho} = \,\text{ohm}^{-1}\).
+Resistances add in series because the battery must do more work
+as the current traverses successive resistances, while conductances add in
+parallel because the current has various paths through which to travel. <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><div class="centered">
+conductance of axon membrane: \(1.25 \times 10^{-4}\)&thinsp;mhos/m <br>
+resistance of axoplasm \(+\) “outside” material:
+                                        \(1.27 \times 10^{10}\)&thinsp;ohms/m <br>
+</div>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+One or both of these skills may be on the actual exam.</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

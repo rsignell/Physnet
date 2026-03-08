@@ -1,0 +1,429 @@
+<header class="module-header">
+  <h1 class="module-title">Translational &amp; Rotational Motion of a Rigid Body <span class="module-author">(J.S.Kovacs)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Calculate the kinetic energy loss in an inelastic collision <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>2.</strong> Calculate the kinetic energy of a rigid rotating object <a href="../m36/" class="module-ref">MISN-0-36</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Apply the following theorems to determine completely the
+    motion of a rigid body in the case when the torque on the
+    body is along one of the principal axes: (a) Relative to an inertial reference
+    system the time rate of change of the center of mass momentum of a rigid body
+    is equal to the net external force acting on the rigid body;
+    (b) Relative to any point in an inertial reference system, the time derivative
+    of the angular momentum vector of a rigid body is equal to the net external
+    torque acting on the rigid body; and
+    (c) The total kinetic energy of a rigid body relative to an inertial reference
+    system is the kinetic energy of the center of mass of that body relative to
+    the inertial system, plus the kinetic energy of the body relative to the
+    center of mass.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Ideal Collisions Between a Frictionful Sphere and a Flat Surface:
+    The Superball” (MISN-0-53).</li><li><strong>2.</strong> “Euler's Equations: The Tennis Racket Theorem” (MISN-0-57).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. General Description of the Motion of a System of Particles</h3>
+
+The general description of the motion of a system of particles consists of
+specifying the motion of the center of mass (\(CM\)) of the system (as if the
+whole mass of the system were located at the center of mass) plus the
+description of the motion of the particles of the system relative to the
+center of mass.
+For a rigid body the particles of the system are constrained to move such
+that the relative separation of all pairs of particles remains unchanged.
+Theorems about the motion of rigid bodies will be demonstrated as they
+apply to a simple rigid system.
+<p><h3 id="pcap-1-b">1b. Theorems on the Motion of Rigid Bodies</h3>
+
+When a set of forces acting upon a rigid body are such that they combine to
+produce an external torque which is directed along one of the principal
+axes of the body (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>), the following theorems may be applied to determine
+completely the motion of the rigid body:
+<figure id="fig-1" class="fig-left-framed"><img src="figures/m43gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Torque-producing forces acting on a body.</figcaption></figure>
+
+<p><ul>
+<li><span class="item-label">a.</span> Relative to an inertial reference system the time rate of change
+of the center of mass momentum of a rigid body is equal to the net external
+force acting on the rigid body:
+<p>\[\frac{d\vec{P}_{CM}}{dt} = \vec{F}_{ext}.\]</li>
+<li><span class="item-label">a\m{'}.</span> If there is no net external force on a rigid body, the center
+of mass momentum is constant, and hence the center of mass velocity is
+constant in magnitude and direction:  \(\vec{P}_{CM}\) = constant vector,
+\(\vec{V}_{CM}\) = constant vector.</li>
+<li><span class="item-label">b.</span> Relative to any point in an inertial reference system, the time
+derivative of the angular momentum vector of a rigid body is equal to the
+net external torque acting on that body relative to the same point:
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau}_{ext}.\]</li>
+<li><span class="item-label">b\m{'}.</span> With no external torque on the body the angular momentum vector
+relative to any point in an inertial reference system is constant.</li>
+<li><span class="item-label">c.</span> The total kinetic energy of a rigid body relative to an inertial
+reference system is the kinetic energy of the center of mass of that body
+relative to the inertial system, plus the kinetic energy of the body
+relative to the center of mass.  (For a rigid body this latter is the
+kinetic energy of the rotation of the body about the center of mass.</li>
+</ul>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Application of Rigid Body Theorems to a Simple System</h2>
+
+<p><h3 id="pcap-2-a">2a. Description of the Motion of a Rigid Body</h3>
+
+The complete description of the motion of a rigid body consists of the
+description of the translational motion of its center of mass as if it were
+a point mass, plus the description of its rotational motion about an axis
+through its center of mass.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The net external force on the system will determine the former, while the
+net external torque will determine the latter.
+<p><h3 id="pcap-2-b">2b. Example: Collision of a Point Mass with a Dumbbell</h3>
+
+As an illustration of the theorems listed in Sect.&thinsp;1b, consider the
+following example:
+<p>In far outer space, far from the influence of any appreciable gravitational
+force, a rigid body consisting of two point masses, of mass \(M\) and \(4M\),
+at the ends of a massless rod of length \(d\) is at rest relative to an
+inertial reference frame.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Another mass, \(M\), makes a collision approach toward this rigid body,
+moving with a velocity \(\vec{V}_o\) toward a head on collision with the \(4M\)
+mass directed perpendicularly to the rod connecting the rigid body masses
+(See <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m43gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A mass \(M\) with initial speed
+\(\vec{V}_0\) approaches to make a head on collision with a mass \(4M\),
+initially at rest.
+The mass \(4M\) is attached via a rigid massless rod to another mass \(M\) with
+the orientation of the rod such that it is perpendicular to the line of
+flight of the moving mass.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-c">2c. Mass and Dumbbell: Translational Motion</h3>
+
+<p> <em>Problem</em>: To demonstrate that the center of mass of the three mass
+system moves with the same velocity before and after the collision.
+<p> <em>Answer</em>: First, the center of mass must be located, then its
+velocity before the collision occurs must be determined.
+The center of mass of the rigid body is located one-fifth of the distance
+from the \(4M\) mass along the line connecting the two masses (at point \(A\)
+in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+The center of mass of the combination of this mass (\(5M\)) and the incident
+mass \(M\) is located along the line joining these masses and one-sixth of
+the distance from the \(5M\) mass to the incident mass (at point \(B\)).
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> shows this location at the instant when the incident mass is
+distance \(D\) from the mass \(4M\).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m43gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A geometrical determination of
+the location of the center of mass of the system described in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+<p> <em>Problem</em>: How high above the line joining the incident mass
+with the struck mass is the center of mass?
+<p> <em>Answer</em>: From the similar triangles \(OPA\) and \(OB'B\) we see
+that \(BB'\) is five-sixths of \(AP\) so that the length of \(BB'\) is \((d/6)\).
+<p> <em>Problem</em>: Where will the center of mass be when the incident
+mass strikes the \(4M\) mass?
+<p> <em>Answer</em>: It will be at \(B''\), a distance \((d/6)\) above point
+\(P\), the location of the mass \(4M\).
+With \(B\) and \(B''\) both the same distance above the line \(OP\), it is clear
+that the line \(BB''\) is parallel to the line \(OP\).
+Thus, while the incident mass moved distance \(D\), the center of mass moved
+from \(B\) to \(B''\) along a line parallel to line \(OP\).
+Line \(BB''\) is of length \((D/6)\), hence the center of mass velocity
+must be one-sixth of the incident velocity and parallel to the incident
+velocity:
+<p>\[\vec{V}_{CM} = \frac{1}{6} \vec{V}_0.\]
+<p> <em>Problem</em>: What is the CM velocity after the collision?
+<p> <em>Answer</em>: It must be the same because there are no external
+forces on the three mass system.
+(The incident mass and the struck mass exert forces on each other but these
+are internal forces.)
+Because :
+<p>\[\frac{d\vec{P}_{CM}}{dt} = \vec{F}_{ext} = 0,\]
+<p>\[\vec{P}_{CM} = \text{ constant vector}.\]
+<p>To demonstrate this, consider the case where the incident mass sticks to
+the mass \(4M\) upon colliding.
+Before the collision, as observed in an inertial frame at rest with respect
+to the rigid body, the only momentum is \(M\vec{V}_0\).
+After the collision the momentum is that of the new rigid body (\(5M\) at one
+end, \(M\) at the other).
+The momentum is thus \(6M \vec{V}_{CM}\) where \(\vec{V}_{CM}\) is the velocity
+of the center of mass after the collision.
+Equating these two (because there are no external forces) we get:
+<p>\[\vec{V}_{CM} = \frac{1}{6} \vec{V}_0,\]
+<p>exactly what it was before the collision.
+<p><h3 id="pcap-2-d">2d. Mass and Dumbbell: Rotational Motion</h3>
+
+<p> <em>Problem</em>: Is this the only motion of the combined system?
+<p> <em>Answer</em>: Obviously not.
+The system spins around as it moves.
+(If the rigid rod were struck at the center of mass of the system, no
+spinning would occur.)
+To describe completely the motion we must also include a description of the
+rotation of the system.
+Rotational motion is determined by external torques on the system and how
+they affect the angular momentum of the system:
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau}_{ext},\]
+<p>where \(\vec{L}\) and \(\vec{\tau}_{ext}\) are both defined with respect to the
+same point in some inertial reference frame.
+With our system (consisting of the three masses) there is no net external
+torque.
+Therefore the angular momentum, evaluated relative to any point in an
+inertial frame, is constant:
+<p>\[\vec{L}= \text{ constant vector.}\]
+<p>It is convenient to take the point relative to which the torque is
+evaluated as the center of mass of the system.
+<p> <em>Problem</em>: First, is this a point in an inertial reference
+frame?
+<p> <em>Answer</em>: If the reference frame in which the rigid rod (before
+collision) is at rest is an inertial reference frame, then so is a frame
+which is attached to the center of mass and moving with it.
+That's because the center of mass reference frame is moving with constant
+velocity with respect to the reference frame which is at rest with respect
+to the rigid rod.
+(In frames of reference which don't accelerate with respect to each other,
+observers see the same force or effect of a force.)
+<p> <em>Problem</em>: Relative to this point, what is the angular momentum
+of the system before the collision takes place?
+<p> <em>Answer</em>: Relative to this point the incident mass is moving to
+the right with velocity \((5/6)\vec{V}_0\) (recall that the center of mass
+itself is moving to the right with velocity \((1/6)\vec{V}_0\)).
+The masses on the ends of the rigid rod are thus both moving to the left
+with a speed \((1/6)\vec{V}_0\) or with velocity
+\(-(1/6)\vec{V}_0\).
+Hence, viewed at rest with respect to the center of mass, the motion
+observed is as shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m43gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The motion of the system
+described in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> (before collision) as observed in a reference frame in
+which the center of mass is at rest.</figcaption></figure></div>
+
+<p>The total angular momentum of this system as seen relative to the center of
+mass is the vector sum of the individual angular momenta.
+Each \(\vec{L} = \vec{r} \times m\vec{v}\), where \(\vec{r}\) is the vector
+from the center of mass to the instantaneous location of the mass, and
+\(\vec{v}\) is the velocity of that mass.
+However, the magnitude of this cross product is the magnitude of the
+momentum times the “lever arm.”
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Its direction may be evaluated separately using the right hand rule.
+The individual angular momenta are determined as indicated in Table 1.
+<p>=3pt
+
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1.  Determination of the individual
+angular momenta relative to the center of mass of the system for each of the
+three point masses of the system shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</td></tr><tr><td></td><td></td><td></td><td>Lever</td><td>Magn. of</td><td>Direct. of </td></tr><tr><td>Object</td><td>Mass</td><td>Speed</td><td>Arm</td><td>Ang. Mom.</td><td>Ang. Mom.</td></tr><tr><td>incident mass</td><td>\(M\)</td><td>\(\frac{5}{6} V_0\)</td><td>\(\frac{1}{6}d\)</td><td>\(\frac{5}{36} M V_0 d\)</td><td>up, out of page</td></tr><tr><td>mass on rod</td><td>\(4M\)</td><td>\(\frac{1}{6}V_0\)</td><td>\(\frac{1}{6}d\)</td><td>\(\frac{4}{36} M V_0 d\)</td><td>down, into page</td></tr><tr><td>mass on rod</td><td>\(M\)</td><td>\(\frac{1}{6}V_0\)</td><td>\(\frac{5}{6}d\)</td><td>\(\frac{5}{36}M V_0 d\)</td><td>up, out of page</td></tr></tbody></table>
+</div>
+
+<p>The resultant angular momentum of the system (before collision) is thus:
+<p>\[\frac{1}{6}MV_0 d \text{ directed up, out of page}.\]
+<p>This is also the value of the angular momentum of the rod after the
+incident mass struck and attached to the \(4M\) mass.
+Hence the newly formed rigid body (\(M\) and \(5M\)) at two ends of a rigid rod
+of length \(d\) rotates counter-clockwise about the center of mass with an
+angular momentum whose magnitude is \((d/6) M V_0\).
+<p> <em>Problem</em>: What is the angular velocity of rotation of this
+rigid body?
+<p> <em>Answer</em>: For a rigid body rotating about a principal axis
+\(\vec{L} =I\vec{\omega}\) and \(\vec{\omega}\) is in the same direction as
+\(\vec{L}\).
+In this case, up out of page:  the rotation is counter-clockwise.  \(I\), the
+moment of inertia, from its definition is the sum of the “mass times
+distance squared” contributions for each mass relative to the axis
+parallel to \(\vec{L}\) through the center of mass.
+It is, therefore, 
+<p>\[I = M \left(\frac{5}{6} d\right)^2 + 5M \left( \frac{1}{6}d\right)^2 =
+\frac{5}{6}M d^2 .\]
+<p>We thus find: \(\vec{\omega} = V_0/(5d)\).
+Consequently, the complete description of the motion of the system after
+impact is as follows:
+<p><ul>
+<li><span class="item-label">i.</span> The center of mass moves with constant velocity \((1/6)\vec{V}_0\)
+in a straight line parallel to the direction of the velocity of the incident
+mass.</li>
+<li><span class="item-label">ii.</span> The rod rotates counter-clockwise about an axis through the
+center of mass (perpendicular to the plane of the paper) with a constant
+angular velocity of \(V_0/(5d)\)</li>
+</ul>
+
+<p><h3 id="pcap-2-e">2e. Mass and Dumbbell: Kinetic Energy</h3>
+
+<p> <em>Problem</em>: What is the kinetic energy of the system?
+<p> <em>Answer</em>: Again the answer depends upon the reference frame
+with respect to which this kinematical quantity is to be observed.
+Hence, making the question more specific:
+<p> <em>Problem</em>: What is the kinetic energy of the system relative
+to a system which is at rest with respect to the rigid rod before the
+collision?
+<p> <em>Answer</em>: The kinetic energy before the collision is that of
+the incident mass:
+<p>\[\frac{1}{2} M V_0 ^2.\]
+<p>After the collision it is the kinetic energy of the center of mass as if
+all the mass were concentrated there: \((1/2) 6M {\frac{V_0}{6}}^2\)
+plus the kinetic energy of all the parts of the system relative to the
+center of mass.
+For a rigid body this is \((1/2) I \vec{\omega}^2\).
+For this object it is:
+<p>\[\frac{1}{2} I\vec{\omega}^2 = \frac{1}{60} MV_0 ^2.\]
+<p>The total kinetic energy is thus:
+<p>\[E_k(\text{total}) = \frac{1}{2} MV_0 ^2 +\frac{1}{60} MV_0^2
+= \frac{1}{10} MV_0 ^2 .\]
+<p>(5 times as much kinetic energy is in translational motion as there is in
+rotational motion.
+If the incident mass had struck the center of mass, all the kinetic energy
+would have been in translational motion.)
+<p> <em>Problem</em>: What is the “\(Q\)” of this collision?
+<p> <em>Answer</em>: According to its definition, \(Q\) is the change in the
+kinetic energy that occurs as a result of the reaction.
+If \(Q\) is positive, kinetic energy has been gained as a result of the
+reaction or collision.
+For this collision:
+<p>\[Q = - \frac{4}{5} \left(\frac{1}{2}MV_0 ^2\right). \]
+<p>As a result of the collision 80% of the original kinetic energy is lost.
+(The collision is obviously inelastic
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The axis is not necessarily fixed in its direction in space.
+In cases when it is not, the motion of the direction of the axis is
+necessary to complete the description.
+We will not consider such cases here.
+See, however, “Torque and Angular Momentum in Circular Motion”
+(MISN-0-34) and “Euler's Equations: The Tennis Racket Theorem”
+(MISN-O-57). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">An inertial reference frame is a frame
+in which Newton's First Law of Motion is true. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Force and Torque” (MISN-0-5) <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Potential Energy, Conservative Forces, The Law of
+Conservation of Energy” (MISN-0-21). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> For the system shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> of the textual material,
+determine the velocity of the center of mass of the system before the
+collision.
+Show that it is parallel to the velocity of the incident mass.</li>
+<li><span class="item-label">2.</span> Determine the velocity of the center of mass of the system of
+Problem&nbsp;1 after the collision, assuming the projectile mass sticks to the
+mass \(4M\).</li>
+<li><span class="item-label">3.</span> Relative to the center of mass of this above system, determine
+the velocity of each of the three component masses before the collision.</li>
+<li><span class="item-label">4.</span> Determine the total angular momentum relative to the center of
+mass of the above mentioned system before the collision.</li>
+<li><span class="item-label">5.</span> Determine the total angular momentum relative to the stationary
+mass \(M\) (on the rod) before the collision.</li>
+<li><span class="item-label">6.</span> Assuming conservation of angular momentum, calculate the angular
+velocity of the system relative to the center of mass after the collision.</li>
+<li><span class="item-label">7.</span> Assuming conservation of angular momentum, calculate the
+instantaneous angular velocity of the system after the collision relative
+to the location of the initially stationary mass \(M\).
+(This will be the angular velocity with which that upper mass \(M\) sees the
+other masses begin to rotate around it.)</li>
+<li><span class="item-label">8.</span> Determine the total kinetic energy, relative to a frame at rest
+with respect to the rod, of the system before the collision occurs.</li>
+<li><span class="item-label">9.</span> Determine the total kinetic energy relative to this same frame
+(as in 8 above) of the system after the collision.</li>
+<li><span class="item-label">10.</span> Determine the gain or loss of kinetic energy as a result of the
+collision.</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.</li>
+<li><span class="item-label">2.</span> <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.</li>
+<li><span class="item-label">3.</span> See <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.</li>
+<li><span class="item-label">4.</span> <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>.</li>
+<li><span class="item-label">5.</span> \(MV_0d\), directed up, out of page.</li>
+<li><span class="item-label">6.</span> \(\omega = V_0/(5d)\) counter-clockwise as viewed looking at
+the plane of the paper.</li>
+<li><span class="item-label">7.</span> \(\omega = V_0/(5d)\).</li>
+<li><span class="item-label">8.</span> \(\frac{1}{2}MV_0\).</li>
+<li><span class="item-label">9.</span> <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.</li>
+</ol>
+
+<p></section>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> For the same problem as was illustrated in the <em>text</em>,
+Sect.&thinsp;2, find the kinetic energy of the system before the collision [K], the
+kinetic energy after the collision [C] and the \(Q\) of the collision [F], all
+as observed in a reference frame attached to the center of mass.</li>
+<li><span class="item-label">2.</span> In far outer space free from any outside forces and observed in an
+inertial frame, there is at rest a uniform rod of length \(L\) and mass \(M\).
+A point mass, also of mass \(M\) approaches the rod with a velocity \(\vec{V}_0\)
+directed perpendicular to the long axis of the rod.
+The mass strikes the rod at a point that is a distance \(d\) away from
+the center of the rod, toweard the end of the rod.
+After the collision, the incident mass continues along the same straight line
+in its original direction but with a reduced velocity, \(\vec{V}_0/2\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the location of the center of mass of the system at an
+instant when the incident mass is a distance \(D\) from the rod. [L]
+Determine the velocity of the center of mass at this instant. [A]</li>
+<li><span class="item-label">b.</span> Determine the velocity of the center of mass of the rod after the
+collision, as observed in the same frame where the rod was initially at rest.
+[I]</li>
+<li><span class="item-label">c.</span> Determine the velocity of the center of mass of the rod relative to
+the center of mass of the system after the collision. [J]</li>
+<li><span class="item-label">d.</span> Determine the angular momentum of the system, before the collision,
+relative to the center of mass of the rod. [B]</li>
+<li><span class="item-label">e.</span> Determine the angular velocity of the rod about its own center of
+mass after the collision. [E]</li>
+<li><span class="item-label">f.</span> Determine the kinetic energy of the system before the collision,
+as observed in the original inertial frame. [H]</li>
+<li><span class="item-label">g.</span> Determine the kinetic energy of the system after the collision, as
+observed in this same frame. [M]</li>
+<li><span class="item-label">h.</span> Determine the Q of this reaction. [G]</li>
+<li><span class="item-label">i.</span> Assuming an elastic collision, determine the value of \(d\) in terms of
+\(L\). [D]
+</li>
+</ol>
+
+<p>
+<p>
+<p><ol>
+<li><span class="item-label">A.</span> \(\vec{V}_0/2\)</li>
+<li><span class="item-label">B.</span> (\(M V_0 d\)), directed up, out of page, as seen in a sketch where
+\(d\) is below center.</li>
+<li><span class="item-label">C.</span> \(M V_0^2/60\)</li>
+<li><span class="item-label">D.</span> \(d = L / \sqrt{6}\)</li>
+<li><span class="item-label">E.</span> \(6 V_0 d / L^2\)</li>
+<li><span class="item-label">F.</span> \(-(4/10) M V_0^2\)</li>
+<li><span class="item-label">G.</span> \((1/2) M V_0^2 \left( \frac{3 d^2}{L^2} - \frac{1}{2} \right)\)</li>
+<li><span class="item-label">H.</span> \(M V_0^2/2\)</li>
+<li><span class="item-label">I.</span> (\(\vec{V}_0/2\)), same direction as original velocity of point mass.</li>
+<li><span class="item-label">J.</span> Zero</li>
+<li><span class="item-label">K.</span> \((5/12) M V_0^2\)</li>
+<li><span class="item-label">L.</span> Along a line joining the center of the rod to the incident mass and
+half-way between the two.</li>
+<li><span class="item-label">M.</span> \((1/2) M V_0^2 \left( \frac{1}{2} + \frac{3 d^2}{L^2} \right)\)</li>
+</ol>
+
+<p></section>
+

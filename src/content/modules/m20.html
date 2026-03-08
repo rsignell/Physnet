@@ -1,0 +1,1488 @@
+<header class="module-header">
+  <h1 class="module-title">Work, Power, Kinetic Energy <span class="module-author">(John S.Ross, Rollins College)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Define the integral, evaluate integrals of polynomials <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>2.</strong> Define the scalar product of two vectors and express it in
+    component form <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>3.</strong> Solve problems involving Newton's second law <a href="../m16/" class="module-ref">MISN-0-16</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: watt.</li><li><strong>K2.</strong> State the line integral definition of the work done by a force
+    and explain how it reduces to other mathematical formulations for special
+    cases.</li><li><strong>K3.</strong> Define the power developed by an agent exerting a force.</li><li><strong>K4.</strong> Derive the Work-Kinetic Energy Relation using Newton's second
+    law and the work done by a variable force.</li><li><strong>K5.</strong> Define the kinetic energy of a particle.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the work done on an object given either:
+    <ul>
+
+</ul>
+</li><li><strong>a.</strong> one or more constant forces, or</li><li><strong>b.</strong> a force that is a function of position along a prescribed path.
+    </li><li><strong>S2.</strong> Use the definition of power to solve problems involving agents
+    exerting constant forces on objects moving with constant velocity.</li><li><strong>S3.</strong> Use the Work-Kinetic Energy Relation to solve problems involving
+    the motion of particles.</li></ul></div>
+
+
+</section>
+
+
+<p><div class="centered">“It's love that makes the world go round.”<br>
+                              - Ancient Ditty </div>
+
+<p><div class="centered">“Energy makes the world go round. <br>
+   ENERGY explains EVERYTHING.”<br>
+             - Modern Ditty to be<br>
+
+                                          found in science books</div>
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The fundamental problem of particle dynamics is to determine the external
+forces that act on an object, then use them to find the position of the
+object as a function of time.
+In more detail, once we know the forces we add them to get the resultant
+force \(\vec{F}_R\), which we put into Newton's second law in order to get the
+acceleration \(\vec{a}\).
+We can then find the final velocity by integrating the time-varying vector
+equation, inserting the initial velocity as an integration constant.
+We can repeat the integration to find the time-varying position.
+If the resultant force is constant in time these integrations produce
+\(\vec{v} = \vec{v}_0 + \vec{a}\,t\) and \(\vec{s} = \vec{v}_0\,t + (1/2)
+           \vec{a}\,t^2\).
+However, there is an important class of problems in physics in which the force
+is not constant but varies as a function of the position of the particle.
+The gravitational force and the force exerted by a stretched spring are
+examples.
+<p>With the introduction of work, power, and energy, we have alternative
+methods for the solution of dynamics problems, methods that involve
+scalar equations rather than the vector equations required in the direct
+application of Newton's laws.
+<p>More important than the alternative methods themselves is the
+concept of energy and the conservation law associated with it.
+The principle of conservation of energy is universal: it holds in
+all cases if all energy is carefully accounted for.
+It is true even for areas of physics where Newton's laws are not valid,
+as in the atomic-molecular-nuclear world.
+It is of major interest in an energy-conscious world.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Work</h2>
+
+<p><h3 id="pcap-2-a">2a. Meanings Associated with Work</h3>
+
+Ever since your childhood you have heard and used the term “work.”
+Family members went to work.
+You were encouraged to work hard in school.
+You worked on your car, or it was difficult work riding a bike up the hill.
+All of us have an intuitive feeling about what is meant by work.
+However, it is necessary for the scientist/technologist to have a precise
+definition for meaningful communication with other professionals.
+<p>Technically, “work” is the amount of energy transferred into or out
+of a definite mechanical system through the action of a mechanical force acting
+on that system along a finite trajectory.
+By conservation of energy, work done on a system enhances its energy while
+work done by a system depletes it.
+If we can calculate this energy, we can often use it to then calculate
+what happens to various properties of the system.
+<p><h3 id="pcap-2-b">2b. Definition for Constant Effective Force</h3>
+
+We start with the special case where the effective force acting on an object is
+constant:
+<p><span class="tex-unknown" title="unknown macro">\textbox</span> Work (for a constant effective force): the product of the
+<em>effective</em> force acting on an object times the path-wise displacement of
+the point of application of the force.
+<p>By “effective force” we mean
+the component of the force in the direction of
+the displacement: it is that portion of the force that is effective in doing
+work on the object.
+The “pathwise displacement” is the distance along its path that the point of
+application of the force moves while the force is being applied.
+<p>In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, \(\theta\) is the angle between the actual applied force \(\vec{F}\)
+and the horizontal displacement vector \(\vec{s}\) (not shown).
+The effective force is \(|\vec{F}| \cos\theta = F \cos\theta\).
+This implies that in order for work to be done: (a) a force must
+act upon an object: (b) the point of application of the force must move through
+a displacement; and (c) the force must not be perpendicular to the displacement.
+Unless these conditions are fulfilled, no <em>technical</em> work has been done.
+Just thinking about this definition, or holding this page to read it, is not
+scientific “work.”
+However, if you take your pencil and copy the definition, you will be doing
+“work” in the technical sense of the word.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m20gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The <em>effective force</em> for horizontal displacement.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-c">2c. Work Done by a Constant Force</h3>
+
+By our definition, the work done by a constant force \(\vec{F}\) that makes a
+constant angle \(\theta\) with the direction of the displacement \(\vec{s}\) (see
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>) is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[W = |\vec{F}|\; \cos\theta\; |\vec{s}| = F\,s\,\cos\theta\,.\]
+<p>We recognize that the right hand side of this equation has the same form as
+the scalar (or dot) product of the two vectors \(\vec{F}\) and \(\vec{s}\), so we
+can express the work done as:
+<p>\[W = |\vec{F}|\,|\vec{s}|\,\cos\theta = \vec{F}\,\cdot\,\vec{s}\,.\]
+<p>Work is a scalar quantity, although the force and displacement involved in
+its definition are vector quantities.
+<p>Notice that we can write <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> either as
+(\(F \cos\theta) \times s\) or as \(F \times (s \cos\theta)\).
+This suggests that the work can be calculated in two different ways: either
+we multiply the magnitude of the displacement by the component of the force
+in the direction of the displacement or we multiply the magnitude of the
+force by the component of the displacement in the direction of the force.
+These two ways are entirely equivalent.
+<p>Work can be positive or negative since \(\cos\theta\) can take on
+positive or negative values (\(-1 \leq \cos\theta \leq + 1\)).
+If the force acts in the displacement direction, the work is positive.
+If the force acts in the opposite direction to the displacement, the work is
+negative.
+For example, consider a person lowering an object to the floor.
+In this case \(\vec{F}\) points up and \(\vec{s}\) points down.
+While lowering the object, negative work is done by the upward
+force of the person's hand.
+<p><h3 id="pcap-2-d">2d. Units of Work</h3>
+
+The units of work
+are products of units of force and units of distance.
+In SI units, work is expressed in joules, abbreviated J.
+A joule is a newton-meter: one joule is the work done by a force of one newton
+when it moves a particle one&thinsp;<span class="unit">&thinsp;meter</span> in the same direction as the force.
+Recalling that \(\,\text{N} = \unit{kg\,m/s^{2}}\) we have that:
+<p>\[\,\text{J} = \,\text{N\,m} = \unit{kg\,m^{2}/s^{2}}\,.\]
+<p>The name joule was chosen to honor James Joule (1816-1889), a British
+scientist famous for his research on the concepts of heat and energy.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m20gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. One-body force diagram for a pulled
+car (see text).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Illustration of the Work Concept</h3>
+ An Example/Problem:
+A Toyota (mass equal to \(1.0 \times 10^3\,\text{kg}\)) that had run out of gas was
+pulled down a level street by 3 people, each exerting \(7.0 \times 10^2\,\text{N}\) of
+force on a rope inclined at 30.0° to the horizontal.
+The motion was at constant velocity because of friction, mostly between the
+tires and the street.
+The people pulled the car for one block (150&thinsp;<span class="unit">&thinsp;meters</span>) before becoming tired
+and quitting.
+<p><ul>
+<li>How much work was done by the people?
+\[\begin{aligned}F_\text{people} & = & \sum_{i=1}^3 F_i = 3(700\,\text{N}) = 2100\,\text{N} \\
+W_\text{people} & = & \vec{F} \cdot \vec{s} = F (\cos\theta)\,s =
+                      (2100\,\text{N})(\cos30^\circ) (150\,\text{m}) \\
+                & = & 2.7 \times 10^5\,\text{J}. \quad \text{(2 digits of accuracy)}\end{aligned}\]
+</li>
+<li>How much work was done by the normal force \(\vec{N}\)?
+<p>Since \(\sum \vec{F}_\text{vertical} = 0\), then \(\vec{N} = (mg - F \sin\theta)\,\hat{y}\).</li>
+<li>\(W_\text{normal} = \vec{N} \cdot \vec{s} = 0\), since \(\vec{N} \perp \vec{s}\).</li>
+</ul>
+
+<ul>
+<li>How much work was done by the gravitational force, \(\vec{F}_g\)?<br>
+
+The answer:
+\(W_\text{gravity} = \vec{F} \cdot \vec{s}\) which is also zero, since \(\vec{F}_g \perp \vec{s}\).
+<p>These last two cases emphasize that, whenever \(\theta = 90^\circ\), the work done will be zero.</li>
+<li>Where did the energy go?
+We found that \(2.7 \times 10^5\,\text{joules}\) of work were performed, by the people,
+on the car-earth system.
+This means that the people lost, and the car-earth system gained,
+\(2.7 \times 10^5\,\text{joules}\) of energy.
+What happened to that energy?
+Some might have gone into energy of motion, kinetic energy of the car, but
+the car wound up not having any motion.
+In fact, the energy went into heating the pavement, the tires, the axles,
+the wheel bearings, the wheel bearing grease, and eventually the air
+surrounding these items as they cooled off.
+Finally, the atmosphere radiated some of the energy out into space and it
+became lost to the earth.</li>
+</ul>
+
+<p><h3 id="pcap-2-f">2f. Graphical Interpretation of Work</h3>
+
+For a graphical interpretation of the work
+concept we plot the effective
+force (\(F \cos\theta\)) versus the displacement during the interval from the
+initial position \(s_i\) to the final position \(s_f\).
+The work done is \((F \cos\theta)(s)\), the area under the curve shown in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m20gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The effective force versus the displacement.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Work Done by Variable Forces</h2>
+
+<p><h3 id="pcap-3-a">3a. Work During Infinitesimal Displacement</h3>
+
+Let us now consider the more usual case where the work is done by a force whose
+value will depend on the position of the point of application.
+For a force that is changing only in magnitude, we can represent the
+situation graphically as in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p>In order to find the work done for some displacement, we imagine dividing the
+displacement into a very large number of infinitesimal intervals.
+The work done by a force \(\vec{F}(s)\) during any one infinitesimal
+displacement \(d\vec{s}\) is given by:
+<p>\[dW = \vec{F}(s) \cdot d\vec{s}\,.\]
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m20gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A variable force versus displacement.</figcaption></figure>
+
+<p>In order to obtain the total work done, which is a finite measurable
+parameter, we must sum up (integrate) those (infinitesimal) increments of
+work.
+<p><h3 id="pcap-3-b">3b. One Dimensional Motion: An Integral</h3>
+
+As a first stab at integrating <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, let us investigate the
+situation where the force and the displacement are along the same line of
+action (say the \(x\)-axis) and the force is a known function of the position
+\(x\).
+That is, \(\vec{F} = F(x) \hat{x}\) where \(F(x)\) is known.
+During a small displacement \(dx\), so \(d\vec{s} = dx \hat{x}\), the force
+does an amount of work \(dW\) given by:
+<p>\[dW = \vec{F} \cdot d\vec{s} = F(x)\,dx\,.\]
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m20gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The area under the curve represents Work.</figcaption></figure>
+
+<p>To obtain the work over a finite interval we sum these infinitesimal
+contributions by integrating.
+As the force moves the particle from \(a\) to \(b\) the work varies from zero to
+its final value:
+<p>\[\int_0^W dW = \int_a^b F(x)\,dx\]
+<p>or
+<p>\[W_{a\rightarrow b} = \int_a^b F(x)\,dx\,.\]
+<p>Graphically, the work is the area under the curve of \(F(x)\) versus \(x\) (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+In order to calculate it we did not need to know the actual details of the
+motion, such as velocity as a function of time.
+Note that the graphical representation illustrates that work requires a
+displacement (if we are to have an area under the curve) and the notation
+\(W_{a\rightarrow b}\) also serves to remind us of this fact.
+Work is not
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m20gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Force characteristics of a
+spring.
+(a) The spring force \(F\) as a function of its displacement \(x\).
+(b) The spring in its equilibrium state.
+(c) The spring stretched by a displacement \(x\) to the right and with a
+spring force \(F\) to the left.
+(d) The spring compressed with a displacement \(x\) to the spring force \(F\) to
+the right.</figcaption></figure></div>
+
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m20gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The work done by a force compressing a
+spring from 0 to \(x\) is the area \((1/2) k x^2\) under the “force versus
+displacement” curve.</figcaption></figure>
+
+<p>
+a function of a single position in space like \(F(x)\).
+Work at a point has no meaning; only over a displacement is it meaningful.
+<p><h3 id="pcap-3-c">3c. Example: a Stretched Spring</h3>
+
+As a helical spring is stretched or compressed, away from its equilibrium
+position, the spring resists with a force that is fairly
+accurately linear (unless it is poorly made or becomes deformed).
+That is, if a “linear” spring is stretched or compressed a distance \(x\),
+it resists with a force \(F = -k x\).
+Here the (\(-\)) sign indicates that the spring's force is
+opposite to the direction of the displacement from equilibrium.
+We call this a “restoring” force since it tends to restore the spring
+to its equilibrium position.
+The quantity \(k\) is called the “spring constant”: it is a measure of the
+“stiffness” of the spring.
+By the way, saying the spring is in its “equilibrium position” merely
+means that it is neither compressed nor stretched.
+<p>Suppose one finds that a 36<span class="unit">&thinsp;N</span> force compressed a particular spring by
+6.0<span class="unit">&thinsp;cm</span>.
+How much work is done by the force if it compresses the spring by 5.0<span class="unit">&thinsp;cm</span>?
+First, note that the value of the spring constant is:
+<p>\[k = -\frac{F}{x} = \frac{-36\,\text{N}}{-6.0 \times 10^{-2}\,\text{m}} =
+           6.0 \times 10^2\,\text{N/m}\,.\]
+<p>Then the work done by the compressing force is:
+<p>\[W = \int \vec{F}_R \cdot d\vec{s} = \int_{-x}^0 (-k x)\,dx\,,\]
+<p>since \(\vec{F}\) is parallel to \(d\vec{s}\) and is in the same direction.
+Thus:
+<p>\[W = - k \int_{-x}^0 x\,dx = \frac{k x^2}{2} = 0.75\,\text{J}\,.\]
+<p>This transfer of energy depleted the energy of the system applying the force
+and increased the (internal) energy of the spring.
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m20gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. A force whose point of application
+follows a curved path.</figcaption></figure>
+
+<p>We can arrive at the same result graphically by calculating the area under
+the “\(F\) versus \(x\)” curve.
+Since the area of a triangle is half its height times its base, we have:
+<p>\[\frac{1}{2}(-k x)(-x) = \frac{1}{2}k x^2\,.\]
+<p><h3 id="pcap-3-d">3d. General Motion: A Line Integral</h3>
+
+The force \(\vec{F}\) doing work may
+vary in direction as well as in
+magnitude, and the point of application may move along a curved path.
+To compute the work done in this general case we again divide the path up
+into a large number of small displacements \(d\vec{s}\), each pointing along
+the path in the direction of motion.
+At each point, \(d\vec{s}\) is in the direction of motion.
+<p>The amount of work done during a displacement \(d\vec{s}\) is:
+<p>\[dW = \vec{F}(s) \cdot d\vec{s} = F(s) (\cos\theta)\,ds\,,\]
+<p>where \(F(s) \cos\theta\) is the component of the force along the tangent to
+the trajectory at \(d\vec{s}\).
+The total work done in moving from point \(s_i\) to point \(s_f\) is the
+sum of all the work done during successive infinitesimal displacements:
+<p>\[W = \vec{F}_1 \cdot d\vec{s}_1 + \vec{F}_2 \cdot d\vec{s}_2 +
+\vec{F}_3 \cdot d\vec{s}_3 + \ldots\]
+<p>Replacing the sum over the line segments by an integral, the work
+is found to be:
+<p>\[W_{A\rightarrow B} = \int_A^B \vec{F}(s) \cdot d\vec{s} =
+\int_A^B F(s) (\cos\theta)\,ds\,,\]
+<p>where \(\theta\) is a function of \(s\), the position along the trajectory.
+This is the most general definition of the work done by a force \(\vec{F}(s)\).
+We cannot evaluate this integral until we know how both \(F\) and \(\theta\)
+vary from point to point along the path.
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m20gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. The total work is the sum over successive
+infinitesimal displacements.</figcaption></figure>
+
+<p>For any vector \(\vec{V}\) which is a function of position, an integral of the
+form
+<p>\[\int_i^f \vec{V} \cdot d\vec{s}\,,\]
+<p>along some path joining points \(i\) and \(f\), is called “the line integral of
+\(\vec{V}\).”
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> is of this nature because it is evaluated along the
+actual path in space followed by the particle as it moves from \(i\) to \(f\).
+<p><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> is the “line integral definition of work.”
+For each increment of displacement \(d\vec{s}\) along the path, the
+corresponding increment of work \(dW = \vec{F} \cdot d\vec{s}\) is calculated
+and then these scalar quantities are simply summed to give the work along
+the total path.
+<p>We can obtain an equivalent general expression for <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> by
+expressing \(\vec{F}\) and \(d\vec{s}\) in scalar component form.
+With \(\vec{F} = F_x \hat{x} + F_y \hat{y} + F_z \hat{z}\) and
+\(d\vec{s} = dx \hat{x} + dy \hat{y} + dz \hat{z}\), the resulting work done in
+going from position \(A = (x_A, y_A, z_A)\) to position \(B = (x_B, y_B, z_B)\) can
+be expressed as:
+<p>\[W_{i\rightarrow f} =
+ \int_{x_i}^{x_f} F_x\,dx + \int_{y_i}^{y_f} F_y\,dy +
+\int_{z_i}^{z_f} F_z\,dz\,,\]
+<p>where each integral must be evaluated along a projection of the path.
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+At Space Mountain in Disney World the space rocket ride is simulated by a
+cart which slides along a roller coaster track (see cover) which we will
+consider to be frictionless.
+Starting at an initial position #1 at height \(H\) above the ground, find the
+work done on this rocket when you ride it to the final position \(f\) at the
+bottom of the track (see <a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a>).
+<p>The forces that act on this “rocket” are: the force of gravity,
+\(\vec{F}_g = - m g \hat{y}\) and the “normal” surface reaction force
+\(\vec{N}\).
+The total work done by the resultant force \(\vec{F}_R = \vec{F}_g + \vec{N}\)
+on the rocket between the two end points is:
+<p>\[W_{i\rightarrow f} = \int_i^f \vec{F}_R \cdot d\vec{s} =
+                            \int(\vec{F}_g + \vec{N}) \cdot d\vec{s} =
+                            \int\vec{F}_g \cdot d\vec{s} + \int \vec{N} \cdot d\vec{s}.\]
+<p><div class="figure-full"><figure id="fig-10"><img src="figures/m20gr10.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. Force diagram for rocket cart.</figcaption></figure></div>
+
+<p>Since the surface force is always perpendicular to the path, it does no
+work.
+That is, \(\int \vec{N} \cdot d\vec{s} = \int N \cos\phi\,ds = 0\), since
+the angle between \(\vec{N}\) and \(d\vec{s}\) is always 90°.
+This is true despite the fact that the angle between \(\vec{F}_g\) and
+\(d\vec{s}\) changes continuously as the rocket goes down the track.
+<p>Now we can write \(d\vec{s} = dx \,\hat{x} + dy \,\hat{y}\) so that:
+\[\begin{aligned}W_{i\rightarrow f} & = & \int \vec{F}_g \cdot d\vec{s} =
+\int (-m g \hat{y}) \cdot (dx \hat{x} + dy \hat{y}) \\
+                   & = & - \int_H^0 m g\,dy = - m g \int_H^0\,dy = m g H\end{aligned}\]
+
+Here we see that the line integral reduces to a simple summation of the
+elements \(dy\), which are the projections of \(d\vec{s}\) on the constant
+direction \(\vec{F}_g\).
+The answer, \(m g H\), is an important one to remember.
+It is the energy of the earth-plus-rocket system that was transferred from
+gravitational energy to mechanical energy.
+That answer holds for any earth-plus-object system.
+</div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Power</h2>
+
+<p><h3 id="pcap-4-a">4a. Definition of Power</h3>
+
+Let us now consider the time involved in doing work.
+The same amount of work is done in raising a given body through a given
+height whether it takes one second or one year to do so.
+However, the rate at which work is done is often as interesting to us as is
+the total work performed.
+When an engineer designs a machine it is usually the time rate at which the
+machine can do work that matters.
+<p>Instantaneous power is defined as the time rate at which work is being done
+at some instant of time.
+That is, it is the limit, as the time interval approaches zero, of the amount
+of work done during the interval divided by the interval.
+Since this is the definition of the time derivative, we have:
+<p>\[P=\frac{dW}{dt}\,.\]
+<p>For constant force or velocity, using <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> and \(\vec{v} =
+d\vec{s}/dt\) we get:
+<p>\[P = \vec{F}_\text{const}\, \cdot \vec{v}             \qquad ; \qquad
+         P = \vec{F}               \cdot \vec{v}_\text{const} \,.\]
+<p>The average power \(P_{av}\) during a time interval \(\Delta t\) is:
+<p>\[P_{av} =\frac{W}{\Delta t}\,.\]
+<p>If the power is constant in time, then \(P_\text{const} = P_{av}\) and
+<p>\[W = P_\text{const}\,\Delta t\,.\]
+<p><h3 id="pcap-4-b">4b. Units of Power</h3>
+
+According to the definition of power, its units are units of work divided by
+units of time.
+In the MKS system, the unit of power is called a watt,
+abbreviated W, which is equivalent to a joule per second.
+One watt is the power of a machine that does work at the rate of one joule
+every second.
+Recalling that \(\,\text{J} = \unit{m^{2}\,kg/s^{2}}\), we have that:
+<p>\[\,\text{W} = \,\text{J/s} = \unit{m^{2}\,kg/s^{3}}\,.\]
+<p>The name watt was chosen in honor of the British engineer James Watt
+(1736-1819) who improved the steam engine with his inventions.
+<p>Work can be expressed in units of \(\text{power } \times \text{ time}\).
+This is the origin of the term kilowatt-hour (kWh).
+One kilowatt-hour is the work done in 1&thinsp;<span class="unit">&thinsp;hour</span> by an agent working at a
+constant rate of 1<span class="unit">&thinsp;kW</span> (1000<span class="unit">&thinsp;W</span>).
+Electricity is sold “per <span class="unit">&thinsp;kWh</span>.”
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+Under very intense physical activity the total power output of the heart
+may be 15&thinsp;unitwatts.
+How much work does the heart do in one minute at this rate?
+<p>\[W = P_\text{const} \, \Delta t = (15\,\text{W})\,(60\,\text{s}) =
+900\,\text{J}\,.\]
+<p></div>
+
+<p></section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Kinetic Energy</h2>
+
+<p><h3 id="pcap-5-a">5a. Definition of Kinetic Energy</h3>
+
+A particle's kinetic energy is defined as the amount of energy a particle
+has, due solely to its velocity.
+Using Newton's second law and the definition of total work, one can show that
+the kinetic energy, \(E_k\), of a particle of mass \(m\) traveling at velocity
+\(v\) is:
+<p>\[\text{KINETIC ENERGY } = E_k =\frac{1}{2}m v^2\,.\]
+<p>This is valid whenever Newtonian mechanics is valid.
+We can easily illustrate this derivation for the special case of a resultant
+force, \(\vec{F}_R\), that acts on a particle of mass \(m\) along the direction
+of its displacement.
+For this case the total work done on the particle is:
+<p>\[W_{T,i\rightarrow f} = \int_{s_i}^{s_f} \vec{F}_R \cdot \,d\vec{s} =
+                              \int_{x_i}^{x_f} F_R \,dx\,.\]
+<p>Since the force, hence the acceleration, is along the direction of
+displacement, we can use <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and Newton's second law
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>to write:
+<p>\[\begin{aligned}W_{i\rightarrow f} & = \int_{x_i}^{x_f}  \,m \,a \,dx =
+                                    \int_{x_i}^{x_f}  \,m\,\frac{dv}{dt}dx =
+                                    \int_{x_i}^{x_f}  \,m\,dv\,\frac{dx}{dt} \\                    & = \int_{x_i}^{x_f}  \,m\,v\,dv =
+                                    m \int_{x_i}^{x_f} \,v\,dv =
+                                    \frac{m v_f^2}{2}-\frac{m v_i^2}{2}\,.\end{aligned}\]
+
+<p>Thus the work that went into accelerating the particle, from \(v_i\) to \(v_f\),
+is exactly equal to the change in the kinetic energy for that particle.
+Note that kinetic energy is a scalar quantity.
+It is, as we shall see, just as significant as the vector quantity, momentum,
+that is also a quantity used to describe a particle in motion.
+<p>From its definition, kinetic energy has dimensions
+\(M L^2/T^2\), either mass
+multiplied by the square of speed, or, since it is equivalent to work [as
+shown in <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>], force multiplied by distance.
+Thus, the kinetic energy of a particle may be expressed in <em>joules</em>.
+It follows that a 2<span class="unit">&thinsp;kg</span> particle moving at 1<span class="unit">&thinsp;m/s</span> has a kinetic energy of
+1<span class="unit">&thinsp;J</span>.
+<p>The kinetic energy of a particle can be expressed in terms of the
+magnitude of its linear momentum, \(m \vec{v} = \vec{p}\):
+<p>\[E_k=\frac{1}{2}mv^2=\frac{(mv)^2}{2m}=\frac{p^2}{2m}=
+                \frac{|\vec{p}|^2}{2m}\,\]
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+A particle of mass \(m\) starts from rest and falls a vertical distance \(h\).
+What is the work done on this particle and what is its final kinetic energy?
+<p>The particle experiences only a single constant force,
+\(\vec{F} = - m g\,\hat{y}\), in the downward direction.
+The displacement, \(d\vec{s} = -\,dy\,\hat{y}\), is also downward for a
+distance \(h\).
+Therefore the work done by the gravitational force is:
+<p>\[W = \int\,\vec{F} \cdot d\vec{s} =
+   \int_0^h (-m g\,\hat{y})\cdot(-dy\,\hat{y}) =
+   \int_0^h \,m\,g\,dy = m\,g\,h\,.\]
+<p>Since this is the only work done on the particle, it is equal to the final
+kinetic energy:
+<p>\[m g h = \frac{1}{2}m v^2\,.\]
+<p>Solving for velocity:
+<p>\[v = \sqrt{2\,g\,h\,}\,,\]
+<p>which is the same result we obtain from kinematics for an object falling
+with constant acceleration \(g\) (a “freely-falling” object).
+</div>
+
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+It is possible for a person with a mass of \(7.0 \times 10^1\,\text{kg}\) to fall to
+the ground from a height of 10.0&thinsp;<span class="unit">&thinsp;meters</span> without sustaining an injury.
+What is the kinetic energy of such a person just before hitting the ground?
+The velocity of the person is:
+<p>\[v = \sqrt{2\,g\,h} = \sqrt{2(9.8\unit{m/s^{2}})(10\,\text{m})} = 14\,\text{m/s}\,.\]
+<p>Then the kinetic energy of the person is:
+<p>\[E_k = \frac{1}{2}m v^2 =
+             \frac{1}{2}(70\,\text{kg})(14\,\text{m/s})^2 = 6.9 \times 10^3\,\text{J}\,.\]
+<p><h3 id="pcap-5-b">5b. The Energy Concept</h3>
+
+Of all the concepts of physics, that of energy is perhaps the most
+far-reaching.
+Everyone, whether a scientist or not, has an awareness of energy and what it
+means.
+Energy is what we have to pay for in order to get things done.
+The work itself may remain in the background, but we recognize that each
+gallon of gasoline, each Btu of heating gas, each kilowatt-hour of
+electricity, each calorie of food value, represents, in
+one way or another, the wherewithal for doing something.
+We do not think in terms of paying for force, or acceleration, or momentum.
+Energy is the universal currency that exists in apparently countless
+denominations, and physical processes represent a conversion from one
+denomination to another.
+<p>The above remarks do not really define energy.
+No matter.
+It is worth recalling the opinion of H.&thinsp;A.&thinsp;Kramers:
+“The most important and most fruitful concepts are those to which it is
+impossible to attach a well-defined meaning.”
+The clue to the immense value of energy as a concept lies in its
+transformation.
+We often find energy defined in general as the ability to do work.
+A system possesses energy; it can do work.
+At any instant a system has a certain energy content.
+Part or all of this energy can be transformed into the activity of work.
+Work is only an active measure of energy and not a form of energy itself.
+Work is best regarded as a mode of transfer of energy from one form to
+another.
+It is a medium of exchange.
+In this unit we are dealing with only one category of energy--the kinetic
+energy associated with the motion of an object.
+If energy should be transferred from this form into chemical energy,
+radiation, or the random molecular and atomic motion we call heat, then from
+the standpoint of mechanics it is gone.
+This is a very important feature, because it means that, if we restrict our
+attention purely to mechanics, conservation of energy does not hold.
+Nevertheless, as we shall see, there are many physical situations in which
+total mechanical energy is conserved, and in such contexts it is of
+enormous value in the analysis of real problems.
+</div>
+
+<p><section id="sect-6" class="module-section section-text"><h2 id="sect-6">6. The Work-Kinetic Energy Relation</h2>
+
+<p><h3 id="pcap-6-a">6a. Derivation of the Relation</h3>
+
+<a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> shows that the work done on a particle, when the
+resultant force acting on the particle is in the direction of the
+displacement, is equal to the change in the particle's kinetic energy.
+For the more general case of a force that is not in the direction of motion,
+we can still derive this valuable relation between the work done and the
+change in kinetic energy.
+<p>Write \(\vec{F}_R\) for the resultant force acting upon a particle of mass \(m\),
+moving along a path between the two positions \(s_i\) and \(s_f\), then:
+\[\begin{aligned}\sum W_{i\rightarrow f} & = &
+        \int_{s_i}^{s_f} \vec{F}_R \cdot \,d\vec{s} =
+        \int m \vec{a}\,\cdot\,d\vec{s} =
+        m \int \frac{d\vec{v}}{dt}\,\cdot\,d\vec{s} \\
+                        & = &
+        m \int \,d\vec{v} \cdot \frac{d\vec{s}}{dt} =
+        m \int\,d\vec{v}\cdot \vec{v}\,. \\\end{aligned}\]
+
+
+Thus:
+<p>\[\sum W_{i\rightarrow f} = m \int_{v_i}^{v_f}\,d\vec{v} \cdot \vec{v} =
+   \frac{mv_f^2}{2}-\frac{mv_i^2}{2} = E_{k,f} - E_{k,i} =\Delta E_k\,.\]
+<p>The evaluation of the integral in this last step can be easily seen if you
+write \(\vec{v}\) and \(d\vec{v}\) in scalar component notation.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>In summary,
+<p>\[W_{i\rightarrow f} = \int_i^f \,\vec{F}_R\,\cdot\,d\vec{s} =
+                    \Delta E_k\,.\]
+<p><a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> is known as the Work-Kinetic Energy Relation and it
+is valid no matter what the nature of the force:
+<ul>
+<li><em>The total work done on a particle (by the resultant force
+acting on it), between some starting point \(s_i\) and ending point \(s_f\),
+is the change in the particle's kinetic energy between those two end points.</em></li>
+</ul>
+
+<p>
+This relation applies quite apart from the particular path followed, so long
+as the total work done on the particle is properly computed from the
+resultant force.
+<p><h3 id="pcap-6-b">6b. Significance of the Relation</h3>
+
+The work-kinetic energy relation is not a new independent relationship of
+classical physics.
+We have derived it directly from Newton's second law, utilizing the
+definitions of work and kinetic energy.
+This relation is helpful in solving problems where the work done by the
+resultant force is easily computed, or where we are interested in finding the
+speed of a particle at a particular position.
+However, we should recognize that the work-kinetic energy principle is the
+starting point for formulating some sweeping generalizations in physics.
+We have stressed that this principle can be applied when \(\Sigma W\) is
+interpreted as the work done by the resultant force acting on a particle.
+In many cases however, it is more useful to compute separately the work done
+by each of certain types of forces which may be acting and to give these
+special designations.
+This leads us to the identification of different types of energy, and the
+principle of the conservation of energy.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p></section>
+
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+
+(a) How much work is required to stop a \(1.0 \times 10^3\,\text{kg}\) car that is
+moving at a speed of 20.0<span class="unit">&thinsp;m/s</span>?
+\[\begin{aligned}W_{T,i\rightarrow f} & = & E_{k,f} - E_{k,i} = 0 -\frac{1}{2}m v_i^2 =
+                           0 - \frac{1}{2}(100\,0\,\text{kg})(20\,\text{m/s})^2 \\
+                     & = & - 2.0 \times 10^5\,\text{J}. \\\end{aligned}\]
+
+The negative (\(-\)) sign indicates that there was a decrease in the kinetic energy of
+the car; that is, work was done on the car by a braking force opposing
+its motion.
+<p>
+(b) If this car requires 100 meters to come to rest, what is the total
+resultant braking force acting on the car?
+<p>\[W_{i\rightarrow f} = \int_i^f\vec{F}_R \,\cdot\, d\vec{s} = -f \int_{s_i}^{s_f} \,ds\,,\]
+<p>since the total resultant force can be represented by a single constant
+braking force f which directly opposes the motion.
+Thus:
+<p>\[-2 \times 10^5\,\text{J} = - f(100\,\text{m}) \qquad \text{ or } \qquad f = 2 \times 10^3\,\text{N}\,.\]
+<p></div>
+
+<p><div class="example"><p class="example-label"><strong>Example:</strong></p>
+In a previous example we found that a stretched spring did an amount of work
+\(k x^2/2\) on an object when the spring returned to its equilibrium position
+from a displacement \(x\).
+<p>We can now use the Work-Kinetic Energy relation to easily find the velocity
+of the block as it passes the equilibrium position:
+<p>\[W_{i\rightarrow f} = \Delta E_k\]
+<p>\[\frac{k x^2}{2} = \frac{m v_f^2}{2} - \frac{m v_i^2}{2}\,.\]
+<p>Since it initially started from rest we find:
+<p>\[v_f = x \, \sqrt{k/m}\,.\]
+</div>
+
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+Professor James Linneman made several helpful suggestions. <p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Vectors I: Products of Vectors” (MISN-0-2). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Free-Body Force Diagrams, Frictional Forces, Newton's Second
+Law” (MISN-0-15). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For additional discussion of the mathematical steps presented in
+this derivation see <em>Newtonian Mechanics</em>, A.&thinsp;P.&thinsp;French, W.&thinsp;W.&thinsp;Norton
+&amp; Co. (1971), pp.&thinsp;368-72, or <em>Physics for Scientists and Engineers,
+Volume 1</em>, Melissinos and Lobkowicz, W.&thinsp;B.&thinsp;Saunders Company (1975),
+p.&thinsp;170. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Potential Energy, Conservative Forces, the Law of
+Conservation of Energy” (MISN-0-21). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: If you have trouble with a problem, see the activities in the
+<em>Special Assistance Supplement</em>.
+If there is a <em>help</em> reference, it also is in the <em>Special Assistance
+Supplement</em>.
+<p> In all problems involving the calculation of <em>work</em>, you should
+start with the line-integral definition and show how it can be applied and
+simplified for the particular situation.
+<p>Take \(g = 9.8\unit{m/s^{2}}\), 1&thinsp;HP = 550<span class="unit">&thinsp;ft&thinsp;lb/sec</span> = 746<span class="unit">&thinsp;watts</span>.
+<p>Problems&nbsp;20, 21, and 22 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A crate whose mass is 39<span class="unit">&thinsp;kg</span> is dragged at constant speed across the
+floor for 9.0<span class="unit">&thinsp;meters</span> by applying a force of 100.0<span class="unit">&thinsp;N</span> at an upward angle of
+35 degrees to the horizontal.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the work done by the applied force  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">b.</span> What is the coefficient of friction between the crate and the
+floor?  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</li>
+<li><span class="item-label">2.</span> A constant force
+\(\vec{F} = (5.0\hat{x} + 2.0\hat{y} + 2.0\hat{z})\,\text{N}\)
+acts on an object during the displacement
+\(\Delta\vec{r} = (10.0\hat{x} + 5.0\hat{y} - 6.0\hat{z})\,\text{m}\).
+Determine the net work done by this force during the displacement. 
+<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">3.</span> Determine the speed of a proton that has:
+\( \text{kinetic energy } = 8.0 \times 10^{-13}\,\text{J}\) and
+\( \text{mass }          = 1.67 \times 10^{-27}\,\text{kg}\).  <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">4.</span> What is the kinetic energy of a 5.0<span class="unit">&thinsp;kg</span> object with a velocity:
+\(\vec{v} = (3.0\,\hat{x} + 5.0\,\hat{y})\,\text{m/s}\)?  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">5.</span> An escalator in a department store joins two floors that are 5.0<span class="unit">&thinsp;meters</span> apart.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> When a 51<span class="unit">&thinsp;kg</span> woman rides up this escalator, how much work does
+the motor do to lift her?  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">b.</span> How much power must the motor develop in order to carry 80&thinsp;<span class="unit">&thinsp;people</span>
+between floors in one minute, if the average person's mass is 70.2<span class="unit">&thinsp;kg</span>? 
+<a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</li>
+<li><span class="item-label">6.</span> What horsepower must be developed by the engine of a racing car when
+a forward thrust of \(2.8\times10^3\,\text{N}\) moves it at a constant velocity of
+67.5<span class="unit">&thinsp;m/s</span> (150<span class="unit">&thinsp;mph</span>)?  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">7.</span> A car with a mass of \(1.2 \times 10^3\,\text{kg}\) is pulled at constant
+velocity up a sloping street, inclined at a 31 degree angle from the horizontal,
+by a truck having a tow cable attached at an angle of 41° to the street.
+The coefficient of friction between the car and the street is 0.30.
+What is the minimum work the tow truck would have to do on the car to move
+it 204 meters along the sloping street?  <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">8.</span> <span class="item-text">A particle of mass \(m\) hangs from a string of
+length \(\ell\) as shown.
+A variable horizontal force \(\vec{F}\) starts at zero and gradually increases,
+pulling the particle up very slowly (equilibrium exists at all times)
+until the string makes an angle \(\phi\) with the vertical.
+Calculate the work done by \(\vec{F}\) to raise \(m\) to this position. 
+<a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></span><img src="figures/m20gr11.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">9.</span> A particle is moving with a velocity \(v_0\) along the \(x\)-axis at
+time \(t_0\).
+It is acted upon by a constant force in the \(x\)-direction until time \(t_1\).
+Show that:
+<p>\[\int_{t_0}^{t_1} (\vec{F} \cdot \vec{v})\,dt = \frac{\Delta (p^2)}{2m}\,\]
+<p>where \(\Delta(p^2)\) is the change in the square of its momentum. <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a></li>
+<li><span class="item-label">10.</span> A field goal kicker hits the ball at an angle of 42°
+with respect to the ground.
+The football, of mass 0.40<span class="unit">&thinsp;kg</span>, sails through the air and hits the cross bar
+of the goal post \(3.0\times10^1\,\text{m}\) away.
+If the cross bar is 3.0&thinsp;<span class="unit">&thinsp;meters</span> above the ground, determine the work done by
+the gravitational force over the flight of the ball.  <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+<li><span class="item-label">11.</span> <span class="item-text">A 2.0<span class="unit">&thinsp;kg</span> particle, currently at the origin and
+            having a velocity of \(\vec{v} = 3.0\hat{x}\,\text{m/s}\), is acted upon by the force
+            shown in the graph.
+<ol>
+
+</ol>
+</span><img src="figures/.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">a.</span> Determine the work done, both graphically and analytically, for a
+           displacement from \(x = 0.0\) to \(x = 5.0\,\text{meters}\).  <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> What is the velocity of the particle when it is at \(x = 5.0\,\text{m}\)?  <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+m20gr12</li>
+<li><span class="item-label">12.</span> A car whose mass is \(1.8\times10^3\,\text{kg}\) has a safety bumper
+that can withstand a collision at 5.0<span class="unit">&thinsp;mph</span> (2.25<span class="unit">&thinsp;m/s</span>).
+Suppose the average retarding force of the energy absorbing bumper mechanism
+is \(5.0 \times 10^4\,\text{N}\).
+How much will the bumper be displaced if the car is going at 5.0<span class="unit">&thinsp;mph</span> when it
+hits a tree?  <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a></li>
+<li><span class="item-label">13.</span> An object is thrown with a velocity of 61<span class="unit">&thinsp;m/s</span> vertically
+downward from a height of 202&thinsp;<span class="unit">&thinsp;meters</span>.
+What is its velocity when it hits the ground?
+Work this problem two ways--by the work-kinetic energy relation and by
+the laws of linear motion.  <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a></li>
+<li><span class="item-label">14.</span> A bullet pierces a 4.0<span class="unit">&thinsp;cm</span> thick piece of metal armor plate with
+a velocity of 708<span class="unit">&thinsp;m/s</span> and leaves the other side with a velocity of 310<span class="unit">&thinsp;m/s</span>.
+Determine the thickness of the metal plate that would be required to stop
+the bullet completely.  <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a></li>
+<li><span class="item-label">15.</span> A Mercedes-Benz 450SL is moving at 41<span class="unit">&thinsp;m/s</span> (90<span class="unit">&thinsp;mph</span>) when the brakes become locked.
+How far will the car slide on:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> dry pavement (\(\mu = 0.90\))?  <a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a></li>
+<li><span class="item-label">b.</span> wet pavement (\(\mu = 0.50\))?  <a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a></li>
+<li><span class="item-label">c.</span> icy pavement (\(\mu = 0.10\))?  <a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a>
+</li>
+<li><span class="item-label">16.</span> A girl in an archery class finds that the force required to pull
+the bowstring back is directly proportional to the distance pulled.
+She finds that a force of 29<span class="unit">&thinsp;N</span> is needed to pull the bow string back a
+distance of 0.10&thinsp;<span class="unit">&thinsp;meter</span>.
+If she pulls a 55<span class="unit">&thinsp;gram</span> arrow back a distance of 0.30 meters,
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> what would be the velocity of the arrow if 81% of the work done
+was converted into kinetic energy?  <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a></li>
+<li><span class="item-label">b.</span> If she shoots the arrow straight up, how high will it go (neglect
+the effects of air resistance)?  <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a></li>
+<li><span class="item-label">c.</span> If the arrow actually only goes 91% of the height in part (b),
+what is the average resistive force of the air?  <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a>
+</li>
+<li><span class="item-label">17.</span> A particle of mass 4.0<span class="unit">&thinsp;kg</span> is acted on by the force:
+<p>\[\vec{F} = \left[(x + 2y)\hat{x} + (2y + 3xy)\hat{y}\right]\,\text{N}\,,\]
+<p>as the particle moves along a straight line path from the point (0,0) to
+the point (2.0<span class="unit">&thinsp;m</span>,2.0<span class="unit">&thinsp;m</span>), that is along \(x = y\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the work done by the force.  <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a></li>
+<li><span class="item-label">b.</span> If the particle was at rest when it was at the coordinate origin,
+what is its speed when it is at \(x=2.0\,\text{m}\), \(y=2.0\,\text{m}\)?  <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a>
+</li>
+<li><span class="item-label">18.</span> An airplane lands on an aircraft carrier, and is halted by the
+arresting cable.
+The force equation for the cable is \(\vec{F} = - k x^2\hat{x}\), where
+\(k = 1.20\times10^2\unit{N/m^{2}}\).
+For an initial plane velocity of 81<span class="unit">&thinsp;m/s</span> and a plane mass of
+\(2.25\times10^3\,\text{kg}\), determine how far the plane will travel after being
+hooked.  <a href="#help-19" class="help-link"><span title="Special Assistance">[help&nbsp;19]</span></a></li>
+<li><span class="item-label">19.</span> What horsepower engine would be required if you wish to pull
+a 54<span class="unit">&thinsp;kg</span> woman water skier up from the water in 2.0<span class="unit">&thinsp;s</span> with a final velocity
+of 13<span class="unit">&thinsp;m/s</span>?
+The mass of the boat plus driver is 206<span class="unit">&thinsp;kg</span> and that of the engine is
+45.0<span class="unit">&thinsp;kg</span>.
+During this period the average drag energy of the skier and boat is
+\(5.0\times10^4\,\text{J}\).  <a href="#help-20" class="help-link"><span title="Special Assistance">[help&nbsp;20]</span></a></li>
+<li><span class="item-label">20.</span> <span class="item-text">A constant horizontal force \(\vec{F}\) pushes an
+object of mass \(M\) up a frictionless incline which makes an angle \(\theta\)
+with the horizontal.</span><img src="figures/m20gr13.svg" alt="" class="fig-item">
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Starting with the object midway <em>up</em> the incline, moving the
+speed of \(v_0\) directed up along the incline, use the work-kinetic energy
+relation to find the velocity of the object when it's at a point a distance
+\(D\) further up the incline. ) <a href="#help-21" class="help-link"><span title="Special Assistance">[help&nbsp;21]</span></a></li>
+<li><span class="item-label">b.</span> If at this same starting point as in part (a) the object started
+with the speed \(v_0\) directed <em>down</em> along the incline (same forces
+acting as before), use the work-kinetic energy relation to find the velocity
+of the object when it's at the point a distance \(D\) further up the incline.
+ <a href="#help-21" class="help-link"><span title="Special Assistance">[help&nbsp;21]</span></a></li>
+<li><span class="item-label">c.</span> Explain the relation between your answers to parts (a) and (b).
+What is the difference in the overall motion between the two cases? 
+<a href="#help-21" class="help-link"><span title="Special Assistance">[help&nbsp;21]</span></a>
+</li>
+<li><span class="item-label">21.</span> The gravitational force on an object of mass \(m\) which is at or
+above the surface of the earth, say at a total distance \(r\) from the center of
+the earth, has a magnitude \(K\,m/r^2\) and is directed toward the center of the
+earth.
+Here \(K\) is a constant equal to \(3.99 \times 10^{14}\unit{m^{3}/s^{2}}\).
+Hence the force is not constant but diminishes the farther the object is
+from the earth's center.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At the surface of the earth, recall from previous knowledge that
+this force is \(mg\).
+With this knowledge of the force at the surface of the earth and with \(K\)
+given above, determine the radius of the earth.  <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a></li>
+<li><span class="item-label">b.</span> What is the minimum amount of work that you must do (energy you must
+expend) in order to move an object of mass \(m\) radially outward from the
+surface of the earth to a distance \(r\) from the center of the earth
+(\(r > R_e\))? <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a>
+(HINT: What's the <em>minimum</em> force you must exert?
+That determines the <em>minimum</em> work).  <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a></li>
+<li><span class="item-label">c.</span> From this result, calculate how much energy it takes to move a
+person of mass 65&thinsp;<span class="unit">&thinsp;kilograms</span> from the surface of the earth to an infinite
+distance away (disregard gravity forces other than from the earth). 
+<a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a>
+</li>
+<li><span class="item-label">22.</span> Suppose a car engine is delivering \(1.60 \times 10^2\,\text{hp}\) at a
+continuous rate, keeping the car at 25<span class="unit">&thinsp;m/s</span> (56<span class="unit">&thinsp;mph</span>).
+Determine the force the engine is overcoming.  <a href="#help-23" class="help-link"><span title="Special Assistance">[help&nbsp;23]</span></a></li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(m g \ell (1 - \cos\phi)\)</li>
+<li><span class="item-label">2.</span> 253<span class="unit">&thinsp;hp</span></li>
+<li><span class="item-label">3.</span> 85<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">4.</span> 48<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">5.</span> \(7.4\times10^2\,\text{J}\)</li>
+<li><span class="item-label">6.</span> 51<span class="unit">&thinsp;hp</span>.</li>
+<li><span class="item-label">7.</span> 3.0<span class="unit">&thinsp;m/s</span></li>
+<li><span class="item-label">8.</span> \(8.6 \times 10^2\,\text{m}\)</li>
+<li><span class="item-label">9.</span> 88<span class="unit">&thinsp;m/s</span></li>
+<li><span class="item-label">11.</span> \(-11.8\,\text{J}\)</li>
+<li><span class="item-label">12.</span> \(1.47\times10^6\,\text{J}\)</li>
+<li><span class="item-label">13.</span> \(3.1 \times 10^7\,\text{m/s}\)</li>
+<li><span class="item-label">14.</span> \([F\cos\theta /(mg - F \sin\theta)] = 0.25\)</li>
+<li><span class="item-label">15.</span> 57<span class="unit">&thinsp;m</span></li>
+<li><span class="item-label">16.</span> 25<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">17.</span> \(9.1 \times 10^{-2}\,\text{m}\)</li>
+<li><span class="item-label">18.</span> \(2.5 \times 10^3\,\text{J}\)</li>
+<li><span class="item-label">19.</span> 18<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">20.</span> \(2.0 \times 10^1\,\text{m/s}\)</li>
+<li><span class="item-label">21.</span> \(4.9\times10^{-2}\,\text{m}\)</li>
+<li><span class="item-label">22.</span> 95<span class="unit">&thinsp;m</span></li>
+<li><span class="item-label">23.</span> \(4.6 \times 10^3\,\text{W} or 6.1\,\text{hp}\)</li>
+<li><span class="item-label">24.</span> \(5.8\,\hat{x}\,\text{m/s}\)</li>
+<li><span class="item-label">26.</span> \(2.0 \times 10^1\,\text{m}\)</li>
+<li><span class="item-label">27.</span> 0.17<span class="unit">&thinsp;km</span></li>
+<li><span class="item-label">29.</span> \(5.3 \times 10^{-2}\,\text{N}\)</li>
+<li><span class="item-label">30.</span> \(K m \left[\frac{1}{R_e}-\frac{1}{r}\right]\).</li>
+<li><span class="item-label">31.</span> \(\left[\frac{2D}{M}(F\cos\theta-M g \sin\theta) +
+             v_0^2 \right]^{1/2}\).</li>
+<li><span class="item-label">32.</span> \(6.38 \times 10^6\,\text{m}\)</li>
+<li><span class="item-label">33.</span> Same answer as (BM).</li>
+<li><span class="item-label">34.</span> \(1.1\times10^3\,\text{lb}\)</li>
+<li><span class="item-label">35.</span> In the second case the object moves down, slowing, stops, turns
+            around and when it gets to original point it has \(v_0\) upward
+            speed, and so on up to point distance \(D\) upward.</li>
+<li><span class="item-label">36.</span> \(4.06 \times 10^9\,\text{J}\).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><h3 id="pcap--">. PURPOSE</h3>
+
+If you have trouble with the Problem Supplement, carry out the activities in
+this Supplement.
+<p><h3 id="pcap--">. CONTENTS</h3>
+
+<ul>
+<li><span class="item-label">1.</span> Introduction</li>
+<li><span class="item-label">2.</span> Understanding the Definitions</li>
+<li><span class="item-label">3.</span> Advice and Problems With Hints Available</li>
+<li><span class="item-label">4.</span> Answers for the Assistance Supplement</li>
+<li><span class="item-label">5.</span> Hints for the <em>Problem and Assistance Supplements</em></li>
+</ul>
+
+<p><h3 id="pcap--">. Sect.&thinsp;1. Introduction</h3>
+
+We apply these general relationships:
+<p>\[W_{A\rightarrow B} = \int_A^B \vec{F} \cdot \,d\vec{s} = \Delta E_k\]
+<p>and
+<p>\[P = \frac{dW}{dt} = \vec{F} \cdot \,\vec{v}\,.\]
+<p>You should fully understand those relationships so you can recognize their
+applications to special cases.
+<p><h3 id="pcap--">. Sect.&thinsp;2. Understanding the Definitions</h3>
+
+<p><ol>
+<li><span class="item-label">a.</span> Complete the following table, which summarizes the basic
+characteristics of the quantities in the first column:
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td></td><td>Vector</td><td>Possible</td><td>SI</td><td>SI</td><td>Unit in</td></tr><tr><td></td><td>or</td><td>Sign</td><td>Unit</td><td>Symbol</td><td>MKS</td></tr><tr><td></td><td>Scalar</td><td>\(+\),&thinsp;0,&thinsp;or&thinsp;\(-\)</td><td></td><td></td><td></td></tr><tr><td>Force</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Displacement</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Work</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Power</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+</div>
+ </li>
+<li><span class="item-label">b.</span> Symbol Recognition: write out in words the meaning of each of the
+following symbols:
+<div class="centered"><table class="physnet-table"><tbody><tr><td>(a) \(W_{A \rightarrow B}\)</td><td>(d) \(d\vec{s}\)</td><td>(g) \({\Delta}E_k\)</td></tr><tr><td>(b) \(W_T\)</td><td>(e) \(E_k\)</td><td>(h) \(P_{av}\)</td></tr><tr><td>(c) \(\vec{F}_R\)</td><td>(f) dW</td><td>(i) \(\vec{F}(s)\)</td></tr></tbody></table>
+</div>
+ </li>
+<li><span class="item-label">c.</span> Describe under what conditions each of the following is a valid
+expression for \(\int_A^B \vec{F}(s) \cdot\, d\vec{s}\):
+<div class="centered"><table class="physnet-table"><tbody><tr><td>(a) \( = \vec{F} \cdot \vec{s}\) \qquad </td><td>(d) \( = F \cos\theta \int \,ds\)</td></tr><tr><td>(b) \( = F s\)                   \qquad </td><td>(e) \( = \int F \cos\theta\,ds\)</td></tr><tr><td>(c) \( = F \int \,ds\)</td></tr></tbody></table>
+</div>
+ </li>
+<li><span class="item-label">d.</span> Indicate whether each of the following expressions is either
+correctly or incorrectly written:
+<div class="centered"><table class="physnet-table"><tbody><tr><td>(a) \(\int \,dW = \int F \cos\theta\,ds\) \qquad </td><td>(f) \(W = \int \vec{F}\,d\vec{s}\)</td></tr><tr><td>(b) \(W = \int F s\)</td><td>(g) \(W = F s\)</td></tr><tr><td>(c) \(\int \,dW = \int \vec{F} \cdot \,d\vec{s}\)</td><td>(h) \(\int \vec{F} \cdot \,d\vec{s} = \vec{F} \cdot \vec{s}\)</td></tr><tr><td>(d) \(dW = \vec{F} \cdot \vec{s}\)</td><td>(i) \(W = \int P dt\)</td></tr><tr><td>(e) \(W = F d s\)</td><td>(j) \(P = \vec{F} \vec{v}\)</td></tr></tbody></table>
+</div>
+ </li>
+<li><span class="item-label">e.</span> How is it possible for an object which is moving to have:
+           \(\int \,d\vec{s} = 0\)? </li>
+<li><span class="item-label">f.</span> State the three cases for which: \(W =
+           \int \vec{F} \cdot \,d\vec{s} = 0\). </li>
+<li><span class="item-label">g.</span> Show that: \(\left( F_x \hat{x} + F_y \hat{y} +
+           F_z \hat{z} \right) \cdot \left( dx \hat{x} +
+           dy \hat{y} + dz \hat{z} \right)\) reduces to \(F_x\,dx + F_y\,dy +
+           F_z\,dz\). </li>
+<li><span class="item-label">h.</span> A 90<span class="unit">&thinsp;kg</span> ice hockey player skating during warmup has a kinetic
+           energy of 400<span class="unit">&thinsp;J</span>.
+           (a) If during the game he skates at three times his warmup speed
+           what is his new kinetic energy?
+           (b) If during the game he collides with another player, of the
+           same mass, velocity, and slide along the ice together, what is
+           their combined kinetic energy? </li>
+<li><span class="item-label">i.</span> Compute the average kinetic energy of a 70<span class="unit">&thinsp;kg</span> sprinter who
+           covers 100<span class="unit">&thinsp;m</span> in 9.8&thinsp;<span class="unit">&thinsp;seconds</span>. </li>
+<li><span class="item-label">j.</span> When we are moving at a constant velocity what can we say about
+           \(\Delta E_k\)? </li>
+<li><span class="item-label">k.</span> If an object with forces acting on it is moving with a velocity
+           \(v\) and \(\Delta E_k = 0\), then why does
+           \(W = \int \vec{F} \cdot \,d\vec{s} = 0\)? </li>
+<li><span class="item-label">l.</span> What do we mean by: (a) “\(+\)” work? (b) “\(-\)” work?
+           (c) “\(+\)” power? (d) “\(-\)” power? </li>
+<li><span class="item-label">m.</span> Why is kinetic energy either \(0\) or \(+\) (that is, it is never
+           negative)? </li>
+<li><span class="item-label">n.</span> Calculate both analytically and graphically the work done by the
+           force shown below in moving a particle from \(x = 0\) to \(x = 6\,\text{meters}\).
+           <br>
+<figure class="fig-centered"><img src="figures/m20gr14.svg" alt="" class="physnet-fig"></figure>
+ </li>
+<li><span class="item-label">o.</span> If a force \(\vec{F} = (2x + 3 x^3) \hat{x}\,\text{N}\) acts on an object,
+           what is the work done by this force for a displacement from \(x = 2\)
+           to \(x = 5\,\text{meters}\)? </li>
+<li><span class="item-label">p.</span> Starting with \(W = \int_A^B \vec{F} \cdot\,d\vec{s}\), derive the
+           expression:
+           
+           \[W = \int_{t_1}^{t_2} P\,dt.\]</li>
+<li><span class="item-label">q.</span> Show that: \(\int_{v_i}^{v_f} \vec{v} \cdot\, d\vec{v} = \frac{1}{2}(v_f^2 - v_i^2)\).</li>
+<li>Hint -- write the vectors in component form.</li>
+<li><span class="item-label">r.</span> (a) What power is developed by a 70<span class="unit">&thinsp;kg</span> man when climbing, in 20&thinsp;<span class="unit">&thinsp;seconds</span>,
+               a flight of stairs that rises 12&thinsp;<span class="unit">&thinsp;meters</span>?</li>
+<li>(b) What power must be provided to move a 10<span class="unit">&thinsp;kg</span> block
+           horizontally on a surface with friction, if a force of
+           \(1.0\times10^2\,\text{N}\) gives it a constant velocity of
+           \(2.0\times10^1\,\text{m/s}\)? </li>
+<li><span class="item-label">s.</span> Why is the definition of work a valuable concept? </li>
+<li><span class="item-label">t.</span> Why is the work-energy principle a useful relationship? </li>
+</ol>
+
+<p><h3 id="pcap--">. Sect.&thinsp;3. Advice and Problems With Hints Available</h3>
+
+<p> In working out the solution to a problem:
+<p><ol>
+<li><span class="item-label">a.</span> List the properties or data given.</li>
+<li><span class="item-label">b.</span> Clearly indicate which quantities are to be found.</li>
+<li><span class="item-label">c.</span> Determine which conceptual relationship(s) is to be applied.</li>
+<li><span class="item-label">d.</span> Simplify the general relationship for the specific case.</li>
+</ol>
+
+<p> Attempt to work these problems without assistance before consulting
+the answers or hints provided in Sections 5 and 6.
+<p><ol>
+<li><span class="item-label">1.</span> <span class="item-text">An object which has a mass of 20<span class="unit">&thinsp;kg</span> sits on a horizontal surface.
+           It is found that the frictional force between the object and the
+           surface when the object moves across the surface is a constant 15<span class="unit">&thinsp;N</span>.
+           Suppose that you move this object with a horizontal force a distance
+           of 50<span class="unit">&thinsp;m</span> at a constant speed of 3<span class="unit">&thinsp;m/s</span>.</span><img src="figures/m20gr15.svg" alt="" class="fig-item"></li>
+<li>How much work is done by the resultant of all the forces acting on
+           this object?  How much work do you do?  </li>
+<li><span class="item-label">2.</span> A quarterback throws a long pass and the football
+          (\(\text{ mass } = 4.0\times10^2\,\text{gm}\)) leaves his hand at an angle of
+           \(4.0\times10^1\,\,\text{degrees}\) to the horizontal ground.
+           The ball hits the tight end, who lets it slip through his hands
+           so that it falls to the ground.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What was the work done on the ball during the first 0.10<span class="unit">&thinsp;m</span> of
+           travel just after it left the quarterback's hand?
+           This displacement may be considered infinitesimal compared to the
+           total trajectory.  </li>
+<li><span class="item-label">b.</span> What is the work done on the ball during an 0.10<span class="unit">&thinsp;m</span> displacement
+           at the peak of its trajectory?  </li>
+<li><span class="item-label">c.</span> What is the increment of work done on the ball during an 0.10<span class="unit">&thinsp;m</span>
+           displacement as it falls vertically to the ground just after
+           hitting the tight end?  
+</li>
+<li><span class="item-label">3.</span> A \(1.00\times10^2\,\text{kg}\) fullback has a velocity of 9.0<span class="unit">&thinsp;m/s</span> as he
+           hits the line.
+           If he is to be held to a 2.0<span class="unit">&thinsp;m</span> gain, what average resultant
+           force must be exerted on him by the opposing team?  </li>
+<li><span class="item-label">4.</span> A baseball (\(\text{mass } = 0.15\,\text{kg}\)) has a kinetic energy of
+           \(5.0\times10^1\,\text{J}\) at the peak of its trajectory, which is 34<span class="unit">&thinsp;m</span> above ground.
+           What was the velocity of the ball just after it was hit by the bat?  </li>
+<li><span class="item-label">5.</span> A \(1.00\times10^3\,\text{kg}\) elevator starts from rest and experiences
+           a constant upward acceleration of 2.0<span class="unit">&thinsp;m/s<sup>2</sup></span>.
+           Determine the power required to maintain this acceleration for
+           4.0<span class="unit">&thinsp;s</span>.  </li>
+</ol>
+
+<p>
+<p><h3 id="pcap--">. Answers for the Assistance Supplement</h3>
+
+<ol>
+<li><span class="item-label">37.</span> 36.5<span class="unit">&thinsp;m/s</span>. The work done by gravity is \(mgh = \Delta E_k\).</li>
+<li><span class="item-label">38.</span> Zero, since \(m\,g\,\hat{y} \perp d\vec{s}\).</li>
+<li><span class="item-label">39.</span> When you draw your one-body force diagram you should have four
+           forces acting on this object: gravity, the normal force upward
+           exerted by the surface, the force you apply, and the frictional
+           force in the opposite direction.
+           The key phrase in this problem description is “constant speed,”
+           which implies \(\vec{a} = 0\) so \(\vec{F}_R = 0\), hence \(W_R = 0\).</li>
+<li>What force do you exert? (J)
+           How much work do you do? (K)</li>
+<li><span class="item-label">40.</span> 8000&thinsp;W.
+           Use \(s = v t + a t^2/2\) to find the distance travelled and
+           evaluate \(W = \int \vec{F} \cdot \,d\vec{s} = m a s\), then solve
+           for power.</li>
+<li><span class="item-label">41.</span> \(+0.39\,\text{J}\).
+            \(W = \int\,m\,g(+1)\,ds\).</li>
+<li><span class="item-label">42.</span> It does not change.
+           This is consistent with \(W = \Delta E_k = 0\), since the speed is
+           constant.</li>
+<li><span class="item-label">43.</span> \(-0.25\,\text{J}\), \(W = \int\,m\,g(\cos\,130^\circ)\,ds\). <a href="#help-39" class="help-link"><span title="Special Assistance">[help&nbsp;39]</span></a></li>
+<li><span class="item-label">44.</span> 2025<span class="unit">&thinsp;N</span>.
+           Use the work-kinetic energy relation, assuming the opposing force
+           starts acting at the line of scrimmage.</li>
+<li><span class="item-label">45.</span> 6 meters.
+           What is the kinetic energy of this object?
+           (See L).
+           Now apply the work-kinetic energy principle, where the only force
+           acting on the block is the resistive frictional force.</li>
+<li><span class="item-label">46.</span> Constant \(v\) so \(\vec{F} = 0\) so you exert 15<span class="unit">&thinsp;N</span>.</li>
+<li><span class="item-label">47.</span> given \(v\) and \(d\), \(t = d/v\) so \(W = P t = (F v) \times (d/v) = 750\,\text{J}\).
+            Also: \(W = F \times d = 750\,\text{J}\).</li>
+<li><span class="item-label">48.</span> 90<span class="unit">&thinsp;J</span>.</li>
+<li><span class="item-label">49.</span> <br>
+
+<table class="physnet-table"><tbody><tr><td></td><td>Vector</td><td>Possible</td><td>SI</td><td>SI</td><td>Unit in</td></tr><tr><td></td><td>or</td><td>Sign</td><td>Unit</td><td>Symbol</td><td>MKS</td></tr><tr><td></td><td>Scalar</td><td></td><td></td><td></td><td></td></tr><tr><td>Force</td><td>Vector</td><td>\(+,0,-\)</td><td>newton</td><td>N</td><td>kg&thinsp;m&thinsp;/s<sup>2</sup></td></tr><tr><td>Displacement</td><td>Vector</td><td>\(+,0,-\)</td><td>meter</td><td>m</td><td>m</td></tr><tr><td>Work</td><td>Scalar</td><td>\(+,0,-\)</td><td>joule</td><td>J</td><td>kg&thinsp;m<sup>2</sup>/s<sup>2</sup></td></tr><tr><td>Power</td><td>Scalar</td><td>\(+,0,-\)</td><td>watt</td><td>W</td><td>kg&thinsp;m<sup>2</sup>/s<sup>3</sup></td></tr></tbody></table>
+</li>
+<li><span class="item-label">50.</span> (a) Work done on a particle undergoing a displacement from position
+           \(A\) to position \(B\).</li>
+<li>(b) The scalar summation of the work done by each force acting on a
+           particle - superposition of work principle.</li>
+<li>(c) The resultant force which acts upon a particle.
+           It is the same as \(\sum_i \vec{F}_i\).</li>
+<li>(d) An infinitesimal displacement of a particle.
+           It is a vector.
+           Contrast it to \(\vec{s}\), which is a finite displacement.</li>
+<li>(e) The kinetic energy of a particle.
+           For a particle of mass m moving with a velocity \(v\), the kinetic
+           energy is \(mv^2/2\).</li>
+<li>(f) An element of work done on a particle by a force during an
+           infinitesimal displacement \(d\vec{s}\).</li>
+<li>(g) The change in kinetic energy of a particle;
+           \(mv_f^2/2 - mv_i^2/2\), where \(v_f\) is the velocity at the final
+           position (\(f\)) and \(v_i\) is the velocity at the initial position
+           (\(i\)).</li>
+<li>(h) The average power, (\(W/t\)) exerted during a time interval \(t\),
+           where the total work done during this interval is \(W\).</li>
+<li>(i) A force that varies in magnitude and direction as a function
+           of position.</li>
+<li><span class="item-label">51.</span> (a) Constant force, not necessarily parallel to finite
+           displacement.</li>
+<li>(b) Constant force, parallel to finite displacement.
+           Although W = Fs may be the easiest form of the work definition to
+           recall, remember that it is just a special case of a more general
+           relationship.</li>
+<li>(c) Constant force, parallel to an infinitesimal displacement.</li>
+<li>(d) Constant force, not parallel to an infinitesimal displacement.</li>
+<li>(e) Variable force which depends on position.</li>
+<li><span class="item-label">52.</span> (a) ok</li>
+<li>(b) NO - must have a ds under integral sign.</li>
+<li>(c) ok</li>
+<li>(d) No - left side implies increment, right side a finite amount.</li>
+<li>(e) No - must have integral sign on right side.</li>
+<li>(f) No, must have vector multiplication sign (dot) between
+           \(\vec{F}\) and d\(\vec{s}\).</li>
+<li>(g) ok</li>
+<li>(h) ok</li>
+<li>(i) ok</li>
+<li>(j) No, just have vector multiplication sign (dot) between
+           \(\vec{F}\) and \(\vec{v}\).</li>
+<li><span class="item-label">53.</span> Consider the work done by gravity on a round trip, when you throw
+           a ball up into the air vertically and it returns to your hand.</li>
+<li>\(W = \int \vec{F} \cdot \,d\vec{s}\)</li>
+<li>\(W = W_\text{up} + W_\text{down} =
+           \int mg(-1)\,ds + \int mg(+1)\,ds = 0\)
+           because net \(\vec{s} = \int \,d\vec{s} = 0\).</li>
+<li>For any round trip displacement net \(\vec{s} = 0\).</li>
+<li><span class="item-label">54.</span> \(\vec{F} = 0\), \(d\vec{s} = 0\) and \(\vec{F} \perp \,d\vec{s}\).</li>
+<li><span class="item-text">If a constant force \(\vec{F}\) acts perpendicular to
+                          the displacement \(\vec{s}\) of a particle then
+                          \(\theta = 90^\circ\) so that \(W = 0\) and no work is
+                          done by this force.
+                          Note that work may not always be done on a particle
+                          which is undergoing a displacement even though a
+                          force is applied.</span><img src="figures/m20gr16.svg" alt="" class="fig-item"></li>
+<li>Here are three forces doing zero work (see figures below):</li>
+<li>(a) the force of gravity (\(m g \hat{y}\)) on a particle moving
+           horizontally.</li>
+<li>(b) the normal force (\(\vec{N}\)) as the particle moves along the
+           surface.</li>
+<li>(c) the tension (\(\vec{T}\)) in the cord of a simple pendulum,
+           since this force is always \(\perp\) to the displacement.
+<p>           <figure class="fig-centered"><img src="figures/m20gr17.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">55.</span> Remember that \(\hat{x} \cdot \hat{x} = 1\),
+           \(\hat{x} \cdot \hat{y} = \hat{x} \cdot \hat{z} = 0\), etc.</li>
+<li><span class="item-label">56.</span> a) 3600<span class="unit">&thinsp;J</span></li>
+<li>b) 7200<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">57.</span> \(3.6 \times 10^3\,\text{J}\).  Hint: \(\vec{v} = d\vec{s}/dt\).</li>
+<li><span class="item-label">58.</span> \(\Delta E_k = 0\), since \(\Delta E_k = m \Delta (v^2)/2 =
+           m [(v + \Delta v)^2 - v^2]/2\), and \(\Delta v = 0\).</li>
+<li><span class="item-label">59.</span> \(\vec{F}_R = 0\), that is there is no net force parallel to the
+           displacement.</li>
+<li><span class="item-label">60.</span> (a) The resultant force acts on the particle in the direction of
+           the displacement, so particle increases in energy (kinetic).</li>
+<li>(b) The resultant force acting on the particle is opposite to the
+           direction of the displacement, so that there is a decrease in
+           kinetic energy.</li>
+<li>(c) An increase in the energy of the system.</li>
+<li>(d) A decrease in the energy of the system.</li>
+<li><span class="item-label">61.</span> \(4E_k = m v^2/2\), since \(v^2\) is always positive the kinetic
+            energy is positive.
+            You can never have less than zero kinetic energy.
+            Zero kinetic energy corresponds to an object at rest.
+            Since kinetic energy is a scalar it does not tell you anything
+            about the direction of the velocity of a particle.</li>
+<li><span class="item-label">62.</span> 19<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">63.</span> 480<span class="unit">&thinsp;J</span></li>
+<li><span class="item-label">64.</span> a) 412<span class="unit">&thinsp;W</span>; b) 2000<span class="unit">&thinsp;W</span> <a href="#help-38" class="help-link"><span title="Special Assistance">[help&nbsp;38]</span></a></li>
+<li><span class="item-label">65.</span> It provides a method for calculating the change in energy of a
+           particle when the force acting on it is not constant but is a
+           function of the position of the particle.</li>
+<li><span class="item-label">66.</span> Work can be found from the \(\Delta E_k\) without having to know
+           anything about the nature of the forces involved.</li>
+</ol>
+
+<p><h3 id="pcap--">. Sect.&thinsp;6: Hints for the <em>Problem Supplement</em></h3>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">(a) At constant magnitude of the frictional force will equal the
+           magnitude applied force.
+           Resolve the applied force in its vertical and horizontal components.
+           Remember that \(N = m g - F \sin\theta\).
+<p> (b) The coefficient of friction is the frictional force divided by
+           the normal force, so that
+           \(\mu = F \cos\theta/(m g - F \sin\theta)\).
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Determine \(\vec{F} \cdot \,d\vec{s}\), applying the fact that
+           \(\hat{x} \cdot \hat{x} = 1\) and \(\hat{x} \cdot \hat{y} =
+           \hat{x} \cdot \hat{z} = 0\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The kinetic energy is given, so use \(mv^2/2 = E_k\) and solve to find that
+ \(v = (2E_k/m)^{1/^2}\).
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Recall that \(|\vec{v}|^2 = v^2 = v_x^2 + v_y^2\).
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+           (a) Calculate the work done by the escalator against gravity by
+           resolving the force it exerts into vertical and horizontal
+           components.
+           Only the vertical component will do any work.
+           Why?
+<p>           (b) Use the definition of power involving work and time.</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Use the definition of power involving force and velocity.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+           Draw a one-body diagram for the car.
+           Resolve the forces into their components parallel and
+           perpendicular to the street.
+           Here we write the street-to-horizontal angle as \(\phi\), the
+           cable-to-street angle as \(\theta\), the mass of the car as \(m\),
+           the tension in the cable as \(T\), the distance along the street as
+           \(s\), the coefficient of friction as \(\mu\), and the work done by
+           the <em>truck</em> on the <em>car</em> as \(W\).
+           Then for the work done by the truck (via the cable) on the
+           car-earth system we get:<br>
+
+           \(W = s T \cos\theta = m g s \cos\theta (\sin\phi + \mu \cos\phi)/(\cos\theta +
+           \mu \sin\theta)\).<br>
+
+           If you still have trouble, see <a href="#help-24" class="help-link"><span title="Special Assistance">[help&nbsp;24]</span></a>.</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">
+           Since the particle is in equilibrium the sum of the horizontal
+           components of force are zero, as is the sum of the vertical components.
+           You should be able to show for the horizontal components that:
+           \(F - T \sin\phi = 0\), and for the vertical components, \(T \cos\phi - m g = 0\).
+           Eliminate \(T\) between these two equations to obtain \(F\) in terms of \(\phi\).
+           Since \(\phi = s/\ell\), then \(ds = \ell\,d\phi\).
+           Now evaluate \(\int \vec{F} \cdot \,d\vec{s}\), remembering that
+           there is an angle between \(\vec{F}\) and \(d\vec{s}\).</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">Apply the definitions of \(\vec{v} = d\vec{s}/dt\) and \(E_k\).</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">Show that the work done is equal to
+           \(\int (m g \hat{z}) \cdot (d\vec{s})\) where \(\vec{s}\) turns out to
+           be the net vertical displacement.</div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">For your analytical solution write the equation for the
+           straight line shown which will represent the effective force.
+           This is \(F = 10 - 2x\).</div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">Apply the work-kinetic energy relation, assuming that
+ the retarding force is constant during the displacement, to find the distance the
+ bumper moves from knowing the total work done using \(\Delta E_k\).</div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">Apply the work-kinetic energy relation for motion in a
+ vertical direction:  \(v_f = [2gh + v_0^2]^{1/2}\).
+ This method and the laws of linear motion should lead you to the same
+ results.</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">First apply the work-kinetic energy relation to find the
+ average retarding force per unit thickness of metal plate, since the \(\Delta E_k\) is known.
+ Then apply the principle a second time with the new \(\Delta E_k\) to find the distance required.
+ Note that \(v_f = 0\) for the second case.</div></div>
+
+<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">Use the work-kinetic energy relation, with
+ \(F_\text{friction } = \mu N = \mu m\,g\) so that \(s = v_0^2/(2\mu g)\).</div></div>
+
+<p><div id="help-17" class="help-item"><span class="help-num">17.</span><div class="help-body">
+ (a) Since \(F = kx\), find \(k\) from the given values of \(F\) and \(x\).
+     Then integrate \(\vec{F} \cdot d\vec{s}\) from 0 to 0.3<span class="unit">&thinsp;m</span> to find the work done.
+     Note that only 80% of this work is converted into \(E_k\).
+<p> (b) \(h = v_i^2/(2g)\)
+<p> (c) \(F = [(mv_i^2/2) - (mgh')]/h'\) where \(h' = 0.9\,h\).</div></div>
+
+<p><div id="help-18" class="help-item"><span class="help-num">18.</span><div class="help-body">Here \(x = y\) so that \(dx = dy\).
+           Use \(\int F_x\,dx + \int F_y\,dy\) and simplify before integrating.</div></div>
+
+<p><div id="help-19" class="help-item"><span class="help-num">19.</span><div class="help-body">Use \(\int \vec{F} \cdot \,d\vec{s}\) with
+           \(\vec{F} = - k x^2 \hat{x}\) and \(d\vec{s} = dx \hat{x}\).</div></div>
+
+<p><div id="help-20" class="help-item"><span class="help-num">20.</span><div class="help-body">Use the work-kinetic energy relation, including the drag
+ energy in the \(W\) expression, so that the power will equal
+ \([W_\text{drag} + (M v_f^2/2)]/t\) where \(M\) is the total mass.</div></div>
+
+<p><div id="help-21" class="help-item"><span class="help-num">21.</span><div class="help-body">In the expression \(W = \int_i^f \vec{F}\cdot d\vec{s}\):
+<p> (1) What is \(d\vec{s}\)? <a href="#help-26" class="help-link"><span title="Special Assistance">[help&nbsp;26]</span></a>
+<p> (2) What is \(\vec{F}\cdot d\vec{s}\)? <a href="#help-32" class="help-link"><span title="Special Assistance">[help&nbsp;32]</span></a>
+<p> (3) Use a <em>given</em> property of \(\vec{F}\) to simplify the integral
+ before integrating. <a href="#help-28" class="help-link"><span title="Special Assistance">[help&nbsp;28]</span></a>
+<p> Part (a): The other forces besides \(\vec{F}\) acting of the subject are the
+ force due to the earth's gravity, and the force exerted on the object by the
+ surface of the incline.
+ Draw your vector diagram of the forces and resolve them into their components
+ parallel and perpendicular to the inclined surface.
+ 
+ (4) Repeat questions (1) and (2) above for the force due to gravity. <a href="#help-27" class="help-link"><span title="Special Assistance">[help&nbsp;27]</span></a> and <a href="#help-35" class="help-link"><span title="Special Assistance">[help&nbsp;35]</span></a>
+<p> (5) Repeat questions (1) and (2) above for the force exerted by the surface. <a href="#help-29" class="help-link"><span title="Special Assistance">[help&nbsp;29]</span></a> and <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p> (6) What are the resulting force components parallel to the displacement?  <a href="#help-36" class="help-link"><span title="Special Assistance">[help&nbsp;36]</span></a>
+<p> Part (b): Now your initial velocity vector is <em>down</em> the incline, but
+ \(d\vec{s}\) is still up the incline. Why? <a href="#help-34" class="help-link"><span title="Special Assistance">[help&nbsp;34]</span></a></div></div>
+
+<p><div id="help-22" class="help-item"><span class="help-num">22.</span><div class="help-body">
+ (a) You should find \(r = (K/g)^{1/2}\).
+<p> (b) This is a variable force: it depends upon position \(\vec{s}\). So:
+<p>     \(W_{R_e \rightarrow r} = \int_{R_e}^{r} \vec{F}\cdot d\vec{s}\)
+<p>     Why must \(\vec{F}\cdot d\vec{s}\) be evaluated under the integral sign? <a href="#help-33" class="help-link"><span title="Special Assistance">[help&nbsp;33]</span></a>
+<p> (c) Here \(r \rightarrow \infty\) so that the work done becomes \(K\,m/R_e\). Why? <a href="#help-37" class="help-link"><span title="Special Assistance">[help&nbsp;37]</span></a></div></div>
+
+<p><div id="help-23" class="help-item"><span class="help-num">23.</span><div class="help-body">\(F = \frac{1.60\times 10^2 \times 550\,\text{ft}\,\text{lb/s}}
+            {(56\,\text{mi/hr})(\,\text{hr}/3600\,\text{s})(5280\,\text{ft/mi})}\)</div></div>
+
+<p><div id="help-24" class="help-item"><span class="help-num">24.</span><div class="help-body">The work done by the cable is done against car-earth
+ frictional (contact) and gravitational (non-contact) forces.
+ \(W_{cable} = \vec{T}\cdot\vec{s} = Ts\cos\theta\) and
+ \(T=mg(\mu\cos\phi+\sin\phi)/(\mu\sin\theta+\cos\theta)\).
+ <br>
+
+ <strong>Only for those interested</strong>:  The work done against the
+ car-earth gravitational force is \(mgs\sin\phi=1.24\times10^6\,\text{J}\).
+ The work done against the car-earth frictional force is
+ \(\mu Ns=0.23\times10^6\,\text{J}\) where:<br>
+
+ \(N=mg(\cos\theta\cos\phi-\sin\theta\sin\phi)/
+ (\mu\sin\theta+\cos\theta)\).</div></div>
+
+<p><div id="help-26" class="help-item"><span class="help-num">26.</span><div class="help-body">An infinitesimal displacement vector whose magnitude is the
+ element of path length along the incline and whose direction is up the incline parallel to its surface.</div></div>
+
+<p><div id="help-27" class="help-item"><span class="help-num">27.</span><div class="help-body">Same as [S-26].</div></div>
+
+<p><div id="help-28" class="help-item"><span class="help-num">28.</span><div class="help-body">\(\int \vec{F}\cdot d\vec{s} = \vec{F}\cdot \int d\vec{s}\) because \(F\)
+ is constant.  \(\int d\vec{s}\) is just a vector along the incline whose magnitude is the
+ total distance between the starting point and the ending point.</div></div>
+
+<p><div id="help-29" class="help-item"><span class="help-num">29.</span><div class="help-body">Same as [S-26].</div></div>
+
+<p><div id="help-31" class="help-item"><span class="help-num">31.</span><div class="help-body">Zero (be sure you know why).</div></div>
+
+<p><div id="help-32" class="help-item"><span class="help-num">32.</span><div class="help-body">\((F\cos\theta) ds\) where \(ds\) is element of path length up the incline.</div></div>
+
+<p><div id="help-33" class="help-item"><span class="help-num">33.</span><div class="help-body">The unit vector \(\hat{r}\) is radially outward, by definition from mathematics.
+ The force you exert is in the same direction so:
+ 
+ \[\vec{F} = \frac{K m}{r^2} \left(\hat{r}\right)\,.\]
+ 
+ The displacement was described as being in the direction away from the
+ center of the earth so: \(d\vec{s} = \hat{r} dr\)&thinsp;.
+ Recall that the scalar product of any unit vector with itself is unity
+ so:
+ 
+ \[\vec{F} \cdot d\vec{s} = \frac{K m}{r^2}\,dr\,.\]
+ 
+</div></div>
+
+<p><div id="help-34" class="help-item"><span class="help-num">34.</span><div class="help-body">Since it is only the final displacement \(D\) which is of interest.</div></div>
+
+<p><div id="help-35" class="help-item"><span class="help-num">35.</span><div class="help-body">\(-(Mg\sin\theta)ds\), where \(ds\) is element of path length up the incline.</div></div>
+
+<p><div id="help-36" class="help-item"><span class="help-num">36.</span><div class="help-body">\((F\cos\theta - mg \sin\theta)\).</div></div>
+
+<p><div id="help-37" class="help-item"><span class="help-num">37.</span><div class="help-body">As \(r \rightarrow \infty\), \(\frac{1}{r} \rightarrow 0\).</div></div>
+
+        
+<div id="help-38" class="help-item"><span class="help-num">38.</span><div class="help-body">velocity of block was said to be constant, so acceleration
+ of block is zero, so net force on block is zero.</div></div>
+
+        
+<div id="help-39" class="help-item"><span class="help-num">39.</span><div class="help-body">During this short time interval, the angle between the path
+ of the football and the force of gravity is \ldots </div></div>
+
+        
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.
+One or more, or none, of these skills may be on the actual exam.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m20gr13.svg" alt="" class="physnet-fig"><figcaption>A constant horizontal force \(\vec{F}\) pushes an
+object of mass \(M\) up a frictionless incline which makes an angle \(\theta\)
+with the horizontal.</figcaption></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Starting with the object midway <em>up</em> the incline, moving the
+speed of \(v_0\) directed up along the incline, use the work-kinetic energy
+relation to find the velocity of the object when it's at a point a distance
+\(D\) further up the incline.</li>
+<li><span class="item-label">b.</span> If at this same starting point as in part (a) the object started
+with the speed \(v_0\) directed <em>down</em> along the incline (same forces
+acting as before), use the work-kinetic energy relation to find the velocity
+of the object when it's at the point a distance \(D\) further up the incline.</li>
+<li><span class="item-label">c.</span> Explain the relation between your answers to parts (a) and (b).
+What is the difference in the overall motion between the two cases?
+</li>
+<li><span class="item-label">3.</span> The gravitational force on an object of mass \(m\) which is at or
+above the surface of the earth, say at a total distance \(r\) from the center of
+the earth, has a magnitude \(K\,m/r^2\) and is directed toward the center of the
+earth.
+Here \(K\) is a constant equal to \(3.99 \times 10^{14}\unit{m^{3}/s^{2}}\).
+Hence the force is not constant but diminishes the farther the object is
+from the earth's center.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At the surface of the earth, recall from previous knowledge that
+this force is \(mg\).
+With this knowledge of the force at the surface of the earth and with \(K\)
+given above, determine the radius of the earth.</li>
+<li><span class="item-label">b.</span> What is the minimum amount of work that you must do (energy you must
+expend) in order to move an object of mass \(m\) radially outward from the
+surface of the earth to a distance \(r\) from the center of the earth
+(\(r > R_e\))?
+(HINT: What's the <em>minimum</em> force you must exert?
+That determines the <em>minimum</em> work).</li>
+<li><span class="item-label">c.</span> From this result, calculate how much energy it takes to move a
+person of mass 65&thinsp;<span class="unit">&thinsp;kilograms</span> from the surface of the earth to an infinite
+distance away (disregard gravity forces other than from the earth).
+</li>
+<li><span class="item-label">4.</span> Suppose a car engine is delivering \(1.60 \times 10^2\Emph{hp}\) at a
+continuous rate, keeping the car at 25<span class="unit">&thinsp;m/s</span> (56<span class="unit">&thinsp;mph</span>).
+Determine the force the engine is overcoming.</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>Text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;21.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;22.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;23.</li>
+</ol>
+
+</section>
+

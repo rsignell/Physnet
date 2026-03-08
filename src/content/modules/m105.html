@@ -1,0 +1,213 @@
+<header class="module-header">
+  <h1 class="module-title">Orbits in an Inverse-Square-Law Force Field: A Computer Project <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: apogee, orbit, perigee <a href="../m102/" class="module-ref">MISN-0-102</a>, mirror symmetry
+    (Glossary).</li><li><strong>2.</strong> State the expression for the orbital angular momentum of a point
+    object and state the circumstances under which it is conserved <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>3.</strong> Calculate the velocity of a mass traveling in a circular orbit in
+    an inverse-square gravitational field <a href="../m102/" class="module-ref">MISN-0-102</a>.</li><li><strong>4.</strong> State Kepler's three laws of planetary motion <a href="../m102/" class="module-ref">MISN-0-102</a>.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ On a computer, use a packaged version of the Numerov algorithm
+    to calculate and graph circular, elliptical, and
+    hyperbolic orbits in an inverse-square-law force field.
+    <br>
+ Interpret the various characteristics of the resulting orbits
+    and trajectories in terms of Kepler's laws, symmetries, and conservation of
+    angular momentum.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> A calculator, graph paper, a microcomputer that accesses the
+    program “ORBIT,” and the hand-out “CBI on University Micros,”
+    (MISN-8-100).</li>
+</ol>
+</div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Derivation of the Numerov Algorithm in Two Dimensions for
+    Satellite and Planetary Orbits” (MISN-0-104).</li><li><strong>2.</strong> “Derivation of Orbits and Trajectories in an Inverse-Square-Law
+    Force Field” (MISN-0-106).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Computer Program “Orbit”</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m105gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Graphed output for these input values:
+<p><table class="physnet-table"><tbody><tr><td>ENTER X(KM)?</td><td>-6667</td></tr><tr><td>ENTER Y(KM)?</td><td>0</td></tr><tr><td>ENTER THETA(DEG)?</td><td>90</td></tr><tr><td>ENTER V(KM/SEC)?</td><td>8.357924</td></tr><tr><td>ENTER DELTA(SEC)?</td><td>2</td></tr><tr><td>MAX T(SEC)?</td><td>5040</td></tr><tr><td>PRINT EVERY Nth: N?</td><td>100</td></tr></tbody></table>
+</figcaption></figure></div>
+
+<p><h3 id="pcap-1-a">1a. Overview</h3>
+
+The computer program ORBIT uses the second-order Numerov algorithm,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>to solve Newton's second law for the case of a mass m in the gravitational
+field of the earth.
+<p>You specify the mass's initial coordinates x and y (in km), taking the origin
+of the coordinate system to be at the center of the earth, and also specify
+the mass's initial velocity vector in terms of its angular orientation and
+speed.
+The direction of the velocity vector must be specified in degrees, measured
+counterclockwise from the positive direction of the \(x\)-axis, and the speed
+must be in km/s.
+A typical input and its corresponding pictorial representation are shown in
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The program ORBIT automatically puts in the earth's mass and the
+gravitational constant in SI units and then solves the differential equation
+of motion,
+<p>\[\frac{\vec{F}}{m} = \vec{a} = \frac{d^2\vec{r}}{dt^2} = -\frac{Gm_E}{r^2}\hat{r}\,,\]
+<p>for the position of the mass at the ends of successive time-intervals
+\(\Delta\) (“DELTA” in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The program ORBIT does not (in general) print out all the net-point time values
+you make it calculate.
+Rather, it tells you it will print out each n<sup>th</sup> value, then asks you for your
+choice of “\(n\).”
+The time interval \(\Delta\) determines the accuracy of the numerical solution:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><ul>
+<li>If \(\Delta\) is too large, the solution will be inaccurate due to the finite-interval computer
+algorith being a poor approximation to the differential equation.</li>
+<li>If \(\Delta\) is too small, the solution will be inaccurate due to the subtraction of
+numbers have too many agreeing digits because of finite computer word lengths.</li>
+</ul>
+
+A typical value of \(\Delta\) usually good for almost-3-digit accuracy is shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><h3 id="pcap-1-b">1b. Input and Output</h3>
+
+We ask you to input whatever initial values for \(x\), \(y\), \(\theta\), \(v\), \(n\), and
+\(\Delta\) you wish.
+You should make 3 runs which differ only in the values used for v.
+Choose your three values to produce:
+<ol>
+<li><span class="item-label">1.</span> a circular orbit: \(v^2 = G\,m_E/r\),</li>
+<li><span class="item-label">2.</span> an elliptical orbit: \(G\,m_E/r\,<\,v^2\,<\,2\,G\,m_E/r\), and</li>
+<li><span class="item-label">3.</span> a hyperbolic trajectory: \(2\,G\,m_E/r\,<\,v^2\,<\,\infty\).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup></li>
+</ol>
+
+<p>Be sure that your output for case (2) really looks like an eccentric ellipse,
+not a circle.
+Plot each of the three sets of points on the same piece of graph paper and
+connect the points in each set with a smooth curve.
+Extend the hyperbolic curve backwards in time by making an identical run
+but with negative values of \(\Delta\) or with the velocity vector reversed.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m105gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The three types of orbit about the earth.
+The distance scale is approximately 1:&thinsp;2,500,000.
+The time increments are 18-1/3 minutes.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-c">1c. Running the program</h3>
+
+To actually run the program ORBIT you must first download it to your computer.
+Do that by going to the CBI Web site:
+<div class="centered">physnet2.pa.msu.edu</div>
+
+and then follow this path:
+<div class="centered">Reference Shelf \(\Rightarrow\) Optional Units \(\Rightarrow\) m105-p.bas</div>
+
+Clicking on the link M105-p will cause a window to appear in which you select
+the directory on your computer to which you want the program to be downloaded.
+A temp directory might be a good choice.
+After selection, go ahead and cause the program to be downloaded.
+Then go to that directory and run the program using the directions in MISN-8-100 (also
+downloadable).
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Interpret the Graphs</h2>
+
+<p><h3 id="pcap-2-a">2a. Circular Orbit is Circular</h3>
+
+Check the radius of the various points along the trajectory and comment on the extent
+to which the radius stays constant, as it must for a circle.
+<p><h3 id="pcap-2-b">2b. Elliptical Orbit is Symmetric</h3>
+
+Holding the graph paper so the earth is at the left focus of the ellipse,
+the elliptical orbit has exact left-right mirror symmetry.
+One way to show this is to make a vertical fold through the center
+of the ellipse and hold the graph paper up to the light.
+<p><h3 id="pcap-2-c">2c. Velocities Do Not Show Mirror Symmetry</h3>
+
+Despite the left-right spatial symmetry of the orbit, the velocity is very
+different on the left and right sides of the orbit.
+The speed of the satellite is greatest at the point closest to the earth,
+the perigee
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>and is least at the point farthest from the earth, the apogee.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>The speed is inversely proportional to r because the angular momentum of the
+satellite (\(\vec{L} = m\,\vec{r}\,\times \vec{v}\)) is conserved in this
+isolated system (there are no external torques).
+<p><h3 id="pcap-2-d">2d. Orbit is Indeed an Ellipse</h3>
+
+The elliptical-looking orbit really is an ellipse with the earth at one
+focus (Kepler's first law).
+One way to show this is to locate the other focus by use of the left-right
+symmetry, then show that the total distance measured from one focus to any
+point on the orbit, and then from there to the other focus, is the same for all
+points on the orbit (using a ruler, check several such paths from one focus to
+the other via a point on the orbit).
+Another way is to show that the points on the orbit obey the equation
+<p>\[\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2 = 1\,,\]
+<p>which is the Cartesian form for the equation of the ellipse centered at the
+origin.
+Show that the equation holds for several points on the orbit.
+Note that this x and y are not the same as those printed out by ORBIT, since
+they refer to a different origin.
+Note that for this equation: \(y = 0\) when \(x = \pm a\) and \(x = 0\) when \(y = \pm b\).
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m105gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The two sectors are equal for equal time intervals.</figcaption></figure>
+
+<p><h3 id="pcap-2-e">2e. Equal Areas Swept Out in Equal Times</h3>
+
+According to Kepler's second law, the position vector sweeps out equal areas
+in equal times.
+One way to show this is to draw two sectors, a short fat one near the earth
+and a long thin one for the part of the orbit farthest from the earth (see
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+Count the graph paper squares in each sector to determine the two areas,
+estimating fractions of squares.
+Show that the two equal-time sectors have equal areas.
+<p><h3 id="pcap-2-f">2f. Kepler's Third Law</h3>
+
+Kepler's third law states that, for the circular and elliptical orbits, the
+squares of the periods are proportional to the cubes of the semi-major axes
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>of the orbits.
+You can estimate the satellite's period from the number of time intervals
+it takes for a complete orbit of the earth.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a property of an object or a system where there exists a
+plane bisecting the object or system for which a point on one side of the
+plane has an equivalent point on the other side.
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Basic to Calculate Orbits</h2>
+
+<p><span class="tex-unknown" title="unknown macro">\lstset</span>language=Basic
+<span class="tex-unknown" title="unknown macro">\lstinputlisting</span>m105p.bas
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For details see “Derivation of the Numerov Algorithm in Two Dimensions for
+Satellite and Planetry Orbits” (MISN-0-104). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">For a more detailed discussion of how \(\Delta\) is related to the accuracy, see
+MISN-0-104. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The shape of orbits is discussed in “Derivation of Orbits in Inverse Square
+Law Force Fields” (MISN-0-106). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Pronounced “pear\('\)-ah-jee”. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Pronounced “ap\('\)-a-jee”. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">The semi-major axis of an ellipse is the distance from its center to either
+of the two furthest points from the center. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>

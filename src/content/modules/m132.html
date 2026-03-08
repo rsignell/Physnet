@@ -1,0 +1,568 @@
+<header class="module-header">
+  <h1 class="module-title">Gauss's Law for Spherical Symmetry <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: cylindrical symmetry, spherical symmetry
+    <a href="../m153/" class="module-ref">MISN-0-153</a>.</li><li><strong>2.</strong> For a charge distribution with spherical symmetry, indicate
+    the direction of the electric field at any given point in space
+    and draw the surface that includes all other points with the same
+    magnitude of the electric field <a href="../m153/" class="module-ref">MISN-0-153</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: Gauss's law, Gaussian surface, integration surface,
+    surface integral, volume charge density.</li><li><strong>K2.</strong> State the two rules for constructing a useful Gaussian surface.</li><li><strong>K3.</strong> Derive Coulomb's law from Gauss's law, including all
+    parts of the argument.</li><li><strong>K4.</strong> State the basic physics difference between Gauss's law
+    and Coulomb's law.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a spherically symmetric charge distribution, use Gauss's
+    law to determine the electric field at any specified point.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Gauss's Law Applied to Cylindrical and Planar Charge
+    Distributions” (MISN-0-133).</li><li><strong>2.</strong> “Electric Fields and Potentials Across Charge Layers and In
+    Capacitors” (MISN-0-134).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. The Importance of Gauss's Law</h3>
+
+Gauss's law is generally thought of as being the integral form of one of the
+four great laws of electricity and magnetism.
+Gauss's law has exactly the same content as Coulomb's law, but, while
+Coulomb's law is formulated in terms of point charges, Gauss's law is
+formulated in terms of continuous charge distributions.
+Although either of these laws can be derived from the other, it is easier to
+derive Coulomb's law from Gauss's law than the other way around, and that
+makes us think of Gauss's law as the more basic form.
+Furthermore, it is easy to transform Gauss's law from its usual integral
+form to a differential form which is also widely used.
+In that form it is known as one of the four differential “Maxwell's
+equations” that govern all of electricity and magnetism.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><h3 id="pcap-1-b">1b. Usefulness of the Law</h3>
+
+Gauss's law is generally the option of choice for finding the electric
+field at various space points when the charges producing the electric field
+are symmetrically distributed.
+This situation often occurs in the design of new electronic components.
+<p>Even when the charges are not symmetrically distributed, Gauss's law can
+still be used to give a rough estimate for design exploration or for
+checking the result from a computer program.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m132gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Cross section of a coaxial cable, showing
+the charges at some instant.</figcaption></figure>
+
+<p>For an example of the use of Gauss's law, look at the cross-sectional view
+of a coaxial cable shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Here the charge distributions have cylindrical symmetry.
+Using Gauss's law we can easily determine the electric field at any point
+inside or outside this cable, then use that knowledge to determine the way
+the cable affects signals that pass down it.
+By varying the cable parameters we can quickly optimize the design.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>For a wildly different example, Gauss's law provides a quick and exact proof
+of an important derivation in gravitation, a derivation that eluded Newton
+for nearly 20 years.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Gauss's Law</h2>
+
+<p><h3 id="pcap-2-a">2a. Introduction</h3>
+
+Our approach to Gauss's law will be to: (1) develop some ideas about
+the Gaussian surface that occurs in the law; (2) review the rules for
+finding the component of the electric field that is normal to the Gaussian
+surface, since this is what occurs in the law; (3) give a precise statement
+of the law; and then (4) give precise rules for choosing the Gaussian
+surface.
+<p><h3 id="pcap--">. </h3>
+[]2bGaussian Surfaces
+Before we proceed to the statement of Gauss's law, we introduce some notions
+about the Gaussian surface occurring in the mathematical statement of the
+law; further study of the law will then convert those notions into precise
+statements.
+<p>The surface that occurs in Gauss's law, called a Gaussian surface, is a
+closed imaginary surface that passes through the
+space point at which we want to know the electric field and which has a
+shape determined by the symmetry of the charge distribution.
+In all of the examples we will be dealing with, at least part of the
+Gaussian Surface will be the Electric Field Equi-Magnitude Surface (EMS)
+that goes through the point at which we wish to know the field.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The only difference is that additional surface areas must be added to the
+EMS, if necessary, in order to make it into a closed surface (one that
+totally encloses some volume).
+Here are typical Gaussian surfaces: (1) a sphere (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>); (2) a
+cylinder with flat circular ends that are normal to the axis of the
+cylinder; and (3) two flat
+sheets that are parallel and identical in shape, with the volume between the
+parallel sheets closed by a surface normal to the planes of the sheets.
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m132gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A Spherical Gaussian Surface.</figcaption></figure><figure id="fig-3"><img src="figures/m132gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Illustration of an electric field vector not normal to the Gaussian surface.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2cNormal Component of \(\vec{E}\)
+Gauss's law uses only the component of the electric field that is normal
+(perpendicular) to the Gaussian surface.
+This component is denoted \(E_n\).
+Where the electric field is not normal to the Gaussian surface we must find
+its normal component (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>):
+<p>\[E_n = \vec{E} \cdot \hat{n} = E \cos\theta\,,\]
+<p>where \(\hat{n}\) is the outward-directed unit vector normal to the Gaussian
+surface at the point under consideration.
+<p><div class="figure-row figure-row-2"><figure id="fig-4"><img src="figures/m132gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A fanciful Gaussian surface for illustrating Gauss's law.</figcaption></figure><figure id="fig-5"><img src="figures/m132gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The Gaussian surface (G.S.) for applying Gauss's law to a spherically symmetric charge
+               distribution that extends to radius \(R\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. Statement of Gauss's Law</h3>
+
+Gauss's law states that the integral of the normal component
+of the electric field over any closed surface is proportional to
+the net charge contained inside that surface.
+Thus Gauss's law contains the following quantities:
+<p><ul>
+<li><span class="item-label">1.</span> \(\oint_S E_n\,dS \equiv\) the integral of the normal component of
+the electric field, \(E_n\), over any closed surface “\(S\)”;
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>and</li>
+<li><span class="item-label">2.</span> \(q_S \equiv\) the total (net) electric charge contained within
+that same surface \(S\).</li>
+</ul>
+
+<p>The mathematical statement of Gauss's law is:
+<p>\[\oint_S E_n\,dS = 4 \pi k_e \, q_S\,.\]
+<p>This law holds for any surface whatever, even one as wild as that shown in
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p><h3 id="pcap--">. </h3>
+[]2eChoosing the Gaussian Surface 
+There are two rules for constructing a useful Gaussian surface:
+<ul>
+<li><span class="item-label">1.</span> the surface must pass through the point at which you wish to know
+a particular component of the electric field, and the surface must be normal
+to that component at the point in question;</li>
+<li><span class="item-label">2.</span> the surface must be a completely closed one and, at every point
+on the surface, the normal component of the electric field should either
+have the same value as at the point in question or be zero.</li>
+</ul>
+
+<p>Using the above two rules, the electric field due to a symmetric charge
+distribution can generally be determined in a few lines in a few seconds.
+<p>
+ Advice: People learning Gauss's law for the first time often use
+a proper imaginary Gaussian Surface on the left side of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>
+but then incorrectly compute the charge within a real surface, different
+from the Gaussian Surface, for the right side of that equation.
+You <em>must</em> compute the charge within the imaginary Gaussian Surface
+for the right side of the equation, and it must be the same Gaussian
+Surface you used to evaluate the left side of the equation.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Spherically Symmetric Charge</h2>
+
+<p>For charge distributions having spherical symmetry, we choose our Gaussian
+surface to be a sphere of radius \(r\) centered on the center of the charge
+distribution (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+Then \(\vec{E}\) is always normal to the surface: \(E_n = \pm |\vec{E}|\), the
+sign depending on whether the electric field points outward or inward.
+Also, because the charge distribution looks the same from any point on the
+spherical Gaussian surface, the magnitude of E is constant over that surface.
+That is, \(E_n\) can be a function of radius but it will not be a function of
+position for fixed radius: \(E_n = E(r)\).
+This constancy over a spherical surface \(S\) enables us to easily perform the 
+integration:
+<p>\[\oint_S\,E_n\,dS = E(r) \oint_S\,dS = E(r)\,4\pi r^2\,.\]
+<p>Then by Gauss's law, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, the electric field is:
+<p>\[4\pi r^2 E(r) =
+                  4 \pi k_e q_ S(r)\,, \qquad (\text{spherical symmetry})\,,\]
+<p>where \(q_S(r)\) is the net amount of charge inside the spherical surface of
+radius \(r\).
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. A Point Charge: Coulomb's Law</h2>
+
+<p>The application of Gauss's law to the case of a single point charge at the
+origin of some coordinate system produces the electric field appropriate to
+Coulomb's law.
+The single point charge is an especially simple case because any spherical
+surface centered on the charge will enclose all of the charge.
+Writing the value of the point charge as \(Q\), <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> immediately
+becomes:
+<p>\[E(r) = k_e \frac{Q}{r^2}\,.\]
+<p>Inserting the radial direction of the field gives us:
+<p>\[\vec{E}(r) =
+            k_e \frac{Q}{r^2}\,\hat{r}\,.\qquad \help{1}\,.\]
+<p>If we now place a charge \(q\) at the space-point \(\vec{r}\), it experiences a
+force \(\vec{F} = q \vec{E}(r)\) due to the charge \(Q\) at the origin.
+Using <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, we obtain an expression for the force
+between the two charges:
+<p>\[\vec{F} = k_e \frac{q Q}{r^2}\,\hat{r}\,,\]
+<p>which is Coulomb's law.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. A Sphere of Uniform Charge</h2>
+
+<p><h3 id="pcap-5-a">5a. Overview</h3>
+
+Given a sphere with electric charge distributed uniformly throughout its
+volume, we can use Gauss's law to easily find the electric field at any
+point outside or even inside the sphere.
+All we need do is evaluate the net amount of charge inside the Gaussian
+surface at the radius of the point, then insert that charge into
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+<p>In the next two sections we will determine the electric field inside and
+outside a sphere of charge, but first we will give a quick qualitative
+run-through.
+Imagine starting with a very small Gaussian surface, one with radius
+\(r \ll R\) where \(R\) is the radius of the sphere of charge.
+If we then increase \(r\), the amount of charge enclosed by the Gaussian
+surface at \(r\) will increase like \(r^3\) until \(R\) is reached.
+As \(r\) increases beyond \(R\), the amount of charge enclosed by the surface
+will stay constant since we are now outside the sphere.
+However, the Gaussian surface's area [in the left side of
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>] will continually increase like \(r^2\).
+Combining these radial dependencies, we find that the electric field
+should increase linearly with radius inside \(R\) and decrease as the inverse
+square of the radius outside \(R\) (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p><div class="figure-row figure-row-2"><figure id="fig-6"><img src="figures/m132gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Radial dependence of the electric field due to a homogeneously charged sphere of radius \(R\).</figcaption></figure><figure id="fig-7"><img src="figures/m132gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Gaussian Surface (G.S.) for applying Gauss's law outside a spherical charge distribution.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]5bField Inside the Charge Distribution
+We will here use Gauss's law to compute the electric field at a radius \(r\)
+that is less than the radius \(R\) of the surface of a sphere of uniformly
+distributed charge totaling \(Q\) (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+Since the charge distribution is spherically symmetric we can immediately
+pass from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> to <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+For our case, the charge enclosed by the imaginary integration surface of
+radius \(r\) is:  \(q_S = Q\,(r/R)^3\) (<a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>).
+Then <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> becomes:
+<p>\[4 \pi r^2 E(r) = 4 \pi k_e q_S = 4 \pi k_e Q\,r^3/R^3 \qquad (\text{for } r\le R)\,.\]
+<p>Since \(E\)'s direction is radial,
+<p>\[\vec{E}(r) = k_e \frac{Q r}{R^3}\,\hat{r}\qquad (\text{for } r\le R)\,.\]
+<p>This says that the field is zero at the center and increases linearly
+as we go out toward the edge (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p><h3 id="pcap--">. </h3>
+[]5cField Outside the Distribution
+In the region beyond a spherically symmetric distribution of charge, any
+integration surface (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>) encloses the entire charge and thus
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> reduces to Coulomb's law.
+If the total charge is \(Q\), then the charge enclosed by the surface in
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is \(q_S = Q\) (for \(r \geq R\)).
+Then putting in the direction gives us:
+<p>\[\vec{E}(r) = k_e \frac{Q}{r^2}\,\hat{r}\qquad (\text{for } r\geq R)\,.\]
+<p>This field is identical to the one that would be produced by a point charge
+\(Q\) located at the center of our spherical charge distribution (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+Note also that the expressions for the field inside and outside the sphere
+give the same answer at the surface of the charge sphere (\(r = R\)).
+They'd better!
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>a statement that the integral of the normal
+component of the electric field over any closed surface is a known constant
+times the net charge inside that surface.
+The law is the integral form of one of Maxwell's equations.
+<p>a surface enclosing a charge
+distribution, chosen so that: (1) the surface passes through the point at
+which you wish to know a particular component of the electric field, and the
+surface is normal to that component at the point in question; and
+(2) the surface is a completely closed one and, at every point
+on the surface, the normal component of the electric field either has
+the same value as at the point in question or is zero.
+<p>a surface over which some
+function is integrated.
+<p>the integral of some function
+over a surface \(S\), written:
+\(I = \int_S F(\vec{r})\,dS,\) or \(I = \int_S \vec{F}(\vec{r})\cdot d\vec{S}\),
+depending on the phenomenon being described.
+If the surface is bounded by a line \(L\), then the integral can be
+written \(I = \int_{SL} \vec{F}(\vec{r})\,d\vec{S}\) where \(\int_{SL}\) should
+be read as “the integral over the surface \(S\) that is bounded by the line
+\(L\).”
+The function \(\vec{F}(\vec{r})\) varies according to where one is on the
+surface \(S\).
+The infinitesimal element of area \(d\vec{S}\) has a direction defined as the
+local normal to the surface: \(d\vec{S} = \hat{n} dS\).
+<p>the integral of some function
+over a closed surface \(S\), called the integration surface; written as
+\(I = \oint_S F(\vec{r})\,dS,\)
+where the circle on the integral sign denotes a <em>closed</em> surface,
+\(F(\vec{r})\) is some function of coordinate space, and \(dS\) is an
+infinitesimal element of area on the surface \(S\).
+<p>the amount of charge per unit volume,
+usually expressed in coulombs per cubic meter.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “The Ampere-Maxwell Equation; The Displacement Current”
+(MISN-0-145) and “Maxwell's Equations” (MISN-0-146). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The coaxial cable is treated in greater detail in “Gauss's Law
+Applied to Cylindrical and Planar Charge Distributions” (MISN-0-133). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “The Gravitational Field Outside a Homogeneous
+Spherical Mass” (MISN-0-109). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For the necessary discussion of Equi-Magnitude Surfaces, see
+“Electric Fields From Symmetric Charge Distributions” (MISN-0-153). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The circle on the integral sign reminds you that the surface must
+be a <em>closed</em> one, meaning that it must completely enclose some region
+of space.
+When you actually use Gauss's law, the suface integrals will reduce to just
+a constant times the surface areas of spheres, cylinders, or rectangles. <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;3, 4, and 5 also occur in this module's <em>Model Exam</em>.
+<p>\(k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\)
+<p><ol>
+<li><span class="item-label">1.</span> Determine the electric field for a constant charge density
+throughout a spherical volume of radius \(R\), as shown.
+Evaluate \(\vec{E}\) at:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(r = 2.00\)&thinsp;cm</li>
+<li><span class="item-label">b.</span> \(r = 4.00\)&thinsp;cm</li>
+<li><figure class="fig-centered"><img src="figures/m132gr08.svg" alt="" class="physnet-fig"></figure>
+
+
+where \(R = 3.00\)&thinsp;cm and the volume charge density is
+\(2.00 \times 10^{-6}\unit{C/m^{3}}\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">2.</span> Given a hollow spherical shell of charge:</li>
+<li>Region III: \(0 < r < R_1\): no charge;</li>
+<li>Region II: \(R_1 < r < R_2\): uniform charge distribution,
+                      total charge \(Q\);</li>
+<li>Region I: \(R_2 < r < \infty\): no charge.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a cross sectional view, labeling radii and regions.</li>
+<li><span class="item-label">b.</span> Determine \(\vec{E}\) in Region I <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>, Region II <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a> and
+           Region III <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a> in terms of the given quantities.</li>
+<li><span class="item-label">c.</span> Check that \(\vec{E}_I\), \(\vec{E}_{II}\), and \(\vec{E}_{III}\) agree
+           at their common boundaries. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">d.</span> Sketch \(E(r)\) for this case and for \(R_1 \rightarrow 0\).
+</li>
+<li><span class="item-label">3.</span> Given a spherical shell that has a constant charge density within the shell
+(between the two surfaces of the shell).  Assume there are no charges inside the
+inner surface of the shell or outside its outer surface.
+Use Gauss's law to determine the electric field inside, outside,
+and within the spherical shell.
+Give your answers in terms of the shell's total charge \(Q\), inner
+radius \(a\), outer radius \(b\), and the radius \(r\) at which the electric
+field is to be evaluated.</li>
+<li><span class="item-label">4.</span> At a distance of 2.00&thinsp;m from the surface of a sphere of charge,
+what force would each of these particles feel if it was at rest with respect
+to the sphere?
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> an electron</li>
+<li><span class="item-label">b.</span> a neutron (zero charge)
+
+The sphere's charge density is \(-16\unit{C/m^{3}}\) and the radius of the
+sphere is 5.00&thinsp;cm.</li>
+<li><span class="item-label">5.</span> What is the ratio of the magnitude of the gravitational force to 
+the magnitude of the electrostatic force on an electron due to a solid 
+sphere with a volume charge density of \(8.0 \times 10^2\unit{C/m^{3}}\) and a
+radius of 2.0&thinsp;cm?
+The distance between the electron and the center of the sphere is 2.0&thinsp;m.
+(Take the gravitational force as \(F = 1.52 \times 10^{-41}\,\text{N}\).)</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(E = 1.51 \times 10^3\)&thinsp;N/C <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></li>
+<li><span class="item-label">b.</span> \(E = 1.27 \times 10^3\)&thinsp;N/C <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m132gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(\vec{E}_I = k_e Q \hat{r} / r^2\);</li>
+<li>\(\vec{E}_{II} = k_e Q\, \hat{r} \left(r^3 - R_1^3 \right)/
+               \left[ r^2 \left( R_2^3 - R_1^3\right) \right]\);</li>
+<li>\(\vec{E}_{III} = 0\).</li>
+<li><span class="item-label">c.</span> \(\vec{E}_{III}(R_1) = \vec{E}_{II}(R_1) = 0\);</li>
+<li>\(\vec{E}_{II}(R_2) = \vec{E}_I (R_2) =
+                k_e Q \hat{r}/R_2^2\,.\)</li>
+<li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m132gr10.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">3.</span> Outside: \(\vec{E} = k_e \frac{Q}{r^2}\; \hat{r}\)</li>
+<li>Within:  \(\vec{E} =
+ k_e \frac{Q \,(r^3 - a^3)}{r^2 \left(b^3 - a^3\right)}\;\hat{r}\)</li>
+<li>Inside:  \(\vec{E} = 0\)</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(F = 2.8 \times 10^{-12}\)&thinsp;N, away from the sphere.</li>
+<li>(The answer is NOT \(2.8 \times 10^{-15}\)&thinsp;N.)</li>
+<li><span class="item-label">b.</span> \(\vec{F} = 0\)
+</li>
+<li><span class="item-label">5.</span> \(F_G/F_E = 1.57 \times 10^{-30}\)</li>
+<li>(The answer is NOT \(1.57 \times 10^{-27}\).)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The definition of \(\hat{r}\) is: \(\hat{r} = \vec{r}/r\).
+ Then \(\vec{r} = r \hat{r}\) and both \(\vec{r}\) and \(r\) have the dimensions
+ of length.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m132gr11.svg" alt="" class="physnet-fig"><figcaption>Examine the sketch and notice that there is no charge in
+ Region  III (\(r \leq R_1\)).
+ Gauss's law refers only to the charge contained inside the integration surface.
+ If we pick a spherical Gaussian surface in Region III, so its radius
+ is \(r \leq R_1\), it will contain no charge and Gauss's law leads to this form
+ for <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+ \[4 \pi r^2 E_{III}(r) = 0.\]</figcaption></figure>
+
+<p> We can immediately conclude that \(E_{III}(r) = 0\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m132gr12.svg" alt="" class="physnet-fig"><figcaption>Outside the sphere, in Region I (\(r \geq R_2\)), our Gaussian
+ surface encloses the entire sphere (see sketch) and so Gauss's law leads to
+ this form for <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+ \[4 \pi r^2 E_I(r) = 4 \pi k_e q_S = 4 \pi k_e Q\,,\]
+ where \(Q\) is the total charge of the hollow sphere.
+ Then:
+ \[E_I(r) = k_e \frac{Q}{r^2}.\]</figcaption></figure>
+
+<p> Putting in the radial direction of the field,
+ \(\vec{E}_I(r) = k_e \frac{Q}{r^2}\,\hat{r}\).
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Simply evaluate \(\vec{E}_I(R_2)\) and \(\vec{E}_{II}(R_2)\) and show that   
+ they are the same.
+ Then evaluate \(\vec{E}_{II}(R_1)\) and \(\vec{E}_{III}(R_1)\) and show that they
+ are the same (see the Brief Answers).
+</div></div>
+
+<div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">We first define the relationship between volume charge density
+ \(\rho\) and total charge \(Q\) for the hollow sphere, then assume \(\rho\) is
+ constant:
+<p> \(Q = \int \rho\,dV = \int^{R_2}_{R_1} \rho 4 \pi r^2\,dr =
+       \rho (4/3) \pi (R_2^3 - R_1^3)\)
+<p> so
+<p> \(\rho = \frac{Q}{(4/3) \pi (R_2^3 - R_1^3)}.\)
+<p> Now a spherical Gaussian surface of radius \(r\) inside region II, where
+ \(R_1 \leq r \leq R_2\), will enclose a net amount of charge:
+<p> \(q_S = \int^r_{R_1} \rho 4 \pi r'^2\, dr' = \rho (4/3) \pi (r^3 - R_1^3),\)
+<p> \(\phantom{q_S} = \frac{Q}{(4/3) \pi (R_2^3 - R_1^3) } \times (4/3)
+  \pi (r^3 - R_1^3) = Q \frac{r^3 - R_1^3}{R_2^3 - R_1^3}\).
+<p> So <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> gives us:
+<p> \(4 \pi r^2 E_{II}(r) = 4 \pi k_e q_S =
+       4 \pi k_e Q \frac{r^3 - R_1^3}{R_2^3 - R_1^3},\)
+<p> or
+<p> \(E_{II}(r) = k_e \frac{Q(r^3-R_1^3)}{r^2(R_2^3 - R_1^3)}.\)
+<p> Putting in the radial direction of the field,
+ \(E_{II}(r) = k_e \frac{Q(r^3 - R_1^3)}{r^2(R_2^3 - R_1^3)}\,\hat{r}\,.\)
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\(q_S = \frac{V_r}{V_R}Q = \frac{(4/3) \pi r^3}{(4/3) \pi R^3} Q\)
+<p> or
+<p> \(q_S = \int^r_0 \rho 4 \pi r'^2\,dr' = \rho (4/3) \pi r^3 =
+ \frac{Q}{(4/3) \pi R^3}(4/3) \pi r^3\)
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">The volume charge density for a uniformly distributed charge is
+ \(\rho = Q/V,\)  where \(Q\) is the total charge and \(V\) is the volume over which
+ it is  distributed.
+ If the distribution is spherical with radius \(R\), then \(V = 4 \pi R^3/3\).
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">\[\begin{aligned}E & = \frac{(8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+             (2.00 \times 10^{-6}\,\text{C}\,\text{m}^{-3})
+             (4 \pi)(0.02\,\text{m})}
+             {3} \\  & = 1.51 \times 10^3\,\text{N}/\,\text{C}\end{aligned}\]
+
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">\[\begin{aligned}E & = \frac{(8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+             (2.00 \times 10^{-6}\,\text{C}\,\text{m}^{-3})
+             (4 \pi)(0.03\,\text{m})^3}
+            {3 (0.04\,\text{m})^2} \\  & = 1.27 \times 10^3\,\text{N}/\,\text{C}\end{aligned}\]
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\(k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\)
+<p>electron charge \( = - 1.60 \times 10^{-19}\)&thinsp;C
+<p><ol>
+<li><span class="item-label">1.</span> See Exam Skills K1-K4 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Use Gauss's law to determine the electric field inside, outside,
+and within a spherical shell of constant charge density.
+Give your answers in terms of the shell's total charge \(Q\), inner
+radius \(a\), outer radius \(b\), and the radius \(r\) at which the electric
+field is to be evaluated.</li>
+<li><span class="item-label">3.</span> At a distance of 2.00&thinsp;m from the surface of a sphere of charge,
+what force would each of these particles feel if it was at rest with respect
+to the sphere?
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> an electron</li>
+<li><span class="item-label">b.</span> a neutron (zero charge)
+
+The sphere's charge density is \(-16\unit{C/m^{3}}\) and the radius of the sphere
+is 5.00&thinsp;cm.</li>
+<li><span class="item-label">4.</span> What is the ratio of the magnitude of the gravitational force to 
+the magnitude of the electrostatic force on an electron due to a solid 
+sphere with a volume charge density of \(8.0 \times 10^2\unit{C/m^{3}}\) and a
+radius of 2.0&thinsp;cm?
+The distance between the electron and the center of the sphere is 2.0&thinsp;m.
+(Take the gravitational force as \(F = 1.52 \times 10^{-41}\,\text{N}\).)</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;3 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;4 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">4.</span> See Problem&nbsp;5 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

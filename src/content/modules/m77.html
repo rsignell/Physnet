@@ -1,0 +1,428 @@
+<header class="module-header">
+  <h1 class="module-title">Angular Momentum and Torque: Precession <span class="module-author">(Peter Signell and J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Define angular momentum for rigid body rotation about a fixed
+    axis <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>2.</strong> State the relationship between torque and change in angular momentum for
+    rigid body rotation about a fixed axis <a href="../m33/" class="module-ref">MISN-0-33</a>.</li><li><strong>3.</strong> Calculate vector cross products <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>4.</strong> Calculate vector torques <a href="../m5/" class="module-ref">MISN-0-5</a>.</li><li><strong>5.</strong> Use Newton's Second Law in appropriate simple problems
+    <a href="../m16/" class="module-ref">MISN-0-16</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Describe precession and its origin, including identification
+    of the axis about which precession occurs.</li><li><strong>K2.</strong> Derive the frequency of precession of a top in terms of its
+    center-of gravity radius, its mass, and its spin angular
+    momentum.</li><li><strong>K3.</strong> Describe and explain the Precession of the Equinoxes.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Work problems involving the simple precession of objects such as tops and
+    gyroscopes.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Stability of a Bicycle” MISN-0-38).</li><li><strong>2.</strong> “Rotational Motion of a Rigid Body” (MISN-0-36).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Vectors: Succinct, Graphic</h2>
+
+<p>The Law of Conservation of Angular Momentum is often introduced with simple
+illustrations involving circular motions of rigid objects about fixed axes of
+rotation, and this is sufficient for understanding a number of natural and
+man-made phenomena.
+For such illustrations, you need not treat angular momentum, torque, and
+angular velocity as explicit vectors.
+However, you must then specify “the torque about the axis,” “the angular
+momentum about the axis,” or “the angular velocity about the axis.”
+Such statements make it sound like one is talking about components of vectors
+(i.e. components along such axes) and indeed that is the case.
+A switch to vector notation will then allow you to stop having to always add
+the phrase “about the axis.”
+You will also then be able to picture phenomena like precession very
+graphically and will be prepared to move further toward the ability to
+understand and control general types of motions.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Angular Momentum Components</h2>
+
+<p><h3 id="pcap-2-a">2a. The Law of Conservation of Angular Momentum</h3>
+
+The angular momentum of an object in motion about an axis is conserved if the
+object experiences no torque about that axis.
+<p><h3 id="pcap-2-b">2b. Calculation of Angular Momentum</h3>
+
+In order to use Conservation of Angular Momentum, one must be able to compute
+it for any given situation.
+For the case of circular motion of a point object with mass \(m\), orbital
+radius \(r\), and speed \(v\), the angular momentum about the rotational axis is:
+<p>\[L = mvr \text{  (point mass, circular motion).}\]
+<p>For a number of rigidly-connected point masses in circular motion about an
+axis the individual-mass angular momenta add to give the total angular
+momentum about that axis:
+<p>\[L = \sum_i L_i = \sum_i m_i v_i r_i = \sum_i m_i r_i^2 \omega_i.\]
+<p>Using the fact that all points on a rigid object have identical angular
+velocities,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>we can drop the subscript on \(\omega\) and factor it out:
+<p>\[L = \omega \sum_i m_i r_i^2 \equiv I \omega\]
+<p>where \(I\) is the moment of inertia about the rotational axis.
+<p><h3 id="pcap-2-c">2c. Derivation of Conservation of Angular Momentum</h3>
+
+For the circular motion of rigid objects, one can easily derive Conservation
+of Angular Momentum from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> by differentiating it with respect to time:
+<p>\[\frac{dL}{dt} = I \alpha\]
+<p>where \(\alpha\) is the object's angular acceleration.
+The right hand side of <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, however, is equal to the total torque along
+the rotational axis:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\(dL/dt = \tau\).
+If that torque is zero then the rate of change of L along the axis is also
+zero and the value of L along the axis must be constant (conserved).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Vector Angular Momentum</h2>
+
+<p><h3 id="pcap-3-a">3a. Definition of Vector Angular Momentum</h3>
+
+The vector equation
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau}\]
+<p>can easily be derived from Newton's Second Law if one defines a point object's
+vector angular momentum about any reference point to be
+\[\vec{L} = \vec{r}\times\vec{p}\]
+where \(\vec{r}\) is the radius vector from the reference point to the object
+and \(\vec{p}\) is the object's momentum.
+<p><h3 id="pcap-3-b">3b. Derivation of \(\vec{\tau} = d\vec{L}/dt\)</h3>
+
+Differentiating <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> with respect to time and using the chain rule for
+differentiation gives:
+<p>\[\frac{d\vec{L}}{dt} = \frac{d}{dt}\;\vec{r}\times\vec{p} =
+\frac{d\vec{r}}{dt}\times\vec{p}\;+\;\vec{r}\times\frac{d\vec{p}}{dt}\]
+<p>The cross-product in the first term on the right hand side of <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> is zero.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The remainder of <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> becomes, using Newton's second law
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>and the definition of torque:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau}\]
+<p><h3 id="pcap-3-c">3c. Conservation of \(\vec{L}\)</h3>
+
+If the vector torque is zero, then <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> says the time rate of change of
+\(\vec{L}\) is zero and hence \(\vec{L}\) must be a constant vector.
+This means that neither its magnitude nor direction can change with time.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m77gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The angular momentum vector of a spinning disc.</figcaption></figure>
+
+<p><h3 id="pcap-3-d">3d. Examples: Frisbees, Skipping Stones</h3>
+
+A rotating disc is a good example of a use of conservation of (vector) angular
+momentum.
+In the disc in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> the rotation is clockwise as seen from above.
+Then the rule of <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> produces a downward pointing angular momentum vector for
+each element of mass in the disc.
+Adding these individual mass contributions, the total angular momentum must
+also be downward.
+<p>\[\sum_i \vec{L}_i = \vec{L} \text{  total (vector) angular momentum}\]
+<p>No matter how wobbly the manner in which one starts the disc spinning, its
+resulting angular momentum vector will not wobble but will remain fixed in
+magnitude and direction once external torques are removed.
+Thus the stability of orientation of a spinning disc, such as a Frisbee or a
+skipping stone.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Precession</h2>
+
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m77gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A spinning top and the earth's gravitational force on it.</figcaption></figure><figure id="fig-3"><img src="figures/m77gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The top's spin axis traces out a conical surface.</figcaption></figure></div>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m77gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The torque on the top is at right angles to
+the gravitational force and the vector \(R\) to the top's center of gravity.</figcaption></figure>
+
+<p><h3 id="pcap-4-a">4a. Description of Precession</h3>
+
+One of the most interesting predictions of the vector torque-angular momentum
+relation, \(\vec{\tau} = d\vec{L}/dt\), is the phenomenon of <em>precession</em>.
+This is defined as the cone-shaped motion of a rotational axis due to the
+action of a constant torque on a spinning object.
+Such motion is commonly seen in gyroscopes and tops, and is illustrated for
+the latter in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The top's spin axis moves as though along the surface of a cone: the cone's
+axis is along the direction of the gravitational force.
+This is shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, where the cone's half-opening angle is denoted
+\(\theta\).
+<p>Such motion is defined as precession.
+Note that the direction of motion of any point on the spin axis is always at
+right angles to the precession axis and hence to the force direction.
+You can use that fact to quickly sketch the precessional trajectory of any
+given point on the spin axis, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><h3 id="pcap-4-b">4b. Conservation of \(|\vec{L}|\)</h3>
+
+The conical motion of a top's rotational axis can be easily explained by
+manipulation of the vector torque-angular momentum equation,
+\(\vec{\tau} = dL/dt\).
+As illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> and <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, the torque produced by the gravitational
+force of the earth is always at right angles to the top's angular momentum
+vector which is taken here to be along its rotational axis.
+This means that the component of torque along the direction of the angular
+momentum vector is zero and hence the magnitude of the angular momentum
+<em>is</em> conserved.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p><div class="figure-row figure-row-2"><figure id="fig-5"><img src="figures/m77gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Top view of a top's \(\vec{\tau}\) and \(\vec{L}\) at a particular instant.</figcaption></figure><figure id="fig-6"><img src="figures/m77gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. As in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, but showing also \(\vec{L}\) after it has moved slightly in the direction of \(\vec{\tau}\).</figcaption></figure></div>
+
+<p><h3 id="pcap-4-c">4c. Precession of \(\hat{L}\)</h3>
+
+The torque on a simple spinning top due to the earth's gravitational field is
+always at right angles to the top's spin angular momentum vector, \(\vec{L}\),
+and hence by \(\vec{\tau} = d\vec{L}/dt\) only the direction of \(\vec{L}\),
+\(\hat{L}\), can change.
+This is a good assumption if there is no observable nutation and if the top's
+angular momentum due to precessional motion is small compared to its spin
+angular momentum.
+<p>In order to calculate the rate with which the direction of L changes, it is
+convenient to view the torque and \(\vec{L}\) vectors from above as in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+In that figure \(\theta\) is the angle the top's angular momentum vector makes
+with the vertical (See <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.).
+Note in that \(\vec{L}\)'s direction must change as indicated by \(\vec{\tau}\).
+The increment of change \(d\vec{L}\) produced in time \(dt\) will amount to a
+rotation of \(\vec{L}\) through an angle \(d\vec{\phi}\) (to be determined) as in
+<a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+<p>Using an infinitesimal time, the length of \(d\vec{L}\) can be equated to the
+arc of radius (\(L d\phi \sin{\theta}\)) between \(\vec{L}(t)\) and \(\vec{L}(t+dt)\):
+<p>\[d\vec{L} = L \sin{\theta}\,d\phi\;\hat{\tau}\]
+<p>hence
+<p>\[\vec{\tau} = \frac{d\vec{L}}{dt} =
+L \sin{\theta} \frac{d\phi}{dt}\,\hat{\tau}
+\equiv L \sin{\theta} \dot{\phi}\,\hat{\tau}\]
+<p>and the angular velocity of precession about the vertical is:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[\dot{\phi} = \tau /(L \sin{\theta})\]
+<p>Referring back to <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, it is easily seen that the torque
+(\(\vec{r}\times\vec{F}\)) is:
+<p>\[\tau = R_{cg} m g \sin{\theta}\;,\]
+<p>and so, from <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>,
+<p>\[\dot{\phi} = \frac{R_{cg} m g}{L}\;.\]
+<p>For an examination of nutation, a looping motion which can occur during
+precession, we refer you to other references.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Precession of the Equinoxes</h2>
+
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m77gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Sketch showing the 23.5° tilt of the
+earth's axis (not to scale) with respect to the perpendicular to the ecliptic
+plane.</figcaption></figure>
+
+<p><h3 id="pcap-5-a">5a. Observations of the Precession</h3>
+
+If one observes the positions of the constellations in the night sky at the
+same time each year,
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>each year, these positions will be observed to rotate about the sky taking
+25,800 years for one complete revolution.
+Thus, for example, Scorpio currently appears in a particular position in the
+night sky in summer.
+In 12,900 years (from now), which is half a period later, Scorpio will be in
+that same position in the night sky in winter and will not be seen in summer.
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>This effect is called the precession of the equinoxes and was discovered by
+the Babylonian astronomer Cidenas in 343&nbsp; bc.
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+<p>This apparent motion of the constellations is about one degree per 70 years
+eastward.
+More precisely, it constitutes a circular motion about an axis perpendicular
+to the ecliptic plane passing through the center of the earth.
+The ecliptic plane contains our sun and its planets, and our moon.
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m77gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Cross section of the effective sun mass ring
+and earth equatorial ring.</figcaption></figure>
+
+<p><h3 id="pcap-5-b">5b. The Earth's Tilted Equatorial Bulge</h3>
+
+<p>The precession of the equinoxes is caused by the attractive forces of the sun
+and the moon on the tilted equatorial bulge of the earth.
+That bulge is caused by deformation of the elastic earth due to its
+rotational spin,
+<p><sup class="fn-ref"><a href="#fn-12" id="fnref-12">12</a></sup>
+<p>and the tilt is due to the tilt of the earth's rotational axis (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>).
+<p><h3 id="pcap-5-c">5c. A Tilted Ring Approximates the Bulge</h3>
+
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m77gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Torque and spin angular momentum vectors for
+the earth(see text).</figcaption></figure>
+
+<p>In order to simplify matters we can approximate the earth's shape as that of a
+sphere plus an equatorial tire-shaped ring of extra mass.
+The plane defined by this ring will be at an angle of 23.5� to the ecliptic
+plane.
+The sun and moon, which appear to move around the earth in circular paths in
+the ecliptic plane, exert a gravitational torque on the earth-bulge ring,
+causing the earth's spin vector to precess.
+<p><h3 id="pcap-5-d">5d. Mass Rings Approximate Sun and Moon Positions</h3>
+
+<p>In order to calculate the average torque exerted on the earth-bulge ring by
+the sun and moon, it is convenient to first set up the average mass
+distribution of the sun as seen from the earth during the precession cycle.
+During one such cycle the sun circles the earth 25,800 times and thus in
+effect can be replaced for this problem by a circular ring of mass, with a
+radius equal to the earth-sun distance and total mass equal to that of the sun.
+A similar argument obviously holds for the moon.
+<p><h3 id="pcap-5-e">5e. Ring-Ring Torque Produces Precession</h3>
+
+<p>The approximating sun-moon mass rings exert attractive gravitational forces on
+the mass of the earth, but in particular produce a torque on the earth-bulge
+ring as illustrated in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.
+Note that the net gravitational force on any portion of the earth's ring is
+toward the ecliptic plane, producing a torque in the equatorial plane.
+This torque and the spin of the earth are shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>, and the resulting
+precessional motion about the normal to the ecliptic plane can be easily
+deduced.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+We wish to thank Dale Barden for field-testing an earlier version.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Uniform Circular Motion: Kinematics, Moment of Inertia,
+Conservation of Angular1ar Momentum” (MISN-0-9). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Torque and Angular Acceleration” (MISN-0-33) for a derivation
+of \(\tau = I \alpha\). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Mathematical Skills: Addition, Subtraction and Products of
+Vectors” (MISN-0-2) for proof that the cross product of a vector with itself
+is zero. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Free-Body Force Diagrams, Frictional Forces, Newton's
+Second Law” (MISN-0-15) for an explanation of Newton's Second Law. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Force and Torque” (MISN-0-5) for an explanation of torque. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">Simply take components of [\(\vec{\tau}~=~d\vec{L}/dt\)] along the
+direction of angular momentum to obtain [\(0~=~dL/dt\)]. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">The dot over \(\phi\) is short-hand for “derivative with respect to
+time”:  \(\dot{\phi} \equiv d\phi /dt\). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See <em>Classical Mechanics</em>, H. Goldstein, Addison-Wesley Press,
+Inc. (1950) and references cited therein. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">Note that our calendar year is defined by the
+seasons (i.e. spring always starting in March). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">Scorpio will not be seen in the summer night sky 13,000 years from now because
+it will have moved to the opposite side of the earth which will be in daylight
+at the time of observation. <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">Source: J.&thinsp;B.&thinsp;Marion, <em>Classical Dynamics of Particles and Systems</em>, Academic
+Press 1970. <a href="#fnref-11" class="fn-back">↩</a></li><li id="fn-12">See “Uniform Circular Motion: Centripetal Force” (MISN-0-17). <a href="#fnref-12" class="fn-back">↩</a></li><li id="fn-PS1">See “Centripetal Force”(MISN-0-17). <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><figure class="fig-centered"><img src="figures/m77gr10.svg" alt="" class="physnet-fig"></figure>
+
+<p><ol>
+<li><span class="item-label">1.</span> a. Describe precession using the motion of a
+gyroscope rotor, suspended as shown in the sketch, as an example.
+Be sure to draw in the torque and angular momentum vectors.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> Derive the symbolic precessional frequency of the gyroscope.</li>
+<li><span class="item-label">c.</span> How does the frequency of precession change as friction slows down the
+spin rate of a top?
+Does this agree with your observations of tops and/or gyroscopes?</li>
+<li><span class="item-label">d.</span> Assume the moment of inertia of the gyroscope in the problem above is
+0.20&thinsp;kg<span class="unit">&thinsp;m<sup>2</sup></span> and its rotor is spinning at \(6.00\times10^2\)&thinsp;RPM.
+Calculate the gyroscope's precessional rate and mark its direction of
+precession on the sketch.
+The distance from the support to the flywheel is 16&thinsp;cm and the mass of the
+flywheel is 8.0 kg.
+
+<p><figure class="fig-centered"><img src="figures/m77gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> A gyroscope is mounted on a wall, as shown in the
+sketch.
+The disk is rotating about the horizontal \(y\)-\(y'\) axis, as shown.
+Determine the axis, direction, and angular velocity of precession.
+Then determine the frequency of precession.
+Assume the gyroscope disk has a moment of inertia of
+\(1.00\times10^{-3}\)&thinsp;lb&thinsp;ft&thinsp;s<sup>2</sup>, is spinning at \(3.00\times10^2\)&thinsp;RPM, is at
+a distance of 3.00 inches from the vertical \(x\)-\(x'\) axis, and has a mass of
+0.0300&thinsp;lb<span class="unit">&thinsp;ft<sup>-1</sup></span>&thinsp;s<sup>2</sup>.
+<p>Draw in the torque and spin angular momentum vectors.
+Sketch the trajectory of the disk.
+<p><figure class="fig-centered"><img src="figures/m77gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">3.</span> Apply \(\vec{\tau} = d\vec{L}/dt\) to the case of a mass hanging
+from a string and circling the vertical at a constant radius, in order to find
+the mass's frequency of revolution (here interpreted as precession frequency).
+Be sure to sketch in the torque and angular momentum vectors.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> a. “Counterclockwise as seen from above\ldots  ”
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">c.</span> “The precession rate increases\ldots  ”</li>
+<li><span class="item-label">d.</span> 
+<table class="physnet-table"><tbody><tr><td>[t]r c l
+\( \nu_\text{prec}\)</td><td>\(=\)</td><td>\(\dot{\phi}/(2\pi )\)</td></tr><tr><td></td><td>=</td><td>\(R_{cg}\,m\,g/(4\pi^2I\nu)\)</td></tr><tr><td></td><td>=</td><td>(0.16&thinsp;m)&thinsp;(8&thinsp;kg)&thinsp;(9.8&thinsp;m/s<sup>2</sup>)/(\(4\pi^2\)&thinsp;0.2&thinsp;kg<span class="unit">&thinsp;m<sup>2</sup></span>10/s)</td></tr><tr><td></td><td>=</td><td>0.16&thinsp;rev/s.</td></tr></tbody></table>
+
+
+<figure class="fig-centered"><img src="figures/m77gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> Torque is in the \(z'\) direction, \(\vec{L}\) in the \(y\) direction.
+Then by \(\vec{\tau} = d\vec{L}/dt\), precession is about the \(x\)-\(x'\) axis,
+initially toward the wall.
+The trajectory is an arc in the horizontal plane perpendicular to the wall.
+The rotor hits its support.
+<p>\[\dot{\phi} = \frac{\tau}{L} = \frac{FR}{I\omega} = \frac{FR}{I2\pi \nu}\]
+<p>\[\text{Prec. freq. } = \dot{\phi}/2\pi = 1.27\,\text{rev/sec}\]</li>
+<li><span class="item-label">3.</span> \(\tau = m g r \sin{\theta}\)<br>
+
+\(L_\text{horiz} = L \cos{\theta} = m r v \cos{\theta}\) <br>
+
+\(\dot{\phi} = \tau/L_\text{horiz} = (g\,\tan{\theta})/v\)
+<br>
+
+Now \(v = \dot{\phi}\,(r \sin{\theta})\) <br>
+
+hence: <br>
+
+\(\dot{\phi} = \sqrt{g/(r \cos{\theta})}\) <br>
+
+(Checks with centrip.&thinsp;force method)
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p><figure class="fig-centered"><img src="figures/m77gr14.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+The exam may have one or more of those skills, or none.
+<p><figure class="fig-centered"><img src="figures/m77gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> A gyroscope is mounted on a wall, as shown in the
+sketch.
+The disk is rotating about the horizontal \(y\)-\(y'\) axis, as shown.
+Determine the axis, direction, and angular velocity of precession.
+Then determine the frequency of precession.
+Assume the gyroscope disk has a moment of inertia of
+\(1.00\times10^{-3}\)&thinsp;lb&thinsp;ft&thinsp;s<sup>2</sup>, is spinning at \(3.00\times10^2\)&thinsp;RPM, is at
+a distance of 3.00 inches from the vertical \(x\)-\(x'\) axis, and has a mass of
+0.0300&thinsp;lb<span class="unit">&thinsp;ft<sup>-1</sup></span>&thinsp;s<sup>2</sup>.
+<p>Draw in the torque and spin angular momentum vectors.
+Sketch the trajectory of the disk.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;2.</li>
+</ol>
+
+<p></section>
+

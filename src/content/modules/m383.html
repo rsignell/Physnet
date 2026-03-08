@@ -1,0 +1,166 @@
+<header class="module-header">
+  <h1 class="module-title">Fourier Analysis and Wave Packets <span class="module-author">(R.Spital)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Be able to integrate Gaussian function, exponential function,
+    trigonometric function.</li><li><strong>2.</strong> Write down the integral that produces the Fourier transform of
+    an arbitrary fuction and the integral that transforms the Fourier
+    transform back to the original function <a href="../m380/" class="module-ref">MISN-0-380</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Use Fourier transformation to find the frequency (wavelength)
+    spectrum of wave packets such as chopped sine and plane waves, and
+    obtain the corresponding uncertainty relations.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the Fourier transforms of functions such as chopped
+    linear functions.</li><li><strong>S2.</strong> Solve qualitative uncertainty principle problems.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> E.&thinsp;E.&thinsp;Anderson, <em>Modern Physics and Quantum Mechanics</em>, W.&thinsp;B.&thinsp;Saunders (1971).</li>
+<li><span class="item-label">2.</span> D.&thinsp;S.&thinsp;Saxon, <em>Elementary Quantum Mechanics</em>, Holden-Day, Inc. (1968).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In the first two units we have seen the need to treat photons and
+particles as wave packets; i.&thinsp;e.&thinsp; as localizations of energy produced by
+the superposition of waves of different frequencies and wavelengths.
+In this unit we shall introduce the mathematical machinery needed to
+describe wave packets. This machinery is called Fourier analysis.
+<p>Armed with this new machinery, we shall then study a simple example
+of wave superposition in order to enhance our intuitive understanding
+of wave packets and the uncertainty principle.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The readings for this unit are on reserve for you in the
+Physics-Astronomy Library.
+Ask for them as “the readings for CBI unit 383.”</li>
+<li><span class="item-label">2.</span> (Output Skill S1) Perform the necessary integrations to solve
+problem&nbsp;3 on page 54 of Saxon.</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> (Output Skill R1) Read section 4.8 of Anderson through the
+middle of page 138.
+Verify the integrations done and make sure you can perform them without
+the aid of the book.
+Note that the uncertainty relations 4.31 and 4.32 are only qualitative;
+that is, the definition of \({\Delta}\omega\) or \({\Delta}k\) is somewhat
+arbitrary.
+(There are more rigorous ways to define \({\Delta}\omega\) and \({\Delta}k\)
+but we shall not take them up here.)
+The uncertainty products 4.31 and 4.32 are the minimum values achievable
+ at \(t = 0\).
+As time goes on, the packet will broaden in coordinate space so
+that these minimum values will increase.
+(The momentum space width \(\Delta p\) stays constant in time for a free
+particle. See problem&nbsp;4.16).</li>
+<li><span class="item-label">b.</span> Read the remainder of section 4.8.
+(There is no difference between \({\Phi}(k)\) and \({\phi}(k)\) and ignore the
+incorrect end of the sentence at the top of page 139.
+Just end it after “normalize to a delta function.”) \({\phi}(k)\) is the
+momentum space wavefunction.
+at \(t = 0\).
+Using equation 4.33 and the definition
+\({\Psi_k}(x,t) = A e^{i(kx - \omega t)}\) show that:
+<p>\[{\phi}(k) =
+   \frac{1}{\sqrt{2 \pi}} \int^{\infty}_{-\infty} {\Psi}(x,0) e^{-ikx} dx\]</li>
+<li>In general:
+<p>\[{\phi}(k,t) =
+   \frac{1}{\sqrt{2 \pi}} \int^{\infty}_{-\infty} {\Psi}(x,t) e^{-ikx} dx\]</li>
+<li>\({\phi}(k,t)\) is the time-dependent wave function in momentum
+space.
+For a free particle \(\hbar \omega = p^2 / 2m\).
+Use this fact and equation 4.33 to find the function \({\phi}(k,t)\) in terms
+of \({\phi}(k) \equiv {\phi}(k,0)\).
+Then solve problem&nbsp;4.16.
+Use an equation covered in an earlier Output Skill to solve problem&nbsp;4.15.
+For additional practice with wave packets, solve problem&nbsp;4.18 and
+add this question:</li>
+<li><span class="item-label">c.</span> \({\Psi}(x)\) is the wave packet at \(t = 0\).
+Write an integral expression for \({\Psi}(x,t)\) in terms of
+\(\Psi{(x,0)} \equiv {\Psi}(x)\).
+(Hint: Use the inverted form of the equation for \({\phi}(k,t)\) given above).
+</li>
+<li><span class="item-label">4.</span> As an application of the uncertainty principle solve parts (a)
+and (b) of problem&nbsp;4.19.
+Use the relation \({\Delta}p_i {\Delta}x_i \geq 1/2 \hbar\) for each of the
+three components (\(i = 1,2,3\)) of the position and momentum vectors.
+The lower bound \({\hbar}/2\) is achieved by Gaussian wave packets and is the
+ absolute minimum usually quoted in statements of the Heisenberg
+uncertainty principle.</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Solving Gaussian Integrals</h2>
+
+<p><div class="centered">(only for those interested)</div>
+
+The function \(e^{-ax^2}\) is-called a <em>Gaussian</em> function.
+It is frequently met in physics and in statistics so the method of solution
+of its integral is worthwhile knowing.
+<p><span class="tex-unknown" title="unknown macro">\boxedline</span>Method 1
+Find the appropriate form in a Table of Integrals.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>For example, in <em>A Short Table of Integrals</em>, B.&thinsp;O.&thinsp;Peirce, Ginn &amp; Co.
+(Xerox Corporation), Boston (1929), one finds on page 63:
+<p><figure class="fig-centered"><img src="figures/m383gr02.svg" alt="" class="physnet-fig"></figure>
+
+<p>Hence:
+<p>\[\overline{x^2} =
+               \sqrt{a/\pi} \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx.\]
+<p>Because the integrand is symmetric, this can be written:
+<p>\[\overline{x^2} = \sqrt{a/\pi} 2 \int_0^{+\infty} x^2 e^{-a x^2}\,dx.\]
+<p>Now by No.&thinsp;494 in Peirce's book this becomes:
+<p>\[\overline{x^2} =
+           \sqrt{a/\pi}\; 2\, \frac{1}{4a} \sqrt{\pi/a} = \frac{1}{2a}.\]
+<p><span class="tex-unknown" title="unknown macro">\boxedline</span>Method 2
+<p>Start with the square root of the square of the complete integral:
+<p>\[\begin{aligned}\int_{-\infty}^{+\infty} e^{-a x^2}\,dx & = 
+         \sqrt{\int_{-\infty}^{+\infty} e^{-ax^2}\,dx\;
+               \int_{-\infty}^{+\infty} e^{-ay^2}\,dy} \\
+ & = \sqrt{\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}
+                                         e^{-a(x^2+y^2)}\,dx\,dy} \\
+ & = \sqrt{\int_0^{+\infty} e^{-ar^2}\,2\pi r\,dr}\,. \\\end{aligned}\]
+
+<p>where the planar area integration has been re-expressed in polar coordinates.
+Now let \(z \equiv r^2\) so that \(dz = 2rdr\):
+<p>\[\int_{-\infty}^{+\infty} e^{-a x^2}\,dx = 
+         \sqrt{\pi \int_0^{+\infty} e^{-az}\,dz} = \sqrt{\pi/a}.\]
+<p>\[\begin{aligned}\overline{x^2} & = \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx \\
+               & = -\frac{d}{da} \int_{-\infty}^{+\infty} e^{-a x^2}\,dx \\
+               & = -\frac{d}{da} \sqrt{\pi/a} = \frac{1}{2a} \sqrt{\pi/a}\,.\\\end{aligned}\]
+
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">We recommend that you own a table of integrals, such as that above, or:
+<em>Table of Integrals, Series and Products</em>, I.&thinsp;S.&thinsp;Gradshteyn and
+I.&thinsp;M.&thinsp;Ryzhik, Academic Press, New York and London (1965); or
+<em>Mathematical Tables from the Handbook of Chemistry and Physics</em>,
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates). <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>

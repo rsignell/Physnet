@@ -1,0 +1,328 @@
+<header class="module-header">
+  <h1 class="module-title">Mass Changing With Time: The Vertical Rocket, Etc. <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Differentiate logarithms, understand differentials, integrate
+    reciproca1s <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>2.</strong> Vocabulary: frame of reference, relative velocity <a href="../m11/" class="module-ref">MISN-0-11</a>.</li><li><strong>3.</strong> Apply the law of conservation of momentum to collisions in
+    one dimension <a href="../m14/" class="module-ref">MISN-0-14</a>.</li><li><strong>4.</strong> Apply Newton's Second Law to one-dimensional constant-force
+    problems <a href="../m16/" class="module-ref">MISN-0-16</a> .</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Neglecting air resistance derive the velocity of a vertically
+    rising rocket, which has a high constant burn rate, as a
+    function of time and as a function of fuel consumption.</li><li><strong>K2.</strong> Show that gravity can be neglected for the above case during
+    the burn.</li><li><strong>K3.</strong> Show that two rocket stages are more efficient than one.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S2.</strong> Show that the equations found in Kl agree qualitatively and
+    within given limits with what one would expect.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Ordinary locomotion on earth relies heavily on friction - the interaction of
+a vehicle, be it bicycle, car, ship, or aircraft, with its environment.
+For a rocket outside the earth's atmosphere there is neither earth nor air
+nor water to push against; the rocket must achieve its acceleration another
+way.
+It is via fuel mass expulsion that such propulsion is achieved and controlled.
+Here we investigate the propulsion of the vertical rocket; that is, of a
+rocket propelled vertically upward against a uniform gravitational field.
+The commonplace use of rockets for launching communications satellites and
+for interplanetary explorations makes this subject one of considerable
+technological interest.
+<p>The vertical rocket is a special case of the more general class of problems
+involving systems of variable mass, due here to the expulsion of fuel.
+The solution of other variable mass problems proceeds in exactly the same
+manner as for the vertical rocket, except that the external force exerted on
+the system is not always that of gravity.
+One example is that of a jet aircraft, where the external drag force comes
+mainly from air resistance.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Gravity-Free Rocket Equation</h2>
+
+<p><h3 id="pcap-2-a">2a. Rocket Momentum Balances Exhaust Momentum</h3>
+
+We will deal first with a rocket in outer space where gravitational forces
+are weak and can be neglected.
+How can we explain the ability of this rocket to accelerate?
+Our rocket can be considered to consist of two parts; the fuel and the
+shell-payload.
+Expansion of the fuel during burning results in its continuous expulsion
+rearward in the'form of burned-out exhaust gases.
+Since there is no external force on the total system, the system's momentum
+is conserved.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>This implies that any rearward momentum acquired by the fuel as exhaust must
+be balanced by a newly-acquired momentum of the rocket in the forward direction.
+Furthermore, the center-of-mass of the entire system is left undisturbed as
+the exhaust gases and rocket move away from it in opposite directions.
+<p>Another way of describing the rocket's acceleration is in terms of Newton's
+third law.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The rearward acceleration of the exhaust implies a rearward force on it by
+the rocket but this in turn implies the existence of an equal but opposite
+forward force-exerted on the rocket by the exhaust gases.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m19gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A rocket is shown: (a) at one instant; (b) at a
+time \(dt\) later.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Thrust as a Function of Exhaust Velocity, Burn Rate</h3>
+
+We can use conservation of momentum for the gravity-free (\(g = 0\)) rocket to
+derive its acceleration as a function of its design parameters.
+This derivation is easiest to make if we imagine ourselves as moving along
+parallel to the rocket with a constant velocity which coincides with the
+rocket's at a specified instant; then during the succeeding time increment,
+we observe the momentum changes in the various parts of the system.
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(a) we see the rocket with mass mR at the instant when it is
+apparently at rest because we are moving along with it.
+<p>In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>(b) we see it at a time \(dt\) later when it has expelled a mass of
+exhaust gas \(dm_E\) rearward with velocity \(\vec{v}_E\) relative to the rocket.
+The fuel burn rate \(R\) connects \(dm_E\) to the time increment \(dt\):
+<p>\[dm_E = R \,dt\,.\]
+<p> We now use conservation of momentum for our isolated system to determine the
+increment of velocity, \(d\vec{v}_R\), acquired by the rocket:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[0 = d\vec{p} =
+             d\vec{p}_R + d\vec{p}_E = m_R d\vec{v}_R + \vec{v}_E dm_E\,,\]
+<p>where we have (properly) neglected a product of infinitesimals.
+There are several connections we can make between the quantities in
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+<p>\[dm_E = - dm_R\]
+<p>\[\vec{v}_E \equiv v_E \hat{v}_E = - v_E \hat{v}_R\,;\]
+<p>\[d\vec{v}_R = dv_R \hat{v}_R\,.\]
+<p>Combining <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a>, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, we find the
+rocket's acceleration:
+<p>\[a_R = \frac{v_E R}{m_R}\,,\]
+<p> and hence the force on it produced by the exhaust gases:
+<p>\[F_R = v_E R\,.\]
+<p>This force is called the rocket engine's thrust and its linear dependence on
+\(v_E\) and \(R\) checks with what one would expect intuitively.
+Although we have derived <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> for
+the case of an observer moving at a certain constant velocity, the same force
+and acceleration values will be found by a stationary observer.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Thus <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> are quite general.
+<p><h3 id="pcap-2-c">2c. Velocity as a Function of Rocket Parameters</h3>
+
+The equation relating a rocket's velocity to its fuel expenditure is
+particularly simple and obviously has practical application.
+To derive it we integrate the differential form of <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>,
+<p>\[dv_R = - \frac{v_E}{m_R} dm_R\,,\]
+<p>to obtain the change in velocity:
+<p>\[\Delta v_R = v_E \; \ell n \left( \frac{m_{Ri}}{m_{Rf}} \right)\,.\]
+<p>Here \(m_{Ri}\) is the initial rocket mass (at ignition) and \(m_{Rf}\)
+is its final mass (at burn-out).
+<p>Assuming that the initial rocket mass consists of fuel mass \(m_F\) and
+shell-payload mass \(m_S\), and that the final rocket mass consists only of the
+shell-payload, we obtain the velocity change in terms of the fuel expenditure:
+<p>\[\Delta v_R = v_E \; \ell n \left( 1 + \frac{m_F}{m_S} \right)\,.\]
+<p>All parts of this equation check with what one would expect intuitively.
+<p><h3 id="pcap-2-d">2d. Velocity as a Function of Time</h3>
+
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, for the change in velocity as a function of mass,
+can be written as an implicit function of time:
+<p>\[v_R(t) =
+      v_R(t_i) + v_E \; \ell n \left( \frac{m_R(t_i)}{m_R(t)} \right) ;\; t_i \le t \le t_f\,,\]
+<p> where \(t_i\) is the ignition time and \(t\) is any succeeding time up to the
+shut-down time \(t_f\).
+The time dependence can be made explicitly if we specify \(m_R(t)\).
+For example, a constant burn rate
+<p>\[R = -dm_R/dt = \text{ positive constant}\]
+<p>will produce (upon integration) a linear decrease of the rocket mass
+with time:
+\[m_R(t) = m_R(t_i) - (t - t_i) R; \; t_i \le t \le t_f\,,\]
+<p>where \(t_f\) is easily found from:
+<p>\[\Delta t =
+  \frac{\Delta m_R}{R} ; \text{ where } \Delta t \equiv t_f - t_i, \text{ etc.}\]
+<p>We then obtain the gravity-free rocket equation:
+\[v_R(t) = v_R(t_i) + v_E \; \ell n \left[ 
+    1 - \frac{R}{m_{Ri}} (t - t_i) \right]^{-1} ; \; t_i \le t \le t_f\,.\]
+<p>This is plotted, for a particular set of rocket parameters, as a
+solid line in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Modifications for Gravity</h2>
+
+<p>When a rocket rises vertically from the surface of the earth, against
+gravity, the additional force adds to the thrust and thus
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> becomes:
+<p>\[a_R = \frac{v_E R}{m_R} - g\,.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m19gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Rocket velocity as a function of time for
+gravity-free space (solid line) and for a rocket rising in a constant
+gravitational field (dashed line).</figcaption></figure></div>
+
+<p>Integrating and assuming \(v_R(t_i) = 0\), \(t_i = 0\), we obtain a
+revised <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
+<p>\[v_R(t_f) =
+            v_E \; \ell n \left( 1 + \frac{m_F}{m_S} \right) - g t_f\,.\]
+<p>Finally, <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> becomes:
+<p>\[v_R(t) =
+    v_E \; \ell n \left( \frac{1}{1 - \frac{R t}{m_{Ri}}} \right)
+                              - g t; \; 0 \le t \le t_f\,.\]
+<p>Note that if the burn rate is high, so that \(t_f\) is small, the gravity
+term in <a href="#eqn-12" class="eqn-ref">Eqs.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> will be small.
+That is typically the case.
+<a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> is plotted as a dashed line in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+M.&thinsp;Hunter and Steve Smith provided valuable feedback on an earlier version.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Momentum: Conservation and Transfer” (MISN-0-15). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Particle Dynamics-The Laws of Motion” (MISN-0-14). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The momentum form of Newton's Second Law, \(F = d(mv)/dt\), can be
+used for rocket problems only with great care.
+We advise against it. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This is because accelerations add vectorially and the acceleration
+of one constant-velocity observer with respect to another (of differing
+velocity) is zero.
+For further details see “Relative Linear Motion, Frames of Reference”
+(MISN-0-11). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problems&nbsp;12-13 are also on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A vertical rocket weighs 13<span class="unit">&thinsp;tons</span>, of which 9.75<span class="unit">&thinsp;tons</span> is fuel.
+           Assume a constant fuel ejection velocity of 2<span class="unit">&thinsp;mi/s</span> and assume that
+           the effect of gravity is so small that it can be neglected.
+           What is the speed of the rocket when the fuel has been exhausted?</li>
+<li><span class="item-label">2.</span> A rocket whose weight is 3000<span class="unit">&thinsp;tons</span>, when fueled up on the rocket
+           pad, is fired vertically upward.
+           At burnout 2780<span class="unit">&thinsp;tons</span> remains.
+           Gases are exhausted at a velocity of 165,000<span class="unit">&thinsp;ft/s</span> relative to the
+           rocket; both quantities are constant while the fuel is burning.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the thrust?</li>
+<li><span class="item-label">b.</span> What is the speed of the rocket at burnout?
+</li>
+<li><span class="item-label">3.</span> If the rocket in Problem&nbsp;2 is fired in deep space (no external
+           forces), what is its speed at burnout?</li>
+<li><span class="item-label">4.</span> The 13&nbsp;ton rocket in Problem&nbsp;1 is remade as a 2-stage rocket.
+           The first stage weighs 12<span class="unit">&thinsp;tons</span>, of which 9<span class="unit">&thinsp;tons</span> is fuel.
+           The second stage weighs the remaining 1<span class="unit">&thinsp;ton</span>, of which 0.75<span class="unit">&thinsp;ton</span> is
+           fuel.
+           The second stage is fired after the fuel has been exhausted in the
+           first stage and it has been decoupled.
+           Again neglecting effects due to gravity, find the final velocity of
+           the second stage.
+           Note that you must apply the rocket equation twice, in succession.
+           Compare to the final velocity of the one-stage rocket.</li>
+<li><span class="item-label">5.</span> A boy with a pea shooter is standing on roller skates on a
+           horizontal frictionless surface.
+           The mass of the system (boy, skates, pea shooter, and peas) at a
+           particular instant is \(M\).
+           At the same instant the boy is shooting peas of mass mp each whose
+           velocity relative to the earth is \(v_p\) and the velocity of the peas
+           with respect to the boy is \(v_r\).
+           All of these velocities are colinear.
+           The number of peas per unit time is \(N\).
+           What is the average thrust on the boy due to the ejected peas at
+           that instant?</li>
+<li><span class="item-label">6.</span> Does a simple scaling-up of the fuel mass and rocket shell mass
+           provide greater thrust?
+           Greater velocity?</li>
+<li><span class="item-label">7.</span> Given an exhaust velocity of \(V_{ES} = 10,860\,\text{mph}\) and a
+           fuel/fuel-container-plus-engine ratio of 90
+           amount o� fuel necessary to raise a payload of 1000<span class="unit">&thinsp;lb</span> to the
+           velocity necessary to escape earth's gravity (\(V_{ES} = 25,000\,\text{mph}\)).
+<p>           Note:  \(r \equiv \frac{M_F}{M_{FC} + M_E} = 0.9\)
+<p>           where \(M_{FC}\) is the mass of the fuel container and
+           \(M_E\) is the mass of the engine.
+           \(M_F\) is the mass of the fuel.</li>
+<li><span class="item-label">8.</span> Show that each of the three quantities on the right hand side of
+           <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> occurs in a reasonable position.</li>
+<li><span class="item-label">9.</span> Show that the right hand side of <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> agrees with what one
+           would expect as \(M_F \rightarrow 0\) or \(m_S \rightarrow \infty\).</li>
+<li><span class="item-label">10.</span> Show that the right hand side of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> agrees with what one
+            would expect if \(m_{RF} = m_{Ri}\).</li>
+<li><span class="item-label">11.</span> Use the small-\(x\) approximations
+            \((1 \pm x)^{-1} \approx (1 \mp x)\) and
+            \(\;\ell n (1 \pm x) \approx \pm x\) on <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> to show that the
+            rocket's initial acceleration is:
+<p>            \(a = \frac{v_E R}{m_{Ri}} - g\).
+<p>            Show that this agrees with what one would expect from Newton's
+            second law and the thrust equation applied at time zero.</li>
+<li><span class="item-label">12.</span> The earth escape velocity, 25,000<span class="unit">&thinsp;mph</span>, is the upward velocity needed
+           at the surface of the earth for eventual escape from the earth's
+           gravitational pull.
+           If the maximum fraction of a rocket's mass that can be devoted to
+           fuel is 90%, determine the minimum exhaust velocity necessary for
+           the rocket to reach escape velocity.</li>
+<li><span class="item-label">13.</span> Show that the equation developed in Problem l above agrees with what
+           one would expect if \(t\) is set equal to the initial time, \(t\).</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(2.77\,\text{mi/s} \approx 9,970\,\text{mph} = \text{mach } 13.4\)</li>
+<li><span class="item-label">2.</span> a. \(F = 4.67 \times 10^8\,\text{lb} = 2.34 \times 10^5\,\text{tons}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(v = 7,610\,\text{ft/s} = 5,190\,\text{mph} = \text{mach } 7.0\)
+</li>
+<li><span class="item-label">3.</span> \(v = 12,600\,\text{ft/s} = 8,590\,\text{mph} = \text{mach } 11.6\)</li>
+<li><span class="item-label">4.</span> \(v = v_E \; \ell n 13 = 5.13 \,\text{mi/s} = 18,500\,\text{mph} =
+           \text{mach } 25\); 85% greater.</li>
+<li><span class="item-label">5.</span> \(F = N v_r m_p\)</li>
+<li><span class="item-label">6.</span> Yes; no.</li>
+<li><span class="item-label">7.</span> \(m_F = m_p \left[ (1 - e^{- v_{ES}/v_{EX}})^{-1} -r^{-1}
+           \right]^{-1} = 14 \times 10^6\,\text{lb}\).</li>
+<li><span class="item-label">12.</span> 10,860<span class="unit">&thinsp;mph</span></li>
+<li><span class="item-label">13.</span> \(v_R(t_i) = v_R(t_i)\): check!</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">l.</span> See Output Skills K1-K3 on this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> The earth escape velocity, 25,000<span class="unit">&thinsp;mph</span>, is the upward velocity needed
+           at the surface of the earth for eventual escape from the earth's
+           gravitational pull.
+           If the maximum fraction of a rocket's mass that can be devoted to
+           fuel is 90%, determine the minimum exhaust velocity necessary for
+           the rocket to reach escape velocity.</li>
+<li><span class="item-label">3.</span> Show that the equation developed in Problem l above agrees with what
+           one would expect if \(t\) is set equal to the initial time, \(t\).</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;12.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;13.</li>
+</ol>
+
+</section>
+

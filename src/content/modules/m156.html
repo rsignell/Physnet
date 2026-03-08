@@ -1,0 +1,705 @@
+<header class="module-header">
+  <h1 class="module-title">Temperature and Pressure of an Ideal Gas: The Equation of State <span class="module-author">(William C.Lane, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: center of mass <a href="../m413/" class="module-ref">MISN-0-413</a>, frame of reference
+    <a href="../m412/" class="module-ref">MISN-0-412</a>, kinetic energy, joule <a href="../m414/" class="module-ref">MISN-0-414</a>, pressure, volume, density
+    <a href="../m417/" class="module-ref">MISN-0-417</a>.</li><li><strong>2.</strong> Calculate a particle's change in momentum when it undergoes an
+    elastic collision <a href="../m413/" class="module-ref">MISN-0-413</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: absolute temperature scale, Boltzmann's constant,
+    Celsius, equation of state, Fahrenheit, ideal gas, Kelvin, mole, root mean
+    square (RMS) speed, temperature, thermal equilibrium, thermometer.</li><li><strong>K2.</strong> Starting from Newton's second law, derive the expression for the
+    pressure the molecules of an ideal gas exert on the walls of a container in
+    terms of their root mean square (RMS) speed.</li><li><strong>K3.</strong> State the relation between temperature and ideal-gas average
+    kinetic energy expressed in terms of the RMS speed of the gas molecules.</li><li><strong>K4.</strong> Derive the ideal-gas equation of state, starting from microscopic
+    definitions of temperature and pressure.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a temperature from one temperature scale (Celsius,
+    Fahrenheit, Kelvin) compute the corresponding temperature for the other scales.</li><li><strong>S2.</strong> Given the known macroscopic properties of an ideal gas at one or
+    more different states, use the equation of state to calculate the unknown
+    properties at another state.</li><li><strong>S3.</strong> Given a distribution of particles with known masses and velocities,
+    calculate the RMS speed, average kinetic energy, and temperature.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Statistical Methods: Necessary for Crowded Systems</h3>
+
+When dealing with the mechanics of systems of very large numbers of
+particles it is necessary to use statistical methods.
+It's obviously impossible to treat individually each of the molecules of a
+gas consisting of \(10^{20}\) particles, even if you think you know the laws
+of physics which determine the motion of each of these particles.
+Even the most sophisticated computers currently conceived would be
+hopelessly swamped trying to keep track of the forces acting on each of the
+\(10^{20}\) particles moving about in the gas, as well as the position,
+velocity, and acceleration of each.
+Actually, even if you could obtain all of this detailed information, only
+summaries or averages of the various quantities would have useful meaning.
+For this reason statistical mechanical methods are not only the sole
+practical way, they are the most useful way of dealing with the dynamics of
+such systems.
+<p><h3 id="pcap-1-b">1b. Microscopic Descriptions Yield Macroscopic Properties</h3>
+
+The averages of the kinematical and dynamical quantities obtained by
+statistically describing a microscopic system must be related to measurable
+quantities.
+For gases these usually are the volume occupied by the gas, the pressure,
+temperature, and the number of molecules involved, which together determine
+the state of the system.
+For an ideal gas, the simplest model of intermolecular forces is assumed:
+there are no interactions between the molecules unless their centers happen
+to coincide, in which case they bounce off one another like hard spheres,
+and the molecules are assumed to be point masses.
+For such a model, the equation of state, that is, the relation between the
+measurable quantities (pressure, volume, temperature), can be derived in a
+straightforward way once temperature and average pressure are defined.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Temperature of an Ideal Gas</h2>
+
+<p><h3 id="pcap-2-a">2a. Macroscopic Viewpoint</h3>
+
+Most of us use the macroscopic viewpoint of temperature in our daily lives.
+To us, “temperature” has always been simply a measuring scale to indicate
+how “hot” or how “cold” something is.
+We know that temperature is measured with a device known as a
+“thermometer.”
+We know that “heat” travels from points of high
+temperature to points of low temperature.
+However, such a viewpoint is of limited usefulness in describing the
+temperature of a system of many particles.
+Before we proceed we must develop a microscopic picture of the system.
+<p><h3 id="pcap--">. </h3>
+[]2bMicroscopic Viewpoint: An Ideal Gas
+In order to illustrate the microscopic view of a large system of particles,
+we will choose the simplest system we can imagine, an ideal gas.
+An ideal gas is one in which the intermolecular forces are negligible, and
+the molecules can be treated as point masses which obey Newton's three laws
+of motion.
+The energy of the gas molecules is entirely translational kinetic energy.
+Temperature is defined as a quantity directly proportional to the average
+kinetic energy of a molecule, in the center of mass frame of reference.
+<p>For a system of N particles whose masses are \(m_1\), \(m_2\), \(m_3\), \(\ldots\),
+\(m_N\) and whose speeds are \(v_1\), \(v_2\), \(v_3\), \(\ldots\), \(v_N\), the
+average kinetic energy of the particles is:
+<p>\[E_\text{k,ave} =
+        \frac{1}{N} \left[ \sum_{i=1}^N \frac{1}{2} m_i v_i^2 \right].\]
+<p>If all the particles have the same mass \(m\), then:
+<p>\[\begin{aligned}E_\text{k,ave} & = \frac{1}{N} \left[ \sum_{i=1}^N \frac{1}{2} m v_i^2 \right]. \\               & = \frac{1}{2} m \left[ \frac{1}{N} \sum_{i=1}^N v_i^2 \right].\end{aligned}\]
+
+<p>A quantity known as the root mean square speed of the particles,
+\(v_\text{RMS}\), is defined such that:
+<p>\[\begin{aligned}v_\text{RMS}^2 & = \frac{1}{N} \left( v_1^2 + v_2^2 + \ldots + v_N^2\right) \\               & = \frac{1}{N} \sum_{i=1}^N v_i^2.\end{aligned}\]
+
+<p>In the “RMS” notation, the average kinetic energy of a particle in this
+system is:
+<p>\[E_\text{k,ave} = \frac{1}{2} m v_\text{RMS}^2.\]
+<p><h3 id="pcap--">. </h3>
+[]2cThermal Equilibrium
+For <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> to be of any use in defining temperature, we must
+require that
+the gas molecules have a completely random motion, a condition known as
+“thermal equilibrium.”
+At thermal equilibrium, the system has no “memory” of how it was prepared
+and the only forces acting on the particles are the contact forces felt
+during collisions with the walls of the gas container and with other
+molecules.
+If the system is at thermal equilibrium, the temperature may be defined as
+a quantity directly proportional to the average kinetic energy of the gas
+molecules:
+<p>\[E_\text{k,ave} = \frac{1}{2} m v_\text{RMS}^2 = \frac{3}{2} k T,\]
+<p>so
+<p>\[T = \frac{m v_\text{RMS}^2}{3k}.\]
+<p>The constant \(k\) is called “Boltzmann's constant.”
+The numerical value of \(k\) is \(1.3805 \times 10^{-23}\)&thinsp;J/K,
+where K
+refers to a unit of temperature on the Kelvin absolute temperature scale.
+On this scale, ice at normal atmospheric pressure melts at
+273.15&thinsp;K, and water boils at 373.15&thinsp;K at normal
+atmospheric pressure.
+If the system is not in thermal equilibrium then temperature is not a
+meaningful property of the system.
+<p><h3 id="pcap-2-d">2d. Other Temperature Scales</h3>
+
+Several other scales are commonly used for measuring temperatures and will
+be defined.
+The Celsius (formerly centigrade) temperature scale is defined by:
+<p>\[T_\text{C} = \left( T_\text{K} - 273.15 \right)\,^\circC,\]
+<p>where \(T_\text{C}\) is the Celsius temperature, \(T_\text{K}\) is the Kelvin
+temperature, and the Celsius unit of temperature is a “degree Celsius.”
+<p>A change in temperature of 1&thinsp;K is exactly equal to a change in
+temperature of 1°C.
+On this scale, water boils at 100°C and freezes at 0°C.
+Also used, especially in day-to-day life, is the Fahrenheit temperature
+scale.
+<p>The conversion of temperature from a Celsius scale to a Fahrenheit scale is
+quite straightforward and can be easily derived without memorizing formulas.
+Realizing that the two temperature scales are linearly related, we may
+write:
+<p>\[T_\text{F} = a (T_\text{C}) + b,\]
+<p>and merely solve for \(a\) and \(b\).
+This can be done by evaluating <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> at two temperatures where
+both the Fahrenheit and Celsius values are known:
+<div class="centered"><table class="physnet-table"><tbody><tr><td>(1) Freezing point of water \(\Rightarrow 32^\circF =
+       a ({0^\circC}) + b\)</td></tr><tr><td>(2) Boiling point of water \(\Rightarrow 212^\circF = a(100^\circC) + b\)</td></tr></tbody></table>
+</div>
+
+
+The first relation determines \(b\) as 32°F, and by using this value
+in the second relation, \(a\) is seen to be 1.8°F/°C.
+Converting 1.8 to its fractional equivalent of 9/5, we obtain:
+<p>\[T_\text{F} = (9/5)\,T_\text{C} + 32^\circF\,.\]
+<p>Equivalently:
+<p>\[T_\text{C} = (5/9)\,(T_\text{F} - 32^\circF).\]
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Average Pressure of an Ideal Gas</h2>
+
+<p><h3 id="pcap-3-a">3a. Macroscopic Definition of Pressure and its Units</h3>
+
+For macroscopic systems such as a fluid, pressure has been defined as the
+force per unit area exerted by the fluid on some surface:
+<p>\[P = \frac{F}{A}\]
+<p>where \(F\) and thus \(P\) may vary continuously over \(A\), the surface area
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>units of pressure in the MKS system are newtons per square meter (<span class="unit">&thinsp;N/m<sup>2</sup></span>)
+or joules per cubic meter (<span class="unit">&thinsp;J/m<sup>3</sup></span>).
+Other frequently used units of pressure include the atmosphere (atm),
+pounds per square inch (<span class="unit">&thinsp;lb/in<sup>2</sup></span> or psi), pounds per square foot
+(<span class="unit">&thinsp;lb/ft<sup>2</sup></span>) and millimeters of mercury (mm of Hg, or torr).
+The last unit of pressure is based on a method of specifying air pressure
+by means of measuring the height of a column of mercury in a barometer.
+The conversion factors between the various systems of units listed above
+are:
+<p>\[1\,\text{atm} = 1.013 \times 10^5\unit{N/m^{2}} = 760\,\text{torr}\]
+<p>\[1\unit{lb/in^{2}} = 144\unit{lb/ft^{2}} = 6891\unit{N/m^{2}}\]
+<p><h3 id="pcap-3-b">3b. Microscopic Definition of Average Pressure</h3>
+
+For a system consisting of discrete microscopic gas molecules, we must
+think in terms of the average pressure exerted by the molecules as they
+collide elastically with the walls of their container.
+By Newton's second law, the average force exerted by one object on another
+during a collision is:
+<p>\[\vec{F}_\text{av} = \frac{\Delta \vec{p}}{\Delta t},\]
+<p>where \({\Delta}\vec{p}\) is the momentum exchanged during a collision time
+interval of \({\Delta}t\).
+We will use this average force to calculate the average pressure of an
+ideal gas in some container of volume \(V\).
+<p><h3 id="pcap-3-c">3c. The Statistical Model of the System</h3>
+
+We are interested in systems that have reached thermal equilibrium, and at
+thermal equilibrium the gas molecules are in completely random motion.
+Also, in order for statistical mechanics to be valid, our system must
+contain a very large number of molecules.
+Random motion implies that the molecules are moving in all directions, and
+the large number of molecules implies both that all directions and
+allowable speeds are represented and also that the randomness is
+maintained.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>There is no net movement in any direction.
+<p><h3 id="pcap-3-d">3d. Calculating Statistical Averages </h3>
+
+When we calculate macroscopic quantities like pressure and temperature, we
+are dealing with averages over the many molecules in the system.
+For ease in computation we can assume from the beginning that all of the
+molecules move with the same average speed.
+In order for the net velocity to be zero, then, the number of molecules
+moving in any one direction must equal the number of molecules moving in
+the opposite direction.
+In particular, we could resolve the velocity of each molecule into its
+three components along the \(x\)-, \(y\)- and \(z\)-axes and use the fact that the
+sum of the components along any one of the six positive and negative axes
+must equal the sum along each of the other five.
+Equivalently, however, we could consider the molecules to be traveling only
+in the direction of one or another of the axes, with the condition that the
+number of molecules moving in any one direction must equal the number
+moving in any other direction.
+Thus for the sake of calculating macroscopic quantities, we may make the
+assumption that all of the molecules move with the same average speed and
+1/6 of them move along each of the six positive and negative axes.
+Temperature is defined directly in terms of the molecules' RMS speed, so it
+is this “average speed” that we use.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m156gr00.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An idealized system used to derive the
+pressure of an ideal gas.</figcaption></figure>
+
+<p><h3 id="pcap-3-e">3e. Derivation of Average Pressure</h3>
+
+The average pressure of an ideal gas may be derived by considering an
+imaginary system consisting of a rectangular parallelopiped with side
+lengths \(a\), \(b\), and \(c\), oriented as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+N hard spheres (atoms) of negligible size are contained inside this box.
+The atoms are moving randomly, and after thermal equilibrium is established
+we can consider that the RMS speed of these atoms remains fixed.
+A particular atom moving in the positive y direction with speed
+\(v_\text{RMS}\) is
+instantaneously at a distance \(L\) from the shaded face of the volume.
+It will strike the face in time \({\Delta}t\) given by:
+<p>\[\Delta t = L/v_\text{RMS}\]
+<p>In that time, all of the other atoms moving in the positive \(y\) direction
+that were within the sub-volume defined by \(L\) and the shaded face (of area
+\(A\)) will also strike this face.
+By the law of conservation of momentum, each atom will impart a momentum
+\(2 m v_\text{RMS}\) to the wall.
+The number of these collisions in time \({\Delta}t\) is proportional to the
+subvolume:
+<p>\[N_\text{collisions} =
+          \left( \frac{LA}{V} \right) \left( \frac{N}{6} \right),\]
+<p>where \(N/6\) is the total number of atoms moving in the \(+y\)-direction, and
+\((LA/V)\) is the fraction of the total volume \(V\) these atoms are contained in.
+The total momentum exchanged with the wall is therefore:
+<p>\[\Delta p_\text{total} =
+         N_\text{collisions} \left( 2 m v_\text{RMS} \right) =
+         \frac{1}{3}\frac{N L A m v_\text{RMS}}{V}.\]
+<p>Substituting this expression for the momentum transferred to the wall of
+the container into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>, we obtain:
+<p>\[F_\text{ave} = \frac{\Delta p}{\Delta t} =
+ \left[\frac{1}{3}
+       \frac{N L A m v_\text{RMS}}{V}\right]/\left(L/v_\text{RMS}\right),\]
+<p>or:
+<p>\[F_\text{ave} = \frac{N A m v_\text{RMS}^2}{3V}.\]
+<p>Thus the average pressure of the gas is:
+<p>\[P = \frac{1}{3}\frac{N}{V} m v_\text{RMS}^2.\]
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Equation of State of an Ideal Gas</h2>
+
+<p><h3 id="pcap-4-a">4a. Definition of State</h3>
+
+In general, the state
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>of a system is defined by specifying 
+a limited number of properties of the system and leaving other properties
+unspecified.
+The state of a gas is completely specified by a knowledge of three of its
+macroscopic properties: pressure, temperature and volume.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>In formal mathematical language, the equation can be written:
+<p>\[F(P,T,V,m) = 0\,.\]
+<p>By combining the expression for the pressure and temperature of an ideal
+gas and eliminating the term \(m v^2_\text{RMS}\), we may express the equation
+of state of an ideal gas as:
+<p>\[P V = N k T,\]
+<p>where \(P\) is the average pressure of the gas, \(T\) is the temperature of
+the gas, \(V\) is the volume of the gas container, \(N\) is the number of
+molecules (or atoms) of the gas, and \(k\) is Boltzmann's constant.
+<p><h3 id="pcap-4-b">4b. Alternate Forms of the Equation of State</h3>
+
+The equation of state of an ideal gas can be expressed in several other
+forms, each of which involve pressure and temperature.
+We can express the equation of state in terms of the number of moles of gas
+by using the relation:
+<p>\[n = \frac{N}{N_\text{A}},\]
+<p>where \(n\) is the number of moles of gas, \(N\) is the number of molecules
+of gas, and \(N_\text{A}\) is Avogadro's number, \(6.023 \times 10^{23}\).
+Thus \(N = n N_\text{A}\), so:
+<p>\[P V = n (N_\text{A} k) T = n R T,\]
+<p>where we have defined a new symbol \(R\), called the “ideal gas constant”:
+<p>\[R = (6.023 \times 10^{23}\,\text{mole}^{-1})
+           (1.3805 \times 10^{-23}\,\text{J/K})\,,\]
+<p>so:
+<p>\[R = 8.3143\,\,\text{J/(K\,mole)}\,.\]
+<p>Another form of the equation of state can be obtained by converting the
+number of moles of gas to the equivalent mass using the expression:
+<p>\[n = \frac{m}{M}\]
+<p>where \(m\) is the mass of the ideal gas in its container and \(M\) is the
+molecular weight of the gas.
+Substituting <a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a> into <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a> and dividing each side
+by \(V\) we obtain:
+<p>\[P = \frac{m R T}{M V} = \rho R T/M\,,\]
+<p>where \(\rho\) is the density of the gas.
+<p><h3 id="pcap-4-c">4c. Using the Equation of State</h3>
+
+The equation of state is a powerful tool we can use to calculate the
+unknown macroscopic properties of an ideal gas as it changes its state.
+Typically we will isolate all variables on one side of the equation and all
+constants on the other side to define a “system invariant.”
+For example, if our ideal gas system is “closed,” i.e., no molecules
+enter or leave the container, then \(N\) and \(n\) are constants, so the
+equation of state may be written as:
+<p>\[\frac{P V}{T} = N k = n R = \text{ constant.}\]
+<p>Thus the pressure, temperature and volume of the gas in one state, called
+state&nbsp;1, are related to the corresponding properties in another state,
+called state&nbsp;2, by the relation:
+<p>\[\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2} = \text{ constant}.\]
+<p>Note that we do not need to know the constant if only one property is
+unknown in one of the states.
+Given the pressure and volume in both states and the temperature in state
+1, the temperature in state 2 may be calculated this way:
+<p>\[T_2 = T_1 \left[\frac{P_2}{P_1}\right]
+                 \left[\frac{V_2}{V_1}\right]\]
+<p>One advantage of this method of calculating changes of state of an ideal
+gas is that units tend to cancel and so conversion of units is minimized.
+It should be noted that absolute (e.g. the Kelvin scale) temperatures must
+be used with the equation of state.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>I would like to thank J.&thinsp;Kovacs, M.&thinsp;Blair and O.&thinsp;McHarris for their
+contributions to an earlier study guide version of this module.  Philippe Esch kindly
+pointed out a correction that needed to be made in an equation.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a temperature scale that
+assigns a temperature of zero to the lowest possible state of molecular
+energy.
+The Kelvin scale is an example of an absolute temperature scale.
+<p>a constant, denoted by \(k\), used to
+relate temperature to molecular energy.
+For an ideal gas, \(E_\text{k,ave} = (3/2)\,k\,T\).
+<p>a temperature scale with increments the same size
+as the Kelvin scale but which assigns zero temperature to the freezing
+point of water.
+The boiling point of water is assigned to 100°C.
+This range of temperatures defines the size of a degree Celsius.
+It is not an absolute scale of temperature.
+<p>a mathematical expression which
+includes a limited number of macroscopic properties of a system and
+completely specifies the system.
+<p>a temperature scale used commonly in
+English-speaking countries.
+This scale assigns the temperature 32°F to the freezing point of
+water, and 212°F to water's boiling point.
+It is not an absolute scale of temperature.
+<p>a system composed of particles which have
+negligible volume and interact with each other only by collisions.
+The particles have no structure and function as simple point masses.
+Real gases behave like ideal gases at sufficiently low pressures and
+densities.
+<p>an absolute scale of temperature with increments
+the same size as those of the Celsius scale.
+On this scale, water freezes at 273&thinsp;K and boils at 373&thinsp;K.
+<p>an “Avogadro's number” of anything, i.e.
+\(6.023 \times 10^{23}\) of anything; like a dozen eggs, a gross of
+oranges, a mole of gas molecules.
+<p>the speed of a particle in a
+statistical system which has a kinetic energy equal to the average kinetic
+energy of the system.
+The RMS speed is found by averaging the square of all particle speeds in
+the system and taking the square root of this mean.
+<p>a macroscopic property of a system which may
+be statistically related to the average kinetic energy of the system (or
+the root mean square speed).
+<p>the state of a statistically
+described system where the motion of the particles is completely random and
+temperature is a well defined quantity.
+<p>a device used to measure temperatures.
+Thermometers operate via a variety of mechanisms whereby some property of a
+material which depends on temperature is in thermal contact with the system.
+Examples include the thermal expansion of liquids and gases and the
+electrical resistivity of a wire.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Archimede's Principle; Bernoulli's Theorem” (MISN-0-48). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Allowable speeds are those consistent with the temperature of the
+system.
+See “Energy Distribution Functions: Boltzmann Distribution” (MISN-0-159). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The term “state” as used here implies an equilibrium state:
+temperature and pressure are the same at all points. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">An equation of state refers to a particular gas; the
+mass of the gas or the number of gas molecules present is implicitly
+specified in such an equation. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;12 and 13 also occur in the module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m156gr02.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>\(v_1 = 40\)&thinsp;ft/sec, \(\theta_1 = 60^\circ\)</li>
+<li>\(v_2 = 20\sqrt{2}\)&thinsp;ft/sec, \(\theta_2= 45^\circ\)</li>
+<li>\(v_3 = 20(\sqrt{3} - 1)\)&thinsp;ft/sec, \(\theta_3 = 90^\circ\)</li>
+<li>An \(x\)-\(y\) coordinate system is set up at one of the corners of a
+billiard table in the plane of the table.
+At a given instant, three billiard balls are observed to be moving with the
+speeds and directions indicated in the sketch above.
+The dotted lines are parallel to the \(x\)-axis.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the average value of \(v_y\), the \(y\)-component of the
+           velocity?</li>
+<li><span class="item-label">b.</span> What is the average value of \(v_x\)?</li>
+<li><span class="item-label">c.</span> Calculate the RMS value of \(v_x\) for these billiard balls.</li>
+<li><span class="item-label">d.</span> Calculate the RMS value of \(v_y\).</li>
+<li><span class="item-label">e.</span> Calculate the RMS value of \(v\).</li>
+<li><span class="item-label">f.</span> If the weight of each billiard ball is one pound (1&thinsp;lb), what is
+           the average kinetic energy of these billiard balls? <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</li>
+<li><span class="item-label">2.</span> Consider a simple system of two particles, each of mass \(M\).
+           First we have them in a situation labeled case \(A\):</li>
+<li>\(v_1 = (+3.0\,\text{m/s})\,\hat{x}\)</li>
+<li>\(v_2 = (-3.0\,\text{m/s})\,\hat{x}\)</li>
+<li>Then we have them in a situation labeled case \(B\):</li>
+<li>\(v_1 = (-53\,\text{m/s})\,\hat{x}\)</li>
+<li>\(v_2 = (-47\,\text{m/s})\,\hat{x}\)</li>
+<li>In which case does the system have a higher temperature?</li>
+<li><span class="item-label">3.</span> If an ideal gas with molecules the same mass as molecular
+hydrogen have an RMS speed of 6.08&thinsp;m/s, what is the temperature of the gas?</li>
+<li>What should be the RMS speed of this ideal gas for the
+temperature to be nearer to room temperature, say 300&thinsp;K? <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">4.</span> Suppose we have two gases, both consisting of the same total
+number of particles, both ideal, both with the same average kinetic energy.
+One of the gases consists of \(N\) particles with the same mass as diatomic
+hydrogen; the other consists of \(N\) particles with the mass of the electron.
+Which gas would be at the higher temperature?</li>
+<li><span class="item-label">5.</span> Suppose that, in Problem&nbsp;4, one gas (H\(_2\)) consisted of \(N\)
+particles, the other gas (electrons) consisted of 100&thinsp;\(N\) particles, while
+all the other properties mentioned in Problem&nbsp;4 were the same.
+Which gas would be at the higher temperature?</li>
+<li><span class="item-label">6.</span> If the RMS speed of the molecules of a certain gas is kept
+constant while the number of molecules in the gas is doubled, what happens
+to each of the following quantities?
+Assume the gas is ideal and its volume is constant.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the average kinetic energy;</li>
+<li><span class="item-label">b.</span> the temperature of the gas;</li>
+<li><span class="item-label">c.</span> the pressure of the gas.
+</li>
+<li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m156gr03.svg" alt="" class="physnet-fig"></figure>
+
+<p>A hard sphere of mass M makes an elastic collision with a rigid wall.
+Before the collision the velocity of the sphere is \(v\), making an angle
+\(\theta\) with the \(x\)-direction.
+After the collision its speed is still \(v\), but the velocity \(v\) makes an
+angle \(\theta\) reflected about the \(x\)-axis from its incident direction, as
+shown in the sketch.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the \(x\)-component of the incident velocity?</li>
+<li><span class="item-label">b.</span> What is the \(x\)-component of the velocity of the rebounding
+           sphere?</li>
+<li><span class="item-label">c.</span> What is the \(y\)-component of the incident velocity?</li>
+<li><span class="item-label">d.</span> What is the \(y\)-component of the velocity of the rebounding
+           sphere?</li>
+<li><span class="item-label">e.</span> What is the change in the \(x\)-component of the velocity as a
+           result of the collision?</li>
+<li><span class="item-label">f.</span> What is the change in the \(y\)-component of the velocity as a
+           result of the collision?</li>
+<li><span class="item-label">g.</span> What is the change in momentum of the sphere?</li>
+<li><span class="item-label">h.</span> During an interval of time, \({\Delta}t\), which includes the
+           interval during which the sphere rebounded from the wall, what
+           is the average force that the sphere exerts on the wall?</li>
+<li><span class="item-label">i.</span> Suppose there are many such spheres in this region making
+collisions with the wall, all with incident \(x\)-component of velocity
+\(-v_x\).
+If these spheres are distributed so that there are \(N_x\) of them per unit
+length of distance in the \(x\)-direction, all headed left, how many of these
+strike the wall per second?
+How many strike the wall in time interval \({\Delta}t\)?
+What is the average force exerted on the wall?
+</li>
+<li><span class="item-label">8.</span> Room temperature is usually taken to be 20°C.
+Calculate the corresponding Fahrenheit value of this temperature.</li>
+<li><span class="item-label">9.</span> A normal human body temperature is usually assumed to be
+98.6°F.
+What is this temperature in degrees Celsius?</li>
+<li><span class="item-label">10.</span> Scuba divers use tanks of compressed air strapped to their backs
+to breathe underwater.
+A regulator attached to the tank feeds air to the diver at the same pressure
+as the ambient water so that pressures will be balanced throughout the
+diver's body.
+The pressure of the water is given by: \(P = P_0 + \rho g h\)
+where \(P_0\) is atmospheric pressure at sea level
+(\(P_0 = 1\,\text{atm} = 1.013 \times 10^5\unit{N/m^{2}}\)), \(\rho\) is the density
+of water, \(g\) is the acceleration of gravity, and \(h\) is the depth of
+immersion.
+As a short-hand method, divers use the fact that each 33&thinsp;ft of depth
+increases the pressure by 1&thinsp;atmosphere of pressure above atmospheric
+pressure.
+If a scuba diver were to ascend from a 33&thinsp;foot depth to the surface without
+exhaling (i.e. holding his breath) calculate the change in volume of the air
+in his body, assuming air to be an ideal gas.
+Assume that the temperature of the air remains the same.</li>
+<li><span class="item-label">11.</span> When you fill up your car's tires with air at the service
+station, you usually set the pressure at some fixed value established by the
+manufacturer.
+However during subsequent driving the tires heat up due to friction with the
+road surface.
+Assuming the tire has no leaks and is not changing shape appreciably
+calculate the new tire pressure when the temperature of the air in the tires
+increases by 10°C.
+Assume that the tires initially were inflated to 25&thinsp;psi at a temperature of
+68°F. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">12.</span> Four particles, each of mass 0.25&thinsp;kg, have these velocities:</li>
+<li>\(v_1 = (3.0\,\text{m/s}) \hat{x} - (7.0\,\text{m/s}) \hat{y}\)</li>
+<li>\(v_2 = (4.0\,\text{m/s}) \hat{y}\)</li>
+<li>\(v_3 = (7.0\,\text{m/s}) \hat{z}\)</li>
+<li>\(v_4 = (-3.0\,\text{m/s}) \hat{y}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the RMS speed of the particles in this system.</li>
+<li><span class="item-label">b.</span> Calculate the average kinetic energy and “emperature” of the
+           system, assuming it is in thermal equilibrium.
+</li>
+<li><span class="item-label">13.</span> An air cylinder initially at room temperature (68°F)
+           contains 5.0&thinsp;kg of gas at a pressure of 2000&thinsp;psi.
+           The cylinder then is attached to a compresser and filled to its
+           maximum capacity with a final pressure and temperature of
+           3000&thinsp;psi and 77°F.
+           Calculate the additional mass of air added to the cylinder,
+           assuming air is an ideal gas.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Zero</li>
+<li><span class="item-label">b.</span> Zero</li>
+<li><span class="item-label">c.</span> 16.33&thinsp;ft/s</li>
+<li><span class="item-label">d.</span> 24.59&thinsp;ft/s</li>
+<li><span class="item-label">e.</span> 29.52&thinsp;ft/s</li>
+<li><span class="item-label">f.</span> 13.61&thinsp;ft&thinsp;lb
+</li>
+<li><span class="item-label">2.</span> Both have the same temperature.
+           In case \(B\), the center of mass of the particles has a velocity
+           of \(-(50\,\text{m/s})\,\hat{x}\), so that in the center of mass
+           frame of reference both particles have speed 3&thinsp;m/s.</li>
+<li><span class="item-label">3.</span> \(3.0 \times 10^{-3}\)&thinsp;K; \(v_\text{RMS} = 1.93 \times 10^3\)&thinsp;m/s
+           at \(T = 300\)&thinsp;K.</li>
+<li><span class="item-label">4.</span> \(T\) is the same because \(E_\text{k,ave}\) is the same.</li>
+<li><span class="item-label">5.</span> \(T\) is the same because \(E_\text{k,ave}\) is the same.</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> It remains the same.</li>
+<li><span class="item-label">b.</span> It remains the same.</li>
+<li><span class="item-label">c.</span> It is doubled.
+</li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(-v  \cos\theta\)</li>
+<li><span class="item-label">b.</span> \(+v  \cos\theta\)</li>
+<li><span class="item-label">c.</span> \(+v  \sin\theta\)</li>
+<li><span class="item-label">d.</span> \(+v  \sin\theta\)</li>
+<li><span class="item-label">e.</span> \(+2v \cos\theta\)</li>
+<li><span class="item-label">f.</span> Zero</li>
+<li><span class="item-label">g.</span> \(2 M v \cos\theta \,\hat{x}\)</li>
+<li><span class="item-label">h.</span> \(- 2 M v \cos\theta/({\Delta}t)\,\hat{x}\)</li>
+<li><span class="item-label">i.</span> \(N_x v_x\); \(N_x v_x {\Delta}t\); \(- 2 M N_x v_x^2\,\hat{x}\)
+</li>
+<li><span class="item-label">8.</span> 68°F</li>
+<li><span class="item-label">9.</span> 37.0°C</li>
+<li><span class="item-label">10.</span> The gas doubles in volume.</li>
+<li><span class="item-label">11.</span> 26&thinsp;psi (a change of 1&thinsp;psi).</li>
+<li><span class="item-label">12.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 6.08&thinsp;m/s</li>
+<li><span class="item-label">b.</span> \(E_\text{k,ave} = 4.62\)&thinsp;J, \(T = 2.23 \times 10^{23}\)&thinsp;K
+</li>
+<li><span class="item-label">13.</span> 2.4&thinsp;kg</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p>=0pt
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The mass of the billiard balls may be related to the weight by recalling
+ the relation:
+ 
+ \[W = mg.\]
+ 
+ If British units such as lbs are used, then the value of \(g\) is
+ 32&thinsp;ft/s<sup>2</sup>.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Hydrogen is a diatomic gas, so its molecular mass is very nearly the mass
+ of 2 protons:
+ \[m = 2.0159\,\text{u}\]
+ and 1&thinsp;u (atomic mass unit)\( = 1.660 \times 10^{-27}\)&thinsp;kg.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Remember that to use the equation of state you must specify temperature on
+ an absolute scale, e.g. degrees Kelvin.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k = 1.3805 \times 10^{-23}\,\text{J/K}; \qquad
+       R = 8.3143\,\text{J/(K\,mole)}\]
+\[1\,\text{atm} = 1.013 \times 10^5\unit{N/m^{2}} = 14.70\unit{lb/in^{2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Four particles, each of mass 0.25&thinsp;kg, have these velocities:</li>
+<li>\(v_1 = (3.0\,\text{m/s}) \hat{x} - (7.0\,\text{m/s}) \hat{y}\)</li>
+<li>\(v_2 = (4.0\,\text{m/s}) \hat{y}\)</li>
+<li>\(v_3 = (7.0\,\text{m/s}) \hat{z}\)</li>
+<li>\(v_4 = (-3.0\,\text{m/s}) \hat{y}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the RMS speed of the particles in this system.</li>
+<li><span class="item-label">b.</span> Calculate the average kinetic energy and “emperature” of the
+           system, assuming it is in thermal equilibrium.
+</li>
+<li><span class="item-label">3.</span> An air cylinder initially at room temperature (68°F)
+           contains 5.0&thinsp;kg of gas at a pressure of 2000&thinsp;psi.
+           The cylinder then is attached to a compresser and filled to its
+           maximum capacity with a final pressure and temperature of
+           3000&thinsp;psi and 77°F.
+           Calculate the additional mass of air added to the cylinder,
+           assuming air is an ideal gas.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;12 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;13 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

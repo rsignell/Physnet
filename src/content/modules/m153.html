@@ -1,0 +1,414 @@
+<header class="module-header">
+  <h1 class="module-title">Electric Fields from Symmetric Charge Distributions <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: electric field direction and magnitude,
+    <a href="../m115/" class="module-ref">MISN-0-115</a>; linear charge density, surface charge density, volume charge
+    density, charge distribution <a href="../m147/" class="module-ref">MISN-0-147</a>; invariant, homogeneous,
+    rotational invariance, bisector, longitudinal axis (Glossary).</li><li><strong>2.</strong> State the formula for the electric field of a point charge,
+    explaining all symbols <a href="../m115/" class="module-ref">MISN-0-115</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: equi-magnitude surface (for an electric field),
+    cylindrical symmetry, planar symmetry, spherical symmetry.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given a charge distribution, determine whether it does or does
+    not have spherical, cylindrical or planar symmetry.</li><li><strong>R2.</strong> Given a charge distribution having spherical, cylindrical or
+    planar symmetry, state the rules for determining the directions and
+    equi-magnitude surfaces of the electric field, using the symmetry of the
+    charge distribution, and show the correctness of those rules.</li><li><strong>R3.</strong> Given a charge distribution having spherical, cylindrical or
+    planar symmetry, demonstrate use of the rules for determining the directions
+    and equi-magnitude surfaces of the electric field near the charge
+    distribution.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Gauss's Law and Spherically Distributed Charges” (MISN-0-132).</li><li><strong>2.</strong> “Gauss's Law Applied to Cylindrical and Planar Charge
+               Distributions” (MISN-0-133).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In this module we describe two very simple rules for finding useful parts of
+electric fields.
+These rules enable us to bypass complex mathematical calculations and
+obtain answers directly.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Although the rules are powerful, the other side of the coin is that they are
+useful only when the associated electric charges are distributed in simple
+geometrical shapes.
+Fortunately, the charges in most modern electronic components are
+distributed in just such simple shapes.
+For them the rules can be applied almost effortlessly.
+One rule produces the fields' directions and the other the surfaces on which
+field magnitudes are constant.
+The two rules are independent of each other so we discuss them separately.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Field-Direction Rule</h2>
+
+<p><h3 id="pcap-2-a">2a. Overview</h3>
+
+The “field direction” rule allows us to find the electric field direction
+at points along certain lines in space near certain kinds of charge
+distributions.
+Given a specific charge distribution and asked for the direction of the 
+nearby electric field, we first identify lines of symmetry in the charge
+distribution, such as the dashed vertical line in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, a line of
+left-right symmetry.
+Once we have identified a line of symmetry, we can find the field direction
+at all points along that line.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m153gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A charge distribution that is the same
+before and after a 180° rotation about the axis shown.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Identifying an Appropriate Line</h3>
+
+Any line along which we apply the “field direction” rule must be an axis
+of “180°-rotation symmetry.”
+That is, if we rotate our charge distribution about such an axis, through
+180° (one half of a complete turn), then the new appearance of
+the charge distribution must be indistinguishable from its appearance before
+the rotation.
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, see that the vertical dashed line is just such an axis: mentally
+make a 180° rotation about the axis and see that the resulting
+charge distribution is indistinguishable from the one we had before the
+rotation.
+Also see that there is no additional axis of 180°-rotation
+symmetry for that charge distribution.
+<p><h3 id="pcap-2-c">2c. The Rule</h3>
+
+Here is the “field direction” rule:
+<p><ul>
+<li><em>Find an axis about which the charge distribution is invariant
+to 180° rotations.
+At all points on that axis the direction of the electric field is along
+the axis.</em></li>
+</ul>
+
+<p>Note that this rule gives the field direction only along axes for which the
+charge distribution is exactly the same before and after a 180°
+rotation (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Where two such axes cross, the electric field must be zero.
+<p><h3 id="pcap-2-d">2d. Proving the Rule</h3>
+
+The “field direction” rule is easily shown to be correct by demonstrating
+that any deviation from it is false.
+Look at <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>a where the rule requires that \(\theta = 0\).
+Suppose we violate the rule and take \(\theta \neq\,0\), as shown in the
+figure.
+Now keep the axis fixed and mentally rotate the charge distribution through
+180° about that axis.
+Because the charge is what produces the electric field, the field must
+rotate along with the charge, just as though it were somehow rigidly
+attached to it.
+After the 180° rotation is over, the charge distribution
+is exactly the same as it was before the rotation (because we are only
+dealing with cases where the charge distribution has this invariance).
+Since the charge distribution is the same as before the rotation, the
+electric field that the charge produces must also be the same, but we see
+that the direction of the field did change!
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m153gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The result of assuming the electric field
+direction does not lie along the 180° symmetry axis of its charge
+distribution: (a) before; and (b) after a 180° rotation about the
+axis.</figcaption></figure></div>
+
+<p>Thus our electric field with \(\theta \neq\,0\) must be incorrect.
+Compare <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>(a) and <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>(b) and see that the only way the field could be
+the same before and after the rotation is if \(\theta = 0\).
+This means that the field must be along the axis, just as the rule states.
+Thus the rule has been proven.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Field Directions</h2>
+
+<p><h3 id="pcap-3-a">3a. A Uniform Sphere</h3>
+
+For a spherical volume with a uniform charge distribution, any straight line
+through the center of the sphere is an axis of rotational invariance
+(see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+Try such a rotation in your head and see that the charge distribution stays
+precisely the same as the sphere is rotated.
+<p>For a uniform sphere of charge, the “field direction” rule says that the
+electric field direction is radial (with respect to the center of the
+sphere) at all points in space.
+This is because any point in space is on a radial line from the center of
+the sphere.
+Since any line through the center of the sphere is a line of rotational
+symmetry, the field direction rule says that the electric field direction
+is along the line and hence is radial with respect to the center of the
+sphere.
+<p>Note that a point charge is also invariant under rotations about any axis
+that goes through it, so it is a special case of the spherical distribution.
+<p><div class="figure-row figure-row-2"><figure id="fig-3"><img src="figures/m153gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Two axes of rotational symmetry for a uniform sphere of charge.</figcaption></figure><figure id="fig-4"><img src="figures/m153gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. An axis of rotational symmetry for a cylindrical distribution of charge.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. A Uniform Cylindrical Surface</h3>
+
+A charge distribution that is uniform over a cylindrical surface has a
+single axis plus a separate plane of axes along which we can apply the field
+direction rule.
+The single axis is down the center of the cylinder: it is certainly one
+about which the charge distribution is rotationally invariant (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+Imagine rotating the charge distribution about that longitudinal axis and
+seeing that the appearance of the charge distribution does not change.
+<p>Since the single axis down the center of the cylinder is a line of
+rotational symmetry, the rule says that at any point on that axis the
+electric field direction is along the axis (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+The actual direction along the axis is governed by the usual rule: “Away
+from positive charge, toward negative charge.”
+<p>In addition to the longitudinal axis, there are an infinite number of other
+axes of 180°-rotation invariance, all lying in the plane that
+bisects the cylinder into two equal cylinders: two such axes are shown in
+<a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+Imagine other axes lying in the same plane as those two, and mentally apply
+the rule to each of your imagined axes.
+<p>We conclude that the field direction is along the longitudinal axis of the
+cylinder at all points on that axis, and is radial at all points lying in
+the plane that bisects the cylinder.
+<p><div class="figure-row figure-row-2"><figure id="fig-5"><img src="figures/m153gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Three axes of 180°-rotation symmetry for a cylindrical charge distribution.</figcaption></figure><figure id="fig-6"><img src="figures/m153gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A point \(P\) at which we wish to know the direction of the electric field from an infinitely
+       long cylinder of charge.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. An Infinitely Long Cylinder</h3>
+
+For charges distributed uniformly along an infinitely long cylinder, the
+electric field is radial at all points in space.
+Look at <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> and imagine that the cylinder stretches to infinity to both
+left and right.
+Look at the two arrow-marked axes near the center of the sketch: these
+are axes of 180°-rotation symmetry.
+Now imagine keeping these axes where they are but moving the cylinder of
+charge a short distance to the right.
+Because the ends are an infinite distance away, the distribution of charge
+looks exactly the way it did before it was moved.
+Since the direction of the electric field was along the original axes, it
+must also be along the radial axes at their new positions on the cylinder.
+The distance they were moved could have been any finite amount, so the
+electric field outside the cylinder must be radial everywhere (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p><h3 id="pcap-3-d">3d. Near A Finite Cylinder</h3>
+
+For a charge distribution in the shape of a long thin finite cylinder, the
+electric field can be taken to be radial to the extent that the finite
+cylinder approximates an infinitely long one.
+In practice, this means that the point at which we determine the field
+direction must be much closer to the nearest charges than to either end of
+the cylinder (\(r \ll \)R in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>).
+To see that the field at such a close point is very close to being radial,
+note that an exactly radial field will be produced by a cylinder whose
+ends are equidistant from the field point (the unshaded part of the
+cylinder in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>).
+Then only the shaded part of the cylinder in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a> will produce
+a non-radial part to the field at \(P\).
+However, this will be of little consequence for the field at \(P\) since the
+closer charges make a greater contribution to the field than do far-away
+charges: this is because the field falls off as the inverse square of the
+distance from individual charges.
+Of course the field direction will only be precisely radial at all
+field points of interest if the cylinder is infinitely long, making the
+ends an infinite distance away from our field points.
+<p><div class="figure-row figure-row-2"><figure id="fig-7"><img src="figures/m153gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Electric field directions at various points outside an infinitely long cylinder of charge.</figcaption></figure><figure id="fig-8"><img src="figures/m153gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. A point \(P\) at which we wish to know the direction of the electric field from a finite cylinder of charge.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-e">3e. Infinite Planes and Finite Planes</h3>
+
+The direction of the electric field from an infinite plane (a flat sheet)
+of charge is, at any point in space, along the straight line that
+both goes through the point and is normal to the plane of the charge.
+This is easily seen:
+First, mentally construct a rotation axis that is normal to the sheet and
+that passes through the field point where the direction is desired (\(P\) in
+<a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>, although only a finite sheet is pictured).
+Then mentally see that the charge is invariant to rotations about the axis.
+That means that the field must be along the axis.
+<p>For a finite rectangular sheet of constant density charge, the field will be
+exactly along the central axis normal to the sheet (see <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>), and
+approximately along normals at space points near the sheet far from its
+edges.
+That is, if the sheet's nearby charges are very much closer to the field
+point than are charges along the sheet's edges, then the sheet's edges might
+as well be extended to infinity in all directions and the field will be
+invariant to rotations about any line that is normal to the sheet.
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m153gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. An axis of 180°-rotation
+symmetry for a rectangular sheet of constant-density charge.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Equi-Magnitude Surfaces for \(E\)  </h2>
+
+<p><h3 id="pcap-4-a">4a. Definition</h3>
+
+A space point's “electric field equi-magnitude surface”: (i) includes the
+space point in question; and (ii) is a surface over which the magnitude of
+the electric field is constant.
+<p>For example, suppose we are at a point \(P\) that is at a distance \(r\) from a
+point charge \(Q\) (see <a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a>).
+Then the magnitude of the electric field at \(P\) is
+\(E = |\vec{E}| = k_e Q/(r^2)\).
+In fact, the electric field has this same magnitude at any point on the
+spherical surface of radius \(r\) that is centered on the point charge.
+Of course this surface includes the point \(P\) (see <a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a>).
+Since the spherical surface satisfies the two conditions, it is indeed the equi-magnitude
+surface for the point \(P\) in the field of the point charge \(Q\).
+<p><h3 id="pcap-4-b">4b. The Rule</h3>
+
+The rule for finding the equi-magnitude surface for a space point is this:
+starting at the space point, move along any trajectory for which the
+field's charge distribution always has the same appearance and is
+the same “distance away.”
+The collection of all such trajectories defines the space point's
+equi-magnitude surface.
+This process is carried out mentally and is only feasible for several very
+simple distributions of charge.
+<p><h3 id="pcap-4-c">4c. Example: A Point Charge</h3>
+
+As an example of the “equi-magnitude surface,” consider the
+space point \(P\) that is located a distance \(r\) from the point charge \(Q\) in
+<a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a>.
+Suppose we move away from \(P\) but stay on the spherical surface that is
+centered on the charge and is at radius \(r\).
+Then neither the point charge's apparent orientation nor its “distance
+away” will change.
+Since these quantities are all that can cause the magnitude of the charge's
+electric field to change, and these quantities stay constant, that magnitude
+must stay constant along the trajectory.
+The collection of all such trajectories defines the equi-magnitude surface.
+<p><h3 id="pcap-4-d">4d. Example: Infinite Cylindrical Surface</h3>
+
+For an infinitely long cylinder of charge, application of the “surface”
+rule shows that the magnitude of the electric field will be constant on any
+cylindrical surface concentric with it.
+One such a surface is labeled \(EMS\) in <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a>.
+We can also apply the rule to the case of two concentric cylindrical
+surfaces of charge, with or without different charge densities; any
+surface that is cylindrical and concentric with these surfaces is an
+equi-magnitude surface.
+<p><div class="figure-row figure-row-2"><figure id="fig-10"><img src="figures/m153gr10.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. The equi-magnitude electric-field surface, \(EMS\), for point \(P\) and charge \(Q\).</figcaption></figure><figure id="fig-11"><img src="figures/m153gr11.svg" alt="Figure 11" class="physnet-fig"><figcaption>Fig.&nbsp;11. The surface, labeled \(EMS\), through point \(P\), over which the electric field has constant
+         magnitude.  The charge is uniformly distributed on an infinitely long cylindrical surface.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-e">4e. General Results for Three Symmetries</h3>
+
+We here catalog the result of applying the equi-magnitude surface rule to
+any charge distribution having one of our three symmetries.
+For some particular space point of interest, the surface depends on the
+symmetry of the charge distribution in this fashion:
+<p><ul>
+<li><span class="item-label">1.</span> for a charge distribution having spherical symmetry, it is the
+spherical surface that is centered on the center of spherical symmetry and
+which in addition goes through the space point;</li>
+<li><span class="item-label">2.</span> for a charge distribution having cylindrical symmetry, it is the
+cylindrical surface that is concentric with the axis of cylindrical
+symmetry and which in addition goes through the space point; and</li>
+<li><span class="item-label">3.</span> for a charge distribution having planar symmetry, the electric field
+is constant over all space points so any surface is an equi-magnitude surface.</li>
+</ul>
+
+<p>For non-infinite charge distributions, items 2 and 3 above will be good
+approximations as long as the distance to the edges is much larger than the
+distance to the nearest charges, just as was the case with the “direction”
+rule.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+Jerszy Borysowicz contributed a good wording for the physics related
+to <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+to cut in half.
+<p>a property of an object which means that
+its physical properties are invariant to rotations about an axis of symmetry
+and to translations along that axis.
+<p>a mathematical surface
+on which the electric field, due to some specified charge distribution, is
+constant.
+<p>(adj.): property of not varying under some
+transformation or operation.
+The transformation or operation must be specified.
+<p>for a long thin object, in the “long”
+direction.
+<p>a property of an object which means that its
+physical properties are invariant to translations in any direction in the
+symmetry plane.
+Any axis normal to the plane is an axis of rotational symmetry.
+<p>a property of an object which means that
+its physical properties are invariant to all rotations about the center of
+symmetry.
+<p>a movement of an object or a coordinate system a
+finite distance along a straight line.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For applications see “Electrostatic Field Due To Continuous
+Charge Distributions: Relation to Potential” (MISN-0-148). <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> For a circle of charge, demonstrate the radial character of the
+electric field through direct use of the invariance of the charge
+distribution to 180° rotations.</li>
+</ol>
+
+<p>Use the rules developed in the text to determine the electric field
+direction and equi-magnitude surfaces for charge distributions in the
+shapes of:
+<ol>
+<li><span class="item-label">2.</span> a point charge;</li>
+<li><span class="item-label">3.</span> a spherical shell (a hollow sphere);</li>
+<li><span class="item-label">4.</span> two concentric spherical shells;</li>
+<li><span class="item-label">5.</span> a rectangular sheet (direction only);</li>
+<li><span class="item-label">6.</span> two parallel infinite planes.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See text Sect.&thinsp;2b for an analogous case.</li>
+<li><span class="item-label">2.</span> (also 3, 4) With respect to the charge: radial; concentric
+           spheres.</li>
+<li><span class="item-label">5.</span> Along the three axes of 180°-rotation symmetry.
+           Nothing can be said elsewhere.</li>
+<li><span class="item-label">6.</span> With respect to the charge planes: normal; other parallel planes.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Define \ldots  (See Output Skill K1 in this module's <em>ID 
+           Sheet</em>).</li>
+<li><span class="item-label">2.</span> See Output Skills R1-R3 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> Advice: (1) read Output Skills R1-R3; (2) understand all of the
+           <em>Text</em>; (3) get to the point where you can work the problems
+           in the <em>Problem Supplement</em> without looking back at the 
+           text: and (4) again read Output Skills R1, R2, and R3, making
+           sure you can do them.</li>
+</ol>
+
+<p></section>
+

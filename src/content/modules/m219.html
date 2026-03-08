@@ -1,0 +1,571 @@
+<header class="module-header">
+  <h1 class="module-title">The Compton Effect <span class="module-author">(Michael Brandl)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Familiarity with the properties of photons <a href="../m212/" class="module-ref">MISN-0-212</a>.</li><li><strong>2.</strong> Some familiarity with the properties of electromagnetic waves
+                (MISN-0-210 and MISN-0-211) is helpful, but not absolutely
+                necessary.</li><li><strong>3.</strong> Solve two-particle collision problems using conservation of
+                linear momentum <a href="../m15/" class="module-ref">MISN-0-15</a> and conservation of energy
+                <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>4.</strong> Given a particle's rests mass and velocity, calculate its
+                relativistic energy and momentum <a href="../m24/" class="module-ref">MISN-0-24</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive the equation for the wave length shift caused by the
+                Compton effect.
+                Start from fundamental conservation laws.
+                Define all terms and justify each step.</li><li><strong>K2.</strong> State how the results of the Compton experiment contradict the
+                classical electromagnetic wave picture and support the photon
+                theory of light.</li><li><strong>K3.</strong> Describe how two properties of the photon allow it, at high
+                densities, to give the appearance of an electromagnetic wave.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>P1.</strong> Given the necessary data about a collision between a photon and
+                an electron, use the Compton shift equation and conservation
+                laws to find either the electron's or photon's final momentum,
+                kinetic energy and wavelength.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. The Nature of Light</h3>
+
+On the macroscopic, everyday-world scale, all of the properties exhibited by
+light are wave properties: refraction, reflection, diffraction, and
+interference.
+Maxwell's equations predict the existence of electromagnetic waves produced 
+by oscillating charges and seem to be a perfect way to describe light and
+other forms of electromagnetic radiation, at least on the macroscopic level.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><h3 id="pcap-1-b">1b. Microscopic Description of Light</h3>
+
+On the microscopic level, however, electromagnetic radiation exhibits an
+entirely different set of properties.
+The photoelectric effect showed that light is granular rather than smooth in
+nature on this level and that it carries its energy in discrete bundles
+called photons.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The interaction between electromagnetic radiation and matter on the
+microscopic scale must be described in terms of the interactions between
+individual particles and individual photons.
+<p>The Compton effect gives us more information about the properties of photons.
+Not only does each photon carry a specific amount of energy, it also carries
+a specific amount of momentum.
+Certain types of scattering of electromagnetic radiation from matter can
+therefore be described in terms of collisions between individual particles
+and individual photons.
+The standard rules of relativistic kinematics apply to such collisions, and
+can be used to determine the properties of the scattered photons, which
+combine to give the measurable properties of the scattered radiation.
+The Compton effect shows that, in these collisions, photons act precisely 
+like particles which have a rest mass of zero.
+On the microscopic scale, therefore, electromagnetic radiation is essentially
+composed of streams of particles.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Experimental Evidence</h2>
+
+<p><h3 id="pcap-2-a">2a. 1923: Possible Scattering of Secondary X-Rays</h3>
+
+When A.H.&thinsp;Compton performed his now-famous experiment in 1923, it had
+already been known for some time that a material illuminated by x-rays gave
+off what were called secondary rays.
+Compton was attempting to show that these secondary rays were primarily the
+result of scattering of the incident x-rays from electrons in the material.
+<p><h3 id="pcap-2-b">2b. Wavelength Shift: Dependent on Angle</h3>
+
+The scattering of x-rays from free electrons was explainable in terms of the
+classical electromagnetic-wave theory of radiation; the details had been 
+worked out by Sir J.J.&thinsp;Thomson.
+J.A.&thinsp;Gray observed, and Compton verified, that the scattered x-rays had the
+same polarization and roughly the same intensity as were predicted by
+Thomson's scattering theory, but that the scattered rays were absorbed more
+readily than the incident x-rays would be.
+It occurred to Compton that this increased absorbability could be explained
+if one assumed that the wavelength of the scattered rays was slightly higher
+than the original wavelength of the incident x-rays.
+His measurements of the absorbability of the scattered x-rays over a wide
+range of incident wavelengths indicated that the increase in wavelength of
+the scattered x-rays was consistently on the order of 0.03&thinsp;Å .
+Compton decided to check for this wavelength increase directly, using an
+x-ray spectrometer.
+He also checked to see if the wavelength shift depended upon the angle
+through which the x-rays were scattered.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m219gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Compton's Experimental Apparatus.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Compton's Apparatus</h3>
+
+Compton's experimental setup is shown schematically in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+X-rays of known wavelength were produced in an x-ray tube and allowed to
+strike a graphite target.
+A series of slits allowed only those scattered x-rays which left the target
+in a direction making an angle \(\phi\) with the direction of the beam of
+incident x-rays to enter the spectrometer.
+This angle \(\phi\) is the angle through which these particular x-rays had
+been scattered; its value could be varied by moving the x-ray source.
+The x-rays spectrometer consisted of a crystal from which the x-rays were
+reflected and an ionization chamber which detected the x-rays.
+The wavelength of the scattered x-rays could be determined from the angle at
+which they were reflected from the crystal with maximum intensity (a
+well-known interference effect).
+The output of the spectrometer was essentially an indication of the
+intensity of the scattered x-rays as a function of wavelength.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m219gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Results of Compton's Experiment.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. Results of Compton's Experiment</h3>
+
+The output of the spectrometer for several values of the scattering angle
+\(\phi\) is shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The x-rays incident on the graphite target have a wavelength of
+\(\lambda = 0.707\)&thinsp;Å.
+When \(\phi = 0^\circ\), the x-rays being detected in the spectrometer are
+essentially those which have undergone no scattering, so it is not
+surprising that the spectrometer's output is a single peak centered around
+\(\lambda = 0.707\)&thinsp;Å.
+As the value of \(\phi\) is increased, however, that single peak splits up
+into two peaks, one at the original value of \(\lambda = 0.707\)&thinsp;Å, and the
+other at the increased wavelength \({\lambda}'\), whose value depends upon the
+value of \(\phi\).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m219gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Idealized Results of Compton's
+Experiment.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Compton's Empirical Formula</h3>
+
+Compton had shown that at least some of the scattered x-rays had their
+wavelengths changed in the scattering process - an observation that is at
+odds with the classical electromagnetic-wave theory's explanation of
+scattering, as we shall see below.
+Furthermore, it was evident that the amount by which the wavelength of a
+scattered x-ray changed was directly related to the angle \(\phi\) through
+which it had been scattered.
+Later experiments developed the empirical relationship for the shifted
+peak's position:
+<p>\[{\lambda}' - \lambda = \lambda_c (1 - \cos\phi)\]
+<p>where \({\lambda}'\) is the wavelength of scattered x-rays,
+\(\lambda\) is the wavelength of incident x-rays,
+\(\lambda_c = 2.426 \times 10^{-12}\,\text{m} = 2.426 \times 10^{-2}\)&thinsp;Å ,
+a constant, and \(\phi\) is the angle through which x-rays are scattered.
+<p><h3 id="pcap-2-f">2f. Target Independence</h3>
+
+The basic experiment can be repeated using a variety of different materials
+as targets, and the above relationship will be found each time.
+This implies that the phenomenon being observed is a property of basic
+constituents of all matter, rather than of any specific substance.
+<p><a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is a useful tool---any theory of x-ray scattering from
+matter will have to predict the same relationship before it can be accepted
+as realistic.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Electromagnetic-Wave Explanation</h2>
+
+<p><h3 id="pcap-3-a">3a. Overview</h3>
+
+In the classical picture, x-rays are simply electromagnetic waves having
+short wavelengths and hence high frequencies.
+The mechanisms by which an electromagnetic wave “scatters” from an
+electron or any other charged particle is easily understood; it is shown
+pictorially in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m219gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Electromagnetic wave “scattering” from
+an electron.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Scattering as a Driven Oscillator</h3>
+
+An electromagnetic wave consists of a time-varying and spatially-varied
+electric field \(\vec{E}\) and magnetic field \(\vec{B}\).
+If we were to sample such a wave at a stationary point, we would see an
+oscillating electric field and an oscillating magnetic field.
+An electron struck by an electromagnetic wave of frequency \(\nu\) would
+therefore see the wave as an electric field \(\vec{E}\) and a magnetic field
+\(\vec{B}\), each oscillating with the frequency \(\nu\).
+If the electron is initially at rest and is not accelerated to a high
+velocity, the effects of the magnetic field upon it will be negligible.
+However, the varying electric field causes the electron to be accelerated up
+and down, forcing it to oscillate at the same frequency \(\nu\) at which the
+field itself oscillates.
+The oscillating electron now acts as a source of new electromagnetic waves
+which head out in all directions, each one having the same frequency \(\nu\)
+with which the electron is oscillating.
+<p><h3 id="pcap-3-c">3c. Summary of the 2-step Process</h3>
+
+The process by which x-rays scatter from electrons in the classical
+electromagnetic-wave picture therefore has two steps: (1) the incident x-ray
+forces the electron to oscillate; and (2) the oscillating electron produces
+the scattered x-rays.
+<p><h3 id="pcap-3-d">3d. Polarization and Intensity vs. Angle: Good</h3>
+
+The details of the above process can be worked out using Newtonian
+kinematics to determine the characteristics of the scattered radiation
+produced by that
+motion, as was done by Sir J.&thinsp;J.&thinsp;Thomson.
+This gives some specific information about the scattered radiation---its
+polarization (direction in which the electric field vector points) is the
+same as that of the incident radiation, and its intensity is a well-defined
+function of the direction at which it comes out relative to the direction of
+the incident radiation.
+These predictions were borne out fairly well by Compton's earlier
+experiments.
+<p><h3 id="pcap-3-e">3e. Sharp Shifted Peak: Failure</h3>
+
+The classical theory does, however, make one specific prediction which is
+flatly contradicted by the results of Compton's experiment.
+The electron is forced to oscillate at the same frequency as the incident
+radiation, and the scattered radiation produced by that oscillation must in
+turn have the same frequency.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Therefore, the wavelengths of the incident and scattered x-rays must be
+identical.
+Yet Compton's experiment showed that at least some of the scattered x-rays
+have longer wavelengths than the incident x-rays.
+We must therefore conclude that the classical theory does not give a valid
+description of the phenomenon.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Photon Explanation</h2>
+
+<p><h3 id="pcap-4-a">4a. Kinematics is Necessary</h3>
+
+Since the electromagnetic-wave theory of radiation is unable to explain the
+Compton effect, we must look to the photon theory for help.
+But how do we deal with photons?
+We have to know how to treat them kinematically before we can determine how
+they scatter from particles.
+<p><h3 id="pcap-4-b">4b. Fairly Well Localized</h3>
+
+The photoelectric effect tells us something about photons.
+They are the discrete bundles of energy that make up electromagnetic
+radiation.
+The photoelectric effect shows that each photon interacts only with a single
+electron,
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>so photons must be fairly localized objects.
+Therefore, it is only natural to think of photons as particles.
+<p><h3 id="pcap-4-c">4c. Correspondence with Waves</h3>
+
+In order to look like an electromagnetic wave when there is a huge density
+of them, photons must be a very special class of particles.
+First, like the electromagnetic wave, they have to travel at the speed of
+light.
+This is something that, according to relativity, ordinary particles with
+mass cannot do.
+Second, any electromagnetic wave which carries an amount of energy \(E\) must
+also carry along with it an amount of momentum \(p = E/c\).
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>The photon satisfies both of these criteria because it is massless, so
+relativity allows it to travel at the speed of light, and each photon
+obeys the momentum/energy relation:
+<p>\[p_{ph} = E_{ph}/c\,,\]
+<p>where \(p_{ph}\) is the photon's momentum, \(E_{ph}\) is the photon's energy.
+<p>We can now examine the way in which photons scatter from electrons and other
+massive particles.
+We simply consider a photon as a massless particle with momentum
+\(p_{ph} = h/\lambda\), and energy \(E_{ph} = p_{ph}c = h\nu\), and proceed
+to work out the (relativistic) kinematics of the collision between such a
+particle and an electron.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m219gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Collision between a photon and an
+electron.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-d">4d. Collision Between Photon and Electron</h3>
+
+Let us look at the collision in a frame in which the electron is initially
+at rest, as is shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+Primed quantities are those existing after the collision.
+The incoming photon is part of a beam of incident radiation of wavelength
+\(\lambda\), so the magnitude of its momentum is
+<p>\[p_{ph} = \frac{h}{\lambda}\]
+<p>and its energy is
+<p>\[E_{ph} = p_{ph} c\,.\]
+<p>The outgoing photon, coming out at an angle \(\phi\) relative to the direction
+of the incident photon, is part of the beam of scattered radiation going out
+at  that angle, whose wavelength is designated \({\lambda}'\).
+Its momentum is therefore
+<p>\[p_{ph}' = \frac{h}{\lambda'}\]
+<p>and its energy is
+<p>\[E'_{ph} = p_{ph}' c\,.\]
+<p>The electron is initially at rest, so its momentum is 
+<p>\[p_e = 0\,.\]
+<p>The initial energy of the electron is
+<p>\[E_e = m_e c^2\,,\]
+<p>which is, of course, just the rest energy of the electron due to its mass.
+The outgoing electron, coming out at an angle \(\theta\) relative to the
+direction of the incident photon, has momentum \(p'_e\).
+The energy of the outgoing electron is
+<p>\[E_e' = \left({p'_e}^2 c^2 + m_e^2 c^4\right)^{1/2}\,,\]
+<p>which is the sum of its relativistic kinetic energy and its rest energy.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Deriving Compton's Formula</h2>
+
+<p><h3 id="pcap-5-a">5a. The General Approach</h3>
+
+What we would like to end up with is an expression that we can check against
+the empirical relationship given in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+It must involve \(\lambda\) (or \(p_{ph}\)), \({\lambda}'\) (or \(p'_{ph}\)),
+and \(\phi\).
+We therefore want to eliminate the unnecessary elements like the electron's
+final momentum, \(p'_e\), and the angle \(\theta\) at which the electron comes
+out.
+In order to eliminate the electron's kinematical variables, we must solve
+for them in terms of the photon's variables.
+The electron and photon variables are connected by the laws of conservation
+of momentum and energy so those are what we use.
+<p><h3 id="pcap-5-b">5b. Applying Conservation of Momentum</h3>
+
+First we write down the equation for conservation of momentum in the
+collision,
+<p>\[\vec{p}_{ph} + (\vec{p}_e = 0) =
+                      \vectprime{p}_{ph} + \vectprime{p}_e\,,\]
+<p>solve it for \(\vectprime{p}_e\),
+<p>\[\vectprime{p}_e = \vec{p}_{ph} - \vectprime{p}_{ph}\,,\]
+<p>and square it:
+<p>\[{p'_e}^2 =
+          {p_{ph}}^2 + {p'_{ph}}^2 - 2 \vec{p}_{ph} \cdot \vec{p}'_{ph}\,.\]
+<p>Since \(\phi\) is the angle between the ingoing and outgoing photon direction,
+\(\vec{p}_{ph} \cdot \vec{p}'_{ph} = p_{ph} p'_{ph} \cos\phi\), and so:
+<p>\[{p'_e}^2 = {p_{ph}}^2 + {p'_{ph}}^2 - 2 p_{ph} p'_{ph}\cos\phi\,.\]
+<p><h3 id="pcap-5-c">5c. Applying Conservation of Energy</h3>
+
+We now write down the equation for conservation of energy in the collision:
+<p>\[E_{ph} + E_e = E'_{ph} + E'_e\,,\]
+<p>solve it for \(E'_e\),
+<p>\[E'_e = E_{ph} - E'_{ph} + E_e\,,\]
+<p>and square it:
+<p>\[{E'_e}^2 =
+ {E_{ph}}^2 + {E'_{ph}}^2 - 2 E_{ph} E'_{ph} + 2 (E_{ph} - E'_{ph}) E_e +
+ {E_e}^2\,.\]
+<p><a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, and <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> give the
+energies involved in terms of the momenta and the electron's rest mass.
+Substituting these into <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> yields:
+<p>\[{p'_e}^2 c^2 + m_e^2 c^4 =
+            {p_{ph}}^2 c^2 + {p'_{ph}}^2 c^2 - 2 p_{ph} p'_{ph} c^2 +
+            2(p_{ph} - p'_{ph}) m_e c^3 + m_e^2 c^4\,.\]
+<p>Solving this for \({p'_e}^2\) gives:
+<p>\[{p'_e}^2 = {p_{ph}}^2 + {p'_{ph}}^2 -
+           2 p_{ph} p'_{ph} + 2 (p_{ph} - p'_{ph}) m_e c\,.\]
+<p><h3 id="pcap-5-d">5d. The Compton Formula</h3>
+
+Equating the right side of <a href="#eqn-13" class="eqn-ref">Eqs.&nbsp;(13)</a> and <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a> gives an
+expression involving only \(p_{ph}\), \(p'_ph\), \(\phi\), and the constants \(m_e\)
+and \(c\):
+<p>\[p_{ph} p'_{ph} \cos\phi = p_{ph} p'_{ph} -
+                              (p_{ph} - p'_{ph}) m_e c\,,\]
+<p>or, equivalently,
+<p>\[(p_{ph} - p'_{ph})m_e c = p_{ph} p'_{ph} (1 - \cos\phi)\,.\]
+<p>Dividing through by \(p_{ph} p'_{ph}\) gives
+<p>\[\left(\frac{1}{p_{ph}'} - \frac{1}{p_{ph}}\right)
+           m_e c = (1 - \cos\phi)\,.\]
+<p><a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> give the ingoing and outgoing photon
+momenta in terms of the incident and scattered wavelengths \(\lambda\) and
+\({\lambda}'\).
+Substituting these in yields:
+<p>\[\left(\frac{{\lambda}'}{h} - \frac{\lambda}{h}\right)
+            m_e c = (1 - \cos\phi)\,,\]
+<p>or
+<p>\[{\lambda}'-\lambda = \frac{h}{m_e c}(1 - \cos\phi)\,.\]
+<p>This is the famous (infamous) Compton shift equation.
+It was assumed implicitly in the derivation that the electron involved was
+free, rather than being bound to an atom.
+Had the electron been bound, the situation would have been quite different,
+since the atom would then also have been involved in the collision (more
+on this below).
+<p>The “free electron” requirement needs qualification; we really need
+only require that the amount of energy by which the electron is bound to its
+atom (or to the material itself, in the case of a conductor) should be much
+less than the amount of kinetic energy involved in the collision (which is,
+roughly, the energy of the photon involved).
+Since an x-ray photon, for instance, has a very high energy (on the order of
+\(10^2\) to \(10^5\)&thinsp;eV), any electron bound to its atom or material by only a
+few eV can be considered to be essentially free in a collision with such a
+photon.
+<p><h3 id="pcap-5-e">5e. Summary</h3>
+
+If we allow a beam of x-rays of wavelength \(\lambda\) to strike a target,
+some of the photons in the beam will interact with the (essentially) free
+electrons in the material.
+Those photons which, after scattering, come out at an angle \(\phi\) relative
+to the incident beam direction “add up” to form the scattered beam of
+x-rays observed at that angle, whose wavelength \({\lambda}'\) is given by
+<a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-23" class="eqn-ref">Eq.&nbsp;(23)</a>.
+</section>
+
+<p><section id="sect-6" class="module-section section-text"><h2 id="sect-6">6. Identifying the Peaks</h2>
+
+<p><h3 id="pcap-6-a">6a. Identification of the Shifted Peak</h3>
+
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is the empirical relationship found between the wavelength
+shift of a scattered beam of x-rays and the angle through which the x-rays
+have been scattered.
+<a href="#eqn-23" class="eqn-ref">Eq.&nbsp;(23)</a> is the theoretical relationship between the same two
+quantities.
+Compare the two equations.
+In both cases the wavelength shift is proportional to \((1 - \cos\phi)\); the
+photon theory predicts the proper angular dependence.
+The constant involved in <a href="#eqn-23" class="eqn-ref">Eq.&nbsp;(23)</a> is:
+<p>\[\begin{aligned}\frac{h}{m_e c} & = \frac{6.6262 \times 10^{-34}\,\text{J}\,\text{s}}
+                                  {\left(9.1096 \times 10^{-31}\,\text{kg})
+                                   (2.9979 \times 10^8\,\text{m/s}\right)} \\                  & = 2.4263 \times 10^{-12}\,\text{m}\,,\end{aligned}\]
+
+<p>which matches the experimentally discovered constant in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, 
+\(\lambda_c = 2.426 \times 10^{-12}\)&thinsp;m.
+<p><h3 id="pcap-6-b">6b. Shifted and Unshifted Peaks</h3>
+
+We have now successfully accounted for part of the experimental results by
+showing that those x-rays whose wavelengths have been changed in the
+scattering process have scattered from free electrons in the target
+material.
+We have explained the occurrence of the shifted peak in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> and <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+But what about the unshifted peak that shows up in the same figures?
+These x-rays have also been scattered through some angle, and so must have
+collided with something in the target, but their wavelengths have not been
+measurably changed in the process.
+<p><h3 id="pcap-6-c">6c. Identification of the Unshifted Peak</h3>
+
+The obvious conclusion is that these x-rays have scattered from something
+other than free electrons in the material.
+An x-ray photon passing through a graphite target could strike either a
+lightly bound (“free”) electron, an electron bound tightly to its carbon
+atom, or conceivably even the nucleus of a carbon atom.
+In the last two cases, the photon would be colliding with the entire carbon
+atom, whose mass is considerably greater than the mass of a single electron.
+The kinematics of such a collision are identical to those of a collision
+between a photon and a free electron.
+Some wavelength shift would be predicted in this case; its form would be
+identical to that of <a href="#eqn-23" class="eqn-ref">Eq.&nbsp;(23)</a>, but with the electron mass \(m_e\)
+being replaced by the mass of the carbon atom,
+\(m_C = 2 \times 10^4\,m_e\).
+The wavelength shift caused by x-rays scattering from carbon atoms in a
+graphite target is therefore about four orders of magnitude smaller than the
+shift caused by scattering from free electrons in the same target.
+The maximum shift due to scattering from free electrons is about
+\(4 \times 10^{-2}\)&thinsp;Å, which can be measured.
+The maximum shift due to scattering from carbon atoms, however, is only
+about \(2 \times 10^{-6}\)&thinsp;Å.
+This shift is too small to measure, so any x-rays which scatter from atoms
+in a target will seem to come out with the same wavelength they had when
+they struck the target, no matter how large the angle through which they
+have been scattered.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “The Derivation of the Electromagnetic Wave Equation from
+Maxwell's Equations” (MISN-0-210). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Photoelectric Effect” (MISN-0-213). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The frequency of the scattered radiation is spread out into a
+range centered on the frequency of incident wave.
+This phenomenon is called “radiation reaction.” <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “The Photoelectric Effect” (MISN-0-213). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Energy and Momentum in Electromagnetic Waves”
+(MISN-0-211). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>\[m_e = 511\unit{KeV/c^{2}}; \qquad hc = 1.24\,\text{KeV}\,\text{nm}\]
+<p><ol>
+<li><span class="item-label">1.</span> What is the ratio of Compton wavelength shift for radiation
+scattered at 120° to that scattered at 60°?</li>
+<li><span class="item-label">2.</span> X-rays of wavelength 100&thinsp;pm are scattered from a carbon block.
+What is the observed shift in the wavelength for radiation leaving the block
+at an angle of 60° from the direction of the incident beam?</li>
+<li><span class="item-label">3.</span> What is the Compton scattering angle for gamma rays which have a
+wavelength of 10.00&thinsp;pm after scattering, 9.67&thinsp;pm before?</li>
+<li><span class="item-label">4.</span> For 30° Compton scattering, which is larger:
+\(\Delta\lambda\) for \(\lambda = 0.15\)&thinsp;nm or \(\Delta\lambda\) for 
+\(\lambda = 0.10\)&thinsp;nm?</li>
+<li><span class="item-label">5.</span> What is the scattering angle for the Compton wavelength shift to
+be at a maximum value?</li>
+<li><span class="item-label">6.</span> After an elastic collision with a free electron, a photon is
+observed to have a momentum equal to 134&thinsp;KeV/c and to be traveling in a
+direction 13.6° away from its direction before the collision.
+Calculate the wavelength of the incident photon if the electron was
+originally at rest.</li>
+<li><span class="item-label">7.</span> The Compton shift for an x-ray photon is found to be 0.70&thinsp;pm.
+If the photon collided with an electron initially at rest, giving it a
+kinetic energy \(E_k = 673\)&thinsp;KeV, find the initial momentum and energy of the
+x-ray. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">5.</span> \((2n + 1)\pi\); \(n\) is any integer</li>
+<li><span class="item-label">1.</span> 3:1</li>
+<li><span class="item-label">4.</span> They are the same; \(\Delta\lambda = \lambda_c (1 - \cos\phi)\)
+           which is constant, not depending on \(\lambda\).</li>
+<li><span class="item-label">6.</span> \(\lambda = 9.18\)&thinsp;pm</li>
+<li><span class="item-label">7.</span> \(p_\gamma = 1.48\)&thinsp;MeV/\(c\); \(E_\gamma = p c = 1.48\)&thinsp;MeV</li>
+<li><span class="item-label">2.</span> \(\Delta\lambda\) = 1.21&thinsp;pm</li>
+<li><span class="item-label">3.</span> 29.9°</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Given: \(E_{electron}\), \(\Delta\lambda_\gamma\)
+<p> Find: \(E_\gamma\), \(P_\gamma\)
+<p> Method: \(\Delta E_\gamma = E_{electron}\);
+         \(\Delta E_\gamma = E_\lambda - E_{{\lambda}'} =
+          \frac{hc}{\lambda} - \frac{hc}{{\lambda}'}\)
+<p> but: \({\lambda}' = \lambda + \Delta\lambda\)
+<p> So:  \(E_e = hc \left(\frac{1}{\lambda} - \frac{1}{{\lambda}'}\right) =
+    hc\left(\frac{1}{\lambda} - \frac{1}{\lambda + 
+        \Delta\lambda}\right)\)
+<p> \(\phantom{So:\;}
+   \frac{E_e}{hc} = \frac{1}{\lambda}-\frac{1}{\lambda + \Delta\lambda} =
+        \frac{\Delta\lambda}{\lambda(\lambda+\Delta\lambda)}\)
+<p> Let: \(a \equiv \frac{E_e}{hc\Delta\lambda} =
+           \frac{1}{\lambda(\lambda+\Delta\lambda)}\)
+<p> \(\Longrightarrow \qquad \lambda^2(a) + \lambda (a\Delta\lambda) - 1 = 
+             0\)
+<p> quadratic equation: solve by quadratic formula
+<p> \(a = 0.77535\,\text{pm}^{-2}\)
+<p> \(a\Delta\lambda = 0.54275\,\text{pm}^{-1}\)
+<p> \(\lambda = 0.83838\,\text{pm}\)
+<p> \(E_\gamma = \frac{hc}{\lambda} =
+            \frac{1.24\,\text{MeV}\,\text{pm}}{0.83838\,\text{pm}}\)
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p> Compton Formula: \(\lambda' - \lambda = \frac{h}{m_ec} (1 - \cos\phi)\,.\)
+<p> \(hc = 1.24\)&thinsp;KeV&thinsp;nm
+<p> \(m_e c^2 = 0.51\)&thinsp;MeV
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> A \(\gamma\)-ray with an initial wavelength of
+           \(1.19 \times 10^{-3}\)&thinsp;nm is observed to be scattered through an
+           angle of 37° upon collision with a free electron.
+           If the electron is initially at rest, find its kinetic energy
+           after the collision.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em></li>
+<li><span class="item-label">2.</span> \(E_{electron} = 304\)&thinsp;KeV</li>
+</ol>
+
+<p></section>
+

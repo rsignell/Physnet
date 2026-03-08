@@ -1,0 +1,719 @@
+<header class="module-header">
+  <h1 class="module-title">Point Charge: Field and Force <span class="module-author">(J.S.Kovacs and Kirby Morgan)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: gravitational field <a href="../m108/" class="module-ref">MISN-0-108</a>; point charge,
+                electric force constant \(k_e\) <a href="../m114/" class="module-ref">MISN-0-114</a>.</li><li><strong>2.</strong> State Coulomb's law <a href="../m114/" class="module-ref">MISN-0-114</a>.</li><li><strong>3.</strong> Express a vector in terms of unit vectors associated with a
+                fixed coordinate system <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>4.</strong> Solve two-dimensional kinematics problems <a href="../m8/" class="module-ref">MISN-0-8</a>.</li><li><strong>5.</strong> For a given vector, construct a unit vector with the same
+                direction <a href="../m9/" class="module-ref">MISN-0-9</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: action-at-a-distance, electric field, electric field
+    vector (electric field strength), electric force, field, lines of force,
+    non-uniform electric field, uniform electric field.</li><li><strong>K2.</strong> State the expression for the electric field at a specified point
+    in space due to a fixed point charge.
+    Indicate in a sketch the direction of this field vector at the point.</li><li><strong>K3.</strong> State how lines of force are related to the electric field.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the electric field at a specified point in space due
+    to a given spatial distribution of charged point particles.</li><li><strong>S2.</strong> Calculate the force on a charged point particle at a point where
+    you know the electric field.
+    Also determine the motion of a charged particle in a region where the
+    electric field is known.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The electrostatic force between two point charges can be thought of from two
+points of view.
+According to Coulomb's law, the particles exert a force on each other even
+though they are not in direct contact; this is the action-at-a-distance 
+concept.
+An alternative approach is the field concept where one charge sets up an
+electrostatic  field at each point in space and the second particle feels a
+force due to the field.
+These two points of view may seem to be equivalent and so the introduction
+of the field concept appears to be superfluous; but it isn't.
+For example, when the charged particles move at relativistic speeds,
+the force will not be transmitted instantaneously as required by the
+action-at-a-distance viewpoint because of the finite speeds with which
+signals can propagate.
+The field concept survives such difficulties and, furthermore, opens the way
+to an understanding of more difficult topics such as the propagation of
+electromagnetic signals and the properties of light.
+In this module we confine our attention to defining the electric field
+vector and finding the force on a particle in the presence of an electric
+field.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Electric Field</h2>
+
+<p><h3 id="pcap-2-a">2a. The Field Concept</h3>
+
+The field concept enables us to avoid considering action-at-a-distance 
+forces.
+Coulomb's law states that two charged particles exert forces on one another
+in spite of the fact that they are not in physical contact; that's
+action-at-a-distance.
+The alternative is to view the situation in two steps.
+First, one of the particles establishes an electric field such that,
+associated with every point in space, there is an electric field vector.
+The other particle, placed at one of the points in space, interacts via its
+own charge with the electric field at the point.
+The force this particle feels is a contact-like force, exerted on it by the 
+field at the particle's location.
+At another point, where the field has a different magnitude and direction,
+the particle would feel a different force.
+Another charged particle placed at the same point might have a different
+force exerted on it.
+<p><h3 id="pcap-2-b">2b. Definition of \(\vec{E}\)</h3>
+
+The electric field vector or electric field strength, \(\vec{E}\), at a point
+in space is defined in such a way that the force on a charged particle
+placed at that point is given by
+<p>\[\vec{F} = q \vec{E}\,,\]
+<p>where \(q\) is the charge of the particle.
+If the field \(\vec{E}\) varies from point to point, it can be looked at 
+mathematically as a vector function of position and written as
+<p>\[\vec{E}(x,y,z) =
+       E_x(x,y,z)\hat{x} + E_y(x,y,z)\hat{y} + E_z(x,y,z)\hat{z}\,,\]
+<p>where \(E_x\), \(E_y\), \(E_z\) are the components of \(\vec{E}\), and \(x\), \(y\), \(z\)
+are the cartesian coordinates of the point relative to some coordinate
+system.
+This is frequently written as \(\vec{E}(x,y,z) = \vec{E}(\vec{r})\) where
+\(\vec{r}\) is the vector from the origin of the coordinate system to the
+point at which the electric field is to be determined.
+<p><h3 id="pcap-2-c">2c. The Electric Force</h3>
+
+The force \(\vec{F} = q \vec{E}\) on a charged particle which is placed at a
+point designated by a vector \(\vec{r}\), is independent of how the electric
+field \(\vec{E}\) comes about.
+Whether \(\vec{E}\) is the electric field due to a single point charge
+(located at some point in space other than \(\vec{r}\), where \(q\) is) or
+whether it is the electric field due to some distribution of a large number
+of discrete charges, the force on charge q placed at point \(\vec{r}\) is 
+<p>given by <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p><h3 id="pcap-2-d">2d. Uniform Electric Field</h3>
+
+<p>For what sort of simple, physically realizable situations can we write down
+a function which represents the electric field for that system?
+The simplest function is a constant, i.e. the field is uniform in magnitude
+and direction.  
+A uniform electric field is such that a charged particle placed at any point
+in the region of that field feels the same force.
+Such a uniform electric field can be achieved between two large parallel
+planes of equal but opposite uniform distributions of charge.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m115gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A uniform electric field.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Charge Motion in a Uniform Electric Field</h3>
+
+The equation of motion for an electric charge in an electric field is given
+by
+<p>\[m \vec{a} = \vec{F} = q \vec{E}\,,\]
+<p>or
+<p>\[\vec{a} = \frac{q \vec{E}}{m}\,.\]
+<p>The velocity and position of the particle (of charge \(q\) and mass \(m\)) can
+<p>be found by integrating <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+If the electric field is uniform, \(E\) is a constant and \(a\) is a constant
+also.
+In this case for motion parallel to the field.
+<p>\[v = v_0 + \frac{q}{m} E t\,,\]
+<p>and
+<p>\[x = x_0 + v_0 t + \frac{q}{2m} E t^2 \qquad \help{1}\,.\]
+<p><h3 id="pcap-2-f">2f. Comparison to Gravitational Field</h3>
+
+The constant electric field has as an analog the gravitational field near 
+the surface of the earth.
+Just as the gravitational field interacts with the particle's mass, the 
+electric field interacts with the charge of the particle.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The force on a particle of mass \(m\) in a gravitational field \(\vec{g}\) is
+given by \(\vec{F} = m \vec{g}\) while the force on a particle of charge \(q\)
+in an electric field \(\vec{E}\) is \(\vec{F} = q \vec{E}\).
+Near the surface of the earth the gravitational field varies very little,
+but for greater distances the field varies inversely as the square of the
+distance from the center of the earth.
+The latter situation is analogous to the electric field of a point charge.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Field of a Point Charge</h2>
+
+<p><h3 id="pcap-3-a">3a. Derivation From Coulomb's Law</h3>
+
+The field of a point charge can be determined from the definition of the
+<p>electric field [<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>] and Coulomb's law.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>With a particle of charge \(q'\) placed at the origin of the coordinate
+system, the force on another particle with charge \(q\), placed at the end of
+the position vector \(\vec{r}\), is given by
+<p>\[\vec{F} = k_e \frac{q q'}{r^2} \hat{r}\,,\]
+<p>directed along the unit vector \(\hat{r}\), either away from or toward the
+origin depending upon the sign of the product \(q q'\).
+<p>Combining this with <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> gives
+<p>\[\vec{E}(\vec{r}) = k_e \frac{q'}{r^2}\hat{r}\,.\]
+<p>for the electric field at the position \(\vec{r}\) due to the charge \(q'\).
+<p><h3 id="pcap-3-b">3b. Characteristics of the Field</h3>
+
+Many quantitative and qualitative aspects of the field of a point charge can
+<p>be ascertained from <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>.
+First of all, the electric field vector points away from \(q'\) if it is
+positive, and toward it, if it is negative.
+Moreover, the field's magnitude is not the same at all points since it
+decreases inversely as the square of the distance from the origin.
+The field due to a point charge is therefore an example of a non-uniform 
+field.
+What are the dimensions of the electric field vector?
+From the definition, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, it can be seen that \(E\) has the
+<p>dimensions newtons per coulomb (N/C).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m115gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The Field of a Point Charge: (a) a
+positive charge, (b) a negative charge.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. Field Due to More Than One Charge</h3>
+
+To find \(\vec{E}\) at a given point for a group of charges, we must calculate
+\(\vec{E}_i\) due to each charge \(q_i\) as if it were the only charge present
+and then add the results vectorially:
+<p>\[\vec{E}_\text{Total} = \vec{E}_1 + \vec{E}_2 + \ldots + \vec{E}_n =
+       \sum_{i=1}^n \vec{E}_i\,.\]
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m115gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The net electric field due to two
+charges.</figcaption></figure></div>
+
+<p>For example, <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> shows the resultant electric field \(\vec{E}\) at a
+point \(P\) due to two point charges of opposite sign.
+<p><h3 id="pcap-3-d">3d. Lines of Force</h3>
+
+Instead of sketching the electric field vector at selected points (as was 
+done in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> and <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>) another convenient way to visualize the field is to
+imagine “lines of force.”
+The (imaginary) lines of force are related to the electric field vector in
+these ways:
+<ul>
+<li><span class="item-label">1.</span> The tangent to the line of force gives the direction of
+\(\vec{E}\) at that point.</li>
+<li><span class="item-label">2.</span> The number of lines of force drawn per unit cross-sectional area
+is proportional to the magnitude of \(\vec{E}\).</li>
+</ul>
+
+The lines of force are shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> for two oppositely charged parallel
+planes and a positive point charge.
+Figure&nbsp;5 shows the lines of force present for the combination of two unlike
+charges and two like charges.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m115gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Lines of force for: (a) oppositely charged
+parallel planes; (b) positive point charge.</figcaption></figure></div>
+
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m115gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Lines of force for two charges:
+(a) opposite charges; (b) like charges.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Calculating the Field</h2>
+
+<p><h3 id="pcap-4-a">4a. Statement of the Problem</h3>
+
+Three equivalent, alternative methods can be used for determining the
+electric field at an arbitrary point in space due to a point charge at
+another arbitrary point in space (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+Notice that the displacement \(\vec{R}\) from the charge \(Q\) to the point \(P\)
+is now the relevant quantity in the determination of the electric field, and
+not the position vector \(\vec{r}\) of the point \(P\) with respect to the
+origin of coordinates.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m115gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A point charge \(Q\) is at point
+\(x = -0.03\)&thinsp;m on the \(x\)-axis.
+The electric field is to be determined at point \(P\) on the \(y\)-axis.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-b">4b. Method 1: Cartesian Components of \(\vec{R}\)</h3>
+
+The electric field at the point \(P\) is given by
+<p>\[\vec{E} = k_e \frac{Q}{R^2} \hat{R}\,,\]
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m115gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The distance \(R\) from
+the source of the field charge \(Q\), to the point \(P\) where the electric
+<p>field is to be determined using <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>.</figcaption></figure></div>
+
+<p>where \(\hat{R}\) is a unit vector pointing from the charge \(Q\) toward the
+<p>point \(P\), and \(R\) is the distance from the charge to point \(P\) as shown in
+Fig.&thinsp;(7).
+The direction of the unit vector \(\hat{R}\) needs to be expressed in terms of
+the unit vectors \(\hat{x}\) and \(\hat{y}\) which are associated with the
+coordinate system.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Thus (refer to <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> and <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>):
+<p>\[\vec{R} = (0.03\,m) \hat{x} + (0.04\,m) \hat{y}\,,\]
+<p>and
+<p>\[\vec{R} \cdot \vec{R} = R^2 = (0.05\,m)^2\,.\]
+<p>The unit vector \(\hat{R}\) can be expressed by dividing \(\vec{R}\) by its
+magnitude:
+<p>\[\hat{R} = \frac{\vec{R}}{R} = \frac{0.03}{0.05} \hat{x}
+                                       +\frac{0.04}{0.05} \hat{y}\,.\]
+<p>Thus the field \(E\) at point \(P\) can be written:
+<p>\[\vec{E}_P = (3.6 \times 10^6\,\text{N/C}) \hat{R} =
+(2.16 \times 10^6 \hat{x} + 2.88 \times 10^6 \hat{y})\,\text{N/C}\,.\help{2}\]
+<p>\(\vec{R}\) in component form (in general) is: 
+<p>\[\vec{R} = R_x \hat{x} + R_y \hat{y} + R_z \hat{z}\,.\]
+<p>(For the specific situation of <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>, \(R_x = 0.03\)&thinsp;m, \(R_y = 0.04\)&thinsp;m,
+\(R_z = 0\)).
+Thus:
+<p>\[\vec{E}= k_e \frac{Q}{R^2} \frac{\vec{R}}{R} =
+                 k_e \frac{Q}{R^2}
+            \left[\left(\frac{R_x}{R}\right)\hat{x} +
+                  \left(\frac{R_y}{R}\right)\hat{y} +
+                  \left(\frac{R_z}{R}\right)\hat{z}\right]\,.\]
+<p><h3 id="pcap-4-c">4c. Method 2: Magnitude and Direction</h3>
+
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m115gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. The direction of the field at \(P\) due to
+the point charge \(Q\) is given by the angle \(\theta\) that the field vector
+\(\vec{E}\) makes with the \(x\)-axis.</figcaption></figure>
+
+<p>An alternative way of expressing \(\vec{E}\) at the point \(P\) would be in
+terms of its magnitude and an angle relative to some fixed direction.
+As indicated in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>, the angle \(\vec{R}\) makes with the \(x\)-axis can be
+determined from the right triangle involving
+<p>
+\(\vec{R}\) and the \(x\)- and
+\(y\)-components of \(\vec{R}\).
+The angle \(\theta\) can be found from its tangent
+<p>\[\tan\theta=\frac{0.04m}{0.03m}=\frac{4}{3}\,,\]
+<p>\[\theta = \tan^{-1}(4/3) = 53.1^\circ\,.\]
+<p>\(\vec{E}\) is thus \(3.6 \times 10^6\,\text{N/C}\) at 53.1° with
+respect to the positive \(x\)-axis (measured counter-clockwise).
+The field can then be decomposed into \(x\) and \(y\) components:
+<p>\[\vec{E} = E_x \hat{x} + E_y \hat{y} =
+                 E \cos\theta \hat{x} + E \sin\theta \hat{y}\,.\]
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m115gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Vector diagram illustrating the relation
+between the vectors \(\vec{r}\), \(\vec{r}_Q\), and \(\vec{R}\).</figcaption></figure>
+
+<p><h3 id="pcap-4-d">4d. Method 3: General Expression</h3>
+
+A general expression for the field at any point \(P\) due to a charge \(Q\)
+located at any other point can be derived in terms of the cartesian
+coordinates of \(P\).
+<p>Rewriting the expression for the electric field (<a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>):
+<p>\[\vec{E} = k_e \frac{Q}{R^2}\hat{R} =
+
+         k_e \frac{Q}{R^2}\frac{\vec{R}}{R}\,,\]
+<p>where \(R\hat{R} = \vec{R}\), the vector from \(Q\) to point \(P\).
+We now define these vectors (see <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>):
+<p><ul>
+<li>\(\vec{r}_Q \equiv\) position vector from origin to charge \(Q\)</li>
+<li>\(\vec{r} \equiv\) position vector from the origin to the point where we wish
+to know the field.</li>
+<li>\(\vec{R} \equiv\) displacement vector from \(Q\) to point \(P\)</li>
+</ul>
+
+<p>From <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a> we can see that:
+<p>\[\vec{r} = \vec{r}_Q + \vec{R}\,,\]
+<p>or
+<p>\[\vec{R} = \vec{r} - \vec{r}_Q\,,\]
+<p>so that \(\vec{R}\) has these components:
+<p>\[R_x = x - x_Q;\qquad R_y = y - y_Q; \qquad R_z = z - z_Q\,,\]
+<p>and the magnitude of \(\vec{R}\) is given by: 
+<p>\[R = \left(R_x^2 + R_y^2 + R_z^2\right)^{1/2} =
+             \left[(x - x_Q)^2 + (y - y_Q)^2 + (z - z_Q)^2\right]^{1/2}\,.\]
+<p>Thus <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> can be written:
+<p>\[\vec{E} = k_e \left(\frac{Q}{R^2}\right) \hat{E}\,.\]
+<p>Here:
+<p>\[\hat{E} = \left(\frac{x - x_Q}{R}\right)\hat{x} +
+                  \left(\frac{y - y_Q}{R}\right)\hat{y} +
+                  \left(\frac{z - z_Q}{R}\right)\hat{z}\,,\]
+<p>with \(R\) defined in <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a>.
+Notice that this expresses the field in terms of the coordinates of the
+location of the charge and the coordinates of the location of some point in
+space.
+For our example in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>, all components are zero except \(x_Q\) and \(y\), so
+that
+<p>\[\vec{E} = k_e \frac{Q}{R^2}
+
+                   \left[\frac{-x_Q}{R}\hat{x} +
+                         \frac{ y  }{R}\hat{y}\right]\,.\]
+<p>Here: \(x_Q = - 0.03\)&thinsp;m (note the sign);
+      \(y = + 0.04\)&thinsp;m; \(R = + 0.05\)&thinsp;m.
+<p>Substitution yields the previous result given in <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a classical-mechanics viewpoint in which
+two particles exert a force on each other even 
+though they are not in direct contact.
+In quantum mechanics, such a force is transmitted from one particle to the
+other by the exchange of virtual particles called <em>quanta</em>.
+<p>the vector quantity associated 
+with a point in space, representing the force per unit charge
+experienced by a test charge placed in the field.
+<p>the 
+vector representing the magnitude and direction of 
+the electric field at a given point in space.
+<p>the force on a particle due solely to the
+electric field at the particle's location.
+<p>a quantity that has a value at each point in space.
+<p>(fictional) lines drawn to visualize the 
+electric field; the direction of the field is tangent 
+to the lines at all points and the magnitude of the field is 
+proportional to the density of the lines.
+<p>an electric field that has a
+different direction and magnitude at different points in space.
+<p>an electric field that has
+the same direction and magnitude at all points in a 
+region of space.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Gauss's Law Applied to Cylindrical and Planar Charge
+Distributions” (MISN-0-133). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The magnetic field, on the other hand, interacts with a charged
+particle in a more complicated way, with its charge and velocity.
+See “Force on a Charged Particle in a Magnetic Field” (MISN-0-122). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Coulomb's Law” (MISN-0-114). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The unit vector \(\hat{R}\) itself is not generally useful.
+If there were several point charges in this region, and the resultant field
+at \(P\) were needed, each charge would have associated with it its own unit
+vector \(\hat{R}\) and these couldn't be easily combined unless each was
+referred to a fixed reference system such as that determined by \(\hat{x}\)
+and \(\hat{y}\). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;15 and 16 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> What is the magnitude and direction of \(\vec{E}\) at a
+            point midway between two equal and opposite charges of magnitude
+            \(2.5 \times 10^{-7}\)&thinsp;C which are 16&thinsp;cm apart?
+            What force (magnitude and direction) would act on an electron
+            (\(-1.60 \times 10^{-19}\,\text{C}\)) placed there?</li>
+<li><span class="item-label">2.</span> Two point charges with charge \(+ 3.0 \times 10^{-7}\)&thinsp;C and
+            \(+ 7.5 \times 10^{-8}\)&thinsp;C are 15&thinsp;cm apart.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What magnitude of electric field does each produce at the
+           position of the other?</li>
+<li><span class="item-label">b.</span> What magnitude of force acts on each?
+</li>
+<li><span class="item-label">3.</span> Three charges are arranged as shown below.
+            Find the magnitude and direction of the electric field at the
+            origin due to the other two charges and compute the force on
+            \(q\).<br>
+
+            <figure class="fig-centered"><img src="figures/m115gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">4.</span> Find the point along the line joining the two charges shown
+            below at which the electric field due to the two charges is
+            zero (\(a = 5\)&thinsp;cm).<br>
+
+            <figure class="fig-centered"><img src="figures/m115gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m115gr12.svg" alt="" class="physnet-fig"><figcaption>Find the magnitude and direction of the electric
+            field at the center of the circle which has charges arranged on
+            it as shown below if \(q = 2.0 \times 10^{-7}\)&thinsp;C.
+            The radius of the circle is 3.0&thinsp;cm.</figcaption></figure>
+</li>
+<li><span class="item-label">6.</span> A positron, a particle of charge \(q = + 1.6 \times 10^{-19}\)&thinsp;C
+            and mass \(m = 9.1 \times 10^{-31}\)&thinsp;kg, enters a uniform
+            electric field \(- 2.0 \times 10^{-3}\,\text{N/C}\,\hat{x}\) with a
+            velocity \(2.0 \times 10^3\,\text{m/s}\,\hat{x}\).
+            Find how far it travels before coming (momentarily) to rest.
+            Find its velocity after \(1.0 \times 10^{-5}\)&thinsp;s.</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(|\vec{E}| = 7.0 \times 10^5\)&thinsp;N/C, toward the negative charge.</li>
+<li>\(|\vec{F}| = 1.1 \times 10^{-13}\)&thinsp;N, toward the positive
+            charge.</li>
+<li><span class="item-label">2.</span> a. \(E_1 = 1.2 \times 10^5\)&thinsp;N/C
+<ol>
+
+</ol>
+</li>
+<li>\(E_2 = 3.0 \times 10^4\)&thinsp;N/C</li>
+<li><span class="item-label">b.</span> \(F_1 = 9.0\,\times\,10^{-3}\)&thinsp;N</li>
+<li>\(F_2 = 9.0\,\times\,10^{-3}\)&thinsp;N
+</li>
+<li><span class="item-label">3.</span> \(\vec{E} = (0.36)(4)(k_e) \frac{Q}{a^2} \,\hat{y}\)</li>
+<li>\(\vec{F} = (0.36)(4)(k_e) \frac{Q q}{a^2}\,\hat{y}\)
+                      <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">4.</span> \(\vec{E} = 0\) at 3.2&thinsp;cm to the right of the 3q charge. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">5.</span> \(E = 2.8 \times 10^6\)&thinsp;N/C, \(\theta = 45^\circ\) with respect 
+           to positive \(x\)-axis.  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">6.</span> \(x = 5.7 \times 10^{-3}\)&thinsp;m <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p>           \(\vec{v} = - 1.5 \times 10^3\,\text{m/s}\,\hat{x}\)</li>
+</ol>
+
+<p>
+<p>:
+<p><ol>
+<li><span class="item-label">7.</span> A point charge \(Q_4\) is located at point \(x = a\), \(y = 0\),
+            \(z = 0\).
+            Write down the expression for the electric field at point
+            \(x = - 2 a\), \(y = 0\), \(z = 0\). </li>
+<li><span class="item-label">8.</span> A charge \(Q_1 = - 3.00 \times 10^{-6}\)&thinsp;C is located at the origin
+            of the coordinates while a charge \(Q_2 = + 4.00 \times 10^{-6}\)&thinsp;C
+            is located at \(x = + 0.300\)&thinsp;m, \(y = z= 0.000\)&thinsp;m.
+            Find the resultant electric field at the point,
+            \(x = 0.600\)&thinsp;m, \(y = z = 0.00\)&thinsp;m. </li>
+<li><span class="item-label">9.</span> Do the same for the point \(x = + 0.10\)&thinsp;m, \(y = z = 0.00\)&thinsp;m .</li>
+<li><span class="item-label">10.</span> Using the results of Problems&nbsp;8 and 9, find the force at each of
+            the points in these problems on a \( + 2.0 \times 10^{-8}\)&thinsp;C
+            charge: Problem&nbsp;8 ; Problem&nbsp;9 .</li>
+<li><span class="item-label">11.</span> Is the force on this particle constant?  
+            This force will cause the particle to accelerate.
+            Will the acceleration be constant? 
+            (Can you use the same kinematic equations relating position,
+            velocity, and acceleration as you do for a particle in the
+            constant gravity field near the surface of the earth? </li>
+<li><span class="item-label">12.</span> Repeat Problem&nbsp;10 for a charge of \(- 2.0 \times 10^{-8}\,\text{C}\). 
+            , .</li>
+<li><span class="item-label">13.</span> A uniform electric field
+            \(\vec{E} = (+5.0 \times 10^7\unit{N\,C^{-1}}) \hat{z}\)
+            exists in a region of space.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the force that \(+ 3.0 \times 10^{-6}\,\text{C}\) charge feels when
+           placed at a point in this region? </li>
+<li><span class="item-label">b.</span> What force does a \(- 3 \times 10^{-6}\,\text{C}\) charge feel in this
+           same region? 
+</li>
+<li><span class="item-label">14.</span> Repeat Problem&nbsp;11, applying it to the particle of Problem&nbsp;13.
+            </li>
+<li><span class="item-label">15.</span> Three charges are arranged as shown:
+<p><figure class="fig-centered"><img src="figures/m115gr13.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the electric field at the point \(x = 0.120\,\text{m}\),
+\(y = 0.0500\)&thinsp;m due to the three charges located as shown above. </li>
+<li><span class="item-label">b.</span> Find the force on charge \(q_3\), due to \(q_2\) and \(q_1\). 
+</li>
+<li><span class="item-label">16.</span> Find the acceleration of an alpha particle (charge\( = + 2e\),
+mass\( = M_{\alpha})\) in a uniform electric field \(E \hat{y}\).
+If its initial velocity \(v_0\) is perpendicular to the field, find the
+equations for its displacement as functions of time. </li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">7.</span> \(\vec{F} = (6.5 \times 10^{-3}\,\text{N})\,\hat{x}\)</li>
+<li><span class="item-label">8.</span> No</li>
+<li><span class="item-label">9.</span> \(- 6.5 \times 10^{-3}\,\text{N}\, \hat{x}\)</li>
+<li><span class="item-label">10.</span> \(3.25 \times 10^5\,\text{N/C}\, \hat{x}\)</li>
+<li><span class="item-label">11.</span> \(1.5\times10^2\)&thinsp;N&thinsp;\(\hat{z}\)</li>
+<li><span class="item-label">12.</span> No</li>
+<li><span class="item-label">13.</span> \(- 7.2 \times 10^{-2}\,\text{N}\,\hat{x}\)</li>
+<li><span class="item-label">14.</span> \(-1.5\times10^2\)&thinsp;N&thinsp;\(\hat{z}\)</li>
+<li><span class="item-label">15.</span> \(-3.6 \times 10^6\,\text{N/C}\, \hat{x}\)</li>
+<li><span class="item-label">16.</span> All answers are Yes.</li>
+<li><span class="item-label">17.</span> \(\vec{E} = - k_e \frac{Q \hat{x}}{9 a^2}\)</li>
+<li><span class="item-label">18.</span> \(7.2 \times 10^{-2}\,\text{N} \hat{x}\)</li>
+<li><span class="item-label">19.</span> No</li>
+<li><span class="item-label">20.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{E} = (2.72 \times 10^5\,\text{N/C}) \hat{x} +
+                      (4.21 \times 10^5\,\text{N/C}) \hat{y}\)</li>
+<li><span class="item-label">b.</span> \(\vec{F} = (0.0285\,\text{N}) \hat{x} -
+                       (0.0041\,\text{N}) \hat{y}\)
+</li>
+<li><span class="item-label">21.</span> \(\vec{a} = (2 e E/M_{\alpha}) \hat{y}\)</li>
+<li>\(x = x_0 + v_0 t\)</li>
+<li>\(y = y_0 + e E t^2/M_\alpha\)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\[a = \frac{dv}{dt} = \frac{q E}{m}\]
+
+ 
+ \[\int_{v_0}^v dv' = \int_0^t \left( \frac{q}{m} E \right) dt'\]
+
+ 
+ \[v - v_0 = \frac{q}{m} E t\]
+
+ 
+ \[v = \frac{dx}{dt} = \frac{q}{m} E t + v_0\]
+
+ 
+ \[\int_{x_0}^x dx' = \int_0^t \left( \frac{q}{m} E t' \right) dt' +
+                          \int_0^t v_0 dt'\]
+
+ 
+ \[x - x_0 = \frac{q}{2m} E t^2 + v_0 t\]
+
+ 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\[E = k_e \frac{Q}{R^2} =
+            (8.99 \times 10^9 \,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+            \frac{10^{-6}\,\text{C}}{0.0025\unit{m^{2}}}\]
+
+ 
+ \[\phantom{E} = 3.60 \times 10^6\,\text{N/C}\]
+
+ 
+ \[\vec{E}(P) = 3.60 \times 10^6\,\text{(N/C)}
+  \left[\left(\frac{0.03}{0.05}\right)\hat{x} +
+        \left(\frac{0.04}{0.05}\right)\hat{y}\right]\]
+
+ 
+ \[\phantom{\vec{E}(P)} = 2.16 \times 10^6\,\text{(N/C)} \hat{x} +
+          2.88 \times 10^6\,\text{(N/C)} \hat{y}\]
+
+ 
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\[\vec{E} = k_e \frac{Q}{R^2}
+     \left[\left(\frac{-x_Q}{R}\right)\hat{x} +
+           \left(\frac{0.04}{0.05}\right)\hat{y}\right]\]
+
+ 
+ \[\phantom{E} = (8.99 \times 10^9 \,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+                      \frac{10^{-6}\,\text{C}}
+  {(0.05\,\text{m})^2} \left[ \left(\frac{0.03}{0.05}\right)\hat{x} +
+                            \left(\frac{0.04}{0.05}\right)\hat{y} \right]\]
+
+ 
+ \[\phantom{E} = 2.16 \times 10^6\,\text{(N/C)} \hat{x} +
+           2.88 \times 10^6\,\text{(N/C)} \hat{y}\]
+
+ 
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m115gr14.svg" alt="" class="physnet-fig"></figure>
+</div></div>
+
+ \[E_x \hat{x} = k_e \frac{-2q}{R^2}(-\hat{x}) +
+                       k_e \frac{-q }{R^2}( \hat{x}) =
+                       k_e \frac{ q }{R^2}\hat{x}\]
+
+ 
+ \[E_y \hat{y} = k_e \frac{+q }{R^2}(-\hat{y}) +
+                       k_e \frac{+2q}{R^2}( \hat{y}) =
+                       k_e \frac{ q }{R^2}\hat{y}\]
+
+ 
+ \[\vec{E} = (8.99 \times 10^9 \,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+                  \frac{2.0 \times 10^{-7}\,\text{C}}
+                        {(0.03\,\text{m})^2}(\hat{x} + \hat{y})\]
+
+ 
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\[k_e \frac{q_1}{x^2} = k_e \frac{q_2}{(a-x)^2}\]
+
+ 
+ \[(3q)(a - x)^2 = q x^2 \qquad \text{or:} \qquad 2x^2 - 6 a x + 3 a^2 = 0\]
+
+ 
+ \[x = \frac{6a\pm\left(36a^2-24a^2\right)^{1/2}}{4} =
+            \frac{3a\pm\left(3a^2\right)^{1/2}}{2} = 
+            \frac{(3)(5\,\text{cm})\pm(5\,\text{cm})\sqrt{3}}{2}\]
+
+ 
+ 
+ 
+ These two answers are 3.2&thinsp;cm and 11.8&thinsp;cm, but since the fields are in the
+ same direction at \(x = 11.8\)&thinsp;cm this is not a true cancellation, so only
+ \(x = 3.2\)&thinsp;cm is correct.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\[\vec{E} = \vec{E}_1 + \vec{E}_2 =
+ k_e \frac{Q}{R^2}\left[\frac{a\hat{x}/2}{R} +
+                                         \frac{a\hat{y}}{R}\right]
+ + k_e \frac{Q}{R^2}\left[-\frac{a\hat{x}/2}{R} +
+                                       \frac{a\hat{y}}{R}\right]\]
+
+ 
+ \[\phantom{\vec{E}} =
+ k_e \frac{Q}{(5a^2/4)^{3/2}}
+           (a + a) \hat{y}\]
+
+ 
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\[E_x = -2.0 \times 10^{-3}\,\text{(N/C)}\]
+
+ 
+ \[v_i = 2.0 \times 10^3\,\text{m/s}\]
+
+ 
+ \[a_x = \frac{q E_x}{m} = \frac{(1.6\times10^{-19}\,\text{C})
+                                   (-2.0\times10^{-3}\,\text{N/C})}
+                             {9.1\times10^{-31}\,\text{kg}}
+                = -3.5 \times 10^8\,\text{m/s}^{2}\]
+
+ 
+ \[v_f^2 - v_i^2 = 2ax \Longrightarrow x = \frac{v_f^2 - v_i^2}{2a}\]
+
+ 
+ \[v_f = v_i + at \Longrightarrow t = \frac{v_f - v_i}{a}\]
+
+ 
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\(k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\)
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Three charges are arranged as shown:
+<p><figure class="fig-centered"><img src="figures/m115gr13.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the electric field at the point \(x = 0.12\)&thinsp;m,
+\(y = 0.050\)&thinsp;m due to the three charges located as shown above.</li>
+<li><span class="item-label">b.</span> Find the force on charge \(q_3\), due to \(q_2\) and \(q_1\).
+</li>
+<li><span class="item-label">3.</span> Find the acceleration of an alpha particle (charge\( = + 2e\),
+mass\( = M_{\alpha})\) in a uniform electric field \(E \hat{y}\).
+If its initial velocity \(v_0\) is perpendicular to the field, find the
+equations for its displacement as functions of time.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;15 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;16 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

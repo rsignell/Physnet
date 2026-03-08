@@ -1,0 +1,723 @@
+<header class="module-header">
+  <h1 class="module-title">Electrostatic Potential from Distributed Charges <span class="module-author">(J.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Express the electrostatic potential due to a point charge
+               <a href="../m116/" class="module-ref">MISN-0-116</a>.</li><li><strong>2.</strong> Expand binomials, like \((a + x)^{1/2}\), using a Taylor series
+               <a href="../m4/" class="module-ref">MISN-0-4</a>.</li><li><strong>3.</strong> Integrate simple functions, such as \((x^2 + a^2)^{1/2}\),
+               between definite symbolic or numerical limits <a href="../m1/" class="module-ref">MISN-0-1</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: continuous charge distribution, linear charge
+                density, surface charge density, uniform charge distribution,
+                volume charge density.</li><li><strong>K2.</strong> State the general expression for the potential at a point in
+                space due to a continuous charge distribution.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a linear charge distribution in the shape of a straight
+                line, find the electric potential at any point, on the line,
+                that is outside the charge distribution.</li><li><strong>S2.</strong> Given a circular arc or disc of charge, find the electric
+                potential at any point on the rotational axis of symmetry.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Electrostatic Field Due to Continuous Charge
+               Distributions” (MISN-0-148).</li><li><strong>2.</strong> “Electric Fields from Symmetric Charge Distributions” (MISN-0-153).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The electric potential at a point in space is defined as the potential 
+energy per unit charge of a test charge placed at that point.
+Alternatively potential may be defined as the work per unit charge that must 
+be done by an external agent to bring a charged particle from infinity
+to that point.
+From these definitions, the potential associated with any electric field may
+be determined.
+Starting from the expressions for the electric potential due to a point
+charge and due to a collection of point charges, a general procedure can be
+developed whereby the potential due to a continuous distribution of charge
+can be obtained if the spatial distribution of the charge is known.
+We can use this general procedure to obtain the potential due to, for example, a continuous line of
+charge, a uniform circular distribution
+of charge, or a uniform sheet of charge.  The potential from spherical distributions
+of charge can also be obtained by such methods but will not be treated here.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Discrete Charges</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aA Single Discrete Charge
+The electrostatic potential at a point \(P\) in space, due to a charge 
+\(Q_1\) on a point particle that is a distance \(r_{1P}\) from \(P\), is given by:
+<p>\[V(P) = k_e \frac{Q_1}{r_{1P}}\]
+<p>The zero point, the point where the potential due to this charge \(Q_1\) is
+zero, has been taken to be at an infinite distance from \(Q_1\), i.e., at
+\(r_{1P} = \infty\).
+This is a good choice for the zero point since we generally expect quantities to die away as
+we get far from their sources.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The value of this potential will naturally be negative if \(Q_1\) is negative
+and positive if \(Q_1\) is positive.
+Because this is the potential due to a point-particle charge, it belongs to the class
+of potentials called “Coulomb Potentials”.
+<p><h3 id="pcap-2-b">2b. A Set of Discrete Charges</h3>
+
+Consider the effect on the value of the potential at \(P\), due to a single
+nearby charge \(Q_1\), if a second point charge \(Q_2\) is placed somewhere in
+the vicinity of \(P\), a distance \(r_{2P}\) from \(P\).
+Its contribution is given by an expression similar to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>,
+except that the charge is \(Q_2\) and its distance from point \(P\) is \(r_{2P}\).
+However, if \(Q_1\) remains where it was, the presence of \(Q_2\) does not alter
+the contribution of \(Q_1\) to the potential at \(P\).
+Each charge contributes independently to the potential at \(P\) and the electric
+potential there is simply the sum of the two contributions.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>so the net potential at \(P\) due to the two charges is
+<p>\[V(P) = V_1(P) + V_2(P) = k_e \left(\frac{Q_1}{r_{1P}} +
+                                           \frac{Q_2}{r_{2P}}\right)\]
+<p>This expression can be generalized to a collection of charges, 
+each of which contributes to the potential at the point \(P\), depending upon 
+its charge \(Q_i\) and its distance \(r_{iP}\) from \(P\).
+If there are \(N\) discrete charges contributing to the potential at 
+\(P\), then 
+<p>\[V(P) = k_e  \sum_{i=1}^N \frac{Q_i}{r_{iP}}\,,\]
+<p>where the index \(i\), running from 1 to \(N\), serves to label the
+charges [just as the subscripts 1 and 2 do in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>].
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Linear Distributions</h2>
+
+<p><h3 id="pcap-3-a">3a. Discrete Charges on a Circle</h3>
+
+As an illustration, consider 400 particles, each having charge \(q\),
+arranged randomly around the circumference of a circle of radius \(R\).
+What electrostatic potential do these charges create at the center of the
+circle?
+Note that: (1) each charge is the same distance \(R\) from the point at the
+center of the circle, independent of where the charge is on the circle;
+and (2) all particles have the same charge \(q\).
+This means that each particle produces an identical contribution to the
+potential at the center of the circle.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The contribution of the charge on the n<sup>th</sup> particle can be written:
+<p>\[V_n(0)= k_e \frac{q}{R}\,,\]
+<p>Then the total potential at
+the center of the ring is just the number of charges times the potential from
+any one of the charges:
+<p>\[V(0)= 400\,k_e \frac{q}{R}\,,\]
+<p>and this is just the same potential as would be produced by a single particle having
+charge \(Q = 400\,q\) located a distance \(R\) away from the center of the circle
+in any direction:
+<p>\[V(0)= k_e \frac{Q}{R}\,.\]
+<p>Thus for the special case of a circular arrangement of equal charges, we can easily 
+calculate the potential at the center of the circle.
+On the other hand, if there are \(N\) particles on the circle but they are not equally
+charged, then:
+<p>\[V(0) = \sum_{n=1}^{N} k_e \frac{q_n}{R} = \frac{k_e}{R} \sum_{n=1}^{N} q_n =
+         k_e \frac{Q}{R}\,,\]
+<p>where \(Q\) is the total charge on the circle.
+Note the similarity to the Coulomb potential, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p><h3 id="pcap-3-b">3b. Continuous Charges on a Circle</h3>
+
+The case of discrete charges distributed around a circle can be extended to the situation
+where there are so many charges, closely packed on the circle, that
+we can more easily describe the charge in terms of a “linear charge
+density,” the amount of charge per unit length along the line that is the circumference
+of the circle (this linear charge density is often given in coulombs/meter).
+In general, the charge density will vary from point to point around the circle.
+Each point on the circle will be labeled by its distance around the circle from some
+specified starting point such as, say, the right-most point on the circle.
+Thus, for example, we might say that a particular point is \(\ell = 2.3\,\text{cm}\)
+counterclockwise around the circle from the circle's right-most point,
+and that the linear charge density there \(1.4 \times 10^{-5}\,\text{coulombs/meter}\).
+If the charge density is the same at all points around the circle we say that the charge is
+“uniformly distributed” along that circular line.
+<p><h3 id="pcap-3-c">3c. Linear Charge Density at a Point</h3>
+
+To define the linear charge density at any one point mathematically, we start with a small
+region around that point.
+We will call the point in question \(\ell_P\), where \(\ell\) is distance measured
+along the line from some designated starting point.
+We focus our attention on a small segment of the line that includes the point \(\ell_P\).
+We denote the length of the segment of line by the symbols \(\Delta \ell\).
+We denote the actual amount of charge in that segment by the symbols \(\Delta Q\).
+We now define the linear charge density \(\lambda\) at the point \(P\) as the limit of the
+ratio of \(\Delta Q\) to \(\Delta \ell\) as we shrink \(\Delta \ell\) to zero around
+the point \(P\).
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>This is just the definition of the derivative of the charge with respect to distance along
+the line at the point \(P\):
+\[\lambda(\ell_P) = \lim_{\Delta \ell \rightarrow 0} \frac{\Delta Q}{\Delta \ell}
+                       = \frac{dQ}{d\ell}\,.\]
+<p>To find the amount of charge in some finite-length region \(R\), we integrate over that region:
+<p>\[Q_R = \int_R dQ = \int_R \left(\frac{dQ}{d\ell}\right) d\ell = \int_R \lambda \, d\ell\,.\]
+<p>If the charge is uniformly distributed over a length \(L\) along a line of charge,
+the total charge on the line, \(Q_L\), is just the (uniform) charge density, \(\lambda\),
+times the line-length, \(L\):
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[Q = \lambda\, L \qquad (\text{uniform }\lambda)\,.\]
+<p><span class="tryit">Try it:</span> Show that a circle of radius 5.0<span class="unit">&thinsp;cm</span> having a uniformly-distributed
+total charge \(2.0 \times 10^{-6}\,\text{C}\) has a charge density of
+\(6.4 \times 10^{-6}\,\text{C/m}\).
+<p>If charge is distributed non-uniformly around a circle, the value of the linear charge
+density \(\lambda\) varies from point to point around the circle.  If distance around the circle
+from some designated starting point is called \(\ell\), then we can indicate the variation of
+\(\lambda\) by writing it as a function of position, \(\lambda(\ell)\).
+<p><h3 id="pcap-3-d">3d. Uniform Distribution on a Circle</h3>
+
+If the charge is uniformly distributed around a circle, the linear
+charge density around the circle is:
+<p>\[\lambda = \frac{Q}{2 \pi R}\,; \qquad \text{(uniform distribution)}.\]
+<p>The resulting potential at the center of the circle, in terms of \(r\) and \(\lambda\),
+is as in <a href="#eqn-44" class="eqn-ref">Eq.&nbsp;(44)</a>:
+<p>\[V(0) = k_e 2 \pi \lambda\,; \qquad \text{(uniform distribution)}.\]
+<p><span class="tryit">Try it:</span>  Note that the answer is independent of the radius of the circle.  Why?
+<p><figure id="fig-22" class="fig-left-framed"><img src="figures/m147gr06.svg" alt="Figure 22" class="physnet-fig"><figcaption>Fig.&nbsp;22. An infinitesimal amount of charge \(dQ\) is related to the
+infinitesimal length \(d\ell\) in which it occurs through the linear charge density \(\lambda\).</figcaption></figure>
+
+<p><h3 id="pcap-3-e">3e. Non-Uniform Distribution on a Circle</h3>
+
+To compute the potential at the center of a circle of non-uniformly distributed charges,
+we first rewrite <a href="#eqn-41" class="eqn-ref">Eq.&nbsp;(41)</a> to show the infinitesimal (see<a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>) amount of potential, \(dV\),
+produced at some space-point, \(\vec{r}\), due an infimitesimal amount of charge \(dQ\) at space-point
+\(\vec{r}'\) (see <a href="#fig-22" class="fig-ref">Fig.&nbsp;22</a>):
+<p>\[dQ = \lambda d\ell\,.\]
+<p>\[dV = k_e \frac{dQ}{|\vec{r}\prime - \vec{r}|}\]
+<p>\[V(\vec{r}) = \int k_e \frac{dQ}{|\vec{r}\prime - \vec{r}|}
+                   = \frac{k_e}{|\vec{r}\prime - \vec{r}|} \int \lambda d\ell\]
+<p>\[V(\vec{r}) = \frac{k_e}{|\vec{r}\prime - \vec{r}|} Q\]
+<p>which has the same form as the Coulomb potential in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> (although the electric
+filed will not be the same as in the Coulomb case).
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Surface Distributions</h2>
+
+<p><h3 id="pcap-4-a">4a. Surface Charge Density</h3>
+
+<p>Suppose we wish to determine the electrostatic potential at some point near a surface which has
+charged particles distributed over it in such a fashion that the charge distribution can be
+considered to be continuous.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>Then we can define the density of charges on the surface much as we define mass density in
+working with material objects.
+A typical unit of measure for charge density is “coulombs per square meter.”
+To define the surface-charge density at any point mathematically, we must consider a small
+region around the point.
+We will call the point in question \(P\) and the small region's area \(\Delta A\).
+The size and shape of the region will soon be seen to be unimportant since we will
+mathematically change it.
+We represent the charge in the region by \(\Delta Q\).
+We now define the surface charge density \(\sigma\) as the limit of the ratio of region's charge
+to area as the region shrinks toward zero area around the point \(P\).
+This is just the definition of the derivative of the charge with respect to area at the point \(P\):
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[\sigma(P) = \lim_{\Delta A \rightarrow 0} \frac{\Delta Q}{\Delta A} = \frac{dQ}{dA}\,.\]
+<p>To find the amount of charge in some region \(R\), we integrate over that region:
+<p>\[Q = \int_R dQ = \int_R \left(\frac{dQ}{dA}\right) dA = \int_R \sigma \, dA\,.\]
+<p>If charge is said to be uniformly distributed over some surface, it means that \(\sigma\) is the
+same at all points on the surface and the total charge on the surface is then just the
+(uniform) charge density times the area:
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[Q = \sigma\, A \qquad (\text{uniform }\sigma)\,.\]
+<p><span class="tryit">Try it:</span> Show that a (circular) disk of radius 5.0<span class="unit">&thinsp;cm</span> having a uniformly-distributed
+total charge \(2.0 \times 10^{-6}\,\text{C}\) has a charge density of
+\(2.5 \times 10^{-4}\unit{C/m^{2}}\).
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m147gr05.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A hollow disk has charge density \(\sigma\) for \(R_1 < r < R_2\).</figcaption></figure>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m147gr03.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A circular ring with infinitesimal width \(dr\) has an
+infinitesimal area \(dA = 2 \pi r dr\).  This is the same disk as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure>
+
+<p><h3 id="pcap-4-b">4b. Continuous Charge on a Disk</h3>
+
+<p>Suppose we have a hollow disk, a flat ring, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, with uniform charge density \(\sigma\),
+and we want to calculate the potential at the center of the ring.
+Using the usual technique for such cases,
+we first calculate the infinitesimal potential \(dV\) due to a sub-ring of width \(dr\) at radius \(r\)
+as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>. (<a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a><span class="tex-unknown" title="unknown macro">\</span>;) and then integrate over the area defined by \(R_1 < r < R_2\):
+<p>\[V = \int_{r = R_1}^{r = R_2} \,dV\,.\]
+<p>To get the potential \(dV\) at the center due to a ring of charge having radial width \(dr\),
+we need the charge \(dQ\) in that ring and the distance of the ring from the center.
+The charge is the area times the density, \(2 \pi r\,dr\) times \(\sigma\), so we get:
+<p>\[dV = k_e \frac{dQ}{r} = k_e \frac{\sigma\,2 \pi r\,dr}{r}\,,\]
+<p><span class="tryit">Try it:</span>  If you do not see how <a href="#eqn-46" class="eqn-ref">Eq.&nbsp;(46)</a> is arrived at, be sure to go through the assistance provided in
+this module's Special Assistance Supplement. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p>
+Putting <a href="#eqn-46" class="eqn-ref">Eq.&nbsp;(46)</a> into <a href="#eqn-45" class="eqn-ref">Eq.&nbsp;(45)</a> gives us the potential:
+<p>\[V(0) = \int_{R_1}^{R_2} k_e \frac{\sigma\,2 \pi r\,dr}{r} =
+              k_e \sigma\,2 \pi \int_{R_1}^{R_2} dr = k_e \sigma\,2 \pi (R_2 - R_1)\,.\]
+<p>The total charge \(Q\) on the ring is just the density times the area:
+<p>\[Q = \sigma\;(\pi R_2^2 - \pi R_1^2)\,,\]
+<p>so the answer in terms of the total charge is:
+<p>\[V(0) = \frac{2 k_e Q}{R_2 + R_1} = \frac{k_e Q}{R\dn{av}}\,,\]
+<p>where \(R\dn{av}\) is the simple average of the two radii.
+Note the similarity to a Coulomb potential.
+In fact, if the width of the ring is very small compared to \(R_1\), all distances from
+charge to the center of the ring will be very close to the single value \(R_{ave}\).
+Calling that single value \(R\), <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> becomes the circular line answer of <a href="#eqn-43" class="eqn-ref">Eq.&nbsp;(43)</a>.
+Put into words, a ring whose width is very small compared to any of its radii will “look” from
+the center point as if it is very close to being a circular line of charge and so the potential
+at the center will be very close to the answer for a circular line of charge.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Continuous Distributions In General</h2>
+
+<p><h3 id="pcap-5-a">5a. General Approach</h3>
+
+In general, we say that an infinitesimal part of the charge
+distribution, \(dQ\), produces an infinitesimal Coulomb-like contribution
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\(dV(\vec{r})\) to the total potential at a point \(\vec{r}\):
+<p>\[dV(\vec{r}) = k_e \frac{dQ(\vec{r}\prime)}{|\vec{r}\prime - \vec{r}|}\,,\]
+<p>where \(|\vec{r}\prime - \vec{r}|\) is the distance from the infinitesimal piece of charge
+at point \(\vec{r}\prime\) to the point \(\vec{r}\) at which we wish to know the potential.
+Then the equation for the potential itself is obtained by integrating both sides
+of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>:
+<p>\[V(\vec{r}) = k_e \int\frac{dQ(r\prime)}{|\vec{r}\prime - \vec{r}|}\,.\]
+<p>The integral is easily performed for certain geometrical configurations of charge,
+but for other configurations computer integration must be used.
+<p><h3 id="pcap-5-b">5b. Some Specific Geometries</h3>
+
+We interpret the quantity \(dQ(\vec{r})\) on the right side of <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> as the
+charge in some infinitesimally small region of space.
+Then we use an appropriate density function to convert the
+integral from one over charge to one over space.
+The three generally-used density functions are:
+<p>\[\lambda = \frac{dQ}{d\ell}; \qquad \sigma = \frac{dQ}{dA}; \qquad
+       \rho = \frac{dQ}{d\mathcal{V}}\,.\]
+<p>where:
+<p>\[\begin{aligned}\lambda(\ell) & \equiv \text{ \Quote{linear charge density} } \\               & \equiv \text { \Quote{charge per unit length along a one-dimensional line,}}\end{aligned}\]
+
+<p>\[\begin{aligned}\sigma(\vec{r}) & \equiv \text{ \Quote{surface charge density} } \\                  & \equiv \text { \Quote{charge per unit area on a two-dimensional surface,}}\end{aligned}\]
+
+<p>\[\begin{aligned}\rho(\vec{r}) & \equiv \text{ \Quote{volume charge density} } \\                & \equiv \text { \Quote{charge per unit volume in three-dimensional space.}}\end{aligned}\]
+
+<p>Note that \(\lambda\) has a value at each point along a line of charge, with any specific
+point being designated by some one-dimensional position descriptor.
+Similarly, \(\sigma\) has a value at each point on a surface of charge, with any specific
+point being designated by some two-dimensional position descriptor.
+Finally, \(\rho\) has a value at each point throughout a three-dimensional distribution of charge,
+with any specific point being designated by some three-dimensional position descriptor.
+<p><h3 id="pcap-5-c">5c. Spatial Representations of the Charge Elements</h3>
+
+In order to integrate over space in any particular problem, one must first use the appropriate
+density function to convert from infinitesimal elements of charge to infinitesimal elements of space.
+The exact method of doing this depends on the spatial symmetries of the problem, if any exist, in
+order to ease the integration process.
+<p>For a linear charge distribution we may write:
+<p>\[dQ = \lambda(\ell)\;d\ell\,,\]
+<p>and then we can integrate along the line of charge from one end to the other.
+Any line of charge is really three-dimensional but we can treat it
+as one-dimensional if the cross-sectional area is small compared to the distances
+from all parts of the charged line to the point where we wish to calculate the potential
+(so it is far enough away so it “looks” like a line of charge).
+<p>For surface charge distributions we write:
+<p>\[dQ = \sigma(x,y)\,dx\,dy\,,\]
+<p>or:
+<p>\[dQ = \sigma(r,\theta)\;r\,dr\,d\theta\,,\]
+<p>depending on whether the charge density is described in Cartesian or circular coordinates.
+In other words, the infinitesimal element of area is \(dA = dxdy\) in Cartesian coordinates, etc.
+Any surface of charge is really three-dimensional but we can treat it
+as two-dimensional if its thickness is small compared to the distances
+from all parts of the charge to the point where we wish to calculate the potential
+(so it is far enough away so it “looks” like a surface of charge).
+<p>For volume charge distributions we write:
+<p>\[dQ = \rho(x,y,z)\,dx\,dy\,dz\,,\]
+<p>or:
+<p>\[dQ = \rho(r,\theta,\phi)\,r^2\,\sin\theta\,d\theta\,d\phi\,dr\,,\]
+<p>or:
+<p>\[dQ = \rho(r,\phi,z)\,r\,dr\,d\phi\,dz\,,\]
+<p>depending on whether the charge density is described in Cartesian, spherical or
+cylindrical coordinates (other coordinate systems may also be used).
+In other words, the infinitesimal element of volume is \(d\mathcal{V} = dxdydz\)
+in Cartesian coordinates, etc.
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+an arrangement of many 
+discrete charges so closely spaced that the charge is treated as a 
+continuum, resulting in a replacement of discrete sums with integrals.
+Such charge distributions occur over one dimension (lines), two dimensions
+(surfaces) or three dimensions (volumes).
+<p>on a linear charge distribution, the
+ratio of an infinitesimal portion of charge to the infinitesimal element of
+length it is contained in.
+This ratio varies over the length of charge distribution unless the charge
+is uniformly distributed.
+For a uniform distribution, the linear charge density, \(\lambda\),
+is just the total charge divided by the total length of the distribution.
+<p>within a surface charge distribution,
+the ratio of an infinitesimal portion of charge to the infinitesimal element
+of surface area it is contained in.
+This ratio varies over the surface of the charge distribution unless the
+charge is uniformly distributed.
+For a uniform distribution, the surface charge density, \(\sigma\), is just
+the total charge divided by the total area of the distribution.
+<p>any distribution of charge that 
+is independent of position within the distributed charge.
+<p>within a volume charge distribution,
+the ratio of an infinitesimal portion of charge to the infinitesimal element
+of volume it is contained.
+This ratio varies over the volume of the charge distribution unless the
+charge is uniformly distributed.
+For a uniform distribution, the volume charge density, \(\rho\), at any point
+is just the total charge divided by the total volume of the charge
+distribution.
+</section>
+
+<p>Treating the charges as though they are continuous rather than discrete will
+introduce an error so small it will be unobservable in almost any application, and
+it will allow us to easily solve problems that could otherwise be attempted only with
+horrendous amounts of effort and computer time.
+When charges are distributed along a line, we can designate points along the line
+by the distance \(\ell\) measured along the line from some designated zero point,
+a point where \(\ell = 0\), so the amount of charge per unit length along the line,
+at any point \(\ell\), can be written as \(\lambda(\ell)\).
+We generally say that we can represent the
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Potential Due To Discrete Charges”
+(MISN-0-116). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The potentials from the individual charges are said to “add as scalars.”
+However, the electric field contributions at the point \(P\) due to several charges
+are said to “add as vectors,” meaning that the electric field is the
+vector sum of the fields that each of the charges would produce at \(P\) if it
+alone was present. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">Note that the <em>electric field</em> at the center of the circle
+<em>does</em> depend on the arrangement of the charges.
+This is because electric field contributions add as vectors,
+in contrast to the potential contributions which add as scalars. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The idea of a “limit” begins with the numerical value for the ratio for a
+particular segment of line around \(P\).
+If the length of the segment is small enough, then making the even smaller will make an insignificant
+difference in the ratio.
+For example, cutting the length in half might make a difference in the seventh significant digit
+of the ratio.
+Cutting it in half again might provide a further change in only the eighth significant digit of the ratio.
+As the length shrinks toward zero the changes in the ratio shrink toward zero,
+resulting in a definite single value for the ratio at the point. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Notice in <a href="#eqn-52" class="eqn-ref">Eq.&nbsp;(52)</a> that a constant \(\lambda\) can be taken outside the integration
+sign and the integration then just produces the total length, \(L\). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">This means that the particles are so close together that they appear to be continuous,
+much as your skin appears to be continuous even though it is made up of individual atoms.
+Mathematically, we treat charges as continuous when doing so will introduce an error so small that
+it will have no significant effect on answers. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">The idea of a “limit” begins with the numerical value for the ratio for a
+particular area around \(P\).
+If the area is small enough, making the area even smaller will make an insignificant
+difference in the ratio.
+For example, halving the area might make a difference in the seventh significant digit in the ratio.
+Halving it again might provide a further change in only the eighth significant digit in the ratio.
+As the area shrinks from this region toward zero the changes in the ratio shrink toward zero,
+resulting in a definite single value. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">Notice in <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> that a constant \(\sigma\) can be taken outside the integration
+sign and the integration then just produces the total area, \(A\). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">It is Coulomb-like because the charge region is so small that it resembles a
+point particle; more on this later. <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-PS1">See “Taylor's Polynomial Approximation For Functions,”
+(MISN-0-4). <a href="#fnref-PS1" class="fn-back">↩</a></li><li id="fn-AS1">See “Taylor's Polynomial Approximation For Functions,” (MISN-0-4). <a href="#fnref-AS1" class="fn-back">↩</a></li><li id="fn-AS2">See “Taylor's Polynomial Approximation For Functions,” (MISN-0-4). <a href="#fnref-AS2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;5 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m147gr02.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the potential at the origin of coordinates due to the
+semicircular line of charge shown in the above figure.
+The center of the arc is at the origin, its radius is 0.04&thinsp;m.
+A total charge of \(1.0 \times 10^{-6}\)&thinsp;C is distributed uniformly along
+this semicircular line.</li>
+<li><span class="item-label">b.</span> Suppose this \(10^{-6}\)&thinsp;C is distributed differently, with
+\(7.5 \times 10^{-7}\)&thinsp;C distributed uniformly along the quarter circular arc
+\(AB\) and \(2.5 \times 10^{-7}\)&thinsp;C distributed uniformly along the quarter
+circular arc \(BC\).
+Now what is the potential at the origin?
+</li>
+<li><span class="item-label">2.</span> Consider a point \(P\) which is on the line through the center of a
+circle of radius \(R\) and perpendicular to the plane of that circle.
+\(P\) is located at a distance \(x\) from the center of the circle.
+If a charge per unit length \(\lambda\) is distributed uniformly on the
+circumference of that circle, what is the electrostatic potential at \(P\)?
+Check that the result obtained is consistent with the results of
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> by letting \(x\) go to zero so that point \(P\) is at the
+center of the circle.</li>
+<li><span class="item-label">3.</span> Consider a circular distribution of charge similar to the
+circular line of charge in Problem&thinsp;2, except that the charge is distributed
+on a flat circular ring of infinitesimal thickness, whose inside radius is
+\(R\) and outside radius is \(R + dR\) as shown in the sketch below.
+<figure class="fig-centered"><img src="figures/m147gr03.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If charge is uniformly distributed on the shaded portion of the
+above ring with a surface density \(\sigma\) what is the total charge on the
+ring?</li>
+<li><span class="item-label">b.</span> Consider a line perpendicular to the plane of the ring and
+passing through its center \(O\).
+At a point \(P\) on this line, a distance \(x\) above the plane of the ring,
+determine the electrostatic potential due to the charge on the ring. 
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Suppose charge is distributed uniformly on a circular disk of
+radius \(R\).
+Treating this disk as divided into rings, calculate the potential at a
+point \(P\) on a line passing through the center of the disk.
+The line is perpendicular to the plane of the disk and the point \(P\)
+is a distance \(x\) along the line from the center of the disk.
+You can make use of the result of Problem&nbsp;3b.
+Express your answer in terms of the total charge \(Q\) on the disk.
+<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">b.</span> (only for those interested) For the case \(x \gg R\), the point
+\(P\) is so far from the disk that as far as the potential at point \(P\)
+is concerned, the disk looks like a point charge. 
+In that case the answer to part (a) should reduce to the potential due to a
+point charge at a distance \(x\) from the charge.
+Assume \(x \gg R\) and expand the \((R^2 + x^2)^{1/2}\) term using a Taylor
+series expansion,
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>and show that you do indeed get the potential from a point charge. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</li>
+<li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m147gr04.svg" alt="" class="physnet-fig"></figure>
+
+A uniformly distributed line of charge is placed along the \(x\)-axis from
+\(x = 0\) to \(x = a\).
+The total charge on the line is \(Q\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the expression for the potential, at a point \(P\) on
+the \(x\)-axis a distance \(x_P\) from the origin, due to an infinitesimal
+segment of charge contained in an infinitesimal segment of length \(dx\) at
+a distance \(x\) from the origin (see the sketch).</li>
+<li><span class="item-label">b.</span> Summing up the contributions from all of the elements of charge,
+find the expression for the potential at \(P\) due to this line of charge.
+Assume \(x_P > a\).</li>
+<li><span class="item-label">c.</span> (only for those interested) For the case (\(x_P \gg a\)), show that
+\(V(x_P) \approx k_e\,Q/x_P\), meaning that when the charged line is
+<em>far enough away</em> so its size appears to be negligible, it looks like a point charge.
+<a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(2.25 \times 10^5\)&thinsp;V</li>
+<li><span class="item-label">b.</span> \(2.25 \times 10^5\)&thinsp;V
+</li>
+<li><span class="item-label">2.</span> \(V(P) =
+           k_e 2 \pi \frac{\lambda R}{\left(R^2 + x^2 \right)^{1/2}}\)</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(dQ = 2\pi\sigma R\,dR\) <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">b.</span> \(dV(P) =
+           k_e 2 \pi \frac{\sigma R\,dR}{\left(R^2 + x^2\right)^{1/2}}\)
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(V(x) = k_e 2 \frac{Q}{R^2}\left[\left(R^2 + x^2\right)^{1/2} - x\right]\)</li>
+<li><span class="item-label">b.</span> \(V(x) = k_e 2 \frac{Q}{R^2}\left[\left(R^2 + x^2\right)^{1/2} - x - R\right]\)
+</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(dV(x_P) = k_e \frac{Q dx}{a(x_P - x)}\)</li>
+<li><span class="item-label">b.</span> \(V(x_P) = k_e \frac{Q}{a} \,\ln\left(\frac{x_P}{x_P - a}\right)\) <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">With \(x \gg R\), the ratio \(R/x\) obeys the relation: \(R/x \ll 1\).  When that is true, it
+is even truer that: \((R/x)^2 \ll 1\).
+Then we can rewrite the expression for the potential in terms of the small quantity
+\(\epsilon \equiv R/x\) and use a particular small-quantity approximation (here written as a function of
+some variable \(y\)):
+<p><sup class="fn-ref"><a href="#fn-AS1" id="fnref-AS1">AS1</a></sup>
+<p>\[(1 + y)^{1/2} \approx 1 + \frac{y}{2}\,. \qquad (y \ll 1)\]
+<p>Here is the potential, \(V(x)\), rewritten in terms of \(\epsilon\):
+<p>\[V(\epsilon) = k_e \frac{2 Q}{R^2}\left[\left(R^2 + \frac{R^2}{\epsilon^2}\right)^{1/2} - \frac{R}{\epsilon}\right]\,,\]
+<p>and here it is again, with \(R/\epsilon\) factored out:
+<p>\[V(\epsilon) = k_e \frac{2 Q}{\epsilon R}[(1 + \epsilon^2)^{1/2} - 1]\,,\]
+<p>and here it is after the small-\(\epsilon^2\) approximation has been applied:
+<p>\[V(\epsilon) \approx k_e \frac{2 Q}{\epsilon R}\left[\frac{\epsilon^2}{2}\right]\,. \qquad (\epsilon \ll 1)\]
+<p>Finally, here it is converted back to a function of \(x\):
+<p>\[V(x) \approx k_e \frac{Q}{x}\,, \qquad (x \gg R)\]
+<p>which is truly Coulombic.
+<p></div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">You are going to have to integrate on \(R\) to sum the contributions
+of the various rings.
+However, the symbol \(R\) has already been defined in this problem as the
+radius of the <em>disc</em> so it cannot also be used as the symbol for the
+(variable) radius of the <em>ring</em>.
+We switch the ring radius to the symbol \(R'\) and that is what becomes the
+variable of integration as we sum on the various rings that make up the
+disc.
+You can look up the value of the integral in a Table of Integrals, or you
+can do it by hand this way: substitute
+\(y^2 \equiv (R'^2 + x^2)\) so the denominator is \(y\) and the numerator is
+\(y\,dy\), with the limits of integration being \(x\) and \(\sqrt{R^2 + x^2}\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The notation “\(dR\)” and “\(dQ\)” indicates that these are “infinitesimal
+ quantities,” quantities that will be made vanishingly small when they
+ are used (as they must be) in integrals or derivatives.
+ Only when finite quantities are made from them can they be compared to
+ real-world measured quantities.
+<p> Considering them to be infinitesimals, the circumference <em>at any radius
+ within that infinitesimal increment of radius</em> is just \(2 \pi R\) and so the
+ (infinitesimal) area of the  ring is \(2 \pi R\, dR\) and the (infinitesimal)
+ charge within the ring is  \(\sigma\,2\,\pi\,R\,dR\).
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">from module 1's cover:
+<p>\[\int\,\frac{dx}{x} = {\ell}n\,x\].
+<p></div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+The “infinitesimals” method generally used in science and technology to find the integrand of an unknown
+integral departs somewhat from the mathematically rigorous limit technique.
+Nevertheless, the “infinitesimals” method requires an understanding of the mathematical
+limit technique for its successful use.
+A good test bed for understanding is the use of each method to derive the integrand for determining
+the area of a (circular) disk, where you can perform the integral and make sure you
+get the known answer of \(\pi r^2\).
+<p><span class="tryit">Try it:</span>  First, make sure you can derive the integrand using the limit method. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><span class="tryit">Try it:</span>  Then use your understanding of the limit method to derive the same integrand using the
+usual science/technology method. <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">
+In the “mathematical limit” method we start by writing the area as:
+<p>\[A = \int_{r = 0}^{r = R}\,dA = \int_0^R \frac{dA}{dr}\,dr\,.\]
+<p>Now we must find the integrand, \(dA/dr\).  We calculate the derivative by considering a
+part of the disk, a circular ring of width \(\Delta r\) that is between \(r\) and
+\(r + \Delta r\).
+From this ring we get the dericative by taking the limit of the finite-element ratio as
+the width of the ring shrinks toward zero:
+<p>\[\frac{dA}{dr} = \lim_{\Delta r \rightarrow 0} \frac{\Delta A}{\Delta r}\,.\]
+<p>Now:
+<p>\[\Delta A = \pi (r + \Delta r)^2 - \pi r^2 = 2 \pi r \Delta r + \pi (\Delta r)^2\,.\]
+<p>Then:
+<p>\[\frac{dA}{dr} = \lim_{\Delta r \rightarrow 0} \frac{\Delta A}{\Delta r} = 
+       \lim_{\Delta r \rightarrow 0} (2 \pi r + \pi \Delta r) = 2 \pi r\,.\]
+<p>Notice that the \((\Delta r)^2\) term of <a href="#eqn-50" class="eqn-ref">Eq.&nbsp;(50)</a> did not survive into the final
+answer for the integrand.
+Then we have, finally:
+<p>\[A = \int_{r = 0}^{r = R}\,dA = \int_0^R \frac{dA}{dr}\,dr = \int_0^R 2 \pi r \, dr = 
+       \pi R^2\,.\]
+<p>Of course we could have differentiated this answer to obtain the integrand but we wanted to
+illustrate the method so we can use it in situations where we do not know the answer beforehand.
+<p><span class="tryit">Try it:</span>  Now use your understanding of the limit method to derive the same integrand using the
+usual science/technology method. <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+The method usually used in science and technology to construct an integrand <em>reinterprets</em>
+the statement of the variable of integration, “\(dA\)” in <a href="#eqn-49" class="eqn-ref">Eq.&nbsp;(49)</a> of this supplement,
+as an actual “infinitesimal” area whose value is a length multiplied by a width.
+In our case the length is the finite circumference of the ring (the single value for the length
+is discussed several sentences further on), \(2 \pi r\), while the width has the
+“infinitesimal” value \(dr\).
+Writing the (infinitesimal) area \(dA\) as the product of that length times that width gives us:
+<p>\[dA = 2 \pi r\, dr\]
+<p>so the integral is:
+<p>\[A = \int_{r = 0}^{r = R} dA = \int_0^R 2 \pi r\,dr = \pi R^2\,.\]
+<p>The integrand derived here agrees exactly with the rigorously derived integrand in
+<a href="#eqn-50" class="eqn-ref">Eqs.&nbsp;(50)–(51)</a> of this supplement.
+Note that since the width \(dr\) is “infinitesimal,” the circumference can be considered
+to be the same at \(r\) and \(r + dr\).
+Of course the real reason those two circumferences can be considered to be the same is
+that the difference disappears if we take a proper limit as in <a href="#eqn-51" class="eqn-ref">Eq.&nbsp;(51)</a> of this supplement.</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">
+With \(x_P \gg a\) we have \(a/x_P \ll 1\), so we can rewrite the expression for the
+potential in terms of the small quantity \(\epsilon \equiv a/x_P\) and use
+these two small-quantity approximations:
+<p><sup class="fn-ref"><a href="#fn-AS2" id="fnref-AS2">AS2</a></sup>
+<p>\[\frac{1}{1 - \epsilon} \approx 1 + \epsilon\,, \qquad (\epsilon \ll 1)\]
+<p>and
+<p>\[\ln(1 + \epsilon) \approx \epsilon\,. \qquad (\epsilon \ll 1)\]
+<p>Here is the equation rewritten in terms of \(\epsilon\):
+<p>\[V(\epsilon)= k_e \frac{Q}{a} \,\ln\left(\frac{1}{1 - \epsilon}\right)\]
+<p>and here it is after the two small-quantity approximations have been applied and the answer
+has been restored to a function of \(x_P\):
+<p>\[V(x_P) \approx k_e \frac{Q}{x_P} \qquad (a \ll x_P)\,.\]
+<p></div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\int \frac{x\,dx}{\sqrt{x^2 + a^2}} = \sqrt{x^2 + a^2}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m147gr04.svg" alt="" class="physnet-fig"></figure>
+
+A uniformly distributed line of charge is placed along the \(x\)-axis from
+\(x = 0\) to \(x = a\).
+The total charge on the line is \(Q\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the expression for the potential at a point \(P\) on
+the \(x\)-axis a distance \(x_p\) from the origin due to an infinitesimal segment
+of charge contained in infinitesimal segment of length \(dx\) at distance \(x\)
+from the origin.</li>
+<li><span class="item-label">b.</span> Summing up the contributions from all of the elements of charge,
+find the expression for the potential at \(P\) due to this line of charge.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;5 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

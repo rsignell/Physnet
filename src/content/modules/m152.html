@@ -1,0 +1,168 @@
+<header class="module-header">
+  <h1 class="module-title">Three-Element DC-Driven Series LRC Circuit <span class="module-author">(K.Franklin, P.Signell, and J.Kovacs <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Skills from “Two-Element D.C.-Driven LRC Circuits” <a href="../m151/" class="module-ref">MISN-0-151</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Starting from the charge-current and voltage-current relations
+                for the three types of passive circuit element:
+    <div class="env-id-subsubitems"></div>
+</li><li><strong>a.</strong> Derive the relation between the time rate of change of charge and
+               the circuit parameters.</li><li><strong>b.</strong> Given a solution for the relation, evaluate as many constants as
+               possible without using any information about the circuit's
+               initial state.</li><li><strong>c.</strong> Explain why two solution forms are necessary for the relation.
+    </li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Driven LRC Circuit: Resonances” (MISN-0-154).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction and Description</h2>
+
+<p>In this module we analyze the special case of the D.C.-driven series \(LRC\)
+circuit.
+By “series \(LRC\)” we mean there is an inductor, a resistor, and a capacitor
+connected in series.
+By “D.C.-driven” we mean that a direct-current voltage is applied for some
+period of time and there is no other source of EMF (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.).
+We examine the mathematics used to find a complete solution for the time
+dependence of the circulating charge.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m152gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Switch open for \(t<0\), closed for \(t>0\).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Study Comments</h2>
+
+<p>The general method of attack on the D.C.-driven three-element circuit is the
+same as that used in the two-element case.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The reason the 3-element circuit is treated separately is that there are
+two solutions.
+To see why, we work through the circuit shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p>Following the same procedure used for the 2-element circuit, we easily
+arrive at the fundamental equation for this circuit:
+<p>\[V_\epsilon = L \frac{d^2q(t)}{dt^2} + R \frac{dq(t)}{dt}
+                   + \frac{1}{C} q(t)\]
+<p>A solution of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is:
+<p>\[q(t) = q_0 + q_1 e^{-a t} \sin(b t + d),\]
+<p>where \(q_0\), \(q_1\), \(a\), \(b\) and \(d\) are constants.
+<p>To prove that this is indeed a solution, we insert it and its first and
+<p>second derivatives into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+Collecting terms, we get:
+<p>\[V_\epsilon = \Lambda q_1 e^{-at}\sin(bt+d) +
+
+              (Rb - 2Lab) q_1 e^{-at}\cos(bt+d) + \frac{q_0}{C},\]
+<p>where we have defined for convenience:
+<p>\[\Lambda \equiv La^2 - Lb^2 - Ra + \frac{1}{C}.\]
+<p>Since <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> holds for all times \(t\), we can evaluate the constants
+at any time we wish.
+To make our job easy we choose \(t\) such that \(e^{-at} = 0\)
+<p>(\(t \rightarrow \infty\)).
+We get:
+<p>\[V_\epsilon = \frac{q_0}{C},\]
+<p>so
+<p>\[q_0 = C V_\epsilon .\]
+<p>Putting this back into <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> and rearranging gives:
+<p>\[V_\epsilon - \Lambda q_1 e^{-at}\sin(bt+d) =
+
+                    V_\epsilon + (Rb - 2Lab) q_1 e^{-at}\cos(bt+d).\]
+<p>Cancelling terms,
+<p>\[- \Lambda \sin(bt+d) = (Rb-2Lab)\cos(bt+d).\]
+<p>We now choose to evaluate <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> at \(t = -d/b\) so \(\sin(bt+d)=0\)
+and \(cos(bt+d)=1\), resulting in:
+<p>\[Rb - 2Lab = 0,\]
+<p>so:
+<p>\[a = \frac{R}{2 L}.\]
+<p>After substituting this into <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, we pick \(t\) so that
+\(\sin(bt+d)=1\) and \(\cos(bt+d)=0\), giving:
+<p>\[L b^2 - \frac{R^2}{4L} + \frac{R^2}{2L} - \frac{1}{C} = 0.\]
+<p>Solving for \(b\) gives:
+<p>\[b = \sqrt{\frac{1}{LC} - \frac{R^2}{4 L^2}}.\]
+<p>Here is what we have found: <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is a solution to
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> providing \(q_0\), \(a\), and \(b\) are restricted to certain
+<p>combinations of the circuit parameters.
+<p>However, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is a solution to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> no matter
+<p>what the values of \(q_1\) and \(d\), so these latter are the two adjustable
+constants required in a solution of a second order differential equation.
+They must be set from the initial conditions for a particular problem
+you are wanting to solve.
+<p>The solution we have developed has a problem if \(R^2/4L^2 > 1/LC\), for then
+<p>the argument of the square root in <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> is negative!
+Then we must add a restriction to the solution we have found:
+<p>\[q(t) = C V_\epsilon +
+
+     q_1 e^{-(R/2L)t} \sin\left( \sqrt{\frac{1}{LC} -
+     \frac{R^2}{4 L^2}}\;t + d \right);\;\; R \le 2\sqrt{L/C}.\]
+<p>Now what about cases that violate the restriction?
+For such cases we replace the circular functions, sine and cosine, with their
+hyperbolic counterparts:
+<p>\[\sinh(t) \equiv \frac{e^t - e^{-t}}{2} \qquad
+       \cosh(t) \equiv \frac{e^t + e^{-t}}{2}.\]
+<p>Note that the derivative of (\(\cosh\)) is (\(+\sinh\)), as opposed to the
+derivative of (\(\cos\)) being (\(-\sin\)) for the circular functions.
+We write this solution as:
+<p>\[q(t) = q_0 + q_1 e^{-at} \sinh(b't + d'),\]
+<p>where \(q_0\), \(q_1\), \(a\), \(b'\) and \(d'\) are constants.
+<p>Substitution into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> produces:
+<p>\[V_\epsilon = \Lambda' q_1 e^{-at}\sinh(b't+d')
+
+    + (R b'- 2 Lab')q_1 e^{-at}\cosh(b't+d') + \frac{q_0}{C}.\]
+<p>where:
+<p>\[\Lambda' \equiv La^2+Lb'^2-Ra+\frac{1}{C}.\]
+<p>Substituting into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and cancelling yields:
+<p>\[\left( -Lb'^2 - \frac{R^2}{4L} + \frac{R^2}{2L} - \frac{1}{C} \right)
+
+         \sinh(b't+d') = 0.\]
+<p>Since this holds for any \(t\), and \(\sinh(b't+d')\) is not always zero, the
+coefficient of \(\sinh(b't+d')\) must be zero:
+<p>\[-Lb'^2 - \frac{R^2}{4L} + \frac{R^2}{2L} - \frac{1}{C} = 0.\]
+<p>Thus:
+<p>\[b' = \sqrt{\frac{R^2}{4 L^2} - \frac{1}{LC}}\,,\]
+<p>which makes our second solution:
+<p>\[q(t) = CV_\epsilon + q_1 e^{-(R/2L)t}
+\sinh\left( \sqrt{\frac{R^2}{4 L^2} - \frac{1}{LC}}\;t + d'\right)\,;\;\;
+                   R \ge \sqrt{L/C}.\]
+<p>The unevaluated constants in our two solutions, \(q_1\) and either \(d\) or \(d'\),
+cannot be determined without specific information about the circuit's initial
+state.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See MISN-0-151. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\begin{aligned}q(t) & = q_0 + q_1 e^{-at} \sin(bt + d) \\ q(t) & = q_0 + q_1 e^{-at} \sinh(b't + d')\end{aligned}\]
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

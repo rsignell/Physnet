@@ -1,0 +1,566 @@
+<header class="module-header">
+  <h1 class="module-title">Boundary Conditions: Vibrating Strings, Heat Diffusion <span class="module-author">(R.D.Young, Dept.of Physics, Illinois State Univ.)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: periodic function, Fourier expansion of \(f(x)\), orthogonal
+    function, Fourier integral expansion of f(x), Fourier transform of \(f(x)\),
+    Fourier integral theorem, partial differential equation.</li><li><strong>2.</strong> Unknown: assume <a href="../m485/" class="module-ref">MISN-0-485</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: partial differential equation, order of P.D.E., solution of
+    P.D.E., boundary conditions, boundary value problem, linear and nonlinear
+    P.D.E., elliptic P.D.E., hyperbolic P.D.E., parabolic P.D.E., diffusion and
+    heat conducting equation, vibrating string equation, Laplace's equation,
+    Poisson's equation, Dirichlet boundary conditions, Neumann boundary
+    conditions, Cauchy boundary conditions.</li><li><strong>K2.</strong> Classify a given P.D.E. according to these characteristics: linear
+    or nonlinear, homogeneous or nonhomogeneous, order, elliptic, hyperbolic or
+    parabolic.</li><li><strong>K3.</strong> Derive the diffusion equation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Write down the mathematical B.V.P. corresponding to a physical problem
+    when given the problem in words.</li><li><strong>R2.</strong> Compute the solution to a physical problem involving vibrating strings
+    with ends clamped or temperatures in a slab or bar.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> G.&thinsp;Arfken, Mathematical Methods for Physicist, Academic Press
+    (1995).</li>
+<li><span class="item-label">2.</span> Schaum's Outline: Murray Spiegel, <em>Theory and Problems of
+    Advanced Mathematics for Scientists and Engineers</em>, McGraw-Hill Book Co.
+    (1971).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In this unit, you will come face to face with two very important
+applications of Fourier series and integrals in the solution of problems
+involving vibrating systems and heat diffusion. Partial differential
+equations of various types will be introduced and analyzed first. Then,
+the diffusion equation is derived in order to illustrate how a physical
+problem results in such a partial differential equation. Finally, solutions 
+to boundary value problems involving vibrating strings and heat
+diffusion are obtained. Since this unit has a rather extensive reading
+assignment, I will cut off my introductory remarks here so that you can
+get started on the unit.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> <ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Read pages 258-260 of Spiegel.</li>
+<li><span class="item-label">b.</span> The question of appropriate boundary conditions in a physical
+problem is a touchy one in which you can only gain skill by experience. 
+In order to give you a conceptual framework to use in your
+future work read Section 1, page 9-3 to 9-7 of the Supplementary Notes.
+</li>
+<li><span class="item-label">2.</span> Write down or underline in the text each of the definitions and concepts
+of Output Skill K1.</li>
+<li><span class="item-label">3.</span> Read through the Solved Problems&nbsp;12.1 and 12.2 on “Classification of
+Partial Differential Equations” in Spiegel, page 261.</li>
+<li><span class="item-label">4.</span> Solve Supplementary Problems&nbsp;12.29 and 12.30 on “Classification of
+Partial Differential Equations” in Spiegel, pages 277-278.</li>
+<li><span class="item-label">5.</span> Write down the derivation of the diffusion equation as given in Section
+II, page 9-7 to 9-9, of the Supplementary Notes. You will be asked to
+write down this derivation from memory on the Unit Test. WARNING:
+Although I have used the word <em>memory</em> here, the most efficient way to
+remember a derivation is to <em>understand</em> the concepts involved.</li>
+<li><span class="item-label">6.</span> Read through Solved Problems&nbsp;12.6, page 263, of Spiegel. This problem
+gives an alternative derivation of the source-free diffusion equation.</li>
+<li><span class="item-label">7.</span> Read through Solved Problems&nbsp;12.6, pages 266-267, of Spiegel on solving
+a heat diffusion problem using separation of variables.</li>
+<li><span class="item-label">8.</span> Read through Sections III to V, pages 9-9 to 9-20, of the Supplementary
+Notes. These sections treat the solution of B.&thinsp;V.&thinsp;P. involving vibrating
+strings and heat diffusion.</li>
+<li><span class="item-label">9.</span> Read through Solved Problems&nbsp;12.17, 12.18, 12.19, 12.21, and 12.23
+of Spiegel on B.&thinsp;V.&thinsp;P. involving vibrating strings and heat diffusion.</li>
+<li><span class="item-label">10.</span> Solve the Supplementary Problems&nbsp;12.29, 12.30, 12.48, 12.50, 12.53,
+12.65, and 12.66<sup>*</sup> of Spiegel on B.&thinsp;V.&thinsp;P. involving vibrating strings
+and heat diffusion. You may simply apply the appropriate boxed
+equations from the Supplementary Notes.</li>
+</ol>
+
+<p>Note: You are allowed one sheet of \(8.5'' \times 11.0''\) paper containing the boxed
+equations in the Supplementary Notes when taking the Unit Test. The
+sheet can also contain the B.&thinsp;V.&thinsp;P. for which the boxed equations are
+solutions.
+<p><sup>*</sup> Correct answer is:
+<p>\[u(x, y) = \frac{\mu_0}{2} + \frac{\mu_0}{\pi} \tan^{-1} \frac{x}{y}\,.\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Supplementary Notes</h2>
+
+<p><h3 id="pcap-3-a">3a. Boundary Conditions</h3>
+
+<p>A physical problem is not uniquely specified if the partial differential
+equation which the solution of the problem must satisfy is given. There is an
+infinite number of solutions of the partial differential equations listed on
+pages 259 and 260 of Spiegel. Any physical problem must state not only the
+partial differential equation which is to be solved but also the <em>boundary conditions</em>
+which the solution must satisfy. In fact, satisfying of the boundary conditions
+(B.&thinsp;C.&thinsp;) is often as difficult a task as the solving of the partial differential
+equation (P.&thinsp;D.&thinsp;E.&thinsp;).
+<p>However, the solutions of a given P.&thinsp;D.&thinsp;E.&thinsp; cannot be made to satisfy any
+sort of B.&thinsp;C.&thinsp; For each type of P.&thinsp;D.&thinsp;E.&thinsp;. on pages 259 and 260 of Spiegel, there
+is a definite set of B.&thinsp;C.&thinsp; which will give unique answers. An actual physical
+problem will always have the right sort of B.&thinsp;C.&thinsp; to give it a unique answer
+(we hope!), and if the statement of the problem corresponds to reality, the
+right B.&thinsp;C.&thinsp; are guaranteed. But it is not always easy to tell just what B.&thinsp;C.&thinsp;
+correspond to “reality.” Thus, the types of B.&thinsp;C.&thinsp; which are suitable for various
+P.&thinsp;D.&thinsp;E.&thinsp; are given below. This can guide a scientist or engineer in making his
+mathematical problem fit the physical problem as closely as possible. The
+best and most accessible reference on B.&thinsp;C.&thinsp; in P.&thinsp;D.&thinsp;E.&thinsp; remains Morse and Feshbach,
+<em>Methods of Theoretical Physics</em>, Sec.&thinsp;6.1, pages 676-692, McGraw-Hill (1953).
+<p>There are essentially four types of B.&thinsp;C.&thinsp; In order to make the definitions
+precise, let the P.&thinsp;D.&thinsp;E.&thinsp; be written
+<p>\[A(x,y) \frac{\partial^2 u}{\partial x^2} + B(x,y) \frac{\partial^2 u}{\partial x
+\partial y} + C(x,y) \frac{\partial^2}{\partial y^2} = H(x,y, \frac{\partial u}{\partial x},
+\frac{\partial u}{\partial y})\]
+<p>where
+<p>\[H(x,y) = D(x,y) \frac{\partial u}{\partial x} + E(x,y) \frac{\partial u}{\partial x}
++ F(x,y) u - G(x,y)\]
+<p>The functions \(A\), \(B\), \(C\), \(D\), \(E\), \(F\), and \(G\) are specified functions of \(x\) and \(y\) in
+some domain \(R\) bounded by a curve \(S\). The two variables \(x\) and \(y\) may be either
+two space coordinates or one space and one time coordinate. (If there are three
+spatial dimensions involved, \(R\) is a volume \(V\) and \(S\) is a surface). From this
+point of view, initial conditions are boundary conditions in time. Then the
+four types of B.&thinsp;C.&thinsp; are:
+<p><ol>
+<li><span class="item-label">1.</span> Dirichlet B.&thinsp;C.&thinsp; The value of \(u\) is specified on \(S\).</li>
+<li><span class="item-label">2.</span> Neumann B.&thinsp;C.&thinsp; The value of the normal derivative \(\partial u/ \partial n\) is 
+specified on \(S\).</li>
+<li><span class="item-label">3.</span> Cauchy B.&thinsp;C.&thinsp; The values of \(u\) and \(\partial u/ \partial n\) are specified on \(S\).</li>
+<li><span class="item-label">4.</span> Mixed B.&thinsp;C.&thinsp; Some combination of the above three types of B.&thinsp;C.&thinsp; are given
+for various portions on \(S\).</li>
+</ol>
+
+<p>The P.&thinsp;D.&thinsp;E.&thinsp; are classified as in Spiegel on page 258:
+<p><ol>
+<li><span class="item-label">1.</span> Elliptic equations have \(B^2 - 4 A C < 0\). Laplace's equation
+<p>\[\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0\]
+<p>and Poisson's equation
+<p>\[\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} =
+- 4 \pi \rho(x,y)\]
+<p>are examples.</li>
+<li><span class="item-label">2.</span> Hyperbolic equations have \(B^2 - 4 AC > 0\). The wave equation
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{v^2} \frac{\partial^2 u}
+{\partial t^2} = 0\]
+<p>is an example.</li>
+<li><span class="item-label">3.</span> Parabolic equations have \(B^2 - 4 AC = 0\). The diffusion equation
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{\kappa} \frac{\partial u}
+{\partial t} = 0\]
+<p>is an example.</li>
+</ol>
+
+<p>As an example, the solution of Poisson's equation inside a volume \(V\) subject
+to either Dirichlet or Neumann B.&thinsp;C.&thinsp; on the closed surface \(S\) is unique.
+To show this, assume that there are two functions \(u_1\) and \(u_2\) such that
+<p>\[\nabla^2 u_1 = - 4 \pi \rho\]
+<p>and
+<p>\[\nabla^2 u_2 = - 4 \pi \rho\]
+<p>where either \(u_1\) and \(u_2\) are given an \(S\) (where \(u_1 = u_2\) on \(S\)) corresponding to
+Dirichlet B.&thinsp;C.&thinsp; or \(\partial u_1 / \partial n\) and \(\partial u_2 / \partial n\) 
+are given on \(S\) (where
+<p>\[\frac{\partial u_1}{\partial n} = \frac{\partial u_2}{\partial n}\]
+<p>on \(S\)) corresponding to Neumann B.&thinsp;C.&thinsp; Then define \(U = u_1 - u_2\). Now, \(U = 0\) on \(S\)
+if Dirichlet B.&thinsp;C.&thinsp; hold, or \(\partial U / \partial n = 0\) on \(S\) if Neumann 
+B.&thinsp;C.&thinsp; hold. Applying eq.&thinsp;(1.101) of Arfken gives
+<p>\[\int_V (U \nabla^2 U + \Grad U \cdot \Grad U)\,d\tau = \int_V
+\Grad \cdot (U \Grad U)\,d\tau\]
+<p>\[= \int_S U \Grad U \cdot\,d\vec{\sigma}\,.\]
+<p>So,
+<p>\[\int_V (U \nabla^2 U + \Grad U \cdot \Grad U)\,d\tau =
+\int_S U \frac{\partial U}{\partial n}\,dS\]
+<p>where \(d\vec{\sigma} = \hat{n}\,dS\) and \(\Grad U \cdot \hat{n} = \partial U /
+\partial n\). Also, \(\nabla^2 U = 0\).
+<p>But, for either type of B.&thinsp;C.&thinsp;, the surface integral vanishes, so that
+<p>\[\int_V |\Grad U|^2 = 0\,.\]
+<p>This last equation will be true for any volume \(V\) so that
+<p>\[\Grad U =0\]
+<p>inside \(V\). Thus,
+<p>\[U = \text{ constant}\]
+<p>inside \(V\). In the case of Dirichlet B.&thinsp;C.&thinsp;, this constant is zero so that
+\(u_1 = u_2\). In the case of Neumann B.&thinsp;C.&thinsp;, this constant may not
+be zero so \(u_1\) and \(u_2\) only differ by an unimportant arbitrary, 
+additive constant.
+<p>It should be clear that a solution to Poisson's equation with Cauchy B.&thinsp;C.&thinsp;
+on a closed boundary (both \(u\) and \(\partial u / \partial n\) specified) does not exist, since
+there are unique solutions for Dirichlet and Neumann B.&thinsp;C.&thinsp; Also, there is a
+unique solution to the problem in the case of mixed B.&thinsp;C.&thinsp; where Dirichlet B.&thinsp;C.&thinsp;
+hold over a portion of \(S\) and Neumann B.&thinsp;C.&thinsp; hold over the remaining part.
+Morse and Feshbach study the various P.&thinsp;D.&thinsp;E.&thinsp; and B.&thinsp;C.&thinsp; in order to come up
+with the following table for the uniqueness of solutions to P.&thinsp;D.&thinsp;F.&thinsp; with
+various B.&thinsp;C.
+<p>
+<p><h3 id="pcap-3-b">3b. Type of Equation</h3>
+
+The Table:<br>
+
+<table class="physnet-table"><tbody><tr><td>[t]|l|l|l|l| 
+Type of</td><td>Elliptic</td><td>Hyperbolic</td><td>Parabolic</td></tr><tr><td>B. C.</td><td>(Poisson's eq.&thinsp;)</td><td>(wave eq.&thinsp;)</td><td>(heat-cond. eq.&thinsp;)</td></tr><tr><td>Dirichlet</td><td></td><td></td><td><em>Unique, stable sol.</em></td></tr><tr><td>Open surface</td><td>Not enough</td><td>Not enough</td><td><em>in one direction</em></td></tr><tr><td>Closed surface</td><td><em>Unique, stable</em></td><td>Too much</td><td>Too much</td></tr><tr><td></td><td><em>solution</em></td><td></td><td></td></tr><tr><td>Neumann</td><td></td><td></td><td><em>Unique, stable sol.</em></td></tr><tr><td>Open Surface</td><td>Not enough</td><td>Not enough</td><td><em>in one direction</em></td></tr><tr><td>Closed surface</td><td><em>Unique, stable</em></td><td>Too much</td><td>Too much</td></tr><tr><td></td><td><em>sol. in general</em></td><td></td><td></td></tr><tr><td>Cauchy</td><td></td><td><em>Unique,</em></td><td></td></tr><tr><td>Open Surface</td><td>Unphys. results</td><td><em>stable solution</em></td><td>Too much</td></tr><tr><td>Closed surface</td><td>Too much</td><td>Too much</td><td>Too much</td></tr></tbody></table>
+
+<p>The application of this table can sometimes be not so straightforward,
+so a reading of Morse and Feshbach would be of great help. For example,
+consider the wave equation which is the prototype example of an hyperbolic
+equation. According to the table, a unique solution exists for the case of
+Cauchy B.&thinsp;C.&thinsp; on an open surface. And, indeed, this is true. That is, a
+unique solution exists for the boundary value problem (B.&thinsp;V.&thinsp;P.&thinsp;)
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{v^2} \frac{\partial^2 u}
+{\partial t^2} = 0, \;\; (-\infty < x < \infty, \; 0 < t < \infty)\]
+<p>\[u(x,0) = f(x), \;\; (-\infty < x < \infty)\]
+<p>and
+<p>\[\frac{\partial u(x,0)}{\partial t} = g(x), \;\; (-\infty < x < \infty)\,.\]
+<p>The functions \(g(x)\) and \(f(x)\) are given. This amounts to solving the P.&thinsp;D.&thinsp;E.&thinsp; with
+Cauchy B.&thinsp;C.&thinsp; on an open surface where \(f(x)\) is the initial displacement and \(g(x)\)
+is the initial velocity. The open surface (curve in this case) is just the
+\(x\)-axis since there is no closure on \(t\) at infinity.
+<p><figure class="fig-centered"><img src="figures/m486gr01.svg" alt="" class="physnet-fig"></figure>
+
+<p>The proof that a unique solution exists is easy, but will not be done here.
+See Morse and Feshbach, page 685.
+<p>On the other hand, suppose the waving medium (say a string) is clamped
+at \(x = 0\) and \(x = L\). Then, we have these B.&thinsp;V.&thinsp;P.&thinsp;:
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{v^2} \frac{\partial^2 u}{\partial t^2}
+= 0, \;\; (0 < x < L, \; 0 < t < \infty )\]
+<p>\[u(0,t) = u(L,t) = 0, \;\; (0 \leq t < \infty)\]
+<p>\[u(x,0) = f(x), \;\; (0 \leq x \leq L)\]
+<p>and
+<p>\[\frac{\partial u(x,0)}{\partial t} = g(x), \;\; (0 \leq x \leq L)\,.\]
+<p>The open curve \(S\) now corresponds to the lines \(x = 0\), \(x = L\), and \(t = 0\) and
+is U-shaped.
+<p><figure class="fig-centered"><img src="figures/m486gr02.svg" alt="" class="physnet-fig"></figure>
+
+<p>The B.&thinsp;C.&thinsp; given in eqs.&thinsp;(19) and (20) amount to Cauchy B.&thinsp;C.&thinsp; on
+\(t = 0\) for \(0 \leq x \leq L\), but the B.&thinsp;C.&thinsp; in eq.&thinsp;(18) amounts to Dirichlet 
+conditions on \(x = 0\) and \(x = L\) for \(t > 0\). This occurs because the extra constraint
+on the problem due to the clamped ends would result in the problem being over-
+defined if Cauchy B.&thinsp;C.&thinsp; were given on \(x = 0\) and \(x = L\). The exact reasons for
+this can be found in Morse and Feshbach, page 686.
+<p><h3 id="pcap-3-c">3c. Derivation of the Diffusion Equation</h3>
+
+<p>As an example of how a physical model can result in one of the P.&thinsp;D.&thinsp;E.&thinsp;
+which are listed in section 8.1 of Arfken and on pages 259-260 of Spiegel,
+the diffusion equation will be derived. The derivation applies to some
+physical quantity \(Q(t)\) of a substance. The amount of \(Q\) per unit volume is
+\(q(\vec{r}, t)\). The quantity \(q(\vec{r}, t)\) is a time-dependent scalar field. 
+Therefore, the amount \(Q(t)\) in volume \(V\) is given by
+<p>\[Q(t) = \int_V q(\vec{r}, t)\,d\tau\,.\]
+<p>The amount of \(Q(t)\) can change by two processes.
+<ol>
+<li><span class="item-label">a)</span> Flow of the physical quantity via a current. This flow
+is described by a current vector \(\vec{j}(\vec{r}, t)\) which is a vector
+field. For example, \(Q\) can be electric charge, \(q\) can be
+charge density, and \(\vec{j}\) can be electric current.</li>
+<li><span class="item-label">b)</span> Sources of quantity \(Q\) in volume \(V\). The source (or sink) is
+described by a scalar field \(\phi(\vec{r}, t)\) which is the rate at which \(Q(t)\)
+is created per unit volume per unit time.</li>
+</ol>
+
+<p>Thus,
+<p>\[\frac{dQ}{dt} = \int_V \frac{\partial q(\vec{r}, t)}{\partial t}\,d\tau =
+- \int_S \vec{j} \cdot\,d\vec{\sigma} + \int_V \phi(\vec{r}, t)\,d\tau\,.\]
+<p><figure class="fig-centered"><img src="figures/m486gr03.svg" alt="" class="physnet-fig"></figure>
+
+<p>From the orientation of \(\vec{j}\) and \(d\vec{\sigma}\), if \(- \vec{j} \cdot\,d\vec{\sigma}\)
+is a positive quantity, then
+it represents the flow into \(V\) across \(d\vec{\sigma}\).
+<p>But
+<p>\[\int_V \Grad \cdot \vec{j}\,d\tau = \int_S \vec{j} \cdot\,d\vec{\sigma}\,.\]
+<p>So
+<p>\[\int_V \left( \frac{\partial q}{\partial t} + \Grad \cdot \vec{j} -
+\phi \right)\,d\tau = 0\,.\]
+<p>This equation holds for any volume \(V\). Therefore,
+<p>\[\frac{\partial q}{\partial t} + \Grad \cdot \vec{j} = \phi\,.\]
+<p>This is the <em>equation of continuity</em> with sources. It is essentially a 
+conservation equation.
+<p>In some cases an empirical relation exists between \(\vec{j}\) and \(q\). Many
+times it is true that a gradient of \(q\) results in a flow of quantity \(q\) from
+higher to lower concentrations. Then
+<p>\[\vec{j}(\vec{r},t) = -x \Grad q(\vec{r},t)\,.\] 
+<p>If \(q\) represents charge, then \(\vec{j}\) represents the current density. If \(q\) is temperature;
+then \(\vec{j}\) represents heat flow per unit area per unit time. In the case of heat flow,
+this last equation is the Fourier law of heat conduction. If \(q\) represents
+the concentration of a solute in a solvent, then the last equation is called
+Fick's law. Substitution of \(\vec{j}\) in eq.&thinsp;(26) into the equation of continuity,
+eq.&thinsp;(25), gives
+<p>\[\frac{\partial q}{\partial t} - \Grad \cdot (\kappa \Grad q) = \phi\,.\]
+<p>If \(n\) is constant and there are no sources or sinks of the quantity (i.e.
+\(\phi = 0\)), then
+<p>\[\nabla^2 q - \frac{1}{\kappa} \frac{\partial q}{\partial t} = 0\,.\]
+<p>This is the heat conduction equation as given on page 259 of Spiegel.
+<p><h3 id="pcap-3-d">3d. Solution of the Vibrating String with Ends Clamped</h3>
+
+<p>Consider the case of a string vibrating with ends clamped. Let the
+coordinate along the string be \(x\), and the time coordinate be \(t\). Let \(v\) be
+the speed of propagation of waves on the string. 
+<p><figure class="fig-centered"><img src="figures/m486gr04.svg" alt="" class="physnet-fig"></figure>
+
+<p>Let \(u(x,t)\) represent the displacement of the string. Then the B.&thinsp;V.&thinsp;P.&thinsp; can
+be written
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{v^2} \frac{\partial^2 u}{\partial t^2}
+= 0, \;\; (0 < t < \infty, \; 0 < x < L)\]
+<p>\[u(0,t) = u(L,t) = 0, \;\; (0 \leq t < \infty)\]
+<p>\[u(x,0) = f(x), \;\; (0 \leq x \leq L)\]
+<p>and
+<p>\[\frac{\partial u(x,0)}{\partial t} = g(x), \;\; (0 \leq x \leq L)\,.\]
+<p>The known functions \(f(x)\) and \(g(x)\) are the initial displacement and velocity
+of the string, respectively. I shall use the method of separation of variables
+to solve this problem. So assume
+<p>\[u(x,t) = X(x) T(t)\,.\]
+<p>Then, substitution of eq.&thinsp;(33) in eq.&thinsp;(29) yields this result:
+<p>\[X''T - \frac{1}{v^2} X T'' = 0\]
+<p>or
+<p>\[\frac{X}''(x) {X(x)} = \frac{T''(t)}{v^2 T(t)}\,.\]
+<p>The left-hand side of the above equation is a function of \(x\) alone so it cannot
+vary with \(t\). The right-hand side is a function of \(t\) alone so it cannot vary
+with \(x\). Hence, both sides must be equal to some constant, say \(\gamma\), so that
+<p>\[X''(x) - \gamma X(x) = 0\]
+<p>\[T''(t) - \gamma v^2 T(t) = 0\,.\]
+<p>From the B.&thinsp;C.&thinsp; in eq.&thinsp;(30), this result is obtained:
+<p>\[X(0) = X(L) = 0\,.\]
+<p>Solution to eq.&thinsp;(36) can be written
+<p>\[X(x) = C_1 e^{x \sqrt{\gamma}} + C_2 e^{- x \sqrt{\gamma}}\]
+<p>where \(C_1\) and \(C_2\) are constants. Eqs.&thinsp;(38) and (39) give
+<p>\[C_1 + C_2 = 0\]
+<p>and
+<p>\[C_1 e^{L \sqrt{\gamma}} + C_2 e^{- L \sqrt{\gamma}} = 0\,.\]
+<p>Suppose \(\gamma > 0\). Then
+<p>\[e^{L \sqrt{\gamma}} - e^{- L \sqrt{\gamma}} = 0\]
+<p>so that
+<p>\[\sinh L \sqrt{\gamma} = 0\,.\]
+<p>But, the hyperbolic sine is always nonzero when \(L \sqrt{\gamma} > 0\). Thus,
+solutions for \(X(x)\) only exist when \(\gamma \leq 0\). Let
+<p>\[\gamma = - \beta^2, \;\; \beta^2 \geq 0\,.\]
+<p>Then, the expression for \(X(x)\) in eq.&thinsp;(39) can be rearranged to give
+<p>\[X(x) = A \cos \beta x + B \sin \beta x\]
+<p>where \(A\) and \(B\) depend on \(C_1\) and \(C_2\). The B.&thinsp;C.&thinsp; in eq.&thinsp;(38) yield
+<p>\[A = 0\]
+<p>and
+<p>\[B \sin \beta L = 0\,.\]
+<p>Thus
+<p>\[\beta L = n \pi, \;\; n = 1,2,3, \ldots\]
+<p>The solution \(X(x)\) are actually denumberably infinite, and they can be
+labeled by the integer \(n\):
+<p>\[X_n(x) = B_n \sin\frac{n \pi x}{L}, \;\; n = 1,2,3, \ldots\]
+<p>In the same way the solution \(T(t)\) depends on \(n\) and can be written as
+<p>\[T_n(t) = C_n \cos \frac{n \pi v t}{L} + D_n \sin \frac{n \pi v t}{L}\]
+<p>where \(C_n\) and \(D_n\) are constants. The full solution \(u(x,t)\) must be a linear
+combination of the \(X_n T_n\), because the remaining two B.&thinsp;C.&thinsp; need to be
+satisfied. So, if \(C'_n = B_n C_n\) and \(D'_n = B_n D_n\),
+<p>\[u(x,t) = \sum_{n=1}^{\infty} \left[ C'_n \cos \frac{n \pi v t}{L} +
+D'_n \sin \frac{n \pi v t}{L} \right] \sin \frac{n \pi x}{L}\,.\]
+<p>But
+<p>\[u(x,0) = f(x) = \sum_{n=1}^{\infty} C'_n \sin \frac{n \pi x}{L}\]
+<p>and
+<p>\[\frac{\partial u(x,0)}{\partial t} = g(x) = \frac{\pi x}{L}
+\sum_{n=1}^{\infty} n D'_n \sin \frac{n \pi x}{L}\,.\]
+<p>Remember that \(0 \leq x \leq L\). The above two equations are Fourier sine series on
+\((0,L)\). Thus, these expressions can be written down immediately for
+\(C'_n\) and \(D'_n\):
+<p>\[C'_n = \frac{2}{L} \int_0^L f(x) \sin \frac{n \pi v}{L}\,dx\]
+<p>and
+<p>\[\frac{n \pi v}{L} D'_n = \frac{2}{L} \int_0^L g(x) \sin \frac{n \pi v}{L}\,dx\,.\]
+<p>Eqs.&thinsp;(51), (54), (55) are a complete solution to the original
+B.&thinsp;V.&thinsp;P.&thinsp; Numerous examples are discussed in Spiegel on the pages indicated in
+the Procedures. As an example, suppose
+<p>\[\begin{aligned}f(x) & = x, \text{  when  } 0 \leq x \leq 1 \\      & = -x + 2 \text{  when  } 1 \leq x \leq 2\end{aligned}\]
+
+<p>and
+<p>\[g(x) = 0 \text{  when  } 0 \leq x \leq 2\,.\]
+<p>Then
+<p>\[C'_n = \int_0^2 f(x) \sin \frac{n \pi x}{2}\,dx = \int_0^1 x \sin \frac{n \pi x}{2}
+dx + \int_1^2 (-x + 2) \sin \frac{n \pi x}{2}\,dx\]
+<p>so
+<p>\[C'_n = \frac{8}{\pi^2 n^2} \sin \frac{n \pi}{2}\,.\]
+<p>Also
+<p>\[D'_n = 0\,.\]
+<p>Thus
+<p>\[u(x,t) = \frac{8}{\pi^2} \sum_{n=1}^{\infty} \sin \frac{n \pi}{2} \sin
+\frac{n \pi x}{2} \cos \frac{n \pi vt}{2} / n^2, \;\; (0 \leq x \leq 2)\,.\]
+<p><h3 id="pcap-3-e">3e. Temperature in a Slab or Bar</h3>
+
+Suppose that you are interested in the temperatures in a slab of homogeneous 
+material bounded by the planes \(x = 0\) and \(x = L\). The dimension in the
+\(y\)-direction can be negligibly small and the slab can go to infinity in the
+\(z\)-direction.
+<p><figure class="fig-centered"><img src="figures/m486gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>The temperature in such a slab is only dependent on the coordinate \(x\) (and \(t\))
+if the faces at \(x = 0\) and \(x = L\) are held at the same temperature for all \(z\).
+Alternatively, the formulation will be the same for temperatures in a bar of
+length \(L\) where the lateral dimensions are very small.
+<p><figure class="fig-centered"><img src="figures/m486gr06.svg" alt="" class="physnet-fig"></figure>
+
+<p>The \(u(x,t)\) represent the temperature in such a system. Then, the temperature
+satisfies the diffusion equation where \(n\) is the diffusivity. As seen in the
+table in Sec.&thinsp;I on B.&thinsp;C.&thinsp;, the diffusion equation has a unique solution for an
+open boundary with either Dirichlet or Neumann boundary conditions. There
+could also be a mixed B.&thinsp;C.&thinsp; with Dirichlet B.&thinsp;C.&thinsp; over part of the boundary and
+Neumann over the remaining part. The openness of boundary is guaranteed by
+the lack of closure in \(t\) at infinity (\(0 \leq t < \infty\)). Dirichlet B.&thinsp;C.&thinsp; at
+\(x = 0\) and \(x = L\), namely, \(u(0,t) = g(t)\) and \(u(L,t) = h(t)\) where \(g\) and
+\(h\) are known functions of time, correspond to knowing the temperature at
+the faces \(x = 0\) and \(x = L\). Of course, Neumann B.&thinsp;C.&thinsp; at \(x = 0\) and \(x = L\), that
+is, having \(\partial u / \partial t\) at \(x = 0\) and \(x = L\), correspond to knowing the
+rate at which the temperature is changing. A usual case is to have one of the
+following cases:
+<ol>
+<li><span class="item-label">1.</span> \(u(0,t)\) &amp; \(u(L,t)\) being constant, corresponding to constant
+temperature at the faces.</li>
+<li><span class="item-label">2.</span> \(\partial u(0,t) / \partial t\) &amp; \(\partial u(L,t) / \partial t\) being
+zero corresponding to thermally insulated faces .</li>
+</ol>
+
+<p>Case 1: Let us consider this B.&thinsp;V.&thinsp;P&thinsp;:
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{\kappa} \frac{\partial u}{\partial t}
+= 0, \;\; (0 < x < L, \; 0 < t < \infty )\]
+<p>where
+<p>\[u(0,t) = T_0, \;\; (0 \leq t < \infty)\]
+<p>\[u(L,t) = T_1, \;\; (0 \leq t < \infty)\]
+<p>\[u(x,0) = f(x), \;\; (0 \leq x \leq L)\,.\]
+<p>The function \(f(x)\) is given and is the initial temperature. Redefine the
+temperature as
+<p>\[v(x,t) = u(x,t) - T_0 - (T_1 - T_0) \frac{x}{L}\,.\]
+<p>Then the new function \(v(x,t)\) satisfies this B.&thinsp;V.&thinsp;P.&thinsp;:
+<p>\[\frac{\partial^2 v}{\partial x^2} - \frac{1}{\kappa} \frac{\partial v}{\partial t}
+= 0, \;\; (0 < x < L, \; 0 < t < \infty )\]
+<p>\[v(0,t) = v(L,t) = 0, \;\; (0 \leq t < \infty)\]
+<p>and
+<p>\[v(x,0) = f(x) - T_0 \left( \frac{L - x}{L} \right) - T_1 \frac{x}{L},
+\;\; (0 \leq x \leq L)\,.\]
+<p>The new temperature \(v(x,t)\) has zero temperature at the faces. This makes
+the solution somewhat simpler. Of course, either of \(T_0\) or \(T_1\), can be zero.
+The solution to the original B.&thinsp;V.&thinsp;P.&thinsp;, namely, \(u(x,t)\), can be obtained from
+eq.&thinsp;(68) after \(v(x,t)\) is obtained from the B.&thinsp;V.&thinsp;P.&thinsp; in eqs.&thinsp;(66), (67), and
+(68). The technique of separation of variables can be used. Assume
+<p>\[v(x,t) = X(x) T(t)\,.\]
+<p>Then, substitution of eq.&thinsp;(69) into eq.&thinsp;(66) yields
+<p>\[\frac{X''}{X} = \frac{T''}{\kappa T}\,.\]
+<p>Using the usual argument gives
+<p>\[X'' - \alpha\, X = 0\]
+<p>and
+<p>\[T' - \alpha n T = 0, \;\; \alpha = \text{ constant}\,.\]
+<p>The B.&thinsp;C.&thinsp; in eqs.&thinsp;(67) give
+<p>\[X(0) = X(L) = 0\,.\]
+<p>Thus, the solution of eq.&thinsp;(71) can be written as
+<p>\[X_n(x) = B_n \sin \frac{n \pi x}{L}, \;\; n = 1,2,3, \ldots\]
+<p>where
+<p>\[\alpha = - \frac{n^2 \pi^2}{L^2}\,.\]
+<p>Then, the solution of eq.&thinsp;(72) can be expressed as
+<p>\[T_n(t) = C_n e^{-n^2 \pi^2 \kappa t / L^2}\,.\]
+<p>As in the previous case of the wave equation, the solution to the diffusion
+equation can be written as
+<p>\[v(x,t) = \sum_{n=1}^{\infty} B'_n e^{- n^2 \pi^2 \kappa t / L^2} \sin
+\frac{n \pi x}{L}, \;\; B'_n = B_n C_n\,.\]
+<p>The last B.&thinsp;C.&thinsp; in eq.&thinsp;(68) can be satisfied by
+<p>\[v(x,0) = f(x) - T_0 \left( \frac{L - x}{L} \right) - T_1 \frac{X}{L} =
+\sum_{n=1}^{\infty} B'_n \sin \frac{n \pi x}{L}\]
+<p>and
+<p>\[B'_n = \frac{2}{L} \int_0^L \left[ f(x) - T_0 \left( \frac{L - x}{L} 
+\right) - T_1 \frac{X}{L} \right] \sin \frac{n \pi x}{L}\,dx\,.\]
+<p>Thus, after some rearrangement the complete solution of the original B.&thinsp;V.&thinsp;P.&thinsp;
+in eqs.&thinsp;(61), (62), (63), and (64) is
+<p>\[u(x,t) = T_0 \left( \frac{L - x}{L}\right) + T_1 \frac{x}{L} + \sum_{n=1}^{\infty} B'_n 
+e^{- n^2 \pi^2 \kappa t / L^2} \sin \frac{n \pi x}{L}\]
+<p>where
+<p>\[B'_n = \frac{2}{L} \int_0^L \left[ f(x) - T_0 \left( \frac{L - x}{L} 
+\right) - T_1 \frac{X}{L} \right] \sin \frac{n \pi x}{L}\,dx\,.\]
+<p>Case 2: This problem corresponds to thermally insulated faces. The B.&thinsp;V.&thinsp;P.&thinsp;
+is then
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{\kappa} \frac{\partial u}{\partial t}
+= 0, \;\; (0 < x < L, \; 0 < t < \infty )\]
+<p>\[\frac{\partial u(0,t)}{\partial x} = \frac{\partial u(L,t)}{\partial x}
+= 0, \;\; (0 \leq t < \infty)\]
+<p>\[u(x,0) = f(x), \;\; (0 \leq x leq L)\,.\]
+<p>The solution can be obtained in the same way as in Case 1 except the presence
+of the time derivatives in eq.&thinsp;(83) results in a Fourier cosine series on
+\([0, L]\). Thus, the solution is
+<p>\[u(x,t) = \frac{1}{2} A'_0 \sum_{n=1}^{\infty} A'_n
+e^{- \frac{n^2 \pi^2 \kappa t}{L^2}} \cos \frac{n \pi x}{L}\]
+<p>where
+<p>\[A'_n = \frac{2}{L} \int_0^L f(x) \cos \frac{n \pi x}{L}\,dx,
+\;\; n = 0,1,2,3, \ldots\]
+<p><h3 id="pcap-3-f">3f. Temperatures in an Infinite and Semi-infinite Bar</h3>
+
+As a last application of Fourier analysis to the solution of P.&thinsp;D.&thinsp;E.&thinsp;,
+the Fourier integrals will be used to find temperatures in an infinite and
+semi-infinite bar. The B.&thinsp;V.&thinsp;P.&thinsp; for an infinite bar is as follows:
+<p><figure class="fig-centered"><img src="figures/m486gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{\kappa} \frac{\partial u}{\partial t}
+= 0, \;\; (- \infty < x < \infty, \; 0 < t < \infty )\]
+<p>\[|u(x,t)| < M,\;\; (- \infty < x < \infty, \; 0 < t < \infty )\]
+<p>and
+<p>\[u(x,0) = f(x), \;\; (- \infty < x < \infty)\,.\]
+<p>Note: \(M\) is a constant, and \(f(x)\) is known.
+<p>The bar extends to \(\pm \infty\) in the \(x\)-direction, but it has negligible cross-
+sectional area so the temperature in the bar is a function of \(x\) alone (as
+well as time \(t\)). A solution to the P.&thinsp;D.&thinsp;E.&thinsp; can be written as
+<p>\[u_\omega(x,t) = u(\omega) e^{- \kappa \omega^2 t} e^{- \imath \omega x}\]
+<p>since \(\partial u_\omega / \partial t = - \kappa \omega^2 u_\omega\) and \(\partial^2
+u_\omega / \partial x^2 = - \omega^2 u_\omega\). The proportionality constant can
+depend on \(\omega\). Thus, a complete solution is
+<p>\[u(x,t) = \frac{1}{\sqrt{2 \pi}} \int_{- \infty}^\infty u(\omega) 
+e^{-\kappa \omega^2 t} e^{- \imath \omega x}\,d\omega\]
+<p>where
+<p>\[u(\omega) = \frac{1}{\sqrt{2 \pi}} \int_{- \infty}^\infty f(x)
+e^{+ \imath \omega x}\,dx\,.\]
+<p>The B.&thinsp;V.&thinsp;P.&thinsp; for a semi-infinite bar is as follows:
+<p><figure class="fig-centered"><img src="figures/m486gr08.svg" alt="" class="physnet-fig"></figure>
+
+<p>\[\frac{\partial^2 u}{\partial x^2} - \frac{1}{\kappa} \frac{\partial u}
+{\partial t} = 0, \;\; (0 < x < \infty, \; 0 < t < \infty )\]
+<p>\[|u(x,t)| < M, \;\; (0 < x < \infty, \; 0 < t < \infty )\]
+<p>\[u(0,t) = T_0, \;\; 0 < t < \infty )\]
+<p>\[u(x,0) = f(x), \;\; 0 < x < \infty )\,.\]
+<p>The B.&thinsp;C.&thinsp; at \(x = 0\) corresponds to a constant temperature on the face of the
+bar at \(x = 0\). The problem can be reformulated in terms of \(v(x,t)\) where:
+<p>\[v(x,t) = u(x,t) - T_0\,.\]
+<p>Then, the new B.&thinsp;V.&thinsp;P.&thinsp; becomes
+<p>\[\frac{\partial^2 v}{\partial x^2} - \frac{1}{\kappa} \frac{\partial v}
+{\partial t} = 0, \;\; (0 < x < \infty, \; 0 < t < \infty )\]
+<p>\[|v(x,t)| < M', \;\; (0 < x < \infty, \; 0 < t < \infty )\]
+<p>\[v(0,t) = 0, \;\; 0 < t < \infty )\]
+<p>\[v(x,0) = f(x) - T_0 , \;\; 0 < x < \infty )\,.\]
+<p>A solution to the P.&thinsp;D.&thinsp;E.&thinsp; is simply
+<p>\[v_\omega(x,t) = v(\omega) e^{- \kappa \omega^2 t} \sin \omega x\]
+<p>since
+<p>\[\frac{\partial v_\omega}{\partial t} = - \kappa \omega^2 v_\omega\]
+<p>and
+\[\frac{\partial^2 v_\omega}{\partial x^2} = - \omega^2 v_\omega\,.\]
+<p>Also
+<p>\[v_\omega(0,t) = 0\,.\]
+<p>The last B.&thinsp;C.&thinsp; can be fulfilled by integrating over \(\omega\) from 0 to \(\infty\).
+A factor of \(\sqrt{2 / \pi}\) is included. Thus,
+<p>\[v(x,t) = \sqrt{\frac{2}{\pi}} \int_0^\infty v(\omega) e^{- \kappa \omega^2 t}
+\sin \omega x\,d\omega\]
+<p>where
+<p>\[v(\omega) = \sqrt{\frac{2}{\pi}} \int_0^\infty [f(x) - T_0] \sin \omega
+x\,dx\,.\]
+<p>Thus, the solution to the original B.&thinsp;V.&thinsp;P.&thinsp; is
+<p>\[u(x,t) = v(x,t) + T_0\]
+<p>where \(v(x,t)\) is given by eqs.&thinsp;(106) and (107) above.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

@@ -1,0 +1,543 @@
+<header class="module-header">
+  <h1 class="module-title">Generating Simulated Data <span class="module-author">(Mike Brandl and Ray G.Van Ausdal)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: Errors in measurement <a href="../m371/" class="module-ref">MISN-0-371</a>).
+                Random and pseudorandom numbers <a href="../m354/" class="module-ref">MISN-0-354</a>).</li><li><strong>2.</strong> Skills: None.
+                It is useful to be able to generate a set of pseudorandom numbers
+                between zero and one <a href="../m354/" class="module-ref">MISN-0-354</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: uniform and non-uniform distributions; probability
+                density function; probability in an interval; normalization;
+                cumulative probability function; Lorentzian and Gaussian distributions.</li><li><strong>K2.</strong> State the four steps to generate simulated data.</li><li><strong>K3.</strong> Demonstrate graphically and mathematically how this method works.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given a simple probability density function, form its cumulative
+                probability function, and generate data that simulates the original
+                distribution.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>P1.</strong> Given a graph of the cumulative probability function vs. \(x\),
+                describe analytically, graphically, and verbally the distribution
+                of data that would be generated.</li></ul></div>
+
+    
+    <div class="env-OptionalResources">
+    <br>
+  Access to a computer is useful.
+    </div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p>This module presents a method for generating random data which
+simulates the data that might be received from an actual experiment.
+Such simulated data could be used to test theoretical models in
+situations where experimental tests would be too expensive,
+time-consuming or dangerous.
+(For example, the failure modes of a nuclear reactor must be
+studied without the benefit of experiment.)
+Artificially generated data could also be used to test methods of
+data reduction (such as least squares fitting of a function).
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Describing Random Events</h2>
+
+<p><h3 id="pcap-2-a">2a. Random Numbers: Uniform Distribution</h3>
+
+A sequence of numbers is “random” if the value of any number in
+that sequence cannot be predicted from the values of the numbers
+preceding it.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>If all of the possible values have the same probability of occurring
+in the sequence, the numbers have a uniform distribution.
+The throw of a single die is an example: all faces are equally
+likely.
+<p><h3 id="pcap-2-b">2b. Non-uniform Distributions</h3>
+
+If all the possible values do not have the same probability of
+occurring, the numbers have a non-uniform distribution.
+The probability of a certain value depends on the value itself.
+The throw of a pair of dice is an example: “snake eyes” are not
+as likely as sevens.
+Many physical situations involve non-uniform distributions.
+For example, repeated measurements of a pendulum period show that
+values near the mean value are more likely to occur than values far
+from the mean.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p><h3 id="pcap-2-c">2c. Specifying Non-Uniform Probabilities</h3>
+
+For discrete variables, such as the number of radioactive decays occurring
+in a given time interval, we could assign a probability to each possible
+value of the variable.
+However, for continuous variables, like times or distances, there are
+an infinite number of possible values contained in any finite interval,
+so the probability of any one particular value occurring is infinitesimal.
+<p><h3 id="pcap-2-d">2d. The Probability Density Function</h3>
+
+We can characterize the probability of occurrence of values of a continuous
+variable \(x\) by the probability density function \(p(x)\), where
+<p><div class="env-tabularx"><span class="tex-unknown" title="unknown macro">\linewidth</span>r X
+\(p(x_0) dx = \) & the (infinitesimal) probability that
+                             the value of the variable \(x\) lies somewhere in the
+                             interval between \(x_0\) and \(x_0 + dx\).
+</div>
+
+                            
+The quantity \(p(x)\) is the probability per unit interval in the variable \(x\).
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-2-e">2e. The Probability Contained in a Finite Interval</h3>
+
+The actual probability \(P(x)\) (\(x_1 \leq x \leq x_2\)) that a continuous random variable
+\(x\) will assume a value
+on the finite interval between \(x_1\) and \(x_2\) can be obtained by
+integrating the probability density function between those
+two limits:
+<p>\[p(x_1 \leq x \leq x_2) = \int^{x_2}_{x_1} p(x') dx'.\]
+<p>Since the random variable \(x\) is certain to assume a value somewhere
+between its lowest and highest values \(x_\ell\) and \(x_\mu\),
+the integral of \(p(x)\) over the total range of the variable
+must be equal to one:
+<p>\[ \int^{x_u}_{x_l} p(x') dx' = 1.\]
+<p>That is, \(p(x)\) is “normalized” to one.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m214gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The cumulative probability function \(P_c(x)\)
+is the integral of the probability density function \(p(x)\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-f">2f. The Cumulative Probability Function</h3>
+
+The cumulative probability function \(P_c(x)\) is defined as
+<p>\[P_c(x) \equiv \int^{x}_{x_l} p(x') dx'.\]
+<p>\(P_c(x_0)\) is the probability that the value of \(x\) lies somewhere between
+\(x_\ell\) and \(x_0\).
+\(P_c(x_0)\) increases monotonically from zero at \(x_\ell\) to one at \(x_u\)
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Data Generation: the Method</h2>
+
+<p><h3 id="pcap-3-a">3a. A Four Step Process</h3>
+
+The basic method used to generate data whose distribution is
+described by a given probability density function is suprisingly
+simple.
+There are four steps:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p><ul>
+<li><span class="item-label">(i)</span> Given the probability density function \(p(x)\), form the cumulative
+            probability function, \(P_c(x)\).</li>
+<li><span class="item-label">(ii)</span> Generate a pseudorandom number \(r_i\) which is a member of a sequence
+            of numbers uniformly distributed on the interval zero to one.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup></li>
+<li><span class="item-label">(iii)</span> Find the value \(x_i\) such that \(P_c(x_i) = r_i\) (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).    
+            Symbolically, this process is written \(x_i = {P_c}^{-1}(r_i)\) .</li>
+<li><span class="item-label">(iv)</span> Repeat steps (ii) and (iii) to obtain the desired set of values
+            \(x_i\) distributed according to the probability density function \(p(x)\).</li>
+</ul>
+
+<figure id="fig-2" class="fig-left-framed"><img src="figures/m214gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The process of finding \(x_i = P_c^{-1}(r_i)\)
+                    is indicated graphically.</figcaption></figure>
+
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m214gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Uniformly distributed numbers \(r_i\) on the
+vertical axis translate into non-uniformly distributed \(x_i\) on the horizontal axis.
+18The region of highest density corresponds to the peak of \(p(x)\).</figcaption></figure>
+
+<p><h3 id="pcap-3-b">3b. The Basis: A Graphical Demonstration</h3>
+
+Figure&nbsp;3 demonstrates graphically how this method changes a uniform
+distribution of random numbers into a specific non-uniform distribution.
+The cumulative probability function \(P_c(x)\) is plotted in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>a.
+A number of evenly spaced points are placed on the vertical axis,
+representing the uniformly distributed random numbers \(r_i\).
+Inversions of each of these \(r_i\) are indicated graphically.
+The resulting points on the \(x\)-axis represent the numbers \(x_i\)
+corresponding to the \(r_i\)'s.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>The spacing of points on the \(x\)-axis is not uniform, the points
+being closest together near the value at which the probability
+density function (<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>b.) has its maximum.
+A point on the vertical axis chosen at random will be most likely
+to correspond to a point in the densely packed region of the \(x\)-axis.
+<p><h3 id="pcap-3-c">3c. The Basis (Mathematical, Demonstration)</h3>
+
+<p>We can also show mathematically that the data generated by this method
+will be distributed according to \(p(x)\).
+Using the method of Sect.&thinsp;3, we effectively started with a
+probability density function \(p(x)\), and found a set of random variables
+\(x_i\), each given by solving the following equation for \(x_i\):
+<p>\[r_i = P_c(x_i) = \int^{x_i}_{x_l} p(x') dx'.\]
+<p>We must show that the resulting probability density function for the
+variables \(x_i\) (let us call it \(p_1(x)\)) is the same as \(p(x)\).
+Since for each r\(_i\) there corresponds an \(x_i\), on a one to one basis,
+the (infinitesimal) probability that \(x_i\) has a value in the interval
+between \(x_0\) and \(x_0 + dx\) is equal to the probability that \(r_i\) has its
+value in the corresponding interval \(r_0\) to \(r_0 + dr\).
+That is,
+<p>\[p_1(x_o)dx = p_2(r_o)dr,\]
+<p>or, in general,
+<p>\[p_1(x) = p_2(r)\frac{dr}{dx},\]
+<p>Since \(r\) has a uniform distribution on the interval zero to one, \(p_2(r) = K\),
+a constant.
+The normalization condition, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, demands that \(K = 1\).
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> becomes
+<p>\[p_1(x) = \frac{dr}{dx} = \frac{d}{dx} \int^x_{x_l} p(x')dx' = p(x).\]
+<p>That is, \(p_1(x) = p(x)\), as needed.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Lorentzian Distribution</h2>
+
+<p><h3 id="pcap-4-a">4a. Typical Uses for the Lorentzian</h3>
+
+The Lorentzian distribution is often used in quantum mechanics to
+describe resonance phenomena.
+For instance, a proton and a pion are most likely to interact in a
+collision when their total energy is close to the mass-energy of a
+delta particle.
+The probability of an interaction as a function of energy, \(p(E)\), is Lorentzian in form.
+The distribution of photon energies within a given spectral line
+is also Lorentzian.
+<p><h3 id="pcap-4-b">4b. The Lorentzian Function</h3>
+
+The Lorentzian probability density function is
+<p>\[P_L(x) = \frac{1}{\pi}\frac{\Gamma/2}{(x-\mu)^2+(\Gamma/2)^2},\]
+<p>where \(\mu\) is the mean value of the variable \(x\) and \(\Gamma\) is the “full
+width at half maximum” of the peak (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m214gr05.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The Lorentzian distribution is peaked symmetrically
+about the mean value \(\mu\). Its shape depends upon the value for \(\Gamma\).</figcaption></figure></div>
+
+<p><h3 id="pcap-4-c">4c. \(P_c(x)\) for the Lorentzian</h3>
+
+The cumulative probability function for the Lorentzian distribution is
+<p>\[P_c(x) = \int^x_{-\infty} \frac{1}{\pi} \frac{\Gamma/2}{(x'-\mu)^2+(\Gamma/2)^2} dx',\]
+<p>since the values of \(x\) may range from \(- \infty\) to \(+ \infty\).
+Performing the integration yields
+<p>\[P_c(x) = \frac{1}{\pi} \tan^{-1}\left(\frac{x - \mu}{\Gamma/2}\right) + \frac{1}{2}.\]
+<p><h3 id="pcap-4-d">4d. Generating Lorentzian Data</h3>
+
+Our process involves repeatedly setting \(P_c\)(x) equal to some random
+number \(r_i\) between zero and one, and solving for the corresponding \(x_i\).
+We can solve for \(x_i\) algebraically, yielding
+<p>\[x_i = \frac{\Gamma}{2} \tan\left[\pi\left(r_i - \frac{1}{2}\right)\right] + \mu.\]
+<p><h3 id="pcap-4-e">4e. Sample Data</h3>
+
+We now use random numbers \(r_i\) to generate Lorentzian data \(x_i\).
+Table I lists data generated by this method for two different cases.
+The first is for
+\(\mu = 1/2\), \(\Gamma = 0.05\) (a “narrow” distribution).
+The second is for \(\mu = 1/2\), \(\Gamma = 0.5\) (a “wide” distribution).
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table I. Simulated “Lorentzian” data depend
+on \(\Gamma\), the “width” of the distribution.</td></tr><tr><td>\(x_i\) Data</td><td>\(x_i\) Data</td><td>Original</td></tr><tr><td>“Narrow”</td><td>“Wide”</td><td>\(r_i^\dag\)</td></tr><tr><td>0.48792</td><td>0.37915</td><td>.35667</td></tr><tr><td>0.48465</td><td>0.34646</td><td>.32469</td></tr><tr><td>0.46490</td><td>0.14899</td><td>.19700</td></tr><tr><td>0.53481</td><td>0.84810</td><td>.80175</td></tr><tr><td>0.45384</td><td>0.03837</td><td>.15799</td></tr><tr><td>0.57377</td><td>1.23767</td><td>.89599</td></tr><tr><td>0.49331</td><td>0.43307</td><td>.41673</td></tr><tr><td>0.52238</td><td>0.72379</td><td>.73241</td></tr><tr><td>0.67149</td><td>2.21486</td><td>.95392</td></tr><tr><td>0.35731</td><td>-0.92688</td><td>.05521</td></tr><tr><td>Mean=0.504</td><td>Mean=0.544</td><td></td></tr><tr><td><span class="tex-unknown" title="unknown macro">\small</span> \(\dag\) Pseudorandom numbers generated by the power residue method.</td></tr></tbody></table>
+</div>
+
+<p>Note that just as in a real experiment, you do not get exactly the
+“right” answer.
+Neither data set gives a mean value of exactly 1/2 and
+neither is even symmetric about \(x = 1/2\).
+That is, in this case, more data points lie below that value than
+above.
+A very large amount of data would need to be generated to show the
+true Lorentzian character of the distribution.
+<p></section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The Gaussian Distribution</h2>
+
+<p><h3 id="pcap-5-a">5a. Typical Uses for the Gaussian</h3>
+
+Random errors of measurement will cause a set of repeated measurements
+of the same quantity to be distributed according to the Gaussian
+distribution.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>For example, ten measurements of a pendulum period will not give
+exactly the same result because of these random errors.
+<p><h3 id="pcap-5-b">5b. The Gaussian Function</h3>
+
+A Gaussian distribution probability density function is
+<p>\[p(x) = \frac{1}{\sigma(2\pi)^{1/2}}\ e^{-\frac{(x - \mu)^2}{2\sigma}},\]
+<p>where \(\mu\) is the mean value of the variable \(x\), and \(\sigma\) is the standard
+deviation of the measurements.
+(If many repeated measurements are made, about 68% of them will lie
+in the range \(\mu \pm \sigma\).)
+<p><h3 id="pcap-5-c">5c. \(P_c(x)\) and \(P^{-1}_c (x)\) for the Gaussian</h3>
+
+The expression
+<p>\[P_c(x) = \int^x_{-\infty} \frac{1}{\sigma(2\pi)^{1/2}}\  e^{-\frac{(x - \mu)^2}{2\sigma}} dx,\]
+<p>cannot be integrated analytically.
+However, algebraic formulas for \(P_c(x)\) and \(P^{-1}_c (x)\) do exist.
+The function we need is
+<p>\[x = P^{-1}_c(r) \simeq \sigma\left[t - \frac{c_o + c_1t + c_2t^2} {1 + d_1t + d_2t^2 + d_3t^3} \right] + \mu ,\]
+<p>where \(t = \left[\ln(1 - r)^{-2}\right]^{1/2}\)
+<p>\(c_o\) = 2.515517;  \(c_1 = 0.802853\);  \(c_2 = 0.010328\)
+<p>\(d_1 = 1.432788\);  \(d_2 = 0.189269\);  \(d_3 = 0.001308\)
+<p>Clearly, if much data must be generated a computer should be used.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Least Squares Fitting of Experimental Data” (MISN-0-162). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Generation of Random Numbers by Computer” (MISN-0-354). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Errors in Measurement” (MISN-0-371). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This is sometimes called the “distribution function.”
+A “uniform distribution” is a special case of the non-uniform distribution
+with \(p(x) = \) constant. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">In some cases, not all of these steps can be done simply.
+Approximations, numerical methods or graphical methods might be
+required. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">You may choose to use tables or calculator or computer methods
+(MISN-0-354).
+The cover of this module is a short table of pseudorandom numbers. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">A second graphical method involves constructing histograms which
+can be compared to \(p(x)\).
+See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
+(MISN-0-373). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">Also called the “bell-shaped curve.” <a href="#fnref-8" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The values of a variable \(x\) are distributed according to the
+           probability density function \(p(x) = C\), a constant, in the interval
+           \(|x| \leq 1\) and \(p(x) = 0\) for \( 1 < |x| \).
+	<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Use the normalization condition to find the value of \(C\).</li>
+<li><span class="item-label">b.</span> Sketch \(p(x)\) vs. \(x\).</li>
+<li><span class="item-label">c.</span> What is the probability that x will occur in the range \(-1 \leq x \leq 0\)?</li>
+<li><span class="item-label">d.</span> Integrate \(p(x)\) to find \(P_c(x)\).</li>
+<li><span class="item-label">e.</span> Sketch \(P_c(x)\) vs. \(x\).</li>
+<li><span class="item-label">f.</span> Write the equation \(x_i = P^{-1}_c (r_i)\).</li>
+<li><span class="item-label">g.</span> Generate 20 data points \(x_i\).
+	Examine the results and describe their distribution qualitatively.</li>
+<li><span class="item-label">h.</span> What fraction of your generated data points lie in the range
+	\(-1 \leq x \leq 0\)?
+	How should the answer compare with your answer to part (c)?
+	</li>
+<li><span class="item-label">2.</span> The actual lifetimes \(t\) of unstable nuclei of a given species
+           are distributed according to the probability density function
+           \[p(t) = \frac{1}{\tau}  e^{-t/\tau} \text{ for } 0 \leq t \leq \infty.\]
+           \(\tau\) is the mean lifetime of that species.
+           Assume that \(\tau = 1\) second for this example.
+	<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch \(p(t)\) vs. \(t\).</li>
+<li><span class="item-label">b.</span> What is the probability that a nucleus will decay during the first
+	           second?</li>
+<li><span class="item-label">c.</span> Find \(P_c(t)\), the probability of decaying by time \(t\).</li>
+<li><span class="item-label">d.</span> Sketch \(P_c(t)\) vs. \(t\).</li>
+<li><span class="item-label">e.</span> Write the equation \(t_i = P^{-1}_c (r_i)\).</li>
+<li><span class="item-label">f.</span> Generate 20 lifetimes \(t_i\).</li>
+<li><span class="item-label">g.</span> What fraction of your nuclei have decayed during the first second?
+	           How does this answer compare with part (b)?
+	</li>
+<li><span class="item-label">3.</span> The cumulative probability function for a set of variables \(x\) is
+	       given by this graph: <figure class="fig-centered"><img src="figures/m214gr06.svg" alt="" class="physnet-fig"></figure>
+
+	<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Describe the distribution of the resulting data generated in the
+	           interval \(0 \leq x \leq 0.5\).
+	           Use graphical methods suggested by Section 4a.</li>
+<li><span class="item-label">b.</span> Repeat for the interval \(0.5 \leq x \leq 1\).</li>
+<li><span class="item-label">c.</span> How do the distributions of part (a) and (b) differ?</li>
+<li><span class="item-label">d.</span> Graph the probability density function for this data.</li>
+<li><span class="item-label">e.</span> Write the equation for the normalized probability function in
+	           four regions: \(x < 0\), \(0 \leq x \leq 0.5\), \(0.5 \leq x \leq 1.0\)
+	           and \(x > 1.0\).
+    </li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> <ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(C = 1/2\)</li>
+<li><span class="item-label">b.</span> <figure class="fig-centered"><img src="figures/m214gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> 1/2 or 50%</li>
+<li><span class="item-label">d.</span> 
+	            <table class="physnet-table"><tbody><tr><td>[t]lrcrcccr
+	            \(P_c(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\(<\)</td><td>\(-1\)</td></tr><tr><td>\(P_c(x) = \frac{1}{2} (x+1)\)</td><td>for</td><td>\(-1\)</td><td>\(<\)</td><td>\(x\)</td><td>\(<\)</td><td>\(+1\)</td></tr><tr><td>\(P_c(x) = 1\)</td><td>for</td><td>\(+1\)</td><td>\(<\)</td><td>\(x\)</td><td></td><td></td></tr></tbody></table>
+
+	           </li>
+<li><span class="item-label">e.</span> <figure class="fig-centered"><img src="figures/m214gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">f.</span> \(x_i = 2 r_i - 1\)</li>
+<li><span class="item-label">g.</span> The \(x_i\) depend upon the \(r_i\) generated.
+	           The distribution should look relatively uniform on the interval \(-1\) to \(+1\).
+	           No points should lie outside that interval.</li>
+<li><span class="item-label">h.</span> The fraction depends upon the \(r_i\) that occurred.
+	           Any value is possible, although something near 50% is most likely.
+	</li>
+<li><span class="item-label">2.</span> <ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m214gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \((1 - e^{-1}) = 0.63 \text{ or } 63\%\)</li>
+<li><span class="item-label">c.</span> \(P_c(t) = 1 - e^{(-t/1\,\text{s})}\)</li>
+<li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m214gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">e.</span> \(t_i = (1\,\text{s}) \ln (1 - r_i)^{-1}\)</li>
+<li><span class="item-label">f.</span> The \(t_i\) depend upon the \(r_i\) generated.</li>
+<li><span class="item-label">g.</span> The fraction depends upon the \(r_i\) that occurred.
+	           Any value is possible, although something near 63% is most likely.
+	           Very long lifetimes should be infrequent.
+	</li>
+<li><span class="item-label">3.</span> <ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> A uniform distribution over the interval.</li>
+<li><span class="item-label">b.</span> A uniform distribution over the interval.</li>
+<li><span class="item-label">c.</span> The density (and therefore \(p(x)\)) for the interval \(0.5 < x \leq 1\) is
+	           three times that of the interval \(0 \leq x \leq 0.5\).</li>
+<li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m214gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">e.</span> The normalization requirement gives \(C = 1/2\).
+			   <br>
+
+               <table class="physnet-table"><tbody><tr><td>\(p(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\(<\)</td><td>0.0</td></tr><tr><td>\(p(x) = 1/2\)</td><td>for</td><td>0.0</td><td>\(\leq\)</td><td>\(x\)</td><td>\(\leq\)</td><td>0.5</td></tr><tr><td>\(p(x) = 3/2\)</td><td>for</td><td>0.5</td><td>\(<\)</td><td>\(x\)</td><td>\(\leq\)</td><td>1.0</td></tr><tr><td>\(p(x) = 0\)</td><td>for</td><td>1</td><td>\(<\)</td><td>\(x\)</td><td>\(>\)</td><td>1.0</td></tr></tbody></table>
+
+	</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p>Hints for Problem Supplement:
+<ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Normalization means  \(\int^{x_\mu}_{x_\ell} p(x) dx = 1\).</li>
+<li>For this problem, this reduces to \(\int^{+1}_{-1} C dx = 1\).</li>
+<li><span class="item-label">c.</span> The probability in a finite interval is
+           \(\int^{x_2}_{x_1} p(x) dx\).</li>
+<li><span class="item-label">d.</span> \(P_c(x) = \int^x_{x_\ell} p(x) dx\).
+           The integral must be evaluated three times, for \(x\) in the
+           three regions \(x < -1\), \(-1 \leq x \leq +1\), and \(x > +1\).
+           In each case, \(x_\ell = -\infty\).</li>
+<li><span class="item-label">f.</span> Solve the equation \(P_c(x) = r\) for the variable \(x\).</li>
+<li><span class="item-label">g.</span> Generate 20 random numbers \(r_i\) (or use tables), and plug each
+           into the equation of part (f).
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The probability in a finite interval is \(\int^{t_2}_{t_1} p(t) dt\)
+           with \(t_1 = 0\) , \(t_2 = 1\,\text{s}\).  \(\int e^{-ax} dx = \frac{1}{a} e^{-ax}\).</li>
+<li><span class="item-label">c.</span> \(P_c(t) = \int^t_0 p(t)dt\)</li>
+<li><span class="item-label">e.</span> Solve the equation \(P_c(t) = r\) for \(t\).</li>
+<li><span class="item-label">f.</span> Generate 20 random numbers \(r_i\) (or use tables), and plug
+           each into the equation of part (e).
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Use equally spaced lines on the vertical axis, (e.g., use 20).</li>
+<li><span class="item-label">b.</span> Use equally spaced lines on the vertical axis, (e.g., use 20).
+           Compare the spacing on the horizontal axis.</li>
+<li><span class="item-label">c.</span> Compare the density of lines on the horizontal axis for the
+           two intervals.</li>
+<li><span class="item-label">d.</span> Make sure your graph includes a numerical comparison of the
+           densities in each interval.</li>
+<li><span class="item-label">e.</span> Normalization requires \(\int^{x_u}_{x_\ell} p(x) dx = 1\).
+           Does this area under your \(p(x)\) vs. \(x\) curve equal one?
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Given: \(p(x) = kx\) for: \(0 < x < 2\); \(p(x) = 0\) otherwise
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Use the normalization condition to find \(k\).</li>
+<li><span class="item-label">b.</span> Sketch \(p(x)\) vs. \(x\).</li>
+<li><span class="item-label">c.</span> What is the probability that \(x\) will occur in the range \(0 < x < +1\)?</li>
+<li><span class="item-label">d.</span> Find \(P_c(x)\) and sketch \(P_c(x)\) vs. \(x\).</li>
+<li><span class="item-label">e.</span> Generate 20 data points \(x_i\).
+Describe their distribution qualitatively.
+</li>
+<li><span class="item-label">2.</span> The cumulative probability function for a set of variables
+\(x\) is given in this sketch:
+<br>
+
+<figure class="fig-centered"><img src="figures/m214gr07.svg" alt="" class="physnet-fig"></figure>
+
+Describe qualitatively the nature of the distribution of the
+data generated.</li>
+<li><span class="item-label">3.</span> Define or describe the “cumulative probability function.”</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(k = 1/2\)</li>
+<li><span class="item-label">b.</span> <figure class="fig-centered"><img src="figures/m214gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> \(P(0 \leq x \leq 1) = 1/4 \int^1_0 \frac{1}{2} x dx =
+           \frac{1}{4} x^2 |^1_0 = \frac{1}{4}\)</li>
+<li><span class="item-label">d.</span> \(P_c(x) = \frac{1}{4} x^2\) for: \(0 \leq x \leq 2\)
+		   <br>
+
+           <figure class="fig-centered"><img src="figures/m214gr14.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">e.</span> The density becomes increasingly higher as \(x\) increases from
+           0 to 2.  There are no points outside that interval.
+</li>
+<li><span class="item-label">2.</span> Data points fall either in the interval \(-2 \leq x \leq -1\) or
+           \(1 \leq x \leq 2\).
+           They are uniformly distributed on each of those intervals, with
+           the same density on each.</li>
+<li><span class="item-label">3.</span> The cumulative probability function \(P_c(x)\) is the probability
+           that the variable \(x_i\) will occur somewhere in the interval from
+           \(x_\ell\) to \(x\).</li>
+</ol>
+
+<p></section>
+

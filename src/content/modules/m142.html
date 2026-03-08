@@ -1,0 +1,566 @@
+<header class="module-header">
+  <h1 class="module-title">Magnetic Induction <span class="module-author">(J.S.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: energy-power-time relation <a href="../m20/" class="module-ref">MISN-0-20</a>, electric
+    field <a href="../m115/" class="module-ref">MISN-0-115</a>, battery<a href="../m117/" class="module-ref">MISN-0-117</a>, power (electrical) <a href="../m118/" class="module-ref">MISN-0-118</a>,
+    voltage, resistor <a href="../m119/" class="module-ref">MISN-0-119</a>, magnetic field, Lorentz force <a href="../m122/" class="module-ref">MISN-0-122</a>,
+    surface integral <a href="../m132/" class="module-ref">MISN-0-132</a>, line integral, Ampere's law <a href="../m138/" class="module-ref">MISN-0-138</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: Faraday-Henry law, flux, induced current, induced
+                potential difference, induced voltage, Lenz's law.</li><li><strong>K2.</strong> Write down the Faraday-Henry Law, relating the line-integral
+    of the induced electric field to the time rate of change of the surface
+    integral of the magnetic field across a surface bounded by the path of the
+    line-integral, taking care to explain the sign convention.
+    Explain in words what the physical phenomenon is that is described by this
+    equation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Determine the voltage induced around given closed paths when
+                a changing magnetic field in the region is specified.</li><li><strong>S2.</strong> Determine the voltage induced around given closed paths when the
+                velocity of the path through a uniform static magnetic field is
+                specified.</li><li><strong>S3.</strong> Use Lenz's law to determine the directions of induced voltages,
+                currents, and magnetic fields.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Overview</h3>
+
+When magnetic fields and/or electric fields change with time, effects
+occur which are profoundly different from what would be expected from
+just the static properties of these fields.
+When electric fields change with time, magnetic fields are produced just as
+would be produced by currents.
+When magnetic fields change with time, electric fields are produced just as
+would be produced by charges.
+The fields so-produced are called “induced” fields and they simply add
+to the fields produced by charges and currents.
+In this module we study: (1) moving circuits in stationary magnetic fields,
+so the Lorentz Force provides the induction; and (2) stationary circuits
+in time-changing magnetic fields so the induction is governed by the
+so-called “Faraday-Henry” law.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m142gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The angle \(\theta\) is defined as the
+angle between the magnetic field \(\vec{B}\) and the vector \(d\vec{S}\)
+whose direction is normal to the surface element of area \(dS\).</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]1bMagnetic Flux
+Throughout the study of magnetic induction we make use of the concept of
+“the magnetic flux through a surface \(S\) bounded by a directed line \(L\),”
+written \(\Phi_{SL}\) and defined by:
+<p>\[\Phi_{SL} \equiv \oint_{SL} \vec{B} \cdot d\vec{S}\,.\]
+<p>The relationships between these quantities are shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The word “flux,” strictly speaking, merely refers to value of the integral
+on the right side of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+However, the word “flux” originated with people who liked to think of it
+as a sort of measure of the number of (ficticious) magnetic field lines that
+go through the surface of integration.
+<p><h3 id="pcap-1-c">1c. The Flux Integrand</h3>
+
+To construct the integrand in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, one needs to take the scalar
+product of the two vectors \(\vec{B}\) and \(d\vec{S}\) and for that their
+directions and magnitudes must be known.
+The vector \(\vec{B}\) is normally known in any particular application
+but we <em>must</em> determine the direction of the infinitesimal vector
+surface element \(d\vec{S}\) by examining that element and its relationship to
+the directed line \(L\).
+After all, there are two sides to the surface and each side has a unit
+vector normal to the surface at that point.
+Note that the unit vector \(\hat{n}\), normal to the surface, enters
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> in the form: \(d\vec{S} = \hat{n}\,dS\).
+The two normal unit vectors on opposite sides of the surface point in
+exactly opposite directions.
+The scalar product in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> will be positive with one choice for
+positive \(d\vec{S}\), negative with the other choice.
+However, the sign of the integrand <em>must</em> be determined correctly
+because the sign has important physical consequences.
+<p><h3 id="pcap-1-d">1d. The Direction of Positive Flux</h3>
+
+The positive flux direction for a surface \(S\) is tied to the positive
+direction around the line \(L\) that borders the surface.
+Once you choose one of those two directions, the other is thereby fixed.
+You may choose one of them in any manner that appeals to you, but then you
+must define the other in conformity with the choice you just made.
+The directions of \(L\) and \(S\) are related the same way that the
+magnetic field surrounding a wire is related to the direction of the current
+in the wire, or in the same way that the direction of the current in a loop
+of wire is related to the magnetic field at the center of the loop, as
+ilustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m142gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The case where \(d\vec{S}\) is determined
+by \(L\): (a) for one choice of the direction \(L\); and (b) for the other
+choice.</figcaption></figure>
+
+<p><span class="tryit">Try it:</span>  There is a loop of area 4.0<span class="unit">&thinsp;m<sup>2</sup></span> in the \(x\)-\(z\) plane:
+take the surface the loop encloses as a flat disc in the plane.
+The magnetic field is, at some time, say, \(\vec{B} = 12\,\text{T} \,
+\hat{y}\) at all space points enclosed by the loop.
+Show that the magnetic flux through the loop is just the area times the
+field: \(\Phi_{SL} = 48\,\text{T}\unit{m^{2}}\).
+<p><span class="tryit">Try it:</span>  If the field was tilted so it was at an angle \(\theta\) to the normal
+to the surface, then <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> shows that the flux through the
+surface would be: \(\Phi_{SL} = 48\,\cos\theta\,\,\text{T}\unit{m^{2}}\).
+Flux is sometimes given the unit “weber,” abbreviated W:
+\(\,\text{W} \equiv \,\text{T}\unit{m^{2}}\).
+<p><h3 id="pcap-1-e">1e. Induced Voltage</h3>
+
+When magnetic effects induce an electric field in a circuit, that electric
+field can be integrated along the circuit to obtain the induced potential
+difference:
+<p>\[V_{ind} = - \int \vec{E}_{ind} \cdot \,d\vec{\ell}\,.\]
+<p>This induced potential difference is called the “induced voltage” for
+short, and it will produce a current in the circuit if the circuit
+resistance is less than infinite.
+The induced voltage represents the work per unit charge that the electric
+field is willing to do.
+It is non-zero around a complete closed path, which is quite a difference
+from ordinary voltages (such as those supplied by batteries) that <em>are</em>
+zero around a closed path.
+We illustrate this in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> with a specific battery-driven circuit and
+a specific induction-driven circuit where a magnetic field is changing with
+time.
+In <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>a the voltage drop clockwise from \(c\) to \(d\) is \(2.0\)&thinsp;V and the
+voltage drop clockwise from \(d\) to \(c\) is \(-2.0\)&thinsp;V (a voltage <em>rise</em>).
+Thus the voltage drop around the total circuit, clockwise from \(c\) to \(d\)
+to \(c\), is zero.
+In <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>b the voltage drop from any one point clockwise around the circuit
+and back to the original point is <em>not</em> zero and is, in fact, the
+<em>induced voltage</em>.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m142gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The voltage drop around a complete path:
+(a) zero for a non-induced voltage;
+(b) non-zero for an induced voltage.</figcaption></figure>
+
+<p><h3 id="pcap-1-f">1f. Induced Voltage and Flux Change Rate</h3>
+
+When the magnetic flux, through the surface that is surrounded by a loop,
+changes with time, the induced voltage equals the rate of change of the
+magnetic flux through any surface bounded by the loop:
+<p>\[V_{ind} = \frac{d\Phi}{dt}\,.\]
+<p><h3 id="pcap-1-g">1g. The Power Transferred</h3>
+
+If the magnetic field is constant but the circuit is moving (the
+Lorentz-Force case) the power dissipated in the circuit resistance comes
+from the mechanical energy needed to move the circuit in the field.
+If the circuit is stationary but the magnetic field is changing with time
+(the Faraday-Henry case) the power dissipated in the circuit
+resistance comes from the energy that must be expended to change that field.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Example of Lorentz-Force Induction</h2>
+
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m142gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A square-loop circuit enters a region of
+constant magnetic field that is directed into the page.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-a">2a. A Loop Enters A Magnetic Field</h3>
+
+In <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> we show an example of Lorentz force induction.
+There a loop circuit traveling at speed \(v\) enters a region of constant
+magnetic field \(B\).
+Note that \(x\) is the distance from the center line of the loop to the center
+line of the region of magnetic field; and that the length of each side of the
+loop is \(\ell\) and the width of the magnetic field is \(2\ell\).
+Until the leading edge of the loop reaches the field there is no Lorentz
+force on the mobile charges in the wire that constitutes the loop.
+When \(x = - 3 \ell /2\) the wire enters the field and there is a Lorentz
+force on the mobile charges in part of the loop that has entered the field.
+That force is: \(F = q\,v\,B\) so the induced electric field, the force per
+unit charge, is \(E_{ind} = v\,B\).
+Integrating this along the leading edge of the loop, we get for the induced
+potential of point \(b\) with respect to point \(a\):
+<p>\[V_{ind,ba} = - \ell\,v\,B\,.\]
+<p>Thus any induced current will flow from \(a\) to \(b\) (from higher
+potential to lower, in the direction of the Lorentz Force).
+<p><h3 id="pcap-2-b">2b. The Loop Travels Through the Magnetic Field</h3>
+
+As the loop travels across the magnetic field the induced potential
+difference along the top and bottom arms of the loop will be zero as is
+readily seen from the vector form of the Lorentz force.
+The potential difference between the ends of the trailing edge of the loop
+will be the same as for the leading edge:
+<p>\[V_{ind,cd} = - \ell\,v\,B\,.\]
+<p>As we make a complete circuit around the loop the induced potential
+differences along the two ends oppose each other and the net potential
+difference is zero:
+<p>\[V_{ind,loop} = 0\,.\]
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m142gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The induced potential difference around the
+loop <br> of <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> as a function of the position of the loop.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-c">2c. The Loop Leaves the Magnetic Field</h3>
+
+When the leading edge of the coil reaches the far edge of the field and
+emerges into a region of zero magnetic field, its induced potential drops
+to zero and the loop potential difference is:
+<p>\[V_{ind,dc} = + \ell\,v\,B\,,\]
+<p>which would cause current to flow around the loop in a clockwise direction.
+<a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> shows a plot of the loop potential difference, \(V_{dcba}\), vs. \(x\).
+<p><h3 id="pcap-2-d">2d. The Time Rate of Change of the Flux</h3>
+
+The induced potential difference is simply related to the time rate of
+change of the magnetic flux enclosed by the loop:
+<p>\[V_{ind,dcba} = \dot{\Phi}\,.\]
+<p>This comes about because the magnetic field is constant so the flux
+integral, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, is just \(\Phi = B \, dA/dt\) where \(A\) is the
+area of the loop containing non-zero \(B\).
+That area is \(A = \ell r\) so \(dA/dt = \ell dr/dt = \ell\,v\).
+Then \(\dot{\Phi} = B \, \ell \, v\) and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> is proved.
+We will find that <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> is not restricted to Lorentz force
+cases but is also true where the loop is stationary (not moving) in the
+field but the magnetic field itself is increasing or decreasing with time.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Induction by Time-Changing \(B\)  </h2>
+
+<p><h3 id="pcap--">. </h3>
+[]3aThe Faraday-Henry Law
+Time-changing magnetic fields produce induced electric fields,
+hence potential differences, in a manner described by the so-called
+Faraday-Henry law.
+This law relates the line integral of the induced electric field to the
+time-derivative of the surface-integrated magnetic field:
+<p>\[\oint_{LS} \vec{E}_{ind} \cdot d\vec{\ell} =
+                 - \frac{d}{dt} \oint_{SL} \vec{B} \cdot d\vec{S}\,.\]
+<p>Now we can substitute \((- V_{ind})\) for the left side and \((-\dot{\Phi})\)
+for the right side to get the simpler-appearing form:
+<p>\[V_{ind,LS} = \dot{\Phi}_{SL}\,.\]
+<p>Note that this equation is exactly the same as the equation for
+Lorentz-force induction, <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
+<p><h3 id="pcap-3-b">3b. Example: Linearly Increasing \(B\)</h3>
+
+Suppose a coil having \(N\) turns and area \(A\) is placed perpendicular
+to a magnetic field that is increasing linearly with time:
+<p>\[B = B_0 + B_1\,t\,,\]
+<p>where \(B_0\) and \(B_1\) are constants.
+The induced voltage is, by <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>:
+<p>\[V_{ind} = \dot{\Phi} = N\,A\,B_1\,.\]
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m142gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. As <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> but with circuit resistance
+shown explicitly.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Lenz's Law</h2>
+
+<p>Lenz's law states that magnetic induction is always in such a direction as
+to tend to oppose the change that produced the induction.
+For example, as the loop in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> enters the magnetic field the induced
+potential difference is such as to produce a <em>counter-clockwise</em> current
+in the loop.
+That counterclockwise current will itself produce a magnetic field
+that comes out of the page and so to some extent opposes the into-the-page
+continuing increase in the original loop flux.
+Similarly, the <em>clockwise</em> current induced as the loop leaves the
+field itself produces a magnetic field that is into the page: this tends
+to oppose the continuing decrease that is taking place in the loop flux.
+<p>Lentz's law also states that if a time-changing potential difference causes
+a time-changing magnetic field, then the time-changing magnetic field
+produces an electric field and a resulting current flow that will
+oppose the change in the original potential difference.
+<p>Similarly, a changing current induces a current that tends to oppose the
+continuing change in the original current.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Self-Inductance, Inductors</h2>
+
+<p>The term “inductor” refers to a circuit element that usually has the shape
+of a solenoid, a torus, or simply many loops of wire glued together.
+A current flowing through an inductor of course sets up a magnetic field
+so changes in the current result in changes in the magnetic field.
+Those in turn produce an induced voltage drop in the element, a voltage
+drop that opposes the change in the current.
+The magnitude of the induced voltage is proportional to the
+time-rate-of-change of the current, as we have seen, so we write:
+<p>\[V_{ind} = L\,\frac{dI}{dt}\,,\]
+<p>where \(L\) is determined solely from the geometry of the inductor and is
+called the inductor's <em>inductance</em>.
+The S.I. unit of inductance is the “henry,” abbreviated H:
+\(\,\text{H} \equiv \,\text{V}\,\text{s}\,\text{A}^{-1}\) as can be seen from
+<a href="#eqn-24" class="eqn-ref">Eq.&nbsp;(24)</a>.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the integral form of a Maxwell equation,
+stating that the line integral of the electric field around a loop
+is equal to the negative of the time derivative of the integral of the
+normal component of the magnetic field (integrated over the surface bounded
+by the loop):
+\(\oint_{LS} \vec{E} \cdot d\vec{\ell} =
+- (d/dt) \int_{LS} \vec{B} \cdot d\vec{S}\).
+This law is often quoted in its short form: the voltage induced in the
+loop equals the time derivative of the magnetic flux through the surface
+bounded by the loop: \(V_{ind} = \dot{\Phi}\).
+<p>denoted \(\Phi\); the integral, over a surface with a
+particular boundary, of the component of the field normal to the surface.
+For magnetic flux: \(\Phi_{SL} = \int_{SL} \vec{B} \cdot d\vec{S}\).
+<p>the current produced in a circuit as a result
+of an induced potential difference (which see).
+The usual relations between voltage, resistance, and current apply.
+<p>the total distributed potential
+difference encountered in traversing a circuit due to motion of the
+circuit in a magnetic field or due to the circuit being in a
+time-changing magnetic field.
+<p>just another name for “induced potential
+difference” (which see).
+<p>the negative of the induced voltage around a
+loop divided by the time-rate-of-change of magnetic flux through any surface
+bounded by that loop: \(L = - V_{induced}/\dot{\Phi}\).
+The minus sign shows that the induced voltage opposes the change in the
+flux.
+The SI unit of inductance is the henry, abbreviated H:
+\(\,\text{H} \equiv \,\text{V}\,\text{s}\,\text{A}^{-1}\).
+<p>a circuit element whose purpose is to provide
+self-inductance, the electrical circuit analog of mechanical inertia (mass).
+An inductor is usually in the shape of a solenoid or a toroid.
+The self-inductance of an inductor depends on the geometry of the inductor,
+and the magnetic susceptibility of the materials of which the inductor is
+constructed.
+Inductors in electronic circuits typically are in the mH range.
+<p>a law stating that induced phenomena oppose the
+inducing phenomena.
+For example, an induced current produces a magnetic field which opposes the
+changes in the magnetic field that caused the current to be induced.
+</section>
+
+<p>
+<hr class="section-divider">
+
+
+<p>  
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;1-3 also appear in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A circular loop, of radius \(R = 0.20\)&thinsp;meters, in the plane of
+the page is in a region where a magnetic field \(\vec{B}\) is directed into
+the page (see sketch).
+The magnitude of \(\vec{B}\) varies with time according to:
+<p>\[|\vec{B}| = B_0 - A t^2,\]
+<p>where \(B_0 = 2.0\)&thinsp;T (teslas) and \(A = 0.30\)&thinsp;T/s<sup>2</sup> are constants.
+<p><figure class="fig-centered"><img src="figures/m142gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the magnitude and direction of the induced potential
+difference, \(V_{ind}\), around this loop at the instant \(t = 0.20\)&thinsp;sec. [F]</li>
+<li>Is \(V_{ind}\) constant with time? [A]</li>
+<li>Check that the dimensions of \(V_{ind}\) follow correctly
+from the dimensions of what goes into your calculations. [H]</li>
+<li><span class="item-label">b.</span> Find the magnitude and direction of the tangential component
+of the electric field vector at any point on this loop. [J]</li>
+<li><span class="item-label">c.</span> What can the Faraday-Henry Law tell you about the normal
+(radial) component of \(\vec{E}\) at any point on the loop? [E]</li>
+<li>What does symmetry tell you? [I]
+
+<p></li>
+<li><span class="item-label">2.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m142gr08.svg" alt="" class="physnet-fig"></figure>
+
+<p>This same loop is placed in a region of uniform field \(\vec{B}\),
+\(|\vec{B}| = 2.0\)&thinsp;T, directed into the page.
+The loop is rotated about the axis \(AA'\) so that point \(P\) comes out of the
+page, point \(Q\) goes into the page.
+In 0.02&thinsp;sec the loop is flipped over so that \(P\) is where \(Q\) was and
+vice versa.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the average \(V_{ind}\) induced around this loop? [B]</li>
+<li><span class="item-label">b.</span> What is the direction of this \(V_{ind}\)? (Would it drive the
+induced current in the direction \(SPT\) or \(TPS\)? [D]
+</li>
+<li><span class="item-label">3.</span> As shown in the figure, lines of magnetic field are directed
+perpendicular to a circular loop of wire of radius \(r\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If the magnitude of the field is given by \(B = B_0 e^{-t/\tau}\),
+where \(B_0\) and \(\tau\) are constants, what is the \(V_{ind}\) induced in the
+loop as a function of time? [G]
+(In the figure, \(d\vec{s}\) denotes the positive direction around the loop.)
+<p><figure class="fig-centered"><img src="figures/m142gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> Answer the same question if the loop is titled through
+60.0°, [L] or 90.0°. [K]
+</li>
+<li><span class="item-label">4.</span> Using the definitions of the tesla (p. 359) and the volt, in terms
+of fundamental dimensions, show that both sides of the Faraday-Henry Law
+have the same units. [C]
+<p></li>
+<li><span class="item-label">5.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m142gr10.svg" alt="" class="physnet-fig"></figure>
+
+<p>A square loop of wire is stationary within a time-dependent
+magnetic field that is confined to a square region of space.
+The length of one side of the loop is \(\ell\) and the loop extends \(\ell/2\)
+into the field (see sketch).
+The magnetic field varies with time as \(B = B_0 sin(\omega t)\).
+Use these values to answer the questions below:
+\(B_0 = 1.0\,\text{T}\), \(\omega = 2.0\pi/\,\text{s}\), \(R = 1.0\,\Omega\) and \(\ell = 1.0\,\text{m}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At \(t = 3.5\,\text{s}\) what is \(V_{ind}\)? [M]</li>
+<li><span class="item-label">b.</span> At that same time what is the power dissipation through the
+           resistor? [O] <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">c.</span> What is the work done by the field from \(t = 0.0\)&thinsp;s to
+           \(t = 3.5\,\text{s}\)? [N] <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">A.</span> No.</li>
+<li><span class="item-label">B.</span> 25 volts. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">C.</span> See text.</li>
+<li><span class="item-label">D.</span> Again, use Lenz's Law to find that the direction of decreasing
+\(V_{ind}\), the “downhill” direction for the current, the direction the
+current will move, is \(SPT\).</li>
+<li><span class="item-label">E.</span> Nothing, in the case of this circular path.</li>
+<li><span class="item-label">F.</span> 0.015 volts, clockwise.</li>
+<li><span class="item-label">G.</span> \(\frac{\pi r^2 B}{\tau}\).</li>
+<li>Lenz's Law verifies, direction same as \(d\vec{s}\).</li>
+<li>Dimensions: \(\unit{m^{2}\,T\,s^{-1}} = \unit{kg\,m^{2}\,s^{-2}\,C^{-1}} =
+                          \unit{N\,C^{-1}} = \,\text{volt}\)</li>
+<li><span class="item-label">H.</span> See definition of the dimension of tesla, p.&thinsp;359 of AF.</li>
+<li><span class="item-label">I.</span> Symmetry tells you that whatever \(E_n\) (the component of
+\(\vec{E}\) normal to page) is, it is the same at every point on the circle.
+Because the change in \(B\) is entirely perpendicular to the page, \(E_n\) in
+fact is zero.
+(Refer to Lenz's Law in this module's <em>text</em>).</li>
+<li><span class="item-label">J.</span> \(E_t = 0.012\,\text{volt/m} = 0.012\,\text{N/C}\).</li>
+<li><span class="item-label">K.</span> Zero.</li>
+<li><span class="item-label">L.</span> \(\frac{\pi r^2 B}{2 \tau}\).</li>
+<li><span class="item-label">M.</span> \(V_{ind} = -\frac{\ell^2 \omega B_0}{2} \cos(\omega t) = \pi\)&thinsp;V</li>
+<li><span class="item-label">N.</span> \(W = \frac{1}{R}\cdot\left(\frac{\ell^2}{2}\omega B_0\right)^2
+           \left[\frac{t}{2} + \frac{1}{4\omega} \sin(2\omega t)\right] =
+           1.75 \pi^2\)&thinsp;J <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">O.</span> \(P = V_{ind}^2/R  = \frac{\pi^2\unit{V^{2}}}{1.0\,\Omega} =
+                \pi^2\,\text{A}\,\text{V} = \pi^2\,\text{W}\) <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The average value of a sine function over a half cycle is:
+ 
+ \[\overline{\sin x} = \frac{\int_0^\pi \sin x \, dx}{\int_0^\pi dx}
+                    = \frac{\left| -\cos x\right|_0^\pi}{\pi}
+                    = \ldots\]
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The power-voltage-resistance relation is referenced in this module's
+ <em>ID Sheet</em>.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The energy-power-time relation is referenced in this module's
+ <em>ID Sheet</em>.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+The actual exam may have one or more of these skills, or none.</li>
+<li><span class="item-label">2.</span> A circular loop, of radius \(R = 0.20\)&thinsp;meters, in the plane of
+the page is in a region where a magnetic field \(\vec{B}\) is directed into
+the page (see sketch).
+The magnitude of \(\vec{B}\) varies with time according to:
+<p>\[|\vec{B}| = B_0 - A t^2,\]
+<p>where \(B_0 = 2.0\)&thinsp;T (teslas) and \(A = 0.30\)&thinsp;T/s<sup>2</sup> are constants.
+<p><figure class="fig-centered"><img src="figures/m142gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the magnitude and direction of the induced potential
+difference, \(V_{ind}\), around this loop at the instant \(t = 0.20\)&thinsp;sec.</li>
+<li>Is \(V_{ind}\) constant with time?</li>
+<li>Check that the dimensions of \(V_{ind}\) follow correctly
+from the dimensions of what goes into your calculations.</li>
+<li><span class="item-label">b.</span> Find the magnitude and direction of the tangential component
+of the electric field vector at any point on this loop.</li>
+<li><span class="item-label">c.</span> What can the Faraday-Henry Law tell you about the normal
+(radial) component of \(\vec{E}\) at any point on the loop?</li>
+<li>What does symmetry tell you? 
+
+<p></li>
+<li><span class="item-label">3.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m142gr08.svg" alt="" class="physnet-fig"></figure>
+
+<p>This same loop is placed in a region of uniform field \(\vec{B}\),
+\(|\vec{B}| = 2.0\)&thinsp;T, directed into the page.
+The loop is rotated about the axis \(AA'\) so that point \(P\) comes out of the
+page, point \(Q\) goes into the page.
+In 0.02&thinsp;sec the loop is flipped over so that \(P\) is where \(Q\) was and
+vice versa.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the average \(V_{ind}\) induced around this loop?</li>
+<li><span class="item-label">b.</span> What is the direction of this \(V_{ind}\)? (Would it drive the
+induced current in the direction \(SPT\) or \(TPS\)? 
+</li>
+<li><span class="item-label">4.</span> As shown in the figure, lines of magnetic field are directed
+perpendicular to a circular loop of wire of radius \(r\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If the magnitude of the field is given by \(B = B_0 e^{-t/\tau}\),
+where \(B_0\) and \(\tau\) are constants, what is the \(V_{ind}\) induced in the
+loop as a function of time? 
+(In the figure, \(d\vec{s}\) denotes the positive direction around the loop.)
+<p><figure class="fig-centered"><img src="figures/m142gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> Answer the same question if the loop is titled through
+60.0°, or 90.0°. 
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this modules's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;1.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;2.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;3.</li>
+</ol>
+
+<p></section>
+

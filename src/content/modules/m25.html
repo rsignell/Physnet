@@ -1,0 +1,625 @@
+<header class="module-header">
+  <h1 class="module-title">Simple Harmonic Motion <span class="module-author">(Kirby Morgan, Charlotte, MI)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: angular frequency, frequency, uniform circular
+    motion <a href="../m9/" class="module-ref">MISN-0-9</a>, kinetic energy (0-20), potential energy, total energy (0-21).</li><li><strong>2.</strong> Write down the coordinates, as a function of time, of a particle in
+    uniform circular motion <a href="../m9/" class="module-ref">MISN-0-9</a>.</li><li><strong>3.</strong> Relate the one-dimensional position of a particle, as a function of
+    time, to the particle's velocity and acceleration, and the force acting on it
+    <a href="../m15/" class="module-ref">MISN-0-15</a>.</li><li><strong>4.</strong> Given the total energy of a particle, plus a graph of its potential
+    energy versus its one-dimensional coordinate position, describe its motion
+    and the force on it as time progresses <a href="../m22/" class="module-ref">MISN-0-22</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: oscillatory motion, simple harmonic oscillator, simple
+    harmonic motion, displacement, initial time, amplitude, phase, scaled phase
+    space, frequency, period.</li><li><strong>K2.</strong> Write down a general equation for SHM displacement as a function of
+    time, assuming zero initial phase and maximum initial displacement, and
+    identify the amplitude, angular frequency, phase, and displacement.
+    Derive the corresponding equations for velocity and acceleration.</li></ul></div>
+
+    
+    
+    
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> For a specific SHO, use given items in this list to produce
+    others, as requested: displacement, time, frequency, period, phase, velocity,
+    angular frequency, acceleration, force, kinetic energy, potential energy, total
+    energy, and word and graphical descriptions of the motion in real space and
+    scaled phase space.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Oscillatory Motion and SHM</h2>
+
+<p><h3 id="pcap-1-a">1a. Oscillatory Motion</h3>
+
+One of the most important regular motions encountered in science and
+technology is oscillatory motion.
+Oscillatory (or vibrational) motion is any motion that repeats itself
+periodically, i.e. goes back and forth over the same path, making each complete
+trip or cycle in an equal interval of time.
+Some examples include a simple pendulum swinging back and forth and
+a mass moving up and down when suspended from the end of a spring (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Other examples are a vibrating guitar string, air molecules in a sound wave,
+ionic centers in solids, and many kinds of machines.
+<p><h3 id="pcap-1-b">1b. Simple Harmonic Motion</h3>
+
+The basic kind of oscillatory motion is Simple Harmonic Motion; it is used
+to analyze most other oscillatory motions for purposes of understanding
+and design.
+A motion is said to be Simple Harmonic if the oscillating object's position,
+\(x(t)\), can be represented mathematically by a “harmonic” function of time;
+that is, by a sine or cosine function.
+The word “simple” refers to a need for only one sine or cosine term
+to represent the position of the oscillating object.
+Any object that undergoes simple harmonic motion (abbreviated SHM) is called a
+simple harmonic oscillator (here abbreviated SHO).
+<p><h3 id="pcap-1-c">1c. Uses of SHM</h3>
+
+The mathematical techniques used in the study of simple harmonic motion form
+the basis for understanding many phenomena: the interactions of elementary
+particles, atoms, and molecules; the sounds of various musical
+instruments, radio and television broadcasting; high-fidelity sound
+reproduction, and the nature of light and color.
+They are used to study the vibrations in car engines, aircraft wings,
+and shock absorbers, and to study brain waves.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m25gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A weight on a spring.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Kinematics of SHM</h2>
+
+<p><h3 id="pcap-2-a">2a. The Displacement Equation</h3>
+
+By definition, a particle is said to be in simple harmonic motion if its
+displacement \(x\) from the center point of the oscillations can be expressed
+this way:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[x(t) = A \cos (2 \pi \nu t)\ ,\]
+<p>where \(\nu\) is the frequency of the oscillation and \(t\) is the elapsed time
+since a time when the displacement \(x\) was equal to \(A\).
+<p><span class="tryit">Try it:</span>  Show that \(x(0) = A\), regardless of the value of \(\nu\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><h3 id="pcap-2-b">2b. Example: Mass on Vertical Spring</h3>
+
+We illustrate Eq.&thinsp;1 with the example of an object with mass oscillating
+up and down at the end of a vertical spring, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The displacement \(x\) is then the height of the object, measured from the
+center point of the oscillations.
+This height needs to be at its maximum value at time zero since Eq.&thinsp;1
+produces \(x(0) = A\), which is the maximum value the displacement can have.
+We can assure that this is true by measuring \(t\) on a stopwatch which
+we start at a time when the object is precisely at the top point of its motion.
+Alternatively, we can grab the mass and move it up to \(x = A\), then let
+it go at the exact time we start the stopwatch.
+<p><span class="tryit">Try it:</span>  Show that if we had used a sine function instead of a cosine in Eq.&thinsp;1,
+we would have had to start the stopwatch at a time when the object was passing
+through \(x = 0\) headed upward. <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a>
+<p>
+<p><h3 id="pcap-2-c">2c. Displacement Equation Parameters</h3>
+
+The cosine function varies between \(-1\) and \(+1\) so the value of the
+displacement from center, \(x(t)\), varies between \(-A\) and \(+A\).
+The maximum displacement, \(A\), is called the “amplitude” of the motion.
+Typical units are  meters.
+<p>Typical units for the frequency are  cycles per second, also called
+ Hertz, abbreviated Hz.
+<p>The quantity \(2 \pi \nu t\), the  argument of the cosine, is called
+the motion's “phase.”
+Typical units are  radians and  degrees.
+Although the phase has the units of an angle, it does not
+usually correspond to a space angle in the problem (look at the system in
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> where obviously there is no angle involved).
+<p>The time-derivative of the phase is called the “angular frequency” and is
+denoted by the symbol \(\omega\):
+<p>\[\omega = 2 \pi \nu\,.\]
+<p>This enables us to write <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> in a more succinct form:
+<p>\[x = A \cos (\omega t)\,.\]
+<p>Typical units for \(\omega\) are  radians per second.
+<p><span class="tryit">Try it:</span>  Contrast the units of \(\omega\) with those of \(\nu\). <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a>
+<p><span class="tryit">Try it:</span>  How would you write the displacement equation for a particle in
+simple harmonic motion with an angular frequency of 4\(\pi\)&thinsp;rad/s and an
+amplitude of 5&thinsp;cm; and what is the displacement of the particle at
+\(t\,=\,1.0\)&thinsp;s? <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-2-d">2d. The Oscillator's Period</h3>
+
+The “period” of the oscillation is defined as the amount of time
+it takes for the oscillator to go through one complete oscillation or “cycle.”
+Since the cosine function repeats itself whenever \(\omega\)t is increased by
+2\(\pi\), it repeats itself whenever t is increased by 2\(\pi/\omega\).
+This, then, is the period, \(T\), of a SHO:
+<p>\[T = \frac{2 \pi}{\omega}\ .\]
+<p>The period is the inverse of the frequency; that is,
+<p>\[T = \frac{1}{\nu} = \frac{2 \pi}{\omega}\ .\]
+<p><span class="tryit">Try it:</span>  Find the period and frequency for an angular frequency of 4\(\pi\)<span class="unit">&thinsp;rad/s</span>.
+<a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><h3 id="pcap-2-e">2e. Velocity and Acceleration in SHM</h3>
+
+The velocity and acceleration of an SHO can be easily found
+by differentiating the displacement equation, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+The velocity is
+<p>\[v = \frac{dx}{dt} = - A \omega \sin (\omega t)\]
+<p>and the acceleration is
+<p>\[a = \frac{dv}{dt} = - A \omega^2 \cos (\omega t)\]
+<p>so:
+<p>\[a = -\omega^2 x\ .\]
+<p>Equation (7) shows that an SHO's acceleration is proportional and opposite
+to its displacement.
+We have plotted \(x\), \(v/\omega\), and \(a/\omega^2\) as functions of time in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><span class="tryit">Try it:</span>  Make sure that you, yourself, can construct and interpret <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>!
+<a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m25gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Displacement, velocity and acceleration
+versus time for an SHO.
+The velocity has been scaled by (1/\(\omega\)) and the acceleration by
+(1/\(\omega^2\)).
+The quantity T is the SHO's period.</figcaption></figure></div>
+
+<p>
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m25gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. \(v/\omega\) vs. \(x\) for the SHO in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure>
+
+<p>
+<p><h3 id="pcap-2-f">2f. SHM in a Scaled Phase Space</h3>
+
+In developing an understanding of the time-development of SHM, it is useful
+to look at a plot of the oscillator's displacement versus its velocity.
+At any specific time, displacement and velocity each have a specific value
+and so determine a point on the plot of displacement vs. velocity.
+As time goes on, the SHO's displacement and velocity change so the
+corresponding point on the plot moves accordingly.
+Since the SHO's displacement and velocity are cyclical, the point on the plot
+traverses the same complete closed path once every cycle.
+<p>In order to simplify the SHO's displacement vs. velocity trajectory, we scale
+the velocity-axis by a factor of 1/\(\omega\) (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+Then any SHO's trajectory will be a circle of radius \(A\) (as shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+In this space, the SHO's point is always at the “phase” angle, \(\delta\),
+marked off clockwise from the positive \(x\)-axis (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p>As time increases the point representing the SHO moves around the circle
+of radius \(A\) with constant angular velocity \(-\,\omega\) (the minus sign
+merely means the motion is clockwise).
+Its angular position at any particular time is the phase angle at that time.
+<p><span class="tryit">Try it:</span>  Show that the circle in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> and the clockwise motion around it
+follow from Eqs.&thinsp;(2) and (5). <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<p><span class="tryit">Try it:</span>  Show that (\(- \omega\)) is the angular velocity of the point that
+simultaneously represents the oscillator's position and velocity in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>. <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+<p><span class="tryit">Try it:</span>  For a real SHO, demonstrate \(v/\omega\) vs. \(x\) as \(t\)
+increases, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> (see [D-2] in this module's Demonstration Supplement).
+</section>
+
+<p>
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Dynamics of SHM</h2>
+
+<p><h3 id="pcap-3-a">3a. Force is Proportional and Opposite to Displacement</h3>
+
+Using Newton's second law, \(F\,=\,ma\), and <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, \(a\,=\,-\omega^2\,x\), it
+is easy to find the force necessary for a particle of mass \(m\) to oscillate
+with simple harmonic motion:
+<p>\[F = - m \omega^2 x\,.\]
+<p>Note that the force on an SHO is linearly proportional to its displacement but
+has the opposite sign.
+For a positive displacement the force is negative, pointing back toward the
+origin.
+For a negative displacement, the force is positive, again pointing back
+toward the origin.
+A force which is linear and always points back to the place where F&thinsp;=&thinsp;0
+is called a “linear restoring force.”
+For simplicity we write <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> in the form:
+<p>\[F = - k x\,.\]
+<p>where \(k \equiv m \omega^2\) is called the “force constant” (or “spring constant”
+or “spring stiffness”) for the particular oscillator being observed.
+<p><span class="tryit">Try it:</span>  Write down \(\omega\), \(T\), and \(\nu\) in terms of \(k\) and \(m\) for SHM.
+For a weight-on-spring SHO, show that as its mass is increased its spring must
+be stiffened in order that its amplitude and frequency remain unchanged.
+<a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><span class="tryit">Try it:</span>  Sketch a plot of \(F\) versus \(x\) for an SHO.
+On your plot, identify \(k\). <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a>
+<p><span class="tryit">Try it:</span>  Describe the motion of an SHO's point on a plot of \(F\) vs. \(x\).
+Contrast the motion of the point on this plot with that of the similar point
+in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p><span class="tryit">Try it:</span>  For a real SHO, demonstrate \(F\) vs. \(x\) as \(t\) increases (see [D-3] in
+this module's Demonstration Supplement).
+<p><h3 id="pcap-3-b">3b. Potential and Kinetic Energy for SHM</h3>
+
+Knowing the force acting on an SHO, we can calculate its kinetic and
+potential energy.
+<p>First, to obtain the potential energy we use \(F\,=\,- k x\) and the definition
+of potential energy:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[E_p = - \int F dx = \int k x dx = \frac{1}{2} k x^2\,.\]
+<p>Thus the potential energy has its minimum value, zero, at \(x\)&thinsp;=&thinsp;0.
+<p>The kinetic energy of the SHO is:
+<p><div class="centered">\[\begin{aligned}\setcounter{equation}{11}
+E_k & = & \frac{1}{2} m v^2 = \frac{1}{2} m \omega^2 A^2 \sin^2 (\omega t)
+= \frac{1}{2} m \omega^2 [A^2 -A^2 \cos^2 (\omega t)] \nonumber \\
+  & = & \frac{1}{2} k (A^2 - x^2)\,.\end{aligned}\]
+</div>
+
+<p>The kinetic energy is a maximum at \(x\)&thinsp;=&thinsp;0 and is zero at the extremes of the
+motion (\(x\,=\,\pm \,A\)), as shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m25gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Kinetic, potential, and total energy and
+displacement vs. time for the SHO of <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. Total Energy for SHM</h3>
+
+The total energy of a simple harmonic oscillator is:
+<p>\[E = E_k + E_p = \frac{1}{2} k A^2\,,\]
+<p>which is a constant quantity (independent of time).
+Thus during an oscillation, as the potential energy increases and decreases,
+the kinetic energy decreases and increases so the total energy remains constant.
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m25gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Potential and total energy vs.
+displacement for an SHO.</figcaption></figure>
+
+<p>The potential energy curve, \(E_p\,=\,k\,x^2/2\) (which is a parabola), and the
+total energy curve \(E\,=\,k\,A^2/2\) (which is a horizontal line), are shown
+as functions of displacement in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+The points where the line and the curve intersect (\(x\,=\,\pm \,A\)) are the
+limits of the motion.
+<p><span class="tryit">Try it:</span>  Use <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> to describe the major events in the values of the potential,
+kinetic, and total energies, and the displacement, as time advances
+during a complete SHM cycle. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><span class="tryit">Try it:</span>  Use words alone (no graph) to describe the major events in the values
+of the potential, kinetic, and total energies, and the displacement,
+as time advances during a complete SHM cycle. <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+maximum value of displacement.
+<p>time rate of change of the phase.
+<p>the angular velocity of the SHO's point in
+scaled phase space.
+Its value is the negative of the SHO's angular frequency \(\omega\).
+<p>position relative to the center-point of the SHM.
+<p>number of complete cycles per unit time.
+<p>a sine or cosine function.
+<p>motion that exactly repeats itself periodically.
+<p>the time for one complete cycle.
+<p>the argument of the harmonic function describing the SHM.
+Here we have chosen the initial time to be when the displacement is at
+a maximum, so the harmonic function is a cosine and its phase angle
+\(\delta\) is \(\omega t\).
+<p>a space in which the two axes are the SHO's
+displacement \(x\) and \(v/\omega\).
+The current state of an SHO is a point in this space.
+The point continually traverses a circle of radius \(A\) with constant angular
+velocity \(- \omega\).
+<p>any motion whose time-dependence
+can be described by a single harmonic function.
+<p>any object that is undergoing
+simple harmonic motion.
+</section>
+
+<p><section id="equations" class="module-section section-text"><h2 id="equations">Equations</h2>
+
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(x = A \cos (\omega t)   \)</td><td><span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> \(F = - m \omega^2 x = - k x\)</td></tr><tr><td>\(T = \frac{2 \pi}{\omega}\)</td><td><span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> \(E_p = \frac{1}{2} k x^2\)</td></tr><tr><td>\(\nu = \frac{1}{T}\)</td><td><span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> \(E_k = \frac{1}{2} k (A^2 - x^2)\)</td></tr><tr><td>\(\delta = \omega\,t\)</td></tr></tbody></table>
+</div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For definitions of the symbols used in this equation, see
+“Uniform Circular Motion,” MISN-0-9.
+A more general form of Eq.&thinsp;1, useful when you do not want to restrict
+the initial time, is presented in “SHM: Boundary Conditions,” MISN-0-26. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Potential Energy, Conservative Forces, The Law of Conservation of
+Energy” (MISN-0-21). <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note:  Make sure your calculator is set for the correct angular units among
+the choices available: radians, degrees, etc.
+Answers are in coded order, given by bracketed letters.
+<p>Note: Problem&nbsp;6 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Fill in the chart below for a particle in SHM, writing “min,” “max,”
+or “0” in each space. 
+<p>
+ 0.2in
+<table class="physnet-table"><tbody><tr><td>Phase&thinsp;\(\rightarrow\)</td><td>5\(\pi\)/2</td><td>3\(\pi\)</td><td>7\(\pi\)/2</td><td>4\(\pi\)</td><td>9\(\pi\)/2</td></tr><tr><td>x</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>v</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>a</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>F</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>E\(_k\)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>E\(_p\)</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+</li>
+<li><span class="item-label">2.</span> An ant sits on the end of the minute hand (15.0<span class="unit">&thinsp;cm</span> long) of a clock.
+Write the equation for its displacement along an axis that goes through 3:00,
+9:00, and the center of the dial. </li>
+<li><span class="item-label">3.</span> The displacement of a 1.0<span class="unit">&thinsp;kg</span> mass attached to the end of a vibrating
+spring is given by the equation:
+<p>\[x = 0.040\,\text{m}\,\cos(\pi\,\text{s}^{-1}\,t)\,.\]
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the amplitude, phase, angular frequency, frequency, and
+period of this motion. </li>
+<li><span class="item-label">b.</span> Determine the force, potential energy, kinetic energy and total
+energy when \(t = 0.10\,\text{s}\). </li>
+<li><span class="item-label">c.</span> Sketch the kinetic energy and potential energy, along with the
+displacement, as functions of time. 
+</li>
+<li><span class="item-label">4.</span> The maximum force acting on a certain 2.0<span class="unit">&thinsp;kg</span> mass, which oscillates
+with SHM, is found to be 10.0<span class="unit">&thinsp;N</span>.
+At that time its displacement from equilibrium is 0.10<span class="unit">&thinsp;m</span>.
+Determine the angular frequency, period and frequency of its motion. </li>
+<li><span class="item-label">5.</span> A particle is moving with simple harmonic motion.
+Its displacement at \(t = 0.167\,\text{sec}\) is 0.0050<span class="unit">&thinsp;m</span> and its period is
+ 1.00<span class="unit">&thinsp;sec</span>.
+Determine the displacement, velocity and acceleration as functions of time.
+Evaluate \(x\), \(v\), \(a\), and \(\delta\) at \(t = 0.50\,\text{s}\). </li>
+<li><span class="item-label">6.</span> An object of mass 1.0<span class="unit">&thinsp;kg</span> is moving with SHM, with an amplitude of
+0.010<span class="unit">&thinsp;m</span>, an angular frequency of \(4\pi\,\text{rad/s}\), and a maximum displacement
+at time zero.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the kinematical expression for the displacement as a
+function of time.</li>
+<li><span class="item-label">b.</span> Find the displacement, velocity, potential energy and kinetic energy
+at a time 3/8 of a period past a time when \(x = 0.010\,\text{m}\).</li>
+<li><span class="item-label">c.</span> Sketch the displacement and potential energy versus time on a graph.</li>
+<li><span class="item-label">d.</span> Use the above sketch to describe how the velocity changes as
+position changes through a cycle.
+</li>
+<li></li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(x = 0.040\,\text{m} \cos(\pi\unit{s^{-1}}\,t)\)</li>
+<li>\(A = 0.040\,\text{m}\); \(\omega\,t = \pi\,t\); \(\omega = \pi\,\text{rad/s}\)</li>
+<li>\(\nu = \omega / (2 \pi) = (1/2) \,\text{cycle/s}\); \(T = 1/\nu = 2.0\,\text{s}\).</li>
+<li><span class="item-label">b.</span> \(F = - m\,\omega^2\,x\); \(m = 1.0\,\text{kg}\); \(t = 0.10\,\text{s}\)</li>
+<li>\(F = - (1.0\,\text{kg})(\pi\unit{s^{-1}})^2\,[0.040\,\text{m} \cos(0.10\,\pi)] = -0.38\,\text{N}\)</li>
+<li>\(E_p = (1/2) k x^2 = (1/2) m \omega^2 x^2\)</li>
+<li>\(\phantom{E_p} = (1/2) \,(1.0\,\text{kg})(\pi\unit{s^{-1}})^2
+                      (0.038\,\text{m})^2 = 0.0071\,\text{J}\)</li>
+<li>\(E_k = (1/2) (m\,\omega^2)(A^2 - x^2)\)</li>
+<li>\(\phantom{E_k} = (1/2) [(1.0\,\text{kg})(\pi\unit{s^{-1}})^2]
+                      [(0.040\,\text{m})^2 - (0.038\,\text{m})^2] =
+                      0.0008\,\text{J}\)</li>
+<li>\(E = (1/2) k A^2 = (1/2) m \omega^2 A^2\)</li>
+<li>\(\phantom{E} = (1/2) (1.0\,\text{kg})(\pi/\,\text{s})^2
+                    (0.040\,\text{m})^2 = 0.0079\,\text{J}\)</li>
+<li><span class="item-label">c.</span> <figure class="fig-centered"><img src="figures/m25gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li> <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+</li>
+<li><span class="item-label">2.</span> \(\omega = 2 \pi\)&thinsp;rad/s</li>
+<li>\(x(t) = A \cos(\omega t)\)</li>
+<li>\(x(0.167\,\text{s}) = 0.0050\,\text{m} = A \cos(2 \pi\,\text{rad/sec} \times 0.167\,\text{s})\);
+           solve for the amplitude.</li>
+<li>\(A = 0.0050\,\text{m} / (0.50) = 0.0100\,\text{m}\)</li>
+<li>At all times:
+<ol>
+
+</ol>
+</li>
+<li>\(x = 0.0100\,\text{m} \cos(2\pi\unit{s^{-1}}\,t)\)</li>
+<li>\(v = dx/dt =
+           -\,0.0200\,\pi\,\text{m/s}\,\sin(2\pi\unit{s^{-1}}\,t)\)</li>
+<li>\(a = d^2x/dt^2 =
+           -\,0.0400\,\pi^2\unit{m/s^{2}}\,\cos(2\pi\unit{s^{-1}}\,t)
+           = - (2\pi/\,\text{sec})^2\,x\)
+</li>
+<li>At t = 0.50&thinsp;s:
+<ol>
+
+</ol>
+</li>
+<li>\(x = 0.0100\,\text{m} \cos(\pi) = - 0.0100\,\text{m}\)</li>
+<li>\(v = 0.000\,\text{m/s}\)</li>
+<li>\(a = 0.395\unit{m/s^{2}}\)</li>
+<li>\(\delta = \omega\,t = 1.8 \times 10^2\,\text{degrees}\)
+</li>
+<li><span class="item-label">3.</span> \(x = A \cos\,\omega t\)</li>
+<li>\(\omega = 2 \pi/T = 2 \pi/60\,\text{min} = 0.10/\,\text{min}\) <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a></li>
+<li>\(x = 15.0\,\text{cm} \cos(0.10\unit{min^{-1}}\,t)\)</li>
+<li><span class="item-label">4.</span> \(F = -\,k\,x\)</li>
+<li>\(k = - F / x = - (-10.0\,\text{N}) / 0.10\,\text{m} = 1.0 \times 10^2\,\text{N/m}\)</li>
+<li>\(\omega = (k/m)^{1/2} = (100\unit{N\,m^{-1}}/2.0\,\text{kg})^{1/2} = 7.1\,\text{rad/s}\)</li>
+<li>\(T = 2 \pi / \omega = 2 \pi /(7.1/\,\text{s}) = 0.88\,\text{s}\)</li>
+<li>\(\nu = 1/T = 1 / 0.88\,\text{s} = 1.1\,\text{cycles/s} = 1.1\,\text{Hz}\).</li>
+<li><span class="item-label">5.</span> <table class="physnet-table"><tbody><tr><td>[t]| c | c | c | c | c | c |
+Phase&thinsp;\(\rightarrow\)</td><td>5\(\pi\)/2</td><td>3\(\pi\)</td><td>7\(\pi\)/2</td><td>4\(\pi\)</td><td>9\(\pi\)/2</td></tr><tr><td>\(x\)</td><td>0</td><td>min</td><td>0</td><td>max</td><td>0</td></tr><tr><td>\(v\)</td><td>min</td><td>0</td><td>max</td><td>0</td><td>min</td></tr><tr><td>\(a\)</td><td>0</td><td>max</td><td>0</td><td>min</td><td>0</td></tr><tr><td>\(F\)</td><td>0</td><td>max</td><td>0</td><td>min</td><td>0</td></tr><tr><td>\(E_k\)</td><td>max</td><td>0=min</td><td>max</td><td>0=min</td><td>max</td></tr><tr><td>\(E_p\)</td><td>0=min</td><td>max</td><td>0=min</td><td>max</td><td>0=min</td></tr></tbody></table>
+</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(x = 0.010\,\text{m} \cos (4 \pi \,\text{rad/s} t)\)</li>
+<li><span class="item-label">b.</span> \(T = (1/2)\,\text{s}\).</li>
+<li>at \(t = (3/16)\,\text{s}\):
+<ol>
+
+</ol>
+</li>
+<li>\(x = -0.0071\,\text{m}\) (see graph below)</li>
+<li>\(v = -0.089\,\text{m/s}\) (see slope of graph below)</li>
+<li>\(E_p = 0.0040\,\text{J}\) (see graph below)</li>
+<li>\(E_k = 0.0040\,\text{J}\)
+</li>
+<li><span class="item-label">c.</span> 
+<p><figure class="fig-centered"><img src="figures/m25gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">d.</span> See text.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+\(x = A \cos(\omega\,t)\) and \(\cos(0) = 1\)
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+\(\omega = 4 \pi\,\text{rad/s}\); \(A = 5.0\,\text{cm}\)
+<p>\(x = A \cos(\omega\,t)\)
+<p><span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> &thinsp;= 5.0<span class="unit">&thinsp;cm</span><span class="tex-unknown" title="unknown macro">\</span> \(\cos (4\pi\unit{rad\,s^{-1}}\)&thinsp;t)
+<p>at \(t = 1.0\,\text{s}\) : \(x = 5.0\,\text{cm} \cos (4 \pi) = 5.0\,\text{cm}\)
+<p>Note: \(\cos n 2 \pi\) = 1 when \(n\) is an integer.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+\(\omega = 4\pi\,\text{rad/s}\)
+<p>\(T = 2\pi/\omega = 2\pi\,\text{rad}/(4\pi\unit{rad\,s^{-1}}) = 0.5\,\text{s}\)
+<p>\(\nu = 1/T = 1/0.50\,\text{s} = 2.0\,\text{cycles/s} = 2.0\,\text{Hz}\)
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+“As the oscillator passes the origin, the energy is all kinetic; the
+potential energy is zero and the kinetic energy is at its maximum.
+As the displacement increases positively, the potential energy increases
+so the kinetic energy decreases in order to keep the total energy constant.
+When the kinetic energy reaches zero, the displacement is at its maximum value
+and the energy is all potential.
+As the displacement starts decreasing, \(\ldots\) ”
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+“As time advances, the point moves along the line, from upper left to
+lower right and back again.
+As it passes the origin, where the displacement and acceleration are
+zero, the point is moving at maximum speed.
+As it approaches an end, where both the position and acceleration are at
+their maximally positive or negative values (extrema), the point slows down,
+stops, and reverses its direction.”
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">
+Note that the cosine function is at its maximum at \(t = 0\) and
+thereafter decreases, crossing the axis one-fourth of a period later and
+reaching its maximally negative value one-fourth of a period after that.
+Use these characteristics to sketch in the curve in those regions.
+Continue drawing the curve forward in time, making sure the curve crosses
+the axis each half period, as a cosine curve always does.
+For the other curves, use their equations and the same procedure.
+<p>If you don't know what sine and cosine curves look like, see your math
+textbooks from past math courses in college or high school.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+This is just simple algebra!
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">
+The point is claimed to follow a circle with radius \(r = A\) and a
+time-changing angle: \(\theta (t) = - (\omega t)\).
+This means that Eqs.&thinsp;(2) and (5) can be written this way in polar coordinates:
+<p>\(x(t) = r \cos \theta (t);\ \ \ \ y(t) = r \sin \theta (t)\) .
+<p>These are the equations for a point on a circle, so the claim is
+proved.
+Now note that, as time increases, \(\theta\) increases negatively.
+Since positive polar angles are measured counterclockwise from the x-axis,
+and negative angles clockwise, the point moves clockwise as time increases.
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">
+First, see [S-8].
+The angular velocity of the plotted point is:
+<p>\(d\theta/dt = d/dt (-\omega t) = -\omega\) .
+<p>This shows that the magnitude of the angular velocity of the plotted point is
+just the \(\omega\) of the oscillation, but the minus sign means that the
+direction with increasing time is clockwise.
+That is, the plotted angle increases negatively with time.
+</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">
+The force constant, \(k\), is the negative of the slope of this line:
+<figure class="fig-centered"><img src="figures/m25gr07.svg" alt="" class="physnet-fig"></figure>
+
+</div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">
+See [S-4].
+</div></div>
+
+<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">
+If you are having trouble with this problem, do Problem&nbsp;4 first
+and then redo the “try-it” in Sect.&thinsp;2d.
+</div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">
+The period of the minute hand is 60<span class="unit">&thinsp;minutes</span> because it takes one hour
+for it to go through a complete cycle (once around the clock face).
+</div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">
+As its argument increases from zero, a sine function increases positively
+from zero.
+Thus as \(t\) increases from zero, \(x\) increases from zero.
+Increasing values of \(x\) correspond to the direction  upward.
+</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">
+The units of \(\nu\) are oscillations per unit time while the units of
+\(\omega\) are angular interval per unit time.
+As commonly used \(\nu\) is in cycles/sec while \(\omega\) is in radians/sec.
+This is because the “2 \(\pi\)” you use to convert one to the other is
+really “2 \(\pi\) radians (the angular interval around a complete circle)
+per complete oscillation.”
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills (Knowledge) on this unit's  ID Sheet.</li>
+<li><span class="item-label">2.</span> An object of mass 1.0<span class="unit">&thinsp;kg</span> is moving with SHM, with an amplitude of
+0.010&thinsp;m, an angular frequency of \(4\pi\,\text{rad/s}\), and a maximum displacement
+at time zero.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the kinematical expression for the displacement as a
+function of time.</li>
+<li><span class="item-label">b.</span> Find the displacement, velocity, potential energy and kinetic energy
+at a time 3/8 of a period past a time when \(x = 0.010\,\text{m}\).</li>
+<li><span class="item-label">c.</span> Sketch the displacement and potential energy versus time on a graph.</li>
+<li><span class="item-label">d.</span> Use the above sketch to describe how the velocity changes as
+position changes through a cycle.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See text.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;6.</li>
+</ol>
+
+<p></section>
+

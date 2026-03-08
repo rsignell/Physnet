@@ -1,0 +1,150 @@
+<header class="module-header">
+  <h1 class="module-title">Maxwell's Equations <span class="module-author">(R.Young)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: frequency, wavelength, phase <a href="../m201/" class="module-ref">MISN-0-201</a>;
+    relaxation time, constitutive.</li><li><strong>2.</strong> Determine the electrostatic energy density in a region of space given
+    the electric fields present <a href="../m508/" class="module-ref">MISN-0-508</a>.</li><li><strong>3.</strong> Determine the magnetostatic energy density in a region
+    of space given the magnetic fields present <a href="../m512/" class="module-ref">MISN-0-512</a>.</li><li><strong>4.</strong> Use complex notation to represent harmonic functions
+    of position and time.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> State Maxwell's equations in differential form and the three
+    constitutive equations.</li><li><strong>K2.</strong> State the equation of conservation of electromagnetic energy,
+    explaining the meaning of each term.</li><li><strong>K3.</strong> Derive the homogeneous wave equation for an electromagnetic wave
+    propagating in a linear, homogeneous, isotropic medium.</li><li><strong>K4.</strong> Derive the boundary conditions on the field vectors at the
+    interface of two media of given conductivities.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a non-static distribution of free charge, find the
+    displacement current and use Ampere's law to determine the
+    resulting magnetic field.</li><li><strong>S2.</strong> Given the electric field, the magnetic field, or the Poynting
+    vector, use Maxwell's equations to determine the other two vector
+    quantities.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> J.&thinsp;Reitz, F.&thinsp;Milford and R.&thinsp;Christy, <em>Foundations
+    of Electromagnetic Theory</em>, 4th Edition, Addison-Wesley (1993).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Before beginning this Unit, the following is a collection of
+equations from previous Units.
+<p><ol>
+<li><span class="item-label">(a)</span> Gauss' Law;
+<p>\[\Grad \cdot \vec{D} (\vec{r}, t) = \rho (\vec{r}, t)\]
+<p>where
+<p>\[\vec{D} (\vec{r}, t) = \epsilon \vec{E} (\vec{r}, t)\]</li>
+<li><span class="item-label">(b)</span> Ampere's Law:
+<p>\[\Grad \times \vec{H} (\vec{r}, t) = \vec{J} (\vec{r}, t)\]
+<p>where
+<p>\[\vec{B} (\vec{r}, t) = \mu \vec{H} (\vec{r}, t)\]</li>
+<li><span class="item-label">(c)</span> Faraday's Law:
+<p>\[\Grad \times \vec{E} (\vec{r}, t) = - \frac{\partial \vec{B}
+(\vec{r}, t)}{\partial t}\]</li>
+<li><span class="item-label">(d)</span> Divergenceless Magnetic Induction Vector:
+<p>\[\Grad \cdot \vec{B} (\vec{r}, t) = 0\]</li>
+<li><span class="item-label">(e)</span> Conservation of Charge or Equation of Continuity:
+<p>\[\frac{\partial \rho (\vec{r}, t)}{\partial t} + \Grad \cdot \vec{J}
+(\vec{r}, t) = 0\]</li>
+<li><span class="item-label">(f)</span> Force on a charge \(q\) moving with velocity \(\vec{v}\) in 
+an electric and magnetic field:
+<p>\[\vec{F} (\vec{r}, t) = q (\vec{E} (\vec{r}, t) + \vec{v} \times
+\vec{B} (\vec{r}, t))\]</li>
+</ol>
+
+<p><a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> is sometimes called the Lorentz force equation. Also, an explicit
+time dependence is allowed in each of the physical quantities.
+<p>As indicated in the last Unit, some of these equations are inconsistent.
+That is, eqs.&thinsp;(1), (3), and (7) imply that
+<p>\[\frac{\partial \rho}{\partial t} = 0, \text{  and  }  \frac{\partial \vec{D}}{\partial t} = 0\]
+<p>These results are obviously too restrictive since time-varying charge
+densities and displacement vectors are real possibilities. One way out
+of this situation is if one of the equations is incomplete. A candidate
+would be Ampere's Law. Let us assume that Ampere's Law reads
+<p>\[\Grad \times \vec{H} = \vec{J} + \vec{\alpha}\]
+<p>Then,
+<p>\[\Grad \cdot (\Grad \times \vec{H}) = \Grad \cdot \vec{J} +
+\Grad \cdot \vec{\alpha}\]
+<p>so
+<p>\[\Grad \cdot \vec{J} = - \Grad \cdot \vec{\alpha}\]
+<p>But, the equation of continuity implies that
+<p>\[\frac{\partial \rho}{\partial t} = \Grad \cdot \vec{\alpha}\]
+<p>and Gauss' Law finally yields
+<p>\[\Grad \cdot \left( \frac{\partial \vec{D}}{\partial t} \right)
+= \Grad \cdot \vec{\alpha}\]
+<p>Thus, if we choose
+<p>\[\frac{\partial \vec{D}}{\partial t} = \vec{\alpha}\]
+<p>consistency among the three equations in question without the
+restrictions of eq.&thinsp;(9) can be obtained. Thus, Ampere's Law in
+complete form is
+<p>\[\Grad \times \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t}\]
+<p>The term \(\partial \vec{D} / \partial t\) has the dimension of a current 
+density so that it is
+sometimes called a displacement current density. The displacement 
+current has real experimental implications which have been shown to be valid.
+<p>The following set of equations is usually referred to as Maxwell's
+equations.
+<p>\[\Grad \cdot \vec{D} = \rho, \;\; \Grad \cdot \vec{B} = 0\]
+<p>\[\Grad \times \vec{H} - \frac{\partial \vec{D}}{\partial t} = \vec{J},
+\;\;
+\Grad \times \vec{E} + \frac{\partial \vec{B}}{\partial t} = 0\]
+<p>Sometimes the term Maxwell's equations also includes the following set,
+<p>\[\vec{D} = \epsilon \vec{E}, \;\; \vec{B} = \mu \vec{H}\]
+<p>\[\frac{\partial \rho}{\partial t} + \Grad \cdot \vec{J} = 0, \;\; 
+\vec{F} = q (\vec{E} + \vec{v} \times \vec{B})\]
+<p>These eight equations give a complete description of dynamic as well as
+static electromagnetic phenomena. I will refer to these eight equations
+(15) and (16) as Maxwell's equations.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read Ch.&thinsp;16, Sec.&thinsp;16 - 1 to 16 - 6.</li>
+<li><span class="item-label">2.</span> Write down and memorize the eight Maxwell's equations given in 
+eqs.&thinsp;(15) and (16) of the Introduction. Be able to identify the equations 
+by the names indicated in Output Skill K2.</li>
+<li><span class="item-label">3.</span> Write down and memorize the derivations called for in
+Output Skill K3.</li>
+<li><span class="item-label">4.</span> Write down and memorize the explanations of the terms in eq.&thinsp;(16-20)
+The explanations are given in the text.</li>
+<li><span class="item-label">5.</span> Solve these problems:
+<p><table class="physnet-table"><tbody><tr><td>[t]|l | l| 
+ Problem</td><td> Type</td></tr><tr><td>16 - 1</td><td>Displacement current</td></tr><tr><td>16 - 10, 16 - 12</td><td>Solutions to Maxwell's equations under</td></tr><tr><td></td><td>various conditions</td></tr><tr><td>16 - 4</td><td>Poynting vector</td></tr></tbody></table>
+</li>
+</ol>
+
+<p>Note: When the electromagnetic fields are complex, the energy density
+and Poynting vector \(\vec{S}\) should be replaced by,
+<p>\[\omega = \frac{1}{2} (\vec{D}^* \cdot \vec{E} + \vec{B} \cdot \vec{H}^*)\]
+<p>and,
+<p>\[\vec{S} = \vec{E} \times \vec{H}^*\]
+<p>The observable electromagnetic fields, energy density, and Poynting
+vector are then obtained by taking the real part (or imaginary part)
+of the appropriate quantity. Thus,
+<p>\[(\vec{S})_{\text{observed}} = Re(\vec{S}) = Re(\vec{E} \times \vec{H}^*)\]
+<p>The asterisk denotes complex configuration.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

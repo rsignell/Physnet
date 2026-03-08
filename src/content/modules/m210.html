@@ -1,0 +1,623 @@
+<header class="module-header">
+  <h1 class="module-title">Electromagnetic Waves from Maxwell's Equations <span class="module-author">(Peter Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: charge density <a href="../m147/" class="module-ref">MISN-0-147</a>, current density
+    <a href="../m118/" class="module-ref">MISN-0-118</a>, displacement <a href="../m25/" class="module-ref">MISN-0-25</a>, sound waves, wave frequency,
+    wavelength, waves on strings, wave speed <a href="../m202/" class="module-ref">MISN-0-202</a>, wave equation
+    <a href="../m201/" class="module-ref">MISN-0-201</a>.</li><li><strong>2.</strong> Take derivatives of transcendental functions <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>3.</strong> Take scalar and vector products of vectors using Cartesian unit
+    vectors <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: propagation (of a wave), polarization (direction
+    of), plane-polarized (wave), monochromatic (wave).</li><li><strong>K2.</strong> Given Maxwell's Equations, the “curl-curl” vector identity,
+    and the definitions of the gradient, divergence, and curl operators,
+    derive the wave equations for electric and magnetic field vectors at
+    chargeless currentless space-points.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given the definitions of the gradient, divergence, and curl
+    operators, verify that a given electromagnetic wave, consisting of coupled
+    electric and magnetic waves, satisfies Maxwell's Equations.</li><li><strong>R2.</strong> Given the direction of polarization, direction of propagation,
+    frequency and amplitude of a monochromatic plane-polarized electromagnetic
+    wave, write down the electric and magnetic fields in vector form.
+    Sketch the situation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Energy and Momentum in Electromagnetic Waves,” (MISN-0-211).</li><li><strong>2.</strong> “Brewster's Law and Polarization,” (MISN-0-225).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Background</h3>
+
+The transport of energy through mechanical systems via the collective motion
+of the particles that make up the system is a familiar phenomenon,
+spectacularly demonstrated, for example, when the voice of a soprano
+shatters a glass across the room from her.
+This energy is carried by the “displacement” waves that can be made to
+propagate through the system (the “displacement” referring to the
+displacement from equilibrium of the particles of the system or of the
+pressure in the gas).
+<p><h3 id="pcap-1-b">1b. Waves in Space</h3>
+
+It is also possible for electric and magnetic fields to propagate
+
+as waves in empty space, the electric and magnetic field vectors playing the
+same role in electromagnetic waves as the transverse displacement of the
+particles of a string do in waves along a stretched string, or the pressure
+displacement associated with the propagation of sound waves in air.
+The important difference is that there is no medium through which this
+electromagnetic wave propagates, although perhaps one could say the
+“medium” is the vacuum!
+Electric and magnetic fields may exist in space without a material medium
+being present, and if they vary in space and time in the appropriate way,
+the spatial variation will propagate as a wave, transporting energy.
+This module deals with the propagation of energy through a vacuum via
+electromagnetic disturbances whose space and time variation satisfy the
+conditions for wave propagation.
+<p><h3 id="pcap-1-c">1c. Vector Derivatives</h3>
+
+To deal with electromagnetic waves in space it is far easier to use
+Maxwell's equations in <em>derivative</em> form than in <em>integral</em> form.
+In electricity and magnetism we are dealing with scalar fields like the
+charge density \(\rho\) and vector fields like \(\vec{E}\), and we will find
+that we must deal with three kinds of derivative operators: the “gradient”
+operator that operates on a scalar field and produces a vector one,
+the “divergence” operator that operates on a vector field and produces a
+scalar one, and the “curl” operator that operates on a vector field and
+produces another vector one.
+<p><h3 id="pcap-1-d">1d. Partial Derivatives</h3>
+
+When taking derivatives of field quantities we generally use “partial
+derivatives,” denoted \(\partial\), to remind us that the spatial
+coordinates are not functions of time.
+That is, whereas a particle has a single value of, say, \(x\), at any
+particular time, a field has values at a continuum of values of \(x\).
+Otherwise, partial derivatives are like ordinary derivatives:
+<p>\[\partiald{x} \left(x^3 y^4 z^5\right) = 3 x^2 y^4 z^5\,,\]
+<p>\[\partiald{x}(\sin{3x}\cos{y}) = 3 \cos{3x}\cos{y}\,.\]
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Vector Derivatives</h2>
+
+<p><h3 id="pcap-2-a">2a. The Gradient Operator</h3>
+
+The gradient operator operates on a scalar function and produces a vector
+function that is the steepest “uphill” slope at any point where the
+vector function is evaluated.
+That is, the gradient of a function, evaluated at some space-point, points
+in the direction that is most steeply “up hill” in that function at that
+point.
+The magnitude of the gradient is the value of the slope in the “steepest
+ascent” direction at that space-point.
+As an example, suppose the gradient of a field scalar field \(f\) is the
+vector field \(\vec{g}\).
+In Cartesian coordinates this is:
+<p>\[\vec{g} = \Grad f \equiv
+                        \hat{x} \frac{\partial f}{\partial x} +
+                        \hat{y} \frac{\partial f}{\partial y} +
+                        \hat{z} \frac{\partial f}{\partial z} \,.\]
+<p><span class="tryit">Try it:</span>  Show that \(\Grad (x^3 y^4) =
+                  (3 x^2 y^4) \hat{x} + (4 x^3 y^3) \hat{y}\).
+<p><h3 id="pcap-2-b">2b. The Divergence Operator</h3>
+
+The “divergence” operator operates on a vector function, say
+\(\vec{g}(x,y,z)\), to give a scalar function \(f(x,y,z)\):
+<p>\[f = \Grad \cdot \vec{g} \equiv
+                 \frac{\partial g_x}{\partial x} +
+                 \frac{\partial g_y}{\partial y} +
+                 \frac{\partial g_z}{\partial z}\,.\]
+<p>The divergence of a vector function, evaluated at some space-point, gives
+the extent to which the function has a source or sink at that point.
+For example, the divergence of an electric field gives the charge density
+at that point (positive charges are sources for the field, negative charges
+are sinks).
+<p><span class="tryit">Try it:</span>  Show that: \(\Grad \cdot \left(x^3 y^4 z^5\right) \hat{z} =
+5 x^3 y^4 z^4\).
+<p><h3 id="pcap-2-c">2c. The Curl Operator</h3>
+
+The “curl” operator operates on a vector function, say
+\(\vec{g}(x,y,z)\), to give another vector function:
+<p>\[\Grad \times \vec{g} \equiv 
+ \left(\frac{\partial g_y}{\partial x}-
+                     \frac{\partial g_x}{\partial y}\right)\hat{z} +
+ \left(\frac{\partial g_z}{\partial y}-
+                     \frac{\partial g_y}{\partial z}\right)\hat{x} +
+ \left(\frac{\partial g_x}{\partial z}-
+                     \frac{\partial g_z}{\partial x}\right)\hat{y}\,.\]
+<p>The curl of a function, evaluated at some space-point, gives the greatest
+“circulation” at that point, where by “circulation” one means the line
+integral of the function around a loop of infinitesimal radius.
+The direction of the curl is normal to the plane of the loop with the
+greatest line integral.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><span class="tryit">Try it:</span>  Show that: \(\Grad \times \left(x^3 y^4 z^5\right) \hat{z} =
+\left(4 x^3 y^3 z^5\right) \hat{x} - \left(3 x^2 y^4 z^5\right) \hat{y}\).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Maxwell's Equations</h2>
+
+<p>Here are the famous Maxwell's Equations in differential form:
+<p>\[\Grad \cdot \vec{E} = 4 \pi k_e \rho\,,\]
+<p>\[\Grad \cdot \vec{B} = 0\,,\]
+<p>\[\Grad \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}\,,\]
+<p>\[\Grad \times \vec{B} = 4 \pi k_m j +
+                       c^{-2}\frac{\partial \vec{E}}{\partial t}\,.\]
+<p>Gauss's law is the integral form of <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>.
+Ampere's law is the integral form of <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> for the case
+where the electric field does not vary with time.
+The Ampere-Laplace-Biot-Savart law is derived from a combination of
+<a href="#eqn-5" class="eqn-ref">Eqs.&nbsp;(5)</a> and <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, also for the case where the electric
+field does not vary with time.
+The Faraday-Henry law of magnetic induction is the integral form of
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Electromagnetic Waves</h2>
+
+<p><h3 id="pcap-4-a">4a. No Charge, No Current; Waves</h3>
+
+For the case where there is no charge or current at a point in space,
+it is easy to show that waves can exist there.
+We set \(\rho = 0\) and \(j = 0\) in <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(7)</a>, then
+take the time derivative of both sides of <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> and <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
+<a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p>\[\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2} =
+          \Grad \times \frac{\partial \vec{B}}{\partial t}\,,\]
+<p>\[\frac{\partial^2\vec{B}}{\partial t^2} =
+        - \Grad \times \frac{\partial \vec{E}}{\partial t}\,.\]
+<p>We now put <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> and <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> into the right sides of the
+above two equations to get:
+<p>\[- \frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2} =
+          \Grad \times (\Grad \times \vec{E})\,,\]
+<p>\[- \frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t^2} =
+         \Grad \times (\Grad \times \vec{B})\,,\]
+<p>To further reduce the above equations, we make use of the identity:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\Grad \times (\Grad \times \vec{A}) = 
+         \Grad ( \Grad \cdot \vec{A}) - (\Grad \cdot \Grad) \vec{A} =
+         \Grad ( \Grad \cdot \vec{A}) - \nabla^2 \vec{A}\,.\]
+<p>where \(\vec{A}\) is any vector field and:
+<p>\[\nabla^2 \equiv \Grad \cdot \Grad =
+        \frac{\partial^2}{\partial x^2} +
+        \frac{\partial^2}{\partial y^2} +
+        \frac{\partial^2}{\partial z^2}\,.\]
+<p>Finally, using that identity and <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> for
+our chargeless case, we get these two <em>wave equations</em> for waves
+traveling with velocity \(c\):
+<p>\[\frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t^2} =
+         \nabla^2 \vec{B}\,,\]
+<p>\[\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2} =
+         \nabla^2 \vec{E}\,.\]
+<p><h3 id="pcap--">. </h3>
+[]4bPlane-Polarized Monochromatic Waves
+We can write down solutions to the wave equations, <a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)</a> and
+<a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>, for the case where the field vectors lie entirely in a
+plane and where the solutions contain only one frequency.
+Of course one must show that the solutions we write down really are
+solutions by substituting them into <a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)</a> and <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>
+and showing that those equations are satisfied.
+For the electric field vector the plane-polarized monochromatic solution is:
+<p>\[\vec{E} = \vec{E}_0 \cos(\vec{k} \cdot \vec{r} - \omega t)\,,\]
+<p>where the <em>direction</em> of \(\vec{k}\) gives the direction of propagation of
+the electric wave and the <em>magnitude</em> of \(\vec{k}\) is \(2 \pi\) divided
+by the wave's wavelength and is related to the wave's frequency through
+its velocity:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[k = \frac{2 \pi}{\lambda}; \qquad \omega = 2 \pi f;
+                       \qquad f = \frac{1}{T} = \frac{c}{\lambda}\,,\]
+<p>where \(\omega\) is the wave's angular frequency, \(f\) is its frequency,
+\(T\) is its period, \(c\) is its speed, and \(\lambda\) is its wavelength.
+<p><span class="tryit">Try it:</span>  Show that <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> satisfies <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> by
+       direct substitution on both sides of <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
+       <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p>Now with <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> becomes:
+<p>\[\Grad \times \vec{E} =
+   - (\vec{k} \times \vec{E}_0) \sin(\vec{k} \cdot \vec{r} - \omega t)\,,\]
+<p>but this equals \((\partial/\partial t) {\vec{B}}\) which can only be true if
+the arguments in the cosine functions match:
+<p>\[\vec{B} = \vec{B}_0 \cos(\vec{k} \cdot \vec{r} - \omega t)\,.\]
+<p>We put the solutions, <a href="#eqn-13" class="eqn-ref">Eqs.&nbsp;(13)</a> and <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>, into
+<a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)</a> and <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> and find:
+<p>\[\vec{B}_0 = \frac{1}{\omega} ( \vec{k} \times \vec{E}_0 ) =
+                   \frac{1}{c} ( \hat{k} \times \vec{E}_0 )\,,\]
+<p>so:
+<p>\[\begin{aligned}\hat{E}_0 \times \hat{B}_0 & = \hat{k} \\ \vec{E}_0 \cdot \vec{B}_0    & = 0 \\ B_0                          & = \frac{1}{c} E_0\,.\end{aligned}\]
+
+<p><span class="tryit">Try it:</span>  Show that the picture on the cover of this module requires
+all three of <a href="#eqn-15" class="eqn-ref">Eqs.&nbsp;(15)</a>.
+<p><h3 id="pcap-4-c">4c. Production by a Radio Transmitter</h3>
+
+A vertical radio transmitter tower is a good example of a device that
+produces a plane-polarized monochromatic wave (the frequency of the wave is
+the frequency to which you set the dial in order to receive the wave).
+A large current is sent up and down the vertical tower, as a sine wave with
+a single frequency.
+<p><span class="tryit">Try it:</span>  Suppose we look at the tower during the part of the cycle when the
+current is moving upward.
+Use Ampere's law to show that the magnetic field to the right of the
+antenna is as given on this module's cover.
+Then use <a href="#eqn-15" class="eqn-ref">Eqs.&nbsp;(15)</a> tell you the direction of the electric field
+and the direction of propagation of the wave.
+<p><h3 id="pcap-4-d">4d. How The Waves Manifest Themselves</h3>
+
+Depending on its frequency, an electromagnetic wave may be a radio or
+television wave coming through the air to your receiver, or it could be
+an X-ray, or a gamma ray from a radioactive decay, or a ray of light of
+a particular color.
+These objects are all <em>identical</em> waves except for their frequencies.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>motion.
+<p>in a plane-polarized
+electromagnetic wave, the direction of the electric field vector.
+<p>in an electromagnetic wave, the condition
+in which the electric field vector always lies in the same plane (in contrast
+to, say, circular polarization where the electric field vector rotates
+around the axis of propagation).
+<p>in an electromagnetic wave, the condition of
+a wave having a single frequency, a single wavelength (in contrast to being
+a mixture of different wavelengths).
+In a more sophisticated view, it means that there is only one Fourier
+component.
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. The Curl as a Determinant</h2>
+
+<p>Recall that the cross-product of two vectors \(\vec{C}\) and \(\vec{D}\) can be
+written as the determinant
+<p>\[\vec{C} \times \vec{D} = 
+  \left| \begin{array}{c c c}
+       \hat{x} & \hat{y} & \hat{z} \\
+         C_x    &  C_y     &   C_z    \\
+         D_x    &  D_y     &   D_z    \\
+          \end{array} \right|\]
+<p>The \(x\)-component of vector \(\vec{C} \times \vec{D}\) is the term in the
+expanded determinant which is proportional to \(\hat{x}\):
+<p>\[(\Grad \times \vec{D})_x =
+        \frac{\partial D_z}{\partial y}-\frac{\partial D_y}{\partial z}\]
+<p>The other two components of the curl of \(D\) are thus:
+<p>\[(\Grad \times \vec{D})_y =
+        \frac{\partial D_x}{\partial z}-\frac{\partial D_z}{\partial x}\]
+<p>\[(\Grad \times \vec{D})_z =
+        \frac{\partial D_y}{\partial x}-\frac{\partial D_x}{\partial y}\]
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Proof of a Vector Identity</h2>
+
+<p>
+We here prove:
+<p>\[\vec{A} \times (\vec{B} \times \vec{C}) =
+   - (\vec{A} \cdot \vec{B}) \vec{C} + \vec{B} (\vec{A} \cdot \vec{C})\,.\]
+<p>We only need to prove the identity for one component since the others will
+follow by cycling the subscripts.
+So we take the \(x\)-component of the left side:
+<p><ol>
+<li>\([\vec{A} \times (\vec{B} \times \vec{C})]_x\)
+<ol>
+
+</ol>
+</li>
+<li>\(= A_y (\vec{B} \times \vec{C})_z -
+                    A_z (\vec{B} \times \vec{C})_y\)</li>
+<li>\(= A_y (B_x C_y - B_y C_x) - A_z (B_z C_x - B_x C_z)\)</li>
+<li>\(= - (A_y B_y + A_z B_z) C_x + B_x (A_y C_y + A_z C_z)\)</li>
+<li>\(= - (A_x B_x + A_y B_y + A_z B_z) C_x
+              + B_x ( A_y C_y + A_z C_z + A_x C_x)\)</li>
+<li>\(= - (\vec{A} \cdot \vec{B}) C_x + B_x (\vec{A} \cdot \vec{C})\)
+</li>
+<li>hence:</li>
+<li>\(\vec{A} \times (\vec{B} \times \vec{C}) =
+       - (\vec{A} \cdot \vec{B}) \vec{C} + \vec{B}(\vec{A} \cdot \vec{C})\)</li>
+<li>so substituting \(\Grad\) for \(\vec{A}\) and \(\vec{B}\):</li>
+<li>\(\Grad \times (\Grad \times \vec{C}) =
+                     - (\Grad \cdot \Grad) \vec{C}
+                     + \Grad (\Grad \cdot \vec{C})\)</li>
+<li>\(\Grad \times (\Grad \times \vec{C}) =
+   - \nabla^2 \vec{C} + \Grad (\Grad \cdot \vec{C})\)&thinsp;,</li>
+<li>and the identity is proved.</li>
+</ol>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For another way to remember the definition of the curl, see
+Appendix A. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">This identity is proved in Appendix B.
+          Physicists often remember the rule,
+          \[\vec{A} \times (\vec{B} \times \vec{C}) =
+                 \vec{B} (\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B})\,,\]
+          as the words "BAC minus CAB" along with the positions of the parentheses.
+          However, with \(\vec{A} \equiv \vec{B} \equiv \Grad\), we must rearrange the order
+          on the right side of the equation to keep the operators to the left
+          of the functions they operate upon.  Thus we wind up with <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">These are general properties of waves: see “The Wave Equation,”
+(MISN-0-201). <a href="#fnref-3" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><span class="tryit">Try it:</span>  <strong>Warning</strong>: First make sure you have done the first five (out of the
+six) problems scattered through the text, marked like this warning.
+If you skip any one of them, you will probably not be prepared for even the
+first problem below.
+<p>Note: Problems&nbsp;4-7 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> The electric field of a plane electromagnetic wave in vacuum is
+represented by:</li>
+<li>\(E_x = 0\)&thinsp;,</li>
+<li>\(E_y = 0.50\,\text{(N/C)}\cos\left[2.09 \,\text{m}^{-1}
+                                                     (x - ct)\right]\)&thinsp;,</li>
+<li>\(E_z = 0\)&thinsp;.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the wavelength, frequency, polarization, and
+           propagation vector of the wave. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">b.</span> Determine the components of the wave's magnetic field. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</li>
+<li><span class="item-label">2.</span> Solve (a) and (b) of Problem&nbsp;1 for the wave represented by:</li>
+<li>\(E_x = 0\,,\)</li>
+<li>\(E_y = 0.50\,\text{(N/C)}
+            \cos\left[0.419 \,\text{m}^{-1}(x - ct)\right]\)&thinsp;,</li>
+<li>\(E_z = 0.50\,\text{(N/C)}
+            \cos\left[0.419 \,\text{m}^{-1}(x - ct)\right]\)&thinsp;.</li>
+<li><span class="item-label">3.</span> Determine the components of the \(\vec{E}\)- and \(\vec{B}\)-fields
+which describe the following electromagnetic waves that propagate along the
+positive \(x\)-axis:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> A wave whose plane of \(\vec{E}\)-vibration makes an angles of
+           45° with the positive \(y\)- and \(z\)-axes.</li>
+<li><span class="item-label">b.</span> A wave whose plane of \(\vec{E}\)-vibration makes an angle of
+           120° with the positive \(y\) axis and an angle of
+           30.0° with the positive \(z\)-axis.
+
+<p></li>
+<li><span class="item-label">4.</span> Given these electric and magnetic fields:</li>
+<li><table class="physnet-table"><tbody><tr><td>\(E_x = E_0 \cos\frac{2\pi}{\lambda}(y + ct)\),</td><td>\(E_y=0\),</td><td>\(E_z=0\),</td></tr><tr><td>\(B_x = 0\),</td><td>\(B_y = 0\),</td><td>\(B_z = 0\).</td></tr></tbody></table>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine whether or not these fields satisfy the wave equations.
+[D]</li>
+<li><span class="item-label">b.</span> Determine whether or not these fields satisfy Maxwell's Equations.
+[B]</li>
+<li><span class="item-label">c.</span> If your answer to (a) and (b) is yes, what relationship must
+exist between the \(E\) and \(B\) amplitudes? [A]
+</li>
+<li><span class="item-label">5.</span> Given these electric and magnetic fields:</li>
+<li><table class="physnet-table"><tbody><tr><td>\(E_x=0\),</td><td>\(E_y = E_0 \sin[2\pi\nu\left(\frac{x}{c}-t\right)]\),</td><td>\(E_z = 0\),</td></tr><tr><td>\(B_x=0\),</td><td>\(B_y=0\),</td><td>\(B_z=B_0 \sin[2\pi\nu\left(\frac{x}{c}-t\right)]\).</td></tr></tbody></table>
+</li>
+<li>(a), (b), (c): Repeat Problem&nbsp;1 using the above components.</li>
+<li>Answers: (a) [G], (b) [E], and (c) [H].</li>
+<li><span class="item-label">6.</span> With:</li>
+<li>\(E_x = E_0 \cos(kz - \omega t)\),
+           \(E_y = E_0 \cos(kz - \omega t)\), \(E_z = 0\),</li>
+<li>write down the space-time dependence of the components of the
+           magnetic field that will result in an electromagnetic wave that
+           satisfies both the wave equations and Maxwell's equations. [C]</li>
+<li><span class="item-label">7.</span> A plane-polarized monochromatic electromagnetic wave of
+frequency \(\nu\) has the electric field polarized in the \(z\)-direction and
+the wave propagates in the negative \(y\)-direction.
+Determine the components of \(\vec{E}\) and \(\vec{B}\) that satisfy Maxwell's
+equations and the wave equations. [F]</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 3.01&thinsp;m, \(1.00 \times 10^8\)&thinsp;Hz, polarized in the \(\hat{y}\)
+           direction, \(\vec{k} = 2.09\,\text{m}^{-1} \hat{x}\).</li>
+<li><span class="item-label">b.</span> \(B_x = 0\,,\)</li>
+<li>\(B_y = 0\,,\)</li>
+<li>\(B_z = 0.17 \times 10^{-8}\,\text{T}
+           \cos\left[2.09\,\text{m}^{-1}(x - ct)\right]\)&thinsp;.
+</li>
+<li><span class="item-label">2</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 15.0&thinsp;m, \(2.00 \times 10^7\)&thinsp;Hz, polarized in the \(y\)-\(z\) plane,
+           \(\vec{k} = 0.419\,\text{m}^{-1}\hat{x}\)&thinsp;.</li>
+<li><span class="item-label">b.</span> \(B_x = 0\)&thinsp;,</li>
+<li>\(B_y = - 0.17 \times 10^{-8}\,\text{T}
+                        \cos[0.419\,\text{m}^{-1}(x - ct)]\)&thinsp;,</li>
+<li>\(B_z = + 0.17 \times 10^{-8}\,\text{T}
+                        \cos[0.419\,\text{m}^{-1}(x - ct)]\)&thinsp;,
+</li>
+<li><span class="item-label">3</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(E_x = 0\),</li>
+<li>\(E_y = + 0.707 E_0 \cos(k x - \omega t)\).</li>
+<li>\(E_z = + 0.707 E_0 \cos(k x - \omega t)\).</li>
+<li>\(B_x = 0\),</li>
+<li>\(B_y = - 0.707 (E_0/c) \cos(k x - \omega t)\).</li>
+<li>\(B_z = + 0.707 (E_0/c) \cos(k x - \omega t)\).</li>
+<li><span class="item-label">b.</span> \(E_x = 0\),</li>
+<li>\(E_y = - 0.500 E_0 \cos(k x - \omega t)\),</li>
+<li>\(E_z = + 0.866 E_0 \cos(k x - \omega t)\).</li>
+<li>\(B_x = 0\),</li>
+<li>\(B_y = - 0.866 (E_0/c) \cos(k x - \omega t)\).</li>
+<li>\(B_z = - 0.500 (E_0/c) \cos(k x - \omega t)\),
+</li>
+<li><span class="item-label">A.</span> No such wave exists.</li>
+<li><span class="item-label">B.</span> No.</li>
+<li><span class="item-label">C.</span> \(B_x=-\frac{E_0}{c}\cos(kz-\omega t)\),</li>
+<li>\(B_y=+\frac{E_0}{c}\cos(kz-\omega t)\),</li>
+<li>\(B_z=0\).</li>
+<li><span class="item-label">D.</span> Yes.</li>
+<li><span class="item-label">E.</span> Yes.</li>
+<li><span class="item-label">F.</span> \(E_x=0\),</li>
+<li>\(E_y=0\),</li>
+<li>\(E_z =+E_0\cos\left[2\pi\nu\left(\frac{y}{c}+t\right)\right]\),</li>
+<li>\(B_x=-\frac{E_0}{c}\cos\left[2\pi\nu\left(\frac{y}{c}+t\right)\right]\),</li>
+<li>\(B_y=0\),</li>
+<li>\(B_z=0\).</li>
+<li><span class="item-label">G.</span> Yes.</li>
+<li><span class="item-label">H.</span> \(B_0= E_0/c\).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">For electromagnetic waves, the three important directions are:
+\(\hat{k}\), the direction of propagation; \(\hat{E}\), the direction of the
+electric field; and \(\hat{B}\), the direction of the magnetic field.
+Any two of these may be known in a problem and we must find the third.
+Since these three are mutually perpendicular, they obey this cyclic rule:
+<p>\[\hat{E} \times \hat{B} = \hat{k}\,,\]
+<p>\[\hat{k} \times \hat{E} = \hat{B}\,,\]
+<p>\[\hat{B} \times \hat{k} = \hat{E}\,,\]
+<p>where each line is obtained from the one above it by cycling the vectors
+one place to the right.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Recall that \(\vec{r} = x \hat{x} + y \hat{y} + z \hat{z}\) and
+ \(\vec{k} \cdot \vec{r} = k_x x + k_y y + k_z z\).
+ Then:
+ 
+ \[\Grad_x (\vec{k} \cdot \vec{r}) =
+          \partiald{x} (\vec{k} \cdot \vec{r}) = k_x\,.\]
+ 
+ and similarly for \(\Grad_y\) and \(\Grad_z\).
+ Then:
+ 
+ \[\Grad (\vec{k} \cdot \vec{r}) = \vec{k}\,.\]
+ 
+ This means that:
+ 
+ \[\Grad \cos(\vec{k} \cdot \vec{r} - \omega t) =
+     - \vec{k} \sin(\vec{k} \cdot \vec{r} - \omega t)\,.\]
+ 
+ Now you fill in the remaining steps to get:
+ 
+ \[\nabla^2 \vec{E} = - k^2 \vec{E}\,.\]
+<p> and do a similar job on the other side of the wave equation.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The various partial derivatives, \((\partial/\partial t)\),
+ \((\partial/\partial x)\), etc., are independent of each other so can be
+ taken in any order.
+ Thus, for example,
+ 
+ \[\Grad \partiald{t} f(\vec{r},t) = \partiald{t} \Grad f(\vec{r},t)\,,\]
+ 
+ where \(f\) is any function.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">(\(\vec{k} \cdot \vec{r}\)) is written in the problem as
+ (\(2.09\,\text{m}^{-1} x\)).
+ The obvious conclusion is that \(k_y = k_z = 0\) and hence that
+ \(k = \sqrt{k_x^2 + k_y^2 + k_z^2} = k_x = 2.09\,\text{m}^{-1}\).
+</div></div>
+ 
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\Grad f =       \hat{x} \frac{\partial f}{\partial x} +
+                        \hat{y} \frac{\partial g}{\partial y} +
+                        \hat{z} \frac{\partial h}{\partial z} \]
+<p>\[\Grad \cdot \vec{g} =
+                 \frac{\partial g_x}{\partial x} +
+                 \frac{\partial g_y}{\partial y} +
+                 \frac{\partial g_z}{\partial z} \]
+<p>\[\Grad \times \vec{g}= 
+ \left(\frac{\partial g_y}{\partial x}-
+                     \frac{\partial g_x}{\partial y}\right)\hat{z} +
+ \left(\frac{\partial g_z}{\partial y}-
+                     \frac{\partial g_y}{\partial z}\right)\hat{x} +
+ \left(\frac{\partial g_x}{\partial z}-
+                     \frac{\partial g_z}{\partial x}\right)\hat{y} \]
+<p>\[\Grad \times (\Grad \times \vec{g}) = 
+         - \nabla^2 \vec{g} + \Grad ( \Grad \cdot \vec{g})\, ; \; \nabla^2 \equiv \Grad \cdot \Grad\]
+<p>\[\Grad \cdot \vec{E} = 4 \pi k_e \rho\]
+<p>\[\Grad \cdot \vec{B} = 0\]
+<p>\[\Grad \times \vec{E} = - \frac{\partial \vec{B}}{\partial t}\]
+<p>\[\Grad \times \vec{B} = 4 \pi k_m j +
+                       c^{-2}\frac{\partial \vec{E}}{\partial t}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Given these electric and magnetic fields:</li>
+<li><table class="physnet-table"><tbody><tr><td>\(E_x = E_0 \cos\frac{2\pi}{\lambda}(y + ct)\),</td><td>\(E_y=0\),</td><td>\(E_z=0\),</td></tr><tr><td>\(B_x = 0\),</td><td>\(B_y = 0\),</td><td>\(B_z = 0\).</td></tr></tbody></table>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine whether or not these fields satisfy the wave equations.</li>
+<li><span class="item-label">b.</span> Determine whether or not these fields satisfy Maxwell's Equations.</li>
+<li><span class="item-label">c.</span> If your answer to (a) and (b) is yes, what relationship must
+exist between the \(E\) and \(B\) amplitudes?
+</li>
+<li><span class="item-label">3.</span> Given these electric and magnetic fields:</li>
+<li><table class="physnet-table"><tbody><tr><td>\(E_x=0\),</td><td>\(E_y = E_0 \sin[2\pi\nu\left(\frac{x}{c}-t\right)]\),</td><td>\(E_z = 0\),</td></tr><tr><td>\(B_x=0\),</td><td>\(B_y=0\),</td><td>\(B_z=B_0 \sin[2\pi\nu\left(\frac{x}{c}-t\right)]\).</td></tr></tbody></table>
+</li>
+<li>(a), (b), (c): Repeat Problem&nbsp;1 using the above components.
+<p></li>
+<li><span class="item-label">4.</span> With:</li>
+<li>\(E_x = E_0 \cos(kz - \omega t)\),
+           \(E_y = E_0 \cos(kz - \omega t)\), \(E_z = 0\),</li>
+<li>write down the space-time dependence of the components of the
+           magnetic field that will result in an electromagnetic wave that
+           satisfies both the wave equations and Maxwell's equations.</li>
+<li><span class="item-label">5.</span> A plane-polarized monochromatic electromagnetic wave of
+frequency \(\nu\) has the electric field polarized in the \(z\)-direction and
+the wave propagates in the negative \(y\)-direction.
+Determine the components of \(\vec{E}\) and \(\vec{B}\) that satisfy Maxwell's
+equations and the wave equations.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;4 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;5 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">4.</span> See Problem&nbsp;6 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">5.</span> See Problem&nbsp;7 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

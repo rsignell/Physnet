@@ -1,0 +1,386 @@
+<header class="module-header">
+  <h1 class="module-title">Some Simple Functions in the Complex Plane <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Use the quadratic-root equation to find the zeros of any given
+    quadratic equation <a href="../m401/" class="module-ref">MISN-0-401</a>.</li><li><strong>2.</strong> Convert from two dimensional Cartesian coordinates to polar, and
+    vice versa <a href="../m401/" class="module-ref">MISN-0-401</a>.</li><li><strong>3.</strong> Interpret the words “e is the base of natural logarithms” <a href="../m401/" class="module-ref">MISN-0-401</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Determine the complex conjugate, magnitude, and phase of any given
+    complex number.</li><li><strong>S2.</strong> Locate the poles of any given reciprocal of a quadratic function.</li><li><strong>S3.</strong> Sketch the pole trajectories of any given quadratic reciprocal.
+    Describe the motions of the poles along their trajectrories.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Taylor's Series for the Expansion of a Function About a Point”
+    (MISN-0-4).</li><li><strong>2.</strong> “Damped Mechanical Oscillations” (MISN-0-29).</li><li><strong>3.</strong> “Resonances and Poles; Relationship Between the Real and Imaginary
+    Worlds” (MISN-0-49).</li><li><strong>4.</strong> “Wave Functions, Probability, and Mean Values” (MISN-0-243).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Complex numbers provide one with a very powerful tool in physics.
+For some subjects, it provides a sort of rich, full view of an object where
+the real numbers provide only a sort of silhouette.
+In other cases it provides quick and easy means of analysis, synthesis and
+solution.
+Finally, there are cases like the time-dependent Schr<span class="tex-unknown" title="unknown macro">\</span>"odinger where
+it is an integral part of the theoretical framework.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Complex Numbers</h2>
+
+<p><h3 id="pcap-2-a">2a. Rules for Complex-Number Arithmetic</h3>
+
+A complex number \(z\) can be defined as an ordered pair of real numbers
+(\(x\),\(y\)); e.g., (2,5), (2\(\pi\),21.49), (\(2a+b\),\(c*d\)).
+The first number in the parenthesis is called the “real part” of the
+“complex number” \(z\), while the second number in the parenthesis is
+called the “imaginary” part.
+What distinguishes complex numbers is the way they combine to form new
+complex numbers.
+<p>Suppose we have two complex numbers, \(z_1=(x_1,y_1)\) and \(z_2=(x_2,y_2)\).
+Here are the addition, subtraction, and multiplication rules for those two
+complex numbers:
+<p>\[z_1 \pm z_2 \equiv (x_1\pm x_2,y_1\pm y_2)\]
+<p>\[z_1 \cdot z_2 \equiv (x_1,y_1)\cdot (x_2,y_2) =
+(x_1 x_2\,-\,y_1 y_2, x_1 y_2\,+\,x_2 y_1).\]
+<p><h3 id="pcap-2-b">2b. “Real” and “Imaginary” Numbers</h3>
+
+Complex numbers with no second number (\(x\),0), are referred to as “purely
+real,” while those with no first member (0,\(y\)) are said to be “purely
+imaginary.”
+Any complex number can be written as the sum of a real number and an imaginary
+<p>number, according to the addition rule <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>; e.g.,
+<p>\[z = (x,0) + (0,y) = (x,y).\]
+<p>The normal notation and wording for the real and imaginary parts of a complex
+number are:
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(x\equiv\) “real part of z” \(\equiv\) Re(\(z\))</td></tr><tr><td>\(y\equiv\) “imaginary part of z” \(\equiv\) Im(z).</td></tr><tr><td>z = (Re(z),0) + (0, Im(z)) = (Re(z),Im(z)).</td></tr></tbody></table>
+</div>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m59gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Three complex numbers represented as points
+on a <br>
+ “complex” plane.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. The Argand Diagram: A Complex Number Plot</h3>
+
+Complex numbers are often represented as points in a two-dimensional
+<p>complex plane, as illustrated in the Argand
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>diagram of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Here the \(x\)-axis is called the “real axis,” the \(y\)-axis the “imaginary
+axis.”
+<p><h3 id="pcap-2-d">2d. Use of \(i\)</h3>
+
+<p>In the physical sciences and engineering the combinatorial rules in
+<a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)–(2)</a> are remembered and denoted by use of the symbol
+\(i\), which is treated like any other algebraic symbol except that:
+<p>\[i^2 = -1\,.\]
+<p>It is in this sense that we say:
+<p>\[i \equiv \sqrt{-1}.\]
+<p>Complex numbers are then written:
+<p>\[z = x + iy = Re(z) + i \, Im(z)\]
+<p>The combinatorial rules of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> can be derived from
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> in a few lines. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><h3 id="pcap-2-e">2e. The Complex Conjugate</h3>
+
+Only real numbers can correspond to the results of physical measurements,
+so one must have mechanisms for obtaining real numbers from complex ones.
+One of the most common ways is to combine a complex number with its
+“complex conjugate,” either additively or multiplicatively.
+The complex conjugate of a complex number \(z\) is written \(z\conj\), and is
+defined as the same number-pair except that the sign of the imaginary part
+is reversed:
+<p>\[z\conj \equiv (x + i y)\conj  \equiv x - i y.\]
+<p>The process of complex conjugation is obviously equivalent to a reflection
+about the \(x\)-axis in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p>Both the product and sum of a complex number and its complex conjugate are
+real.
+That is, (\(z\cdot z\conj \)) and (\(z\,+\,z\conj \)) are real.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m59gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The magnitude \(|z|\) of a complex number.</figcaption></figure>
+
+<p><h3 id="pcap-2-f">2f. Polar Representation: Magnitude and Phase</h3>
+
+The “magnitude” of a complex number \(z=x+iy\) is written \(|z|\) and is
+defined by
+<p>\[|z|\equiv\sqrt{|z|^2}\equiv\sqrt{z\conj z} =
+\sqrt{(x-iy)(x+iy)} = \sqrt{x^2+y^2}.\]
+<p>In terms of the complex plane, the <em>magnitude</em> of a complex number \(z\)
+is the polar radius to \(z\)'s point (\(x\),\(y\)) in the complex plane, as
+illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The <em>phase</em> \(\phi\) of the point \(z\) is defined as the polar angle of the
+point (\(x\),\(y\)):
+<p>\[\phi \equiv \tan^{-1}{(y/x)}.\]
+<p>Then:
+<p>\[x = |z| \cos{\phi};\hspace*{0.2in}y = |z| \sin{\phi}\]
+<p>and hence:
+<p>\[z = x + iy = |z|(\cos{\phi} + i \sin{\phi}).\]
+<p><h3 id="pcap-2-g">2g. Euler's Representation</h3>
+
+<p>We now use Euler's
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>formula, \(e^{i\phi} = \cos{\phi} + i \sin{\phi}\), to put \(z\) in the
+form:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[z = |z|\,e^{i \phi}\,,\]
+<p>where \(e\) is the base of the natural logarithms.
+This neatly separates \(z\) into its magnitude \(|z|\) and phase \(\phi\):
+compare <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> and <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+In the polar representation, complex conjugation reverses the sign of the phase.
+For example,
+<p>\[(4+3i)\conj  = (5\,e^{i 36.9^\circ})\conj = 5\,e^{-i 36.9^\circ}. \qquad \help{2}\]
+<p>Here are some other interesting applications of Euler's representation:
+<p>\[z_1/z_2 = \frac{|z_1|}{|z_2|}\,e^{i(\phi_1 - \phi_2)}\]
+<p>\[\sqrt{z} = \pm \sqrt{|z|}\,e^{i \phi /2} \qquad \help{3}\]
+<p>\[\sqrt{i} = \pm e^{i\pi /4} = \pm(\cos{\pi /4} + i \sin{\pi /4}) =
+\pm \frac{1}{\sqrt{2}}\,(1 + i). \qquad \help{4}\]
+<p><span class="tryit">Try it:</span>  Work out the four applications shown above.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Poles of Simple Functions</h2>
+
+<p><h3 id="pcap-3-a">3a. Real Function Silhouettes</h3>
+
+Consider the function
+<p>\[f(x) = \frac{a^2}{x^2 + a^2},\]
+<p>where \(a\) is a constant.
+If we vary \(a\) we get the \(f(x)\) curves shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+We are going to relate the shape of the central bumps in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> to what is
+going on in the complex plane.
+<p><span class="tryit">Try it:</span>  Verify the curves in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m59gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Plot of <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> for three
+values of \(a\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Extending a Function Into the Complex Plane</h3>
+
+The real function in <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>, \(f(x)=a^2/(x^2+a^2)\), can be
+extended into the complex plane by substituting \(z\) for \(x\):
+\(f(z) = a^2/(z^2 + a^2)\), where \(z=x+iy\).
+The original function, <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>, is then included as the special
+case \(y\)&thinsp;=&thinsp;0.
+<p><h3 id="pcap-3-c">3c. Plotting a Complex Function's Magnitude</h3>
+
+Since \(f(z)\) has a single value for each value of \(x\) and \(y\), we can plot the
+magnitude of \(f(z)\), \(|f(z)|\), as a third dimension extending up from our
+complex plane.
+This is shown, for the silhouette along the real axis, in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+Note that we have displayed the complex plane in a rather unusual manner,
+with the \(y\)-axis increasing toward the observer.
+The lower \(f(x)\) curve of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> is the one shown standing up along the real
+\(x\)-axis in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+It is \(|f(z)| = |a^2/(z^2 + a^2)|\), with \(a\)&thinsp;=&thinsp;1, plotted for \(y\)&thinsp;=&thinsp;0.
+<p>If we now calculate \(f(z)\) with \(a = 1\) for \(y = -1\), we get:
+<p>\[|f(x-i)| = \frac{1}{x\sqrt{x^2+4}};\ \  y=-1,\]
+<p>shown standing up along \(y\,=\,-1\) in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+<p><div class="figure-row figure-row-2"><figure id="fig-4"><img src="figures/m59gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The value of \(|1/(z^2 + 1)|\), plotted along the real axis only.</figcaption></figure><figure id="fig-5"><img src="figures/m59gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Plot of the function \(|1/{z^2+1}|\), for \(y=0\) and \(y=-1\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-d">3d. Representing Poles</h3>
+
+Notice that \(f(z)\) for \(y=-1\) becomes infinite as \(x\rightarrow 0\).
+Then f(z) for a&thinsp;=&thinsp;1 is said to have a “pole” at the position
+\(x=0, y=-1\).
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>We can fill in \(|f(z)|\) for all points in the complex plane, finding the
+surface shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> (where we have plotted \(|1/(z^2+1)|\) for all
+negative values of \(y\)).
+Thus our real axis bump function is seen to be the chopped-off foothill
+of a mountain that rises to infinity.
+<p><div class="figure-row figure-row-2"><figure id="fig-6"><img src="figures/m59gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. As in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, but now <br>
+ plotted for all \(y\le 0\).</figcaption></figure><figure id="fig-7"><img src="figures/m59gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Plot of \(|a^2/(z^2+a^2)|\) for <br>
+ \(a=1\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-e">3e. Saddle Point and Conjugate Pole</h3>
+
+In <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>, notice the line above the imaginary axis as it comes down the
+front slope of the pole toward you.
+As that crest line approaches the top of the real axis bump, it levels off and
+becomes, just at the real axis, horizontal.
+Why does it do that?
+To see why, factor the denominator of f(z) for a&thinsp;=&thinsp;1:
+<p>\[\frac{1}{z^2+1} = \frac{1}{(z+i)\cdot(z-i)}\,.\]
+<p>There are two poles, then, at \(z_p=\pm i\).
+These are illustrated in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>, which also shows the surface above the
+positive part of the imaginary axis as well as above the negative part.
+The real and imaginary axes are hidden from sight beneath the surface, but
+the original real-axis \(f(x)\) bump curve can still be seen going through the
+pass between the two mountains.
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Pole Trajectories</h2>
+
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m59gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. The pole positions of \(a^{2}/(z^{2}+a^{2})\) for \(a\) =
+1, 2, 3</figcaption></figure>
+
+<p>As the parameters of a function change, the poles of the function move
+around in the complex plane.
+By way of illustration, consider the function \(f(z) = a^2/(z^2 + a^2)\),
+factored to show the poles (the zeros of the denominator):
+<p>\[f(z) = \frac{a^2}{(z+ia)(z-ia)}.  \]
+<p>The poles of this function are obviously at \(z_p=\pm ia\).
+Thus, as the parameter \(a\) is either increased or decreased from zero, the
+two poles move away from the real axis as in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.
+The lines traced out by such movements of the pole positions are called the
+pole “trajectories.”
+<p>Half-plane views of pole movements are shown in the Appendix.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>The author wishes to thank The National Science Foundation and IBM for
+supporting the construction of this module.</section>
+
+<p><section id="appendix" class="module-section section-text"><h2 id="appendix">Appendix</h2>
+
+<p>Half-plane views, corresponding to <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>, are shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a> for
+\(a\) = 1, 2, 3.
+The real-axis bumps in these figures are just those of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+Note in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a> that, as \(a\) increases from \(-\infty\), one pole moves up the
+imaginary axis (shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>) while the other pole moves down it (not
+shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>).
+<p><span class="tryit">Try it:</span>  We suggest you use felt-tip markers to color <a href="#fig-4" class="fig-ref">Figs.&nbsp;4–9</a>.
+That will enhance the three-dimensional appearance of the figures.
+We suggest you color the vertical faces along the real axis light blue
+and the line on or above the entire imaginary axis (and up the \(y=0\) line on
+the vertical face) red.
+<p><span class="tex-unknown" title="unknown macro">\MinipageFigure</span>9As in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>, \(a\) = 1, 2, 3 (top to bottom).m59gr09
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Pronounced “Ar\('\)g<span class="tex-unknown" title="unknown macro">\</span>"and” in English. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Pronounced “Oiler.” <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Taylor's Series for the Expansion of a Function About a
+          Point” (MISN-0-4) for a Taylor series proof of Euler's formula. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Note we have not given a precise definition of poles;
+          see math texts for further discussions. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Write down the complex conjugate, the magnitude, and the phase of
+\(z = 8\,+\,6i\).</li>
+<li><span class="item-label">2.</span> Locate the poles of
+\[f(z) = \frac{25}{z^2 + 8z + 25} .\]
+</li>
+<li><span class="item-label">3.</span> Sketch the pole trajectories of
+\[f(z) = \frac{1}{z^2 + az + 1}\,,\]
+
+where \(a\) is continuously and smoothly increased form \(- \infty\) to \(+ \infty\).
+Describe the motions of the pole(s) along trajectories.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> \(z\conj = 8 - 6i;\ |z| = 10;\ \phi = \tan^{-1}{(3/4)} = 36.9\).</li>
+<li><span class="item-label">2.</span> \(z_1 = -4 + 3i;\ z_2 = - 4 - 3i\).<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> [S-5]</li>
+<li><span class="item-label">3.</span> The arrowheads show the directions the poles travel as \(a\) increases
+from \(- \infty\) to \(+ \infty\).
+The numbers show the values of \(a\).
+For clarity, parts of the trajectories are shown slightly displaced from
+the \(x\)-axis.
+Those parts actually coincide with the \(x\)-axis.</li>
+</ol>
+
+<p><figure class="fig-centered"><img src="figures/m59gr12.svg" alt="" class="physnet-fig"></figure>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+ Addition/subtraction rule resulting from \(i=\sqrt{-1}\): <br>
+
+\(z_1\pm z_2 = (x_1 + iy_1)\pm (x_2 + iy_2)\).<br>
+
+Rearranging and factoring,<br>
+
+\(z_1\pm z_2 = (x_1 + x_2)\pm i(y_1 + y_2)\),
+which is the rule.<br>
+
+ Multiplication rule resulting from \(i=\sqrt{-1}\): <br>
+
+\(z_1\cdot z_2 = (x_1 + iy_1) (x_2 + iy_2) = x_1 x_2 + iy_1 x_2
++ ix_1 y_2 + (i)^2 y_1 y_2\).<br>
+
+Using <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, rearranging, and factoring,<br>
+
+which is the rule.<br>
+
+This can also be written:<br>
+
+\(z_1\cdot z_2 = |z_1|e^{i\phi_1}\cdot|z_2|e^{\phi_2} =
+|z_1|\cdot|z_2|\,e^{i(\phi_1 + \phi_2)}\).
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+ Computation of Polar Coordinates for the Example<br>
+
+By use of Eqs.&thinsp;(6), (7), and (8):<br>
+
+\(4 + 3i = \sqrt{(4)^2 + (3)^2}\,e^{i \tan^{-1}{(3/4)}}
+        = 5 e^{i 36.9^\circ}\). <br>
+
+To obtain the complex conjugate, just replace \(i\) by \(-i\) throughout.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+\(\sqrt{z} = (|z|\,e^{i\phi})^{1/2} = (|z|)^{1/2}\,(e^{i\phi})^{1/2} =
+\pm \sqrt{|z|}\,e^{i\phi /2}\).
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+\(i = 0 + i = \cos{\pi /2} + i \sin{\pi /2} = e^{i\pi /2}\).<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> Then: <br>
+
+\(i^{1/2} =  \left(e^{i\pi /2}\right)^{1/2} = \pm e^{i\pi /4} =
+\pm (\cos{\pi/4} + i \sin{\pi /4}) = \pm \frac{1}{\sqrt{2}}(1 + i)\). <br>
+
+Check the answer by squaring it!
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+We want to make the function zero so its inverse will be infinite;
+the zeros of the function are the pole positions of its inverse.
+We denote those values of \(z\), that make the function zero, by \(z_p\):
+\[az_p^2 + bz_p + c = 0.\]
+
+This is a quadratic expression so we solve it by using the quadratic root
+formula, which you should have on instant recall:
+\[z_p = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.\]
+
+We check our answer by multiplying out the resulting function to make sure
+it reproduces the original polynomial :<br>
+
+\((z - z_1)(z - z_2) = [z - (-4 + 3i)]\,[z - (-4 - 3i)]  =\) \ldots  .<br>
+
+Here we denoted the two values of \(z_p\) by \(z_1\) and \(z_2\) and we showed the
+polynomial in factored form (note that either \(z = z_1\) or \(z = z_2\) makes
+the function zero).<br>
+
+Apply the quadratic root formula and then do the check yourself!
+</div></div>
+
+<p>
+<p>
+<span class="fbox"><div class="env-minipage">[t]4.3in
+[S-6]  from TX-3e: Connection between <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> and <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+<figure class="fig-centered"><img src="figures/m59gr13.svg" alt="" class="physnet-fig"></figure>
+
+</div>
+</span>
+<p></section>
+

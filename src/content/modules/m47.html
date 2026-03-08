@@ -1,0 +1,458 @@
+<header class="module-header">
+  <h1 class="module-title">Laplace Transform for the Damped Driven Oscillator <span class="module-author">(J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Write the differential equation of motion for the
+    damped driven oscillator and distinguish between the transient and
+    steady-state solutions <a href="../m31/" class="module-ref">MISN-0-31</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the Laplace Transform of a function of a
+    single variable and state the conditions under which the transform
+    exists.</li><li><strong>K2.</strong> Given the damping parameter \(\lambda\), the driven
+    function, and the natural frequency \(\omega_0\,=\,(k/m)^{1/2}\) of an
+    oscillator, write down the expression for the resultant force (as a function
+    of time) acting on the oscillator.
+    Then, using Newton's Second Law, find the second order differential equation
+    satisfied by the oscillator's displacement from equilibrium.</li><li><strong>K3.</strong> Find the Laplace Transform of the damped, driven oscillator
+    differential equation and then the Laplace Transform of the
+    solution to this differential equation.  Use the table of Laplace
+    Transforms to find the sought-after solution. (This solution may be
+    left in integral form).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Evaluate the Laplace Transform of some given simple
+    function (constant, square pulse, sum of integer powers of the
+    variable, sine, cosine, and exponential).</li><li><strong>S2.</strong> Calculate the Laplace Transforms of the derivatives of
+    a function whose Laplace Transform is given.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> A Table of Laplace Transforms. </li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. A Useful Method for Solving Differential Equations</h3>
+
+The Laplace Transform method for solving ordinary differential equations
+is especially useful for finding the solutions to the differential
+equations governing the simple harmonic oscillator, the damped harmonic
+oscillator, and the damped driven oscillator.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>This method reduces the differential equation to an algebraic equation.
+The inverse Laplace Transform of the solution to this algebraic equation is
+then the solution to the differential equation.
+Many engineers find this technique especially attractive for solving the
+differential equations that they encounter.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Elementary Properties of the Laplace Transform</h2>
+
+<p><h3 id="pcap-2-a">2a. Definition of the Laplace Transform</h3>
+
+If \(F(t)\) is specified for values of \(t > 0\), then the Laplace Transform of
+\(F(t)\) is defined by:
+<p><div class="centered">
+Laplace Transform of \(F(t)\) for a value of \(s\)
+\( \equiv \int_0^{\infty} e^{\ds -st} F(t)\,dt\)
+</div>
+
+<p>We write this as:
+<p>\[{\cal L} \{F(t)\} \equiv \int_0^{\infty} e^{\ds -st} F(t)\,dt.\]
+<p>The right side is a function of \(s\), call it \(f(s)\).
+The Transform exists for those values of \(s\) for which the integral
+converges.
+<p><h3 id="pcap-2-b">2b. Laplace Transform of the Constant Function</h3>
+
+Consider the simplest \(F(t)\), a constant, call it \(A\).
+Evaluating the transform integral:
+<p>\[f(s) = A \int_0^{\infty}e^{-st}dt = \frac{A}{s}
+\left[ -e^{-st} \right]_{t=0}^{t=\infty}\;.\]
+<p>For \(s<0\) and for \(s=0\), this integral doesn't converge (for negative \(s\) the
+upper limit gets infinite) so \(f(s)\) exists only for values of \(s>0\), and
+<p>\[f(s) = \frac{A}{s}, \qquad (s>0)\;.\]
+<p><h3 id="pcap-2-c">2c. Laplace Transform of the Exponential Function</h3>
+
+Another example is \(F(t) = e^{at}\), where \(a\) is some constant:
+<p>\[f(s)= \int_0^{\infty} e^{(a-s)t}dt.\]
+<p>If \(a > s\) the exponent is always positive and blows up as \(t\) gets
+infinite.
+However, for \(s > a\) the integrand approaches zero for large \(t\).
+The integral is:
+<p>\[\left. \frac{1}{(a-s)} e^{(a-s)t} \right|^{t=\infty}_{t=0}\;.\]
+<p>It is zero at the upper limit if \(s > a\) and finite at the lower limit
+(unless \(s = a\)).
+Hence, 
+<p>\[{\cal L} \{e^{at}\} = \frac{1}{s-a} , \qquad (s > a).\]
+<p><h3 id="pcap-2-d">2d. Relating Sine and Cosine to Exponential</h3>
+
+Sine/cosine transforms can be related to exponential ones by:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[e^{\pm iat} = \cos at \pm i \sin at\,,\]
+<p>where \(i = \sqrt{-1}\).
+Adding and subtracting these relations gives you two useful relations for
+the sine and cosine:
+<p>\[\sin at = \frac{1}{2i} (e^{iat} - e^{-iat})\,,\]
+<p>\[\cos at = \frac{1}{2} (e^{iat} + e^{-iat}).\]
+<p><h3 id="pcap-2-e">2e. Exercises with Simple Functions</h3>
+
+Using the above results, try the following exercises.
+<p><span class="tryit">Try it:</span>  Find \({\cal L} \{F(t)\}\)  for each of these functions:
+<ul>
+<li><span class="item-label">(i)</span> \(\sin at\)</li>
+<li><span class="item-label">(ii)</span> \(\cos at\)</li>
+<li><span class="item-label">(iii)</span> \(t\)
+</li>
+<li><span class="item-label">(iv)</span> \(t^2\)</li>
+<li><span class="item-label">(v)</span> \(\left.\begin{tabular}{r c l}
+\)F(t)\( & = & 0 if \)t<t_0\( \\
+\)F(t)\( & = & 1 if \)t_0<t<t_1\( \\
+\)F(t)\( & = & 0 if \)t>t_1\(
+\end{tabular}
+\right\}\)m47gr01</li>
+</ul>
+
+ The answers you get should be :
+<ul>
+<li><span class="item-label">(i)</span> \(\frac{a}{s^2 + a^2}\), for \(s>0\)</li>
+<li><span class="item-label">(ii)</span> \(\frac{s}{s^2 + a^2}\), for \(s>0\)</li>
+<li><span class="item-label">(iii)</span> \(\frac{1}{s^2}\), for \(s>0\)</li>
+<li><span class="item-label">(iv)</span> \(\frac{2}{s^3}\), for \(s>0\)</li>
+<li>Note: by induction, you can show that:
+\({\cal L}\{t^n\} = \frac{n!}{s^{n+1}}\) for positive integer \(n\).]</li>
+<li><span class="item-label">(v)</span> \(\frac{e^{\ds -t_0 s}}{s}
+\left[ 1 - e^{\ds -(t_1 -t_0)s} \right]\)</li>
+</ul>
+
+<p><h3 id="pcap-2-f">2f. Laplace Transform of Derivatives</h3>
+
+What about the Laplace Transform of \(dF(t)/dt\)  and higher
+derivatives?
+You can, of course, evaluate these directly if you know \(F(t)\).
+However, the Laplace Transform of the derivatives of \(F(t)\) can be
+expressed in terms of the Laplace Transform of \(F(t)\).
+Let's look at the first derivative:
+<p>\[{\cal L} \{\frac{dF(t)}{dt}\} =
+\int_0^{\infty} e^{-st} \frac{dF}{dt} dt\;.\]
+<p>Using:
+<p>\[\frac{d}{dt}[e^{-st}F] = F \frac{de}{dt}^{-st} + e^{-st}
+\frac{dF}{dt},\]
+<p>the integral may be written:
+<p>\[\int^{\infty}_0 \frac{d}{dt} [e^{-st} F] dt -
+\int^{\infty}_0 \frac{d[e^{-st}]}{dt} F dt\,.\]
+<p>The first integral is just \(e^{-st}F(t)\), the second is:
+<p>\[s \int^{\infty}_0 e^{-st} F(t) dt,\]
+<p>which is: \(s\, {\cal L} \{F(t)\}\).
+Hence:
+<p>\[\begin{aligned}{\cal L} \left\{ \frac{dF(t)}{dt} \right\} & = &
+\left. e^{-st} F(t) \right|_{t=\infty} - \left. e^{-st} F(t) \right|_{t=0}
++ s {\cal L} \{ F(t) \} \\
+ & = & s f(s) - F(0)\,,\\\end{aligned}\]
+
+<p>where \(F(0)\) is the function \(F(t)\) evaluated at \(t = 0\).
+Try this yourself for the second derivative and show that:
+<p>\[{\cal L} \left\{\frac{d^2F(t)}{dt^2}\right\} =
+s^2 f(s) - sF(0) - F'(0)\,,\]
+<p>where:
+<p>\[F'(0) \equiv \left.\frac{dF(t)}{dt} \right|_{t=0}\]
+<p>is the first derivative of \(F(t)\) evaluated at \(t = 0\).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Solution for Damped Driven Oscillator</h2>
+
+<p><h3 id="pcap-3-a">3a. Transform of Second Order Linear Differential Equation</h3>
+
+Now consider the second order differential equation:
+<p>\[mx''(t) +  \lambda x'(t) + kx(t) = F(t),\]
+<p>where:
+<p>\[x' \equiv \frac{dx(t)}{dt}, \qquad \text{and} \qquad
+x'' \equiv \frac{d^2x(t)}{dt^2}\;.\]
+<p>You'll recognize this as the differential equation of motion for the damped
+driven oscillator.
+For example, a mass \(m\) at the end of a spring constant \(k\) with damping
+coefficient \(\lambda\) which is being driven by an externally applied force
+\(F(t)\).
+At any instant of time \(t\), the net force on the mass \(m\) is \(F(t)- \lambda
+dx/dt-kx\).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The quantities \(x''(t)\) and \(x'(t)\) are the first and second derivative of
+\(x(t)\), the displacement from equilibrium with respect to the independent
+variable \(t\),the time.
+If we divide by \(m\) our equation becomes:
+<p>\[x'' + 2\gamma x' +\omega^2x = G(t)\,.\]
+<p>\[\text{Here:} \qquad 2\gamma \equiv \frac{\lambda}{m}, \qquad
+\omega^2 \equiv \frac{k}{m}, \qquad G(t) \equiv \frac{F(t)}{m}\]
+<p>Taking the Laplace Transform of both sides yields:
+<p>\[{\cal L} \{x''\} + 2\gamma {\cal L} \{x'\} + \omega^2 {\cal L} \{x\} =
+{\cal L} \{G(t)\} .\]
+<p>Using the notation:
+<p>\[f(s) \equiv {\cal L} \{x(t)\}\,, \qquad \text{and:} \qquad
+g(s) \equiv {\cal L}\{G(t)\},\]
+<p>and using the above developed relations for the Laplace
+Transforms of the first and second derivatives, we arrive at the equation:
+<p>\[s^2 f(s) - s\,x(0) - x'(0) + 2\gamma sf(s) - 2\gamma x(0) +
+\omega^2f(s) =g(s).\]
+<p>This is just an algebraic equation that must be satisfied by
+\(f(s)\), given \(g(s)\) and the constants \(x(0)\) and \(x'(0)\).
+Solving for \(f(s)\) we obtain:
+<p>\[f(s) = \frac{(s + 2\gamma) x(0) + x'(0) + g(s)}{s^2 +
+2\gamma s + \omega^2}\;.\]
+<p><h3 id="pcap-3-b">3b. Inverse Laplace Transform</h3>
+
+What we wanted to find was \(x(t)\) for all values of \(t\).
+Instead what we have is \(f(s)\), the Laplace Transform of \(x(t)\).
+Knowing \(f(s)\), to find \(x(t)\) you need to evaluate the inverse Laplace
+Transform of \(f(s)\):
+<p>\[x(t) \equiv {\cal L}^{-1} \{f(s)\}\,, \qquad \text{where:} \qquad
+f(s) = {\cal L} \{x(t)\}\,.\]
+<p>The standard procedure for finding the inverse Laplace Transform is to use
+a table which displays the Laplace Transform of a large variety of
+functions (and hence the inverse transform as well.)
+For example, suppose \(\lambda = 0\) and \(F(t) = 0\).
+Then our equation is the equation of motion for the simple harmonic
+oscillator:
+<p>\[x''(t) + \omega^2_0 x(t) = 0\,,\]
+<p>and taking the Laplace Transform of this equation and solving it
+for the Laplace Transform of \(x(t)\), we have:
+<p>\[{\cal L} \{x(t)\} \equiv  f_0(s) =
+\frac{s\,x(0) + x'(0)}{s^2 + \omega^2_0}\;.\]
+<p>But we saw previously that:
+<p>\[{\cal L} \{\sin at\} = \frac{a}{s^2 + a^2}, \qquad \text{and:} \qquad
+{\cal L} \{\cos at\} = \frac{s}{s^2 +a^2}\,,\]
+<p>so our transform is:
+<p>\[f(s) = x(0) \left[\frac{s}{s^2 + \omega_0^2} \right] + \frac{x'(0)}{\omega_0}
+\left[\frac{\omega_0}{s^2 + \omega_0^2}\right].\]
+<p>Then the function whose transform this is, must be:
+<p>\[x(t) =
+x_0  \cos \omega_0 t + \frac{x'(0)}{\omega_0} \sin \omega_0t\,,\]
+<p>which you recognize as the solution to the differential equation
+that we started with, \(x''(t) + \omega_0^2 x(t) = 0\).
+For the damped driven oscillator, the solution to the problem is the
+inverse transform of the \(f(s)\) we previously found:
+<p>\[\begin{aligned}x(t) &= {\cal L}^{-1} \{f(s)\} =
+{\cal L}^{-1} \left\{\frac{(s + 2\gamma)x(0) + x'(0) +
+g(s)}{s^2 + 2\gamma s + \omega_0^2}\right\} \\
+ &= {\cal L}^{-1} \left\{\frac{(s + 2\gamma)x(0) +x'(0)}
+{s^2 +2\gamma s +\omega_0^2}\right\} +
+{\cal L}^{-1} \left\{\frac{g(s)}{s^2 + 2s + w_0^2}\right\},\end{aligned}\]
+
+<p>using the linearity of the inverse Laplace Transform operation.
+The second transform arises only if there is a driving force.
+It is the “transient.”
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-3-c">3c. Transient Solution</h3>
+
+Looking at just the transient term for the time being (this is the solution
+to the damped oscillator problem
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>), and scanning a table of Transforms we see that:
+<p>\[{\cal L} \left\{e^{-at} \sin \omega t\right\} =\frac{\omega}{(s+a)^2 +
+\omega^2}\,,\]
+<p>and:
+<p>\[{\cal L} \left\{e^{-at} \cos \omega t\right\} =
+\frac{s+a}{(s+a)^2 + \omega^2}\]
+<p>So we know, for example, the inverse transform:
+<p>\[{\cal L}^{-1} \left\{ \frac{\omega}{(s+a)^2 + \omega^2} \right\} =
+e^{-at} \sin\omega t \;.\]
+<p>Our transient term looks to be almost of this form.
+If we complete the square in the denominator,
+<p>\[s^2 + 2\gamma s + \omega_0^2 = (s+\gamma)^2 + \omega_0^2 -
+\gamma^2\;,\]
+<p>then:
+<p>\[x_\text{transient}(t) = {\cal L}^{-1} \left[ \frac{(s+\gamma)x(0) +
+\gamma x(0) +x'(0)}{(s+\gamma)^2 + \omega_0^2-\gamma^2}\right]\;,\]
+<p>\[x_\text{transient}(t) = {\cal L}^{-1} \left[ \frac{(s+\gamma)x(0)}{(s+
+\gamma)^2 +\omega_0^2-\gamma^2}\right] +
+{\cal L}^{-1} \left[ \frac{\gamma x(0) +
+x'(0)}{(s+\gamma)^2 +\omega_0^2-\gamma^2} \right]\;,\]
+<p>\[{\cal L}^{-1} \left\{\frac{(s+\gamma)x(0)}{(s+\gamma)^2 +\omega_0^2-
+\gamma^2} \right\} =
+x(0)e^{-\gamma t} \cos\sqrt{\omega_0^2 - \gamma^2}\,t\;,\]
+<p>\[{\cal L}^{-1} \left\{\frac{1}{(s+\gamma)^2 +\omega_0^2-
+\gamma^2}\right\} = \frac{1}{\sqrt{\omega_0^2 -\gamma^2}}
+e^{-\gamma t} \sin\sqrt{\omega_0^2 - \gamma^2}\, t.\]
+<p>Then the full transient solution is:
+<p>\[x_\text{tran}(t) = x(0)e^{-\gamma t} \cos\omega t +
+\frac{\gamma x(0) + x'(0)}{\omega} e^{-\gamma t} \sin\omega t\,,\]
+<p>where: \(\omega \equiv \sqrt{\omega_0^2 -\gamma^2}\).
+If you put in \(t=0\), the right side is only \(x(0)\).
+Taking the first derivative and setting \(t=0\), you again get only \(x'(0)\)
+on the right side.
+This again shows that the constants \(x(0)\) and \(x'(0)\) are the initial
+values of the displacement and the velocity.
+As \(t \rightarrow \infty\), this transient term dies out because of the
+exponential.
+<p><h3 id="pcap-3-d">3d. Steady-State Solution</h3>
+
+What about the steady-state solution, the one that comes about because of
+the driving force?
+That solution is:
+<p>\[x_\text{steady}(t) = {\cal L}^{-1} \left\{ \frac{g(s)}{(s+\gamma)^2
++\omega_0^2-\gamma^2}\right\} \,,\]
+<p>and depends of course on the specific time dependence of the driving force
+[and hence the functional form of \(g(s)\)].
+<p> We now use the valuable Convolution Property of Laplace Transforms,
+which states:
+<p>\[\text{If:} \qquad {\cal L}^{-1} \{g(s)\}  =  G(t)\,, \qquad \text{and:} \qquad
+{\cal L}^{-1} \{f(s)\}  =  F(t),\]
+<p>\[\text{then:} \qquad {\cal L}^{-1} \{f(s)g(s)\} =
+\int^t_0 F(t-u) G(u)du.\]
+<p>For our steady-state solution:
+<p>\[x_\text{steady}(t) = \frac{1}{\sqrt{\omega_0^2 - \gamma^2}}
+\int^t_0 e^{-\gamma(t-u)} \sin[(\omega_0^2 -\gamma^2)^{1/2}(t-u)]
+\;G(u) \; du\,.\]
+<p>This is a messy integral even for the simplest case of a constant
+driving force.
+Let's look at a simplification, a case of no damping, \(\gamma=0\) and a
+sinusoidal driving force:
+<p>\[G(t) = \frac{F(t)}{m} = \frac{F_0}{m} \cos\omega t\,,\]
+<p>\[x_\text{steady}(t) = \frac{F_0}{m\omega_0} \int^t_0
+\sin[\omega_0(t-u)] \cos\omega u \, du.\]
+<p>Using: \(\sin \; (\omega_0 t - \omega_0 u)=
+\sin\omega_0 t \; \cos\omega_0 u - \cos\omega_0 t \; \sin\omega_0 u\)
+<p> we find:
+<p>\[\begin{aligned}x_\text{steady}(t) &=& \frac{F_0}{m\omega_0} [\sin\omega_0 t \int^t_0
+    \cos\omega_0 u \; \sin\omega u \; du -\\
+ & &\cos \omega_0 t \int^t_0 \;\sin\omega_0 u \; cos\omega u \; du]\\
+ &=&\frac{F_0}{m\omega_0} \left[\sin\omega_0 t
+    \left( \frac{\sin(\omega_0-\omega)t}{2(\omega_0-\omega)}+
+    \frac{\sin(\omega_0+\omega)t}{2(\omega_0+\omega)}\right) +
+    \right.\smallskip\\
+ & &\left.\cos\omega_0 t \left( \frac{\cos(\omega_0-\omega)t}
+    {2(\omega_0-\omega)} + \frac{\cos(\omega_0+\omega)t}{2(\omega_0+\omega)}
+    - 2 \right) \right].\\\end{aligned}\]
+
+<p>Notice that when the driving frequency, \(\omega\), is close to
+the natural frequency of the oscillator, \(\omega_0\), \(x\) gets very large.
+The system is near resonance.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">These are phenomena for which Fourier Transforms, for example,
+do not exist. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Some Simple Functions in the Complex Plane” (MISN-0-59). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Damped Mechanical Oscillations” (MISN-0-29), “Damped
+Driven Oscillations” (MISN-0-31), and “Computer Algorithm for the Damped
+Driven Oscillator”(MISN-0-39) for more on the damped driven oscillator. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Damped Driven Oscillations; Mechanical
+Resonances”(MISN-0-31). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Damped Mechanical Oscillations” (MISN-0-29). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6"> See “Damped Driven Oscillations; Mechanical Resonances”
+(MISN-0-31). <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problems&nbsp;13-14 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> How is the Laplace Transform of \(F(t)\) defined? [K]</li>
+<li><span class="item-label">2.</span> For what values of \(s\) is it defined? [E]</li>
+<li><span class="item-label">3.</span> Evaluate directly the Laplace Transform, \(f(s)\), of \(F(t) = 7t +
+           8\). [I]</li>
+<li><span class="item-label">4.</span> For what values of \(s\) is the above \(f(s)\) defined? [A]</li>
+<li><span class="item-label">5.</span> Without referring back to the text, evaluate the Laplace
+            Transform of \(d^2 F(t)/dt^2\).
+            Your answer should be expressed in terms of the Laplace
+            Transform of \(F(t)\) and some constants. [G]</li>
+<li><span class="item-label">6.</span> What are the constants in your answer to 5? [J]</li>
+<li><span class="item-label">7.</span> Consider the differential equation
+            \(5F''(t) - 6F'(t) + F(t) = 10\), subject to these boundary
+            conditions at \(t = 0: F(0) = 0\) and \(F'(0) = -2\).
+            What algebraic equation must the Laplace Transform of \(F(t)\)
+            satisfy? [B]
+            Solve this equation. [H]</li>
+<li><span class="item-label">8.</span> Find the inverse Laplace Transform to the \(f(s)\) you found in
+            the above problem.
+            Use Appendix A (entry 11) and Appendix B (entry 16) on pages 245
+            and 246 of Schaum or some other reference book's entries. [C]</li>
+<li><span class="item-label">9.</span> A damped harmonic oscillator has a damping term proportional to
+            the velocity of the oscillator mass with a  damping constant
+            equal to 4.0 N&thinsp;s/m.
+            The mass of the oscillator is 5.0&thinsp;kg while the spring constant
+            is \(2.0 \times 10^1\)&thinsp;N/m.
+            Determine the resultant force on the oscillator mass as a
+            function of time. [L]</li>
+<li><span class="item-label">10.</span> What is the differential equation of motion for this oscillator?
+            [D]</li>
+<li><span class="item-label">11.</span> If the oscillator is at rest at \(t=0\), but displaced by amount
+            \(x = + 0.1\)&thinsp;m from equilibrium, find the algebraic equation
+            satisfied by the Laplace Transform of \(x(t)\). [F].
+            Solve this equation. [N]</li>
+<li><span class="item-label">12.</span> Find the inverse Laplace-transform to this, and hence the
+            solution to the problem.
+            Don't just plug into a form you find for the solution.
+            Evaluate it step-by-step as in the text. [M]</li>
+<li><span class="item-label">13.</span> Evaluate the Laplace Transform of:
+<p>            \(F(t) = at^2 + bt\). [P]</li>
+<li><span class="item-label">14.</span> Determine the formal expression for
+<p>           \({\cal L} \{ \frac{d^3 F(t)}{dt^3} \}\), 
+<p>           in terms of \(f(s) \equiv {\cal L} \{ F(t) \}\) and specified
+           \(t = 0\) constants. [O]</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> for all \(s > 0\).</li>
+<li><span class="item-label">B.</span> \(5 s^2 f + 10 - 6 sf + f = 10\)/s.</li>
+<li><span class="item-label">C.</span> \( F = 10 (1 - e^{\ds t/5})\).</li>
+<li><span class="item-label">D.</span> \(x'' + 0.8 x' + 4x = 0\).</li>
+<li><span class="item-label">E.</span> For those values of \(s\) for which the integral converges.</li>
+<li><span class="item-label">F.</span> \(s^2 f - 0.1s + 0.8sf - 0.08 + 4f = 0\).</li>
+<li><span class="item-label">G.</span> \(s^2 f(s) - sF(0) - F'(0)\).</li>
+<li><span class="item-label">H.</span> \(f = \frac{10}{s(5s-1)(s-1)} -
+           \frac{10}{(5s-1)(s-1)}\).</li>
+<li><span class="item-label">I.</span> \(\frac{8s +7}{s^2}\).</li>
+<li><span class="item-label">J.</span> The function \(F\) and its first derivative evaluated at \(t = 0\).</li>
+<li><span class="item-label">K.</span> \({\cal L} \{F(t)\} =\int_0^{\infty} e^{\ds -st} f(t)\,dt\).</li>
+<li><span class="item-label">L.</span> \(-4 v(t) - 20 x(t)\)</li>
+<li><span class="item-label">M.</span> \(x(t) = exp(\ds -0.4t)  \{0.1 \cos(1.96t) + 0.02 \sin(l.96t)\}\)</li>
+<li><span class="item-label">N.</span> \(\frac{0.1s + 0.08}{s^2 + 0.8s +4}\).</li>
+<li><span class="item-label">O.</span> \(s^3 f(s) - s^2 f(0) - s f'(0) - f''(0)\).</li>
+<li><span class="item-label">P.</span> \((2 a + b s)/s^3\).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> Evaluate the Laplace Transform of:
+<p>           \(F(t) = at^2 + bt\).</li>
+<li><span class="item-label">3.</span> Determine the formal expression for
+<p>           \({\cal L} \{ \frac{d^3 F(t)}{dt^3} \}\), 
+<p>           in terms of \(f(s) \equiv {\cal L} \{ F(t) \}\) and specified
+           constants.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;13.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;14.</li>
+</ol>
+
+</section>

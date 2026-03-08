@@ -1,0 +1,216 @@
+<header class="module-header">
+  <h1 class="module-title">Review of Electrostatics <span class="module-author">(R.D.Young)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: conservative force, potential energy <a href="../m21/" class="module-ref">MISN-0-21</a>;
+    conductivity <a href="../m118/" class="module-ref">MISN-0-118</a>.</li><li><strong>2.</strong> Perform basic vector analysis <a href="../m503/" class="module-ref">MISN-0-503</a>.</li><li><strong>3.</strong> Expand binomial denominators using the binomial theorem.</li><li><strong>4.</strong> Represent tensor elements using standard matrix notation <a href="../m491/" class="module-ref">MISN-0-491</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: volume charge density, electric dipole moment,
+    surface charge density, electric monopole moment,
+    electric quadrupole moment.</li><li><strong>K2.</strong> State the formal expressions for the electrostatic field
+    and potential of an arbitrary distribution of charge,
+    and the relationship between the field and the potential.</li><li><strong>K3.</strong> State Gauss's law in both integral and differential form.
+    Derive each form of Gauss's law from the other by use of the
+    divergence theorem.</li><li><strong>K4.</strong> Derive the approximate forms (to first order in the dipole
+    separation) of the electrostatic field and potential produced
+    by a dipole beginning
+    with the exact forms of each quantity.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Compute the monopole, dipole and quadrupole moments of a given
+    charge distribution.</li><li><strong>R2.</strong> For a given set of multipole moments, compute the approximate
+    form of the electrostatic potential far from the charge distribution.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> J.&thinsp;Reitz, F.&thinsp;Milford and R.&thinsp;Christy, <em>Foundations
+    of Electromagnetic Theory</em>, 4th Edition, Addison-Wesley (1993).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>You have already studied most of the physical concepts introduced
+in this unit. For example, the concepts of charge, charge distribution,
+Coulomb's Law, the electrostatic field \(\vec{E}\), the electrostatic potential,
+Gauss' Law, and simple electric dipoles. You have also performed numerical 
+calculations using all of these concepts.
+In this unit you will review those concepts. However, the
+treatment is more mathematically sophisticated than the previous treatment
+to which you were exposed. For example, vector analysis will be used more
+extensively. Also, expressions for Coulomb's Law, the electrostatic field
+\(\vec{E}\), and the electrostatic potential will be written with respect to an
+arbitrary coordinate system rather than having the origin at the position
+where the electrostatic force, field, or potential is being calculated.
+<p>In addition, this unit generalizes the discussion of electric dipoles.
+This is accompanied by introducing the concept of multipole expansions.
+By using a multipole expansion, the electrostatic field and potential of
+an arbitrary charge distribution can be approximately calculated to any
+degree of accuracy. This requires the introduction of the concepts of
+the monopole moment, dipole moment, quadrupole moment, etc., of a charge
+distribution. The moments of a charge distribution are very important in
+many fields when approximate calculations are being performed.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read Ch.&thinsp;2 of the text.</li>
+<li><span class="item-label">2.</span> Write down or underline the definitions, terms, and equations
+called for in Output Skills K1-K2.
+See the Supplementary Notes.</li>
+<li><span class="item-label">3.</span> Write down the details of the derivation of the differential
+form of Gauss' Law as given at the end of section 2-6, between eqs.&thinsp;2-25
+to 2-28. This proof can also run in the opposite direction by
+beginning with the differential form of Gauss' Law and deriving
+the integral form.</li>
+<li><span class="item-label">4.</span> Write down the derivation of the approximate form of the 
+electrostatic field (eq.&thinsp;2-36) of a simple electric dipole to first
+order in the dipole separation \(\vec{\ell}\) beginning with the exact form
+of the electrostatic field (eq.&thinsp;2-32). Use the hints in section 2-8. 
+The following formula is useful here,
+<p>\[(1 \pm x)^{-n} = 1 \mp nx + \frac{n (n + 1)}{2 !} x^2 \ldots\]
+<p>for \(|x| < 1\). So, if \(|\vec{\ell}| \ll 1\), then
+<p>\[\left( 1 - \frac{2 (\vec{r} - \vec{r'}) \cdot \vec{\ell}}
+{|\vec{r} - \vec{r'}|^2} + \frac{\vec{\ell}^2}{|\vec{r} - \vec{r'}|^2}
+\right)^{-3/2} \approx \left( 1 - \frac{2 (\vec{r} - \vec{r'}) \cdot \vec{\ell}}
+{|\vec{r} - \vec{r'}|^2} \right)^{-3/2}\]
+<p>\[= 1 \frac{3}{2} + \frac{2 (\vec{r} - \vec{r'}) \cdot \vec{\ell}}
+{|\vec{r} - \vec{r'}|^2} + \ldots ,\]
+<p>\[\left( 1 - \frac{2 (\vec{r} - \vec{r'}) \cdot \vec{\ell}}
+{|\vec{r} - \vec{r'}|^2} + \frac{\vec{\ell}^2}{|\vec{r} - \vec{r'}|^2}
+\right)^{-3/2} \approx 1 + \frac{3 (\vec{r} - \vec{r'}) \cdot \vec{\ell}}
+{|\vec{r} - \vec{r'}|^2} + \ldots\]
+<p>to first order in \(\vec{\ell}\).
+Also,
+<p>\[ \lim_{|\vec{\ell}| \rightarrow 0} \vec{p} = q\, \vec{\ell}\,.\]
+<p>Of course the charge \(q\) must increase as \(\ell\) decreases, in going to
+the limit, so that \(\vec{p}\) remains finite.
+<p>These results are used in the derivation. Write down the derivation 
+of the approximate form of the electrostatic potential
+(eq.&thinsp;2-39) to first order in the dipole separation \(\vec{\ell}\) beginning
+with the exact form of the electrostatic field.</li>
+<li><span class="item-label">5.</span> Write down the expression of the approximate form of the electrostatic 
+potential (eq.&thinsp;2-48) of an arbitrary charge distribution
+beginning with the exact form of the potential (eq.&thinsp;2-45). This
+expression requires some comment. The charge is localized in
+the volume \(V'\) with charge density \(\rho(\vectprime{r})\) as shown in
+Fig.&thinsp;2-12.
+<p>Suppose the parameter \(d\) is a dimension characteristic of the
+spatial extent of the volume \(V'\). Then the observation point
+is taken to be \(\vec{r}\) such that \(d/r \ll 1\) where \(r = |\vec{r}|\). Then, the
+expansion of the denominator \(|\vec{r} - \vectprime{r}|^{-1}\) is made in terms of
+\(r'/r\). Terms involving cube and higher powers of \(r'/r\) are
+dropped. This is the reasoning used between eq.&thinsp;2-46 and 2-47
+of the text. The final approximate result for the potential
+can be expressed as:
+<p>\[V(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \left( \frac{Q}{r} +
+\frac{\vec{p} \cdot \vec{r}}{r^3} + \sum_{i=1} \sum_{j=1} \frac{1}{2}
+\frac{x_i x_j}{r^5} Q_{ij} + \ldots \right)\]
+<p>where
+<p>\[Q = \text{ (monopole moment) } = \int_{V'} \rho (\vec{r'}) d V'\]
+<p>\[\vec{p} = \text{ (dipole moments) } = \int_{V'} \vec{r} \rho 
+(\vec{r'}) d V'\]
+<p>\[Q_{ij} = \text{ (quadrupole moments) } = \int_{V'} (3 x'_i x'_j - \delta_{ij} r'^2) \rho (\vec{r'}) d V'\]
+<p>This type of expansion is known as a multipole expansion.
+<sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The approximation gets better the more terms which are included.
+The next higher-order term beyond the quadrupole moment term
+is the octopole moment term. The octopole moment is important
+in nuclear physics but we shall not delve into it here. Note
+that the monopole moment is just the total charge.</li>
+<li><span class="item-label">6.</span> Solve the following problems in the text: 2-23, 2-24, 2-25.
+Note: to solve 2-23 start with the expression:
+<p>\[\vec{F}_{ext} = -q \vec{E}_{ext} (\vec{r}) + q \vec{E}_{ext}
+(\vec{r} + \vec{\ell})\]
+<p>where
+<p>\[\vec{E}_{ext} (\vec{r} + \vec{\ell}) - \vec{E}_{ext} (\vec{r}) +
+\vec{\ell} \cdot \Grad \vec{E}_{ext} (\vec{r}) + \ldots\]
+<p>Also, in 2-24 do not plot the equipotential surfaces. Keep
+up to the quadrupole term in the potential, however.</li>
+</ol>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Supplementary Notes</h2>
+
+<p><div class="centered">
+Reference to an arbitrary origin
+</div>
+
+<p>In your past experiences with electrostatics, you have written down
+expressions for electrostatic forces, fields, and potentials where the
+point of interest was at the origin of the coordinate system. For example,
+consider the electrostatic force on a point charge \(q\) due to an assembly
+of point charges \(q_1, q_2, \ldots , q_n\) located at \(\vec{r'}_1\), \(\vec{r'}_2\),
+\(\vec{r'}_3\), \ldots  , \(\vec{r'}_n\)
+respectively. The point charge \(q\) is located at the origin
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m504gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. .</figcaption></figure></div>
+
+<p>Then the force \(\vec{F}\) on \(q\) is given by Coulomb's Law as,
+<p>\[F = \frac{q}{4 \pi \epsilon_0} \sum_{i=1}^n q_i \frac{(- \vec{r'}_i)}
+{|\vec{r'}_i|^3}\]
+<p>where
+<p>\[\vec{r'}_i = x'_i \vec{i} + y'_i \vec{j} + z'_i \vec{k}\]
+<p>and
+<p>\[|\vec{r'}_i| = \sqrt{x'^2_i + y'^2_i + z'^2_i}\]
+<p>The minus sign is present because the vector \(\vec{r'}_i\) between \(q_i\) and \(q\) is
+usually drawn <em>from</em> \(q_i\) to \(q\) rather than from \(q\) to \(q_i\) as we 
+have it here.
+<p>In the present text, the situation is generalized by allowing the
+charge \(q\) to be located at \(\vec{r}\) relative to some coordinate system
+(see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m504gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. .</figcaption></figure></div>
+
+<p>This arbitrary coordinate system is denoted by unprimed quantities. It
+should be pointed out that the vectors \(\vec{r}_i\) are considered as <em>constant</em>
+vectors (so the components are just constant scalars). This happens
+because the charge assembly is fixed. However, the charge \(q\) is free to
+move so the vector \(\vec{i}\) is considered as a variable vector. It is obvious
+that,
+<p>\[\vec{r}_i = \vec{r} + \vec{r'}_i\]
+<p>and that,
+<p>\[- \vec{r'}_i = \vec{r} - \vec{r}_i\]
+<p>Combining (I-1) and (I-2) gives,
+<p>\[\vec{F} = \vec{F} (\vec{r}) = \frac{q}{4 \pi \epsilon_0} \sum_{i=1}^n q_i 
+\frac{(\vec{r} - \vec{r}_i)}{|\vec{r} - \vec{r}|^3}\]
+<p>This is the first term in eq.&thinsp;(2-7) of the text. The other terms can
+be obtained in a similar manner. The notation in (I-4) is meant to
+dramatize that the force is now a <em>function</em> of the position vector 
+\(\vec{r}\) of the charge \(q\). So,
+<p>\[\vec{F} = \vec{F} (\vec{r}) = (F_x (x,y,z) \vec{i} + F_y (x,y,z) \vec{j} +
+F_z (x,y,z) \vec{k}\]
+<p>and
+<p>\[F_x (x,y,z) = \frac{q}{4 \pi \epsilon_0} \sum_{i=1}^n q_i \frac{x - x_i}
+{[(x - x_i)^2 + (y - y_i)^2 + (z - z_i)^2]^{3/2}}\]
+<p>etc.. Keep in mind that \((x,y,z)\) are variables above while all other
+symbols, including \((x_i, y_i, z_i)\), are <em>constants</em>.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">
+<p>\[Q_{11} = \int_{V'} (3 x'_1 x'_1 - \delta_{11} r'^2) d V' =
+\int_{V'} \rho (3 x'^2_1 x'^2_1 - x'^2_2 - x'^2_3) d V'\]
+<p>\[Q_{11} = \int_{V'} \rho (2 x'^2_1 - x'^2_2 - x'^2_3) d V', \text{  since } \delta_{11} = 1\]
+<p>\[Q_{12} = \int_{V'} \rho (3 x'_1 x'_2 - \delta_{12} r'^2) d V' =
+\int_{V'} \rho 3 x'_1 x'_2 dV'\]
+ <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>

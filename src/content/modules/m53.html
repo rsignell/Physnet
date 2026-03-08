@@ -1,0 +1,253 @@
+<header class="module-header">
+  <h1 class="module-title">Ordinary and Super-Ball Bounces <span class="module-author">(K.J.Franklin)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Given impulsive forces on the surface of an object, write the
+    equations for the changes in its center of mass momentum and
+    angular momentum <a href="../m36/" class="module-ref">MISN-0-36</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive, in complete detail, the equations relating the linear
+    and angular velocities of a Superball before and after a collision with a
+    flat surface.</li><li><strong>K2.</strong> Using the equations from Skill K1, give an example that
+    demonstrates a difference in what can happen when a Superball and a smooth
+    ball are bounced.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p>Why does a Super-Ball
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>bounce so differently from an ordinary ball?
+How can one predict its trajectory, given an initial position, velocity,
+and spin?
+Here we help you answer those questions in a quite simple and satisfying
+manner, albeit assuming that the ordinary ball's bounce is frictionless
+while the Super-Ball's has lots of friction but no heat loss due to
+skidding.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>In each case, then, mechanical energy is conserved.
+We use this and impulse relations to determine what a bounce does to a
+ball's linear and angular velocity components.
+Then we apply those velocity changes again and again, bounce after bounce,
+to plot trajectories.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Velocity Relations for a Bounce</h2>
+
+<p><h3 id="pcap-2-a">2a. Nomenclature, Impulse Equations</h3>
+
+A ball before and after a bounce can be described in terms of its linear
+velocity v and angular velocity about its center of mass.
+Here we will orient an \(x\)-\(y\) plane to coincide with the plane defined by
+the bounce so that \(v_z = 0\) (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+We will also assume that any spin is about the \(z\)-axis.
+Under these circumstances the useful impulse equations, taken with respect
+to the ball's center of mass, are:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[M \Delta v_x = \int_{\Delta t} f_x\,dt = - \int |f_x|\,dt,\]
+<p>\[M \Delta v_y = \int_{\Delta t} f_y\,dt = - \int |f_y|\,dt,\]
+<p>\[I_z \Delta \omega = \int_{\Delta t} \tau_z\,dt = r \int |f_x|\,dt\,,
+\qquad (\text{upward bounce})\]
+<p>where \(M\) is the mass of the ball, \(r\) is its radius, \(I_z\) is
+its moment of inertia about the \(z\)-axis through its center, \(\tau_z\) is the
+torque exerted on it about that axis, and it is the time interval it spends
+in contact with the floor.
+Note that a gravity impulse has not been included: its net effect is zero.
+For a perfectly smooth (frictionless) ball, \(f_x\) is zero.
+For the Super-Ball, with a high coefficient of surface friction, \(f_x\) is not
+zero.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m53gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Symbols used to describe a bounce.
+Note: \(\vec{v}_x \equiv v_x \hat{x}\), etc.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Conservation of Energy</h3>
+
+We assume that neither the ordinary ball nor the Super-Ball loses
+mechanical energy during a collision.
+The collision forces are thus conservative and we can write:
+<p>\[\frac{1}{2} M (v_y\!')^2 = \frac{1}{2} M v_y^2\,,\]
+<p>\[\frac{1}{2} I_z (\omega')^2 + \frac{1}{2} M (v_x\!')^2 =
+\frac{1}{2} I_z \omega^2 + \frac{1}{2} M v_x^2\,.\]
+<p>These equations can be obtained, if desired, by integrating <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)–(3)</a>,
+first noting that the net gravitational impulse is zero and
+<p>that the frictional impulse can be eliminated by combining <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+<p>Strict conservation of mechanical energy is only an approximation to what
+happens in the real world, but it is sufficiently accurate for our
+purposes.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-2-c">2c. The Equations to Be Solved</h3>
+
+<p>In order to solve <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> we must find a second relationship between
+the two unknowns, \(v_x\!'\) and \(\omega '\).
+A convenient relationship is obtained by eliminating the integral between
+<a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+<p>Doing this, and substituting the value of \(I_z\) for a homogeneous ball,
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\(I_z = (2/5) M r^2\), we get the equations to be solved for an upward bounce:
+<p>\[v_x\!'^2 = v_y^2\,,\]
+<p>\[v_x\!'^2 - v_x^2 = (2/5)(r^2)(\omega^2 - \omega '^2)\,,\]
+<p>\[v_x\!' - v_x = (2/5)(r)(\omega - \omega ')\,.\]
+<p><h3 id="pcap-2-d">2d. Solutions to the Vertical Equation</h3>
+
+<p><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> has the immediate solutions \(v_y\!' = \pm v_y\).
+Since the ball cannot continue through the surface, as it
+would have to for \(v_y\!' = v_y\), \(v\) is required to change sign:
+<p>\[v_y\!' = - v_y .\]
+<p><h3 id="pcap-2-e">2e. Solutions to the Horizontal Equations</h3>
+
+<p>The horizontal equation, <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, is quadratic, so there will be two
+solutions.
+One simultaneous solution to <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> can be obtained
+by inspection:
+<p>\[v_x\!' = v_x\,,\]
+<p>\[\omega ' = \omega\,.\]
+<p>An easy way to find the other solution is to factor each side of
+<p><a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> into products of sums and differences, then to use <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>
+<p>to simplify it.
+The resulting linear equation can then be easily solved simultaneously with
+the linear <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>.
+The result is (for an upward bounce):
+<p>\[v_x\!' = (3/7) v_x + (4/7) r \omega \,,\]
+<p>\[\omega ' = (-3/7) \omega + (10/7) v_x/r .\]
+<p>The horizontal angular velocity changes, <a href="#eqn-10" class="eqn-ref">Eqs.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> or
+<a href="#eqn-12" class="eqn-ref">Eqs.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, along with the vertical velocity change,
+<a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>, give us all possible upward-bounce trajectories consistent
+with conservation of energy and the impulse equations.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m53gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Successive bounces of an ordinary
+ball, assumed smooth.
+The missing second-leg situation can be filled in by use of
+<a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a>, <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Trajectories, Successive Bounces</h2>
+
+<p><h3 id="pcap-3-a">3a. The Ordinary Ball</h3>
+
+The ordinary ball is assumed to have a frictionless surface, so its
+<p>upward-bounce equations are <a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a>, <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, not
+<p><a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a>, <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>.
+<p>For the downward bounce under the table, you can rework <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a>
+and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, and find a change of sign in each.
+<p>We find it helpful to make a downward-bounce sketch similar to <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> are found to be unchanged.
+<p>Application of the appropriate equations to successive bounces results in
+the trajectory shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><h3 id="pcap-3-b">3b. The Super-Ball Challenge</h3>
+
+Suppose a Super-Ball is given the same first leg as in the trajectory shown
+in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+What will its next three legs look like?
+Before turning the page and finding out, why not see if you can determine
+the trajectory yourself and sketch it properly.
+Watch out, though.
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> are only valid for an upward bounce.
+The second bounce is downward, so you must rework the equations for that
+case.
+<p>This alters the right side of equation <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> and the second terms on
+the right side of equations <a href="#eqn-12" class="eqn-ref">Eqs.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>.
+<p>In calculating the \(v_x\)'s and \(\omega\)'s after each successive bounce, we
+suggest that you put them in terms of the symbol \(v_x\), which represents the
+\(x\)-component of velocity on the very first leg.
+<p><span class="tryit">Try it:</span>  Try it before turning the page!
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m53gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Successive bounces of a
+Super-Ball, assuming no sliding during a bounce.
+The rotation is as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. The Superball</h3>
+
+Surprise!
+A Super-Ball, thrown to the floor in front of a table, comes back
+to you and picks up spin!
+The basic downward-bounce equation is just:
+<p>\[I_z \Delta \omega = \int_{\Delta t} \tau_z\, dt =
+ - r \int_{\Delta t} |f_x| \,dt\,.\]
+<p>and this leads to these characteristics after the third bounce:
+<p>\[v_x''' = (-333/343) v_x; \qquad \omega''' = (-130/343)\,(v_x/r)\,.\]
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>I would like to thank Gwynne Stoddard and James Griffin for their very
+helpful reviews of this module's first and second versions.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Registered trademark of the Wham-O Corporation, San Gabriel, CA. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Possible reasons for this property of the Super-Ball are given by
+Garwin in “Super-Ball Bounces,” R. L. Garwin, <em>American Journal of
+Physics</em>  37, 88 (1969).
+Garwin calls this “ultraelasticity” and discusses many interesting
+trajectories.
+See also <em>Classical Mechanics, A Modern Perspective</em>,
+V.&thinsp;Barger and M.&thinsp;Olsson, McGraw-Hill Book Co., NY (1953). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For background, see “Momentum: Conservation and Transfer”
+(MISN-0-15)-and “Rotational Motion of a Rigid Body” (MISN-0-36). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See Garwin's article, cited earlier. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Calculation of Moments of Inertia” (MISN-0-35). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> A Super-Ball with positive spin \(\omega\) is dropped
+from a height \(h\) onto the floor.
+Determine its angle of rebound and sketch the situation.
+Check the angle as \(\omega \rightarrow 0\) and \(\infty\); as \(h \rightarrow 0\)
+and \(\infty\).
+What happens if the ball is again dropped, this time with opposite spin?</li>
+<li><span class="item-label">2.</span> Find the relationship between \(\omega\) and \(v_x\) such that
+a Super-Ball has a repeating single-leg trajectory between bounces.
+If the peak of the arcing trajectory is a height \(h\) above the floor, what is
+the ball's angle of rebound at each of the two bounce points?
+Sketch the situation.
+Check \(\omega\) and \(v_x\) after the first and second bounce.</li>
+<li><span class="item-label">3.</span> Other examples can be found in Garwin's article, cited in the
+<em>text</em>.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+          \(\theta = \tan^{-1} \left[ (4/7) r \omega / \sqrt{2 g h}\, \right]\,.\)m53gr04</li>
+<li><span class="item-label">2.</span> \(\omega = - (5/2) (v_x/r);\;
+            \theta = \tan^{-1}\left[ -(10/7)v_x/\sqrt{2gh}\,\right] \text{ to vertical };\)
+<p>           \(\omega'' = -\omega' = \omega;\; v_x\!'' = -v_x\!' = v_x\,.\)</li>
+</ol>
+
+<p><figure class="fig-centered"><img src="figures/m53gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[v_x\!'= \frac{3}{7} v_x + \frac{4}{7} r \omega; \qquad
+       \omega' = - \frac{3}{7} \omega + \frac{10}{7}(v_x/r)\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> See Output Skill K2 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>

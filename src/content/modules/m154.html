@@ -1,0 +1,502 @@
+<header class="module-header">
+  <h1 class="module-title">Circuit Resonances <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Write down the equation governing voltage-driven 3-element
+               LRC circuits <a href="../m152/" class="module-ref">MISN-0-152</a>.</li><li><strong>2.</strong> Show that \(q(t) = A\,e^{-Rt/(2L)}\,\sin(\omega_0 t +
+    \alpha)\) with \(\omega_0 \equiv 1/\sqrt{LC}\) and any \(A\) and \(\alpha\)
+    solves the undriven case: \(0 = C^{-1}q + R I + L \dot{I}\) <a href="../m29/" class="module-ref">MISN-0-29</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Show that \(q(t) = q_t(t) + q_s(t)\) is a solution for the
+                sinusoidally-driven series \(LRC\) circuit, where \(q_t(t) =
+                A e^{-\gamma t} \sin(\omega_1 t + \alpha)\) and \(q_s(t) =
+                B(\omega) \sin\left[\omega t + \beta(\omega)\right]\)
+                and the driving voltage is: \(V_0 \cos(\omega t)\).
+                Show that \(q_t(t)\) is a transient solution and \(q_s\) is a
+                steady-state solution.</li><li><strong>K2.</strong> Given a series \(LRC\) circuit driven by a sinusoidally-varying
+                potential, \(V_0 \cos(\omega t)\), and given the steady-state
+                solution, \(q_s(t) = B(\omega) \sin[\omega t + \beta(\omega)]\),
+                show or describe how one shows that:
+                \(\beta(\omega) = \tan^{-1}[(\omega_0^2 - \omega^2)L/(\omega R)]\)
+                and \(B(\omega) = (V_0 \cos\beta)/(R \omega)\) or equivalent.</li><li><strong>K3.</strong> Sketch phasor diagrams, and interpret them, to illustrate the
+                phase relationships between voltages in the sinusoidally-driven
+                series \(LRC\) circuit.</li><li><strong>K4.</strong> Show or describe how one shows that the time-average
+                steady-state power transferred into a
+                circuit by a sinusoidally-varying potential is:
+                \(P_{ave}(\omega) = (V^2_0 R \omega^2/2)
+                [L^2 (\omega^2_0 - \omega^2)^2 + R^2 \omega^2]^{-1}\).</li><li><strong>K5.</strong> Sketch \(P_{ave}\) vs. \(\omega\) in the vicinity of the resonant
+                frequency of a sinusoidally-driven series \(LRC\) circuit both
+                for a broad resonance and for a narrow one.
+                Label each curve as to relative size of the resistance.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The concept of “resonance” is one of the most important in all of 
+science and technology.
+There are many mechanical processes where resonance is essential, other
+mechanical processes where it is to be avoided at all cost.
+Included in the former category are the parts of instruments which produce 
+music; in the latter, the recording and playback apparatus.
+In the former, the vocal cords of a person speaking or a bird singing; in 
+the latter, most parts of the ear of a person or a bird listening.
+<p>The same is true in electrical circuits: resonances can be useful for
+producing waves of a particular frequency as in television, radio,
+microwaves, radar, etc.
+It can also be unwanted, ocurring when some component fails, producing
+a huge current and perhaps a disastrous meltdown.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Transient and Steady-State</h2>
+
+<p><h3 id="pcap-2-a">2a. Combining \(R\), \(L\), \(C\), and the Driving Potential</h3>
+
+We combine the potential drops across an inductor, a resistor, and a 
+capacitor connected in series across a sinusoidally-varying driving voltage,
+shown pictorially in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> and mathematically here:
+<p>\[V_0 \cos\omega t = C^{-1}q + R I + L dI/dt\,.\]
+<p>Indicating time derivatives by primes, we can rewrite this as:
+<p>\[Lq'' + R q' + C^{-1} q = V_0 \cos\omega t\,,\]
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m154gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Switch is open for \(t < 0\),
+            switch is closed for \(t > 0\).
+            Here \(V_{DR}\) is an oscillating driving potential.</figcaption></figure>
+
+<p>This is a second order equation so the solution must satisfy
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> <em>and</em> must have two independent adjustable constants.
+<p><h3 id="pcap-2-b">2b. Transient and Steady-State Parts</h3>
+
+The solution to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> must have two independent adjustable
+constants, yet we know intuitively that as time goes by the solution must
+settle down to a “steady-state” form dictated entirely by the driving
+potential [the right side in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, \(V_{DR}\) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>].
+There can be a “transient” form at earlier times but its energy must
+gradually dissipate in the circuit resistance as time goes on, leaving only
+the steady-state form.
+Only the transient form can contain the two adjustable constants, since
+the long-term solution must depend only on \(V_0\), \(\omega\), \(L\), \(R\), and
+\(C\).
+We then write the solution for the charge on the capacitor as:
+<p>\[q(t) = q_t(t) + q_s(t)\,,\]
+<p>where, as it turns out, the “transient” part, \(q_t\), is
+<p>\[q_t(t) = A e^{-\gamma t} \sin(\omega_1 t + \alpha)\,,\]
+<p>and the “steady-state” part, \(q_s\), is:
+<p>\[q_s(t) = B(\omega) \sin\left[\omega t + \beta(\omega)\right]\,,\]
+<p>where we have used these abbreviations: \(\gamma \equiv R/(2 L)\),
+\(\omega_1 \equiv \sqrt{\omega_0^2 - \gamma^2}\), and
+\(\omega_0 \equiv 1/\sqrt{L C}\).
+<p><h3 id="pcap-2-c">2c. Examination of the Two Solutions</h3>
+
+As one can see by inspection, the transient part, <a href="#eqn-21" class="eqn-ref">Eq.&nbsp;(21)</a>, dies
+away as time passes.
+The steady-state part, <a href="#eqn-21" class="eqn-ref">Eq.&nbsp;(21)</a>, just keeps on going without
+alteration.
+Any amount of the transient part can be present because \(A\) and \(\alpha\) are
+set by one's values for charge and current at time zero and these are
+presumably under your control.
+You can even make the transient part zero by proper choice of the charge
+and current at time zero.
+As for the steady-state part, its amplitude \(B\) and phase \(\beta\) are
+independent of initial conditions and are simply functions of the driving
+voltage \(V_0\) and the circuit parameters \(L\), \(C\), and \(R\).
+<p><h3 id="pcap-2-d">2d. How the Solutions Were Obtained</h3>
+
+The solutions, <a href="#eqn-21" class="eqn-ref">Eqs.&nbsp;(21)</a> and <a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a>, were obtained by first
+separating <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> so as to show the “transient” and
+“steady-state” parts explicitly:
+<p>\[(L q_t'' + R q_t' + C^{-1} q_t) + \left(L q_s'' + R q_s' + C^{-1} q_s
+              - V_0 \cos\omega t\right) = 0\,.\]
+<p>The transient part of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> is:
+<p>\[(L q_t'' + R q_t' + C^{-1} q_t) = 0\,.\]
+<p>and the steady-state part is:
+<p>\[L q_s'' + R q_s' + C^{-1} q_s - V_0 \cos\omega t = 0\,.\]
+<p>These two quations are solved separately.
+<p><span class="tryit">Try it:</span>  Add the left sides of <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> and see
+that they give the left side of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, just as promised in
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+Do the same for the right sides.
+<p>It can be easily demonstrated that the transient equation, <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>,
+has the solution shown in <a href="#eqn-21" class="eqn-ref">Eq.&nbsp;(21)</a>,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>where \(A\) and \(\alpha\) must be determined from \(q(0)\) and \(I(0)\).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Solving the Steady-State Equation</h2>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m154gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Charge and current phase relationships in
+<a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a> at \(t=0\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-a">3a. Algebraic Method</h3>
+
+We now substitute \(q_s(t) = B \sin(\omega t + \beta)\) into <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>
+and get:
+<p>\[(C^{-1} - \omega^2 L) B \sin(\omega t + \beta) +
+ R\, \omega B \cos(\omega t + \beta) - V_0 \cos(\omega t) = 0.\]
+<p>Now we use the identity
+<p>\[\cos(A - B) = \cos A \cos B + \sin A \sin B\,,\]
+<p>which should be on instant recall, with \(A = \omega t + \beta\) and \(B =
+\beta\), to get:
+<p>\[\cos\omega t = ( \sin\beta ) \sin(\omega t + \beta) +
+(\cos\beta) \cos(\omega t + \beta)\,.\]
+<p>Put that into <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> and collect terms:
+<p>\[\left[\left(C^{-1} - \omega^2 L \right) B - V_0 \sin\beta \right]
+  \sin(\omega t + \beta) + (R\,\omega B - V_0 \cos\beta)
+  \cos(\omega t + \beta) = 0\,.\]
+<p>Now the sine and cosine are independent functions of time, so each of their
+constant coefficients must separately be zero in order to make the sum of
+the terms stay zero at all times.
+Then:
+<p>\[\begin{aligned}\left(C^{-1} - L \omega^2\right) B & = V_0 \sin\beta\,, \\ R \omega B                         & = V_0 \cos\beta\,.\end{aligned}\]
+
+<p>Dividing one of these two equations by the other gives \(\tan\beta\), while
+summing the squares of the two equations gives \(B\).
+Finally, we generally make the substitution
+<p>\[\omega_0 \equiv 1/\sqrt{LC}\,,\]
+<p>so the first of <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> becomes:
+<p>\[\left(\omega_0^2 - \omega^2\right) L B = V_0 \sin\beta\,,\]
+<p><h3 id="pcap-3-b">3b. Phasor Method</h3>
+
+First, since \(q_s(t) = B \sin(\omega t + \beta)\), we get:
+<p>\[V_L = L q_s'' = - L \omega^2 B \sin(\omega t + \beta)\,,\]
+<p>\[V_C = C^{-1} q_s = C^{-1} B \sin(\omega t + \beta)\,,\]
+<p>\[V_R = R q_s' = R \omega B \cos(\omega t + \beta)\,,\]
+<p>so we can draw phasor diagrams at \(t = 0\) for the charge/current
+relationships and these are as shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> and <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Finally, in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> we draw a phasor diagram for the voltages in the
+circuit.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m154gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Voltage phase relationships in
+<a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a> at \(t=0\).</figcaption></figure></div>
+
+<p>Note that the vector sum of the voltage phasors for the resistor, the
+inductor, and the capacitor, must equal the vector phasor for the driving
+voltage.
+We take \(x\)- and \(y\)-components of these phasor equations and find that
+we have just the two equations of <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Average Power Dissipation</h2>
+
+<p><h3 id="pcap-4-a">4a. Setting Up the Time-Average Integral</h3>
+
+The time-average steady-state power transferred into the circuit from
+the driving voltage can be determined via the power-voltage-current
+relation:
+<p>\[P(t) = V(t) I(t)\,.\]
+<p>Then over one period \({\cal P}\) the average power is:
+<p>\[P_{ave} = \frac{1}{{\cal P}} \int_0^{\cal P}\;  P(t)\,dt =
+            \frac{1}{{\cal P}} \int_0^{\cal P}\; V_{DR}(t) I(t) \;dt\,,\]
+<p>where the driving voltage is used because we are trying to obtain the average
+power expended by that voltage source.
+Substituting \(V_{DR}(t)\) and \(I(t)\):
+<p>\[P_{ave} =
+\frac{1}{{\cal P}} \int_0^{\cal P} V_0 (\cos\omega t) B \omega \cos(\omega t +
+ \beta)\,dt\,.\]
+<p>Again use: \(\cos(A + B) = \cos A \cos B - \sin A \sin B\), now with
+\(A = \omega t\) and \(B = \beta\):
+<p>\[P_{ave} = \frac{V_0\, \omega}{{\cal P}}
+\left[ \cos\beta\int_0^{\cal P} \cos^2\omega t\,dt -
+\sin\beta \int_0^{\cal P} \cos\omega t \sin\omega t\,dt \right]\,.\]
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m154gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The integrand of the second integral
+in <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-b">4b. Integrating</h3>
+
+The second integral is zero, as can be easily seen by writing it as:
+<p>\[\int_0^{\cal P} \frac{1}{2} (\sin 2 \omega t)\,dt\,,\]
+<p>and simply looking at the integrand (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+The value of the first integrand is \({\cal P}/2\) because the average
+value of \(\cos^2\) is 1/2.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Then:
+<p>\[P_{ave} = \frac{V_0 B \omega \cos\beta}{2}\,.\]
+<p><h3 id="pcap-4-c">4c. Eliminating the Phase Angle</h3>
+
+We can evaluate \(\cos\beta\) from
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[\begin{aligned}\cos\beta & = \frac{1}{\sqrt{1 + \tan^2\beta}} =
+    \frac{1}{\sqrt{1 + \frac{L^2(\omega_0^2 - \omega^2)^2}{R^2\omega^2}}} \\  & = \frac{R \omega}{\sqrt{R^2\omega^2 + L^2(\omega_0^2 -
+                \omega^2)^2}}\,.\end{aligned}\]
+
+<p>The final answer is then:
+<p>\[P_{ave} = \frac{V_0^2\, \omega^2 R}
+   {2 \left[ L^2 ( \omega_0^2 - \omega^2)^2 + R^2\omega^2 \right] }\,.\]
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Resonances</h2>
+
+<p><h3 id="pcap-5-a">5a. Power Spectrums with Resonances</h3>
+
+The “resonant” frequency is \(\omega_0\).
+If \(\omega\) is swept through a range of frequencies, we get the power
+spectrum shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m154gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Power spectrums for broad and narrow
+resonances.</figcaption></figure></div>
+
+<p><h3 id="pcap-5-b">5b. Resonance Width (Approximate)</h3>
+
+It is easy to derive a formula for the width of the resonance in the 
+“narrow width approximation.”
+The width \(\Gamma\) of the resonance is defined at half the maximum resonance
+height \(h\) as shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+Then:
+<p>\[P_{ave}(\omega_{1/2}) = \frac{1}{2} P_{ave}(\omega_0)\,.\]
+<p>Substituting in both sides:
+<p>\[\frac{V_0^2 \omega_{1/2}^2 R}{L^2(\omega_0^2 -
+  \omega_{1/2}^2)^2 + R^2\omega_{1/2}^2} =
+  \frac{1}{2} \cdot \frac{V_0^2 \omega_0^2 R}{R^2 \omega_0^2}\,,\]
+<p>which results in:
+<p>\[\omega_0^2 - \omega_{1/2}^2 = \pm R\, \omega_{1/2}/L\,.\]
+<p>Factor the left hand side:
+<p>\[\omega_0^2 - \omega_{1/2}^2 =
+  (\omega_0 - \omega_{1/2}) \cdot (\omega_0 + \omega_{1/2})\,,\]
+<p>and use the narrow width approximation
+<p>\[\omega_0 \approx \omega_{1/2}\,,\]
+<p>to get:
+<p>\[\omega_0 + \omega_{1/2} \approx 2 \omega_0\,,\]
+<p>\[\omega_0 - \omega_{1/2} = \pm 2 R/2 L\,,\]
+<p>\[\omega_{1/2} = \omega_0 \pm R/ 2 L\,.\]
+<p>The full width at half maximum is then:
+<p>\[\Gamma = R / L\,.\]
+<p>This shows that the width is directly proportional to the circuit resistance.
+The average power put into the circuit by the driving voltage source is
+often written:
+<p>\[P_{ave} (\omega ) = \frac{V_0^2 \Gamma/(8 L)}{(\omega - \omega_0)^2
+  + (\Gamma/2)^2}\,,\]
+<p>but you should realize that this is only valid in the narrow-width
+approximation.
+An interesting relation between the height and width of the resonance can 
+be obtained by evaluating the height at \(\omega_0\):
+<p>\[P_{ave}(\omega_0) = \frac{V_0^2}{2 \Gamma L}\,,\]
+<p>so the height varies inversely as the width.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m154gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Power spectrum showing the definition of
+a resonance's width \(\Gamma\).</figcaption></figure></div>
+
+<p><h3 id="pcap-5-c">5c. Resonances as Complex-Plane Poles</h3>
+
+A broad resonance is the shoulder of a far-away pole in the complex plane.
+As the circuit resistance is decreased, the pole moves closer to the real
+axis.
+This causes the shoulder to narrow and heighten.
+In fact, the width of the resonance is the distance of the pole from the 
+real axis.
+These matters are discussed and illustrated elsewhere.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. The Transient Solution</h2>
+
+<div class="centered">(for those interested)</div>
+
+<ol>
+<li><span class="item-label">1.</span> Let \(q = A e^{-\gamma t}\cos{(\omega t + \alpha)}\),
+           where \(\gamma\) is some unknown function of \(L\), \(R\), and \(C\).</li>
+<li><span class="item-label">2.</span> Differentiate \(q\) to get:</li>
+<li>\(I = - \gamma A e^{-\gamma t} \cos{(\omega t + \alpha)} -
+           \omega A e^{-\gamma t} \sin{(\omega t + \alpha)}\)&thinsp;.</li>
+<li><span class="item-label">3.</span> Differentiate \(I\) to get:</li>
+<li>\(\dot{I} = - \gamma I + \omega A \gamma e^{-\gamma t}
+            \sin{(\omega t + \alpha)} - \omega^2 A e^{-\gamma t}
+            \cos{(\omega t + \alpha)}\)&thinsp;.</li>
+<li><span class="item-label">4.</span> Substitute these into the master equation and the equality
+           reduces to: \(\gamma = R/(2L)\), \(\omega^2=\omega_0^2 - \gamma^2\),
+           \(\omega_0^2 = 1/(LC)\).</li>
+</ol>
+
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Constructing Phasor Diagrams</h2>
+
+<div class="centered">(a review)</div>
+
+<ol>
+<li><span class="item-label">1.</span> A phasor diagram such as the one in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> is a way of seeing
+the phase relationships between circuit quantities.</li>
+<li><span class="item-label">2.</span> Each circuit voltage or current is represented by a vector that
+rotates <em>counterclockwise</em> at angular velocity \(\omega\).
+One can think of all the vectors on a single diagram as being locked together
+as they rotate.</li>
+<li><span class="item-label">3.</span> The physical value of any of the represented quantities is the
+projection of that quantity's phase vector on the real axis.
+A projection on the \(y\)-axis has no physical meaning.
+Thus the diagram is not to be confused with a real vector diagram: the
+“vectors” on it are imaginary constructs.</li>
+<li><span class="item-label">4.</span> The length of a phasor is the <em>maximum</em> value the quantity
+will have when watched over a complete cycle.</li>
+<li><span class="item-label">5.</span> The angle between a phasor and the positive \(x\)-axis is the
+phase angle of that quantity at that moment.</li>
+<li><span class="item-label">6.</span> Notice that, in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, the \(q\) is 90° ahead of the \(I\), and \(I\) is
+90° ahead of \(\dot{I}\).
+This means, for example, that the voltage on the capacitor peaks a quarter
+cycle ahead of when the voltage on the resistor peaks, and that is a quarter
+cycle ahead of when the voltage on the inductor peaks.</li>
+</ol>
+
+</section>
+
+<p><section id="sect-C" class="module-section section-text"><h2 id="sect-C">C. Some Tricks</h2>
+
+<div class="centered">(for those interested)</div>
+
+<p>
+Here is an easy way to see that the value of \(\sin^2\) or \(\cos^2\) over
+any number of complete half cycles is one-half.
+We make use of the fact that the average values of \(\sin^2\) and \(\cos^2\),
+over any number of complete half cycles, are obviously equal (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>).
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m154gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Comparison of \(\sin^2\) and \(\cos^2\)
+for use in evaluating the first integral in <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.</figcaption></figure></div>
+
+<p>Then:
+<p>\[\int_0^{2 \pi}\;\cos^2x\,dx = \int_0^{2 \pi}\;sin^2x\,dx\,,\]
+<p>which can be used to evaluate the average value of \(\cos^2 x\):
+<p>\[\begin{aligned}(\cos^2x)_{ave} & = \frac{\int_0^{2\pi} \cos^2x\,dx}{2 \pi} =
+           \frac{1}{2}\cdot\frac{\int_0^{2\pi}\cos^2x\,dx}{2 \pi} +
+           \frac{1}{2}\cdot\frac{\int_0^{2\pi}\sin^2x\,dx}{2 \pi} \\  & = \frac{\int_0^{2\pi}(\cos^2x + \sin^2 x)\,dx}{4 \pi} =
+           \frac{\int_0^{2\pi} (1) \,dx}{4 \pi} = \frac{2\pi}{4\pi} =
+           \frac{1}{2}\,.\end{aligned}\]
+
+<p>
+Rather than working out \(\cos\beta\) from \(\tan\beta\) as in Sect.&thinsp;4c,
+physicists often use a triangle.
+If \(\tan\beta = a/b\) than \(a\) and \(b\) can be drawn as the legs of a
+right-angle triangle shown in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m154gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. A triangle for evaluating complex
+trigonometric relations.</figcaption></figure>
+
+<p>The hypotenuse is obviously \(\sqrt{a^2 + b^2}\) and so \(\cos\beta =
+b/\sqrt{a^2 + b^2}\).
+In our case:
+<p>\[\tan\beta = \frac{L (\omega_0^2 - \omega^2)}{R\omega}\,,\]
+<p>hence
+<p>\[\cos\beta = (R\omega) / \sqrt{R^2\omega^2 + L^2(\omega_0^2 -
+ \omega^2)^2}\,.\]
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See Appendix A of this module. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See Appendix B of this module. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See Appendix C, this module, Trick 1. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See Appendix C, Trick 2, for a slightly different approach. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Resonances and Poles: Relationship Between the Real and
+Imaginary Worlds” (MISN-0-49). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><ol>
+<li><span class="item-label">1.</span> Let \(q = A e^{-\gamma t}\cos{(\omega t + \alpha)}\),
+            where \(\gamma\) is some unknown function of \(L\), \(R\), and \(C\).</li>
+<li><span class="item-label">2.</span> Differentiate \(q\) to get:</li>
+<li>\(I = - \gamma A e^{-\gamma t} \cos{(\omega t + \alpha)} -
+            \omega A e^{-\gamma t} \sin{(\omega t + \alpha)}\)&thinsp;.</li>
+<li><span class="item-label">3.</span> Differentiate \(I\) to get:</li>
+<li>\(\dot{I} = - \gamma I + \omega A \gamma e^{-\gamma t}
+             \sin{(\omega t + \alpha)} - \omega^2 A e^{-\gamma t}
+             \cos{(\omega t + \alpha)}\)&thinsp;.</li>
+<li><span class="item-label">4.</span> Substitute these into the master equation and the equality
+            reduces to:</li>
+<li>\(\gamma = R/(2L)\),</li>
+<li>\(\omega^2=\omega_0^2 - \gamma^2\),</li>
+<li>\(\omega_0^2 = 1/(LC)\).</li>
+</ol>
+
+</div></div>
+
+<p></section>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\(V_L = L\dot{I}\) becomes: <br>
+
+\(-C^{-1}q = L(d^2q/dt^2)q = L[-q(0)\omega_0^2 \cos{(\omega_0 t + \alpha)}] =
+-L \omega_0^2 q\)&thinsp;.
+<br>
+
+We set \(\omega_0^2 \equiv 1/(LC)\), substitute it in on the right hand side,
+and the equation is satisfied.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(V_L = L \dot{I}\) becomes: <br>
+
+\( - R I = L \dot{I} = L [-I(0) \gamma e^{(-\gamma t)}] =
+- L \gamma I\)&thinsp;. <br>
+
+We set \(\gamma = R/(2L)\), substitute it in on the right hand side,
+and the equation is satisfied.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">As \(\gamma\) increases the curve falls off more sharply.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body"> \underline Step 1:  \underline Step 2:
+<br>
+
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Compare the definitions of \(\omega\) and \(\omega '\) and you will see
+that: \(\omega ' = i \omega\).
+We substitute that into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and find:<br>
+
+\(q = A' e^{-\gamma t - i \omega t} + B' e^{-\gamma t + i \omega t}\)&thinsp;. <br>
+
+Now \(e^{a+b} = e^a\,e^b\) hence: <br>
+
+\(q = e^{-\gamma t} [A' e^{-i\omega t} + B' e^{+i\omega t}]\)&thinsp;. <br>
+
+We now set \(A' = A e^{-i\alpha/2}\) and \(B' = A e^{+i\alpha/2}\) <br>
+
+so we get:
+\(q = A e{-\gamma t}\,\cos{(\omega t + \alpha)}\) which is just <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>. <br>
+
+Note: \(\cos{q} = (e^{iq} + e^{-iq})/2\).
+</div></div>
+
+<p><div id="help-S" class="help-item"><span class="help-num">S.</span><div class="help-body">Write <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> as: <br>
+
+\(q = e^{-\gamma t} (A' e^{-\omega ' t} + B' e^{+\omega ' t})\)&thinsp;. <br>
+
+We now make \(\omega '\) small so \(e^{\pm \omega ' t} \approx (1 \pm \omega ' t)\)&thinsp;. <br>
+
+Substituting this, we get: <br>
+
+\(q = e^{-\gamma t} [A' (1 - \omega ' t) + B' (1 + \omega ' t)]\)&thinsp;, <br>
+
+or: <br>
+
+\(q = e^{-\gamma t} [ (A' + B') + t (\omega' B' - \omega ' A')]\)&thinsp;. <br>
+
+We now set \(A'' = A' + B'\) and \(B'' = \omega ' (B' - A')\) so we get: <br>
+
+\(q = e^{-\gamma t} (A'' + B'' t)\)&thinsp;, which is just <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
+</div></div>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.
+The actual exam may contain any selection of these skills or all of them.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

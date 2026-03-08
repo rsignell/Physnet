@@ -1,0 +1,696 @@
+<header class="module-header">
+  <h1 class="module-title">Torque and Angular Momentum in Circular Motion <span class="module-author">(Kirby Morgan, Charlotte, Michigan)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: kinetic energy <a href="../m20/" class="module-ref">MISN-0-20</a>, torque, angular
+    acceleration <a href="../m33/" class="module-ref">MISN-0-33</a>, angular momentum <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>2.</strong> Solve constant angular acceleration problems involving torque, moment of
+    inertia, angular velocity, rotational displacement and time <a href="../m33/" class="module-ref">MISN-0-33</a>.</li><li><strong>3.</strong> Justify the use of conservation of angular momentum to solve problems
+    involving torqueless change from one state of uniform circular motion to
+    another <a href="../m41/" class="module-ref">MISN-0-41</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the torque and angular momentum vectors for (a) a single
+    particle (b) a system of particles.</li><li><strong>K2.</strong> Starting from Newton's 2nd law, derive its rotational analog
+    and state when it can be written as a scalar equation.</li><li><strong>K3.</strong> Start from the equation for linear kinetic energy and derive the
+    corresponding one for rotational kinetic energy.</li><li><strong>K4.</strong> Explain why conservation of angular momentum may not hold in one system
+    but may if the system is expanded.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> For masses in circular motion at fixed radii, solve problems relating
+    torque, moment of inertia, angular acceleration, rotational kinetic energy,
+    work, and angular momentum.</li><li><strong>S2.</strong> Given a system in which angular momentum is changing with time due to a
+    specified applied torque, reconstruct the minimum expanded system in which
+    total angular momentum is conserved.
+    Describe the reaction torque which produces the compensating change in
+    angular momentum.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Just as for translational motion (motion in a straight line), circular
+or rotational motion can be separated into kinematics and dynamics.
+Since rotational kinematics is covered elsewhere,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>the discussion here will center on rotational dynamics.
+Our goal is to derive the rotational analog of Newton's second law and then
+apply it to the circular motion of a single particle and to systems of
+particles.
+In particular we wish to develop the relationship between torque and angular 
+momentum and discuss the circumstances under which angular momentum is
+conserved.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Torque and Angular Momentum</h2>
+
+<p><h3 id="pcap-2-a">2a. Definitions</h3>
+
+The torque and angular momentum are defined as vector products of position,
+force and momentum.
+Suppose a force \(\vec{F}\) acts on a particle whose position with respect to the
+origin \(O\) is the displacement vector \(\vec{r}\).
+Then the torque “about the point \(0\) and acting on the particle,” is defined
+as:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\vec{\tau} = \vec{r} \times \vec{F}.\]
+<p>Now suppose the particle has a linear momentum \(P\) relative to the origin.
+Then the angular momentum of the particle is defined as:
+<p>\[\vec{L} = \vec{r} \times \vec{p}.\]
+<p>The directions of \(\vec{\tau}\) and \(\vec{L}\) are given by the right-hand rule
+for cross products (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m34gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Vector relationships for:
+(a) torque (b) angular momentum (both directed out of the page).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Relationship: \(\vec{\tau} = d\vec{L}/dt\)</h3>
+
+Using the definitions of torque and angular momentum, we can derive a useful
+relationship between them.
+Starting from Newton's second law, written in the form
+<p>\[\vec{F} = \frac{d\vec{p}}{dt},\]
+<p>the torque is:
+<p>\[\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times \frac{d\vec{p}}{dt}.\]
+<p>This can be rewritten using the expression for the derivative of a cross
+product: <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p>\[\begin{aligned}\vec{\tau} & = \frac{d}{dt}(\vec{r} \times \vec{p}) -
+                             \frac{d\vec{r}}{dt} \times \vec{p} \\            & = \frac{d\vec{L}}{dt} - \vec{v} \times \vec{p}.\end{aligned}\]
+
+<p>Now \(\vec{p} = m \vec{v}\) so \(\vec{v} \times \vec{p} = 0\) (because the vector
+product of parallel vectors is zero), so the torque is:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[\vec{\tau} = \frac{d\vec{L}}{dt}.\]
+<p>Thus the time rate of change of the angular momentum of a particle is equal
+to the torque acting on it.
+<p><h3 id="pcap-2-c">2c. Motion Confined to a Plane</h3>
+
+The expression \(\vec{\tau} = d\vec{L}/dt\) for a particle takes on a
+scalar appearance when the motion of the particle is confined to a plane.
+<p>Consider a particle constrained to move only in the \(x\)-\(y\) plane, as shown in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The torque on the particle is always perpendicular to this plane as is the
+angular momentum [work this out using Eqs.&thinsp;(1) and (2)].
+Equivalently, we say that \(\vec{\tau}\) and \(\vec{L}\) have only \(z\)-components.
+Since their directions remain constant, only their magnitudes change.
+Then:
+<p>\[\tau=\frac{dL}{dt} \qquad \text{(motion in a plane)}.\]
+<p>This equation holds only if \(\vec{F}\) and \(\vec{p}\) are in the same plane; if
+not (and they won't be for non-planar motion), the full <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> must be used.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m34gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. \(\vec{r}\), \(\vec{F}\), and \(\vec{p}\) are all coplanar for motion in a plane.</figcaption></figure><figure id="fig-3"><img src="figures/m34gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. For a particle in circular motion, \(\vec{r}\) and \(\vec{v}\) are perpendicular.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. Circular Motion of a Mass</h3>
+
+The torque and angular momentum for the special case
+of a single particle in circular motion can be easily related to the
+particle's angular variables.
+Suppose a particle of mass m moves about a circle of radius r with speed v
+(not necessarily constant) as shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+The particle's angular momentum is:
+<p>\[\vec{L} = \vec{r} \times m \vec{v},\]
+<p>but since \(\vec{r}\) and \(\vec{v}\) are perpendicular,
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>the magnitude of \(\vec{L}\) is:
+<p>\[L = m v r\]
+<p>and the direction is out of the page.
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> may be rewritten in terms of the angular velocity (since
+\(v = \omega r\)) as:
+<p>\[L = m r^2 \omega.\]
+<p>Similarly, the torque is:
+<p>\[\tau = \frac{dL}{dt} = m r^2 \frac{d\omega}{dt} = m r^2 \alpha,\]
+<p>where \(\alpha\) is the particle's angular acceleration.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Systems of Particles</h2>
+
+<p><h3 id="pcap-3-a">3a. Total Angular Momentum</h3>
+
+The total angular momentum of a system of particles is simply the sum of the
+angular momenta of the individual particles, added vectorially.
+Let \(\vec{L}_1\), \(\vec{L}_2\), \(\vec{L}_3\), \(\ldots\), \(\vec{L}_N\), be the
+respective angular momenta, about a given point, of the particles in the system.
+The total angular momentum about the point is:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[\vec{L} = \vec{L}_1 + \vec{L}_2 + \ldots =  \sum_{i = 1}^N \vec{L}_i.\]
+<p>As time passes, the total angular momentum may change.
+Its rate of change, \(d\vec{L}/dt\), will be the sum of the rates
+\(d\vec{L}_i/dt\) for the particles in the system.
+Thus \(d\vec{L}/dt\) will equal the sum of the torques acting on the particles.
+<p><h3 id="pcap-3-b">3b. Total Torque</h3>
+
+The total torque on a system of particles is just the sum of the external
+torques acting on the system.
+The torque due to internal forces is zero because by Newton's third law the
+forces between any two particles are equal and opposite and directed along
+the line connecting them.
+The net torque due to each such action-reaction force pair is zero so the
+total internal torque must also be zero.
+Then the total torque on the system is just equal to the sum of the external
+torques:
+<p>\[\vec{\tau} =  \sum_{i = 1}^N \vec{\tau}_{i,\text{ext}} \qquad \text{(system of particles)}.\]
+<p>For the system, then:
+<p>\[\vec{\tau} = \frac{d\vec{L}}{dt}.\]
+<p>In words, the time rate of change of the total angular momentum about a given
+point, for a system of particles, is equal to the sum of the external torques
+about that point and acting on the system.
+<p><h3 id="pcap-3-c">3c. Rigid Body Motion About a Fixed Axis</h3>
+
+A rigid body is a system of particles whose positions are all fixed relative
+to each other.
+Since&thinsp; \(L = m v r = m r^2 \omega\) for each particle in the body, we may write
+for the total angular momentum:
+<p>\[L = \left( \sum_i m_i r_i^2 \right) \omega,\]
+<p>where we have assumed that the body is rotating about a fixed axis with
+angular velocity \(\omega\).
+The quantity in parentheses,
+<p>\[I \equiv \sum_i m_i r_i^2,\]
+<p>is called the “moment of inertia” of the body.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>Thus we write
+<p>\[L = I \omega\]
+<p>and, since the axis of rotation is fixed, equations with a scalar appearance
+hold for the torque:
+<p>\[\tau = \frac{dL}{dt} = I \, \frac{d\omega}{dt} = I \alpha.\]
+<p><h3 id="pcap-3-d">3d. Example: Flywheel</h3>
+
+As a visual example, we calculate the torque and angular momentum for
+the special case of a flywheel where the entire mass is uniformly distributed
+around the rim.
+Let “\(dm\)” be the mass of an infinitesimal segment of the rim as shown in
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The angular momentum \(dL\) of the mass \(dm\) is:
+<p>\[dL = dm\,r^2 \omega.\]
+<p>Since \(r\) and \(\omega\) are the same for all points on the rim, the total
+angular momentum for the flywheel is:
+<p>\[L = \int\,dL = r^2 \omega \,\int\,dm = M r^2 \omega = I \omega,\]
+<p>where \(M\) is the total mass of the flywheel.
+This is identical to <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a> for a single mass \(M\) in circular motion.
+The total torque is also the same, i.e.,
+<p>\[\tau = \frac{dL}{dt} = M r^2 \alpha = I \alpha.\]
+<p><div class="figure-row figure-row-2"><figure id="fig-4"><img src="figures/m34gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Mass on the rim of a flywheel (heavy line).</figcaption></figure><figure id="fig-5"><img src="figures/m34gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Rotational \(E_k\) equals the sum of particles' \(E_k\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-e">3e. Kinetic Energy of Rotation</h3>
+
+The total kinetic energy of a system can be written in terms of the system's
+moment of inertia and angular velocity.
+We start with the statement that the total kinetic energy of the system of 
+particles, each of which is in circular motion about a fixed axis of
+rotation, is equal to the sum of the kinetic energies of the individual
+particles.
+<p>Each individual particle of mass \(m_i\) moves in a circle of radius \(r_i\) about
+the axis of rotation.
+If the positions of the particles are all fixed relative to each other (as
+in a rigid body), then the angular velocity \(\omega\) is the same for all
+particles.
+The kinetic energy of each particle is thus:
+<p>\[E_{ik} = \frac{1}{2} m_i v_i^2 = \frac{1}{2} m_i r_i^2 \omega^2\]
+<p>The total kinetic energy of the rotating body is therefore
+<p>\[E_k = \frac{1}{2} m_1 r_1^2 \omega^2 + \frac{1}{2} m_2 r_2^2 \omega^2 + \ldots
+ = \frac{1}{2} \left[ \sum_{i = 1}^N m_i r_i^2 \right] \omega^2\]
+<p>By <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> the sum, \(\sum m_i r_i^2\), is just the moment of inertia \(I\) of
+the body, so the rotational kinetic energy for a rigid body can finally be
+written:
+<p>\[E_k = \frac{1}{2} I \omega^2.\]
+<p><span class="tryit">Try it:</span>  See if you can determine the moment of inertia and kinetic energy of our
+flywheel in Sect.&thinsp;3d. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-3-f">3f. Linear vs. Rotational Motion</h3>
+
+Here is a comparison of the equations of dynamics in “normal” and
+“rotational” form:
+
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1. General forms.</td></tr><tr><td>Normal</td><td>Rotational</td></tr><tr><td>\(\vec{F} = d\vec{P}/dt\)</td><td>\(\vec{\tau} = d\vec{L}/dt\)</td></tr><tr><td>\(E_k = M V^2 / 2\)</td><td>\(E_k = I \omega^2 / 2\)</td></tr></tbody></table>
+</div>
+
+For a rigid body rotating about a fixed axis, the following comparisons hold.
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 2. Rigid-body forms.</td></tr><tr><td>Normal</td><td>Rotational</td></tr><tr><td>\(P = M v \)</td><td>\(L = I \omega\)</td></tr><tr><td>\(F = dp/dt = M a\)</td><td>\(\tau = dL/dt = I \alpha\)</td></tr></tbody></table>
+</div>
+
+Some of the equations shown in the Table&nbsp;2 can be rewritten in vector/tensor form so
+they have validity beyond linear and circular motion.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Conservation of Angular Momentum</h2>
+
+<p><h3 id="pcap-4-a">4a. Statement of the Law</h3>
+
+The total angular momentum of a system of particles is conserved if there are
+no external torques acting on the system.
+Thus:
+<p>\[\vec{\tau} = 0 = \frac{d\vec{L}}{dt}\]
+<p>so \(\vec{L}\) is a constant.
+For a rigid body rotating about a fixed axis, \(L = I \omega\), so that if \(I\)
+changes, there must be a compensating change in \(\omega\) in order for \(L\) to
+remain constant.
+<p><h3 id="pcap-4-b">4b. If the External Torque is not Zero</h3>
+
+If the external torque on a system is not zero then angular momentum is not
+conserved for the system.
+However, all is not lost, for if the system is expanded to include whatever
+is causing the external torque on it (therefore changing it into an internal
+torque), angular momentum will be conserved for the expanded system.
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m34gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Two flywheels, one spinning, one at
+rest, are brought together.</figcaption></figure>
+
+<p><h3 id="pcap-4-c">4c. Example: Two Flywheels</h3>
+
+Consider what happens when two identical flywheels,
+one spinning and one at rest, are suddenly brought together.
+The spinning flywheel has total angular momentum \(L_0 = M r^2 \omega_0\) before
+it is allowed to come in contact with the second flywheel.
+When the two flywheels come together, the friction between them causes a
+torque to be exerted on the spinning one and, since this torque comes
+from an external source, the angular momentum of the spinning flywheel is not
+conserved.
+If, however, our system consists of both flywheels, the torques each exert
+on the other are internal to the system and so there is no longer an external
+torque.
+Thus for the expanded system, containing both flywheels, angular momentum is
+conserved.
+This tells us that:
+<p>\[M r^2 \omega_0 = M r^2 \omega_f + M r^2 \omega_f = 2 M r^2 \omega_f,\]
+<p>where \(\omega_f\) is the final angular velocity at which the two flywheels
+rotate.
+Once they are together---the spinning one slowed down
+(\(\omega_0 \rightarrow \omega_f\)), the other having gone from zero to
+\(\omega_f\)---the two act as a single flywheel, with mass 2&thinsp;\(M\),
+rotating with angular velocity \(\omega_f = \omega_0/2\). <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>.
+<p><h3 id="pcap-4-d">4d. Kinetic Energy of the Two Flywheels</h3>
+
+When flywheels rotating at different speeds are brought into contact, it can
+be expected that kinetic energy is not conserved.
+This is because the nonconservative frictional force acts on the two
+flywheels.
+The kinetic energy is initially
+<p>\[E_{k0} = \frac{1}{2} M r^2\omega_0^2,\]
+<p>and afterward it is: <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p>\[E_{kf} = M r^2 \omega_f^2 = \frac{1}{4} M r^2 \omega_0^2.\]
+<p>Therefore the ratio of the final kinetic energy to the initial kinetic energy
+is:
+<p>\[\frac{E_{kf}}{E_{k0}} = \frac{1}{2}.\]
+<p>This means that half of the initial kinetic energy has been dissipated due
+to the frictional forces between the surfaces of the two flywheels.
+Thus the total angular momentum of the system is conserved even though the
+total kinetic energy is not.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Nonplanar Rigid Bodies</h2>
+
+<p>Although the flywheel has been used as a specific example of rotational
+motion, the concepts described can be applied to all rigid bodies whether
+they are planar or not.
+The rotational motion of nonplanar rigid bodies is discussed elsewhere.
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>This module is based on one by J.&thinsp;Borysowicz and P.&thinsp;Signell.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+\(\vec{L} = \vec{r} \times \vec{p}\), where
+\(\vec{p}\) is the linear momentum of a particle at a position \(\vec{r}\) with
+respect to the origin.
+the total angular momentum of a system
+is conserved if the external torque on the system is zero.
+the sum
+\(I \equiv \sum m_i r_i^2\).
+a system of particles whose positions are fixed relative to
+each other.
+the application of dynamics to rotating bodies.
+the kinetic energy of a particle or system of
+particles rotating about a fixed point.
+\(\vec{\tau} = \vec{r} \times \vec{F}\), where
+\(\vec{F}\) is the force acting on a particle located at \(\vec{r}\).
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Kinematics: Circular Motion” (MISN-0-9) and “Torque and
+Angular Acceleration for Rigid Planar Objects: Flywheels” (MISN-0-33). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Force and Torque” (MISN-0-5). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">This equation is valid only if \(\vec{\tau}\) and \(\vec{L}\) are
+measured with respect to the same origin. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The component equations are
+\(\tau_x = dL_x/dt\), \(\tau_y = dL_y/dt\), \(\tau_z = dL_z/dt\). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Kinematics: Circular Motion” (MISN-0-9). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Torque and Angular Acceleration for Rigid Plane Objects:
+Flywheels” (MISN-0-33). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">For continuous mass distributions the summation becomes an
+integration. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See “Uniform Circular Motion: Moment of Inertia, Conservation of
+Angular Momentum, Kinetic Energy, Power” (MISN-0-41). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See “Rotational Motion of a Rigid Body” (MISN-0-36). <a href="#fnref-9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Problem&nbsp;5 also occurs on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A flywheel of radius 0.50<span class="unit">&thinsp;m</span> and mass 500.0<span class="unit">&thinsp;kg</span> has a torque of
+30.0<span class="unit">&thinsp;N&thinsp;m</span> acting on it.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate its moment of inertia.</li>
+<li><span class="item-label">b.</span> Find its angular acceleration.</li>
+<li><span class="item-label">c.</span> Assuming the flywheel is initially at rest, calculate the time
+required to complete the first two revolutions.</li>
+<li><span class="item-label">d.</span> What is its angular velocity and tangential velocity after two
+revolutions?</li>
+<li><span class="item-label">e.</span> Find its kinetic energy after two revolutions.
+</li>
+<li><span class="item-label">2.</span> A very lightweight circular platform has a weight of 300.0<span class="unit">&thinsp;N</span> placed on it
+at a distance 25<span class="unit">&thinsp;cm</span> from its center.
+The platform is placed horizontally on a pedestal such that a frictional drag
+force acts on the platform at the point where the weight is.
+The coefficient of friction is \(\mu = 0.050\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch the forces acting on the platform (assume it has zero mass)
+and find their numerical values.</li>
+<li><span class="item-label">b.</span> Calculate and sketch all torques acting on the system.</li>
+<li><span class="item-label">c.</span> If the platform initially rotates at \(8\pi\,\text{radians/s}\), find how
+long it takes for it to slow down and stop.</li>
+<li><span class="item-label">d.</span> What else must be included in the system in order for angular
+momentum to be conserved?
+</li>
+<li><span class="item-label">3.</span> Suppose the stabilizing gyroscope of a ship has a rotor of mass
+\(5.0 \times 10^4\,\text{kg}\), all located on the rim at a radius of 0.20<span class="unit">&thinsp;m</span>.
+The rotor is started from rest by a constant force of \(1.00 \times 10^3\,\text{N}\)
+applied through a belt on the rim by a motor.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a diagram showing all forces acting on the rotor.</li>
+<li><span class="item-label">b.</span> Show all torques acting on the rotor.</li>
+<li><span class="item-label">c.</span> Compute the length of time needed to bring the rotor up to its
+normal speed of \(9.00 \times 10^2 \,\text{rev/min}\).</li>
+<li><span class="item-label">d.</span> State what else you must include in the system so that the total
+angular momentum will be conserved.
+That is, name the other object whose rotational speed about the rotor shaft
+changes oppositely as the rotor picks up speed.
+Describe the reaction torque which produces the angular acceleration of the
+other object.
+</li>
+<li><span class="item-label">4.</span> <span class="item-text">A system consists of two massless struts, rigidly connected to a
+sleeve as shown in the diagram.
+The force \(\vec{F}\) is always at right angles to its strut and the axle is
+vertical, enabling the system to rotate freely in a horizontal plane (the
+sketch is a view “looking down”).
+Neglect gravity.</span><img src="figures/m34gr07.svg" alt="" class="fig-item">
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> State why gravity can be neglected in this problem.</li>
+<li><span class="item-label">b.</span> Sketch all forces acting on the system.</li>
+<li><span class="item-label">c.</span> Write down and justify the value of the (net) total force acting on
+the system.</li>
+<li><span class="item-label">d.</span> Write down or sketch all torques acting on the system.
+
+At the end of the system's first complete revolution, derive the mass \(m\)'s:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">e.</span> moment of inertia about the axle</li>
+<li><span class="item-label">f.</span> angular acceleration</li>
+<li><span class="item-label">g.</span> time</li>
+<li><span class="item-label">h.</span> angular velocity</li>
+<li><span class="item-label">i.</span> tangential velocity</li>
+<li><span class="item-label">j.</span> kinetic energy</li>
+<li><span class="item-label">k.</span> work done on it (\(\int\vec{F} \cdot\)&thinsp;d\(\vec{x}\))</li>
+<li><span class="item-label">l.</span> total energy</li>
+<li><span class="item-label">m.</span> change in angular momentum about the axle.
+
+Describe a plausible expanded system within which angular momentum is
+conserved in the above case.
+Specifically:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">n.</span> Describe the reaction torque which produces the compensating angular
+momentum.
+</li>
+<li><span class="item-label">5.</span> A vertical flywheel of radius \(R\) contains (virtually) all of its mass \(M\)
+on its rim and has a handle on one spoke at a radius \(r\) which is less than the
+radius of the rim.
+You stand next to the flywheel, grasp the handle, and apply a constant
+tangential force \(F\) to the handle.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch all forces acting on the flywheel including that due to
+gravity.</li>
+<li><span class="item-label">b.</span> Write down and justify the value of the net (total) force on the
+flywheel.</li>
+<li><span class="item-label">c.</span> Write down or sketch all torques acting on the system.
+
+At the end of one-half of a revolution, find the rim's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">d.</span> moment of inertia about the axle</li>
+<li><span class="item-label">e.</span> angular acceleration</li>
+<li><span class="item-label">f.</span> time</li>
+<li><span class="item-label">g.</span> angular velocity</li>
+<li><span class="item-label">h.</span> tangential velocity</li>
+<li><span class="item-label">i.</span> kinetic energy</li>
+<li><span class="item-label">j.</span> work done on it</li>
+<li><span class="item-label">k.</span> total energy</li>
+<li><span class="item-label">l.</span> angular momentum</li>
+<li><span class="item-label">m.</span> Describe the mechanism by which angular momentum is conserved in
+this case.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(I = \sum m_i r_i^2 = M r^2 = (500\,\text{kg})(0.50\,\text{m})^2 =
+           125\unit{kg\,m^{2}}\)</li>
+<li><span class="item-label">b.</span> \(\tau = I \alpha\)</li>
+<li>\(\alpha = \frac{\tau}{I} =
+           \frac{30\,\text{N\,m}}{125\unit{kg\,m^{2}}} = 0.24\unit{rad/s^{2}}\)</li>
+<li><span class="item-label">c.</span> \(\theta = \frac{1}{2}\alpha t^2\): \(\theta = 4 \pi\)</li>
+<li>\(t = \left( \frac{2 \theta }{\alpha} \right)^{1/2} =
+           \left[ \frac{(2)(4\pi)}{0.24\,\text{s}} \right]^{1/2} =
+           10.2\,\text{s}\)</li>
+<li><span class="item-label">d.</span> \(\omega = \omega_0 + \alpha t = 0 + (0.24/\unit{s^{2}})(10.2\,\text{s})
+           = 2.4\,\text{rad/s}\)</li>
+<li>\(v = \omega r = (2.4\,\text{rad/s})(0.50\,\text{m}) = 1.2\,\text{m/s}\)</li>
+<li><span class="item-label">e.</span> \(E_k = \frac{1}{2} I \omega^2 = \frac{1}{2}(125\unit{kg\,m^{2}})
+           (2.4\,\text{s})^2 = 360\,\text{J}\)
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <span class="item-text">\(F(\,\text{gravity}) = 300\,\text{N}\)</span><img src="figures/.svg" alt="" class="fig-item"></li>
+<li>\(F(\,\text{reaction}) = 300\,\text{N}\) </li>
+<li>\(F(\,\text{friction}) = \mu N(\text{normal})\)</li>
+<li>\(\phantom{F(\,\text{friction})} = (0.05)(300\,\text{N})\)</li>
+<li>\(\phantom{F(\,\text{friction})} = 15\)<span class="unit">&thinsp;N</span>m34gr08</li>
+<li><span class="item-label">b.</span> <span class="item-text">\(\tau(\,\text{friction}) = r F(\,\text{friction})\)</span><img src="figures/.svg" alt="" class="fig-item"></li>
+<li>\(\phantom{\tau(\,\text{friction})} = (0.25\,\text{m})(15\,\text{N})\)</li>
+<li>\(\phantom{\tau(\,\text{friction})} = 3.75\,\text{N}\,\text{m}\)m34gr09</li>
+<li><span class="item-label">c.</span> \(\tau = I \alpha\); \(I = M r^2\)</li>
+<li>\(\alpha = \frac{\tau}{I} = \frac{\tau}{M r^2} =
+           \frac{3.75\,\text{N}\,\text{m}}{(300\,\text{N}/9.8\unit{m/s^{2}})
+           (0.25\,\text{m})^2} = 1.96\unit{/s^{2}}\)</li>
+<li>\(\omega = \alpha t\)</li>
+<li>\(t = \frac{\omega}{\alpha} =
+           \frac{8 \pi /\,\text{s}}{1.96/\unit{s^{2}}} = 12.8\,\text{s}\)</li>
+<li><span class="item-label">d.</span> If the pedestal and earth are included then the earth will acquire
+           the compensating angular momentum so angular momentum is conserved
+           for the combined system.
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m34gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> only one torque (from belt): out of paper.</li>
+<li><span class="item-label">c.</span> \(1.57 \times 10^1\,\text{min}\).</li>
+<li><span class="item-label">d.</span> The motor exerts a torque on the ship through the
+           motor's mounting bolts and mounting bed, while the ship
+           transmits it to the water and the water transmits some of
+           it to the earth.
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The force and torque produced by gravity are exactly cancelled by
+           the force and torque exerted on the system to keep it in a
+           horizontal plane.</li>
+<li><span class="item-label">b.</span> <figure class="fig-centered"><img src="figures/m34gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> net force is zero because the system goes nowhere (does not
+           accelerate away from its present location).</li>
+<li><span class="item-label">d.</span> \(\vec{\tau} = r F\), into the paper</li>
+<li><span class="item-label">e.</span> \(I = m R^2\)</li>
+<li><span class="item-label">f.</span> \(\alpha = \tau /I = F r / (m R^2)\)</li>
+<li><span class="item-label">g.</span> \(\theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2\)</li>
+<li>\(2 \pi = 0 + 0 + \left( \frac{1}{2} \right)
+           \left( \frac{F r}{m R^2} \right) t^2\)</li>
+<li>\(t = \left( \frac{4 \pi m R^2}{F r} \right)^{1/2}\)</li>
+<li><span class="item-label">h.</span> \(\omega = \omega_0 + \alpha t =
+           0 + \frac{F r}{m R^2} \left( \frac{4 \pi m R^2}
+           {F r} \right)^{1/2} =
+           \left( \frac{F r 4 \pi}{m R^2} \right)^{1/2}\)</li>
+<li><span class="item-label">i.</span> \(v = \omega R = \left( \frac{F r 4 \pi}{m} \right)^{1/2}\)</li>
+<li><span class="item-label">j.</span> \(E_k = \frac{1}{2} m v^2 = F r 2 \pi\)</li>
+<li><span class="item-label">k.</span> \(W = \int \vec{F} \cdot d\vec{x} = \int F r\,d\theta = F r 2 \pi\)</li>
+<li><span class="item-label">l.</span> \(E_\text{tot} = E_k = F r 2 \pi\)</li>
+<li><span class="item-label">m.</span> \(\Delta L = m v R = (m F r 4 \pi)^{1/2} R\) (into paper)</li>
+<li><span class="item-label">n.</span> If the axle is attached to the earth and if \(F\)'s reaction force is
+           against the earth, then it is the earth which acquires the
+           compensating angular momentum about the axle.
+</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m34gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> zero; no acceleration of the (center of the) flywheel.</li>
+<li><span class="item-label">c.</span> \(F r\), into page</li>
+<li><span class="item-label">d.</span> \(M R^2\)</li>
+<li><span class="item-label">e.</span> \(F r / (M R^2)\)</li>
+<li><span class="item-label">f.</span> \(\left( \frac{2 \pi M R^2}{F r} \right)^{1/2}\)</li>
+<li><span class="item-label">g.</span> \(\left( \frac{F r 2 \pi}{M R^2} \right)^{1/2}\)</li>
+<li><span class="item-label">h.</span> \(\left( \frac{F r 2 \pi}{M} \right)^{1/2}\)</li>
+<li><span class="item-label">i.</span> \(F r \pi\)</li>
+<li><span class="item-label">j.</span> \(F r \pi\)</li>
+<li><span class="item-label">k.</span> \(F r \pi\)</li>
+<li><span class="item-label">l.</span> \((M F r 2 \pi)^{1/2}\,R\)</li>
+<li><span class="item-label">m.</span> The expanded system consists of the flywheel, you, and the earth.
+The (frictional) force of your feet and the reaction force of the mounting
+bolts against the earth causes the earth's angular momentum about the axle
+to change in a compensating fashion.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+ \[\frac{d(\vec r \times \vec p)}{dt} =
+        \frac{d\vec r}{dt}\times\vec p + \vec r \times \frac{d\vec p}{dt}\]
+ 
+ so:
+ 
+ \[\vec r \times \frac{d\vec p}{dt} =
+   \frac{d}{dt}(\vec r \times \vec p) - \frac{d\vec r}{dt} \times \vec p\]
+ 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+ \[I = r^2\int dm = Mr^2\]
+ 
+ \[E_k = \frac{1}{2}\,I\omega^2 = \frac{1}{2}Mr^2\omega^2\]
+ 
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+ \[Mr^2\omega_0 = Mr^2\omega_f + Mr^2\omega_f = 2Mr^2\omega_f\]
+ 
+ \[\Longrightarrow\ \omega_0 = 2\omega_f\]
+ 
+ \[\omega_f = \frac{1}{2}\omega_0\]
+ 
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+ \[E_{kf} = \frac{1}{2}Mr^2\omega_f^2 + \frac{1}{2}Mr^2\omega_f^2
+ = Mr^2\omega_f^2 = Mr^2(\frac{1}{2}\omega_0)^2
+ = \frac{1}{4}Mr^2\omega_0^2\]
+ 
+ \[\Longrightarrow \frac{E_{kf}}{E_{k0}} =
+        \frac{\frac{1}{4}Mr^2\omega_0^2}{\frac{1}{2}Mr^2\omega_0^2} =
+                  \frac{1}{2}\]
+ 
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.
+The actual exam may contain one or more, or none, of these skills.</li>
+<li><span class="item-label">2.</span> A vertical flywheel of radius \(R\) contains (virtually) all of its mass \(M\)
+on its rim and has a handle on one spoke at a radius \(r\) which is less than the
+radius of the rim.
+You stand next to the flywheel, grasp the handle, and apply a constant
+tangential force \(F\) to the handle.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch all forces acting on the flywheel including that due to
+gravity.</li>
+<li><span class="item-label">b.</span> Write down and justify the value of the net (total) force on the
+flywheel.</li>
+<li><span class="item-label">c.</span> Write down or sketch all torques acting on the system.
+
+At the end of one-half of a revolution, find the rim's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">d.</span> moment of inertia about the axle</li>
+<li><span class="item-label">e.</span> angular acceleration</li>
+<li><span class="item-label">f.</span> time</li>
+<li><span class="item-label">g.</span> angular velocity</li>
+<li><span class="item-label">h.</span> tangential velocity</li>
+<li><span class="item-label">i.</span> kinetic energy</li>
+<li><span class="item-label">j.</span> work done on it</li>
+<li><span class="item-label">k.</span> total energy</li>
+<li><span class="item-label">l.</span> angular momentum</li>
+<li><span class="item-label">m.</span> Describe the mechanism by which angular momentum is conserved in
+this case.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;5.</li>
+</ol>
+
+</section>
+

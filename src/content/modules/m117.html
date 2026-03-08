@@ -1,0 +1,698 @@
+<header class="module-header">
+  <h1 class="module-title">Particle Energy in an Electrostatic Field <span class="module-author">(J.Kovacs and P.Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: Coulomb's law <a href="../m114/" class="module-ref">MISN-0-114</a>; electrostatic field
+     (0-115); conservative force field (0-21); electrostatic potential, volt
+    (0-116); power, work, kinetic energy (0-20); rest mass (0-23).</li><li><strong>2.</strong> Use the work-energy principle to calculate the change in kinetic
+    energy of a particle acted on by conservative and non-conservative forces
+    <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>3.</strong> Determine the work done by an electrostatic field on a charged
+    particle moving between two points, given the potential difference between
+    those two points <a href="../m116/" class="module-ref">MISN-0-116</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: ampere, battery, electric current, electron-volt,
+    power (electrical).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Use the conservation of energy to calculate the kinetic energy
+    or speed of a charged particle when that particle falls through a given
+    potential difference.</li><li><strong>S2.</strong> Express the energy and mass of a particle in electron-volts (eV),
+    million-electron-volts (MeV) and other multiples-of-a-thousand of the
+    electron-volt.</li><li><strong>S3.</strong> Calculate the power requirements associated with energy
+    transfers from an electric field to particles for a beam of charged
+    particles.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Conductivity and Resistance” (MISN-0-118).</li><li><strong>2.</strong> “Examining the Charge Carriers: The Hall Effect” (MISN-0-149).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Applying Conservation of Energy</h3>
+
+The electrostatic field is much like the gravitational field, so the
+idea of conservation of energy that proved so useful in solving
+gravitational problems can be similarly used in solving electrostatic
+problems.
+Of course the force constant is different for gravitation and
+electrostatics, and the electrostatic force can be repulsive as well
+as attractive.
+However, the radial dependence of the two forces is the same and both are
+independent of the velocities of the interacting objects.
+This means that potential energy is a unique quantity for both, and that
+total energy is conserved for both.
+There is a difference in that in the gravitational case a mass always
+“falls” in the direction of the gravitational field, whereas in the
+electrostatic case a positive charge “falls” in the direction of the
+electric field but a negative charge “falls” in the opposite direction.
+Of course as either particle “falls” its potential energy decreases and
+its kinetic energy increases to keep its total energy constant.
+<p><h3 id="pcap-1-b">1b. Force, Electric Field, Potential, Potential Energy</h3>
+
+The terms “force,” “electric field,” “potential difference,” and
+“potential energy difference” refer to four different concepts.
+<p>A non-zero value for “force” requires that a particle be present that is
+experiencing the force.
+Thus we say “the force on particle \(A\) is \ldots  .”
+<p>A non-zero value for “electric field” refers to a value at a point of
+space, whether a particle is there or not.
+Thus we say “the electric field at point \(A\) is \ldots  .”
+<p>A non-zero value for the “potential difference” between two points in
+space is the work per unit charge that must be expended to move a small
+“test” charge from one of the two points to the other.
+<p>A non-zero value for the “potential energy difference” refers to two 
+points in space plus a specific particle: the value is the work that must
+be done to take the particle from one of the two points to the other.
+<p>As a specific example, the potential difference between space-points \(A\) and
+\(B\) might be 9.2&thinsp;J/C and the electric field at \(A\) might be, say, 7.4&thinsp;N/C.
+<p><span class="tryit">Try it:</span>  Show that the potential energy difference between those two points
+for a particle with charge 0.1&thinsp;C would be 0.92&thinsp;J and the force on the
+particle when at \(A\) would be 0.74&thinsp;N.
+<p>Since a joule per coulomb is also called a “volt,” the potential
+difference could be quoted as 9.2&thinsp;V and the electric field could be
+quoted as 7.4&thinsp;V/m.
+<p><span class="tryit">Try it:</span>  Show that an electron would have a potential energy difference of
+9.2&thinsp;electron-volts between the two points and would experience a force
+of 7.4&thinsp;electron-volts per meter at point \(A\) (of course these values could
+also be stated in J and N).
+<p><h3 id="pcap-1-c">1c. Potential Energy and Potential Energy Difference</h3>
+
+A definite value for a particle's <em>kinetic</em> energy allows you to
+calculate that particle's speed, but a definite value for the particle's
+ potential energy, by itself, tells you nothing.
+You must know where the potential energy is defined to be zero
+or else you must know the <em>potential difference</em> through which the
+particle has moved since its characteristics were last known.
+For example, it is meaningful to ask how much the particle's speed
+<em>changes</em> when its potential energy <em>changes</em> by a specified
+amount just as it is meaningful to ask how much a particle's speed changes
+when it falls from one altitude to another.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Energy Conservation</h2>
+
+<p><h3 id="pcap-2-a">2a. Electrostatic Fields Conserve Energy</h3>
+
+Because the force exerted on a charged particle by an electrostatic field is
+conservative, the electrostatic potential energy plus the kinetic energy for
+the charged particle in the electrostatic field is a constant, provided no
+other forces act on the particle.
+<p><h3 id="pcap-2-b">2b. Gravitational Field and Potential</h3>
+
+As a guide to defining electrostatic potential energy, we here review the
+reasoning we use in the gravitational case.
+As a concrete example, consider raising a mass from a point \(A\) above the
+floor to a point \(B\) that is higher above the floor.
+As we do work on the mass in raising it, the mass's gravitational potential
+energy increases.
+That is, we do positive work on the system and we increase its
+potential energy in moving it from point \(A\) to point \(B\):
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\text{grav'l pot. energy diff. } =
+        W_{\text{us on mass, } B \leftarrow A} =
+        \int^B_A \vec{F}_\text{us on mass} \cdot d\vec{r}\,.\]
+<p>We now define the “gravitational potential difference” in going from
+point \(A\) to point \(B\), \(V_{\text{grav},BA}\), as the potential energy difference per
+unit mass in moving a small “test” mass from point \(A\) to point \(B\), and
+we define the gravitational field at a point \(A\) in space,
+\(\vec{\cal G}(\vec{r}_A)\), as the force per unit mass on a small “test”
+mass placed at point \(A\).
+<p>Then <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> can be written:
+<p>\[V_{grav,BA} = - \int^B_A \vec{\cal G} \cdot d\vec{r}\,,\]
+<p>where we have used the fact that the gravitational force on the mass is
+equal but opposite to the force we exerted on it as we raised it higher
+above the floor.
+Since signs are important, we now switch away from the ambiguous term
+“the potential difference between \(A\) and \(B\)” and start calling the same
+quantity “the (gravitational) potential at point \(B\) with respect to point
+\(A\).”
+<p>We read <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> as “the (gravitational) potential at point \(B\)
+with respect to point \(A\) is the negative of the work per unit mass done by
+the field when a small “test” mass is taken from point \(A\) to point \(B\).”
+<p><span class="tryit">Try it:</span>  Check the signs in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> by noting that when an object
+<p>“falls” under the sole influence of gravity, so its motion is in the same
+direction as the field, the object's potential energy decreases while its
+kinetic energy increases.
+<p><h3 id="pcap-2-c">2c. Electrostatic Field and Potential</h3>
+
+In analogy with the gravitational case, we define the electric field at a
+point \(A\) as the force per unit charge on a small test charge placed
+at that point.
+We define the (electrostatic) potential of point \(B\) with respect to point
+\(A\), \(V_{BA}\), as the negative of the work per unit charge done by the field
+when a small test charge is taken from point \(A\) to point \(B\):
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[V_{BA} = - \int^B_A \vec{E} \cdot d\vec{r}\,.\]
+<p><span class="tryit">Try it:</span>  Check the signs in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> by noting that when a positive
+charge “falls” from a point \(A\) to a point \(B\) under the sole influence
+of the electric field, its motion is in the same direction as the electric
+field so the charge's potential energy decreases while its kinetic energy
+increases.
+<p><h3 id="pcap-2-d">2d. Conservation of Energy</h3>
+
+<p>With only conservative forces acting, a particle's total energy remains constant
+while it travels from some point \(A\) to some point \(B\).  Then:
+<p>\[\text{total energy at }A = \text{total energy at }B\,,\]
+<p>or:
+<p>\[\text{change in total energy } = 0 \,.\]
+<p>Since the particle's total energy is the sum of its kinetic and potential energies,
+we can express its non-change in total energy this way:
+<p>\[\text{change in kinetic energy} + \text{change in potential energy} = 0\,.\]
+<p>This is usually written in a <em>delta notation</em> where the Greek letter \(\Delta\)
+denotes the words “change in” and we use the symbols \(E_\text{k}\) and \(E_\text{p}\)
+to refer to the particle's kinetic and potential energies, respectively:
+<p>\[{\Delta}E_\text{k} + {\Delta}E_\text{p} = 0 \,.\]
+<p>Note that the \(\Delta\) notation and the equivalent words “change in” always refer to the 
+final value of some quantity minus the initial value.
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>If we specify a charge \(Q\) on a particle being moved from \(A\) to \(B\), the change in the energy
+of the particle can be written in terms of the change in potential:
+<p>\[{\Delta}E_\text{k} + Q {\Delta}V = 0\,.\]
+<p>It is also interesting to put in the space-point designators explicitly,  
+<p>\[E_{\text{k},B} - E_{\text{k},A} + Q V_{BA} = 0\,,\]
+<p>and solve for the kinetic energy at point \(B\):
+<p>\[E_{\text{k},B} = E_{\text{k},A} - Q V_{BA}\,.\]
+<p>Think about what <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> says: the kinetic energy of the particle
+at point \(B\) is the kinetic energy it had at point \(A\) minus the change
+in its electrostatic potential energy in going from \(A\) to \(B\).
+For example: if the particle went “down hill” in terms of its potential energy,
+so the change in potential energy was negative, then the particle gained kinetic energy.
+<p><span class="tryit">Try it:</span>  Determine that a proton, starting from rest and falling through a
+potential difference
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>of 100&thinsp;volts, will acquire a kinetic energy of \(1.6 \times 10^{-17}\)&thinsp;J.
+This may seem to be a very minute amount of energy, which it is.
+However, because the proton's mass is quite small
+(compared with masses we commonly encounter in the macroscopic world)
+it acquires a speed of \(1.38 \times 10^5\)&thinsp;m/s, a relatively large speed
+(for the proton's characteristics see the Appendix or the Glossary).
+<p><h3 id="pcap-2-e">2e. Non-conservative Forces Do Not Conserve Energy</h3>
+
+When non-conservative forces as well as the electrostatic field act on a
+particle, total particle energy (kinetic energy plus electrostatic potential
+energy) is no longer a constant.
+In such cases we must use the work-energy principle to determine how these
+non-conservative forces affect the energy of the particle.
+We often think of a non-conservative force as an “external agent,”
+either adding energy to or taking energy from the system.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Electron-Volt</h2>
+
+<p><h3 id="pcap-3-a">3a. Atomic and Subatomic Energies</h3>
+
+As the illustrative calculation at the end of Sect.&thinsp;1b hinted, the
+<em>joule</em> is awkwardly large to use as a unit of energy for the energies
+that atomic and subatomic particles normally have.
+It's as awkward for those cases as it would be to have the earth's mass as
+the standard unit of mass, where a 160&nbsp;pound person's mass would be
+expressed as \(1.21 \times 10^{-23}\)&thinsp;earth masses.
+For atomic particles, such as the proton and the electron, it is more 
+convenient to use the much smaller unit of energy called the electron-volt,
+abbreviated eV.
+The electron-volt is defined as the amount of energy an electron receives
+(or loses) when it moves between two points that differ in potential by one
+volt.
+Because this energy change is the electron's charge times a potential
+<p>difference [see <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>] we can see that this amount of energy in
+joules is
+<p>\[1\,\text{eV} = Q_\text{electron} (1\,\text{V}) =
+
+                    (1.602 \times 10^{-19}\,\text{C})(\text{V})\,,\]
+<p>\[1\,\text{eV} = 1.602 \times 10^{-19}\,\text{J}\,,\]
+<p>and is numerically equal to the electronic charge in coulombs.
+For the numerical example encountered at the end of Sect.&thinsp;2d, the more
+convenient answer would have been that the proton acquired a kinetic energy
+of 100&thinsp;eV.
+<p><h3 id="pcap-3-b">3b. Atomic and Subatomic Masses</h3>
+
+The rest mass of atomic and subatomic particles is also commonly expressed
+in energy units for which the electron-volt is again convenient.
+Recall that the energy associated with a mass \(m\) is \(mc^2\), where \(c\) is
+the numerical value of the speed of light.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The rest mass of the proton is \(1.67 \times 10^{-27}\)&thinsp;kg and its rest
+energy is \(1.50 \times 10^{-10}\)&thinsp;J.
+Expressed in electron-volts the rest energy is \(9.38 \times 10^8\)&thinsp;eV or
+938 million electron-volts (MeV), so the rest mass of the proton is
+938&thinsp;MeV/\(c^2\).
+Similarly, the electron's rest mass is 0.511&thinsp;MeV/\(c^2\).
+The elementary particles, which are considered the building blocks of all
+matter, when referred to, commonly have their masses given in the above
+units.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Accelerating a Stream of Particles</h2>
+
+<p><h3 id="pcap-4-a">4a. Electrons Are Accelerated by a Potential Difference</h3>
+
+If an electron traverses a gap, across which there is a potential difference
+of 6&nbsp;volts, the electron gains 6&nbsp;electron-volts of energy.
+We assume that the potential difference across that gap is maintained by
+some external source regardless of whether the electron is present and
+traverses the gap or not.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>If many electrons traverse the gap in a given unit of time the power
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>required to accelerate the electrons is determined directly from the amount 
+of energy each electron gains and the number of electrons per second that 
+are accelerated.
+The number of electrons per second being accelerated is usually expressed
+in charge units rather than an actual count of electrons.
+This is referred to as the “beam.”
+If it is expressed as charge per unit time it is referred to as
+the beam “current.”
+The SI unit of electric current is the “ampere” and it is one coulomb
+per second passing the point at which it is being measured.
+Related commonly used units: the milliampere, \(10^{-3}\)&thinsp;amperes, and
+microamperes, \(10^{-6}\)&thinsp;amperes.
+<p><span class="tryit">Try it:</span>  Each electron has a charge of \(- 1.6 \times 10^{-19}\)&thinsp;C.
+Show that in a one ampere current of electrons there are \(6.24 \times 10^{18}\)
+electrons passing any given space-point each second. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><h3 id="pcap-4-b">4b. Examples of Particle Accelerators</h3>
+
+In an X-ray machine, a steady stream of fast moving electrons is needed to
+produce a steady beam of X-rays.
+The X-rays are produced when the electrons impinge upon and are stopped by a
+metal target.
+The X-rays' energy
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>comes from the kinetic energy the electrons had when they were stopped.
+Where did the electron energy come from?
+The electrons received their energy from the electric field as they traveled
+across a high voltage gap between a region of low potential to a region of
+high potential.
+(Note that electrons, being negatively charged, gain energy when they rise
+in potential).
+How much energy depends upon the current of particles.
+This above illustration is but one example of many involving the
+acceleration of particles by means of electric fields.
+Particle accelerators used in basic physics experiments, electron
+microscopes, and TV picture tubes are some others.
+<p><h3 id="pcap-4-c">4c. Power Requirements of Particle Accelerators</h3>
+
+We can determine the power requirements of such systems from the basic
+fact that energy must be conserved.
+If a current \(I\) of charged particles are accelerated by a potential
+difference \(V\), as in the X-ray apparatus discussed earlier, then each
+unit of charge in the beam receives \(V\) energy as it traverses the
+potential drop.
+To get the energy acquired per second by the entire beam, we must multiply
+the energy acquired by a unit charge by the amount of charge per second
+in the beam, the current \(I\).
+Consequently, the beam acquired power, energy per second, of \(V \times I\).
+and this must be supplied by an external power source:
+<p>\[P = V\,I\,,\]
+<p>where \(P\) is the power required to maintain a beam-current \(I\)
+traversing a potential difference \(V\).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+We would like to thank Professor James Linnemmann for suggesting
+a number of improvements in this module.</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the SI unit of electric current; one ampere is one
+coulomb per sec.
+<p>technically, a group of cells that can store
+energy chemically and release it electrically at a fairly constant potential
+difference.
+Most cells contribute about 1.5&thinsp;V each, including lead-acid cells,
+carbon-zinc cells, alkaline cells, and gel cells, although rechargeables
+produce a slightly lower voltage.
+Thus a 1.5&thinsp;V flashlight “battery” contains one cell, a 9&thinsp;V “walkman”
+battery contains 6, and a normal 12&thinsp;V car battery contains 8.
+<p>for a beam, the amount of electric charge per
+second passing some point along the path of the beam.
+<p>an elementary particle, the common carrier of
+electricity in electric circuits.
+Each electron has a mass of \(9.1093897 \times 10^{-31}\)&thinsp;kg and a charge of
+\(-1.60217733 \times 10^{-19}\)&thinsp;C.
+Electrons are the sole constituents of the non-nucleus part of any except
+very rare atoms.
+<p>a unit of energy equal to the energy acquired
+by an electron as it moves through a potential difference of one volt;
+abbreviated eV; \(\,\text{eV} = 1.6 \times 10^{-19}\,\text{J}\).
+By tradition, \(10^6\,\text{eV}\) is called “million electron volts,”
+not “mega electron volts.”
+<p>the rate at which energy is consumed
+in an electrical system, usually expressed as \(P = dE/dt = V I\) where \(E\)
+is energy (not electric field) and \(V\) is the potential drop suffered by a
+beam of charged particles constituting an electric current \(I\).
+If \(V\) is in volts and \(I\) is in amperes, \(P\) is in watts (joules per
+second).
+For power to be consumed, work must be done on the system or energy must be
+fed in from some other source (such as chemical energy from a battery).
+<p>one of the two main constituents (along with the
+neutron), of any atom's nucleus.
+A free proton is stable, in contrast to the neutron, but each is made up
+of three quarks.
+The proton has a mass of \(1.6726231 \times 10^{-27}\)&thinsp;kg and a charge of
+\(1.60217733 \times 10^{-19}\)&thinsp;C, a charge that is exactly equal and opposite
+to that of the electron.
+<p>a charge sufficiently small so that its
+introduction at a point in space does not cause any change in the electric
+field at that point.
+<p>a mass sufficiently small so that its
+introduction at a point in space does not cause any change in the
+gravitational field at that point.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The relationship between the work integral and potential energy is
+the topic of MISN-0-21. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Professionals in science and technology describe \(V_{BA}\) in
+various ways:
+<ul>
+<li>“\(V_{BA}\) is the potential of \(B\) with respect to \(A\).”</li>
+<li>“\(V_{BA}\) is the potential difference between point \(B\) and point \(A\).”</li>
+<li>“\(V_{BA}\) is the potential of point \(B\) with \(A\) as the reference point.”</li>
+<li>“\(V_{BA}\) is the voltage at point \(B\) with point \(A\) as ground.”</li>
+</ul>
+ <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-9">Thus “change in” has exactly the same neaning here as it has in Mechanics,
+Heat, etc. <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-3">This describes going from a point of higher potential to one of
+lower potential. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Relativistic Energies: Thresholds for Particle Reactions,
+Binding Energies.” <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">An electrostatic condenser or capacitor is an example of a
+potential difference maintained across a gap by virtue of separation of
+charge.
+Any charged particle leaking across the gap decreases the potential
+difference.
+An outside source of potential, a battery, must be used to provide the
+energy to maintain the potential difference.
+See (MISN-0-135) for a discussion of capacitors. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Work, Kinetic Energy, Work-Energy Principle, Power”
+(MISN-0-20). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">The energy associated with X-rays and other quanta of
+electromagnetic radiation is discussed in “Characteristics of Photons”
+(MISN-0-212) and “The Photoelectric Effect” (MISN-0-213). <a href="#fnref-7" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;7 and 8 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Calculate the kinetic energy in joules acquired by a proton
+starting from rest and falling through a potential difference of 150&thinsp;volts.
+Also calculate the proton's final speed. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m117gr01.svg" alt="" class="physnet-fig"></figure>
+
+A charge \(Q_1 = - 8.0 \times 10^{-6}\)&thinsp;C is located at
+\(x = - 0.50\)&thinsp;m, \(y = 0.00\)&thinsp;m, and a charge
+\(Q_2 = +4.0 \times 10^{-6}\)&thinsp;C is located at the point \(x = + 1.6\)&thinsp;m,
+\(y = 0.0\)&thinsp;m.
+Due to the field set up by this system of charges:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the potential difference between the origin (\(x = 0\)&thinsp;m,
+\(y = 0\)&thinsp;m) and the point \(x = 0.0\)&thinsp;m, \(y = + 1.2\)&thinsp;m on the \(y\)-axis?</li>
+<li><span class="item-label">b.</span> Which point is at the higher potential?</li>
+<li><span class="item-label">c.</span> Suppose a charge \(Q' = - 2.0 \times 10^{-6}\)&thinsp;C goes from the
+origin to the point \(x = 0.0\)&thinsp;m, \(y = + 1.2\)&thinsp;m.
+How much work is done by the electric field?</li>
+<li><span class="item-label">d.</span> If an external agent (you with a pair of tweezers?) took the
+charged particle \(Q'\) of part (c) from an infinite distance away (starting it at rest)
+and placed it (at rest) at the origin, determine the work that would have to be done by
+this external agent.
+<a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">e.</span> If this same particle, \(Q'\), with mass\( = 0.0040\)&thinsp;kg, had
+instead a speed of \(1.0 \times 10^1\)&thinsp;m/s at the instant it got to the
+origin, then how much work would have been done by the external agent?
+<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+</li>
+<li><span class="item-label">3.</span> Express the answer to part (c) of Problem&nbsp;2 in electron-volts
+(eV), and million electron-volts (MeV), and giga electron-volts (GeV).</li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m117gr02.svg" alt="" class="physnet-fig"></figure>
+
+Asume some point \(P_3\) (not shown) as the reference point where the electrostatic potential
+is taken to be zero.
+A charged particle Q moves from point \(P_1\) where the potential
+is \(V_1\) to a point \(P_2\) where the potential is \(V_2\) along either path \(A\) or
+path \(B\) shown in the sketch above.
+It moves in such a way that its speed is negligible at both \(P_1\) and \(P_2\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> How much work is done by the electric field in going along path \(A\)?</li>
+<li><span class="item-label">b.</span> Because there was no kinetic energy imparted to the charged
+particle, there must have been another force, applied by some external
+agent, acting on the particle.
+How much work was done by the external agent?</li>
+<li><span class="item-label">c.</span> Repeat part (a) but for going from \(P_1 \rightarrow P_2\) along
+path \(B\).</li>
+<li><span class="item-label">d.</span> Repeat part (b) but for path \(B\).</li>
+<li><span class="item-label">e.</span> Suppose the particle \(Q\) goes from \(P_1 \rightarrow P_2\) along
+path \(A\) then from \(P_2 \rightarrow P_1\) along path \(B\), how much work is
+done by the field?
+</li>
+<li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m117gr03.svg" alt="" class="physnet-fig"></figure>
+
+Three point charges, each of charge
+\(Q = + 3.00 \times 10^{-6}\)&thinsp;C are situated on three of the corners of a
+square of side \(L = 0.200\)&thinsp;meters.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the mechanical work that must be done to move a charge
+\(q = + 5.0 \times 10^{-7}\)&thinsp;C from the other corner, point \(A\), to the
+center of the square, point \(B\).</li>
+<li><span class="item-label">b.</span> Where does the energy for doing this work come from?</li>
+<li><span class="item-label">c.</span> Where does the energy go if \(q\) is at rest both before it is
+moved from \(A\) and after it is at \(B\)?</li>
+<li><span class="item-label">d.</span> Suppose charge \(q\) was at rest at point \(A\) and had a kinetic
+energy of 0.150&thinsp;joules at point \(B\).
+What is the total energy that must be expended to move this charge from \(A\)
+to \(B\)?</li>
+<li><span class="item-label">e.</span> Where does this energy come from?</li>
+<li><span class="item-label">f.</span> Where does it go?
+</li>
+<li><span class="item-label">6.</span> A 10.0&thinsp;milliampere beam of doubly-charged helium nuclei (alpha
+particles) was accelerated through a potential difference of \(1.0 \times 10^1\)&thinsp;KV.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the kinetic energy per beam particle after this
+acceleration. (Assume the \(\alpha\)-particles start from rest.
+By “doubly-charged” is meant having twice the charge of the proton).
+Express your answer in joules and electron-volts.</li>
+<li><span class="item-label">b.</span> How much power must be supplied to maintain such a process?
+</li>
+<li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m117gr04.svg" alt="" class="physnet-fig"></figure>
+
+Three charges (\(Q_1\), \(Q_2\), and \(Q_3\)) are located on a
+cartesian axis as shown above.
+A fourth charge, \(Q_4 = - 2.8 \times 10^{-6}\)&thinsp;C, initially at rest at the
+point (0,-4), moves to the origin under the influence of the electrostatic
+field alone.
+Its mass is \(7.3 \times 10^{-8}\)&thinsp;kg.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the change in electrostatic potential energy of the
+          particle.</li>
+<li><span class="item-label">b.</span> What is the speed of the particle at the origin?
+</li>
+<li><span class="item-label">8.</span> A beam of electrons is accelerated from rest through a potential
+difference of 15,000&thinsp;V.
+The current of the beam is 2.5&thinsp;mA.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the final kinetic energy of the electrons in the beam?
+           Express your answer in joules and electron-volts.</li>
+<li><span class="item-label">b.</span> Calculate the final speed of the electrons.</li>
+<li><span class="item-label">c.</span> How much power is required to produce this current?
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(E = 2.4 \times 10^{-17}\)&thinsp;J; \(v = 1.7 \times 10^5\)&thinsp;m/s</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(8.4 \times 10^4\,\text{V}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a> (the answer is NOT \(9.3\times10^4\,\text{V}\))</li>
+<li><span class="item-label">b.</span> The point \(y = 1.2\,\text{m}\), \(x = 0.0\,\text{m}\) is at the higher potential
+(both are at negative potential, but the point at \(y = + 1.2\,\text{m}\) is closer
+to zero potential).</li>
+<li><span class="item-label">c.</span> \(+0.17\,\text{J}\)</li>
+<li><span class="item-label">d.</span> 0.24<span class="unit">&thinsp;J</span> <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">e.</span> 0.44<span class="unit">&thinsp;J</span>
+</li>
+<li><span class="item-label">3.</span> \(1.05 \times 10^{18}\,\text{MeV}\), \(1.05 \times 10^{12}\,\text{MeV}\),
+\(1.05 \times 10^9\,\text{GeV}\)</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(Q (V_1 - V_2)\)</li>
+<li><span class="item-label">b.</span> \(Q (V_2 - V_1)\)</li>
+<li><span class="item-label">c.</span> \(Q (V_1 - V_2)\)</li>
+<li><span class="item-label">d.</span> \(Q (V_2 - V_1)\)</li>
+<li><span class="item-label">e.</span> zero
+</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 0.104&thinsp;J (The answer is NOT negative.)</li>
+<li><span class="item-label">b.</span> From the external agent that moved \(q\) from \(A\) to \(B\).</li>
+<li><span class="item-label">c.</span> Into the potential energy of the system, which increases.</li>
+<li><span class="item-label">d.</span> 0.254&thinsp;J</li>
+<li><span class="item-label">e.</span> From the external agent.</li>
+<li><span class="item-label">f.</span> Into the potential energy of the system, which increases, and
+into the kinetic energy of the particle \(q\), which also increases.
+</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(3.2 \times 10^{-15}\)&thinsp;J or \(2.0 \times 10^4\)&thinsp;eV</li>
+<li><span class="item-label">b.</span> \(1.0\times10^2\)&thinsp;watts
+</li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(- 3.8 \times 10^{-2}\)&thinsp;J</li>
+<li><span class="item-label">b.</span> \(1.0 \times 10^3\)&thinsp;m/s
+</li>
+<li><span class="item-label">8.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(2.4 \times 10^{-15}\)&thinsp;J or 15,000&thinsp;eV (or 15&thinsp;KeV)</li>
+<li><span class="item-label">b.</span> \(7.3 \times 10^7\)&thinsp;m/s</li>
+<li><span class="item-label">c.</span> 38&thinsp;W
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The sign of the potential difference depends on which difference you take. 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Notice that the work done on the particle by the electric field is opposite 
+in sign to the work done by the external agent.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">If the particle starts at rest and ends up at rest, the net change in
+kinetic energy is zero.
+Then the work done by the external force, against the electrostatic force,
+is just the potential difference times the charge on the moved particle.
+The potential difference can be calculated straightforwardly using the method
+developed in <em>MISN-0-116</em>.
+If you still cannot get the answer: <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">\(W_\text{total} = W_\text{external} + W_\text{field} = {\Delta}E_K\)
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">If you don't know where to find the characteristics of the proton,
+you did not read the text.
+Do it!</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\[\text{current } = \frac{\text{charge}}{\text{time}}
+ = \frac{\text{charge}}{\text{electron}} \times \frac{\text{electrons}}{\text{time}}\]
+<p>where the first fraction above should be read as “charge per unit time,”
+the second fraction should be read as “charge per electron,” and the
+third as “electrons (passing the point) per unit time.”
+You should construct such equalities, as needed, without being told to.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\[\begin{split}
+        W_{0,\infty} = & (9.0\times10^9\unit{N\,m^{2}/C^{2}})(-2.0\times10^{-6}\,\text{C})\,\cdot\\
+                       & \left(\frac{-8.0\times10^{-6}\,\text{C}}{0.5\,\text{m}}+
+                               \frac{ 4.0\times10^{-6}\,\text{C}}{1.6\,\text{m}}\right)\end{split}
+       \]
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\(k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}/\unit{C^{2}}\); \qquad 
+\(m_\text{electron} = 9.11 \times 10^{-31}\,\text{kg}\)
+<p>\(e = 1.6 \times 10^{-19}\,\text{C}\); \qquad 
+\(eV = 1.6 \times 10^{-19}\,\text{J}\)
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m117gr04.svg" alt="" class="physnet-fig"></figure>
+
+Three charges (\(Q_1\), \(Q_2\), and \(Q_3\)) are located on a
+cartesian axis as shown above.
+A fourth charge, \(Q_4 = - 2.8 \times 10^{-6}\)&thinsp;C, initially at rest at the
+point (0,-4), moves to the origin under the influence of the electrostatic
+field alone.
+Its mass is \(7.3 \times 10^{-8}\)&thinsp;kg.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the change in electrostatic potential energy of the
+          particle.</li>
+<li><span class="item-label">b.</span> What is the speed of the particle at the origin?
+</li>
+<li><span class="item-label">3.</span> A beam of electrons is accelerated from rest through a potential
+difference of 15,000&thinsp;V.
+The current of the beam is 2.5&thinsp;mA.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the final kinetic energy of the electrons in the beam?
+           Express your answer in joules and electron-volts.</li>
+<li><span class="item-label">b.</span> Calculate the final speed of the electrons.</li>
+<li><span class="item-label">c.</span> How much power is required to produce this current?
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;7 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;8 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+</section>
+

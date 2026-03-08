@@ -1,0 +1,339 @@
+<header class="module-header">
+  <h1 class="module-title">Examining the Charge Carriers; The Hall Effect <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State the expression for the force (Lorentz Force) on a charged
+    particle in electric and magnetic fields <a href="../m122/" class="module-ref">MISN-0-122</a>.</li><li><strong>2.</strong> State the expression relating a set of charges and their common
+    velocity to their equivalent value as a current <a href="../m123/" class="module-ref">MISN-0-123</a>.</li><li><strong>3.</strong> Vocabulary: conduction in metals <a href="../m118/" class="module-ref">MISN-0-118</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Starting from the Lorentz force, derive the equations which give
+    the drift velocity and density of the microscopic charges constituting an 
+    electrical current in terms of the observable macroscopic Hall effect 
+    quantities.</li><li><strong>K2.</strong> Outline briefly how one deduces from the Hall effect that the
+    charge carriers in copper and silver are essentially the valence electrons
+    of the constituent atoms.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Use the (given) measured value of the Hall constant to calculate
+    the drift velocity of the charges in a specified current in a specified 
+    conductor.</li></ul></div>
+
+    
+    <div class="env-OptionalResources">
+    <br>
+ C.&thinsp;M.&thinsp;Hurd, <em>The Hall Effect in Metals and Alloys</em>, Plenum
+    Press (1972). 
+    <br>
+ F.&thinsp;Bitter, <em>Currents, Fields, and Particles</em>, Wiley (1957). 
+    <br>
+ C.&thinsp;Kittel, <em>Introduction to Solid State Physics</em>, 
+    John Wiley and Sons, New York (1986), p.&thinsp;215. 
+    </div>
+
+
+</section>
+
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m149gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Section of a conductor through which is
+passing a current \(\vec{I}\).</figcaption></figure>
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Why We Study the Hall Effect</h3>
+
+The moving objects constituting an ordinary electrical current are said
+by physicists to be negatively charged electrons, not positive charges
+as assumed in the electrical engineering convention.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>These electrons' drift velocity down a household wire are said by physicists to
+be typically about 10 feet per hour.
+How can 10&nbsp;ft/hr really be true when a wall switch seems to activate a lamp
+across the room instantly!
+Here we examine convincing evidence of the negative sign of the charge
+carriers and the magnitude of their drift velocity.
+Elsewhere we examine the speed of electrical power transmission.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The Hall effect is also interesting for its applications:
+it is used to determine electronic properties of new materials and
+for routine measurements of unknown magnetic fields.
+<p><h3 id="pcap-1-b">1b. Mutually Perpendicular \(I\), \(B\), \(V\)</h3>
+
+The term “Hall effect” refers to a special voltage that appears
+when a transverse magnetic field is applied to an electrical current
+flowing in a material (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+This special voltage, called the “Hall voltage,” is at right angles to
+both the current and the magnetic field.
+This means that all three quantities involved, current, field, and voltage,
+are at right angles to each other.
+In the configuration shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> the Hall voltage is measured along the
+\(y\)-axis, with the voltmeter's positive lead at point \(b\), negative lead
+at point \(a\).
+Notice the orientations of the other two quantities.
+<p><h3 id="pcap-1-c">1c. An \(\vec{E}\) Field so a Lorentz Force</h3>
+
+The existence of the \(y\)-axis voltage in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> means that there is a
+\(y\)-axis electric field, one which, like all electric fields, exerts a
+\(y\)-axis force on charge carriers like those in the current \(I\).
+It is not surprising that such a force is exerted on the charge carriers;
+it is just the ordinary Lorentz force that occurs whenever there is a
+magnetic field at right angles to the velocity of the charge.
+The importance of the effect is that the value and sign of the voltage
+tell us much about the charge carriers if we know the magnetic field.
+Then, the measurement having been made for a particular material
+in a known magnetic field, that material's Hall voltage is used
+industrially to determine unknown magnetic fields.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Delineating the Conditions</h2>
+
+<p><h3 id="pcap-2-a">2a. Measurement Layout</h3>
+
+The Hall voltage is measured across a piece of conducting material
+formed in the shape of a rectangular bar as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+We induce the current \(\vec{I}\) in the \(x\)-direction and apply a constant
+magnetic field \(\vec{B}\) in the \(z\)-direction.                          
+<p><h3 id="pcap-2-b">2b. Force Independent of Charge Sign</h3>
+
+If each charge carrier in the current \(\vec{I}\) has     
+charge \(q\), then the magnetic field Lorentz force on 
+the charge is:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\(\vec{F} = q \vec{v}_D \times \vec{B}\),
+<p>where \(\vec{v}_D\)is the velocity of drift in the direction of the current.
+<p><span class="tryit">Try it:</span>  Show that if the current consists of positive particles going to the
+right (positive \(x\)-direction) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> then the force on them is downwards
+(negative \(y\)-direction).
+Then make the other possible assumption that the current to the right consists
+of negative particles going to the left and show that such negative charge
+carriers for the same current would also experience a downward magnetic field
+Lorentz force.
+<p><h3 id="pcap-2-c">2c. Downward Drift Reaches Equilibrium</h3>
+
+When the current of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> is initiated, the Lorentz Force causes a net
+downward migration of the charge-carrier electrons.
+This downward migration produces an increasing concentration of
+electrons in the lower part of the material, leaving a correspondingly
+increasing concentration of positive lattice ions in the upper part of the
+material.
+A carrier that is part-way down will thus experience a net upward
+electrostatic field just due to the gradient in the net charge concentration.
+Downward migration ceases when the number of “lower” electrons becomes so
+large that the upward “concentration gradient” force matches the downward
+Lorentz force.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Equilibrium Equations</h2>
+
+<p><h3 id="pcap-3-a">3a. Equilibrium \(E\) and \(v\)</h3>
+
+The condition for equilibrium in downward migration is that the net force
+on a carrier is zero.
+Writing the charge on the carrier as \(q\), the condition is:
+<p>\[F_y = 0 = q [E_y + (\vec{v}_D \times \vec{B})_y].\]
+<p>Then each mobile charge moves in the \(x\)-direction in an electric field
+whose \(y\)-component is:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[E_y = + v_D\,B.\]
+<p><span class="tryit">Try it:</span>  Show that \(E_y\) is in the upward direction for positively charged
+carriers, downward for negatively charged carriers, and that this checks
+with the electric field direction being away from positive charges and
+toward negative charges.
+<p><h3 id="pcap-3-b">3b. Equilibrium Voltage</h3>
+
+The potential difference between points \(a\) and \(b\) of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> is measurable
+with a voltmeter, and is simply related to \(E_y\).
+Recall that the voltage of point b with respect to point \(a\) is the work per
+unit charge which you would have to do in moving a charge from the
+reference point \(a\) to point \(b\).
+Then the Hall voltage is:
+<p>\[V_{ba} = - \int^b_a  \vec{E} \cdot\,d\vec{y} =
+           - \int^b_a  (-E_y\,dy) = E_y \int^b_a \,dy = E_y\,\ell\;(\text{see \Figref{1}}),\]
+<p>where we have used the fact that \(E_y\) in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> has no dependence
+on \(y\), hence is constant in the \(y\)-direction.
+Since \(\vec{E}\) is independent of \(y\) we could also have obtained \(V_{ba}\)
+by:
+<p>
+<p>\[\begin{aligned}V_{ba} & = \frac{\text{Work}(a \rightarrow b)}{\text{charge}} \\        & = \frac{\text{Applied Force}(a \rightarrow b) \times
+                    \text{Distance}(a \rightarrow b)}{\text{charge}} \\        & = \frac{\text{Applied Force}(a \rightarrow b)}{\text{charge}} \times
+                    \text{Distance}(a \rightarrow b) \\        & = E_y\,\ell\end{aligned}\]
+
+<p>where we have used the fact that the positive downward applied force per
+unit charge must exactly cancel the positive upward electric field \(E_y\).
+<p><h3 id="pcap-3-c">3c. Carrier Velocity</h3>
+
+Combining Eqs.&thinsp;(1) and (2), we can eliminate \(E_y\) in terms of measurable
+quantities:
+<p>\[v_D = \frac{V_{ba}}{B \ell}.\]
+<p>Measurement of the Hall voltage thus gives us a direct measurement of the
+drift velocity of the charge carriers.
+<p><h3 id="pcap--">. </h3>
+[]3dCarrier Density; the Hall Constant
+We can also obtain the sign of the charge and the density of the carriers
+by recalling that the current is given by:
+<p>\[\vec{I} = \frac{Q}{L} \vec{v}_D\]
+<p>where (\(Q/L\)) is the charge per unit length along the conductor.
+This relation can also be written as:
+<p>\[\vec{I} = \sigma_v\,A \vec{v}_D,\]
+<p>where \(\sigma_v\) is the carrier charge per unit volume, and \(A\) is the cross
+sectional area of the conductor.
+Combining <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> and using \(A = \ell d\)
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>):
+<p>\[\sigma_v = \frac{IB}{V_{ba}d}.\]
+<p>The inverse of this quantity is called the “Hall constant” and is written
+\(R_H\) or \(C_H\).
+<p><h3 id="pcap-3-e">3e. Actual Measurements</h3>
+
+When one actually makes the measurement on, say, a piece of copper which
+could have been used for ordinary house wiring, the Hall voltage turns out
+to be negative.
+This means that the voltmeter will only give a positive reading if the leads
+are reversed so that the (\(+\)) one is at point \(a\).
+The inescapable conclusion is that these carriers have negative charge.
+The numerical value obtained in <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> turns out to be very close
+to the density of valence-electron-charge for both of the common good 
+conductors, silver and copper.  That value, the valence-electron charge per unit volume,
+can be obtained by dividing the metal's mass density by its mass per atom to
+get the number of atoms per unit volume and then multiplying that value by the valence-electron
+charge on each atom.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>Michael Harrison provided a helpful discussion of the Hall effect.
+William Lane, Stephen Smith and their students, especially Jim Peterson,
+provided much valuable feedback on earlier versions.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Hall Constant for Two Carriers</h2>
+
+<div class="centered">(for those interested)</div>
+
+<p>When a current consists of electrons (negative charge) and oppositely-moving 
+electron holes (positive charge) as in iron, magnesium and semiconductors,
+the Hall constant is given by:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[R_H = \frac{p - n b^2}{|e| (p + n b)^2}\]
+<p>where \(p\) and \(n\) are the number densities of positive and negative
+carriers, respectively, \(|e|\) is the magnitude of the electronic charge, and
+\(b\) is the “mobility ratio,” \((\tau_m m_p)/(\tau_p m_n)\), where the
+\(\tau\)'s are the carriers' mean-free-times between collisions and the \(m\)'s
+are their (positive) masses.
+The above formula for \(R_H\) is said to be in the “drift velocity
+approximation.”
+As an example, \(R_H\) is positive for iron, showing a dominance of holes over
+electrons.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For further information see “Conductivity and Resistance” (MISN-0-118) and “Force on a Current in
+a Magnetic Field” (MISN-0-123). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">For further information see “Signal Velocity in a Conductor” (MISN-0-150). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Force on a Charge Particle in a Magnetic Field:  The Lorentz
+Force” (MISN-0-122). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This analysis has assumed that all the charge carriers have the
+same sign.
+If they don't, then \(V_D\) in (1) is an average (see Appendix). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See  Currents, Fields, and Particles, F.&thinsp;Bitter, John
+Wiley and Sons, New York (1957), Table 6.1, p.231, and  The Hall Effect
+in Metals and Alloys, C.&thinsp;M.&thinsp;Hurd, Plenum Press, New York (1972),
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.1 on page 7, and Table 7.6 on pages 278-9.  <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">For further information see  Introduction to Solid State Physics, C.&thinsp;Kittel,
+John Wiley and Sons, New York (1986), p.&thinsp;215.   <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problem&nbsp;3 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A Hall probe uses the Hall Effect to measure magnetic field
+            strength.  
+            If the probe is copper, has a thickness of 0.1&thinsp;mm, an \(R_H\)
+            value of \(R_H = - 5 \times 10^{-11}\)<span class="unit">&thinsp;m<sup>3</sup></span>/(A&thinsp;s), and can
+            measure a potential of 0.1&thinsp;mV, what current is needed to
+            measure a field of 0.2&thinsp;Tesla?
+            Would you want to use copper for a Hall probe?</li>
+<li><span class="item-label">2.</span> Using \(R_H = - 5 \times 10^{-11}\unit{m^{3}/(A\,s)}\), what is the
+            charge carrier drift velocity for a 2.0&thinsp;A current in a copper
+            conductor whose cross-sectional area is (\(1\\unit{cm^{2}}\))?  
+            Why does the result imply the charge carriers are negative?</li>
+<li><span class="item-label">3.</span> In Hurd's book, pages 278-9, the experimental values of \(R_H\) for
+           copper cover the range:
+           
+           \[-7.8 \times 10^{-11}\unit{m^{3}/(A\,s)} \leq
+             R_H \leq - 4.9 \times 10^{-11}\unit{m^{3}/(A\,s)}\]
+           
+           Calculate the drift velocity (in feet per hour) for a 5&nbsp;amp
+           current in No.&thinsp;18 copper wire (cross sectional area 2<span class="unit">&thinsp;mm<sup>2</sup></span>).
+           Note: \(\,\text{m/s} = 1.18 \times 10^4\,\text{ft/hr}\).</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(R_H = \frac{V_{ba} d}{I B}\)
+<p>           so: \(I = \frac{V_{ba} d}{RB} =
+                    \frac{(10^{-4}\,\text{V})(10^{-4}\,\text{m})}
+                        {(-5 \times 10^{-11}\unit{m^{3}/(A\,s)})
+                             (2.0 \times 10^{-1}\,\text{T})} =
+                              - 10^3\,\text{A}\).
+<p>           No: vastly too much current.</li>
+<li><span class="item-label">2.</span> \(v_D = \frac{V_{ba}}{B \ell} =
+                  \frac{R_H I B/d}{B \ell} =
+                  \frac{R_H I}{\ell d}\)
+<p>           \(\phantom{v_D} =
+           \frac{(-5 \times 10^{-11}\unit{m^{3}/(A\,s)})
+                  (2.0 \,\text{A})}
+                {(10^{-2}\,\text{m})(10^{-2}\,\text{m})} =
+           - 10^{-6}\,\text{m/s}.\)
+<p>           Here \(v_D\) is negative so it is opposite to the positive charge
+           direction, so these charges are negative.</li>
+<li><span class="item-label">3.</span> Combine the equations above to find \(v_D\) in terms of \(R_H\), \(I\)
+           and \(A\).
+<p>           Then: \(-2.3\,\text{ft/hr} \leq v_D \leq -1.4\,\text{ft/hr}\).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m149gr02.svg" alt="" class="physnet-fig"><figcaption>Starting from the Lorentz force, derive the Hall
+           effect equations:
+<p>           \(v_D = \frac{V_{ba}}{B \ell}\)
+<p>           \(\sigma_v = \frac{I B}{V_{ba} d}\)</figcaption></figure>
+</li>
+<li><span class="item-label">2.</span> See Output Skill K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">3.</span> In Hurd's book, pages 278-9, the experimental values of \(R_H\) for
+           copper cover the range:
+           
+           \[-7.8 \times 10^{-11}\unit{m^{3}/A\,s} \leq
+           R_H \leq - 4.9 \times 10^{-11}\unit{m^{3}/A\,s}\]
+           
+           Calculate the drift velocity (in feet per hour) for a 5&nbsp;amp current
+           in No.&thinsp;18 copper wire (cross sectional area \(2\unit{mm^{2}}\)).
+           Note: m/s = \(1.18 \times 10^4\,\text{ft/hr}\).</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;3.</li>
+</ol>
+
+</section>
+

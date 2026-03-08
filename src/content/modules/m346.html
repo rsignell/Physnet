@@ -1,0 +1,126 @@
+<header class="module-header">
+  <h1 class="module-title">Review of Elementary Fortran <span class="module-author">(Robert Ehrlich <br> George Mason University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: program, algorithm, operation, flowchart, source program,
+    machine language, floating point, compilation <a href="../m370/" class="module-ref">MISN-0-370</a>.</li><li><strong>2.</strong> Read and write simple flow diagrams <a href="../m370/" class="module-ref">MISN-0-370</a>.</li><li><strong>3.</strong> Successfully submit a batch job or run an interactive program on your
+    computer (see your computer's Operating Guide).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: constant, variable, expression, function, statement numbers.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Recognize and write FORTRAN arithmetic expressions involving real and
+    integer constants and variables.</li><li><strong>R2.</strong> Recognize and write FORTRAN input/output statements using READ, WRITE,
+    and simple FORMAT statements.</li><li><strong>R3.</strong> Recognize and write FORTRAN branching statements using GOTO and IF
+    statements.</li><li><strong>R4.</strong> Recognize and use the FORTRAN statements CALL EXIT, COMMENT, CONTINUE and
+    END.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Run a canned program to compute the roots of a quadratic equation, with
+    and without checking the sign of the discriminant.
+    <br>
+ Write, enter and run a program to compute the height to which you can
+    jump vertically in a gravitational field, using two sets of input data for
+    initial velocity and the gravitational acceleration.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> A computer with FORTRAN.</li>
+</ol>
+</div>
+
+
+</section>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 on this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Identify which of the following numbers are unacceptable as real
+FORTRAN constants:
+<p><code>56.004    .039E05    .00200041    -33,564    -1.E-23</code></li>
+<li><span class="item-label">3.</span> Identify which of the following numbers are unacceptable as integer
+FORTRAN constants:
+<p><code>-7729.    -7729    7729.    7729    .000007729</code></li>
+<li><span class="item-label">4.</span> Identify which of the following names are unacceptable for integer
+variables, which are unacceptable for real variables, and which are
+unacceptable for any variable: 
+<p><code>XXX    X2223A    IJKLX    K    K22    SQUAREROOT</code>
+<p><code>SQUARE4    16SQ    N1    N1.378    (A/B)*C</code></li>
+<li><span class="item-label">5.</span> Write FORTRAN expressions corresponding to the following mathematical
+expressions:
+<p>
+ <div class="centered"><table class="physnet-table"><tbody><tr><td>\(a^5 + y^3\)</td><td></td><td>\(x + \frac{y}{z}\)</td></tr><tr><td>\(x^2 + \left( \frac{a*b}{c+d} \right)^4\)</td><td></td><td>\(\left[ (1+x)^3 + (1+x)^4 \right]^{5/3}\)</td></tr></tbody></table>
+</div>
+
+</li>
+<li><span class="item-label">6.</span> State the value of A or I stored as a result of the following arithmetic
+assignment statements, and indicate whether the result is integer or real:
+<p><code>A = 2*6 + 1</code>
+<p><code>I = 2*(10/4)</code>
+<p><code>A = 1./3. + 1./3. + 1./3.</code>
+<p><code>I = 1./3. + 1./3. + 1./3.</code>
+<p><code>A = (4.0)**(3./2.)</code></li>
+<li><span class="item-label">7.</span> Write arithmetic assignment statements to:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Multiply the current value of a variable named ALPHA by the
+current value of a variable named DELTA and make the product the new value of
+a variable named BETA.</li>
+<li><span class="item-label">b.</span> Divide the value of a variable named A by the value of a variable
+named B, take the square root of the quotient and assign that as the new
+value of W.
+</li>
+<li><span class="item-label">8.</span> Write FORTRAN statements to compute values for these formulas:
+<p>\[A = A_0 \sin(\omega t + \delta)\]
+<p>\[\phi = \tan^{-1} |(h^2 - b^2)^{1/2}/b |\]
+<p>\[Y = (4\pi)^{-1/2} e^{-\lambda x}\]</li>
+<li><span class="item-label">9.</span> Attach, as part of these Exam Answer Sheets, your hand-annotated
+output (<strong>not a copy</strong>) for solution of the quadratic equation.
+Leave space on the Answer Sheet for the grader to mark this item, Item 9.
+Be sure that the output shows:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> three cases, one of which yields a negative discriminant;</li>
+<li><span class="item-label">b.</span> a check of the program against calculator values;</li>
+<li><span class="item-label">c.</span> the resonse of the square root library program when it is asked to
+take the square root of a negative number.
+</li>
+<li><span class="item-label">10.</span> Attach, as part of these Exam Answer Sheets, your hand-annotated
+output ( not a copy) for producing the height you can jump.
+Leave space on the Answer Sheet for the grader to mark this item, Item 10.
+Be sure that the output shows:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the program that you created;</li>
+<li><span class="item-label">b.</span> two runs of the program, one using \(a = 32\unit{ft/s^{2}}\) and one
+using \(a = 5\unit{ft/s^{2}}\), and with both using initial \(v = 10\,\text{ft/s}\).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p>Have a FORTRAN-wise friend check your answers to questions 2-8.
+<p></section>
+

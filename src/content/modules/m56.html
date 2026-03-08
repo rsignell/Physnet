@@ -1,0 +1,439 @@
+<header class="module-header">
+  <h1 class="module-title">Static And Sliding Friction;  Drag Racer Design <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Given an extended body, determine its center of
+    mass <a href="../m6/" class="module-ref">MISN-0-6</a>.</li><li><strong>2.</strong> State the rules for static equilibrium <a href="../m65/" class="module-ref">MISN-0-65</a>.</li><li><strong>3.</strong> Analyze frictional and gravitational forces on
+    an object by constructing a free-body diagram.  Apply
+    Newton's laws to find the object's acceleration
+    <a href="../m6/" class="module-ref">MISN-0-6</a>.</li><li><strong>4.</strong> Given the various forces on an object moving at
+    constant speed, compare the power needed to maintain
+    it at that speed in <a href="../m6/" class="module-ref">MISN-0-6</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Describe the microscopic origins of static and sliding friction,
+    including the causes of energy loss.</li><li><strong>K2.</strong> Derive the drag racer “CM-placement” specification for producing
+    maximum acceleration.</li><li><strong>K3.</strong> Derive the Huntington-Fox \(MPH\) law in the Constant Power
+    approximation: \(\,\text{MPH} = K \times (\,\text{Power}/\,\text{Weight})^{1/3}\) and evaluate
+    \(K_\text{theory}\).</li></ul></div>
+
+    
+    <div class="env-OptionalResources">
+    <br>
+ V.&thinsp;D.&thinsp;Barger and M.&thinsp;G.&thinsp;Olsson, <em>Classical Mechanics: A Modern Perspective</em>,
+    McGraw-Hill, New York (1973). 
+    </div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Static and sliding friction are essential parts of everyday life:  without
+the first you could not even walk.
+What is the origin of friction?
+How can a normal force produce a force at right angles to it, the frictional
+force?
+These questions are tackled directly, and the First Law of Friction
+(\(f = \mu N\)) is used to optimize a drag racer design.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Readings</h2>
+
+<p><h3 id="pcap-2-a">2a. Comments on the Readings</h3>
+
+Rita Livingston's letter and Geoff Fox's reply are a discussion of what is
+known about the basic mechanisms of friction and wear.
+Arnold Aron's comment on Geoff Fox's reply constitutes an attempt to clarify
+some of the language and mental images used in this area.
+Geoff Fox's discussion of drag racing pulls together many aspects of mechanics,
+including friction, to get at some aspects of drag racer design.
+For a discussion of the drag racer in a textbook see <em>Classical Mechanics: A Modern Perspective</em>,
+V.&thinsp;D.Barger and M&thinsp;G. Olsson, McGraw-Hill Book Co., N.Y. (1973), pp.6-8. 
+<p><h3 id="pcap-2-b">2b. “Does Weight Have a Horizontal Component?” by Rita Livingstone</h3>
+
+Reprinted by permission from <em>The Physics Teacher</em>, <strong>11</strong>, 288 (1973).
+<p>When my students first asked this question, my immediate response was “No Way!”
+Then they countered with “How can weight influence friction on a horizontal
+surface?”
+<p>The formula which is used to calculate friction \(\vec{f}\) in terms of the
+normal force \(\vec{F}\) is \(\vec{f}\,=\,\mu \vec{F}\).
+Since weight is the normal force on a horizontal surface, we do have the
+result that weight does influence the horizontal force of friction.
+<p>What follows is my suggestion of a partial explanation.
+I'd like to expose it to some critical review by other teachers.
+<p><figure class="fig-centered"><img src="figures/m56gr01.svg" alt="" class="physnet-fig"></figure>
+
+<p>Above we see surface \(A\) resting on surface \(B\) much magnified so that the
+irregularities of the surface are visible.
+We shall assume that irregularities of \(A\) fit into those of \(B\) and that they
+assume that position when \(A\) rests on \(B\).
+<p>Below we have greatly magnified the region in the dotted box.
+<p><figure class="fig-centered"><img src="figures/m56gr02.svg" alt="" class="physnet-fig"></figure>
+
+<p>The weight of \(A\) is shown by the vector \(\vec{F}\) and \(\vec{F}\) is resolved
+into its components along the irregularity in \(A\) and perpendicular to the
+irregularity.
+If \(\theta\) is the angle between the vertical and the slope of the irregularity
+then the components are \(\vec{F}\cos{\theta}\) and \(\vec{F}\sin{\theta}\) as
+shown in the figure.
+<p>If we are to move \(A\) to the right at constant velocity, \(A\) must be raised
+along the incline which requires \(\vec{F}\cos{\theta}\) be balanced by an
+opposite force.
+This force is supplied by a horizontal force \(-\vec{f}\); that is, opposite but
+equal in magnitude to friction.
+This force is shown resolved into components as before.
+<p>In effect the force applied to overcome friction is shown as two components.
+One which is pushing \(A\) closer to \(B\) and one lifting \(A\) along the
+irregularity.
+<p>Since \(-\vec{f}\) was only sufficient to balance \(\vec{f}\) we have
+<p>\[\vec{F}\cos{\theta} = - \vec{f} \sin{\theta}\]
+<p>\[\vec{f} = - \frac{\vec{F}\cos{\theta}}{\sin{\theta}},\]
+<p>\[\vec{f} = - \vec{F} \cos{\theta}\,.\]
+<p>This shows that the relation \(\vec{f}=\mu \vec{F}\) can be derived from these
+assumptions.
+It is worth noting that smoother surfaces would imply
+\(\theta\rightarrow90^\circ\) so that \(\cot{\theta}\rightarrow\theta\) and
+\(\vec{f}\,\rightarrow 0\).
+That is, with smoother surfaces friction drops as we expect.
+<p>I suspect this is only a part of the story as some reading in the literature
+suggests the components perpendicular to the irregularity cause a bonding of
+materials.
+I'd be quite interested in hearing if researchers have any definite statements
+about how much friction results from the irregularities of the surfaces and
+how much from bonding.
+<p><table class="physnet-table"><tbody><tr><td>RITA LIVINGSTON</td></tr><tr><td><em>Kelly Walsh High School</em></td></tr><tr><td><em>Casper, Wyoming 82601</em></td></tr></tbody></table>
+
+<p><h3 id="pcap-2-c">2c. A Reply by Geoffrey Fox</h3>
+
+Reprinted by permission from <em>The Physics Teacher</em>,  11, 288 (1973).
+<p>As [Ms.]&nbsp;Livingston remarked, weight does not have a horizontal component.
+Yet, as the students replied, weight does influence friction on a horizontal
+surface.
+Indeed, one of the “Laws of Friction” states that the frictional force is
+always proportional to the normal force.
+Weight happens to be the normal force in this particular case.
+The real puzzler, then, seems to be “By what mechanism does the normal force
+influence the frictional force?”
+This is by no means a trivial question.
+It is a question that has been with us for a very long time.
+And yet it is a question for which a simple comprehensive answer has not yet
+been given.
+The “roughness hypothesis,” a simple version of which Mrs.&thinsp;Livingston has
+presented, was first presented by Coulomb.
+Until the middle of this century it was widely accepted.
+<p>It has recently
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>been show to be unsatisfactory, however.
+The theory of friction accepted today is called the “adhesion hypothesis.”
+It suggests that there are microscopic regions of the surfaces that “weld”
+together and it is the breaking of these bonds which causes friction.
+<p>With regard to the “roughness hypothesis” as presented here, there is a very
+basic difficulty.
+Friction, it must be remembered, is a non-conservative force.
+It represents a dissipation of energy.
+All attempts at building a model of the mechanism of friction that involve
+only conservative forces are thus doomed to failure.
+For example, there is no reason to believe that part \(A\) is always being lifted,
+which takes energy, and never lowered, which releases energy.
+On the average, of course, these two processes balance one another out
+assuming the final vertical position of object \(A\) is the same as its initial
+vertical position.
+<p>A similar argument can be developed against the “adhesion hypothesis,” i.e.,
+for every “weld” that is broken there is a weld that is formed and thus
+there is no net dissipation of energy.
+To explain the dissipation of energy in the “adhesion hypothesis,” we must
+look more closely into what happens when a weld is broken.
+The situation is analogous to that of stretching a spring until it breaks.
+When the spring breaks, both portions of the spring will be oscillating.
+The energy involved in breaking the spring/weld has gone into vibrational
+energy. 
+Because the welded region is connected to the entire solid, however, its
+vibrational energy diffuses throughout the entire solid.
+Thus in the final state the entire solid possesses more vibrational energy;
+i.e., it is at a higher temperature; it has been heated up.
+When a new weld is formed, the region near the weld does not possess an excess
+of vibrational energy and the process is clearly non-symmetrical.
+The dissipation of energy is thus explained.
+<p>A similar argument could be made for the “roughness hypothesis.”
+The vertical motions of the body or regions of the body could produce local
+vibrations that diffuse throughout the body heating it up.
+However, measurements of the actual vertical motions indicate they are not
+large enough to explain the frictional forces
+involved.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>It is interesting to note that for either of these two mechanisms to be
+operative, the solid must be nonrigid.
+If a solid were truly rigid, then there would be no internal vibrations and
+energy could not be dissipated in this manner.
+<p>There are two other related mechanisms for friction that are important.
+One of these is the phenomenon of wear.
+In wear small portions of the objects are broken off in an irreversible manner.
+The binding energy of the particle worn off thus accounts for a frictional
+force.
+Other permanent deformations of the solids are possible, such as the plowing
+of one surface by the other.
+Since permanent deformations are inherently irreversible they too can account
+for frictional forces.
+<p>The most interesting aspect about sliding friction is that the definitive
+paper on the subject has not yet been written.
+There is still much interesting research that is waiting to be done on this
+seemingly pedestrian topic.
+<p><table class="physnet-table"><tbody><tr><td>GEOFFREY FOX</td></tr><tr><td><em>Department of Physics</em></td></tr><tr><td><em>University of Santa Clara</em></td></tr><tr><td><em>Santa Clara, California 95053</em></td></tr></tbody></table>
+
+<p><h3 id="pcap-2-d">2d. “Friction - There's the Rub!” by Arnold Arons</h3>
+
+Reprinted by Permission from <em>The Physics Teacher</em>,  11, 453 (1973).
+<p>Professor Geoffrey Fox's response in the “Stumpers” column to Ms.&thinsp;Rita
+Livingston's query about the relation between weight of a sliding object and
+the horizontal frictional force
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>is entirely correct, but I would like to amplify two aspects of the situation
+that are rarely pointed out to students with sufficient emphasis and clarity.
+These aspects play a crucial role in understanding the concept of “friction.”
+<p>(1) I suggest that it is inadvisable either for us or the students to
+use locutions such as “weight is the normal force on a horizontal surface.”
+We give the name “weight” to the gravitational force the earth exerts on the
+block.
+The block, when placed on the horizontal surface, exerts a force on the
+surface, and I urge that this always be referred to as the “normal force”
+and described as “the force exerted by the block on the surface.”
+(An equal and opposite force is exerted by the surface on the block.
+This force appears only on the force diagram of the block, while the previously
+mentioned force appears only on the force diagram of the surface.)
+It is the normal force that measures the effect “squeezing” the two surfaces
+together.
+<p>The normal force is not, in general, equal to the weight of the block.
+This is why we should avoid the locution “weight is the normal force on a
+horizontal surface.”
+If we bear down on the block, the normal force has a greater magnitude than
+the weight of the block.
+If we tug the block upward without lifting it off the surface, the normal force
+is smaller than the weight of the block.
+The normal force is not identical with the weight of the block; it is a
+different force in its own right, and it only occasionally happens to be
+numerically equal to the weight of the block.
+This fundamental distinction between the weight of the block and the normal
+force must be clarified for the students if they are to comprehend further
+aspects of the problem.
+The concept should not be allowed to become confused through careless use of
+language.
+<p>It is also useful to say something about how the normal force originates.
+This is a “passive” force that develops through an elastic, spring-like
+effect as the table, or other supporting structure, sags or compresses - as an
+easy chair sags when we sit in it.
+The sag, just like the stretch of the spring balance, adjusts itself to the
+total force acting from above, i.e., to the normal force, which is not
+necessarily equal to the weight of the block.
+The sag is always there in the presence of a normal force, even if it is only
+a piece of paper that is placed on the table and the effect is too small to
+be visible to the naked eye.
+If the load is increased indefinitely, the table eventually breaks or the
+supporting surface gives in some other way.
+The system cannot adjust itself to keep increasing the passive force
+indefinitely.
+<p>(2) Now consider the horizontal force \(f\) that we describe as
+“frictional.”
+It is only in special circumstances that \(f\) happens to have the particular
+value \(\mu N\), and this fact should be brought out explicitly for the students.
+<p>Suppose we are not applying any external horizontal force to the block.
+Under these conditions \(f = 0\); were this not the case, the block would
+accelerate horizontally.
+How would it know which way to go?
+<p>As we begin to push, very gently, horizontally on the block, the acceleration
+remains zero.
+We are forced to conclude that \(f\) increases from zero and adjusts itself so
+that it exactly balances the external force we are applying.
+In other words, \(f\) is a passive force that increases just as \(N\) does when we
+bear down on the block and is sustained through the “welding” mechanism
+described by Prof.&thinsp;Fox.
+The presence of the force \(f\) is accompanied by elastic shear deformation of
+the block and the supporting surface just as the presence of the normal force
+\(N\) is accompanied by elastic bending or compression.
+Just like \(N\), the frictional force \(f\) assumes an infinity of values,
+depending on the externally applied force - values from zero on up to the point
+at which something “gives.”
+In the case of friction, it is the “welds” that give and the block begins to
+slide.
+<p>It is only at this special condition, when the block begins to slide, that
+\(f_\text{max} = \mu N\), where \(\mu\) is the parameter we usually call the
+“coefficient of static friction.”
+The statement \(f_\text{max} = \mu N\) is simply a semi-empirical recognition that
+the largest value of the frictional force sustained by the particular pair of
+surfaces depends not only on the surfaces themselves but also on the the normal
+force squeezing them together.
+Rather than revealing a depth of knowledge, both the name “friction” and the
+oversimplification represented by \(\mu N\) serve to conceal our ignorance most
+pervasive physical phenomena manifest in the world around us.
+<p>It is a shame that, apparently because of the excesses embodied in a previous
+generation of textbooks, virtually all mention of friction has been eliminated
+(a new excess) from some current texts.
+Perhaps the next generation will return to a development embodying at least
+the modest phenomenological aspects discussed in the May “Stumpers” column
+and my present amplification.
+Friction is far too obvious, familiar, and important a phenomenon to be
+cavalierly ignored; even Galileo did not “wish it away” to the degree many
+of our courses now imply.
+<p><table class="physnet-table"><tbody><tr><td>ARNOLD ARONS</td></tr><tr><td><em>Department of Physics</em></td></tr><tr><td><em>University of Washington</em></td></tr><tr><td><em>Seattle, Washington 98195</em></td></tr></tbody></table>
+
+<p><h3 id="pcap-2-d">2d. “On the Physics of Drag Racing” by Geoffrey Fox</h3>
+
+Reprinted by Permission from <em>The American Journal of Physics</em>,
+ 41, 311 (1973).
+<p><table class="physnet-table"><tbody><tr><td>GEOFFREY T.&thinsp; FOX</td></tr><tr><td><em>Department of Physics</em></td></tr><tr><td><em>University of Santa Clara</em></td></tr><tr><td><em>Santa Clara, California 95053</em></td></tr><tr><td>(Received 10 July 1972)</td></tr></tbody></table>
+
+<p><em>The sport of drag racing can be very usefully examined in an introductory
+mechanics course.
+The concepts of energy, momentum, acceleration, velocity, torque, and power
+are all involved in the analysis of the problem.
+Many students find the problem to be very contemporary and close to their own
+experience.
+High interest among the students usually results in increased understanding of
+the physical principles involved.</em>
+<p>
+<p>As undergraduate physics majors my brother, Robert C.&thinsp;Fox, Jr., and I spent
+our leisure time building and racing vehicles in drag racing competition.
+We found our knowledge of physics very useful in that realm, enabling us to
+understand relationships involved in building and driving a winning car.
+Entering graduate school, I was forced financially to discontinue this colorful
+sport.
+Instead, I contented myself with continuation of theoretical studies and
+compilation of those made previously.
+As an assistant professor of physics, I have given seminars on the subject
+which have been extremely well received.
+I have also used particular topics as special credit problems in both my
+introductory physics course for engineers and scientists and in an upper
+division course in intermediate mechanics.
+Especially students in mechanics have been stimulated by the consideration of
+this topic.
+<p>
+<p>
+<p>Drag racing is an extremely popular spectator/participant sport in the United
+States which is rapidly growing.
+Interest among persons in their teens and early twenties is particularly high.
+If one omits horse racing, which I believe is popular only because of the
+gambling ingredient, then automobile racing is the largest spectator sport
+in the country.
+A drag race is the simplest of all forms of auto racing.
+The course is straight and therefore the problems are essentially one- or at
+most two-dimensional.
+The race is an acceleration contest from a standing start over a distance of
+\(\frac{1}{4}\)<span class="unit">&thinsp;mile</span>.
+Two variables are measured for each competitor, they are \(ET\) and \(MPH\).
+\(ET\) stands for  elapsed time and is just the time it takes from crossing the
+starting line until crossing the finish line.
+<span class="unit">&thinsp;MPH</span> is essentially the terminal speed at the end of the 1320<span class="unit">&thinsp;ft</span>, measured
+through a 132<span class="unit">&thinsp;ft</span> time trap on either side of the finish line.
+Both measurements are done electronically with the aid of photocells.
+<p>The motor vehicles that compete in drag racing are many and varied.
+They range from everyday street-driven vehicles which have \(ET\)'s of
+20<span class="unit">&thinsp;sec</span> and <span class="unit">&thinsp;MPH</span> of 70, through hopped up street legal cars turning
+120<span class="unit">&thinsp;mph</span> in 11.00<span class="unit">&thinsp;sec</span> on up to the all out dragsters running over 220<span class="unit">&thinsp;mph</span> in
+slightly more than 6<span class="unit">&thinsp;sec</span>.
+<p>
+<p>In trying to develop any theory it is always wise to start from an examination
+of the variables.
+In drag racing there are really just two dependent variables, \(ET\) and \(MPH\).
+The goal of our theory is to predict or explain these dependent variables as
+a function of the independent variables.
+The key difficulty is that the list of independent variables is quite long,
+some of the key ones are listed: vehicle weight, engine horsepower (also the
+details of the horsepower curve), location of the center of gravity (both
+horizontal and vertical), coefficient of friction of tires on road (this in
+turn is a function of tire size, tire pressure, normal force, and surface
+conditions to mention a few), air drag (depends basically on frontal area and
+drag coefficient), gearing (both rear axle and transmission), shifting
+techniques, moment of inertia of rotating parts, driver skill, etc.
+<p>
+<p>In trying to develop a first order theory it would be useful to examine the
+basic rules which determine the breakdown of classes in drag racing.
+The key parameter here is the ratio of weight to engine displacement.
+Engine displacement, is of course, closely related to power, hence our first
+order theory could be expected to use power to weight ratio as the independent
+variable.
+In the early 1960's an engineer, Roger Huntington, developed an empirical law
+relating power to weight ratio to \(MPH\).
+His rule is \(MPH = K_\text{exp} (\,\text{Power}/\,\text{Weight})^{1/3}\).
+The empirical \(K_\text{exp}\) is 225 where power is in horsepower, weight
+<p>in pounds, and \(MPH\) in miles per hour.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>No such simple relationship has been found for \(ET\) however.
+<p>Huntington's empirical rule has a theoretical basis which I discovered in 1964.
+It is just the result to be expected in the Constant Power Approximation (CPA).
+This is easily developed in the following manner,
+<p>\[\Delta \text{Energy } = \text{ Work}\]
+<p>\[\frac{1}{2} m v^2 = \int_0^t\;P dt.\]
+<p>Assuming constant power one gets
+<p>\[\frac{1}{2} m v^2 = P t\]
+<p>or:
+<p>\[v = (2 P t/m)^{1/2}\,.\]
+<p>Since
+<p>\[x = \int_0^t\;v dt = \frac{2}{3}\left(\frac{2P}{m}\right)^{1/2} t^{2/3}\]
+<p>we get
+<p>\[t = [(3/2)(m/2P)^{1/2}x]^{2/3}\,.\]
+<p>Now we eliminate time from Eqs. (1) and (2) giving
+<p>\[v = (3xP/m)^{1/3}\]
+<p>which is of the same form as the empirical law except \(K_\text{theory}=270\),
+<p>using the same units as previously.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Although the discrepancy between \(K_\text{theory}\) and \(K_\text{exp}\) doesn't appear
+to be large, if one cubes it one finds that about 50% of the theoretical
+power is wasted.
+How can one account for this?
+There are a number of factors which can account for power loss.
+Some are: power losses in the drive train, shifting losses (no power is
+transmitted during shifting), average engine horsepower is less than peak
+engine horsepower (in the rpm range used), wind and rolling resistance, full
+power cannot be transmitted initially due to traction limitations (traction),
+effective weight (due to Moment of Inertia and Rotational Energy).
+<p>Of these the last two are the most important.
+Consider the last first.
+Energy = \(\frac{1}{2}Mv^2 + \frac{1}{2}I\omega^2 = \frac{1}{2}M_\text{eff}v^2\)
+and \(\frac{1}{2}M_\text{eff} = M + I (\omega/v)^2\).
+And we must consider \(I\) due to both those items rotating at axle speed and
+also those rotating at engine speed.
+The latter includes clutch, flywheel, crankshaft, etc.
+Notice that \(\omega/v\) which is related to gearing comes in as a squared term,
+thus for a typical vehicle like our own 1955 Chevy 339<span class="unit">&thinsp;in<sup>3</sup></span>
+(total weight 3700<span class="unit">&thinsp;lb</span>) the \(I(\omega/v)\) term accounts for the following
+additional weight in each gear: 1st gear, 1500<span class="unit">&thinsp;lb</span>; 2nd gear, 800<span class="unit">&thinsp;lb</span>;
+3rd gear, 500<span class="unit">&thinsp;lb</span>; 4th gear, 250<span class="unit">&thinsp;lb</span>.
+<p>Obviously this is a very important correction factor, but still there is the
+question: “Why does the first order theory work so well?”
+Or phased another way, “Why doesn't <span class="unit">&thinsp;MPH</span> depend very strongly on traction
+whereas \(ET\) is extremely sensitive to this effect?”
+To answer this question let us proceed to the second order theory.
+<p>
+<p>In this theory we divide up the run into two portions: the traction limited
+portion, and the power limited portion.
+For the traction limited portion of the run we have
+<p>\[F = const. = \mu_e M g\]
+<p>in which \(\mu_e\) is related to the coefficient of friction through geometrical
+factors and includes “weight transfer” effects.
+In practice \(\mu_e\) varies between 0.5 and 2.0.
+Thus \(\ldots\)
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+The author wishes to thank the editors of the <em>The American Journal of
+Physics</em> for permission to use the articles reproduced in the text.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Frederic Palmer, Am. J. Phys.  17, 181; 327 (1949). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">C.&thinsp;D.&thinsp;Strang and C.&thinsp;R.&thinsp;Lewis, J.&thinsp;Appl.&thinsp;Phys.&thinsp; 20,
+1164 (1949). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">R.&thinsp;Livingston and G.&thinsp;Fox, Phys.&thinsp;Teach.&thinsp;  11, 288 (1973). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Private communication. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">PHYSNET note: We find
+\(K_\text{theory} = 281\,\text{mph}(\,\text{lb/hp})^{1/3}\).
+Note that, as is common in engineering practice, the proportionality constant
+\(K_\text{theory}\) includes units conversion factors. <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>

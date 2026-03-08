@@ -1,0 +1,513 @@
+<header class="module-header">
+  <h1 class="module-title">Energy and Boltzmann Distributions <span class="module-author">(J.S.Kovacs and O.McHarris <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Describe an ideal gas in terms of (a) the relationship between
+    temperature and the speed of its molecules and (b) the nature of
+    the interactions among its molecules. <a href="../m157/" class="module-ref">MISN-0-157</a></li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the partition of a system consisting of \(N\) molecules of a
+                gas.</li><li><strong>K2.</strong> Define thermal equilibrium starting from the concept of a very
+                large number of possible partitions for a given many particle
+                system.
+                Identify the partition for an ideal gas in thermal equilibrium.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Determine the number of particles that have their energies in a
+                given energy range, given the partition for the many particle
+                system.</li><li><strong>S2.</strong> Given the partition, calculate the average values of kinetic
+                energy, speed and speed squared and the total energy of a
+                system of \(N\) molecules of a gas.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> K.&thinsp;W.&thinsp;Ford, <em>Classical and Modern Physics</em>, Vol.&thinsp;2,
+               Xerox (1972). </li>
+<li><span class="item-label">2.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley (1970).
+     </li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In a gas in thermal equilibrium at a given temperature \(T\), the average
+kinetic energy of the molecules of that gas has a definite value.
+For an ideal gas, in fact, the linear relationship \(E_{K,ave} = (3/2) k T\)
+defines the temperature of that gas.
+However, the energy of an individual molecule of that gas varies from
+instant to instant, changing from collision to collision and at any one
+instant the individual energies of the molecules are distributed over a
+broad range of values about the average energy.
+As a consequence of the very large number of molecules in a gas sample
+(\(\ge 10^{20}\) molecules), the probability that any one molecule will have
+any given energy value can be known to very high precision when the gas is in thermal
+equilibrium.
+This probability distribution gives us the distribution of particles among
+the possible energy values and is given by the Boltzmann distribution
+function for an ideal gas in thermal equilibrium.
+In this unit distribution functions in general and the Boltzmann function
+in particular will be introduced.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Energy Distribution Functions</h2>
+
+<p><h3 id="pcap-2-a">2a. General Distribution Functions</h3>
+
+Suppose we have a system of \(N\) molecules and a set of \(L\) available energies
+such that any one of the \(N\) molecules could have any of the \(L\) energies.
+Then there are very many possible ways that the \(N\) molecules could have
+energies allocated to them.
+For example all of the molecules could have energy \(E_9\), or maybe 1/5 of the
+molecules could have energy \(E_7\) and the other 4/5 have energy \(E_{33}\),
+or the energies could be all equally populated, meaning the molecules are
+divided up evenly among them, and so forth.
+The numbers that tell how many of the molecules have each of the energies
+is called the partition, or distribution; that is, if \(n_1\) molecules have
+energy \(E_1\), \(n_2\) have energy \(E_2\), and so on up to \(n_L\) molecules with
+energy \(E_L\), then the set of numbers \(n_1\), \(n_2\), \ldots , \(n_L\) is the
+partition.
+If one knows the partition, it is easy to calculate a system's total energy:
+<p>\[E_{total} = n_1 E_1 + n_2 E_2 + \ldots + n_L E_L =
+                     \sum_{i=1}^{L} n_i E_i\,,\]
+<p>and its average energy:
+<p>\[E_{ave} = \frac{E_{total}}{N} =
+                  \frac{\sum_{i=1}^{L} n_i E_i}{N}\;.\]
+<p>Notice that since \(N\) is the total number of molecules, we also know:
+<p>\[N = n_1 + n_2 + \ldots n_L = \sum_{i=1}^{L} n_i \; .\]
+<p>Many different distributions are possible, we said.
+However, a many-particle system <em>in thermal equilibrium</em> can be shown by
+both theory and experiment to have only one distribution, determined by the
+system's temperature.
+<p><h3 id="pcap-2-b">2b. Thermal Equilibrium</h3>
+
+At thermal equilibrium a system is in its most probable distribution and
+thus may also be said to be in statistical equilibrium.
+The more particles there are in a system, the more probable the most
+probable distribution is; the very large number of molecules in even a
+small quantity of gas makes the most probable distribution very stable and
+the fluctuations around it very small.
+The energy of any one molecule changes drastically and rapidly as it
+collides with other molecules in the system.
+Since, however, the molecules of an ideal gas collide elastically, one's
+loss is literally another's gain, and since there are so very many of them,
+for every molecule that attains energy \(E_i\) another loses energy \(E_i\).
+At thermal equilibrium, the total number of molecules with any given energy
+is constant, even though the individual particles trade energies rapidly
+among themselves.
+<p>
+<p><h3 id="pcap-2-c">2c. The Boltzmann Distribution</h3>
+
+The most probable distribution for an ideal gas is a well known function
+called the Boltzmann distribution (or the Maxwell-Boltzmann distribution).
+It can be derived by statistical mechanics and is given by:
+<p>\[\frac{dn}{dE} = \frac{2 \pi N}{(\pi k T)^{3/2}}\,E^{1/2}\,e^{-E/kT}.\]
+<p>The general shape of this function is shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Notice now we have not written the distribution in the form of a set of
+numbers n corresponding to specific energies \(E\) but rather in the form of a
+continuous function that can tell us the number of molecules having
+energies within a range of energies.
+The reasons for this are discussed in Exercise B. The model for an ideal
+gas is a system of small round particles whose only energy is their kinetic
+energy.
+That means that their distribution function could be in terms of speed
+instead of energy simply by substituting \(E = mv^2/2\) and \(dE =mv\,dv\).
+Thus the speed distribution of an ideal gas is:
+<p>\[\frac{dn}{dv} = 4 \pi N \left(\frac{m}{2 \pi k T} \right)^{3/2} v^2
+                         e^{-m v^2/2kT}.\]
+<p>The functions \(dn/dE\) and \(dn/dv\) plotted as functions of \(E\) and \(v\),
+respectively, obviously do not have the same shape.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Nevertheless, they do have several characteristics in common: they are
+equal to zero at \(E = 0\) or \(v = 0\); both go to zero exponentially at high
+values of \(E\) or \(v\); and both have a maximum at some most probable value of
+\(E\) or \(v\), the position and shape of the peak depending on the temperature
+\(T\).
+At low temperatures both \(dn/dE\) and \(dn/dv\) have high, narrow peaks near
+\(E = 0\) or \(v = 0\), corresponding to a system with most of its particles
+moving relatively slowly.
+At high temperatures, on the other hand, both functions have low, broad
+peaks at high values of \(E\) or \(v\), corresponding to a system of particles
+moving both rapidly and with a relatively wide range of speeds.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m159gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The Maxwell-Boltzmann distribution.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Readings</h2>
+
+<p>For access to the following readings, see this module's <em>Local Guide</em>.
+<p>Read pages 609-619 of “Classical and Modern Physics,” Vol. 2, by
+K.&thinsp;W.&thinsp;Ford.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>This reading selection develops the connection between partition
+probability and equilibrium.
+<p>Read Section 13.4 (p.&thinsp;257) of “Physics” by M. Alonso and E.J.
+Finn.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Exercises</h2>
+
+<p>
+<span class="fbox">A.</span> Consider the following partition shown in the table below (\(n_i\)
+is the number of particles with energy \(E_i\)):
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>i</td><td>\(n_i\)</td><td>\(E_i\) (joules)</td></tr><tr><td>1</td><td>\(0.5 \times 10^{18}\)</td><td>\(1.60 \times 10^{-21}\)</td></tr><tr><td>2</td><td>\(1.0 \times 10^{18}\)</td><td>\(2.40 \times 10^{-21}\)</td></tr><tr><td>3</td><td>\(1.8 \times 10^{18}\)</td><td>\(3.20 \times 10^{-21}\)</td></tr><tr><td>4</td><td>\(1.2 \times 10^{18}\)</td><td>\(4.00 \times 10^{-21}\)</td></tr><tr><td>5</td><td>\(0.6 \times 10^{18}\)</td><td>\(4.81 \times 10^{-21}\)</td></tr></tbody></table>
+</div>
+
+<p>
+with no other energies represented.
+<p><ol>
+<li><span class="item-label">a.</span> What are the average kinetic energy and the total internal energy
+for the particles of this system?</li>
+<li><span class="item-label">b.</span> How many moles of substance are there in this gas?</li>
+<li><span class="item-label">c.</span> Could this system, represented by this above partition, be in
+thermal equilibrium?
+Explain.</li>
+<li><span class="item-label">d.</span> Can you assign a temperature to this gas with this partition?
+Explain.</li>
+<li><span class="item-label">e.</span> When thermal equilibrium gets established, if this system is
+isolated so that none of the energy gets away, what can we say about the
+temperature?
+What about the energy partition?</li>
+</ol>
+
+<p>
+<span class="fbox">B.</span> The partition described in Exercise A was a discrete partition.
+That is, 9.8% of the particles had energy equal to exactly
+\(1.60 \times 10^{-21}\) joules each, 19.6% of them had
+\(2.40 \times 10^{-21}\) joules each, 35.3% had \(3.20 \times 10^{-21}\) joules,
+23.5% had \(4.00 \times 10^{-21}\) joules, and 11.8% had
+\(4.81 \times 10^{-21}\) joules.
+No other energies were represented.
+No particle, for example, had an energy anywhere in the range between
+\(1.60 \times 10^{-21}\) joules and \(2.40 \times 10^{-21}\) joules, although
+about \(10^{18}\) of them had exactly either of these two energies.
+<p>In any physical situation, as a result of the many collisions that occur in
+such a many-particle system the energy distribution will quickly spread to
+“fill in the blank spaces” between the discrete \(n_i\)'s so that there is a
+continuous distribution: you will find particles with any energy (within
+the limitations set by the total energy of the system.
+Later you'll see that Quantum Mechanics also imposes limitations.
+So how do you describe the energy partition in this case?
+<p>You cannot write down the partition in tabular form, as was done in
+Exercise A, unless your table includes every possible energy in some
+continuous range.
+Then you run into what may seem like a contradiction, because there are an
+infinite number of possible energies and only a finite number of particles
+the most likely partition from the discrete tabulation point of view is
+zero particles at any one specified energy.
+That is why it makes more sense, when a continuous range of energies is
+possible, to describe the partition with a <em>density function</em> (the number
+of particles per unit energy in the vicinity of specified energy value).
+The Maxwell-Boltzmann distribution function is such a density function.
+(It is the correct density function which gives the energy partition of an
+ideal gas after thermal equilibrium has been established.)
+<p>A prototype of a density function \(dn/dE\) is plotted vs \(E\), the energy, in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Note that it can also be expressed and plotted as a function of \(v\), the velocity.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m159gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A prototypical number density (number per
+unit energy), plotted as a function of energy.</figcaption></figure></div>
+
+<p>What does a point on such a curve tell you?
+Or if \(dn/dE\) was given to you as a function of \(E\) and you evaluated it at a
+specific value of the energy, \(E_0\) what would this number tell you?
+It would not tell you the number of particles that have energy \(E_0\).
+For one thing, it has the dimensions of number per unit energy, not number.
+Also, we concluded above, the number of particles that have precisely the
+energy \(E_0\) is zero for all values of \(E_0\).
+From calculus, \((dn/dE)\,dE\) is \(dn\), the infinitesimal increment in the
+variable \(n\).
+For finite (but small) increments, \(\Delta E\), then:
+<p>\[\frac{dn}{dE} \Delta E = \Delta n.\]
+<p>This has the interpretation of being the <em>finite increment</em> in \(n\) in the
+neighborhood where \(dn/dE\) is evaluated.
+In our case, \(n\) is the number of particles in an energy increment \(E\) around
+the point on the curve where \(dn/dE\) is evaluated.
+<p>Consider the curve depicted in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Suppose at energy \(E = 2 \times 10^{-21}\) joules the value of the function
+\(dn/dE\) is \(2 \times 10^{24}\)/,J meaning \(2 \times 10^{24}\) particles per
+joule.  How many particles are there in an energy range
+\(0.002 \times 10^{-21}\)&thinsp;J around this value of \(E_0\)?
+How many are there in a larger interval,
+\(\Delta E = 0.02 \times 10^{-21}\) joules? or the interval
+\(\Delta E = 0.2 \times 10^{-21}\) joules?
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m159gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. As in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, relating number density to
+numbers.</figcaption></figure></div>
+
+<p>The answers you got should have been 4, 40, and 400 particles, respectively.
+The first of these says that 4 particles in the system can be expected to
+have their energy between \(1.999 \times 10^{-21}\) joules and
+\(2.001 \times 10^{-21}\) joules, and in the last interval, there are 400
+particles with individual energies somewhere between
+\(1.9 \times 10^{-21}\) joules and \(2.1 \times 10^{-21}\) joules.
+<p>Let's examine <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> more closely.  
+The area of the shaded rectangle is just \(dn/dE\) times \(\Delta E\):
+\(dn/dE\) is the height, \(\Delta E\) the width.
+Except for the deviations at the top of the rectangle, this is <em>almost</em>
+the area under the curve in the interval \(\Delta E\). (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>)
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m159gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. As in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, enlarged.</figcaption></figure></div>
+
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m159gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Relating rate-area to number.</figcaption></figure></div>
+
+<p>The smaller \(\Delta E\) is, the closer this is to the area under the curve.
+In the limit where \(\Delta E\) goes to the infinitesimal \(dE\), we can see
+that the number of particles in the interval between \(E_1\) and \(E_2\) is
+\(\Delta n\). (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>)
+<p>\[\int_{E_1}^{E_2} \frac{dn}{dE} \, dE = \Delta n.\]
+<p>Because of the reasons discussed above, we need to think from the point of
+view of continuous distributions rather than discrete ones.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m159gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Number distribution for Problem B.</figcaption></figure></div>
+
+<p>With this lengthy prologue, examine the distribution illustrated in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>,
+where the number of particles per unit energy interval is zero for all
+energies except between \(E_1\) and \(E_2\), where it is a constant \(C\).
+Consider the shaded rectangular energy region of width \(\Delta E = E_b - E_a\).
+<ol>
+<li><span class="item-label">a.</span> How many particles can be expected to have their energy between
+           \(E_a\) and \(E_b\)?</li>
+<li><span class="item-label">b.</span> If the total number of particles in the system is \(N\), what is the
+           value of \(C\)?</li>
+<li><span class="item-label">c.</span> What is the total number of particles with their energy between
+           \(E_b\) and infinity? (Express your answer in terms of \(N\).)</li>
+<li><span class="item-label">d.</span> Is this system in thermal equilibrium?
+           Explain.</li>
+</ol>
+
+<p>
+<span class="fbox">C.</span>
+<ol>
+<li><span class="item-label">a.</span> Refer to the figure in Problem&nbsp;4 of the <em>Problem Supplement</em>
+           (\(dn/dE\) for a gas satisfying the Maxwell-Boltzmann distribution
+           law).
+           What is the total number of molecules in the gas?
+           Give a qualitative answer here.</li>
+<li><span class="item-label">b.</span> Again referring to the same figure, what is the expression (in
+           integral form) that gives you the number of particles with energy
+           greater than \(E_2\)?
+           Compare the result of this integration at the two temperatures
+           \(300\,\text{K}\) and \(500\,\text{K}\).</li>
+</ol>
+
+<p>
+<span class="fbox">D.</span> The Boltzmann distribution is given by:
+<p>\[\frac{dn}{dE} = C E^{1/2} e^{-\beta E}\,,\qquad \beta = \frac{1}{kT}\,,\]
+<p>where \(C\) and \(\beta\) are independent of energy.
+At very low \(E\), the \(E^{1/2}\) makes this function go to zero, while at high
+\(E\) the exponential forces it to zero, so there is a maximum somewhere
+between.
+<ol>
+<li><span class="item-label">a.</span> For what value of \(E\) does this maximum occur?
+The average value of some measurable quantity \(A\) is given by:
+<p>\[A_{ave} = \frac{A_1 + A_2 + \ldots + A_N}{N},\]
+<p>where each \(A_i\) is one of the measured values and there are \(N\) of them.
+This can also be written:
+<p>\[A_{ave} = \frac{n_1 A_1 + n_2 A_2 + \ldots + n_p A_p}{N},\]
+<p>where \(n_i\) is the number of times \(A_i\) is measured.
+If, as in the case of the energy of the particles in a gas, there is a
+continuous range of possible values of \(A\), the discrete sum must go over to
+the integral:
+<p>\[A_{ave} = \frac{1}{N} \int A \frac{dn}{dA}\, dA.\]
+<p>Note that the factor on the right, \((dn/dA)\,dA\), is the number of
+particles that have their \(A\) value between \(A\) and \(A + dA\).
+<p>Thus the average energy of a system of particles is given by:
+<p>\[E_{ave} = \frac{1}{N} \int_0^\infty E \frac{dn}{dE}\, dE.\]
+<p>\[E_{ave} = \frac{\int_0^\infty E \frac{dn}{dE}\, dE}{\int_0^\infty \frac{dn}{dE}\, dE},\]
+<p>the denominator being just \(N\), the total number.</li>
+<li><span class="item-label">b.</span> For the distribution given in Exercise B, what is the average
+           energy?</li>
+<li><span class="item-label">c.</span> For the Boltzmann distribution,
+<p>\[\frac{dn}{dE} = C E^{1/2} e^{-\beta E},\; \beta = \frac{1}{kT},\]
+<p>find the value of \(C\) by using the condition that the total number of
+particles is \(N\).
+You'll need to refer to a table of integrals.
+If you don't have one, use:
+<p>\[\int_0^\infty x^{n-1} e^{-x}\, dx = \Gamma(n),\]
+<p>where:
+<p>\[\Gamma(n+1) = n \Gamma(n) \qquad \text{and} \qquad \Gamma(1/2) = \sqrt{\pi}.\]</li>
+<li><span class="item-label">d.</span> Evaluate the average energy for a system of particles that have
+their energies distributed cording to the Boltzmann distribution.</li>
+</ol>
+
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Answers to Exercises</h2>
+
+<p>
+<span class="fbox">A.</span>
+<ol>
+<li><span class="item-label">a.</span> \(U = 16.6 \times 10^{-3}\) joules,
+           \(E_{ave} = 3.26 \times 10^{-21}\) joules.</li>
+<li><span class="item-label">b.</span> \(8.5 \times 10^{-6}\) moles</li>
+<li><span class="item-label">c.</span> No.
+           When the thermal equilibrium is established, the distribution of
+           energy among the molecules is given by the Boltzmann distribution,
+           which is the <em>most probable</em> partition of the many possible
+           partitions.</li>
+<li><span class="item-label">d.</span> No.
+           Temperature is defined for systems in thermal equilibrium.
+           However, in more advanced treatments of thermodynamics, systems
+           not in thermal equilibrium may have temperatures defined for them.
+           In fact, our above system by that definition then has a negative
+           temperature!</li>
+<li><span class="item-label">e.</span> This system, with \(E_{ave} = 3.26 \times 10^{-21}\) joules, would
+           have temperature \(T = 157\,\text{K}\) if thermal equilibrium were
+           established while \(E_{ave}\) remained unchanged.
+           The energy partition would be given by the Boltzmann distribution
+           whose \(T = 157\,\text{K}\) and which has \(N = 5.1 \times 10^{18}\)
+           total number of particles.</li>
+</ol>
+
+<p>
+<span class="fbox">B.</span>
+<ol>
+<li><span class="item-label">a.</span> \(C\; \Delta E\).</li>
+<li><span class="item-label">b.</span> \(C = \frac{N}{E_2 - E_1}\).</li>
+<li><span class="item-label">c.</span> \(n (E>E_b) = N\, \frac{E_2 -E_b}{E_2 - E_1}\).</li>
+<li><span class="item-label">d.</span> No, for the same reason as in part (c) of Exercise A.</li>
+</ol>
+
+<p>
+<span class="fbox">C.</span>
+<ol>
+<li><span class="item-label">a.</span> The total area under the curve.</li>
+<li><span class="item-label">b.</span> \(\int_{E_2}^{\infty} \frac{dn}{dE}\, dE\).
+           At \(500\,\text{K}\) there are more particles with \(E>E_2\).</li>
+</ol>
+
+<p>
+<span class="fbox">D.</span>
+<ol>
+<li><span class="item-label">a.</span> The most probable \(E = KT/2\), the point on the curve where the
+           maximum occurs.</li>
+<li><span class="item-label">b.</span> \((E_2 + E_1)/2\).</li>
+<li><span class="item-label">c.</span> \(N = \int_0^\infty \frac{dn}{dE} \,dE =
+           C \int_0^\infty E^{1/2} e^{-\beta E}\,dE\),</li>
+<li>Hence: \(N = \frac{C}{\beta^{3/2}}
+           \int_0^\infty (\beta E)^{1/2} e^{-\beta E} \,d(\beta E).\)</li>
+<li>Let \(\beta E \equiv x\) so: \(N = \frac{C}{\beta^{3/2}}
+                \int_0^\infty x^{1/2} e^{-x}\,dx.\)</li>
+<li>From the integral tables this is: \(\Gamma(3/2)\).</li>
+<li>But \(\Gamma(3/2) = (1/2) \Gamma(1/2)\) and \(\Gamma(1/2) =
+           \sqrt{\pi}\).</li>
+<li>So, \(N = \frac{C}{2\beta^{3/2}} \sqrt{\pi}\).</li>
+<li>Hence, \(C = 2\pi N \left( \frac{\beta}{\pi} \right)^{3/2} =
+                   \frac{2\pi N}{(\pi k T)^{3/2}}\).</li>
+<li><span class="item-label">d.</span> Note that the last line below is “as stated” in MISN-0-157:
+\[\begin{aligned}E_{ave} & = & \frac{1}{N} \int_0^\infty E \frac{dn}{dE}\,dE
+          =  \frac{C}{N} \int_0^\infty E\; E^{1/2} e^{-\beta E}\,dE \\
+        & = & \frac{C}{N} \int_0^\infty E^{3/2} e^{-\beta E}\,dE
+          =   \frac{C}{N\beta^{5/2}}
+            \int_0^\infty (\beta E)^{3/2} e^{-\beta E}\,d(\beta E) \\
+        & = & \frac{C}{N\beta^{5/2}}
+            \int_0^\infty x^{3/2} e^{-x}\,d(x)
+          =  \frac{C}{N\beta^{5/2}}\; \Gamma(5/2) \\
+        & = & \frac{C}{N\beta^{5/2}}\;\frac{3}{2}\;\frac{1}{2}\, \Gamma(1/2)
+          =   \frac{2\pi N}{(\pi k T)^{3/2}}\; \frac{1}{N}\;
+            (k T)^{5/2}\; \frac{3}{2}\;\frac{1}{2}\;\sqrt{\pi} \\
+        & = & \frac{3}{2}\, k\, T\,. \\\end{aligned}\]
+</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">A concept intimately related to the probability distribution of
+the particles of a gas amongst the possible energy states of the system is
+entropy.
+See “Entropy” (MISN-0-160). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Notice in particular that near \(E = 0\), \(dn/dE\) starts out like
+\(y = \sqrt{x}\) whereas near \(v = 0\), \(dn/dv\) starts out like \(y = x^2\). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3"> <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4"> <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> In a dilute gas containing very many molecules, such that there
+is a continuous distribution of energies among the molecules, the
+Maxwell-Boltzmann distribution law is satisfied:
+<p>\[\frac{dn}{dE} = \frac{2\pi N}{(\pi kT)^{3/2}}\;E^{1/2}\;e^{-E/kT}\;.\]
+<p>Identify the terms in this relation, explain what it tells you and plot a
+rough sketch of this function, labeling axes. [K]
+What is the partition of this system? [I]
+How is (\(dn/dE\)) related to \(N\)? [A]</li>
+<li><span class="item-label">2.</span> Consider the following fictitious system.
+There are \(10^{20}\) particles in the system.
+Some \(3 \times 10^{19}\) of these particles have an energy of 0.06&thinsp;eV,
+\(3 \times 10^{19}\) of them have an energy of 0.03&thinsp;eV, while
+\(4 \times 10^{19}\) of them have an energy of 0.04&thinsp;eV.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the partition of this system? [E]</li>
+<li><span class="item-label">b.</span> What is the total internal energy of this system in eV? [B]
+           In joules? [L]</li>
+<li><span class="item-label">c.</span> What is the average energy of the particles of this system? [G]
+</li>
+<li><span class="item-label">3.</span> How does the partition of the above system differ from the
+           partition of a real dilute gas of \(10^{20}\) particles? [C]</li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m159gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p>           Above is shown the plot of the distribution function (number of
+           molecules per unit energy interval plotted versus the energy)
+           for a gas at a temperature \(T\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the total number of particles which at any instant have an
+           energy between \(E_1\) and \(E_2\) (Express your answer graphically)?
+           [J]</li>
+<li><span class="item-label">b.</span> Again in terms of the graph, what is the total number of particles
+           in this gas? [F]
+</li>
+<li><span class="item-label">5.</span> Starting from the Maxwell-Boltzmann distribution law, calculate the
+           average energy of a molecule of an ideal gas. [H]</li>
+<li><span class="item-label">6.</span> Starting from the Maxwell-Boltzmann distribution law, calculate
+           the RMS value of the energy of a molecule of an ideal gas.
+           [Find first the average value of \(E^2\).) [D]</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> \(N = \int_0^\infty \frac{dn}{dE}\;dE\).</li>
+<li><span class="item-label">B.</span> \(U = 4.3 \times 10^{18}\)&thinsp;eV.</li>
+<li><span class="item-label">C.</span> This is only one partition, one with extremely low probability.
+           The most probable partition is the Boltzmann distribution for
+           this total number of particles, with this \(E_{ave}\).</li>
+<li><span class="item-label">D.</span> \(E_{RMS} = \frac{1}{2} \sqrt{15}\; k T\).</li>
+<li><span class="item-label">E.</span> The partition is the set of 3 numbers \(n_1\), \(n_2\), \(n_3\).</li>
+<li><span class="item-label">F.</span> The total area under the curve.</li>
+<li><span class="item-label">G.</span> \(E_{ave} = 4.3 \times 10^{-2}\)&thinsp;eV\( = 6.9 \times 10^{-21}\)&thinsp;joules.</li>
+<li><span class="item-label">H.</span> See Exercise D, part (d).
+           \(E_{ave} = (3/2)\)&thinsp;kT.</li>
+<li><span class="item-label">I.</span> \((dn/dE)\,dE\) is the number of particles with energy between 
+           \(E\) and \(E+dE\).
+		   
+		   The set of all these numbers for all \(E\) is the partition.
+           The partition is essential to the distribution function.</li>
+<li><span class="item-label">J.</span> The area under the curve between \(E_1\) and \(E_2\).</li>
+<li><span class="item-label">K.</span> See the discussion in this Unit.</li>
+<li><span class="item-label">L.</span> 0.69 joules.</li>
+</ol>
+
+<p></section>
+

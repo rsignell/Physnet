@@ -1,0 +1,411 @@
+<header class="module-header">
+  <h1 class="module-title">Two Body Kinematics and Dynamics <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary:  centrifugal potential energy; 
+    central forces; center of mass; frame of reference <a href="../m58/" class="module-ref">MISN-0-58</a>, <a href="../m6/" class="module-ref">MISN-0-6</a>, <a href="../m11/" class="module-ref">MISN-0-11</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> For an isolated two-body system, define these center of mass (CM) quantities in
+    terms of single-particle quantities:  position of CM \((\vec{R})\), total
+    momentum \((\vec{P})\), total angular momentum \((\vec{L})\), total mass (\(M\)).</li><li><strong>K2.</strong> Define these (CM-frame) quantities for an isolated
+    two-body system: relative separation \((\vec{r})\), single-particle momentum
+    \((\vec{p})\), total angular momentum \((\vec{\ell})\), and reduced mass
+    \((\mu)\), in terms of single-particle quantities.</li><li><strong>K3.</strong> Starting from single-particle equations, derive:
+    <ul>
+
+</ul>
+</li><li><strong>a.</strong> \(\vec{P} = M \dot{\vec{R}} = \)const.</li><li><strong>b.</strong> \(\vec{p} = \mu \dot{\vec{r}}\)</li><li><strong>c.</strong> \(\vec{F} = \mu \ddot{\vec{r}}\)</li><li><strong>d.</strong> \(F = \mu \ddot{r} - \ell^2/(\mu r^3)\) for central forces</li><li><strong>e.</strong> \(E_{tot} = \frac{M \dot{R}^2}{2} + \frac{L^2}{2MR^2} + 
+    \frac{\mu r^2}{2} + \frac{\ell^2}{2\mu r^2} + V(r)\) for central forces</li><li><strong>f.</strong> \(\vec{L}_{tot} = \vec{L} + \vec{\ell}\) where \(\vec{L}\) = const.,
+    \(\vec{\ell}\) = const.
+    </li><li><strong>K4.</strong> Show how the motions of two interacting particles are related to
+    the equivalent one-particle solution.
+    Use, for example, the earth and sun, earth and moon, earth and satellite,
+    or a proton and an electron.</li><li><strong>K5.</strong> For two masses connected by a spring with spring constant \(k\): (a) write
+    down the equations of motion for the masses; (b) transform to the CM system; (c) solve
+    for the frequency of the system; (d) specialize the solution to \(M_1 = M_2\); and
+    (e) specialize the solution to \(M_2 \gg M_1\).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Two-Body Systems</h3>
+
+Special techniques have been developed for predicting the future motions of
+two objects which interact solely with each other.
+A few examples of such binary systems are: the earth and its moon, binary
+stars, the hydrogen atom (an electron-proton system), diatomic molecules,
+and the scattering of the elementary particles of high energy physics.
+Of course, in each of these cases the interacting pair is not completely
+isolated from interaction with all other objects in the universe.
+However, for most of them, and under most conditions, a great deal of
+insight and useful solutions can be obtained by solving the system as
+though it were an isolated one.
+In some cases the interactions from other objects are too small to be
+significant and so can be validly neglected.
+<p><h3 id="pcap-1-b">1b. Incremental Solutions of Particle Dynamics</h3>
+
+Incremental solutions of particle dynamics rely on the application of
+Newton's second law of motion to each object separately.
+That is, given the mass of an object and the net (vector) force on it, the
+(vector) acceleration of the object can be computed.
+If one desires the trajectory the object will follow, a knowledge of
+position and speed at some initial instant is needed.
+Then the computed acceleration can be used to compute add-ons to the
+initial velocity.
+The computed velocities can, in turn, be used to compute add-ons to the
+initial position.
+In general, the force on the object will vary according to the object's
+position in space.
+This means that the calculation of a trajectory add-on, resulting in a new
+position at a new time, results in a new force with which to evaluate the
+next trajectory add-on.
+Thus the trajectory can be traced out, step by step.
+<p><h3 id="pcap-1-c">1c. Connected Vector Equations, Binary Systems</h3>
+
+For the case of two interacting particles, the general approach to particle
+dynamics needs to be supplemented, both for ease of solution and for
+gaining insight.
+Straightforward application of Newton's second law to one particle
+requires knowledge of the force on that particle.
+Since the force on it is produced by the other particle, the magnitude and
+direction of that force is dependent on the location of the other particle.
+One can calculate the velocity and trajectory add-ons of the first particle
+for a small time interval, producing a new first-particle position at the
+incremented time.
+However, in the computation of the force for the next time interval, one
+must take into account the new position of the other particle.
+It has moved, since, by the third law, it has experienced a (vector) force
+equal but opposite to that experienced by the first particle.
+To summarize: There is a (vector) second law of motion for each of the
+interacting particles, but these equations are connected by the
+common-but-opposite force which produces the inter-particle interaction.
+The two (vector) equations of motion must be solved simultaneously.
+<p><h3 id="pcap-1-d">1d. Six Equations, Twelve Initial Conditions</h3>
+
+For binary systems, straightforward application of the general method of
+particle dynamics results in six coupled position-component equations whose
+simultaneous solutions must be consistent with twelve specified initial
+conditions.
+The six coupled equations result from, for example, taking the Cartesian
+components of the two three-dimensional vector equations of motion.
+Similarly, the initial three-dimensional positions and velocities of the
+two particles are specified through a total of twelve initial condition
+numbers.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The CM Frame</h2>
+
+<p><h3 id="pcap-2-a">2a. CM-Frame Simplification of the Equations of Motion</h3>
+
+The general method used for simplifying the six equations of motion for
+binaries is that of “going to the center of mass \((CM)\) frame”; that is,
+one solves the problem as seen from the frame of reference in which the
+binary center-of-mass is at rest.
+This frame is inertial, so the six equations of motion can be solved there
+and then be easily transformed to any other inertial frame of interest.
+The advantage of the CM frame is that the six equations of motion can there
+be rearranged into two decoupled sets of three equations.
+One of these two sets can be solved trivially, and the other set can be
+reduced to a single equation.
+The usual single-particle techniques of solution can then be applied to it.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m45gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The CM is on the line joining the two masses.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Equal But Opposite Momenta</h3>
+
+In a frame of reference in which a binary system's center-of-mass (CM) is
+at rest, not moving, the individual (vector) momenta of the two particles
+turn out to be equal but opposite.
+To see this, consider the earth-and-satellite system shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> at
+some instant of time.
+The vector to the system's CM is given by:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\vec{R} = \frac{m_e \vec{r}_e + m_s \vec{r}_s}{m_e + m_s}.\]
+<p>This point is on the line joining the masses, and its velocity is:
+<p>\[\frac{m_e \vec{v}_e + m_s \vec{v}_s}{m_e + m_s},\]
+<p>as follows directly from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> by differentiation.
+Now imagine moving along at the same velocity as the CM, \(\vec{V}_{CM}\).
+<p>In this moving “CM” frame of reference, the CM itself will be observed to
+be at rest and so its velocity is zero:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\vec{V}' = \frac{m_e \vec{v}_e\!' + m_s \vec{v}_s\!'}{m_e + m_s} =
+0.\]
+<p>This means that:
+<p>\[m_e \vec{v}_e\!' = -m_s \vec{v}_s\!',\]
+<p>which is usually written:
+<p>\[\vec{p}_e\!' = -\vec{p}_s\!'.\]
+<p>Thus the CM-frame momenta are equal but opposite.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m45gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Two circularly orbiting particles at
+several times.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Circular Motion in a Binary CM Frame</h3>
+
+The motions of a binary system are particularly simple in the system's CM
+frame of reference.
+For example, consider the case where one of the two particles describes a
+circle around the CM, as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> (note in the figure that the total
+momentum of the two particles is always zero).
+The other particle must also describe a circle around the CM because the
+ratio of the two particles' distances from the CM is fixed at the ratio of
+their masses.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Thus, for example, the earth and moon traverse concentric circular orbits
+about the earth-moon CM.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+ 
+<figure id="fig-3" class="fig-left-framed"><img src="figures/m45gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. An earth-satellite binary system at some instant
+of time (\(\vec{r}\) is the relative position vector).</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. General Equation of Motion</h3>
+
+The equation of motion of each particle in a binary system is particularly
+simple in the CM frame.
+For example, consider the earth-satellite system shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+If \(\vec{r}\) denotes the relative  position  vector to the satellite, then
+the earth and satellite CM position vectors are given in terms of the
+relative position by:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[\begin{aligned}\vec{r}_s & = & \frac{m_e}{m_e + m_s} \vec{r}, \\
+\vec{r}_e & = & -\frac{m_s}{m_e + m_s} \vec{r}. \\\end{aligned}\]
+
+<p>Note that:
+<p>\[\vec{r} = \vec{r}_s - \vec{r}_e\]
+<p>and
+<p>\[r_s/r_e = m_e/m_s.\]
+<p>Newton's second law of motion can be applied to each particle.
+Then, using a conveniently defined quantity called the <em>reduced mass</em>,
+\(\mu\),
+<p>\[\mu \equiv \frac{m_e m_s}{m_e + m_s} ,\]
+<p>we get:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[\vec{F}_s = \mu \ddot{\vec{r}}\]
+<p>\[\vec{F}_e = -\mu \ddot{\vec{r}}.\]
+<p>This also demonstrates Newton's third law of motion.
+<p><a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> is mathematically identical to the equation one would get
+for a single fictitious particle of mass \(\mu\) at a distance \(r\) from the
+origin.
+Of course, no such single particle is at that radius but the equation
+allows us to use the usual single-particle techniques for solution.
+<p><h3 id="pcap-2-e">2e. Relative Momentum</h3>
+
+<p>Although the total momentum is always zero in any system's CM frame, the
+individual particle momenta generally are not.
+Using an earth-satellite system as an example:
+<p>\[\vec{p}_s = m_s \dot{\vec{r}}_s = \mu \dot{\vec{r}} \equiv \vec{p}\]
+<p> and 
+<p>\[\vec{p}_e = -\vec{p}.\]
+<p>Thus the momentum of the satellite is equivalent to that of a
+fictitious particle of mass \(\mu\) at a radius \(r\) from the origin.
+We call this the CM-frame “relative” momentum \(\vec{p}\).
+<p><h3 id="pcap-2-f">2f. Kinetic Energy and Angular Momentum</h3>
+
+Applying the single-particle definitions of kinetic energy and angular
+momentum separately to each object in an earth-satellite binary system, the
+total CM frame quantities can be derived directly as:
+<p>\[\vec{\ell} \equiv \vec{\ell}_s + \vec{\ell}_e = \vec{r} \times \vec{p}\]
+<p>and
+<p>\[E_k \equiv E_{k,s} + E_{k,e} = \frac{1}{2} \mu | \dot{\vec{r}} |^2
+=\frac{p^2}{2}.\]
+<p>Notice the perfect equivalent-particle analogy in both cases.
+<p>For central forces, <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> can be written as:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[E_k = \frac{1}{2} \mu \dot{r}^2 + \frac{\ell^2}{2 \mu r^2}\;.\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Formal Derivation</h2>
+
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m45gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Illustration of the CM and
+relative vectors.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-a">3a. The Equations of Motion</h3>
+
+For a general binary System, the six coupled equations of motion can be put
+into a more tractable form by converting to CM and relative coordinates.
+For two interacting objects with position vectors and masses as denoted in
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, the CM and relative coordinates are defined by:
+<p>\[\vec{R} \equiv \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{m_1 + m_2} ,\]
+<p>\[\vec{r} \equiv \vec{r}_1 - \vec{r}_2.\]
+<p>The velocity of the CM is found from <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> to be:
+<p>\[\vec{V} \equiv \dot{\vec{R}} = \frac{\vec{p}_1 +\vec{p}_2}{m_1 +
+
+m_2}.\]
+<p>The numerator is just the total momentum, which is conserved
+because there is assumed to be no external force on the binary system.
+Thus the system's CM always traverses a straight line at constant speed, no
+matter what the individual particles are doing.
+The latter are governed by the individual-particle equations of motion
+which are straightforwardly found to be:
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[\vec{F}_1 = \mu \ddot{\vec{r}}; \qquad \vec{F}_2 = -\mu \ddot{\vec{r}},\]
+<p>where the system's reduced mass is:
+<p>\[\mu \equiv \frac{m_1 m_2}{m_1 + m_2}.\]
+<p><h3 id="pcap-3-b">3b. Momentum, Angular Momentum, and Kinetic Energy</h3>
+
+The equations for various kinematical quantities can be determined in the
+CM relative notation by straightforward application of the single-particle
+definitions of those quantities.
+For example, the total momentum is
+<p>\[\vec{p}^{\,tot} = \vec{p}_1 +\vec{p}_2 = M \vec{V} ,\]
+<p>where \(M\) is the system's total mass.
+Similarly one finds the total angular momentum to be:
+<p>\[\vec{L}^{tot} = \vec{R} \times \vec{P} + \vec{r} \times \vec{p}
+\equiv \vec{L} + \vec{\ell};\]
+<p>where:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\[\vec{p} \equiv \mu \dot{\vec{r}} \equiv \mu \vec{v} .\]
+<p>Note that \(\vec{p}\) is the first particle's CM momentum and the
+negative of the second's.
+The kinetic energy of the system is found to be:
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>\[E_k^{tot} = \frac{1}{2}MV^2 + \frac{1}{2} \mu v^2 = \frac{P^2}{2M}
++ \frac{p^2}{2\mu} = \frac{1}{2} M \dot{R}^2 + \frac{L^2}{2MR^2}
++\frac{1}{2} \mu \dot{r}^2 +\frac{\ell^2}{2\mu r^2}.\]
+<p>In each of the above total-system variables, there is a CM part
+plus a CM-frame part.
+This is easily seen by noting that \(\vec{P} = 0\) in the CM frame,
+while \(\vec{p} = 0\) if there are no motions in the CM frame.
+Interestingly, the CM-frame terms are just those of a fictitious particle
+of mass \(\mu\) and position \(\vec{r}\) with respect to the CM as origin.
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. A Problem: Two Masses and a Spring</h2>
+
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m45gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Two masses connected by a spring.</figcaption></figure>
+
+<p><h3 id="pcap-4-a">4a. Statement of the problem</h3>
+
+<ol>
+<li><span class="item-label">1.</span> Consider two masses, \(M_1\) and \(M_2\), connected by a spring with
+spring constant \(k\), as shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>..
+Write down the equations of motion for the masses,
+then transform to the CM system and solve for the frequency of the system.
+Finally, specialize the general solution to these two cases:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(M_1 = M_2\).</li>
+<li><span class="item-label">b.</span> \(M_2 \gg M_1\), as in the case of an ordinary mass connected to the
+earth by a spring (let \(M_1/M_2 \rightarrow 0\)).
+</li>
+</ol>
+
+<p><h3 id="pcap-4-b">4b. Solution</h3>
+
+<p>\[F_1 = - k (x_1 - x_2) = m_1 \ddot{x}_1\]
+<p>\[F_2 = - k (x_2 - x_1) = m_2 \ddot{x}_2\]
+<p>In the CM frame, with the CM at the origin, define:
+\(x \equiv x_1 - x_2\).
+Then:
+<p>\[x_1 =\frac{m_2}{m_1 + m_2}\,x\]
+<p>and
+<p>\[x_2 = -\frac{m_1}{m_1+m_2}\,x\]
+<p>Then <a href="#eqn-8" class="eqn-ref">Eqs.&nbsp;(8)</a> and <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> become:
+<p>\[-kx = m_r \ddot{x}\]
+<p>\[kx = -m_r \ddot{x}\]
+<p>where \(m_r \equiv m_1 m_2/(m_1+m_2)\) is the “reduced mass.”
+Note that <a href="#eqn-10" class="eqn-ref">Eqs.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> are the same equation.
+It describes a spring with a mass \(m_r\) on one end and with the other end
+fixed (good for all mass-ratio  cases), so the solution for the
+frequency of oscillations is:
+<p><sup class="fn-ref"><a href="#fn-12" id="fnref-12">12</a></sup>
+<p>\[\nu = \frac{1}{2\pi} \sqrt{\frac{k}{m_r}}\]
+<p><ol>
+<li><span class="item-label">a.</span> if \(m_1 = m_2\), then \(m_r = m_1/2 = m_2/2\), so 
+<p>\[\nu =\frac{1}{2\pi} \sqrt{\frac{2k}{m_1}}\]</li>
+<li><span class="item-label">b.</span> if \(m_2 \rightarrow \infty\) (which fixes the #2 end), then 
+\(m_r \rightarrow m_1\) and
+<p>\[\nu = \frac{1}{2\pi} \sqrt{\frac{k}{m_1},}\]
+<p>a lower frequency than for \(m_1 = m_2\).</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>I would like to thank Professors Bill Francis and Jim Whitmore who
+field-tested an earlier version.
+They made valuable suggestions which have been incorporated into this
+version.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Static Equilibrium, Center of Mass” (MISN-0-6). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Quantities measured in the CM frame are indicated by primes. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">That is, for an earth-satellite system, \(r_s/r_e  = m_e /m_s\).
+<p>See <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, \(\vec{R} = 0\). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This point is not at the center of the earth, but is between its
+center and its surface. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">For a further discussion of CM see “Static Equilibrium, Centers
+of Force, Gravity and Mass” (MISN-0-6). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">Each dot above a symbol indicates a time derivative.
+Thus, \(\ddot{\vec{r}} \equiv \frac{d^2 \vec{r}}{dt^2}\). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Derivation of the Constants of the Motion for Central
+Forces” (MISN-0-58). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">Each overhead dot represents a time derivative:
+\(\ddot{\vec{r}} \equiv d^2 \vec{r}/dt^2\). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">For two equal mass particles, \(p\) is half the particles'
+momentum difference:
+<p>\[\vec{p}= \frac{1}{2} \left( \vec{p}_1 - \vec{p}_2 \right).\] <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">See “Derivation of the Constants of the Motion for Central
+Forces” (MISN-O-58). <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">Here is another interesting expression used in wave theory:
+<p>\[\vec{p}_1 \cdot \vec{r}_1 + \vec{p}_2 \cdot \vec{r}_2 = \vec{P}
+\cdot \vec{R} +\vec{p} \cdot \vec{r}.\] <a href="#fnref-11" class="fn-back">↩</a></li><li id="fn-12">See “Simple Harmonic Motion” (MISN-0-25). <a href="#fnref-12" class="fn-back">↩</a></li><li id="fn-PS1">See “Simple Harmonic Motion” (MISN-0-25). <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Consider two masses, \(M_1\) and \(M_2\), connected by a spring with
+spring constant \(k\).
+Write down the equations of motion for the masses.
+Now transform to the CM system and solve for the frequency of the system.
+Finally, specialize the general solution to these two cases:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(M_1 = M_2\).</li>
+<li><span class="item-label">b.</span> \(M_2 \gg M_1\), as in the case of an ordinary mass connected to the
+earth by a spring (let \(M_1/M_2 \rightarrow 0\)).
+</li>
+</ol>
+
+<p><figure class="fig-centered"><img src="figures/m45gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p>\[F_1 = - k (x_1 - x_2) = m_1 \ddot{x}_1\]
+<p>\[F_2 = - k (x_2 - x_1) = m_2 \ddot{x}_2\]
+<p>In the CM frame, with the CM at the origin, define:
+\(x \equiv x_1 - x_2\).
+Then:
+<p>\[x_1 =\frac{m_2}{m_1 + m_2}\,x\]
+<p>and
+<p>\[x_2 = -\frac{m_1}{m_1+m_2}\,x\]
+<p>Then Eqs.&thinsp;(8) and (9) become:
+<p>\[-kx = m_r \ddot{x}\]
+<p>\[kx = -m_r \ddot{x}\]
+<p>where \(m_r \equiv m_1 m_2/(m_1+m_2)\) is the “reduced mass.”
+Note that Eqs.&thinsp;(10) and (11) are the same equation.
+It describes a spring with a mass \(m_r\) on one end and with the other end
+fixed (good for all mass-ratio  cases), so the solution for the
+frequency of oscillations is:
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>\[\nu = \frac{1}{2\pi} \sqrt{\frac{k}{m_r}}\]
+<p><ol>
+<li><span class="item-label">a.</span> if \(m_1 = m_2\), then \(m_r = m_1/2 = m_2/2\), so 
+<p>\[\nu =\frac{1}{2\pi} \sqrt{\frac{2k}{m_1}}\]</li>
+<li><span class="item-label">b.</span> if \(m_2 \rightarrow \infty\) (which fixes the #2 end), then 
+\(m_r \rightarrow m_1\) and
+<p>\[\nu = \frac{1}{2\pi} \sqrt{\frac{k}{m_1},}\]
+<p>a lower frequency than for \(m_1 = m_2\).</li>
+</ol>
+
+<p></section>

@@ -1,0 +1,451 @@
+<header class="module-header">
+  <h1 class="module-title">Discrete Spectra <span class="module-author">(Paul M.Parker and William C.Lane)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: atom, photon, electron <a href="../m212/" class="module-ref">MISN-0-212</a>, wavelength of
+    light <a href="../m212/" class="module-ref">MISN-0-212</a>, frequency of light <a href="../m212/" class="module-ref">MISN-0-212</a>, photon energy <a href="../m212/" class="module-ref">MISN-0-212</a>.</li><li><strong>2.</strong> Given the wavelength light coming from an object, state the
+    light's perceived color <a href="../m212/" class="module-ref">MISN-0-212</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: quantization, energy level, energy level diagram,
+    ground state, excited state, ionization, hydrogen-like ion, quantum jump,
+    principle quantum number, atomic one-electron system, atomic number,
+    spectrometer.</li><li><strong>K2.</strong> State the energy level formula for atomic one-electron systems.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given the atomic number Z for an atom, state the symbol for its
+    corresponding hydrogen-like ion.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Construct an energy-level diagram for any atomic one-electron
+    system, showing energy and quantum number values for each level.</li><li><strong>S2.</strong> Calculate the wavelength and frequency of the photon emitted when
+    any given atomic one-electron system makes a transition from one specified
+    energy level to another.  State the perceived color of light made up of those
+    photons.</li><li><strong>S3.</strong> Given a distribution of emitted energy over a discrete set
+    of wavelengths, use linear interpolation on a table of tri-stimulus values,
+    plus a Chromaticity Diagram, to determine the light's chromaticity
+    coordinates and perceived color.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p>In certain circumstances, light coming from atoms and molecules consists
+of photons at various individual isolated wavelengths that are typical of
+the particular species of atom or molecule.
+The discrete nature of such photon emission/absorption spectra leads us
+to conclude that the energy states of atoms and molecules exhibit
+“quantization,” that the atom or molecule can only exist in
+certain “allowed” energy states.
+The possible energy states of a system are expressed in terms of “energy
+levels” and are illustrated by means of an “energy level diagram” for
+the system (atom or molecule) being studied.
+The photon spectra originate from transitions between the energy levels in
+the system.
+<p>In this module we examine the operation of the simplest atomic/molecular
+system, one-electron atoms.
+Discrete spectra in other atoms and molecules are due to similar mechanisms
+but there are no simple equations for those cases.
+In fact, large complex computer programs and algorithms that took decades
+to develop are necessary for even slightly more complicated systems.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Atomic One-Electron Systems</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aAtomic Hydrogen
+The simplest example of an atomic one-electron system is atomic hydrogen,
+which consists of an electron and a single proton bound together by
+electrostatic attraction.
+Since the electron and proton have equal but opposite charges, they form
+a neutral-charge system properly called an atom.
+<p><h3 id="pcap--">. </h3>
+[]2bHydrogen-like Ions
+A hydrogen-like ion is obtained by starting with a neutral (zero total
+electric charge) atom and stripping it of all but one of its electrons.
+For example, suppose we start with a neutral nitrogen atom, <sub>7</sub>N<sup>0</sup>, which
+consists of the nucleus with charge \(+7e\) and seven orbiting electrons, each
+with charge \(-e\).
+After six of these electrons have been sequentially removed, we are left
+with only the nitrogen nucleus (\(+7e\)) and one electron (\(-e\)).
+This is a hydrogen-like ion of net charge \(+6e\), denoted by <sub>7</sub>N<sup>6+</sup>.
+The subscript is called the “atomic number” of the system and denotes the
+number of protons in the nucleus.
+<p>Starting with hydrogen itself and proceeding up the periodic table,
+we obtain this sequence of atomic one-electron systems:
+<sub>1</sub>H<sup>0</sup>, <sub>2</sub>He<sup>+</sup>, <sub>3</sub>Li<sup>++</sup>, <sub>4</sub>Be<sup>+++</sup>, <sub>5</sub>B<sup>4+</sup>,
+<sub>6</sub>C<sup>5+</sup>, <sub>7</sub>N<sup>6+</sup>, \ldots  .
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Energy Levels</h2>
+
+<p><h3 id="pcap-3-a">3a. The Energy Level Formula</h3>
+
+The energy levels of one-electron atoms are given by:
+<p>\[E_n = (-13.6\,\text{eV})Z^2 n^{-2}\,,\]
+<p>where \(Z\) is the atomic number of the system
+and \(n\) is the “principal quantum number,” a positive integer,
+i.e. \(n = 1, 2, 3, \ldots\) .
+No simple formula like <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> exists for atoms which have more
+than one electron.
+For multiple-electron atoms, energy levels and other atomic properties must
+usually be calculated approximately using sophisticated numerical techniques
+on computers.
+The more electrons, the more elaborate the techniques that are needed and the
+less accurate the answers.
+<p><h3 id="pcap-3-b">3b. Corrections to the Formula</h3>
+
+Even in atomic one-electron systems <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is not precisely
+correct.
+Relativistic corrections to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> change the answer in the fifth
+digit.
+More exotic effects, like polarization of the vacuum, give corrections
+beginning in the sixth digit.
+Those tiny effects have been calculated from theory and confirmed by
+experiment.
+Such tiny effects will not concern us here.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m215gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Energy level diagram for an atomic
+one-electron system (roughly to scale).
+Also shown are the principal quantum numbers, \(n\).</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]3cEnergy Level Diagrams
+A very powerful tool used to visualize and classify the energy levels of an
+atomic or molecular system is the “energy level diagram.”
+As illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, the energy levels of an atomic one-electron
+system are represented by horizontal lines on a vertical scale denoting the
+total energy of the system.
+The lowest possible (most negative) energy level of any quantized system is
+called the “ground state,” and higher levels are called “excited
+states.”
+For the system illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, \(E_1\) is the ground state, \(E_2\) is
+the first excited state, \(E_3\) is the second excited state, etc.
+When \(n\) is \(\infty\) the energy of the system is zero.
+This corresponds to complete separation of the electron from the nucleus,
+i.e. the system is completely “ionized.”
+Energy states above \(E = 0\) form a “continuum” since any energy state
+is possible for a free electron.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m215gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A quantum jump from an upper state \(E_u\)
+to a lower state \(E_\ell\) resulting in the emission of a photon of energy
+\(h\nu\).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Optical Spectra</h2>
+
+<p><h3 id="pcap-4-a">4a. Atoms May Reach Excited States By Collisions</h3>
+
+The bombardment of a low-pressure gas of atoms or molecules with electron
+beams results in the collisional excitation of the atoms or molecules of the
+gas from the ground state, where each normally resides, into one of its
+excited states.
+The lifetime of an atom in an excited state is ordinarily quite short, of 
+the order of \(10^{-8}\,\text{seconds}\), after which the atom reverts very quickly to
+its ground state in either a single “quantum jump” or a sequential series
+of jumps through intermediate levels.
+Every time such a downward (in energy) jump takes place, the energy lost by
+the atom is carried away by a photon created at the time of the jump, as
+illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The photon's energy must equal the energy lost by the atom, \({\Delta}E\):
+<p>\[{\Delta}E = h\nu\]
+<p>where \(\nu\) is the frequency of the photon and \(h\) is Planck's constant.
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is the basic equation for all of radiation spectroscopy.  
+<p><h3 id="pcap-4-b">4b. The Optical Emission Spectrum</h3>
+
+As the collisional excitations and photon emission processes continuously 
+take place in a sample of excited gas, the characteristic spectrum of the
+particular gas present is observed.
+<p>When analyzed, all emitted light should contain only frequencies \(\nu\) that
+satisfy <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+For hydrogen these frequencies are given by:
+<p>\[h\nu = E_u - E_\ell =
+        13.6\,\text{eV}\left(\frac{1}{n_\ell^2}-\frac{1}{n_u^2}\right)\,,\]
+<p>where \(n_\ell\) and \(n_u\) are the values of the principal quantum number \(n\)
+for the lower and upper energy states, respectively.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m215gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Absorption of a photon by an atomic or
+molecular system.</figcaption></figure>
+
+<p><h3 id="pcap-4-c">4c. The Optical Absorption Spectrum</h3>
+
+If a beam of photons with a continuous range of energies is incident on a
+collection of atoms or molecules, certain photons are absorbed, yielding
+an “optical absorption spectrum.”
+If the energy of the photon corresponds to a possible quantum jump upward
+for the atom or molecule in its present energy state, then the photon may be
+absorbed, as illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, with the atom or molecule now at a
+higher energy level.
+After a short period of time (\(\approx 10^{-8}\)&thinsp;s) the atom or molecule may
+make a downward quantum jump from \(E_u\) to \(E_\ell\) with the emission of a
+photon of energy \(h\nu = E_u - E_\ell\), but whose direction is random.
+Consequently the original beam of photons will be depleted of those photons
+whose energies correspond to possible quantum jumps in the atom or molecule.
+The effect is <em>as though</em> those particular photons were scattered out of
+the beam (actually, they were absorbed and re-emitted).
+<p><h3 id="pcap-4-d">4d. Accuracy of the Predicted Frequencies</h3>
+
+The observed frequencies of hydrogen and the hydrogen-like ions agree with 
+those predicted by <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and (2) to four significant digits in
+all known cases.
+<p><span class="tryit">Try it:</span>  A hydrogen atom jumps from \(n_u = 5\) to \(n_\ell = 2\).
+Show that the energy of the emitted photon is, by <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>,
+2.86&thinsp;eV. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a> <br>
+
+<p>Show that the frequency \(\nu\) and wavelength \(\lambda\) of this radiation are
+\(6.91\times10^{14}\,\text{Hz}\) and \(434\,\text{nm}\), respectively. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<br>
+
+<p>This wavelength is indeed found to be present in the spectrum of hydrogen.
+Use the Table in Appendix&nbsp;A and the Chromaticity Diagram in
+Appendix&nbsp;B to show that this wavelength lies in the blue-violet visible
+region of the electromagnetic spectrum. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><span class="tryit">Try it:</span>  Show that the same “5 to 2 jump” in <sub>3</sub>Li<sup>++</sup> produces a photon
+with energy, frequency, and wavelength given by
+\(25.7\,\text{eV}\), \(6.22 \times 10^{15}\,\text{Hz}\), and \(48.2\,\text{nm}\),
+respectively. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a> <br>
+
+<p>Show that the wavelength of this photon lies below the visible spectrum, in
+the ultraviolet. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a> <br>
+
+The eye cannot see it, but it can be detected in UV (ultraviolet)
+spectrometers.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the number of protons (particles with charge
+\(+e\)) in the nucleus of the atomic one-electron system, denoted by the symbol
+\(Z\).
+\(Z\) is usually indicated by a left subscript on the chemical symbol of the
+system, i.e. <sub>4</sub>Be.
+<p>a two-particle system bound
+together by electrostatic attraction, consisting of a nucleus with charge
+\(+\)Z\(e\) and a single electron with charge \(-e\) where \(Z\) is the atomic number
+of the system.
+<p>a possible value for the total energy of a
+real ystem.
+<p>a one-dimensional graph of the energy
+levels of a system, with the levels indicated by horizontal lines at the
+appropriate places on a vertical energy scale.
+Bound states of the systems are represented by negative energy levels.
+<p>an energy level of a system higher on the
+energy scale (more positive) than the system's lowest (most negative)
+energy level.
+<p>a system's lowest (most negative) energy
+level, whether the system is currently in that state or not.
+<p>an ion produced by stripping away all but
+one electron from an initially neutral atom, leaving a system consisting of
+a nucleus of charge \(+\)Z\(e\) and a single electron.
+<p>the process of adding electrons to, or removing
+electrons from, an initially neutral atom to form a charged particle called
+an “ion.”
+By removing all the electrons, the atom is “completely ionized.”
+<p>the quantum number (commonly
+denoted \(n\), an integer greater than zero) that fixes the energy of
+single-electron atoms; in quantum mechanics it is one more than the number
+of radial nodes in the wave function (not counting a possible node at the
+origin or one at infinity).
+<p>the property of atomic and molecular systems
+wherein certain quantities, such as total energy, may only take on discrete
+“allowed” values.
+<p>a transition between quantized energy states.
+<p>a device for determining the spectrum of light
+in any particular beam, resulting in photograph, a plot, or a table of
+intensity versus wavelength.
+</section>
+
+<p>
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>\(h = 0.4135 \times 10^{-14}\,\text{eV}\,\text{s}; \qquad
+      hc = 1.2397\,\text{KeV}\,\text{nm}; \qquad
+       c = 3.00 \times 10^8\,\text{m/s}\)
+<p>Problem&nbsp;4 also occurs in this module's <em>Model Exam</em>.
+<p><span class="tryit">Try it:</span>   FIRST DO problems&nbsp;1-2 which are in-text problems in Sect.&thinsp;4d.
+<p><ol>
+<li><span class="item-label">3.</span> The energy levels of a certain atomic one-electron system have
+been determined to be:
+<p><figure class="fig-centered"><img src="figures/m215gr05.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Assuming the atom is initially in the ground state (a good
+           assumption), is it possible for a 27.0&thinsp;nm photon to be
+           absorbed?  Why or why not?</li>
+<li><span class="item-label">b.</span> Answer the same question for a 25.6&thinsp;nm photon.</li>
+<li><span class="item-label">c.</span> Assuming the atom is a hydrogenlike ion, what is the charge of
+           the nucleus?
+</li>
+<li><span class="item-label">4.</span> A singly ionized helium atom in the ground state absorbs a photon
+           and is excited to the \(n = 4\) energy level.
+           The system can de-excite by emitting other photons.
+           Assuming all quantum jumps to lower energy levels are allowed,
+           calculate all possible wavelengths of emitted photons and
+           identify the region of the spectrum they belong to.
+           If in the visible region, state the perceived color of light made
+           up of such photons. <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></li>
+<li><span class="item-label">5.</span> Construct an energy-level diagram for an N<sup>6+</sup> hydrogen-like
+           ion, showing the energy and quantum number values for several of
+           the lowest lying energy levels.
+           Your diagram should be roughly to scale.</li>
+<li><span class="item-label">6.</span> Calculate the wavelength of the photon emitted when a C<sup>5+</sup>
+           hydrogen-like ion makes a transition from the state with \(n = 4\)
+           to the state with \(n = 3\).
+           Sketch the energy levels and mark this transition on it as an
+           arrow.
+           Note: The ground state energy of hydrogen is (\(-13.6\,\text{eV}\)).
+           <br>
+ Is this a visible photon?</li>
+<li><span class="item-label">7.</span> (only for those interested and who have studied “Specification of Color:
+Chromaticity,” MISN-0-227) Determine the chromaticity coordinates, to two significant
+digits, and hence the color, of a commercial clear mercury lamp whose emitted energy in the
+visible region is almost completely in these four spectral lines as quoted
+by the lamp's manufacturer: <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<div class="centered"><table class="physnet-table"><tbody><tr><td>\(\lambda\)(nm)</td><td>Energy</td></tr><tr><td>404.7</td><td>250</td></tr><tr><td>435.8</td><td>520</td></tr><tr><td>546.1</td><td>625</td></tr><tr><td>578.0</td><td>840</td></tr></tbody></table>
+</div>
+
+Note: this is a regular fluorescent lamp without the usual phosphor coating
+on the inside of the glass.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> No. The energy of the photon is 45.9&thinsp;eV.
+           In absorbing such a photon, the atom would be raised to an energy
+           level of \(-8.5\)&thinsp;eV, where no allowed state exists (this is
+           between the allowed \(n = 2\) and \(n = 3\) levels).</li>
+<li><span class="item-label">b.</span> Yes.
+           The energy of this photon is 48.4&thinsp;eV, which would excite the
+           atom from the \(n = 1\) state at \(-54.4\)&thinsp;eV to the \(n = 3\) state
+           at \(-6.0\)&thinsp;eV.</li>
+<li><span class="item-label">c.</span> \(3.2 \times 10^{-19}\)&thinsp;C.
+</li>
+<li><span class="item-label">4.</span> Incoming photon: \(hc/\lambda = E_4 - E_1\)</li>
+<li>Outgoing photons:</li>
+<li>\(n = 4 \rightarrow n = 3\): \(\lambda = 468.8\)&thinsp;nm (visible)</li>
+<li>\(n = 4 \rightarrow n = 2\): \(\lambda = 121.5\)&thinsp;nm (ultraviolet)</li>
+<li>\(n = 4 \rightarrow n = 1\): \(\lambda =  24.3\)&thinsp;nm (ultraviolet)</li>
+<li>\(n = 3 \rightarrow n = 2\): \(\lambda = 164.1\)&thinsp;nm (ultraviolet)</li>
+<li>\(n = 3 \rightarrow n = 1\): \(\lambda =  25.6\)&thinsp;nm (ultraviolet)</li>
+<li>\(n = 2 \rightarrow n = 1\): \(\lambda =  30.4\)&thinsp;nm (ultraviolet)</li>
+<li>(These answers use \(hc = 1.2397\)&thinsp;KeV&thinsp;nm and
+           \(E = -13.6\,\text{eV}\,Z^2/n^2\))</li>
+<li><span class="item-label">5.</span> Energy levels of N<sup>6+</sup>:
+<p>           <figure class="fig-centered"><img src="figures/m215gr06.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">6.</span> C<sup>5+</sup>
+<p>           <figure class="fig-centered"><img src="figures/m215gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p>           No</li>
+<li><span class="item-label">7.</span> \(x = 0.34\), \(y = 0.40\); a shade of white.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\(h\nu =
+ \left(\frac{-13.6\,\text{eV}}{5^2}\right)
+      - \left(\frac{-13.6\,\text{eV}}{2^2}\right) =
+ 13.6\,\text{eV}\left(\frac{1}{4}-\frac{1}{25}\right)\)
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\nu = \frac{E}{h} =
+  \frac{2.86\,\text{eV}}{0.414\times10^{-14}\,\text{eV}\,\text{s}}\)
+<p> \(\lambda = \frac{c}{\nu} =
+  \frac{3\times10^8\,\text{m/s}}{6.91\times10^{-14}/\,\text{s}}\)
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Interpolation in the Table of Appendix A gives:
+<p> \(x=0.1689 + 0.4(0.1644 - 0.1689)\)
+<p> \(y=0.0069 + 0.4(0.0109 - 0.0069)\)
+ 
+ <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Notice that the energy of this photon is \(3^2\) times the energy of the
+ photon from the hydrogen transition.
+ Notice also that Li has \(Z=3\) and H has \(Z=1\).
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">The lower limit for the spectrum of visible light is 400&thinsp;nm.
+<p> The number 48.2 is smaller than the number 400.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">434&thinsp;nm is 0.4 of the way from 430&thinsp;nm to 440&thinsp;nm
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Interpolate, just as you did in the problem in the text, Sect.&thinsp;4d.
+ For a check, we get for the 435.8&thinsp;nm line: \(x_\lambda = 0.321\),
+ \(y_\lambda = 0.018\), \(z_\lambda = 1.595\).
+ If you do not know what to do with these numbers, you did not acquire
+ the prerequisite skills listed in this module's <em>ID Sheet</em>.
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">See “Characteristics of Photons” (MISN-0-212), <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+</div></div>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\(h = 0.4135 \times 10^{-14}\,\text{eV}\,\text{s}; \qquad
+      hc = 1.2397\,\text{KeV}\,\text{nm}; \qquad
+       c = 3.00 \times 10^8\,\text{m/s}\)
+<p>The ground state energy of hydrogen is (\(-13.6\)&thinsp;eV).
+<p>Note: the actual exam will have an attached table of chromaticity
+coordinates for a series of wavelengths and a Chromaticity Diagram.
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> A singly ionized helium atom in the ground state absorbs a photon
+           and is excited to the \(n = 4\) energy level.
+           The system can de-excite by emitting other photons.
+           Assuming all quantum jumps to lower energy levels are allowed,
+           calculate all possible wavelengths of emitted photons and
+           identify the region of the spectrum they belong to.
+           If in the visible region, state the perceived color of light made
+           up of such photons.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See problem&nbsp;4 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

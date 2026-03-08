@@ -1,0 +1,255 @@
+<header class="module-header">
+  <h1 class="module-title">Entropy <span class="module-author">(J.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Skills from “The First Law of Thermodynamics,” <a href="../m158/" class="module-ref">MISN-0-158</a>.</li><li><strong>2.</strong> Skills from “Energy Distribution Functions: Boltzmann
+               Distribution,” <a href="../m159/" class="module-ref">MISN-0-159</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Write down the expression that defines the entropy change of a
+                system for a reversible process, defining the terms in the
+                expression.</li><li><strong>S2.</strong> Starting from the expression obtained in S1, above, determine
+    the entropy change for a system that undergoes a reversible isothermal
+    process as well as for a system that undergoes an adiabatic process.</li><li><strong>S3.</strong> For an ideal gas , calculate the entropy change of the system
+    that undergoes the above change as well as for more general transformations.</li><li><strong>S4.</strong> For selected processes, show by calculation that the entropy
+    change of the universe is always toward increasing the entropy (or keeping
+    it unchanged), never toward decreasing it. (The Second Law of
+    Thermodynamics.)</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+    Reading (1970); for access see this module's <em>Local Guide</em>.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Description</h2>
+
+<p>The statement that equilibrium for a system of many particles occurs when
+it is in the state whose partition has the highest probability associated
+with it, can be translated into a statement about a macroscopic property of
+this system (a property that can be determined for the bulk system.
+Pressure, temperature, and volume are similarly macroscopic properties).
+This statement is the Second Law of Thermodynamics, that systems evolve such
+that the entropy of the system increases.
+The concept of entropy and applications of the Second Law are the topic of
+this module.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Suggested Procedure</h2>
+
+<p>In AF
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>study sections 13.10 (both of them!), 13.11, and 13.12.
+<p>There is a more expanded treatment of this subject in Ford's “Classical
+and Modern Physics,” Vol. 2.
+Some good illustrations and examples are included.
+For access, see this module's <em>Local Guide</em>.
+<p>In AF work problems&nbsp;13.25, 13.29*, 13.30, 13.31, and 13.33.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Comments</h2>
+
+<p>You can “derive” AF's Eq.&thinsp;13.35 without too much difficulty using the
+First Law of Thermodynamics (Eq.&thinsp;13.23) in differential form and the ideal
+gas law (Eq.&thinsp;13.13).
+This development is also useful in solving Problems&nbsp;13.30 and 13.31.
+<p>The First Law in differential form is \(dU = dQ - dW\) where \(dW = P\,dV\)
+is the work done by the system (if \(dV\) is positive, an increase)
+For an ideal gas \(U = NE_{k,ave}\) (Eq.&thinsp;13.4) which is:
+<p>\[U = (3/2) k N T = (3/2) n R T; \quad \text{(\m{n} is number of moles})..\]
+<p>So:
+<p>\[dQ = (3/2) n R\,dT + P\,dV.\]
+<p>The specific heat at constant volume, \(C_v\), is defined as:
+<p>\[\frac{dQ}{dt} \equiv C_v,\]
+<p>so \(C_v = (3/2) nR\).
+The entropy change is then:
+<p>\[dS \equiv \frac{dQ}{T} =
+                   \frac{3}{2} n R \frac{dT}{T} + \frac{P}{T}\,dV.\]
+<p>Now for an ideal gas:
+<p>\[\frac{P}{T} = \frac{nR}{V},\]
+<p>so:
+<p>\[dS = \frac{3}{2} n R \frac{dT}{T} + n R \frac{dV}{V};
+                        \quad \text{ (ideal gas only)}\,.\]
+<p>Integrating this for a finite transformation we get:
+<p>\[S_f - S_i = n R \;\ln\left(\frac{T_f}{T_i} \right)^{3/2}
+                     + \;\ln\left(\frac{V_f}{V_i} \right)\]
+<p>\[S_f - S_i = n R \;\ln\left(V_f T_f^{3/2}\right)
+                 - n R \;\ln\left(V_i T_i^{3/2}\right)\]
+<p>So it appears that \(S\) at any \(V\) and \(T\) is:
+<p>\[S = n R \;\ln\left( V T^{3/2} \right) + \text{ constant}.\]
+<p>[Use the ideal gas law to get this in the form of equation 13.35].
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Answers to Assigned Problems</h2>
+
+<p>
+<span class="fbox">13.25</span> The Carnot cycle on a \(P\)-\(V\) plot looks like this:
+<p><span class="tex-unknown" title="unknown macro">\FullFramedFixedFigure</span>m160gr00
+<p>
+<span class="fbox">13.29</span> HINT: Refer to the diagram for the Carnot cycle above to tell
+you the relative slopes of the adiabatic and isothermal processes.
+For the work done by the gas from stage 1 to stage 2 (the isothermal step)
+you should get:
+<p>\[W = \int_{V_1}^{V_2} P\,dV = n R T \;\ln\frac{V_2}{V_1} =
+                                   P_1 V_1 \;\ln\frac{V_2}{V_1} =
+                                   P_2 V_2 \;\ln\frac{V_2}{V_1}.\]
+<p>(The numerical answer is correct).
+For the work done during the adiabatic part of the cycle, from
+\(V_3\)&nbsp;(\( = V_2\)) to \(V_1\),
+<p>\[W = \int_{V_2}^{V_1} P\,dV =
+             \frac{1}{\gamma - 1}\,\left( P_3 V_2 - P_1 V_1 \right).\]
+<p>The \(P_3\) comes from the relation satisfied by adiabatic transformations:
+<p>\[P_3 V_3^\gamma = P_1 V_1^\gamma .\]
+<p>The numerical answer given by AF is correct if you use \(\gamma = 5/3\),
+\(W = -1.10 \times 10^6\)&nbsp;joules).
+For the entropy changes involved, use the “ideal gas” expression we derived
+above for \(dS\).
+For the isothermal change the first term drops out.
+(Or equivalently, use the first law of thermodynamics where for an ideal
+gas \(dU = 0\) for an isothermal process, so \(dQ = dW\), \(Q=W\) and you already
+calculated \(W\) above, so that:
+<p>\[S_2 - S_1 = \frac{P_1 V_1}{T_1}\; \ln\frac{V_2}{V_1}.\]
+<p>The numerical result in AF is correct.
+<p>
+For the constant volume process you should get:
+\[S_2 - S_1 = \frac{3}{2} \,n R\; \ln\frac{T_3}{T_2} =
+                   \frac{3}{2} \,n R\; \ln\frac{P_3 V_3}{P_2 V_2}.\]
+<p>Now \(V_3 = V_2\) so:
+<p>\[S_2 - S_1 = \frac{3}{2} \frac{P_1 V_1}{T_1}\; \ln\frac{P_3}{P_2}.\]
+<p>Again we get \(P_3\) from \(P_3 V_3^\gamma = P_1 V_1^\gamma\) and \(P_2\) from
+\(P_2 V_2 = P_1 V_1\).
+Then we find:
+<p>\[S_3 - S_2 =
+ \frac{3}{2} \frac{P_1 V_1}{T_1}\;
+ \ln\left(\frac{V_1}{V_2}\right)^{\gamma -1} =
+ \frac{3}{2} (\gamma - 1) \frac{P_1 V_1}{T_1}\;
+         \ln\left( \frac{V_2}{V_1} \right).\]
+<p>For an ideal gas \(\gamma = 5/3\), <strong>not</strong> 1.4, so the factor
+\((3/2) (\gamma - 1) = 1\) and the entropy change is:
+<p>\[S_3 - S_2 = \frac{P_1 V_1}{T_1}\; \ln\frac{V_1}{V_2},\]
+<p>which is just the negative of the change \(S_2 - S_1\).
+<p>
+<span class="fbox">13.30</span>
+<ol>
+<li><span class="item-label">a.</span> HINT: Use the First Law of Thermodynamics.
+           Note that the container is assumed to be perfectly insulating.</li>
+<li><span class="item-label">b.</span> Again an application of
+           \(dS = (3/2) n R\,(dT/T) + n R\, (dV/V)\), of Eq.&thinsp;13.35.</li>
+</ol>
+
+<p>
+<span class="fbox">13.31</span> This is not an ideal gas problem, so the above relation cannot
+be used.
+Start instead, with the thermodynamic definition of entropy change,
+\(dS = dQ/T\).
+The numerical result is correct, using the heat capacity value from
+Table 13.1.
+Note the units.
+<p>
+<span class="fbox">13.33</span> The numerical answer is correct as given in AF.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Two moles of an ideal gas at \(8.31 \times 10^3\unit{N/m^{2}}\) pressure
+and at temperature \(-53\unit{{^\circC}}\) is placed in contact with a heat reservoir
+which is maintained at a constant temperature of \(127\unit{{^\circC}}\).
+The gas is allowed to do \(6.0 \times 10^3\)&thinsp;J of work during its contact
+with the reservoir while its temperature remains constant at \(-53\unit{{^\circC}}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the change in internal energy of the gas? [K]</li>
+<li><span class="item-label">b.</span> How much heat is added to the gas? [F]</li>
+<li><span class="item-label">c.</span> Starting from the thermodynamic definition of entropy
+           find the entropy change of the gas for this process. [H]</li>
+<li><span class="item-label">d.</span> Find the entropy change of the reservoir for this process. [C]</li>
+<li><span class="item-label">e.</span> Find the entropy change of the universe for this process. [J]</li>
+<li><span class="item-label">f.</span> Explain how the Second Law of Thermodynamics applies to
+           the above process. [D]</li>
+<li><span class="item-label">g.</span> Assuming that heat always flows from the reservoir to the
+           gas what is the lowest temperature of the reservoir for which
+           the Second Law is satisfied.
+           Explain. [L]</li>
+<li><span class="item-label">h.</span> The reservoir is removed and the gas is insulated and
+           compressed adiabatically while \(5.2 \times 10^3\)&thinsp;J of work
+           are done on it.
+           Starting from the thermodynamic definition of entropy, find the
+           entropy change of the gas for this process. [B]</li>
+<li><span class="item-label">i.</span> What is the sign of the entropy change of the universe during
+           this process? [G]
+</li>
+<li><span class="item-label">2.</span> Suppose we have two large reservoirs of heat, one at \(50\,\text{K}\)
+           and the other at \(100\,\text{K}\).
+           Suppose they are placed in contact.
+           The reservoirs are large enough so that, if 200&thinsp;J of heat are
+           exchanged between them, it doesn't change the temperature of
+           either reservoir.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the total entropy change of the universe if 200J of
+           heat flows from the \(50\,\text{K}\) reservoir to the \(100\,\text{K}\)
+           one. [A]</li>
+<li><span class="item-label">b.</span> Calculate the total entropy change of the universe if
+           \(200\)&thinsp;J of heat flows from the \(100\,\text{K}\) reservoir to the
+           \(50\,\text{K}\) one. [M]</li>
+<li><span class="item-label">c.</span> Which of the above processes violates the Second Law and
+           which one satisfies it? [I]</li>
+<li><span class="item-label">d.</span> Is this consistent with the rule that “heat flows from high
+           temperature to low”? [E]
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> \(-2\,\text{J/K}\).</li>
+<li><span class="item-label">B.</span> Zero.</li>
+<li><span class="item-label">C.</span> \(-15\,\text{J/K}\).</li>
+<li><span class="item-label">D.</span> See section 13.12 of AF, especially the left-hand column of
+           p.&thinsp;277.</li>
+<li><span class="item-label">E.</span> Yes.</li>
+<li><span class="item-label">F.</span> \(6 \times 10^3\,\text{J}\).</li>
+<li><span class="item-label">G.</span> It increases by virtue of the work done on the gas (whatever
+does the work experiences an increase in entropy).</li>
+<li><span class="item-label">H.</span> \(+27.3\,\text{J/K}\).</li>
+<li><span class="item-label">I.</span> (a) violates 2nd Law, (b) satisfies second law (\(\Delta S > 0\)).</li>
+<li><span class="item-label">J.</span> \(+12.3\,\text{J/K}\).</li>
+<li><span class="item-label">K.</span> Zero.</li>
+<li><span class="item-label">L.</span> \(-53\unit{{^\circC}}\).
+           For any lower temperature the entropy change of gas plus
+           reservoir would be negative, violating 2nd Law.</li>
+<li><span class="item-label">M.</span> \(+2\,\text{J/K}\).</li>
+</ol>
+
+<p></section>
+

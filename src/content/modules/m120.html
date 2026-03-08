@@ -1,0 +1,513 @@
+<header class="module-header">
+  <h1 class="module-title">Electric Dipoles <span class="module-author">(P.Sojka and J.S.Kovacs)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State Coulomb's Law <a href="../m114/" class="module-ref">MISN-0-114</a>.</li><li><strong>2.</strong> Describe the field of a point charge <a href="../m115/" class="module-ref">MISN-0-115</a>.</li><li><strong>3.</strong> Describe the potential due to a point charge <a href="../m116/" class="module-ref">MISN-0-116</a>.</li><li><strong>4.</strong> Define vector dot products and cross products <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the dipole moment of a discrete system of charges.</li><li><strong>K2.</strong> Define a “point dipole.”</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given two point charges and a distance between them, calculate
+                the dipole moment, electric field, and electric potential they
+                produce.</li><li><strong>S2.</strong> Calculate the electric field and electric potential due to a
+                given point dipole.</li><li><strong>S3.</strong> Calculate the potential energy of a given dipole at a given
+                orientation in an external electric field.</li><li><strong>S4.</strong> Calculate the torque on a given dipole in a given external
+                electric field and the work done when the dipole is in the
+                external electric field.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Magnetic Dipoles” (MISN-0-130).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Dipoles play interesting and important roles in atomic and subatomic
+physics, as well as in Chemistry and Engineering.
+On the atomic and subatomic scale, the magnetic and electric dipole moments
+reveal structural information about the systems.
+On a much larger scale, dipole antennae are important in radio transmission
+and reception.
+<p>In this module, we will discuss one of the two types of dipoles, the
+electric dipole.
+Under consideration will be the dipole moment, the field and potential due
+to a dipole, torque on a dipole due to an external electric field, the
+electric potential and the potential energy of a dipole in an
+external electric field, and the work done on a dipole by the field when
+the dipole is rotated.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Properties of Electric Dipoles</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m120gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Position vectors for a system of
+charges.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-a">2a. Definition of Dipole Moment</h3>
+
+Consider a collection of \(N\) charges, \(q_1\), \(q_2\), \ldots  , \(q_N\).
+Relative to a fixed coordinate system, each charge is located at a point
+described by a vector \(\vec{r}_1\) for \(q_1\), \(\vec{r}_2\) for \(q_2\), etc.
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The dipole moment of this system is defined as the vector sum of
+the position vectors weighted by the charges at the ends of the vectors:
+<p>\[\text{Dipole Moment Vector } \equiv
+                    q_1 \vec{r}_1 + q_2 \vec{r}_2 + \ldots + q_N \vec{r}_N
+                    \equiv \sum_{i = 1}^N q_i \vec{r}_i.\]
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m120gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Vectors used to define an electric dipole.</figcaption></figure><figure id="fig-3"><img src="figures/m120gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Position vectors for the electric field of a dipole.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Definition of A Dipole</h3>
+
+“A dipole” is defined as a system consisting of two equal but oppositely
+charged point charges: \(q_1 = q\) and \(q_2 = - q\).
+For that case the dipole moment, \(\vec{p}\), is:
+<p>\[\vec{p} = q_1 \vec{r}_1 + q_2 \vec{r}_2 =
+                  q \vec{r}_1 -  q \vec{r}_2 =
+                  q (\vec{r}_1 -  \vec{r}_2) =
+                  q\,\vec{\ell},\]
+<p>where \(\vec{r}_1 - \vec{r}_2 = \vec{\ell}\), the vector separation of the
+charges, points from the negative charge (\(-q\)) to the positive charge
+(\(+q\)) (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+Note that the origin of the coordinate system, which appears in the general
+definition, disappears in the case of this two-particle, zero-net-charge
+dipole.
+Thus the dipole moment is a property of the dipole and is independent of
+what coordinate system is used to describe it.
+<p><h3 id="pcap-2-c">2c. Electric Field Due to a Dipole</h3>
+
+The electric field and the electric potential at any point in the vicinity
+of a dipole can be straightforwardly calculated just by adding the
+contributions due to each of the charges.
+For example, consider a dipole whose center is at the origin (<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+At point \(P\) you can calculate the field due to the two charges.
+The answer is:
+<p>\[\vec{E}(\vec{r}) = k_e q
+\left[ \frac{\vec{r} - \vec{\ell} /2}{|\vec{r} - \vec{\ell}/2|^3} -
+\frac{\vec{r} + \vec{\ell} /2}{|\vec{r} + \vec{\ell}/2|^3} \right],\]
+<p>where \(\vec{r}\) is the vector from the origin to \(P\).
+<p><h3 id="pcap-2-d">2d. Electric Field Due to a “Point” Dipole</h3>
+
+An interesting result occurs if we take the dipole to be “very small.”
+Here we mean that the dipole has a spatial size, \(\ell\),
+that is negligible compared with the distance \(r\) to the point \(P\) where
+the field of the dipole is observed.
+The result is that the field at \(P\) due to the point dipole at the origin
+is well-approximated by:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\vec{E}(\vec{r}) = k_e
+                \left[ \frac{(3 \vec{r} \cdot \vec{p})\, \vec{r}}{r^5} -
+                \frac{\vec{p}}{r^3} \right] \qquad (\ell \ll r)\]
+<p>Note that there is one component in the \(\vec{r}\) direction and another in
+the \(\vec{p}\) direction.
+The expression becomes the exact answer for \(\vec{E}\) as the ratio \(\ell/r\)
+becomes vanishingly small, regardless of whether \(\vec{p}\) and \(\vec{E}\)
+become small or not.
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m120gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Symbols used to define the potential at a
+point \(P\) due to an electric dipole of moment \(\vec{p}\) at the origin.</figcaption></figure>
+
+<p><h3 id="pcap-2-e">2e. Potential Due to a “Point” Dipole</h3>
+
+The potential, \(V(r)\), can be similarly determined, yielding (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> for symbols):
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[V(r) = k_e \frac{\vec{p} \cdot \vec{r}}{r^3} =
+              k_e \frac{p \cos\theta}{r^2}.\]
+<p>This is the potential at a distance \(r\) from a point-like dipole.
+The interesting thing about these expressions is that they depend neither on
+the charge nor the spatial size, but on the combination \(\vec{p}\), the dipole
+moment.
+Notice also that the potential varies with \(\theta\).
+For example, at any point on a line perpendicular to the direction of \(\vec{p}\) the potential
+\(V\) is zero.
+For a given value of \(r\), \(V\) has its maximum value for the point where \(r\)
+is in the direction of \(p\).
+Contrast that with the potential due to a point charge at the origin:
+for that case, \(V\) has the same value for a fixed \(|\vec{r}|\), no matter what
+the direction of \(\vec{r}\).
+<p><h3 id="pcap-2-f">2f. Polar Plot of \(V(\theta)\)</h3>
+
+This dependence of \(V\) on \(\theta\) can be graphically exhibited in a polar
+plot of \(V\) as a function of \(\theta\).
+For each value of \(\theta\) a line is drawn whose length equals the magnitude
+of \(V\) at that value of \(\theta\).
+The dipole potential is:
+<p>\[V(\theta) = k_e \frac{P \cos\theta}{r^2},\]
+<p>where \(r\) is now held constant at some particular radius of interest.
+ 
+<div class="figure-row figure-row-2"><figure id="fig-5"><img src="figures/m120gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Coordinate-space symbol definitions for all points at constant radius.</figcaption></figure><figure id="fig-6"><img src="figures/m120gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Dipole potential-space symbols for points at constant radius, varying angle.</figcaption></figure></div>
+
+<p>For the point \(P\) in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, the value of \(V(\theta)\) is given by the
+length of the line from the origin (at angle \(\theta\)) shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+If \(p\) were oriented along the \(y\)-axis, the graph would be rotated
+90°.
+On this same kind of plot, the potential due to a point charge
+(\(V = k_e q/ r\)) is a circle.
+Another point of contrast between the potential due to a point charge and
+the potential due to a point dipole is that the former potential decreases
+as \(r^{-1}\), while the latter decreases as \(r^{-2}\).
+<p><h3 id="pcap-2-g">2g. Summary: Field and Potential of a Dipole</h3>
+
+In spite of the way we define it in terms of point charge, the point
+electric dipole can be viewed as another kind of electrical entity, to be
+contrasted with and considered along with a point charge, as a source of
+electric field.
+Even though it has a net charge of zero, it does give rise to an electric
+field and to a corresponding electric potential and both are basically
+different from the field due to a point charge.
+Just as
+<p>\[E_q = k_e \frac{q \hat{r}}{r^2} \qquad \text{and} \qquad
+       V_q = k_e \frac{q}{r}\]
+<p>are the field and potential characteristic of a point charge,
+<p>\[\vec{E}(\vec{r}) = k_e
+                \left[ \frac{(3 \vec{r} \cdot \vec{p})\, \vec{r}}{r^5} -
+                \frac{\vec{p}}{r^3} \right] \qquad \text{and} \qquad
+       V(\vec{r}) = k_e \frac{\vec{p} \cdot \vec{r}}{r^3}\]
+<p>are the field and potential characteristic of a point dipole.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Dipole In External Electric Field</h2>
+
+<p><h3 id="pcap-3-a">3a. Potential Energy</h3>
+
+Now suppose a point dipole is placed in an external electric field,
+\(\vec{E}_\text{ext}\).
+What happens to the dipole (does it move)?
+What is the new energy of the dipole?
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m120gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Definition of variables specifying a
+dipole in an external field.</figcaption></figure>
+
+<p>Let us consider a simple external field, a uniform field along the positive
+\(x\)-axis.
+Suppose the dipole has its center at the origin and makes an angle
+\(\theta\) with the \(x\)-axis in the \(x\)-\(y\) plane.
+For the sake of easy calculations, we will deal with a finite-size
+dipole instead of the point dipole.
+The result we get will apply equally well to the point dipole.
+<p>The external electric field has associated with it a potential:
+<p>\[\vec{E}_\text{ext} = - \Grad V_\text{ext}.\]
+<p>Because \(\vec{E}_\text{ext}\) is constant and in the \(x\)-direction,
+<p>\[\vec{E}_\text{ext} = - dV_\text{ext}/dx\, \hat{x}; \qquad \frac{dV}{dx} = -E; \qquad
+       V_\text{ext} = - (x - x_0)\,E_0,\]
+<p>where \(x_0\) is some arbitrary integration constant.
+The coordinates of the charges \(q\) and \(-q\) are (See <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>):
+<p>\[\vec{r}_q = \frac{\ell}{2} ( \hat{x} \cos\theta + \hat{y} \sin\theta),\]
+<p>\[\vec{r}_{-q} = \frac{\ell}{2} ( \hat{x} \cos\theta - \hat{y} \sin\theta),\]
+<p>The two charges \(q\) and \(-q\) in the external potential
+\(V_\text{ext} = - E_0 (x - x_0)\) then have a total potential energy given by the
+sum of \(q V_\text{ext}\) values at the two charge positions:
+<p>\[E_\text{pot} = - q \ell E_0 \cos\theta = - p E_0 \cos\theta =
+                 - \vec{p} \cdot \vec{E}_\text{ext}.\]
+<p>This expression for the potential energy of a dipole in an external electric
+field, \(E_\text{pot} = - \vec{p} \cdot \vec{E}_\text{ext}\), while derived for the
+special case of a uniform field, also applies to the general case (any
+field).
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m120gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Symbols used for forces on a dipole in
+a uniform electric field.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Torque on a Dipole in an External Electric Field</h3>
+
+Consider a dipole in a uniform electric field, oriented at an angle \(\theta\)
+with the \(\vec{E}\)-direction.
+The forces on the dipole are as shown in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m120gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Quantities involved in the rotation of a
+dipole through a small angle \(d\phi\).</figcaption></figure>
+
+<p>The torque about the center of the dipole, exerted on the dipole by the
+force on the \(+q\) end, is \(\vec{r}_{+q} \times \vec{F}\) (where
+\(\vec{r}_{+q}\) is the vector from the origin, the dipole's center, to the
+\(+q\) charge).
+Then \(\vec{r}_{+q}\) is of length \(\ell/2\) so the magnitude of the torque is
+\((1/2) q \ell E \sin\theta\).
+The direction of this torque is perpendicular to and into the plane of the
+page.
+The contribution to the net torque by the force on the other end of the
+dipole is also \((1/2) q \ell E \sin\theta\), directed into the page, so the
+net torque on the dipole is \(q \ell E \sin\theta\), the result you'd get from
+the expression \(\vec{p} \times \vec{E}\).
+The direction of the torque vector also checks with the direction of
+\(\vec{p} \times \vec{E}\) so we can write:
+<p>\[\vec{\tau} = \vec{p} \times \vec{E}.\]
+<p>There is no net force on this dipole (\(\vec{F}\) to the right, and \(-\vec{F}\)
+to the left) but there is a net torque, so that the effect of the external
+\(E\)-field will be to cause the dipole to rotate.
+<p><h3 id="pcap-3-c">3c. Determination of Rotational Potential Energy</h3>
+
+Consider rotation of the dipole about its center at the origin of the
+coordinate system.
+How much work will the \(E\)-field do in rotating the dipole from an
+orientation with angle \(\theta_A\) to an orientation \(\theta_B\)?
+<p>In general, if force \(\vec{F}\) causes a system to be displaced by an amount
+\(d\vec{s}\), the work done by \(\vec{F}\) is \(\vec{F} \cdot d\vec{s}\).
+For the charge \(+q\) at the end of the dipole, the displacement \(d\vec{s}\)
+(for rotation through \(d\theta\) about the origin) is perpendicular to the
+dipole moment vector.
+<p>So \(\vec{F} \cdot d\vec{s} = F ds \cos\phi\) (where \(\phi\) is as shown in
+<a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>) but \(ds = (\ell/2)\,d\phi\) and \(F = q E\) so the increment of work
+done by \(\vec{E}\) is \((q E\ell/2) \cos\phi\,d\phi\), which, from the
+expression for the torque, we recognize as \(\tau\,d\phi\).
+The work done in rotating the dipole from orientation \(A\) making angle
+\(\phi_A\) with the field to orientation \(B\) making angle \(\phi_B\) with the
+field is:
+<p>\[W = \int_A^B \vec{F} \cdot d\vec{s} = \int_A^B \tau\,d\phi =
+           E\,q\,\ell\,\int_A^B \cos\phi\,d\phi.\]
+<p>Note that the (1/2) is gone because the total torque on the dipole also
+includes the torque exerted on the \(-q\) end.
+Then:
+<p>\[W = E\,p (\sin\phi_B - \sin\phi_A).\]
+<p>But \(\phi_B = \pi/2 - \theta_B\), so: \(\sin\phi_B = \cos\theta_B\), etc.
+<p>\[W = (\vec{E} \cdot \vec{p})_B - (\vec{E} \cdot \vec{p})_A; \qquad
+       W = E_\text{pot}(\theta_A) - E_\text{pot}(\theta_B),\]
+<p>just the difference in potential energy between the initial orientation and
+the final one (recall that the potential energy of a dipole in an external
+field is: \(E_p = - \vec{E} \cdot \vec{p}\)).
+This is the work-energy principle in action.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Existence of Electric Dipoles</h2>
+
+<p>Do electric dipoles really exist?
+Electric monopoles (electric “charges”) certainly do.
+For most purposes an electron can be considered an example of a point
+monopole with charge \(q = -1.6 \times 10^{-19}\)&thinsp;C.
+It also has mass and a magnetic dipole moment.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The proton also carries an electric monopole charge
+\(q = + 1.6 \times 10^{-19}\)&thinsp;C.
+Obviously, the hydrogen atom consisting of a proton and an electron forms
+an electric dipole.
+In its equilibrium state, the average location of the electron and proton
+coincide, yielding a dipole moment of zero.
+Atoms in the ground state normally have zero dipole moments.
+However, in some of their excited states, which last for brief time periods,
+many atoms have non-zero dipole moments.
+Elegant symmetry theorems in quantum mechanics explain why this must be so,
+but that's a subject for another time.
+<p>Of course, microscopic static charge distributions, such as might be
+present on capacitor plates, may have finite, non-zero, dipole moments.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+</section>
+Michael Cason kindly led us to correct a typo.<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. The Point Dipole Field</h2>
+
+<div class="centered">(for those interested)</div>
+
+<p>Expand the denominators of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> in a power series in
+(\(\ell/r\)):
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[\begin{aligned}|\vec{r} \pm \vec{\ell}/2|^{-3} & = &
+                     (r^2 \pm \vec{r} \cdot \vec{\ell} + \ell^2/4)^{-3/2} \\
+   & = &  r^{-3} \left( 1 \pm \frac{\vec{r} \cdot \vec{\ell}}{4 r^2} +
+          \frac{\ell^2}{4 r^2} \right)^{-3/2} =
+          r^{-3} \left( 1 \mp \frac{3 \vec{r} \cdot \vec{\ell}}{2 r^2} +
+          \ldots \right). \\\end{aligned}\]
+
+<p>Discard all second and higher powers of the very small quantity
+(\(\ell/r\)); the rest is algebra.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. The Point Dipole Potential</h2>
+
+<div class="centered">(for those interested)</div>
+
+<p>We define the zero of potential to be at infinity:
+<p>\[\begin{aligned}V(\vec{r}) & = & - \int_\infty^{\vec{r}} E(\vec{r}\,') \cdot d\vec{s}\,' \\
+           & = & - k_e \int_\infty^{\vec{r}}
+                  \left[ \frac{(3 \vec{r}\,' \cdot \vec{p})\, \vec{r}\,'}{r'^5} -
+                  \frac{\vec{p}}{r'^3} \right] \,d\vec{s}\,'. \\\end{aligned}\]
+
+
+where \(d\vec{s}'\) is a trajectory element.
+<p>The potential is independent of the integration path.
+For convenience we choose the path to be along the radial line passing
+through the point \(\vec{r}\).
+This line is at an angle \(\theta\) to the dipole moment vector \(\vec{p}\) of
+the dipole at the origin.
+Then:
+<p>\[\begin{aligned}V(r,\theta) & = & - k_e \int_\infty^r
+                 \left[ \frac{3\,r'\,p\,\cos\theta r'}{r'^5} -
+                 \frac{p\,\cos\theta}{r'^3} \right]\,dr' \\
+ & = & - k_e 2\,p\,\cos\theta \int_\infty^r (r')^{-3}\,dr' \\
+ & = & - k_e \frac{p\,\cos\theta}{r^2}. \\\end{aligned}\]
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See Appendix A for an outline of the derivation. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See Appendix B for the derivation. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Potential Energy; The Work-Energy Principle” (MISN-0-20). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Magnetic Dipoles” (MISN-0-130). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “The Taylor Series for the Expansion of a Function About a
+Point” (MISN-0-4). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>
+Note: Problem&nbsp;4 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Consider a dipole in an external electric field
+\(\vec{E} = E_0 \hat{y}\) where \(E_0\) is a constant.
+For the four cases of orientation of the dipole (\(p\) is the magnitude of
+the dipole moment):
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(\vec{p} =   p \hat{x}\)</li>
+<li><span class="item-label">(ii)</span> \(\vec{p} =   p \hat{y}\)</li>
+<li><span class="item-label">(iii)</span> \(\vec{p} = - p \hat{x}\)</li>
+<li><span class="item-label">(iv)</span> \(\vec{p} = - p \hat{y}\)
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the potential energy of the dipole in this external field.
+           Order your answers from highest to lowest potential energy.</li>
+<li><span class="item-label">b.</span> If the dipole were free to rotate in this external electric field,
+           which orientation would be the equilibrium alignment?
+           (as a hint, consider the analogy of a particle in the
+           gravitational field of the earth; its potential energy increases
+           with increasing altitude above the surface.
+           If left free, in what direction of change of potential energy
+           does it go?)
+</li>
+<li><span class="item-label">2.</span> A point dipole \(\vec{p} = p_0 \hat{y}\) is located at the origin of
+           the coordinates and \(p_0 = 1.00 \times 10^{-15}\)&thinsp;C&thinsp;m.
+           At a distance of 0.01&thinsp;meters from the dipole, find the electric
+           field at each of the following locations and, on a diagram,
+           sketch in the direction of the field at each point:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> along the positive x-axis.</li>
+<li><span class="item-label">b.</span> along the positive y-axis.</li>
+<li><span class="item-label">c.</span> along the negative x-axis.</li>
+<li><span class="item-label">d.</span> along the negative y-axis.</li>
+<li><span class="item-label">e.</span> at a point in the first quadrant in the \(x\)-\(y\) plane, making an
+           angle of 45° with both the positive-\(x\) and positive-\(y\)
+           axes.
+</li>
+<li><span class="item-label">3.</span> An electric dipole of dipole moment \(\vec{p} = p \hat{x}\), with
+           \(p = 5.0 \times 10^{-15}\)&thinsp;C&thinsp;m, is placed in a uniform electric
+           field \(\vec{E} = E_0 \hat{x}\) with \(E_0 = 4.0 \times 10^6\)&thinsp;N/C.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What torque is exerted on the dipole by the field?</li>
+<li><span class="item-label">b.</span> What is the potential energy of the dipole in this field?</li>
+<li><span class="item-label">c.</span> If you (with tweezers?) rotated this dipole so that it aligned
+           perpendicular to the field, \(\vec{p} = p \hat{x}\), how much work
+           would you (not the field!) have to do?
+</li>
+<li><span class="item-label">4.</span> Given a finite-sized dipole with a charge of
+           \(- 2.5 \times 10^5\)&thinsp;C at one end-point and a charge of
+           \(+ 2.5 \times 10^5\)&thinsp;C at the other end-point, and a distance
+           between the two points of 0.0010&thinsp;m, and with the dipole oriented
+           at 40.0° to a uniform external electric field, find:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the dipole moment.</li>
+<li><span class="item-label">b.</span> with external electric field strength equal to 7.5&thinsp;N/C&thinsp;\(\hat{x}\),
+           find the potential energy of the dipole in this field.</li>
+<li><span class="item-label">c.</span> the torque on the dipole due to the field.</li>
+<li><span class="item-label">d.</span> the work done by the field on the dipole in rotating it from
+           40.0° with the field to its equilibrium orientation.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> (i) 0; (ii) \(- E_0 p\); (iii) 0; (iv) \(+ E_0 p\).
+           Order of decreasing energy: (iv), (i) and (iii), (ii).</li>
+<li><span class="item-label">b.</span> The lowest energy alignment: (ii) \(\vec{p} = p \hat{y}\).
+</li>
+<li><span class="item-label">2.</span> a. \(\vec{E} = -9 \hat{y}\)&thinsp;N/C.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(\vec{E} = 18 \hat{y}\)&thinsp;N/C.</li>
+<li><span class="item-label">c.</span> \(\vec{E} = -9 \hat{y}\)&thinsp;N/C.</li>
+<li><span class="item-label">d.</span> \(\vec{E} = 18 \hat{y}\)&thinsp;N/C.</li>
+<li><span class="item-label">e.</span> \(\vec{E} = (13.5 \hat{x} + 4.5 \hat{y})\)&thinsp;N/C.
+</li>
+<li><span class="item-label">3.</span> a. Zero.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(- 2.0 \times 10^{-8}\)&thinsp;joules.</li>
+<li><span class="item-label">c.</span> \(  2.0 \times 10^{-8}\)&thinsp;joules
+</li>
+<li><span class="item-label">4.</span> a. 250&thinsp;C&thinsp;m; directed from the negative to the positive charge.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(- 1436\)&thinsp;J.</li>
+<li><span class="item-label">c.</span> \(- 1205\)&thinsp;N&thinsp;m; into the paper, or 1205&thinsp;N&thinsp;m out of the paper.</li>
+<li><span class="item-label">d.</span> \(+ 439\)&thinsp;J.
+</li>
+</ol>
+
+<p></section>
+
+<p>
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+           One or both of these skills may be on the actual exam.</li>
+<li><span class="item-label">2.</span> Given a finite-sized dipole with a charge of
+           \(- 2.5 \times 10^5\)&thinsp;C at one end-point and a charge of
+           \(+ 2.5 \times 10^5\)&thinsp;C at the other end-point, and a distance
+           between the two points of 0.0010&thinsp;m, and with the dipole oriented
+           at 40.0° to a uniform external electric field, find:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the dipole moment.</li>
+<li><span class="item-label">b.</span> with external electric field strength equal to 7.5&thinsp;N/C&thinsp;\(\hat{x}\),
+           find the potential energy of the dipole in this field.</li>
+<li><span class="item-label">c.</span> the torque on the dipole due to the field.</li>
+<li><span class="item-label">d.</span> the work done by the field on the dipole in rotating it from
+           40.0° with the field to its equilibrium orientation.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+<p></section>
+
+<p>

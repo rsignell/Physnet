@@ -1,0 +1,428 @@
+<header class="module-header">
+  <h1 class="module-title">Rotational Motion of a Rigid Body <span class="module-author">(J.S.Kovacs)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Define moment of inertia <a href="../m35/" class="module-ref">MISN-0-35</a>.</li><li><strong>2.</strong> Explain: principal axes of inertia, principal moment of inertia
+    <a href="../m35/" class="module-ref">MISN-0-35</a>.</li><li><strong>3.</strong> Describe the consequences of an external torque on
+    the angular momentum of an extended object <a href="../m34/" class="module-ref">MISN-0-34</a>.</li><li><strong>4.</strong> Identify all of the external forces acting on an extended object
+    <a href="../m15/" class="module-ref">MISN-0-15</a>.</li><li><strong>5.</strong> Apply Newton's Second Law to determine the acceleration
+    of objects under the action of given forces <a href="../m16/" class="module-ref">MISN-0-16</a>.</li><li><strong>6.</strong> State the Principal Axis (Steiner's) Theorem <a href="../m35/" class="module-ref">MISN-0-35</a>.</li><li><strong>7.</strong> Apply Newton's second law to determine the instantaneous 
+    motion of the center of mass of an extended object <a href="../m16/" class="module-ref">MISN-0-16</a>.</li><li><strong>8.</strong> Write the expression for the point-mass kinetic energy <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>9.</strong> Determine the linear velocity of a point on a object rotating
+    with a given angular velocity <a href="../m9/" class="module-ref">MISN-0-9</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Solve problems using the equation of motion of a rotating 
+    rigid body when the motion is about any fixed axis, as well as when
+    the motion is abut a principal axis.</li><li><strong>S2.</strong> Calculate the kinetic energy of rotation of a rotating rigid 
+    body and use this as an additional form of kinetic energy in
+    solving problems using the conservation of energy.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+    Reading (1970). </li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Newton's second law, \(\vec{F} = m \vec{a}\), where \(\vec{F}\) is the
+resultant of the external forces exerted), when applied to an object that
+has finite dimension (i.e., not a point object) determines the acceleration
+of the center of mass of that object.
+Successive integrations then yield the results usually sought after: the
+description of the motion of the center of mass, its position given as a
+function of time.
+Such an object's motion, however, may involve more than just the motion of
+its center of mass.
+The various parts of the object may move relative to the center of mass.
+In this unit the rotations of a rigid body as a whole about some fixed axis
+are investigated.
+Rotation about some axis through the center of mass, will constitute the
+complete description of the motion of such objects.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. About a Principal Axis, Fixed In Space</h2>
+
+<p>When an object rotates about one of its principal axes the angular momentum
+vector and the angular velocity vector are parallel
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>and related to one another by a constant of proportionality which is 
+determined by the distribution of mass of the object with respect to the
+axis.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The constant is the <em>moment of inertia</em> with respect to this principal
+axis:
+<p>\[\vec{L} = I \vec{\omega}\]
+<p>Unless there are external torques disturbing this rotating object (such as
+perhaps the torque due to friction which may also slow the rotating object
+to a stop), the vector \(\vec{L}\) remains constant in magnitude and
+direction: <em>Angular momentum is conserved.</em>
+When there are external torques, the <em>net external</em> torque can be
+related to the resulting time rate of change of angular momentum,
+<p>\[\vec{\tau} = \frac{d\vec{L}}{dt},\]
+<p>as can be derived directly from Newton's laws.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The vector \(\vec{\tau}\), in general, need not be in the same direction as
+\(\vec{L}\), so that \(d\vec{L}/dt\) may be in a different direction
+than \(\vec{L}\).
+This results in an \(\vec{L}\) which changes its direction with time, as
+illustrated by the gyroscope.
+<p>If, however, the axis of rotation happens to be fixed so that the external
+torque is also along the same axis as \(\vec{L}\) and  \(\vec{\omega}\), then
+\(d\vec{L}/dt\) is also along this direction and the change in
+\(\vec{L}\) is in magnitude only.
+Furthermore, with the axis fixed (in space as well as in the body), the
+moment of inertia remains constant, so that we have
+<p>\[\vec{\tau} = \frac{d\vec{L}}{dt} = I \frac{d\vec{\omega}}{dt} =
+I \vec{\alpha}\]
+<p>where \(\vec{\alpha}\), the angular acceleration vector, is along the same axis
+as all the other vectors.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>With these restrictions, there is a close parallel between \(\vec{F} = M
+\vec{a}\) and \(\vec{\tau} = I\vec{\alpha}\).
+The first of these relates the <em>net external force</em> on an object to the
+resulting acceleration of the center of mass of that object.  (\(\vec{F}\) is
+the “cause” that produces the “effect”: the acceleration of the
+object's center of mass.)
+The second one, \(\vec{\tau} = I\vec{\alpha}\), relates the external torque to
+the resulting angular acceleration.
+The quantity \(I\) plays the analogous role in rotational motion to the role
+that \(M\) plays in translational motion.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>As an illustration, consider the rotation of the earth.
+The direction of the axis of rotation is not quite fixed in space.
+However, for most considerations it may be viewed as fixed.
+Assuming this, how much external torque must be applied for one day to
+increase the earth's rotation such that the length of the day is decreased
+to 23 hours?
+<p>Applying the above relation, <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, and assuming that a constant
+torque is applied for one day, the answer is \(8.52 \times 10^{28}\)
+<p>newton-meters (assuming the earth to be a sphere of mass \(5.98 \times
+10^{24}\) kilograms and of radius \(6.37 \times 10^6\) meters).
+If this torque were produced by a tangential force applied at the equator
+the magnitude of the force would be \(1.34 \times 10^{22}\) newtons.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. About a Fixed Axis Not Through CM</h2>
+
+<p>Consider the motion of a baseball bat in the hand of a batter.
+Neglecting for the time the important effect of the motion of the batter's
+arms and his body in general, the motion of his bat can be viewed ideally
+as a rotation about an axis near the thin end of the bat, perpendicular to
+the bat.
+This rotation is clearly not about an axis through the center of mass of
+the bat, which is considerably nearer to the “fat end” of the bat.
+<p>If such a bat were held stationary in the conventional position by a
+batter, before the pitched ball struck it, the torque produced by the
+impact of the ball would tend to rotate the bat.
+(If the bat were loosely held, the ball would “knock the bat out of the
+batter's hands.”)  If this torque were known, the angular acceleration of
+the bat's rotation could be determined by the method described in Section 2.
+The batter in attempting to provide a stationary pivot around which the bat
+rotates would have to exert a force to keep the bat from being knocked from
+his hands.
+How much force must he exert?
+The answer comes from the direct application of Newton's law to the
+motion of the center of mass of the bat.
+That is, <em>the instantaneous acceleration of the center of mass of the
+object is determined by the net external force acting on it at that
+instant.</em>
+<p>Consider the situation illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The ball is exerting a force \(F\) at the point of impact \(A\).
+With the point \(B\) held fixed, the bat tends to rotate around point \(B\)
+with an angular acceleration determined by the torque about \(B\) produced by
+\(F\).
+From this known angular acceleration, the <em>tangential acceleration</em>
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>of any point on the bat can be determined.
+In particular, the instantaneous linear acceleration of the center of mass
+can be determined, which in turn determines the net force on the bat.
+Knowledge of the force of impact then determines the force with which the
+bat must be held.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m36gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A bat held stationary at point
+\(B\) must have a force \(F_p\) exerted (at the instant of impact) in the
+direction shown if the impact force \(F\) exerted at point \(A\) will
+result in a pure rotation of the bat about a fixed axis through \(B\).</figcaption></figure></div>
+
+<p>With the point of impact \(A\) located a distance \(A\) from the center of mass
+and the bat held fixed at \(B\) a distance \(B\) from the center of mass, the
+force that the batter must exert on the bat, \(F_p\) (shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>
+directed opposite to \(F\)) is,
+<p>\[F_p = \left[ \frac{K^2-AB}{K^2+B^2} \right] F ,\]
+<p>where \(K\) is the radius of gyration of the bat relative to an axis through
+the center of mass.
+This indicated that \(F_p\) can be zero:  the batter need not exert a force
+on the bat and conversely, the bat won't exert a force on his hand,  if the
+point of impact and the point where the bat is held are such that the
+product of their distances from the center of mass equals the square of the
+radius of gyration relative to the center of mass.
+<p>It should be noted that this above result, <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> with \(F_p\) directed as
+shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, represents the total force needed at the axis of
+rotation only if the object (the bat) has not acquired any angular
+velocity--- before the bat has rotated appreciably.
+When the bat has begun to rotate, an additional force must be provided to
+keep the point \(B\) stationary.
+This is the <em>centripetal force</em>,
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\(MB \omega^2\), directed to the left in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> along the line from the point \(B\) to the center of mass.
+This is just the force that must be provided to keep an object (the center
+of mass in this case) moving in a circular path.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Rotational Kinetic Energy</h2>
+
+<p>The kinetic energy of a point-like mass moving with velocity \(v\) is given
+by the expression \(\frac{1}{2} Mv^2\).
+This is appropriate even when the point-like mass is a part of an extended
+object which is rotating.
+With the object rotating about some axis with angular velocity \(\omega\),
+the kinetic energy of a point-like mass located a distance R from the axis
+is,
+<p>\[E_k = \frac{1}{2} M(\omega R)^2 = \frac{1}{2} (M R^2)\,\omega^2.\]
+<p>The <em>total kinetic energy</em> of the extended object as a whole is just
+the sum of a large number of such terms, one for each of the point-like
+masses that make up the object.
+This sum for a continuous mass distribution must be expressed as an
+integral over all elements of the object.
+However, in this integral or sum, \(\omega\) has the same value for each
+element of mass, irrespective of its mass and distance from the axes.
+The integral is then only over the “\(MR^2\)” contributions of the object.
+But this is the moment of inertia of the object relative to the axis about
+which the rotation occurs:
+<p>\[I = \sum_i M_i R_i^2 \rightarrow \int R^2 dM \qquad \text{(for continuous distributions).}\]
+<p>Thus, the total rotational kinetic energy of an object undergoing rotation
+about some fixed axis is:
+<p>\[E_k(\text{rotation}) = \frac{1}{2} I \omega^2.\]
+<p>If the axis is not fixed, then the velocity of each point-like mass is not
+related to \(\omega\) in the simple way that it is for the case of pure
+rotation.
+The consequence of this is that the total kinetic energy of the object
+<p>includes terms in addition to what there is in <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> above.
+These additional terms are easily interpretable, however.
+<p>As an example, consider a spherical ball rolling without slipping on a flat
+surface.
+A bit of reflection will verify that because the ball is not slipping, if
+its center is moving forward with a speed \(V\), then the angular velocity it
+has about an axis through its center is \(\omega = V/R\) where \(R\) is
+the radius of the ball.
+(If it slips \(\omega\) will have a value greater than this.)
+The ball has rotational kinetic energy given by <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> above.
+<p>It would have this rotational kinetic energy even if it were spinning in
+place (if it spun with the same angular velocity, \(\omega\)).
+Furthermore, if the ball didn't rotate at all while it slid along the
+horizontal surface with speed \(V\), its kinetic energy would be given by the
+usual expression for the translational kinetic energy of an object:
+\(MV^2/2\).
+When these two motions are combined, as in the case of rolling without
+slipping, it should be no surprise that the total kinetic energy is the
+combined kinetic energy of each of these separate cases of motion:
+<p>\[E_k = \frac{1}{2} I \omega^2 + \frac{1}{2}M V^2,\]
+<p>Where the first term is the kinetic energy of rotation about an axis
+through the center of mass while the second term is the kinetic energy
+associated with the translational motion of the center of mass.
+The effect of this result is illustrated by considering the following
+demonstration:
+If a sphere of mass \(M\) is placed on an:incline which is such that the mass
+starts out at rest at a vertical. height H above the bottom of the incline,
+then if this mass slid (without rolling and without frictional loss)  down
+the incline, it would have a speed \(\sqrt{2\,gH}\) when it got to the bottom.
+This result is immediately obtained by observing that the potential energy
+the sphere had at the top of the incline is converted to kinetic at the
+bottom.
+If, however, this sphere rolled without slipping down the incline, the
+total energy it would acquire at the bottom would be the same as in the
+slipping case, but it would be divided into rotational and translational
+kinetic energy.
+Consequently, its translational velocity would be less than in the pure
+sliding case.
+In fact, its speed at the bottom of this incline would be
+\(\sqrt{(10/7)\,gH}\) in the case of rolling.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Calculation of Moments of Inertia, Principal Axes”
+(MISN-0-35), where the distinction is made between the rotation of an
+object about any axis and the rotation about one of the <em>principal
+axes.</em> <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">It actually is the second moment of the distribution, so-called
+because each mass element is weighted by the <em>square</em> of its distance
+from the axis of rotation in determining its contribution to the total \(I\):
+\(I = \int r^2dm.\) <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See  “Torque and Angular Momentum in Circular Motion”
+(MISN-0-34) for the basis of this relationship. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Even if the axis of rotation is <em>not</em> a principal axis, as
+long as it is fixed and as long as the net external torque is along this
+axis, an equation related to the equation derived below is applicable.
+That is, <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> applied only to the along-the-axis components of the
+vector quantities appearing in it would be correct even if the axis is not
+a principal one. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Cases where translational and rotational motion occur
+simultaneously are dealt with in “Translational Plus Rotational Motion of
+a Rigid Body” (MISN-0-43). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Torque and Angular Acceleration for Rigid Planar Objects:
+Flywheels” (MISN-0-33) for the relationship between angular acceleration and linear
+acceleration when the path of the motion is circular (in which case the
+<em>linear acceleration</em> is <em>tangent</em> to the circle, hence the
+alternative term <em>tangential acceleration.</em> <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">The reaction force to this force, namely the force exerted on the
+batter's hand by the bat, is responsible for the familiar “sting”
+felt by batters when the bat is not held in the proper place relative to 
+the point of impact with the ball. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See MISN-0-17 for the development of and illustration of
+centripetal force. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-PS1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970), Sect.&thinsp;11.4, pp.&thinsp;217-220.
+See this module's <em>Local Guide</em> for access to this reference. <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Perform the calculation referred to at the end of Sect.&thinsp;2 to
+determine the torque and force needed to increase the length of the day by
+1&thinsp;hr. when this torque and force are applied for 24&thinsp;hr.</li>
+<li><span class="item-label">2.</span> In AF
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>answer Questions 6 and 7 (p. 228).
+Work Problems&nbsp;11.7(a), 11.9 (assume all of the wheel's mass is at radius
+0.60&thinsp;m), 11.11, 11.17 (part a), 11.21, and  11.22.</li>
+<li>Answers:</li>
+<li>11.7(a): 14.9 rpm</li>
+<li>11.22: \(a = 7.62\,\text{m/s}\) (not 7.4<span class="unit">&thinsp;m/s</span>).</li>
+<li><span class="item-label">3.</span> Referring to <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> in this module's <em>text</em>, find the force
+that must be exerted by the pivot on the bat at the instant the bat is
+struck at \(A\).
+[Answer: Eq.(4) of the text.]</li>
+<li><span class="item-label">4.</span> If the force \(F\) remains constant and perpendicular to the bat,
+find the resultant force on the bat at the pivot when the bat's angular
+speed is \(\omega\).
+[Answer: the resultant of \(F_p\) above and the centripetal force.]</li>
+<li><span class="item-label">5.</span> Verify that the speed with which a sphere, rolling without
+slipping, leaves an incline (starting at rest from a vertical height \(H\))
+is \(\sqrt{(10/7)g H}\).</li>
+<li><span class="item-label">6.</span> In AF work Problems&nbsp;11.13, 11.17 (b and c), and 11.24.</li>
+<li>Answers:</li>
+<li>11.24: (a) 120.05<span class="unit">&thinsp;J</span>; (b) Tension in part of string attached to
+           \(m\) is 35.2, to part attached to \(m'\) is 32.3<span class="unit">&thinsp;N</span>.</li>
+</ol>
+
+<p> 
+<p><span class="tex-unknown" title="unknown macro">\ProbSet</span>Detailed Problems
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m36gr02.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>On a horizontal frictionless surface, a uniform rod of mass \(M\)
+and length \(L\) is pinned and held fixed at one end at point \(P\), free to
+rotate in a horizontal plane about point \(P\).
+A force, \(\vec{F}\), constant in magnitude, is exerted on the rod such that
+the force maintains a constant angle, \(\phi\), with the rod.
+The force acts at distance \(R\) from \(P\) (see sketch).
+Under the action of this force the rod, starting from rest, begins to rotate.
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Does it rotate with constant angular velocity? [K]</li>
+<li><span class="item-label">b.</span> Why, or why not? [T]</li>
+<li><span class="item-label">c.</span> What is the moment of inertia of the rod with respect to the axis through \(p\) (you may look this up in any text)? [F]</li>
+<li><span class="item-label">d.</span> Relative to an axis through point \(P\), perpendicular to the plane
+           of the paper, find the external torque acting on the rod. [N]</li>
+<li><span class="item-label">e.</span> Find the angular acceleration of the rod. [C]</li>
+<li><span class="item-label">f.</span> Is this angular acceleration constant? [L]</li>
+<li><span class="item-label">g.</span> If the rod started at rest at \(t=0\), find how much time it takes
+           to rotate through one complete revolution. [R]</li>
+<li><span class="item-label">h.</span> What is its angular speed at time \(t=T\), where \(T\) is the time
+           for one complete revolution in (g) above? [V]</li>
+<li><span class="item-label">i.</span> What is its kinetic energy at time \(t=T\). [O]</li>
+<li><span class="item-label">j.</span> Use the Work-Energy Relation to find how much work was done by
+           the external force \(F\) during the interval from \(t=O\) to \(t=T\).
+           [H]</li>
+<li><span class="item-label">k.</span> Evaluate \(\vec{F} \cdot d\vec{r}\) to find the work done by
+           \(\vec{F}\) during the interval from \(t=O\) to \(t=T\) and compare
+           with answer to (j). [B]</li>
+<li><span class="item-label">l.</span> Draw a free-body diagram showing all of the forces acting on the
+           rod at some instant during its motion.
+           Don't neglect the force the pin exerts on the rod.
+           Resolve these forces into components perpendicular to the rod and
+           those tangential. [W]</li>
+<li><span class="item-label">m.</span> At the instant that the rod has made one complete revolution
+           what is the tangential acceleration of the center of mass of the
+           rod?  [E]</li>
+<li><span class="item-label">n.</span> At that time \(T\) what is the centripetal acceleration of the
+           center of mass? [J]</li>
+<li><span class="item-label">o.</span> Write down that component of the expression of Newton's 2nd law
+           that will enable you to determine the perpendicular component of
+           the force the pin exerts on the rod. [U]</li>
+<li><span class="item-label">p.</span> Determine this component of the force. [P]</li>
+<li><span class="item-label">q.</span> Write that component of the expression of Newton's 2nd law that
+           will enable you to determine the parallel to the rod component of
+           the force the pin exerts on the rod. [A]</li>
+<li><span class="item-label">r.</span> Determine this component of the force. [I]
+</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m36gr03.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>In the diagram above, the rope moves over the pulley wheel
+           without slipping, turning the wheel.
+           The frictional force between \(m_1\) and the surface is
+           \(f = 12\,\text{N}\).
+           The wheel has radius \(R = 0.20\,\text{m}\), radius of gyration
+           \(K = 0.15\,\text{m}\) and mass \(M = 20\,\text{kg}\).
+           Also: \(m_1 = 5\,\text{kg}\), \(m_2 = 40\,\text{kg}\).</li>
+<li>Find the acceleration of mass \(m_2\), [M], the angular acceleration
+           of the wheel, [D], the tension in the part of the cord attached to
+           \(m_1\), [Q], and the tension in that part of the cord attached to
+           \(m_2\) [G].</li>
+<li><span class="item-label">3.</span> If the wheel of Problem&nbsp;2 is on frictionless bearings so no
+           frictional energy is lost in rotation of the wheel, use the
+           Work-Energy Principle to find the speed of \(m_2\) after it has
+           fallen (starting from rest) a distance of \(d=2\) meters from its
+           starting point. [S]</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+:
+<p><ol>
+<li><span class="item-label">A.</span> \(F' - F \cos\phi = (ML/2) \cdot (12 FR \sin\phi)/(ML^2)\).</li>
+<li><span class="item-label">B.</span> Same as answer H.</li>
+<li><span class="item-label">C.</span> \([(3FR)/(ML^2)] \sin \phi\).</li>
+<li><span class="item-label">D.</span> \(33.8/\unit{sec^{2}}\).</li>
+<li><span class="item-label">E.</span> \([(3FR)/(2ML)] \sin\phi\).</li>
+<li><span class="item-label">F.</span> \(ML^2/3\).</li>
+<li><span class="item-label">G.</span> 121.8<span class="unit">&thinsp;N</span>.</li>
+<li><span class="item-label">H.</span> It's equal to the change in kinetic energy:  \(2\pi FR \sin\phi\).</li>
+<li><span class="item-label">I.</span> \(F \cos\phi = (6\pi FR/L) \sin\phi\).</li>
+<li><span class="item-label">J.</span> \([(6\pi)/(ML)] FR \sin\phi\).</li>
+<li><span class="item-label">K.</span> No.</li>
+<li><span class="item-label">L.</span> Yes.</li>
+<li><span class="item-label">M.</span> \(a = \frac{m_2 g - f}{m_1 + m_2 +
+           \frac{M K^2}{R^2}} = 6.76\)&thinsp;m/s<sup>2</sup>.</li>
+<li><span class="item-label">N.</span> \(FR \sin\phi\).</li>
+<li><span class="item-label">O.</span> \(2\pi FR \sin\phi\).</li>
+<li><span class="item-label">P.</span> \(F \sin\phi \left(1 - \frac{3R \sin\phi}{2L}\right)\).</li>
+<li><span class="item-label">Q.</span> 45.8&thinsp;N.</li>
+<li><span class="item-label">R.</span> \(\sqrt{(4\pi/3) \cdot (ML^2)/(RF \sin \phi)}\).</li>
+<li><span class="item-label">S.</span> \(v = \left[ \frac{2d(f+m_2g)}{m_1 + m_2 + \frac{MK^2}{R^2}}
+               \right]^{1/2} = 5.36\)&thinsp;m/s.</li>
+<li><span class="item-label">T.</span> There is a net external torque, causing an angular acceleration.</li>
+<li><span class="item-label">U.</span> \(F \sin\phi - F  = M \left( \frac{3 FR}{2ML} \sin\phi
+           \right)\).</li>
+<li><span class="item-label">V.</span> \(\left[ \frac{12 FR \; \sin \phi}{ML^2} \right]^{1/2}\).</li>
+<li><span class="item-label">W.</span> <figure class="fig-centered"><img src="figures/m36gr04.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+
+<p></section>
+

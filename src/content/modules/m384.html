@@ -1,0 +1,150 @@
+<header class="module-header">
+  <h1 class="module-title">The Schr<span class="tex-unknown" title="unknown macro">\</span>"odinger Equation <span class="module-author">(R.Spital)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Define: free particle, harmonic function, phase factor, lifetime.</li><li><strong>2.</strong> Solve second order differential equations and differentiate.</li><li><strong>3.</strong> Unknown: assume <a href="../m383/" class="module-ref">MISN-0-383</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define: eigenfunction, eigenvalue, stationary state, operator,
+    linear operator, commutator or commutator bracket, expectation value.</li><li><strong>K2.</strong> Write the S-equation for a particle in both 1 and 3 dimensions,
+    with or without a potential present, and write the wave function \(\Psi\)
+    which solves the free-particle equations.</li><li><strong>K3.</strong> Write an expression for the probability density in 3 dimensions,
+    given a normalized wave function \(\Psi\).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Calculate the expectation values of operators in both the
+    coordinate and momentum representations.</li><li><strong>R2.</strong> Calculate the commutators of the operators listed in table 4-2
+    in both coordinate and momentum space representations.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Derive the time-independent Schrodinger equation (4.54) by the
+    technique of separation of variables, and write the time-dependent wave
+    function \(\Psi (r,t)\) in terms of the time-independent wave function and
+    the energy \(E\).</li><li><strong>S2.</strong> Show that the expectation value of the Hamiltonian in a
+    stationary state is constant in time and equal to the energy eigenvalue.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> E.&thinsp;E.&thinsp;Anderson, <em>Modern Physics and Quantum Mechanics</em>,
+    W.&thinsp;B.&thinsp;Saunders (1971).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In previous units, we introduced the wave function \(\Psi\). Since \(\Psi\)
+contains all the information about the location of a particle in space
+and time, its calculation from the dynamics (interactions or forces
+present) is the most fundamental problem in quantum mechanics. We
+attack this problem through the Schrodinger equation, a differential
+equation for \(\Psi\) which we introduce in this unit.
+<p>We shall also introduce the notion of  linear operators. In
+quantum mechanics, each observable is represented by such an operator;
+and the possible results of a measurement are directly related to the
+outcome of operations with the appropriate operator.
+<p>Since the material we shall cover in this unit is crucial for
+our later work, the student should study this unit with special care.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read section 4.9. The free particle equations referred to are
+equations (4.39) and (4.41); they are special cases of equation
+(4.42) and its 1-dimensional cousin. Note that \(V\) in general
+is a function of position and so depends on \(x\) or \(\vec{r}\).
+<p>This is our first contact with the most important operator
+in the world, the Hamiltonian \({\cal H}\). (An  operator changes one wave-
+function into another, or, more generally, one  state into
+another. The wavefunction \(\Psi\) is the  coordinate representation
+of the  state of the particle. The momentum space wavefunction,
+\(\phi\), is the  momentum space representation of the  state. The
+ state exists independently of the particular representation
+used to describe it.) Note that  \({\cal H}\) determines the time-
+development of the wavefunction through the Schrodinger equation (S-equation).</li>
+<li><span class="item-label">2.</span> The solutions are equations (4.36) and (4.40).</li>
+<li><span class="item-label">3.</span> Equation (4.44) of section 4.10 is the required probability
+density. The rest of section 4.10 is optional; it essentially
+shows that it is consistent with the S-equation to treat \(| \Psi |^2\)
+as a probability density.</li>
+<li><span class="item-label">4.</span> Read section 4.11 to obtain the definitions needed. Note that
+the same operator has different forms in different representations. 
+However the physical quantities of interest are the
+ matrix elements of the operators which are independent of the
+representation chosen. The  matrix element of an operator \(A\)
+between two states \(a\) and \(b\) is defined by
+<p>\[< a |A| b > \equiv \int \Psi^*_a (\vec{r},t) \left( A \Psi_b (\vec{r},t
+\right) d \tau\]
+<p>\[= \int \phi_a (\vec{p},t) \left( A \phi_b (\vec{p},t) \right) 
+dp_x dp_y dp_z\,,\]
+<p>
+where \(\Psi_{a,b} (\psi_{a,b})\) are the coordinate (momentum) space 
+representations of the states \(a\) and \(b\).
+<p>
+ Exercise: Verify the second equality for the momentum and
+position operators.</li>
+<li><span class="item-label">5.</span> Study and memorize table 4-2  except or the last line which is
+incorrect. The energy operator 25 the Hamiltonian \({\cal H}\), whose
+coordinate representation, \(- \hbar^2 \nabla^2 / 2m + V(\vec{r})\) you have already
+seen. What should its momentum representation be? The S-equation 
+connects \({\cal H}\) with the time-derivative, but the energy
+operator is \({\cal H}\).</li>
+<li><span class="item-label">6.</span> Solve problem&nbsp;4-21 to gain practice in calculating expectation 
+values.  Note the definition of the uncertainty in an
+operator, \(\Delta A \equiv \sqrt{< (A - < A >)^2 >}\), introduced in equation (4.51).
+This is the more rigorous definition of uncertainty alluded
+to in Unit 3.</li>
+<li><span class="item-label">7.</span> Solve problem&nbsp;4-22 to gain practice in calculating commutators
+and an understanding of the fact the operators in general do
+not commute--THE ORDER IN WHICH YOU APPLY THEM IS IMPORTANT!
+<p>The question at the end of the problem is very important;
+and its answer shows that operators have an <em>algebra</em> (properties
+under multiplication) which is independent of the representa-
+tion chosen.</li>
+<li><span class="item-label">8.</span> Read section 4-12 through the end of the paragraph directly
+below equation (4.55). Study the steps leading to equations
+(4.54) and (4.55) and make sure you can reproduce them.</li>
+<li><span class="item-label">9.</span> Read the rest of page 151 and continue through the end of the
+example on page 152. In general, an eigenvalue need not be
+real as indicated in the text. However, eigenvalues of
+operators corresponding to observables are always real, since
+they represent possible results of a measurement.</li>
+<li><span class="item-label">10.</span> Read the remainder of section 4-12. You may omit the proof of
+the eigenvalues of \({\cal H}\), i.&thinsp;e.&thinsp; the possible energies of the system,
+are real. In the proof at the top of page 153, the first step
+should be
+<p>\[<E> = \int \Psi\conj(\vec{r} , t) \left( {\cal H} \Psi(\vec{r},t) 
+\right) d \tau\,.\]
+<p>
+The next step follows from the S-equation.
+<p>This proof fulfills Output Skill S2. As an exercise, prove
+the following more general statement:
+<p>Let \(\Psi_E(\vec{r},t)\) be a stationary state of energy \(E\). Let \(Q\) be
+an operator such that \(Q \Psi_E(\vec{r},0) = q \Psi_E(\vec{r},0)\); 
+i.&thinsp;e.&thinsp; \(\Psi_E(\vec{r},0)\) is an
+eigenfunction of \(Q\) with eigenvalue \(q\). Then \(\Psi_E(\vec{r},t)\) is an
+eigenfunction of \(Q\) with eigenvalue \(q\)  for all \(t\). Moreover,
+the expectation value of \(Q\) for the state represented by \(\Psi_E\)
+is constant in time and equal to \(q\).</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

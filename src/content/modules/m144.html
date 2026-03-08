@@ -1,0 +1,295 @@
+<header class="module-header">
+  <h1 class="module-title">Self-Inductance and Inductors <span class="module-author">(Peter Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: solenoid, toroid, inductance, induced voltage,
+    induced current, induced magnetic field, Faraday-Henry law, Lenz's law
+    <a href="../m142/" class="module-ref">MISN-0-142</a>.</li><li><strong>2.</strong> Use Ampere's law to determine the magnetic field due to a long
+    straight current <a href="../m138/" class="module-ref">MISN-0-138</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: coaxial cable, henry, inductor, self-inductance.</li><li><strong>K2.</strong> Write down Ampere's Law and from it derive the self-inductance
+                of a toroidal solenoid, explicitly justifying each step.</li><li><strong>K3.</strong> Write down Ampere's Law and from it derive the self-inductance
+                per unit length of a coaxial cable, explicitly justifying each
+                step.</li><li><strong>K4.</strong> Starting from the relation between power, voltage and current in
+    a steady state circuit, derive the energy stored in the electric field of an
+    inductor.</li><li><strong>K5.</strong> Describe the flow of energy:
+    (a) when the current through an inductor is increased;
+    (b) when the current through an inductor is very gradually decreased; and
+    (c) when the current through an inductor is quickly decreased.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Two Element DC-Driven LRC Circuits” (MISN-0-151).</li><li><strong>2.</strong> “Velocity of a Signal in a Coaxial Cable” (MISN-0-150).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>A solenoid or a toroid, sometimes of miniature size, is used in
+electronic circuits to: (1) slow the rate of change of electric current;
+(2) “tune” a circuit to a particular oscillational frequency; or
+(3) control the speed of transmission of signals.
+In these applications one is making use of the fact that a change in the
+current going though the device produces a change in the
+associated magnetic field and that in turn induces a current that opposes
+the change in the original current.
+A device used in that manner is called an “inductor” and the strength of
+its change-opposing character is called its “self-inductance” or simply
+its “inductance.”
+This (self) inductance is measured in the S.I. unit called the “henry,”
+so a circuit designer may specify an inductor of, say, 35&nbsp;milli-henries to
+achieve one of the three above-mentioned aims.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Self-Inductance \(L\)</h2>
+
+<p><h3 id="pcap-2-a">2a. The Definition of \(L\)</h3>
+
+“Inductance” in general includes potentials and currents induced
+in one conductor by a time-changing current in another conductor, but
+“self-inductance” refers to potentials and currents that are
+induced in a single conductor by its own time-changing current.
+A device used for this purpose usually has the shape of a solenoid or a
+toroid.
+<p>A current flowing through an inductor of course sets up a magnetic field
+so changes in the current produce changes in the magnetic field.
+Such changes produce an induced voltage drop in the inductor, a voltage
+drop that opposes the change in the current.
+The magnitude of the induced voltage is proportional to the
+time-rate-of-change of the current, as we have seen,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>so we write:
+<p>\[V_{ind} = L\,\frac{dI}{dt}\,.\]
+<p>Here \(L\) is a proportionality constant that depends on the geometry of the
+inductor and the inductor's material: it is called the inductor's
+<em>inductance</em>.
+An inductor's inductance can be much enhanced by placing its loops of wire
+around a magnetic material such as iron.
+<p><h3 id="pcap-2-b">2b. \(L\) When the Flux is Known</h3>
+
+If one knows the flux through the surface bounded by a circuit, then the
+self-inductance can be determined by integrating <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> to get:
+<p>\[\Phi = L\, I\,.\]
+<p>For example, if the flux enclosed by a loop is 0.026&thinsp;T<span class="unit">&thinsp;m<sup>2</sup></span> when the
+current in the loop is 1.3&thinsp;A, then the inductance of the loop is
+\(L =20\)&thinsp;mH.
+If the inductor is altered to contain 15 successive loops glued together,
+then the flux met by the current will be increased by a factor of 15
+and so will \(L\).
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m144gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A toroidal solenoid.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]2c\(L\) for a Toroidal Solenoid
+To find the self-inductance of a toroidal solenoid, we use Ampere's law
+and we draw the integration loop as a circle of radius \(r\) from the center
+of the toroid (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+If \(r\) is less than the inner radius of the toroid, there is zero current
+going through any surface bounded by the integration loop.
+If \(r\) is between the inner and outer radii of the toroid the the current
+going through the enclosed surface is \(NI\) where \(N\) is the number of turns
+of wire carrying the current \(I\).
+If \(r\) is greater than the outer radius of the toroid, there is again zero
+<em>net</em> current going through any surface bounded by the integration loop
+(the current going one direction through the surface is exactly canceled
+by the current going the other way through the surface).
+Then by Ampere's law, the magnetic field inside the solenoidal loops is:
+<p>\[B(r) = \frac{2\,k_m\,N\,I}{r}\,.\]
+<p>If the radius of each loop is much smaller than the toroidal radius, then
+\(r\) will vary little over the cross-sectional area \(A\) of each loop and we
+can take \(r\) as a constant.
+To get the flux in a single loop of the winding, we need merely multiply
+the \(B\) by the loop area \(A\).
+Then for the \(N\) windings in the inductor:
+<p>\[\Phi = N\,A\,B = \frac{2\,k_m\,N^2\,I\,A}{r}\,.\]
+<p>Then from <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+<p>\[L = \frac{2\,k_m\,N^2\,A}{r}\,.\]
+<p>Typical numbers for a circuit toroid will give an extremely small inductance
+unless the flux is enhanced through the use of an iron core inside the
+solenoidal loops.
+This enhancement may be by a factor of five thousand or more.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m144gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Cross-section of a coaxial cable.</figcaption></figure>
+
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. \(L/\ell\)  for a Coaxial Cable</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]3aPhysical Description of a Coaxial Cable
+Physically, a coaxial cable looks like a fat round wire: a good example is
+the cable that feeds television programs to TV sets from a “cable
+company.”
+If you were to cut through such a cable you would see a central conducting
+wire surrounded by a dielectric material (usually flexible white plastic).
+This insulating material is surrounded by a cylindrical sheath woven from 
+conducting wires (woven to make it flexible).
+That outer conductor is, in turn, covered by a thin skin of flexible
+insulating plastic (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+Current flows down one conductor and exactly the same amount of current
+flows in the opposite direction in the other conductor.
+One can imagine a voltage source connected between the inner and outer
+conductors at one end of the cable and a resistor connected between them
+at the other end, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+We will assume that the current traveling the inner wire is along its
+surface, at a radius \(r_i\) (a good assumption for high-frequency waves).
+We will call the radius of the outer conductor \(r_o\).
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m144gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Longitudinal view of a coaxial cable
+                          in a hypothetical circuit.</figcaption></figure>
+
+<p><h3 id="pcap-3-b">3b. Getting \(B\)</h3>
+
+For self-inductance we need flux per unit current, and for flux we need the
+magnetic field.
+For a coaxial cable the entire magnetic field is between the two conductors.
+That is easily seen because by Ampere's law there is zero net current
+crossing a cross-sectional area larger than the outside conductor (remember
+that the currents in the two conductors are equal but opposite in direction).
+For the region between the two conductors, Ampere's law immediately shows
+that the magnetic field is simple that of the inner conductor.
+For a long straight wire it is:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[B = \frac{2\,k_m\,I}{r}\,,\]
+<p>and of course the direction of the field is everywhere perpendicular
+to the outward cylindrical radius from the inner wire.
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m144gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A longitudinal view of the coaxial cable
+showing the integration surface \(ABCD\) for obtaining the flux.</figcaption></figure>
+
+<p><h3 id="pcap-3-c">3c. Getting \(L/\ell\)</h3>
+
+To get the flux in our coaxial cable we must integrate the component of the
+magnetic field normal to a surface bounded by the loop of electrical current.
+To make it easy we choose a surface that is radial, running between the two
+conductors and along the length of the cable (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+Now the element of flux at a particular radius is just the value of \(B\)
+there times the element of area at that radius:
+<p>\[d\Phi = (B)\,dA = \left(\frac{2\,k_m\,I}{r}\right)\,\ell\,\,dr\,.\]
+<p>where \(\ell\) is the length of the cable.
+Integrating,
+<p>\[\Phi = \int d\Phi =
+       \int_{r_i}^{r_o} \left(\frac{2\,k_m\,I}{r}\right)\,\ell\,\,dr =
+        2\,k_m\,I\,\ell\,\ln(r_o/r_i)\,.\]
+<p>Finally, then, the self-inductance per unit length of cable is:
+<p>\[L/\ell = \frac{\Phi/\ell}{I} = 2\,k_m\,\ln(r_o/r_i)\,.\]
+<p>The total inductance for any particular piece of cable can be obtained by
+multiplying \(L/\ell\) by the piece's length.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Inductive Energy In a Circuit</h2>
+
+<p><h3 id="pcap-4-a">4a. Energy Needed to Set up a Current</h3>
+
+When a circuit switch is closed, starting a flow of current through a
+circuit, an inductor in the path of the current resists the rise of the
+current from zero by developing a counter-voltage drop (a voltage rise).
+The source of voltage in the circuit must push the current past this
+voltage rise, doing work equal to the voltage rise times the amount of
+charge pushed through it.
+The power expended (the energy per unit time) is just the current (the
+charge per unit time) times the self-induced voltage:
+<p>\[P = I\,L\,\frac{dI}{dt}\,.\]
+<p>Using \(P = dE/dt\) we can easily integrate both sides of:
+<p>\[dE = I\,L\,dI\]
+<p>to get:
+<p>\[E = \frac{1}{2}\,L\,I^2\,.\]
+<p>This is the energy that must be expended by the circuit's energy source in
+order to raise the circuit current from zero to the value \(I\).
+<p><h3 id="pcap-4-b">4b. The Energy is Recoverable</h3>
+
+The energy expended in setting up a current in an inductor is recoverable if
+the circuit's voltage source is removed.
+Assuming there is still a complete circuit without the voltage source,
+the inductor will keep the current flowing until the energy of
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> has been completely dissipated in the circuit's
+resistances or perhaps transferred to a capacitance for storage there.
+<p><h3 id="pcap-4-c">4c. Location of the Energy</h3>
+
+We describe the energy of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> as being stored in the magnetic
+field of the inductor.
+That stored energy was zero in the beginning of our example, when the
+circuit current was zero so the inductor's magnetic field was zero.
+As the current, hence the inductor's magnetic field, increased the energy
+in the magnetic field increased as the circuit's voltage source supplied
+energy to the field.
+If the current became steady, the inductor's magnetic field became steady
+along with it and there was no longer a transfer of energy from the
+voltage source to the inductor's field.
+However, the energy stored in the inductor's magnetic field stays stored
+there.
+<p><h3 id="pcap-4-d">4d. Energy Flow When a Current is Stopped</h3>
+
+Suppose a steady current is flowing in a circuit containing an inductor,
+and then one opens a switch so current can presumably no longer flow: what
+happens to the energy stored in the inductor's magnetic field?
+The answer is that as the switch is opened the current will drop quickly,
+creating a large induced voltage that ionizes the air across the switch
+gap and thus causes an electric arc.
+The energy stored in the inductor's magnetic field is thus dissipated in
+chemical and heat energy in breaking down the air in the switch gap and in
+burning the contact points in the switch and in burning anything else
+in the vicinity.
+In fact, the stored energy in a large inductor can be extremely dangerous
+to anyone attempting to stop the current in a hurry.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a circuit element that looks like a long
+fat plastic-covered wire, containing in successive cylindrical layers:
+an inner solid-wire conductor, a surrounding flexible dielectric, and an
+outer braided-wire sheath.
+The circuit's current goes down one conductor (solid or sheath) and back
+the other.
+<p>the SI unit of self-inductance, abbreviated H and
+defined to be an ohm-second.  Thus:
+\(\,\text{H} \equiv \Omega\,\text{s} = \,\text{V}\,\text{s}\,\text{A}^{-1}\).
+<p>a circuit element whose purpose is to provide
+self-inductance, an electrical circuit analog of mechanical inertia (mass).
+An inductor is usually in the shape of a solenoid or a toroid.
+The inductance of an inductor depends on the geometry of the inductor
+and the magnetic susceptibility of the materials of which the inductor is
+constructed.
+Inductors in electronic circuits typically are in the mH range.
+<p>the negative of the induced voltage around a
+loop divided by the time-rate-of-change of magnetic flux through any surface
+bounded by that loop: \(L = - V_{induced}/\dot{\Phi}\).
+The minus sign shows that the induced voltage opposes the change in the
+flux.
+The SI unit of inductance is the henry (which see).
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Magnetic Inductance,” MISN-0-142. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Apply Ampere's law in your head or see “Magnetic Fields from
+Currents,” MISN-0-138. <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.
+As usual, “Vocabulary” means defining the words as well as being able to
+use them properly.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

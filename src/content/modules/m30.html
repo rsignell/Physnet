@@ -1,0 +1,159 @@
+<header class="module-header">
+  <h1 class="module-title">Eliminating Oscillator Transients: a Project <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Relate the qualitative aspects of the behavior
+    of the displacement as a function of time of the damped driven
+    oscillator to the quantities:  initial displacement, initial
+    velocity, damping constant, natural resonant frequency and
+    amplitude of the sinusoidal driving force <a href="../m31/" class="module-ref">MISN-0-31</a>.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Use an interactive computer terminal and a canned
+    program for the numerical solution of a second order
+    inhomogeneous differential equation of physics, a solution whose
+    desired characteristics have been specified.
+    Explain the physics principle involved in obtaining the solution.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> Access to a computer with the <span class="tex-unknown" title="unknown macro">\ComputerProgram</span>Numerov program.</li>
+<li><span class="item-label">2.</span> Graph paper.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Real World Oscillators are Damped by Dissipative Forces</h3>
+
+In the real world, oscillators are always damped
+by dissipative forces.
+For example, if you start a mass oscillating up and down at the end of a
+vertically-hung spring, the mass will sooner or later come to rest
+due mainly to internal friction in the spring.
+This decrease of amplitude with time is called “damping”: it
+is a damping of the oscillations.
+An oscillator is often driven by an oscillating force which supplies power to
+compensate for the frictional damping losses.
+<p><h3 id="pcap-1-b">1b. The Project</h3>
+
+In physics one sometimes uses a “canned,” computer program to
+solve an equation or analyze data.
+In this project you use a canned computer program, via an interactive computer
+terminal, to solve the equation for the damped driven harmonic oscillator.
+Your specific task is to find initial conditions such that transient effects
+are eliminated, leaving a pure sinusoidal response.
+<p><h3 id="pcap-1-c">1c. Computer Calculates Solution at a Finite Set of Times</h3>
+
+Since the method used by the computer is a numerical one, it can only produce
+values for the displacement \(x(t)\) at a finite set of times.
+We choose to calculate \(x(t)\) at evenly spaced times, consecutively spaced
+by time increments \(\Delta\).
+However, the approximate method used for obtaining the solution depends on
+\(\Delta\) being small; if \(\Delta\) is too large, the solution will be inaccurate.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Computer Program “Numerov”</h2>
+
+<p>The computer program NUMEROV uses the Numerov algorithm to solve Newton's
+Second Law
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>for a damped driven oscillator which has a free frequency of
+\(\omega = \sqrt{k/m} = 40 \pi\unit{s^{-1}}\) and an oscillator mass of
+\(m = 1\)&thinsp;kg.
+You specify the damping strength \(\lambda\), the driving-force strength \(F_0\),
+the time increment \(\Delta\), the driving force period \(P = 2 \pi/\omega\), and
+the displacement \(x_0\) and velocity \(v_0\) at time \(t = 0\), all in SI units.
+In the PROCEDURE section we recommend specific values for \(\lambda\), \(F_0\),
+\(\Delta\), \(P\), \(x_0\), and \(v_0\), which have been chosen to give you an
+interesting looking graph.
+Feel free to pick other values close to those shown or to pick completely
+different values.
+For the latter case you will probably want to do some planning so that, for
+example, the interference between the steady-state and transient solutions is
+apparent on your graph.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Procedure</h2>
+
+<p><ol>
+<li><span class="item-label">a.</span> Follow the PROGRAM NUMEROV DIRECTIONS
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>once, using:
+<p>\[\lambda = 0,\; F_0 = 0,\; \Delta = 0.00125,\; P = 0,\; x_0 = 0,\; v_0 = 75;\]
+<p>and a second time with the time interval made too crude;
+<p>\[\lambda = 0,\; F_0 = 0,\; \Delta = 0.01,\;    P = 0,\; x_0 = 0,\; v_0 = 75.\]
+<p>Plot these two smooth curves on a sheet of graph paper, using different colors
+for the two cases or a solid line for one and a line of dashes for the other.
+On that same sheet of graph paper plot the exact functional solution for SHM
+with the above values for \(x_0\) and \(v_0\).
+Remember our PROGRAM NUMEROV's value of
+\(\omega = \sqrt{k/m} = 40 \pi\unit{s^{-1}}\).
+We suggest that for this part you use a scientific calculator.</li>
+<li><span class="item-label">b.</span> Follow the PROGRAM NUMEROV DIRECTIONS again, using:
+<p>\[\lambda = 23.03,\; F_0 = 0,\; \Delta = 0.00125,\; P = 0.1,\; x_0 = 0,\;v_0 = 75;\]
+<p>to find the damped undriven transient solution, and:
+<p>\[\lambda = 23.03,\; F_0 = 7178,\; \Delta = 0.00125,\; P = 0.1,\; x_0 = 0,\;v_0 = 75;\]
+to find the full damped driven solution.
+Plot these two curves on the other sheet of graph paper.</li>
+<li><span class="item-label">c.</span> Take the long-time, steady-state, purely sinusoidal part of the
+solution and extrapolate it back to \(t = 0\) in order to determine the values
+of \(x_0\) and \(v_0\) it would have had there.
+You can either determine these values directly from your graph or you can use
+the 2-point derivative formula given below, along with the computer-output
+numbers.
+No other math or methods are needed.
+<p>The two-point derivative formula referred to is:
+<p>\[f'(x) = \frac{f(x + \Delta) - f(x - \Delta)}{2 \Delta}\]</li>
+<li><span class="item-label">d.</span> Follow the PROGRAM NUMEROV DIRECTIONS once more, but now using your
+calculated steady-state values of \(x_0\)  and \(v_0\):
+<p>\[\lambda = 23.03,\; F_0 = 7178,\; \Delta = 0.00125,\; P = 0.1,\; x_0 = ?,\;v_0 = ?.\]
+<p>If you have done everything correctly, the transient response will be gone.
+Plot this curve on the graph paper, showing it to blend in with the previous
+solution as the latter's transient dies away.</li>
+<li><span class="item-label">e.</span> Make sure that your finished graph lines are clearly labeled.</li>
+<li><span class="item-label">f.</span> Extra (No Credit): You may like to show that the steady state
+amplitude \(B\) and phase \(\beta\) on your graph check the formal solutions.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>You may also like to plot the solution for the values of \(\omega = \omega_0/2\),
+\(\omega_0\), and \(2 \omega\) in order to see how things change as the driving
+force passes through the resonance frequency \(\omega_0\).
+<p>Notes on How to Interpret Computer Output:
+<ul>
+
+</ul>
+</li>
+<li>“\(.625-3\)” means “\(0.625 \times 10^{-3}\).”</li>
+<li>The displacement values \(x(t)\) are only printed for every first, second,
+      fourth or eighth time net points and are printed consecutively across the
+      page starting in the second column.
+      The first column gives the time (in SI units) for the displacement
+      value next to it in the second column.
+</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “The Numerov Algorithm for Problems Involving Newton's Second
+Law” (MISN-0-39), where this method is derived. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See this module's LOCAL GUIDE, attached. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Damped Driven Oscillations; Mechanical Resonances”
+(MISN-0-31) for the formal solutions. <a href="#fnref-3" class="fn-back">↩</a></li></ol></aside>

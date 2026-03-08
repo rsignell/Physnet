@@ -83,6 +83,10 @@ def convert_math(s):
     s = re.sub(r'\\up\{([^{}]*)\}',   r'^{\1}',     s)
     s = re.sub(r'\\unit\{([^{}]*)\}', r'\\,\\text{\1}', s)
     s = s.replace(r'\degrees', r'^\circ')
+    s = s.replace(r'\degreesC', r'^{\circ}\,\text{C}')
+    s = s.replace(r'\degreesF', r'^{\circ}\,\text{F}')
+    s = s.replace(r'\AA', r'\text{Å}')
+    s = s.replace(r'\dfrac', r'\frac')
     s = re.sub(r'\\text\{([^{}]*)\}', r'\\text{\1}', s)   # passthrough
     return s
 
@@ -444,6 +448,12 @@ class PhysnetConverter:
             'ldots','cdots','ddots','vdots',
             'left','right','big','Big','bigg','Bigg',
             'quad','qquad',
+            'Longrightarrow','longrightarrow','Longleftarrow','longleftrightarrow',
+            'mapsto','longmapsto','hookrightarrow','hookleftarrow',
+            'overrightarrow','overleftarrow','overbrace','underbrace',
+            'vec','hat','bar','tilde','dot','ddot','check','acute','grave',
+            'overline','underline','widehat','widetilde',
+            'frac','binom','choose',
         }
         if name in _MATH_NO_ARGS:
             return f'\\{name} ', i
@@ -533,6 +543,309 @@ class PhysnetConverter:
             # inside math – just pass through with \text{}
             arg, i = get_arg(text, i)
             return f'\\text{{{arg}}}', i
+
+        # ── Font switches (no arg; used inside {groups}) ──
+        if name in ('em', 'it', 'bf', 'rm', 'sf', 'sc', 'tt', 'cal', 'mit',
+                    'normalfont', 'upshape', 'bfseries', 'itshape', 'slshape',
+                    'sffamily', 'ttfamily', 'rmfamily', 'mdseries'):
+            return '', i   # font style lost but text renders normally
+
+        # ── Text formatting ──
+        if name == 'Emph':
+            arg, i = get_arg(text, i)
+            return f'<em>{self._process(arg)}</em>', i
+
+        if name == 'nth':
+            arg, i = get_arg(text, i)
+            return f'{self._process(arg)}<sup>th</sup>', i
+
+        if name == 'AA':
+            return 'Å', i
+
+        if name == 'degreesC':
+            return '°C', i
+
+        if name == 'degreesF':
+            return '°F', i
+
+        if name == 'url':
+            arg, i = get_arg(text, i)
+            return f'<a href="{arg}" class="url">{arg}</a>', i
+
+        if name == 'ccode':
+            arg, i = get_arg(text, i)
+            return f'<code>{html_lib.escape(self._process(arg))}</code>', i
+
+        if name == 'fbox':
+            arg, i = get_arg(text, i)
+            return f'<span class="fbox">{self._process(arg)}</span>', i
+
+        if name == 'parbox':
+            # \parbox[align]{width}{content}
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '[':
+                end = text.find(']', j)
+                i = (end + 1) if end != -1 else j
+            _, i = get_arg(text, i)          # width – discard
+            content_arg, i = get_arg(text, i)
+            return self._process(content_arg), i
+
+        if name == 'raisebox':
+            _, i = get_arg(text, i)          # height
+            for _ in range(2):               # up to 2 optional [h][d] args
+                j = i
+                while j < len(text) and text[j] in ' \t\n':
+                    j += 1
+                if j < len(text) and text[j] == '[':
+                    end = text.find(']', j)
+                    i = (end + 1) if end != -1 else j
+                else:
+                    break
+            content_arg, i = get_arg(text, i)
+            return self._process(content_arg), i
+
+        if name == 'BlackTriangle':
+            return '▶ ', i
+
+        if name in ('writein', 'OneInchAnswer', 'TwoInchAnswer',
+                    'HalfInchAnswer', 'ThreeInchAnswer'):
+            if i < len(text) and text[i] == '{':
+                _, i = get_arg(text, i)
+            return '<span class="writein">___________</span>', i
+
+        # ── Additional equation / figure references ──
+        if name == 'Eqnssref':
+            num, i = get_arg(text, i)
+            return f'<a href="#eqn-{num}" class="eqn-ref">Eq.&nbsp;({num})</a>', i
+
+        if name in ('Equationref', 'Equationsref'):
+            num, i = get_arg(text, i)
+            return f'<a href="#eqn-{num}" class="eqn-ref">Eq.&nbsp;({num})</a>', i
+
+        if name in ('Eqnstoref', 'Eqnsstoref', 'Equationstoref'):
+            n1, i = get_arg(text, i)
+            n2, i = get_arg(text, i)
+            return (f'<a href="#eqn-{n1}" class="eqn-ref">'
+                    f'Eqs.&nbsp;({n1})–({n2})</a>'), i
+
+        if name == 'Ineqref':
+            num, i = get_arg(text, i)
+            return f'<a href="#ineq-{num}" class="eqn-ref">Ineq.&nbsp;({num})</a>', i
+
+        if name in ('Figstoref', 'Figsstoref'):
+            n1, i = get_arg(text, i)
+            n2, i = get_arg(text, i)
+            return (f'<a href="#fig-{n1}" class="fig-ref">'
+                    f'Figs.&nbsp;{n1}–{n2}</a>'), i
+
+        # ── Layout / spacing (additional) ──
+        if name in ('hfil', 'hfill', 'strut', 'centering', 'raggedright',
+                    'raggedleft', 'nobreakspace', 'linebreak', 'allowbreak'):
+            return '', i
+
+        if name in ('baselineskip', 'parindent', 'tabcolsep', 'arraycolsep',
+                    'parskip', 'lineskip', 'itemsep', 'parsep', 'partopsep',
+                    'topsep', 'leftmargin', 'rightmargin', 'arraystretch'):
+            if i < len(text) and text[i] == '{':
+                _, i = get_arg(text, i)
+            return '', i
+
+        if name in ('vspace*', 'hspace*'):
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'setlength':
+            _, i = get_arg(text, i)
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'addtolength':
+            _, i = get_arg(text, i)
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'phantom':
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name in ('cline', 'vline'):
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'hline':
+            return '', i
+
+        if name == 'multicolumn':
+            _, i = get_arg(text, i)   # cols
+            _, i = get_arg(text, i)   # alignment
+            content_arg, i = get_arg(text, i)
+            return self._process(content_arg), i
+
+        # ── LeftEqn – left-aligned display equation ──
+        if name == 'LeftEqn':
+            _, i = get_arg(text, i)   # label (usually empty)
+            eq, i = get_arg(text, i)
+            return f'\\[{convert_math(eq)}\\]\n', i
+
+        # ── FourEqns – 4-line aligned block ──
+        if name == 'FourEqns':
+            _, i = get_arg(text, i)
+            eqs = []
+            for _ in range(4):
+                eq, i = get_arg(text, i)
+                eqs.append(convert_math(eq))
+            joined = ' \\\\ '.join(eqs)
+            return f'\\[\\begin{{aligned}}{joined}\\end{{aligned}}\\]\n', i
+
+        # ── TwoColsTwoEqns – two equations with side annotations ──
+        if name == 'TwoColsTwoEqns':
+            _, i = get_arg(text, i)
+            eq1,  i = get_arg(text, i)
+            txt1, i = get_arg(text, i)
+            eq2,  i = get_arg(text, i)
+            txt2, i = get_arg(text, i)
+            t1 = self._process(txt1)
+            t2 = self._process(txt2)
+            return (f'\\[\\begin{{aligned}}'
+                    f'{convert_math(eq1)} && \\quad {t1} \\\\ '
+                    f'{convert_math(eq2)} && \\quad {t2}'
+                    f'\\end{{aligned}}\\]\n'), i
+
+        # ── TextAndFigure – text paragraph alongside figure ──
+        if name == 'TextAndFigure':
+            text_content, i = get_arg(text, i)
+            return self._process(text_content), i
+
+        # ── Additional figure macros ──
+        if name in ('CaptionedFullUnframedFigure', 'CaptionedFullFramedFixedFigure'):
+            return self._figures(text, i, 1, full=True)
+
+        if name == 'CaptionedLeftUnframedFigure':
+            num,   i = get_arg(text, i)
+            cap,   i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            return (f'<figure id="fig-{num}" class="fig-left">'
+                    f'<img src="{self.figures_path}/{fname}.svg" '
+                    f'alt="Figure {num}" class="physnet-fig">'
+                    f'<figcaption>Fig.&nbsp;{num}. {cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        # ── Boilerplate / acknowledgments ──
+        if name == 'Acknowledgments':
+            return '<h4>Acknowledgments</h4>\n', i
+
+        if name == 'IsuAcknowledgment':
+            return ('<p class="acknowledgment">This module was developed at '
+                    'Iowa State University.</p>\n'), i
+
+        if name in ('BriefAnsNewPage', 'ReadingsAccess', 'SeeLocalGuide',
+                    'LineFill', 'NullItem'):
+            return '', i
+
+        if name == 'GlossaryItem':
+            _, i = get_arg(text, i)   # keyword
+            _, i = get_arg(text, i)   # definition
+            _, i = get_arg(text, i)   # module ref
+            return '', i
+
+        if name == 'answer':
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'item':
+            # bare \item outside a list env — consume optional label
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '[':
+                end = text.find(']', j)
+                i = (end + 1) if end != -1 else j
+            return '<br>\n', i
+
+        # ── Meta / preamble commands ──
+        if name in ('renewcommand', 'newcommand', 'providecommand'):
+            _, i = get_arg(text, i)   # command name
+            for _ in range(2):        # optional [nargs][default]
+                j = i
+                while j < len(text) and text[j] in ' \t\n':
+                    j += 1
+                if j < len(text) and text[j] == '[':
+                    end = text.find(']', j)
+                    i = (end + 1) if end != -1 else j
+                else:
+                    break
+            _, i = get_arg(text, i)   # definition
+            return '', i
+
+        if name == 'input':
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name in ('TxEnd', 'PsEnd', 'AsEnd', 'MeEnd', 'IdEnd'):
+            return '', i
+
+        if name in ('lhead', 'chead', 'rhead', 'lfoot', 'cfoot', 'rfoot'):
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name in ('ComputerProjectExam', 'ComputerProjectGrader',
+                    'ComputerProjectPoints', 'IsuAcknowledgment'):
+            return '', i
+
+        # ── vectprime ──
+        if name == 'vectprime':
+            arg, i = get_arg(text, i)
+            return f"\\(\\vec{{{arg}}}'\\)", i
+
+        # ── dn (subscript in particle physics tables) ──
+        if name == 'dn':
+            arg, i = get_arg(text, i)
+            return f'<sub>{self._process(arg)}</sub>', i
+
+        # ── Particle physics symbols ──
+        _QUARKS = {
+            'qu': 'u', 'qd': 'd', 'qs': 's', 'qc': 'c', 'qt': 't', 'qb': 'b',
+            'qub': 'ū', 'qdb': 'd̄', 'qsb': 's̄', 'qcb': 'c̄', 'qtb': 't̄',
+            'qqb': 'q̄', 'qq': 'qq',
+        }
+        if name in _QUARKS:
+            return f'<em class="quark">{_QUARKS[name]}</em>', i
+
+        _MESONS = {
+            'mpi': 'π', 'mK': 'K', 'mKb': 'K̄', 'meta': 'η', 'mrho': 'ρ',
+            'momega': 'ω', 'mphi': 'φ', 'mW': 'W', 'mgamma': 'γ',
+        }
+        if name in _MESONS:
+            return f'<em class="meson">{_MESONS[name]}</em>', i
+
+        _BARYONS = {
+            'bLambda': 'Λ', 'bSigma': 'Σ', 'bOmega': 'Ω', 'bDelta': 'Δ',
+            'bXi': 'Ξ', 'bXib': 'Ξ̄', 'bn': 'n', 'bp': 'p',
+        }
+        if name in _BARYONS:
+            return f'<em class="baryon">{_BARYONS[name]}</em>', i
+
+        _LEPTONS = {
+            'lmu': 'μ', 'lnue': 'ν<sub>e</sub>',
+            'lnueb': 'ν̄<sub>e</sub>', 'lnumu': 'ν<sub>μ</sub>',
+            'lnumub': 'ν̄<sub>μ</sub>', 'lnutau': 'ν<sub>τ</sub>', 'ltau': 'τ',
+        }
+        if name in _LEPTONS:
+            return f'<em class="lepton">{_LEPTONS[name]}</em>', i
+
+        # ── dfrac / sqrt in text context (typically inside LeftEqn or similar) ──
+        if name == 'dfrac':
+            n_arg, i = get_arg(text, i)
+            d_arg, i = get_arg(text, i)
+            return (f'\\(\\dfrac{{{convert_math(n_arg)}}}'
+                    f'{{{convert_math(d_arg)}}}\\)'), i
+
+        if name == 'sqrt':
+            arg, i = get_arg(text, i)
+            return f'\\(\\sqrt{{{convert_math(arg)}}}\\)', i
 
         # ── Unknown: emit a visible marker for debugging ──
         return f'<span class="tex-unknown" title="unknown macro">\\{name}</span>', i
@@ -654,8 +967,17 @@ class PhysnetConverter:
         if env == 'PostOptions':
             return self._skill_env(content, 'Post-Options'), i
 
-        if env in ('tabular', 'table', 'table*'):
-            return f'<!-- table omitted -->', i
+        if env in ('tabular', 'tabular*'):
+            return self._tabular(content), i
+
+        if env in ('table', 'table*'):
+            inner = self._process(content)
+            return f'<div class="table-float">{inner}</div>\n', i
+
+        if env == 'RequiredResources':
+            inner = self._list(content, 'ol')
+            return (f'<div class="required-resources">'
+                    f'<h4>Required Resources</h4>{inner}</div>\n'), i
 
         if env in ('verbatim', 'verbatim*'):
             return f'<pre>{html_lib.escape(content)}</pre>', i
@@ -711,6 +1033,31 @@ class PhysnetConverter:
         return (f'<div class="skills-block">'
                 f'<h4>{heading}</h4>'
                 f'<ul>{"".join(html_items)}</ul></div>\n')
+
+    # ── Table handler ────────────────────────────────────────────────────────
+
+    def _tabular(self, content):
+        """Convert tabular environment to a basic HTML table."""
+        # First arg is the column spec {lcc|r} — consume and discard
+        col_spec, pos = get_arg(content, 0)
+        content = content[pos:]
+        # Split rows on \\
+        rows = re.split(r'\\\\', content)
+        html_rows = []
+        for row in rows:
+            row = re.sub(r'\\hline|\\cline\{[^}]*\}', '', row).strip()
+            if not row:
+                continue
+            cells = row.split('&')
+            if not any(c.strip() for c in cells):
+                continue
+            html_cells = ''.join(
+                f'<td>{self._process(c.strip())}</td>' for c in cells)
+            html_rows.append(f'<tr>{html_cells}</tr>')
+        if not html_rows:
+            return ''
+        return (f'<table class="physnet-table">'
+                f'<tbody>{"".join(html_rows)}</tbody></table>\n')
 
     # ── Footnote rendering ────────────────────────────────────────────────────
 

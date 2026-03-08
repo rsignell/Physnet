@@ -1,0 +1,488 @@
+<header class="module-header">
+  <h1 class="module-title">The Ampere-Maxwell Equation; Displacement Current <span class="module-author">(J.S.Kovacs <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Skills from “Ampere's Law” <a href="../m138/" class="module-ref">MISN-0-138</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Demonstrate how Ampere's Law is modified when the electric field
+    vector varies with time.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Apply the Ampere-Maxwell equation to situations where even
+    if there is no actual current in a region of space, the changing electric
+    field induces a magnetic field whose circulation is given by the
+    Ampere-Maxwell equation.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+    Reading (1970); for access see this module's <em>Local Guide</em>.</li>
+</ol>
+</div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Faraday-Henry Law of Magnetic Induction” (MISN-0-142)
+    deals with a phenomenon that is complementary to the one dealt with here.
+    The subject is the electric fields that arise when magnetic fields vary with
+    time.</li><li><strong>2.</strong> “Maxwell's Equations” (MISN-0-146).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Description</h2>
+
+<p>Ampere's Law is an integral theorem that relates the line-integral of the
+magnetic field \(\vec{B}\) around a closed path to the total electric current
+enclosed by that path.
+This theorem is not complete if there are electric fields in the vicinity
+which vary with time.
+The modification of Ampere's Law including the effect of the changing
+electric field is the subject of this module.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Suggested Procedure</h2>
+
+<p>
+In AF
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>study Sections 20.9 and 20.10.
+<p>
+Note that \(\epsilon_0 \equiv 1/(4 \pi k_e)\) and \(\mu_0 \equiv 4 \pi k_m\).
+<p>
+Work problems&nbsp;20.20 and 20.21 in AF.
+<p>
+Work Problems \(A\) and \(B\) in the next section.
+<p>
+Read pages 832-840 of K.&thinsp;W.&thinsp;Ford's “Classical and Modern Physics,”
+Vol.&thinsp;2.  For access, see this module's <em>Local Guide</em>.
+Examples 1 and 2 on pages 833-835 are especially enlightening.
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Exercises</h2>
+
+<p><ol>
+<li><span class="item-label">A.</span> The plates of a parallel-plate capacitor are circular disks of
+radius 0.040&nbsp;meters, as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m145gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The capacitor of Sect. 3, Exercise A.</figcaption></figure></div>
+
+<p>The plates, initially at a potential difference of \(1.00 \times 10^3\)&thinsp;V are
+discharged through a 10.0&nbsp;ohm resistor.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Just before the discharge begins, when the capacitor potential is
+constant, what is the magnetic field at a point 0.020&nbsp;meters from the central
+axis of the capacitor (between the plates)?</li>
+<li><span class="item-label">b.</span> At this same instant what is it 0.020&nbsp;meters from the central axis
+of the capacitor but outside of the region between the plates? (At point \(P\)
+in the figure above.
+Assume the wires connecting the capacitor to the resistor join the plates
+at the center of the circular disks, the wires coinciding with the central
+axis of the capacitor).</li>
+<li><span class="item-label">c.</span> At the instant the discharge begins (the instant after the switch
+is closed) a current begins to flow, reducing the charge on the capacitor.
+At that instant, what is the magnetic field at a point 0.020&nbsp;meters from the
+central axis, between the plates of the capacitor? [Refer to MISN-0-151
+for the time dependence of a current in a circuit containing only a
+capacitance and a resistance.
+Also see Figure&nbsp;21.15 and equation below equation 21.18 on page 487 of AF.
+What you want is the current very near \(t = 0\).
+Also you need to use Gauss's Law (MISN-0-133), to get the electric field
+between the capacitor plates].</li>
+<li><span class="item-label">d.</span> At that same instant as in (c), find the magnetic field at point
+\(P\), 0.020&nbsp;meters from the axis of the capacitor (the wire) but outside of
+the plates.
+Compare this with the field at the corresponding point within the capacitor
+[the answer to part (c)].
+</li>
+<li><span class="item-label">B.</span> Show that the product \(\mu_0 \epsilon_0\) both numerically and
+dimensionally equals (\(1/c^2\)) where \(c\) is the speed of light.</li>
+</ol>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m145gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. An illustration of an element of surface area.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Comments</h2>
+
+<p>Refer also to the COMMENTS section of MISN-0-138.
+<p>Ampere's Law for distributed currents is written as:
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
+                 \mu_0 \int \vec{j} \cdot \hat{N}\,dS,\]
+<p>where \(\vec{j}\) is the value of the current density (amperes per square
+meter whose direction is the direction in which charge is transported at the
+point where \(\vec{j}\) is evaluated), \(\vec{j} \cdot \hat{N}\) is the
+component of \(\vec{j}\) perpendicular to the element of area \(dS\)
+(see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+The circle on the integral means that the integral is around a <em>closed</em>
+path.
+The fact that there is not a circle on the surface integral means that it
+is not over an entire <em>closed</em> surface (more on this later).
+<p>
+Now observe, in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, that in the steady state the current
+crossing the shaded area \(A\) is the same as the current crossing the curved
+area---any curved area which has the path \(C\) in common with the plane
+area \(A\).
+Thus in Ampere's Law,
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
+                 \mu_0 \int \vec{j} \cdot \hat{N}\,dS\,,\]
+<p><em>any</em> surface defined by curve \(C\) can be used for the surface integral
+on the right (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m145gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. An illustration of the application of Ampere's Law.</figcaption></figure></div>
+
+<div class="figure-full"><figure id="fig-4"><img src="figures/m145gr00.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Physical elements of Ampere's Law.</figcaption></figure></div>
+
+<p>
+(Note that the direction of the normal, \(\hat{N}\), and the path of
+integration \(C\) are related by the right-hand rule.
+The directions of \(\vec{B}\) and \(\vec{j}\), of course, are determined by the
+physics of the situation and remain the same even when \(d\vec{\ell}\) and
+\(\hat{N}\) are both reversed).
+<p>For a closed surface \(S\) there is no curve \(C\), as illustrated in
+figure&nbsp;20.19, and if there is a steady-state current entering the surface at
+one point and leaving it at another, the surface integral of \(\vec{j}\) over
+the closed surface is zero:
+<p>\[\oint_S \vec{j} \cdot \hat{N} \,dS = 0.\]
+<p>This is just the statement of the conservation of charge, if there is no
+gain or loss of charge inside the volume enclosed by the surface.
+[See also section 20.9 of the <em>Readings</em>].
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m145gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. A system of two charged, seperated, parallel plates.</figcaption></figure></div>
+
+<div class="figure-full"><figure id="fig-6"><img src="figures/m145gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The system of <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> showing a chosen closed path \(C\).</figcaption></figure></div>
+
+<p>Now consider, as an example, a system consisting of two parallel metallic
+plates separated by a distance \(D\) with positive charge on one and negative
+charge on the other (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+<p>The wires coming out of the negative plate and out of the positive plate
+are not connected (a gap between \(x\) and \(y\)) so the charges stay fixed on
+the plates and no current flows in the wires.
+Thus if this system is isolated there is no magnetic field anywhere and
+the line integral of \(\vec{B}\) around curve \(C\) (enclosing the wire) is
+zero:
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} = 0\,,\]
+<p>because no current crosses any surface enclosed by path \(C\).
+<p>
+Even if we deform the plane surface enclosed by \(C\) to include the positive
+plate, the above result is, of course, still true (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p>Now if points \(x\) and \(y\) are brought together, the negative charge will
+begin to flow counter-clockwise (the current will flow clockwise from
+the positive to the negative plate).
+So there is a current crossing the <em>plane surface</em> \(S\) enclosed by \(C\).
+Ampere's Law says (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>):
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
+                 \mu_0 \int_S \vec{j} \cdot \hat{N}\,dS\,.\]
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m145gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The system of <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> with the circuit now completed.</figcaption></figure></div>
+
+<p>However, there is no charge crossing the curved surface \(S'\), so if we used
+this surface \(S'\) to evaluate the right side we would get zero.
+If we used the plane surface \(S\), also enclosed by \(C\), the integral gives
+the instantaneous value of the current crossing \(S\).
+So there appears to be an inconsistency.
+<p>To resolve this inconsistency, there must be something else that the line
+integral of \(\vec{B}\) depends upon besides the current density \(\vec{j}\).
+The difference between this situation and the steady current case is that
+in this case the current is not a steady current.
+The current decreases as the charge on the plates decreases and goes
+to zero when the plates are no longer charged.
+The electric field, \(\vec{E}\), between the plates also changes with time and
+it is this changing electric field crossing the curved surface \(S'\) which
+must be included on the right side of Ampere's Law to satisfy the law for
+non-steady state conditions.
+<p>To see this we need to relate the surface integral of the electric field
+vector \(\vec{E}\) over a closed surface to the charge enclosed by that
+surface.
+This relation you recall, is embodied in Gauss's Law:
+<p>\[\oint_S \vec{E} \cdot \hat{N}\,dS =
+         \frac{Q_S}{\epsilon_0},\]
+<p>where \(Q_S\) is the charge <em>inside</em> the volume enclosed by the 
+closed surface \(S\).
+<p>If the charge inside the enclosed volume changes with time, it must flow
+across the surface (this follows from charge conservation):
+<p><div class="centered">
+<span class="fbox">INCREASE in charge (per
+                        second) inside volume</span> =
+<span class="fbox">current flowing across
+                        surface <em>into</em> volume</span> \(-\)
+<span class="fbox">current flowing across
+                        surface <em>out of</em> volume</span>
+</div>
+
+<p>\[\frac{dQ_S}{dt} =
+         \oint_S \vec{j}_{in} \cdot \hat{N}\,dS -
+         \oint_S \vec{j}_{out} \cdot \hat{N}\,dS.\]
+<p>where we have separated the current density into \(\vec{j}_{in}\) and
+\(\vec{j}_{out}\)).
+If we have a steady state, then:
+<p>\[\frac{dQ_S}{dt} = 0 =
+ \oint_S [\vec{j}_{in} + \vec{j}_{out}] \cdot \hat{N}\,dS =
+ \oint_S \vec{j} \cdot \hat{N}\,dS = 0,\]
+<p>as before.
+<p>For our circuit, \(Q_S\) is decreasing, there is only current flowing out of
+the volume (across the area enclosed by loop \(C\)) so:
+<p>\[\frac{dQ_S}{dt} =
+         - \oint_S \vec{j}_{in} \cdot \hat{N}\,dS.\]
+<p>From Gauss's Law:
+<p>\[\epsilon_0 \oint_S \vec{E} \cdot \hat{N}\,dS = Q_S,\]
+<p>where the integral on the left is over the <em>closed</em> surface enclosing
+the positive plate (both the curved and the plane surface are defined by
+curve \(C\)).
+<p>
+Taking the derivative of both sides of this with respect to \(t\):
+<p>\[\epsilon_0 \frac{d}{dt} \oint_S \vec{E} \cdot
+                                      \hat{N}\,dS = \frac{dQ_S}{dt}.\]
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m145gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. A section of a steady current.</figcaption></figure></div>
+
+<p>So we have:
+<p>\[\epsilon_0 \frac{d}{dt} \oint_S \vec{E} \cdot \hat{N}\,dS =
+          - \oint_S \vec{j}_{out} \cdot \hat{N}\,dS,\]
+<p>where the integral on both sides is over the same closed surface.
+Combining both terms on the left side:
+<p>\[\oint \left[ \epsilon_0 \frac{d\vec{E}}{dt} +
+                        \vec{j}_{out}\right] \cdot \hat{N}\,dS = 0,\]
+<p>where \(\hat{N}\) is the <em>outward</em> normal at every element \(dS\) over the
+closed surface.
+<p>
+This is true if what we have is <em>not</em> a steady current but a situation
+where net charge is leaving the enclosed region.
+Recall that for a steady current (where no net charge accumulates or leaves
+the region enclosed; see <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>):
+<p>\[\oint_S [\vec{j}_{in} + \vec{j}_{out}] \cdot \hat{N}\,dS = 0 =
+                                     \oint_S \vec{j} \cdot \vec{N}\,dS.\]
+<p>Comparing these last relations, we can see that \(\epsilon_0 (d\vec{E}/dt)\)
+piays the same role that a current density, \(\vec{j}\), does.
+<p>
+So recapping, here is Ampere's Law for the case where we have steady
+currents (see <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>):
+<p><div class="figure-full"><figure id="fig-9"><img src="figures/m145gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Ampere's Law employed in the case of <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>.</figcaption></figure></div>
+
+<div class="figure-full"><figure id="fig-10"><img src="figures/m145gr10.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. The case where charge is leaving the enclosed region.</figcaption></figure></div>
+
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
+                 \mu_0 \int \vec{j} \cdot \hat{N}\,dS,\]
+<p>where the surface \(S\) is either the plane or curved surface bounded by the
+curve \(C\).
+<p>
+Now refer to <a href="#fig-10" class="fig-ref">Fig.&nbsp;10</a> where the charge is leaving the region enclosed by
+the curved and plane surfaces.
+<p>
+Applying <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
+<p>\[\oint_S \left[ \epsilon_0 \frac{d\vec{E}}{dt} +
+
+                          \vec{j}_{out} \right] \cdot \hat{N}\,dS = 0.\]
+<p>We break up this integral over the closed surface into surface integrals
+over the curved (\(cu\)) and planar (\(pl\)) parts:
+<p>\[\int_{pl} \vec{j}_{out} \cdot \hat{N}\,dS +
+       \int_{cu} \vec{j}_{out} \cdot \hat{N}\,dS
+       \int_{pl} \epsilon_0 \frac{d\vec{E}}{dt} \cdot \hat{N}\,dS +
+       \int_{cu} \epsilon_0 \frac{d\vec{E}}{dt} \cdot \hat{N}\,dS = 0.\]
+<p>The second integral is zero because there is no current density crossing the
+curved surface.
+The third integral is zero because no \(E\) fields cross the planar (flat)
+surface.
+Hence,
+<p>\[\int_{pl} \vec{j}_{out} \cdot \hat{N}\,dS =
+       - \epsilon_0 \int_{cu} \frac{d\vec{E}}{dt} \cdot \hat{N}\,dS.\]
+<p>where in each surface integral \(\hat{N}\) is the normal pointing out of the
+region enclosed by the surfaces.
+If over the curved surface \(\hat{N}\) points to the “right” or into the
+enclosed region, then the sign of the right side should be made positive.
+Hence, using Ampere's Law,
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
+  \mu_0 \int \vec{j} \cdot \hat{N}\,dS =
+  \mu_0 \epsilon_0 \int \frac{d\vec{E}}{dt} \cdot \hat{N}\,dS.\]
+<p>where the second integral above is over the part of the plane surface that
+is enclosed by \(C\) (not a closed surface) and the third integral is over the
+curved surface <em>if</em> \(\hat{N}\) points to the right, same as for the
+plane surface.
+<p><a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> says that, in the case where there is no steady current,
+the line integral of \(\vec{B}\) around a closed curve is equal to the surface
+integral of (\(\mu_0\epsilon_0 d\vec{E}/dt\)) over the surface traced by \(C\)
+(where again the direction of the integral around \(C\) and the direction of
+\(\hat{N}\) are related by the right-hand rule).
+<p><a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> is Ampere's Law for the situation where there is no steady
+current, but \(\vec{E}\) varies with time.
+<p>If both are present (steady current and changing \(\vec{E}\) field), we have:
+<p>\[\oint_C \vec{B} \cdot d\vec{\ell} = \mu_0 I +
+  \mu_0\epsilon_0 \int_S \frac{d\vec{E}}{dt} \cdot \hat{N}\,dS.\]
+<p>This is the Ampere-Maxwell relation, a companion to the Faraday-Henry Law:
+<p>\[\oint_C \vec{E} \cdot d\vec{\ell} = 
+  - \frac{d}{dt} \int_S \vec{B} \cdot \hat{N}\,dS.\]
+<p>These two, with Gauss' Law for Electric and Magnetic fields,
+<p>\[\oint_S \vec{E} \cdot \hat{N}\,dS =
+   \frac{Q_S}{\epsilon_0} ,\]
+<p>where \(Q_S\) is the charge inside the closed surface \(S\), and:
+<p>\[\oint_S \vec{B} \cdot \hat{N}\,dS = 0,\]
+<p>The four equations, <a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)–(12)</a>, make up the set called
+<p>Maxwell's Equations.
+(MISN-0-146 enlarges upon this).
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Brief Answers to Assigned Problems</h2>
+
+<p>
+<span class="fbox">20.20</span>
+The current out of the cube is \(I = -12 a^3 \epsilon_0 t\) if one corner of
+the cube is at the origin.
+<p>
+<span class="fbox">20.21</span>
+The answer assumes the cube is located as shown in <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a>.
+<p><div class="figure-full"><figure id="fig-11"><img src="figures/m145gr11.svg" alt="Figure 11" class="physnet-fig"><figcaption>Fig.&nbsp;11. The physical situation of problem&nbsp;20.21</figcaption></figure></div>
+
+<p>The answer AF gives has (1/\(c^2\)) instead of \(\mu_0\epsilon_0\), where \(c\) is
+the speed of light.
+The two answers are the same.
+<p>
+<span class="fbox">Problem A</span>
+<ul>
+<li><span class="item-label">a.</span> zero</li>
+<li><span class="item-label">b.</span> zero</li>
+<li><span class="item-label">c.</span> In an \(RC\) circuit with the capacitor initially charged to
+potential \(V\), the current \(I = (V/R) e^{-t/RC}\), decreasing exponentially
+with time.
+At \(t \approx 0\), when the switch is just closed, \(I \approx V/R\).
+Between the plates,
+<p>\[\epsilon_0 E = \frac{Q}{\pi r_0^2}\,,\]
+<p>where \(Q\) is the charge on either plate and \(\pi r_0^2\) is the area of the
+plate (see the parallel plate capacitor in MISN-0-133).
+Then \(\epsilon_0 (dE/dt) = 1/(\pi r_0^2)\).
+<p>
+Using the Ampere-Maxwell equation between the plates, we get for \(B\),
+0.02 meters from the axis: \(|\vec{B}| = 2.5 \times 10^{-4}\) teslas.</li>
+<li><span class="item-label">d.</span> \(|\vec{B}| = 1.0 \times 10^{-3}\) teslas.</li>
+</ul>
+
+<p>
+<span class="fbox">Problem B</span> See text.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;2 also appears in this module's <em>Model Exam</em>.
+<p>\[\epsilon_0 \equiv 1/(4 \pi k_e) \qquad \text{and} \qquad \mu_0 \equiv 4 \pi k_m\]
+<p><ol>
+<li><span class="item-label">1.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m145gr12.svg" alt="" class="physnet-fig"></figure>
+
+<p>Consider the cube above whose sides are 2 meters.
+<p>In this region the eletric field vector is given by:
+<p>\[\vec{E} = a t [(5-y) \hat{y} - z \hat{z}],\]
+<p>where \(a\) is a constant, \(t\) is the time in seconds, \(y\) and \(z\) are the
+coordinates along the \(y\)- and \(z\)-axes.
+In addition, there is a thin wire carrying a steady current \(I\) along the
+\(y\)-direction, entering the cube at the left and leaving the cube at the
+surface on the right.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the total charge enclosed by the cube? [F]</li>
+<li><span class="item-label">b.</span> Is it increasing or decreasing? [C]</li>
+<li><span class="item-label">c.</span> What is the line integral of \(\vec{B}\) around the shaded surface
+           in the direction indicated? [H]</li>
+<li><span class="item-label">d.</span> What is the line integral of \(\vec{B}\) around the top surface (in
+           the direction determined by the right hand with the thumb pointing
+           in the positive \(z\)-direction)? [A]</li>
+<li><span class="item-label">e.</span> How much net current crosses the shaded area? &nbsp;E]</li>
+<li><span class="item-label">f.</span> What net current enters the left face of the cube? [B]</li>
+<li><span class="item-label">g.</span> What net current crosses the front face of the cube? [I]
+</li>
+<li><span class="item-label">2.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m145gr13.svg" alt="" class="physnet-fig"></figure>
+
+<p>Above is a capacitor formed of a pair of very large parallel plates.
+They are closely spaced so the parallel-plate capacitor formula can be used
+to compute the electric field \(\vec{E}\) at all radii out to \(R\).
+The  capacitor is being charged so a current \(I\) flows onto the top plate
+and away from the bottom one.
+<p>Around the path enclosing the shaded circular area \(S\), because of the symmetry of the situation,
+we can safely assume \(\vec{B}\) is tangent to the circle of radius \(r\) and
+constant at all points on the circle.
+<p>Use the Ampere-Maxwell relation to find the Magnetic field at points inside
+this plate.
+[You'll need to use Gauss' Law to find \(\vec{E}\) as a function of the
+current \(I\)] [D]
+<p>What is \(B\) when the capacitor is fully charged and the \(\vec{E}\) inside is
+uniform? [G]</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> \(-8 \mu_0\epsilon_0 a\).</li>
+<li><span class="item-label">B.</span> \(I - 20 \epsilon_0 a\).</li>
+<li><span class="item-label">C.</span> It is decreasing linearly with time.</li>
+<li><span class="item-label">D.</span> \(B = \frac{\mu_0 I r}{2 \pi R^2}\).</li>
+<li><span class="item-label">E.</span> \(I + 12 \epsilon_0 a\).</li>
+<li><span class="item-label">F.</span> \(Q = -16 \epsilon_0 a t\).</li>
+<li><span class="item-label">G.</span> zero.</li>
+<li><span class="item-label">H.</span> \(-8 \mu_0\epsilon_0 a\).</li>
+<li><span class="item-label">B.</span> \(\mu_0 I + 12 \mu_0 \epsilon_0 a\).</li>
+<li><span class="item-label">I.</span> zero.</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1 and S1 in this module's <em>ID Sheet</em>.
+The actual exam may have one or both of these skills, or neither.</li>
+<li><span class="item-label">2.</span> <br>
+
+<p><figure class="fig-centered"><img src="figures/m145gr13.svg" alt="" class="physnet-fig"></figure>
+
+<p>Above is a capacitor formed of a pair of very large parallel plates.
+They are closely spaced so the parallel-plate capacitor formula can be used
+to compute the electric field \(\vec{E}\) at all radii out to \(R\).
+The  capacitor is being charged so a current \(I\) flows onto the top plate
+and away from the bottom one.
+<p>Around the path enclosing the shaded circular area \(S\), because of the symmetry of the situation,
+we can safely assume \(\vec{B}\) is tangent to the circle of radius \(r\) and
+constant at all points on the circle.
+<p>Use the Ampere-Maxwell relation to find the Magnetic field at points inside
+this plate.
+[You'll need to use Gauss' Law to find \(\vec{E}\) as a function of the
+current \(I\)] 
+<p>What is \(B\) when the capacitor is fully charged and the \(\vec{E}\) inside is
+uniform?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;2.</li>
+</ol>
+
+<p></section>

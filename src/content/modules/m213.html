@@ -1,0 +1,743 @@
+<header class="module-header">
+  <h1 class="module-title">The Photoelectric Effect <span class="module-author">(M.Brandl)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: photons <a href="../m212/" class="module-ref">MISN-0-212</a>, electromagnetic wave
+               <a href="../m210/" class="module-ref">MISN-0-210</a>.</li><li><strong>2.</strong> Calculate the change in potential energy experienced by an
+               electron that falls through a given potential difference
+               <a href="../m117/" class="module-ref">MISN-0-117</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: cutoff frequency, impeding potential, photoelectric
+                effect, photocurrent, photoelectron, photoemission, stopping
+                potential, work function.</li><li><strong>K2.</strong> Describe the three aspects of the photoelectric effect which
+                contradict the predictions of the electromagnetic wave theory of
+                light.</li><li><strong>K3.</strong> Explain how the photon theory of light correctly predicts the
+                experimental observations of the photoelectric effect.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given the work function, the density, and the spacing between
+                atoms of a material, and the intensity of light incident on the
+                material's surface, determine how long the electromagnetic wave
+                theory would predict it should take before photoemission can
+                occur.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given two of the following find the third using Einstein's
+                equation for the photoelectric effect: frequency or wavelength
+                of incident light, maximum photoelectron kinetic energy or
+                stopping potential, work function of metal or cutoff frequency.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Compton Effect” (MISN-0-219).</li><li><strong>2.</strong> “Wave-Particle Duality: Light” (MISN-0-246).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p><h3 id="pcap-1-a">1a. Macroscopic View of Light</h3>
+
+On the macroscopic, everyday-world scale, light clearly exhibits
+the properties of a wave.
+It undergoes refraction at boundaries between different media, reflects at
+surfaces, diffracts around obstacles, and exhibits interference: all of
+these are wave phenomena.
+The wave nature of light was given a solid theoretical basis in 1864
+by Maxwell's prediction of the existence of electromagnetic waves produced
+by oscillating electric charges.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><h3 id="pcap-1-b">1b. Microscopic View of Light</h3>
+
+On the microscopic scale, however, the electromagnetic wave picture of the
+nature of light breaks down.
+Molecules, atoms, nuclei, and elementary particles do not “see” light as
+an electromagnetic wave; that is, they do not interact with light as they
+should interact with a simple set of time-varying electric and magnetic
+fields.
+Rather, they seem to interact as if a beam of light were made up of discrete
+particles, each one carrying a specific amount of energy, momentum, and
+angular momentum.
+These particles are called photons.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><h3 id="pcap-1-c">1c. Photoemission Supports the Photon Model</h3>
+
+The photoelectric effect produced the first conclusive experimental evidence
+for the photon picture of light.
+It demonstrates that atomic electrons absorb energy from a beam of
+electromagnetic radiation in discrete amounts, which shows that a beam of
+electromagnetic radiation is made up a small discrete “bundles” of energy.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Experimental Evidence</h2>
+
+<p><h3 id="pcap-2-a">2a. First Observations</h3>
+
+The photoelectric effect was first noted by Heinrich Hertz in 1887.
+He observed that if an electric discharge between electrodes is illuminated
+with ultraviolet light, the intensity of the discharge is increased.
+This implies that more electrons are freed from the electrodes to jump
+across the gap.
+In 1888, Wilhelm Hullwachs observed that electrons are emitted from the
+surfaces of such metals as zinc, rubidium, phosphorus, and sodium when
+they are struck by a beam of light.
+This effect was called “photoemission.”
+Obviously, some electrons in the metals are able to absorb enough energy
+from a beam of light to escape from the surfaces of the metals.
+This particular observation in itself can be explained by the
+electromagnetic wave picture of light: the electrons are accelerated by the
+electric field in the wave until they gain enough kinetic energy to break
+out of the metal.
+Experiments were then devised to examine the details of the process of
+photoemission, and these details showed the electromagnetic wave picture
+of light to be untenable on a microscopic scale.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m213gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Millikan's photoelectric effect
+experiment.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Millikan's Photoelectric Experiment</h3>
+
+The definitive experimental work on the photoelectric effect was done by
+R.&thinsp;A. Millikan in 1914 (for which he was awarded a Nobel prize in 1923).
+The experimental setup is shown schematically in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+A vacuum tube is composed of a metal plate and a metal collecting cup.
+The plate is illuminated with light of known intensity I and known frequency
+\(\nu\).
+Most of the electrons freed from the plate by the light, called
+“photoelectrons,” travel to the collector.
+A variable voltage supply producing a voltage V is connected across the
+plate and collector.
+If \(V < 0\), the collector is positively charged relative to the plate, and
+the photoelectrons are accelerated as they cross the tube.
+If \(V > 0\), the collector is negatively charged relative to the plate, and
+the progress of the photoelectrons to the collector is impeded.
+In this case the potential difference is called an “impeding potential.”
+Since the electrons are ejected from the plate with some initial kinetic
+energy, some of them will make it to the collector despite the electric
+field that is trying to turn them back.
+Any electron having an initial kinetic energy greater than the potential
+energy difference between the plates will still strike the collector.
+Those photoelectrons which do arrive at the collector return to the plate
+through the circuit.
+A galvanometer measures the “photocurrent,” \(i\), flowing in the circuit,
+which is proportional to the number of photoelectrons striking the collector
+per unit time.
+If an impeding potential V is placed across the plate and collector, the
+galvanometer reading indicates how many photoelectrons per unit time are
+liberated from the plate with an initial kinetic energy greater than the 
+potential energy difference between the plates.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m213gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Plot of photoelectric current against
+impeding potential.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Results of Millikan's Experiment</h3>
+
+The experiment itself is performed by setting the intensity \(I\) and
+frequency \(\nu\) of the light illuminating the plate to known values, and
+then measuring the photocurrent as a function of the impeding potential.
+The results look like those shown in the <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+When \(V < 0\), nearly all of the photoelectrons reach the collector, so the
+photocurrent is large.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>As \(V\) become positive, the external electric field opposes the motion of
+the photoelectrons, so the least energetic photoelectrons are kept from
+striking the collector, and the photocurrent drops.
+As V is increased, fewer and fewer photoelectrons can reach the collector.
+Finally, at a critical potential called the “stopping potential,” \(V_0\),
+none of the electrons have an initial kinetic energy high enough to reach
+the collector, and the photocurrent drops to zero.
+If \(V\) is increased above \(V_0\), the photocurrent remains at zero.
+<p>This implies that, for a given intensity and frequency of light striking the
+plate, there exists a maximum value for the kinetic energy of the
+photoelectrons when they are emitted from the plate given by
+<p>\[E_{k,max} = e V_0\,.\]
+<p>Not all of the electrons are liberated from the plate with this kinetic
+energy; most have less.
+This can be explained in terms of the way in which the electrons are bound
+to the metal of the plate.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The kinetic energy of each photoelectron is determined by the energy
+absorbed by each photoelectron from the light, \(E_L\), minus the energy
+required to leave the metal surface, \(\phi\):
+<p>\[E_K = E_L - \phi\,.\]
+<p>The maximum photoelectron kinetic energy occurs for photoelectrons with the
+minimum binding energy, \(\phi_0\), called the “work function” of the metal
+surface.
+<p>\[E_{K,max} = E_L - \phi_0 = e V_0\,.\]
+<p>By examining the characteristics of the stopping potential \(V_0\) or the
+maximum kinetic energy \(E_{K,max}\) we are also examining the characteristics
+of \(E_L\), the amount of energy absorbed from the incident light by each
+electron.
+We will now see what happens to \(E_K\) and the photocurrent when the
+intensity \(I\) and frequency \(\nu\) of incident light are varied, and we shall
+also see how the photocurrent varies as a function of the amount of time the
+light has been on.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m213gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Dependence of photocurrent on light
+intensity.</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. Dependence on Intensity of Incident Light</h3>
+
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> is a plot of photocurrent versus impeding potential for several
+different values of the incident light intensity (with the frequency being
+held constant).
+The current is larger when the intensity is larger, which means that the
+more intense the light is, the more photoelectrons are freed from the metal.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>However, the value of the stopping potential is the same for all values of
+the intensity.
+Changing the intensity of the light striking the plate changes only the
+number of photoelectrons emitted.
+There is no measurable minimum value of the intensity required for
+photoemission to take place.
+This implies that the amount of energy absorbed from the light by each
+electron is independent of the intensity of the light.
+This result has been tested and found valid over an intensity range of
+seven orders of magnitude.
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m213gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Maximum photoelectron kinetic energy as a
+function of frequency.</figcaption></figure>
+
+<p><h3 id="pcap-2-e">2e. Dependence on Frequency of Incident Light</h3>
+
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> is a plot of the maximum photoelectron kinetic energy as a function
+of the frequency of the light illuminating the plate.
+The results of two different experiments are shown, one using a potassium
+plate and the other using a sodium plate.
+In each case the resulting graph is a straight line, indicating that the
+maximum kinetic energy depends linearly on the frequency.
+The slopes of the lines are the same for both metals, and would be the same
+for any metal used to form the plate.
+The value of the slope, according to Millikan's original results, is
+(\(6.57 \pm 0.33) \times 10^{-34}\)&thinsp;J&thinsp;s.
+Later experiments gave a more precise value of
+\(6.62517 \times 10^{-34}\)&thinsp;J&thinsp;s, which is the value of Planck's constant.
+For each metal, there is a definite “cutoff frequency,” \(\nu_0\), below
+which no photoelectrons are emitted, regardless of the intensity of the
+light striking the plate.
+The value of the cutoff frequency is \(\nu_0 = \phi_0/h\), where \(\phi_0\) is
+the work function of the metal of which the plate is constructed.
+The equation of the line for each metal is, therefore,
+<p>\[E_{K,max} = h(\nu - \nu_0) = h \nu - \phi_0\,,\]
+<p>which implies that the amount of energy absorbed by each electron is
+<p>\[E_L = h \nu.\]
+<p>The amount of energy absorbed by each electron from the light beam depends
+solely on the frequency of the light.
+When the frequency of the light striking the plate is less than \(\nu_0\),
+each electron absorbs an amount of energy \(E_L \leq \phi_0\), which is not
+enough to free it from the plate.
+For such frequencies no photoelectrons are emitted.
+<p><h3 id="pcap-2-f">2f. Time Dependence of Photoemission</h3>
+
+Attempts have been made to determine how long it takes for the electrons to
+absorb enough energy from the light to escape from the plate.
+No detectable time lag has been found.
+The electrons absorb the energy from the light beam nearly
+instantaneously.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>This result is independent of the intensity and frequency of the incident
+light (so long as the frequency is high enough to cause photoemission,
+of course).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Classical Interpretation</h2>
+
+<p><h3 id="pcap-3-a">3a. Description of the Mechanism</h3>
+
+In the electromagnetic wave picture of the photoelectric effect, the beam of
+light which is incident on the plate is simply a region of space in which
+there exists time-varying electric and magnetic fields.
+The electrons in the plate are accelerated by the electric field of the wave
+and oscillate harmonically in phase with the field.
+They pick up more energy with each oscillation until they absorb enough
+energy to escape from the plate.
+They are further accelerated by the field as they leave the plate, and thus
+acquire some additional kinetic energy.
+<p><h3 id="pcap-3-b">3b. Dependence on Intensity of Incident Light</h3>
+
+The electromagnetic wave interpretation predicts that the amount of energy
+absorbed from the incident light by each electron depends on the intensity
+of the light.
+The intensity of an electromagnetic wave is proportional to the square of
+the amplitude of the electric field of the wave.
+Thus if the intensity of the incident light is increased, the amplitude of
+the electric field in the light is also increased.
+This in turn means that the electric force accelerating the electrons in the
+plate is greater, so the electrons absorb more energy from the light.
+This would make the stopping potential depend on the intensity, a conclusion
+which contradicts the experimental results.
+<p><h3 id="pcap-3-c">3c. Dependence on Frequency of Incident Light</h3>
+
+The electromagnetic wave model of the photoelectric effect does not predict
+the linear dependence of the maximum photoelectron kinetic energy on the
+frequency of the incident light.
+Furthermore, it predicts that photoemission will occur for any frequency of
+the incident light, as long as the intensity is high enough.
+This prediction contradicts the experimental observation of the existence of
+a cutoff frequency, below which no photoemission occurs regardless of how
+high the intensity is.
+<p><h3 id="pcap-3-d">3d. Time Dependence of Photoemission</h3>
+
+The electromagnetic wave interpretation of the photoelectric effect predicts
+that there will be a finite, measurable delay between the time when light
+begins to strike the surface of the metal and the emission of the first
+photoelectron.
+We can easily derive a classical expression for the approximate lower limit
+of this time:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[t_{em}=\frac{\phi_0}{I}\left(\frac{\rho}{\mu}\right)^{2/3}\,,\]
+<p>where \(\phi\), \(\rho\), and \(\mu\) are the work function, density, and
+mass-per-atom of the metal and \(I\) is the intensity of the light.
+As an example, potassium has a work function of \(1.8\,eV = 2.9 \times 10^{-19}\,\text{J}\),
+a density of 860<span class="unit">&thinsp;kg/m<sup>3</sup></span>, and each atom has a
+mass of approximately \(6.5 \times 10^{-26}\,\text{kg}\).
+If we now allow light whose intensity is the same as that of sunlight,
+\(10^3\unit{W/m^{2}}\), to illuminate a piece of potassium, the time it will take
+before the first photoelectron is emitted is
+<p>\[t_{em}=\frac{2.9 \times 10^{-19}\,\text{J}}
+{\left(10^3\unit{W/m^{2}}\right)\left(4.2 \times 10^{-10}\,\text{m}\right)^2} =
+1.6 \times 10^{-3}\,\text{s}.\]
+<p>(Each atom is in a cube of side \(4.2 \times 10^{-10}\,\text{m}\).)
+<p>Such a time lag would be easily detectable.
+For lower intensities, the time lags should be even longer.
+For a more extreme case, an intensity of \(10^{-12}\unit{W/m^{2}}\) would yield a
+time lag of \(1.6 \times 10^4\,\text{s}\) which is 4<span class="unit">&thinsp;hours</span> and 34<span class="unit">&thinsp;minutes</span>!
+<p>The prediction of such a time lag definitely contradicts the experimental
+observation that photoemission occurs nearly instantaneously.
+<p><h3 id="pcap-3-e">3e. Failure of the Electromagnetic Wave Model</h3>
+
+As the previous three paragraphs show, the electromagnetic wave picture of
+light completely fails to explain the details of the photoelectric effect.
+It is still true that light acts like an electromagnetic wave on the 
+macroscopic scale, that is, a beam of light still behaves exactly like a
+region of space filled with a continuous, time-varying electric and magnetic
+field when we observe its behavior on a scale of distances much larger than
+the size of an atom.
+But we must now revise our picture of the way light interacts with matter on
+a microscopic scale.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Photon Model</h2>
+
+<p><h3 id="pcap-4-a">4a. Planck's Quantum Hypothesis</h3>
+
+The photon theory of electromagnetic radiation was first proposed by
+Albert Einstein in 1905 as a result of Max Planck's theoretical work on
+blackbody radiation.
+Planck found that in order to explain the way in which radiation is emitted
+from a heated object, it was necessary to assume that it was emitted in
+discrete “bunches,” each bunch containing an amount of energy \(h\nu\),
+where \(\nu\) is the frequency of the emitted radiation and \(h\) is Planck's
+constant.
+Planck assumed that this “quantization” was solely a property of the
+process by which the radiation was emitted, and that the total outgoing
+stream of radiation could still be considered a continuous electromagnetic
+wave.
+<p><h3 id="pcap-4-b">4b. Einstein's Photon Postulate</h3>
+
+Einstein carried Planck's quantization idea one step further and postulated
+that electromagnetic radiation itself was quantized---that a beam of
+electromagnetic radiation consists of numerous concentrated bundles, called
+photons.
+The energy carried by a single photon is
+<p>\[E_{ph} = h \nu\,,\]
+<p>where \(\nu\) is the frequency of the radiation and \(h\) is Planck's constant.
+Not only is electromagnetic radiation emitted in discrete bundles, but it
+retains that same “granular” structure as it propagates through space.
+It is therefore also absorbed in discrete amounts.
+<p><h3 id="pcap-4-c">4c. Macroscopic Beams Contain Many Photons</h3>
+
+The amount of energy contained in each photon is so small that a beam of
+electromagnetic radiation must contain a very large number of photons in
+order for it to be detectable on a macroscopic scale.
+Therefore, it is impossible to detect the granularity of radiation on a
+macroscopic scale.
+All we can see is the net effect of a large number of photons, which causes a
+beam to appear to be a continuous electromagnetic wave.
+The situation is analogous to the structure of matter: on the microscopic
+level, a table is a complex assortment of molecules (or, on an even smaller
+scale, of elementary particles), but on a macroscopic scale it looks and
+acts like a continuous, solid piece of material.
+Following the same analogy, just as we need not worry about the microscopic
+structure of a table in using it in the everyday world, we also have no need
+to worry about the microscopic structure of light when we deal with its
+macroscopic properties.
+In the everyday world, a table is a solid piece of material, and a beam of
+light is an electromagnetic wave.
+<p><h3 id="pcap-4-d">4d. Microscopic Systems Interact with Photons</h3>
+
+It is only on the microscopic level of molecules, atoms, nuclei, and
+elementary particles that the quantized nature of electromagnetic radiation
+manifests itself.
+On this level, a beam of electromagnetic radiation of frequency \(\nu\)
+consists of a stream of photons, each one having energy h\(\nu\).
+The interaction between electromagnetic radiation and matter on a
+microscopic scale can therefore be described in terms of the interactions
+between individual particles and individual photons.
+In such interactions the photons display particle-like properties, with
+each one having a definite energy and momentum.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The Photon Interpretation</h2>
+
+<p><h3 id="pcap-5-a">5a. Introduction</h3>
+
+In his 1905 paper, Einstein pointed out that the photoelectric effect
+provided an excellent experimental test of his photon theory.
+His predictions were borne out by the experiments, and he received a Nobel
+prize in 1921 for his work.
+<p><h3 id="pcap-5-b">5b. Einstein's Photoelectric Equation</h3>
+
+The photon interpretation of the photoelectric effect is particularly simple.
+When a beam of light strikes the surface of a metal, some of the photons in
+the beam strike some of the electrons in the metal.
+Each electron involved absorbs a single photon, so the net amount of energy
+absorbed by one electron from a beam of light of frequency \(\nu\) is the
+amount contained in a single photon:
+<p>\[E_L = E_{ph} = h \nu.\]
+<p>An electron bound in the metal by an energy \(\phi\) would then escape with
+kinetic energy
+<p>\[E_k = h \nu - \phi\,.\]
+<p>This equation is usually called Einstein's equation for the photoelectric
+effect.
+<p><h3 id="pcap-5-c">5c. Dependence on Intensity of Incident Light</h3>
+
+The photon theory predicts that the photoelectron kinetic energy is
+independent of the incident light intensity, and that the photoelectric
+current is proportional to the intensity.
+Both predictions are borne out by experiment.
+In the photon picture of electromagnetic radiation, the energy carried by
+each photon in a beam of frequency \(\nu\) is \(h \nu\), which is a fixed
+amount.
+The intensity is therefore a measure of the number of photons in the beam:
+<p>\[I = h \nu \phi_{ph}\,,\]
+<p>where \(\phi_{ph}\) is called the “photon flux,” number of photons striking
+a surface of unit area perpendicular to the beam per unit time.
+A more intense beam just has more photons in it: the energy of each photon
+is independent of the intensity.
+Therefore, since each electron absorbs just a single photon, the amount of
+energy absorbed from the light by each electron is independent of the
+intensity of the light.
+Thus the maximum photoelectron kinetic energy (and hence the stopping
+potential) is independent of the light intensity.
+This prediction is completely in accord with the experimental evidence.
+Changing the intensity of the light changes the number of photons striking
+the plate, and so presumably changes the number of electrons which absorb
+photons.
+One would therefore expect that the number of photoelectrons emitted
+per unit time (the photoelectric current) would be proportional to the
+intensity of the light.
+This is also in agreement with the experimental results.
+<p><h3 id="pcap-5-d">5d. Dependence on Frequency of Incident Light</h3>
+
+The photon theory makes the correct prediction about the relationship
+between the maximum photoelectron kinetic energy E\(_k,max\) and the frequency
+\(\nu\) of the incident light:
+<p>\[E_{k,max} = h \nu - \phi_0\,,\]
+<p>where \(h\) is Planck's constant and \(\phi_0\) is the work function of the
+metal.
+The particular prediction is verified by the experimental results.
+The slope of the graph of \(E_{k,max}\) vs. \(\nu\) is indeed equal to Planck's
+constant, and the intercept is equal to the work function, within the limits
+of experimental error.
+The photon theory also correctly predicts the existence of the cutoff
+frequency, below which no photoemission occurs.
+If the frequency \(\nu\) of the incident light is less than \(\phi_0/h\), each
+photon has an energy of \(h \nu/\phi_0\).
+Therefore since the electrons are all bound by an amount \(\phi \geq \phi_0\),
+no electron can absorb enough energy to escape from the metal by
+“swallowing” a single photon.
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>No photoemission occurs for a frequency less than \(\nu_0 = \phi_0/h\).
+<p><h3 id="pcap-5-e">5e. Time Dependence of Photoemission</h3>
+
+The photon interpretation of the photoelectric effect predicts that there
+will be no appreciable time lag between light striking the surface of a
+metal and the start of photoemission.
+This is in complete agreement with the experimental results.
+Each electron absorbs the energy it needs to escape in a finite but very
+small interval of time.
+We can make a rough guess at the value of the amount of time the absorption
+occurs in, by setting it equal to the length of time it would take for a
+photon (traveling at the speed of light) to cross an electron.
+The size of an electron is not a well-determined quantity, but is of the
+order of \(10^{-14}\)&thinsp;m.
+Therefore, the absorption time is, roughly,
+<p>\[t_{abs}=\frac{10^{-14}\,\text{m}}{3\times10^8\,\text{m/s}} =
+       \frac{1}{3}\times 10^{-22}\,\text{s}\,.\]
+<p>There is no way in which such a short time interval could be measured.
+<p><h3 id="pcap-5-f">5f. Success of the Photon Interpretation</h3>
+
+The photon theory of light successfully explains all of the observed details
+of the photoelectric effect.
+We must therefore conclude that, on a microscopic level, electromagnetic
+radiation is quantized, and that its interaction with matter on this level
+must be described in terms of the interactions of individual photons with
+individual particles.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>the lowest frequency of light that will cause the
+emission of electrons from a metal surface.
+<p>the potential difference, between a metal
+plate and a collector, that decelerates photoelectrons emitted from the metal
+plate.
+<p>the current of electrons between the metal plate and
+collecting cup in a vacuum tube illuminated by light of sufficiently high
+frequency.
+<p>the emission of electrons from a metal surface
+exposed to light of sufficiently high frequency.
+<p>the name given to electrons emitted from a metal surface
+via the photoelectric effect.
+<p>another name for the photoelectric effect.
+<p>the impeding potential required to completely retard
+the photocurrent.
+<p>the minimum energy binding electrons to a metal surface.
+<p></section>
+
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m213gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Electrons in a metal.</figcaption></figure>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Explanation of the Work Function</h2>
+
+<p>The conduction electrons in a metal are not bound to individual atoms of the
+crystal lattice, but are free to move about inside the metal.
+They are, however, bound to the metal itself by a potential barrier at the
+surface.
+In order to escape from the metal, these electrons must be given enough
+energy to overcome this barrier.
+The electrons in a metal are therefore sitting in a potential well.
+Each electron's “depth,” \(\phi\), in the well is the amount by which it is
+bound to the metal (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>Different electrons are situated at different depth in the well, since the
+Pauli exclusion principle requires them all to be in different states.
+<p>Each electron struck by a photon absorbs the energy of the photon.
+The dynamics of the collision process are rather complicated.
+Since both momentum and energy must be conserved, a free electron cannot
+absorb all of the energy of a photon because there would be some “excess”
+momentum left over.
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+<p>However, an electron bound inside a metal is able to transfer this excess
+momentum to the crystal structure of the metal, and escape with all of the
+photon's energy.
+<p>An electron bound at depth \(\phi\) must be given an amount of energy equal to
+\(\phi\) to enable it to escape from the metal.
+Any additional energy given to it will appear as kinetic energy after it is
+liberated.
+Therefore, if an electron bound at depth \(\phi\) absorbs a total amount of
+energy \(E_L\) from light striking the metal, its kinetic energy upon leaving
+the metal will be
+<p>\[E_k = E_L - \phi.\]
+<p>Of course, if \(E_L < \phi\), the electron will not be emitted.
+<p>Different electrons are bound at different “depths” \(\phi\).
+Assuming each electron absorbs the same amount of energy from the incident
+light, those which are least tightly bound will be liberated with the
+greatest kinetic energy.
+<p>There exists a minimum value of the binding energy \(\phi\), for electrons at
+the very top of the conduction band (at the Fermi level).
+This value, called \(\phi_0\), the work function of the metal, is solely a
+property of the metal involved.
+Therefore, if we assume that all the electrons absorb the same amount of
+energy \(E_L\) from the incident light, the maximum kinetic energy with which
+an electron can be emitted from the metal is
+<p>\[E_{k,max} = E_L - \phi_0 = eV_0\,.\]
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Time Delay for “Classical” Photoemission</h2>
+
+<p>We can use a simple argument to set an approximate lower limit on the amount
+of time it should take for an electron at the surface of a metal to absorb
+enough energy from an electromagnetic wave to escape from the metal.
+<p>Assume that there is one free electron per atom in the metal.
+If we also assume that the electrons on the surface of the metal are evenly
+distributed, then each electron can be imagined as occupying a small square
+about an atom on the surface.
+The size of this square is determined by the spacing d of the atoms (see
+<a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m213gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. energy absorption from incident
+light.</figcaption></figure></div>
+
+<p>Each electron can absorb the energy that falls on its own square.
+The maximum rate at which an electron can absorb energy from the incident
+light is simply the total amount of energy falling on its square per unit
+time,
+<p>\[\left(\frac{dE_L}{dt}\right)_{max} = I d^2\,,\]
+<p>where \(I\) is the intensity of the light, and \(d^2\) is the area of the
+electron's square.
+<p>The maximum amount of energy an electron can absorb from the light in time
+\(t\) is, therefore,
+<p>\[E_{L,max} = I d^2 t\,.\]
+<p>The value of \(d\) can be estimated from the mass density of the metal and the
+mass of each atom, if we assume that the atoms in the crystal are arranged in
+a simple cubical array.
+This assumption will not generally be true, and may cause an error of a
+factor of two or so in the result, but we're only looking for an approximate
+final answer anyway.
+<p>If the atoms are arranged in a simple cubical array with spacing \(d\), then
+we can divide up the metal into a number of cubes whose sides have length
+\(d\), with each cube containing one atom.
+Since the volume of each cube is \(d^3\), there is one atom per each \(d^3\) of
+volume in the metal.
+The number density of atoms is, therefore,
+<p>\[N_a = \frac{1}{d^3}\,.\]
+<p>The number density of atoms can also be determined from the mass density
+\(\rho\) of the metal and the mass \(\mu\) of each atom:
+<p>\[N_a = \frac{\rho}{\mu}\,.\]
+<p>Combining the two expressions and solving for \(d\) gives
+<p>\[d = \left(\frac{\mu}{\rho}\right)^{1/3}\,.\]
+<p>Finally, we can determine how long it should take for photoemission to
+occur.
+The time \(t_{em}\) required for emission to occur is just the amount of time
+needed for the electron to absorb an amount of energy equal to the amount by
+which it is bound to the metal, \(\phi\).
+The first electrons emitted will be the ones with the smallest binding
+energy, that being equal to the work function of the metal, \(\phi_0\).
+Therefore, we can find the minimum value of \(t_{em}\) by setting
+\(E_{L,max} = \phi_0\) in <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> and solving for \(t\), which gives
+<p>\[t_{em}=\frac{\phi_0}{I d^2}\,.\]
+<p>Combining <a href="#eqn-17" class="eqn-ref">Eqs.&nbsp;(17)</a> and <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a>, the time delay is
+<p>\[t_{em} = \frac{\phi_0}{I}\left(\frac{\rho}{\mu}\right)^{2/3}\,.\]
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Electromagnetic Waves and Maxwell's Equations”
+(MISN-0-210). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Characteristics of Photons” (MISN-0-212). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The photocurrent is actually larger for more negative values of
+\(V\) because the externally applied electric field helps free more electrons
+from the plate, but this effect is irrelevant to the purpose of the
+experiment. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Appendix A: Explanation of the Work Function.” <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The photocurrent is, in fact, directly proportional to the
+intensity of the incident light at a fixed value of the impeding potential. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">An upper limit of \(10^{-9}\)&thinsp;sec has been set on the time lag.
+Smaller time intervals can not be measured. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Appendix B: Time Delay for 'Classical' Photoemission.” <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">In fact, photons act precisely like particles having zero rest
+mass; the particle dynamics involved are examined in “The Compton Effect”
+(MISN-0-219). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">An electron could conceivably escape by absorbing two photons
+sequentially, but the chances of this occurring are vanishingly small. <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">That is, an amount of work equal to \(\phi\) must be done to remove
+the electron from the metal. <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">See “The Compton Effect” (MISN-0-219). <a href="#fnref-11" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>\[\begin{aligned}h        & = 6.62559 \times 10^{-34}\,\text{J\,s} = 4.13557 \times 10^{-15}\,\text{eV\,s} \\ \,\text{J} & = 6.24181 \times 10^{18}\,\text{eV} \\ c        & = 3.00 \times 10^8\,\text{m/s}\end{aligned}\]
+
+<p><ol>
+<li><span class="item-label">1.</span> The longest wavelength of light that will cause photoemission
+           from sodium is approximately 540<span class="unit">&thinsp;nm</span>.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the work function of sodium.</li>
+<li><span class="item-label">b.</span> Find the maximum kinetic energy for photoelectrons emitted when
+           light of wavelength 400<span class="unit">&thinsp;nm</span> strikes a sodium plate.
+</li>
+<li><span class="item-label">2.</span> Pure silver has a work function of \(\phi_0 = 4.7\,\text{eV}\).
+A crude calculation of the type used in the text, using the atomic weight
+and density of silver, gives a spacing between atoms in a silver crystal of
+about \(d = 12\,\text{nm}\).
+Note that \(d\)-cubed was taken to be the mass-per-atom divided by the density
+of the silver.
+It has been found that light of intensity
+\(1 \times 10^{-10}\unit{W/m^{2}}\) can still cause photoemission from silver.
+If the  electromagnetic wave interpretation were correct, how long would it
+take before the first photoelectrons were emitted?</li>
+<li><span class="item-label">3.</span> When light of wavelength 244<span class="unit">&thinsp;nm</span> illuminates an aluminum surface,
+a stopping potential of 1.0<span class="unit">&thinsp;V</span> is needed to reduce the photoelectric current
+to zero.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the work function of aluminum.</li>
+<li><span class="item-label">b.</span> Find the wavelength of light that would require a stopping
+potential of 1.5<span class="unit">&thinsp;V</span>.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\phi_0 = 2.3\,\text{eV}\).</li>
+<li><span class="item-label">b.</span> \(K_{E,_max} = 0.8\,\text{eV}\).
+</li>
+<li><span class="item-label">2.</span> \(t_em = 5.23 \times 10^7\,\text{s} = 1.66\,\text{years}\)</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\phi_0 = 4.08\,\text{eV}\)</li>
+<li><span class="item-label">b.</span> \(\lambda = 222\,\text{nm}\).
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\begin{aligned}h        & = 6.62559 \times 10^{-34}\,\text{J\,s} = 4.13557 \times 10^{-15}\,\text{eV\,s} \\ \,\text{J} & = 6.24181 \times 10^{18}\,\text{eV} \\ c        & = 3.00 \times 10^8\,\text{m/s}\end{aligned}\]
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> The photoelectric work function of aluminum is
+           \(\phi_0\) = 4.08&thinsp;eV.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the cutoff frequency and the corresponding cutoff wavelength
+           for photoemission from aluminum.</li>
+<li><span class="item-label">b.</span> Find the maximum photoelectron kinetic energy and the stopping
+           potential when (ultraviolet) light of wavelength 200&thinsp;nm
+           illuminates an aluminum plate.
+</li>
+<li><span class="item-label">3.</span> Photoemission can occur in a gas, as well as in a metal.
+Consider the (extremely hypothetical) case of a monatomic hydrogen gas with
+all of the atoms being in their ground state.
+Each electron is bound to its corresponding nucleus by an amount equal to
+13.6&thinsp;eV.
+Since the radius of an electron's orbit in a hydrogen atom is
+\(r = 0.053\)&thinsp;nm, each electron can absorb only that amount of energy from a
+beam of light that falls on a disc whose area is
+\(\pi r^2 = 8.82 \times 10^{-21}\unit{m^{2}}\).
+If light of intensity \(I = 1.00\unit{W/m^{2}}\) illuminates the gas, find how long
+the electromagnetic wave theory would predict it should take for
+photoemission to occur.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\nu_0 = 9.87 \times 10^{14}\)/s, \(\lambda_0 = 304.1\)&thinsp;nm</li>
+<li><span class="item-label">b.</span> \(E_{k,max} = 2.12\)&thinsp;eV, \(V_0 = 2.12\)&thinsp;V
+</li>
+<li><span class="item-label">3.</span> \(t_{em} = 247\)&thinsp;s.</li>
+</ol>
+
+<p></section>
+

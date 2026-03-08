@@ -1,0 +1,349 @@
+<header class="module-header">
+  <h1 class="module-title">Pendula, Simple and Physical <span class="module-author">(J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Write the power series expansions about zero for the sine and cosine
+    functions <a href="../m4/" class="module-ref">MISN-0-4</a>.</li><li><strong>2.</strong> Identify the differential equation associated with simple harmonic
+    motion and extract the period and frequency of the motion from this equation
+    <a href="../m26/" class="module-ref">MISN-0-26</a>.</li><li><strong>3.</strong> Apply the equations of rotational motion to determine the angular
+    acceleration of an extended object constrained to rotate about one of its
+    principal axes <a href="../m36/" class="module-ref">MISN-0-36</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Starting from the free-body diagram showing all of the forces on the
+    object, derive the expression which is the differential equation of
+    periodic motion of a rigid body (point mass on massless rod or extended
+    object) suspended from a fixed point in the gravity field of the earth.
+    In the small-displacement approximation, show that this is the equation for
+    simple harmonic motion and find then the period associated with this motion.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a particular simple or physical pendulem, calculate the period
+    for small oscillations.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Translational plus Rotational Motion of a Rigid Body” (MISN-0-43).</li><li><strong>2.</strong> “Ideal Collisions Between a Frictional Sphere and a Flat Surface:
+    The Superball” (MISN-0-53).</li><li><strong>3.</strong> “Euler's Equations; The Tennis Racket Theorem” (MISN-0-57).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Periodic Oscillation of Suspended Objects</h3>
+
+An object suspended in the gravitational field of the earth hangs there in
+some equilibrium position (such that the center-of-mass of the object is
+directly below the fixed point of suspension).
+If this object is displaced from this equilibrium position and released, its
+motion is simple harmonic motion - where the period associated with the
+vibratory motion is independent of the amount of displacement form 
+equilibrium and depends only upon the distribution of the mass of the object 
+and the constant acceleration due to gravity.
+The general expression for the period of this vibration will be derived and
+applied to some simple systems.
+<p><h3 id="pcap-1-b">1b. The Simple Pendulum</h3>
+
+A simple pendulum, a mathematical idealization, is defined as a point mass
+at the end of a rigid massless rod suspended in the gravitational field of
+the earth free to oscillate about the vertically oriented equilibrium position.
+The motion about the equilibrium position is simple harmonic for small
+displacements from the equilibrium with period
+<p>\[P = 2\pi\sqrt{\frac{L}{g}}.\]
+<p>Here \(L\) is the distance from the point of pivot to the mass.
+<p><h3 id="pcap-1-c">1c. The Physical Pendulum</h3>
+
+Any object suspended from a fixed point in the object, free to pivot about
+some horizontal axis through that point, will execute oscillatory motion
+about its equilibrium orientation.
+The equilibrium orientation is that for which the static equilibrium conditions
+are satisfied.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>That occurs when the center of mass of the suspended object is directly
+below the point of pivot.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Analysis of the Physical Pendulum</h2>
+
+<p><h3 id="pcap-2-a">2a. Example: Force and Torque on a Suspended Uniform Rod</h3>
+
+<p>As a concrete example, consider a uniform rod of length \(L\), mass \(M\), fixed at
+one end so that it is free to rotate in a vertical plane.
+At some instant in its oscillatory motion what are the forces acting on this
+object?
+There are essentially two: the force of gravity, \(\vec{W}\), acting at the center of
+mass, and the force, \(\vec{F}_{PIN}\), the axis exerts on the rod at the pivot
+point (See <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+To facilitate expressing the forces and torques acting on this system
+(the rod), let us set up a coordinate system with a set of orthogonal
+unit vectors associated with this coordinate system.
+Instead of the usual orthogonal coordinate system fixed in space, it will
+be more convenient to use a coordinate system that is
+attached to the rod.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m42gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A rod as a physical pendulum.
+The point of application of \(\vec{F}\) denotes the PIN point.
+The unit vector \(\hat{z}\) points upward, out of the page.</figcaption></figure></div>
+
+<p>Consider a set of unit vectors attached to the CM of the rod: \(\vec{r}\) is
+parallel to the rod, pointing in the direction in which \(\vec{r}\) increases
+(\(\vec{r}\) being the vector from the origin of the coordinates, the point where
+the rod is attached, to any point on the rod, or in space for that matter),
+\(\hat{\theta}\) is perpendicular to the rod (tangent to the circle swept out by
+the center of mass) and pointing in a direction in which \(\theta\) increases.
+The third unit vector, \(\hat{z}\), points up, out of the page and is defined by
+the cross-product of the other unit vectors:
+\(\hat{z}\,=\,\hat{r}\times\hat{\theta}\).
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> the rod's motion is restricted to the plane of the paper.
+The unit vectors \(\hat{r}\) and \(\hat{\theta}\) are always in this plane so
+\(\hat{z}\) is always perpendicular to it.
+Relative to this framework, we can express the forces on the rod as:
+<p>\[\vec{F}_{PIN} = -\,F_{\parallel}\hat{r} + F_{\perp}\hat{\theta},\]
+<p>\[\vec{W} = (M g \cos\theta) \hat{r} - (M g \sin\theta) \hat{\theta}.\]
+<p>Relative to the point where the rod is pinned, what are the torques on the
+system?
+Obviously, the torque of \(\vec{F}_{PIN}\) is zero.
+The torque of the gravity force can be shown to be:
+<p>\[\vec{\tau} = - (M g\,b \sin\theta) \hat{z},\]
+<p>where \(b\) is the distance from the origin to the center of mass of the object
+(\(b\,=\,L\)/2 in this case).
+The torque \(\vec{\tau}\) is directed into the page, tending to rotate the system clockwise
+about the axis through the pin.
+<p><h3 id="pcap-2-b">2b. The Equation of Motion for the Uniform Rod</h3>
+
+The motion is about a principal axis (an axis perpendicular to the rod at
+the upper end), therefore \(\vec{L}\) and \(\vec{\omega}\) are parallel:
+\(\vec{L}=I \vec{\omega}\).
+It is always true that:
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau},\]
+<p>so that, with \(\vec{L} = I \vec{\omega}\) we have:
+<p>\[\vec{\tau} = I \frac{d \vec{\omega}}{dt} = I \vec{\alpha}.\]
+<p>This latter relation
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>is correct only if the direction of \(\vec{\tau}\) is parallel to a
+principal axis (as it is in this case).
+What is the direction of the vector \(\vec{\alpha}\)?
+Because the motion of the object is planar, \(\vec{\alpha}\) can only be
+perpendicular to that plane (recall that the tangential acceleration of a
+point undergoing circular motion is given by
+\(\vec{a}_T = \vec{\alpha}\times\vec{r})\).
+Therefore, in the case of this system:
+<p>\[\vec{\alpha} = \frac{d^2\theta}{dt^2}\,\hat{z}\]
+<p>(If \(d^2\theta/dt^2\) is positive, \(\vec{\alpha}\) is up, out of the page.)
+The second derivative, \(d^2\theta/dt^2\), is what we are seeking.
+If we know it as a function of time and integrate it twice, then we'll have a
+complete description of the angular motion of the object (if we know two
+initial conditions as well).
+The torque equation above, which we derived starting from Newton's Law,
+tells us how this effect, the acceleration \(d^2\theta/dt^2\), is related to the
+external torque through \(\vec{\tau} = I \vec{\alpha}\).
+For our rod, then:
+<p>\[-(M g\,b \sin\theta)\,\hat{z} = \left( I \frac{d^2\theta}{dt^2}\right)\,\hat{z}\]
+<p>\[\left(\frac{d^2\theta}{dt^2} + \frac{M g\,b \sin\theta}{I}\right)\,\hat{z} = 0,\]
+<p>a vector that equals zero.
+It will be zero, if its components (in this case only the one component) have
+zero magnitude:
+<p>\[\frac{d^2 \theta}{dt^2} + \frac{M g\,b \sin\theta}{I} = 0.\]
+<p>The quantity \(I\) is the moment of inertia of the object relative to the axis
+of rotation.
+<p><h3 id="pcap-2-c">2c. The Small Angular Displacement Approximation</h3>
+
+The solution to this second order differential equation gives \(\theta\), the
+angular displacement from the equilibrium position (\(\theta=0\)), as a function
+of time.
+This seemingly simple differential equation does not have a solution that is
+easily expressible in terms of known functions.  
+However, if the restriction is made that the displacement from equilibrium
+for all values of \(t\) is “small,” then this equation falls into a familiar
+form.
+What is “small”?
+By this is meant the condition under which you can to an accurate approximation
+replace \(\sin\theta\) by \(\theta\).
+From the power series definition of \(\sin\theta\),
+<p>\[\sin\theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!}+ \ldots\]
+<p>we see that this condition is satisfied if \(\theta^3\) is insignificant when
+compared with \(\theta\) (in radians).
+Reference to a table of trigonometric functions verifies that, to three
+significant figures, the values for \(\sin\theta\) and \(\theta\) do not begin to
+differ appreciably until the angle gets greater than 10°.
+With this approximation, valid for small \(\theta\), the differential equation
+becomes:
+<p>\[\frac{d^2\theta}{dt^2} + \frac{M g\,b}{I}\theta = 0.\]
+<p><h3 id="pcap-2-d">2d. Solution to the Small Angle Equation of Motion</h3>
+
+Equation (9) has well known and simple solutions, linear combinations of
+sines and cosines, for example:
+<p>\[\theta(t) = A \sin(\omega t) + B \cos(\omega t)\]
+<p>where: \(\omega = (M g\,b / I)^{1/2}\) and \(A\) and \(B\) are constants depending on
+initial values (at \(t\)=0) of \(\theta\) and \(d\theta/dt\).
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>That this is a solution may be verified by substituting it into the differential
+equation.
+<p><h3 id="pcap-2-e">2e. General Expression for the Period of Oscillation</h3>
+
+The periodicity associated with this motion can be ascertained by looking at
+the phase of the sine or cosine function.
+The phase should be \((2\pi/p)t\) or \((2\pi\nu)t\), where \(p\) and \(\nu\) are the
+period and frequency associated with the motion.
+Hence the period of this pendulum is:
+<p>\[P = 2\pi\sqrt{\frac{I}{Mg\,b}}.\]
+<p>Note that the period of this oscillatory motion depends upon the value of the
+acceleration of gravity at the location of the pendulum.
+A pendulum clock, calibrated at one location, will be in error if moved to
+another location where \(g\) is different.
+<p><h3 id="pcap-2-f">2f. Periods of the Uniform Rod and Simple Pendula</h3>
+
+<p>Specifically, for the uniform rod of length \(L\), free to rotate about an axis
+perpendicular to the rod at one end, the moment of inertia, using Steiner's
+(the Parallel Axis) Theorem, is given starting from:
+<p>\[I = I_c + M a^2, \]
+<p>where \(I_c\) is the moment of inertia with respect to an axis through the center
+of mass parallel to the pivot axis (\(M L^2\)/12 for a uniform rod)
+and \(a\) is the distance from the CM to the point about which the desired moment
+of inertial is sought.
+Hence,
+<p>\[I = \frac{ML^2}{3}.\]
+<p>With \(b = L\)/2, the period of oscillatory motion is
+<p>\[P = 2 \pi \sqrt{\frac{2L}{3g}}\]
+<p>For the simple pendulum, \(I = M L^2\), \(b = L\), so that
+<p>\[P = 2 \pi \sqrt{\frac{L}{g}}\]
+<p>as stated in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The conditions of static equilibrium are satisfied when the resultant force
+on the object is zero and the resultant torque of these forces relative to
+any point in space is zero.
+See “Static Equilibrium, Centers of Force, Gravity, and Mass” (MISN-0-6). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Such a coordinate system has to be used with caution, because relative to
+an observer who watches the rod move, these unit vectors are not fixed in
+direction. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">Recall Sect.&thinsp;1 of “Rotational Motion of a Rigid Body”
+(MISN-0-36). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See MISN-0-26 for an example. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problem&nbsp;1 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A pendulum consists of two point particles of mass 0.40&thinsp;\(M\) and
+0.60&thinsp;\(M\), respectively, attached to a rigid massless rod of length \(L\).
+The rod is pinned at one end, and is thereby constrained to move in a vertical
+plane in the gravity field of the earth.
+One mass, 0.40&thinsp;\(M\), is located one-fourth of the rod's length from the
+pinned end.
+The other mass, 0.6&thinsp;\(M\) is at the free end.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Locate the center of mass of the system. [C]</li>
+<li><span class="item-label">b.</span> Draw a free-body diagram showing all of the forces acting on the
+system (the rod). [B]</li>
+<li><span class="item-label">c.</span> Relative to the fixed end of the rod find the net torque on the
+system, and from this find the differential equation which describes the
+angular motion of the rod. [D]</li>
+<li><span class="item-label">d.</span> Find the moment of inertia of this system. [F]</li>
+<li><span class="item-label">e.</span> What is the period of oscillatory motion (for small oscillations)
+of this system? [A]</li>
+<li><span class="item-label">f.</span> If the fixed pivot point were midway between the two masses, what
+should be the period of small oscillations? [E]  What should happen to the
+period as the fixed point approaches the CM? [G]
+</li>
+</ol>
+
+<figure class="fig-centered"><img src="figures/m42gr02.svg" alt="" class="physnet-fig"></figure>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> 2&thinsp;\(\sqrt{50L/56g}\).</li>
+<li><span class="item-label">B.</span> See textual material.</li>
+<li><span class="item-label">C.</span> (7/10) \(L\) from fixed end.</li>
+<li><span class="item-label">D.</span> See textual material.</li>
+<li><span class="item-label">E.</span> 2\(\pi \sqrt{30L/16g}\).</li>
+<li><span class="item-label">F.</span> (5/8)\(M\,L^2\).</li>
+<li><span class="item-label">G.</span> It should get larger, eventually approaching infinity at the CM.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Without referring to a text or notes, derive the expression for the
+period of the simple pendulum for small oscillations.
+If you wish to follow a guide which emphasizes the important features that
+should be covered in the derivation, carry out the development in these steps:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> On a sketch of the pendulum showing the system inclined at an angle
+\(\theta\) with the vertical, show all of the forces acting on the point mass.</li>
+<li><span class="item-label">b.</span> Use the definition of torque to determine the torque on the mass
+relative to the point suspension.
+Express your result in terms of the set of unit vectors \(\hat{r}\),
+\(\hat{\theta}\), and \(\hat{z}\), where \(\hat{r}\) is the unit vector along the
+direction from the origin to the point mass and \(\hat{\theta}\) is perpendicular
+to this in the direction of increasing \(\theta\).</li>
+<li><span class="item-label">c.</span> Determine the angular acceleration of the pendulum at this angle
+\(\theta\).</li>
+<li><span class="item-label">d.</span> From the resulting equation, making a suitable approximation,
+identify the frequency of oscillatory motion.
+Explain under what conditions it is correct.
+</li>
+<li><span class="item-label">2.</span> A pendulum consists of two point particles of mass 0.40&thinsp;\(M\) and
+0.60&thinsp;\(M\), respectively, attached to a rigid massless rod of length \(L\).
+The rod is pinned at one end and is thereby constrained to move in a vertical
+plane in the gravity field of the earth.
+One mass, 0.40&thinsp;\(M\), is located one-fourth of the rod's length from the
+pinned end.
+The other mass, 0.6&thinsp;\(M\) is at the fre end.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Locate the center of mass of the system.</li>
+<li><span class="item-label">b.</span> Draw a free-body diagram showing all of the forces acting on the
+system (the rod).</li>
+<li><span class="item-label">c.</span> Relative to the fixed end of the rod find the net torque on the
+system, and from this find the differential equation which describes the
+angular motion of the rod.</li>
+<li><span class="item-label">d.</span> Find the moment of inertia of this system.</li>
+<li><span class="item-label">e.</span> What is the period of oscillatory motion (for small oscillations)
+of this system?</li>
+<li><span class="item-label">f.</span> If the fixed pivot point were midway between the two masses, what
+should be the period of small oscillations?
+What should happen to the period as the fixed point approaches the CM?
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;1.</li>
+</ol>
+
+<p></section>
+

@@ -1,0 +1,428 @@
+<header class="module-header">
+  <h1 class="module-title">Charge Layers and Capacitors <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: surface and volume charge densities <a href="../m147/" class="module-ref">MISN-0-147</a>.</li><li><strong>2.</strong> Compute the electrostatic potential difference between two
+    points, given the electric field along any path connecting those
+    two points <a href="../m116/" class="module-ref">MISN-0-116</a>.</li><li><strong>3.</strong> Use Gauss's law to find the electric field produced by a
+    given planar charge distribution <a href="../m133/" class="module-ref">MISN-0-133</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Use Gauss's law to give a microscopic derivation of the fact of
+    electric field discontinuity and potential continuity across a
+    charge surface.</li><li><strong>K2.</strong> Show graphically how the electric field and potential change
+    while traversing a thin charge layer and a charge surface.</li><li><strong>K3.</strong> Derive the electric field and potential functions for the region
+    between the charge surfaces in parallel plate capacitors.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given some of the properties of a parallel plate air capacitor,
+    calculate values for the other properties.
+    Possible properties are: potential difference, electric field,
+    plate area, distance between plates, plate charge and plate charge
+    density.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Electrostatic Capacitance” (MISN-0-135).</li><li><strong>2.</strong> “Electrostatic Field Energy” (MISN-0-137).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In order to understand the common electronic circuit element called a
+capacitor, a metallic device used to temporarily store charge, we must
+examine the way that charge is stored and the electric fields and electric
+potential it produces.  
+Fortunately, electrostatic charges introduced into a metal very quickly 
+migrate to form a thin layer very close to the metal's surface.  
+This charge layer is so thin that it can be safely approximated as a
+mathematical surface of zero thickness, resulting in a very simple
+description of the variation of the electric field and potential across it.  
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Field Across a Single Charge Layer</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aThe Thin Charge Layer
+In order to connect the macroscopic (usual) and microscopic properties of a
+thin layer of charge, we must relate the charge distribution descriptors for 
+those two cases.  
+The ordinary and greatly enlarged cross-sectional views of a charge layer
+are shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.  
+Since no detail or structure can be seen in the edge-on macroscopic view,
+the appropriate description is the charge per unit surface area, the surface 
+density \(\sigma\), as seen from Regions 1 and 2 of the figure.  
+Microscopically, however, we see a three-dimensional distribution of charge 
+and so we describe it by the volume charge density \(\rho\) in a layer of
+thickness \(t\).
+The two descriptions are related by \(\sigma = \rho t\) as can easily be
+derived by evaluating the amount of charge seen within a definite area as
+viewed in each case from Region 1.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m134gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Two views of the same thin electric charge
+layer of thickness \(t\).</figcaption></figure></div>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m134gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The electric field across a uniform
+volume charge density layer, assuming no other charges in the neighborhood.
+This is the same view as the “microscopic” one in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. The Microscopic Field Across the Layer</h3>
+
+The microscopic details of the electric field in the vicinity of the charge
+layer shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> can be easily written down after mentally
+constructing appropriate Gaussian surfaces and then applying Gauss's law.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Applying Gauss's law twice, maintaining the appropriate \(x\)-direction
+symmetry for the Gaussian surface each time, we obtain for each region of a
+layer centered on \(x = 0\):
+<p>\[\begin{aligned}E_1(x) & = - 2 \pi k_e \sigma\,, \\ E_3(x) & = 4 \pi k_e \rho x = 4 \pi k_e \sigma \left(\frac{x}{t}\right)\,, \\ E_2(x) & = 2 \pi k_e \sigma\,,\end{aligned}\]
+
+<p>and these are plotted in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The force on a small test charge in each of the regions can be checked
+mentally, using the \(E(x)\) line plotted in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, to be sure that the
+<a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> are reasonable (i.e., positive charges repel a positive
+charge).
+Note also that \(E(x)\) is continuous across the regional boundaries:
+<p>\[E_1\left(-\frac{t}{2}\right) =
+    E_3\left(-\frac{t}{2}\right) \text{ and } E_3\left(\frac{t}{2}\right) =
+    E_2\left(\frac{t}{2}\right).\]
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m134gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The apparent discontinuity in the
+electric field across a very thin charge layer.
+Substitute \(\beta \equiv 2 \pi k_e\).</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. \(E(x)\) Across a Charged Surface</h3>
+
+The electric field actually varies continuously across a very thin layer of
+charge, but it appears to be discontinuous if we approximate the layer by a
+mathematical surface.
+The example of microscopic continuity shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> can be taken out from
+under the microscope, so to speak, and then the thickness of the charged
+layer will be so small as to cause no discernible effect on the designated
+values of the electric field in the two outside regions (Regions 1 and 2 in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>): the resulting picture is shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, where one can see that
+the discontinuity across a charged surface is:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[\Delta E_\text{charge surface} = 4 \pi k_e \sigma\,.\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Potential Across a Charge Layer</h2>
+
+<p><h3 id="pcap-3-a">3a. Definition of V(x)</h3>
+
+Recall that the potential difference between two points is defined as the 
+work per unit charge necessary to carry a small positive test charge from
+one point to the other.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Since we have to work against a positive electric field, the potential 
+difference of two points along a one-dimensional field can be written (with
+a few steps left out):
+<p>\[\begin{aligned}\Delta V & = V(x_2) - V(x_1) = V_2 - V_1 \\ \Delta V & = - \int^{x_2}_{x_1} \vec{E} \cdot\,d\vec{x} =
+                           - \int^{x_2}_{x_1} E(x)\,dx .\end{aligned}\]
+
+<p><h3 id="pcap-3-b">3b. \(\Delta V\) Across a Charge Layer</h3>
+
+No matter how the electric field varies inside a charge layer, its
+discontinuity between the layer's surfaces is always given by
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, \(\Delta E = 4 \pi k_e \sigma\).
+We will now show that the electrostatic potential drop across a charged 
+surface is zero.
+To see this for the general case, we first construct an arbitrarily varying
+electric field, \(E(x)\), corresponding to some arbitrarily varying volume
+charge density,
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m134gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Electric field for an arbitrarily varying
+volume charge density in a layer of thickness \(t\).
+Substitute \(\beta \equiv 2 \pi k_e\).
+The net shaded area is the potential difference between the edges.</figcaption></figure>
+
+<p>as in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The potential difference across the layer is seen by <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> to be
+the integral of \(E(x)\) from one surface to the other.
+Since the integral of a function is just the net area under its graphical
+representation, the potential difference between the surfaces is just the
+net area under the \(E(x)\) curve in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+If we now say that the layer thickness \(t\) is very small, then the area will
+be very small and so will the potential difference.
+In fact, if we let the thickness go to zero in order to approximate the
+charge layer by a mathematical surface, the potential difference will
+obviously go to zero.
+<p><h3 id="pcap-3-c">3c. Two Other Ways of Seeing \(\Delta V \rightarrow 0\) as
+\(t \rightarrow 0\)</h3>
+
+It may seem strange that the work needed to carry a positive test charge 
+across the surface goes to zero as the thickness \(t\) goes to zero, since 
+the  volume charge density \(\rho\) increases as \(t \rightarrow 0\).  
+Notice, however, that \(\rho\) is related to the derivative of the electric
+field, not to the field itself.
+The actual values of the field within the surfaces do not change
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>as we let \(t \rightarrow 0\), so the force on our test charge at various
+internal points doesn't change.
+The force stays the same and the distance decreases so the work decreases.
+<p>
+Another way of seeing the zero potential drop result is to use the calculus
+definition of the average of a function to write
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[\Delta V = - \int_{x_1}^{x_2} E(x)\,dx = -[\bar{E}(x_1,x_2)] t .\]
+<p>where \(\bar{E}(x_1,x_2)\) is the average electric field in the interval
+\(x_1 \leq x \leq x_2\).
+As \(t \rightarrow 0\) the average field stays constant (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>), hence
+\(\Delta V \rightarrow 0\).
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m134gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The effect on \(E\) and \(V\) as a uniform
+volume charge density layer is collapsed to zero thickness.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-d">3d. \(V(x)\) and \(E(x)\): Uniform Charge Density Example</h3>
+
+Either by using the integral of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, or 
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m134gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Schematic representation of a
+capacitor's cross section.
+Surface area is \(A\), thickness is \(d\).</figcaption></figure>
+
+<p>by the differential slope relation and
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[\frac{dV(x)}{dx} = -E(x),\]
+<p>we can construct the \(V(x)\) corresponding to \(E(x)\) for the case of uniform
+volume charge density within the layer.
+This is shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>a, and its appearance when collapsed into a
+mathematical surface is shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>b.
+Note that we can easily check the qualitative relationships between \(E\) and
+\(V\) at various \(x\) values by inspection.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. \(E(x)\) and \(V(x)\) in Capacitors</h2>
+
+<p>A capacitor may be constructed from two parallel metallic plates separated
+by a layer of insulating material.
+The plates have equal but opposite charge, distributed on their surfaces,
+as shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+We find \(E(x)\) and \(V(x)\) between the plates simply by combining the
+individual fields from each of the surfaces.  
+The result is:
+<p>\[\begin{aligned}\vec{E} & = 4 \pi k_e \sigma \,\hat{x} && \quad \text{for } 0 \leq  x \leq  d \\         & = 0                           && \quad \text{for } \text{other } x\end{aligned}\]
+
+<p>and
+<p>\[\begin{aligned}V & = V_0 - 4 \pi k_e \sigma \,x && \quad \text{for } 0 \leq  x \leq  d \\   & = 0                          && \quad \text{for } \text{other }<span class="tex-unknown" title="unknown macro">\</span>;x\end{aligned}\]
+
+<p>where \(\sigma\) is the surface charge density on the positively charged plate.
+We can now integrate the electric field [as in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>] and write
+down the potential difference between the plates:
+<p>\[V = 4 \pi k_e \frac{Q d}{A}; \qquad
+    C \equiv \frac{Q}{V} = \frac{A}{4 \pi k_e d}\,,\]
+<p>where \(Q\) is the total charge stored on the positively charged plate,
+\(A\) is the area of each plate, and \(C\), defined for any system as \(Q/V\),
+is called the system's “capacitance.”
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>It is the system's ability to hold charge per unit potential difference, and
+it is the charge-storage capability used in designing electronic circuits.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">If the definite area is labeled \(S\), the amounts of charge within
+it for the two cases are \(\sigma S = \rho S t\). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Gauss's Law Applied to Cylindrical and Planar Charge
+Distributions” (MISN-0-133). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">To see that this equation holds for any charged surface,
+apply Gauss's law directly to the surface in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For further understanding of electrostatic potential and an
+analogy to the gravitational case, see “Electrostatic Potential Due to
+Discrete Charges” (MISN-0-116). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">If the charge distribution is uniform in the \(y\)- and
+\(z\)-directions, then its volume charge density is given by the slope of
+\(E(x)\): \(dE(x)/dx = 4 \pi k_e \rho(x)\). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">That is, the field at a fixed fractional value of the distance
+between the layer boundaries does not change.
+This is easily proved using Gauss's law. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">Recall the definition of the average of a function \(f(x)\) over
+the interval (\(x_1\),\(x_2\)):
+<p>\[\bar{f}(x_1,x_2) \equiv
+                     \int_{x_1}^{x_2} \frac{f(x)\,dx}{(x_2 - x_1)}.\]
+ <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">The following equation comes from factoring charge from both sides
+of the differential relation between potential energy and force.
+See “Potential Energy Curves, Motion, and Turning Points” (MISN-0-22). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See “Electrostatic Capacitance” (MISN-0-135) where values are
+calculated for typical capacitor geometries as well as for combinations of
+capacitors. <a href="#fnref-9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;6 also occurs in this module's <em>Model Exam</em>.
+<p>\[k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> For a parallel-plate capacitor with air between plates of surface
+area \(A\) and separation \(d\), carrying total charges of \(+Q\) and \(-Q\):
+<figure class="fig-centered"><img src="figures/m134gr07.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Use Gauss's law to find the electric field between the plates.
+           <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">b.</span> Find the potential difference between the plates. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">c.</span> Determine the capacitance.
+</li>
+<li><span class="item-label">2.</span> A parallel-plate air capacitor having area
+\(A = 3.0 \times 10^1 \unit{cm^{2}}\) and spacing \(d = 1.0\,\text{mm}\) is charged to a
+potential difference of \(5.00 \times 10^2\,\text{V}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate its capacitance \(C\).</li>
+<li><span class="item-label">b.</span> Find the magnitude of the charge on each plate.</li>
+<li><span class="item-label">c.</span> What is the value of the electric field between the plates?
+</li>
+<li><span class="item-label">3.</span> A parallel-plate capacitor having circular plates of radius
+10.0&thinsp;cm and 1.5&thinsp;mm spacing is charged to a potential difference of
+\(2.00 \times 10^2\,\text{V}\).
+It is then disconnected from the voltage source and the plates are pulled
+apart to twice the original separation.
+Calculate the value of the following quantities before and after the plates
+are pulled apart.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the charge on the plates</li>
+<li><span class="item-label">b.</span> the electric field between plates</li>
+<li><span class="item-label">c.</span> the potential difference between the plates</li>
+<li><span class="item-label">d.</span> the capacitance
+</li>
+<li><span class="item-label">4.</span> Use Gauss's law to determine the discontinuity \(\Delta E\) in an
+           electric field across
+           a charged surface with surface charge density \(\sigma =
+           5.0 \times 10^{-6}\unit{C/m^{2}}\)? <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">5.</span> The electric field varies inside a charge layer as shown below:
+<figure class="fig-centered"><img src="figures/m134gr08.svg" alt="" class="physnet-fig"></figure>
+
+Show that \(\Delta V\) is zero in this case by:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> calculating the net area under the \(E(x)\) curve by geometrical
+           means.</li>
+<li><span class="item-label">b.</span> calculating the integral directly.</li>
+<li><span class="item-label">c.</span> finding the integral using the average value of the electric
+           field.
+</li>
+<li><span class="item-label">6.</span> It has been experimentally shown that between the earth's surface
+and the region 50&thinsp;km above the surface there is a potential difference of
+about \(3 \times 10^5\)&thinsp;V.
+Calculate the surface charge density on the surface of the earth which is 
+implied by these numbers.
+Note: Treat the “earth's surface to 50&thinsp;km up” region as a parallel plate
+capacitor.
+[Data from “The Earth and Its Atmosphere as a Leaky...Capacitor,” Martin 
+Uman,  American Journal of Physics - Vol.&thinsp; 42, p.&thinsp;1033 (1974).]</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{E} = 4 \pi k_e \frac{Q}{A}\,\hat{x}\)</li>
+<li><span class="item-label">b.</span> \(V = 4 \pi k_e \frac{Q d}{A}\)</li>
+<li><span class="item-label">c.</span> \(C = \frac{A}{4 \pi k_e d}\)
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(C = 2.7 \times 10^{-11}\)&thinsp;C/V <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">b.</span> \(Q = 1.3 \times 10^{-8}\)&thinsp;C</li>
+<li><span class="item-label">c.</span> \(E = 5.0 \times 10^5\)&thinsp;V/m
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(Q = 3.7 \times 10^{-8}\)&thinsp;C before and after <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">b.</span> \(E = 1.3 \times 10^5\)&thinsp;N/C ,before and after</li>
+<li><span class="item-label">c.</span> \(V = 2.0 \times 10^2\)&thinsp;V before; \(V = 4.0 \times 10^2\)&thinsp;V after</li>
+<li><span class="item-label">d.</span> \(C = 1.9 \times 10^{-10}\)&thinsp;C/V before,
+           \(C = 9.3 \times 10^{-11}\)&thinsp;C/V after
+</li>
+<li><span class="item-label">4.</span> \(\Delta E = 5.6 \times 10^5\)&thinsp;N/C</li>
+<li><span class="item-label">6.</span> \(5 \times 10^{-11}\unit{C/m^{2}}\)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\((E_+)A + (E_+)A = 4 \pi k_e (+Q)\)
+<p> \((\vec{E}_+) = 2 \pi k_e \frac{Q}{A}\,\hat{x}\) 
+<p> \((\vec{E}_-) = 2 \pi k_e \frac{-Q}{A}\,(-\hat{x})\)
+<p> \(\vec{E} = (\vec{E}_+) + (\vec{E}_-) = 4 \pi k_e \frac{Q}{A}\hat{x}\)
+ m134gr09
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\[\begin{aligned}C & = \frac{(30)\left(10^{-4}\unit{m^{2}}\right)}
+                  {4 \pi (8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+                   (0.001\,\text{m})} \\  & = 2.7 \times 10^{-11}\,\text{C/V}\end{aligned}\]
+
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Reread the problem and see whether or not the battery is still connected
+ to the plates while the “pulling apart” is going on.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">To use the data given, you must know how to get total charge from
+ the area of a surface and the “surface charge density” on that
+ surface [see Input Skill (1) in this module's <em>ID Sheet</em>].
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">The integrand, the electric field, is constant, so the integral is
+ trivial.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> It has been experimentally shown that between the earth's surface
+and the region 50&thinsp;km above the surface there is a potential difference of
+about \(3 \times 10^5\)&thinsp;V.
+Calculate the surface charge density on the surface of the earth which is 
+implied by these numbers.
+Note: Treat the “earth's surface to 50&thinsp;km up” region as a parallel plate
+capacitor.
+[Data from “The Earth and Its Atmosphere as a Leaky...Capacitor,” Martin 
+Uman,  American Journal of Physics - Vol.&thinsp; 42, p.&thinsp;1033 (1974).]</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;6, this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

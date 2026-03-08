@@ -1,0 +1,530 @@
+<header class="module-header">
+  <h1 class="module-title">Force on a Current in a Magnetic Field <span class="module-author">(Orilla McHarris)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: current <a href="../m117/" class="module-ref">MISN-0-117</a>; magnetic field, magnetic force
+                <a href="../m122/" class="module-ref">MISN-0-122</a>.</li><li><strong>2.</strong> Calculate the torque on a rod with respect to a parallel axis,
+                given a constant force perpendicular to the rod <a href="../m5/" class="module-ref">MISN-0-5</a>.</li><li><strong>3.</strong> Visualize the rotational motion produced by a given torque
+                <a href="../m33/" class="module-ref">MISN-0-33</a>.</li><li><strong>4.</strong> Calculate the magnetic force on a moving charged particle
+                <a href="../m122/" class="module-ref">MISN-0-122</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive the expression \(Q\vec{v} = I \vec{\ell}\) relating a set
+    of charges and their common velocity to their equivalent value as a current.</li><li><strong>K2.</strong> Starting from the Lorentz force, derive the expression for the
+    force on a length current-carrying wire in a uniform magnetic field.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the force on a straight section of a current-carrying
+    wire in a given uniform magnetic field.</li><li><strong>S2.</strong> Calculate the mechanical torque on a rectangular current loop in
+    a given uniform magnetic field.</li><li><strong>S3.</strong> Calculate the torque on an n-turn rectangular coil in a given
+    uniform magnetic field.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Magnetic Field of a Moving Charge: Magnetic Interactions”
+    (MISN-0-124).</li><li><strong>2.</strong> “The Magnetic Field of a Current: The Ampere-Laplace Equation”
+    (MISN-0-125).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. A Straight Current</h2>
+
+<p><h3 id="pcap-1-a">1a. Current Consists of Moving Charges</h3>
+
+An electric current consists of moving charges.
+Thus, if a current is placed in a magnetic field, it will be subject to a 
+magnetic force just as single moving charges are.
+The magnetic force on one charge q moving with velocity \(\vec{v}\) in a
+magnetic field \(\vec{B}\) is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\vec{F}_B = q \vec{v} \times \vec{B} .\]
+<p>The magnetic force on a current is just the sum of such forces on the
+current's component charges.
+Assuming these charges all travel with the same velocity:
+<p>\[\begin{aligned}\vec{F}_\text{Total} & = & q_1 \vec{v} \times \vec{B} +
+                      q_2 \vec{v} \times \vec{B} +
+                      \ldots +
+                      q_n \vec{v} \times \vec{B} \\
+                & = & (q_1 + q_2 + \ldots + q_n) \vec{v} \times \vec{B} ,\\
+                & = & Q \vec{v} \times \vec{B} ,\end{aligned}\]
+
+<p>where \(Q\) is the total charge moving with velocity \(\vec{v}\).
+<p><h3 id="pcap-1-b">1b. Relationship Among \(Q\), \(\vec{v}\), And \(I\)</h3>
+
+In order to state the magnetic force in terms of the measured current, \(I\),
+we must find the relationship of \(Q\) and \(\vec{v}\) to \(I\).
+The amount of charge \(dQ\) in a small length of conducting wire \(d\ell\) is
+given by the overall charge per length, \(Q/\ell\) times the length \(d\ell\):
+<p>\[dQ = \frac{Q}{\ell}\,d\ell\]
+<p>If we hold a current measuring instrument at one point and watch
+a length \(d\ell\) of charge go by, for all of \(d\ell\) (and therefore, all of
+\(dQ\)) to pass the point takes a time
+<p>\[dt = d\ell / v\]
+<p>where \(v\) is the speed of the charges making up the current.
+Now the definition of current at a point is the amount of charge per unit 
+time passing the point:
+<p>\[I = \frac{dQ}{dt} = \frac{(Q/\ell)d\ell}{d\ell/v} =
+            \frac{Q v}{\ell} .\]
+<p>Remember, however, that the velocity of positive charges and the current are in
+the same direction, so actually:
+<p>\[\vec{I} \ell = Q \vec{v} .\]
+<p>For convenience, we will transfer the designation of the current's direction 
+to the length of the straight section of current-carrying wire:
+<p>\[I \vec{\ell} = Q\,\vec{v} .\]
+<p>Remember that the direction of \(\vec{\ell}\) is always to be taken in the
+direction of the current.
+<p><h3 id="pcap--">. </h3>
+[]1cForce on a Current
+Now it is easy to state the magnetic force in terms of current.
+For a set of charges all moving with the same speed in the same direction,
+ 
+\[\vec{F}_B = Q\,\vec{v} \times \vec{B} ,\]
+<p>or:
+<p>\[\vec{F}_B = I\,\vec{\ell} \times \vec{B} .\]
+<p>Notice that, in a complete electrical circuit, \(\vec{\ell}\) will have to have
+several different directions, so different sides of a current loop will in
+general have different forces on them.
+The total force on a current loop is then the sum of the force on its
+separate sides (and if the loop is made up of curved circle, for
+example, the total force would be the integral of the small elements of
+force \(d\vec{F}\) acting on each small length \(d\vec{\ell}\)).
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. A Rectangular Current</h2>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m123gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A rectangular current loop in a magnetic
+field parallel to the loop's width.</figcaption></figure>
+
+<p><h3 id="pcap-2-a">2a. Plane of Loop Parallel to \(\vec{B}\)</h3>
+
+Let us calculate what will happen to a rectangular loop of current in a 
+uniform magnetic field \(\vec{B}\).
+First let us take the simple case where the loop is in the \(x\)-\(y\) plane and
+\(\vec{B}\) is in the \(x\)-direction.
+We must apply <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> to each of the four sides of the loop
+separately (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>):
+<p><ol>
+<li><span class="item-label">a.</span> Side \(a\): \(\vec{F}_a = 0\) <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">b.</span> Side \(b\): \(\vec{F}_b = -I L B \hat{z}\); \(\vec{F}\) tends to push
+           side \(b\) <em>into</em> the page <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">c.</span> Side \(c\): \(\vec{F}_c = 0\)</li>
+<li><span class="item-label">d.</span> Side \(d\): \(\vec{F}_d = I L B \hat{z}\); \(\vec{F}\) tends to push
+           side \(d\) <em>out of</em> the page.</li>
+</ol>
+
+Thus the net result of the four forces is to produce a torque on the 
+current loop about an axis through its center, parallel to the \(y\)-axis.
+We can calculate the torque about this axis:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p>\[\begin{aligned}\vec{\tau} & = &
+ \sum_i \vec{\tau}_i = \sum_i \vec{r}_i \times \vec{F}_i =
+   \vec{r}_a \times \vec{F}_a + \vec{r}_b \times \vec{F}_b + \ldots \\
+ & = & [ 0 + \frac{W}{2} I L B + 0 + \frac{W}{2} I L B ] \hat{y} \nonumber \\
+ & = & W L I B \hat{y} = (A\,I\,B)\,\hat{y} \nonumber\end{aligned}\]
+
+<p>where \(A = W L\) is the area enclosed by the loop.
+<p>Suppose the loop starts rotating in response to the torque, resulting in
+\(\vec{B}\) no longer being in the plane of the loop.
+Then the equations derived above will no longer be valid because they
+assumed that \(\vec{B}\) is in the loop plane.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m123gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. (a) Oblique view of a rectangular current
+loop whose normal is at an angle to \(\vec{B}\); and (b) top view of the
+current loop.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Loop at an Angle to \(\vec{B}\)</h3>
+
+Since a torque on a loop will cause it to rotate, we now treat the case
+where such a rotation has produced an angle \(\theta\) between \(\vec{B}\)
+and the normal to the plane of the loop (when \(\vec{B}\) is in the loop
+plane, \(\theta = 90^\circ\)).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Figure&nbsp;2a shows our rectangular current loop with its normal rotated away
+from \(\vec{B}\) by some angle \(\theta\).
+Figure&nbsp;2b shows an overhead view of the same loop.
+Again we consider the force on each side separately:
+<p><ol>
+<li><span class="item-label">a.</span> Side \(a\): \(\vec{F}_a = I W B \sin(90^\circ + \theta)\,\hat{y} =
+            I W B \cos\theta \hat{y}\).
+            The direction of \(\vec{F}_a\) is such as to push side \(a\) and the
+            entire current loop upward, in the positive \(y\)-direction.</li>
+<li><span class="item-label">b.</span> Side \(b\): \(\vec{F}_b = I\,L\,B(-\hat{z}\)).
+            The direction of \(\vec{F}_b\) is such to push side \(b\) backward,
+            in the negative \(z\)-direction.</li>
+<li><span class="item-label">c.</span> Side \(c\): \(\vec{F}_c = I\,W\,B\,\sin(90^\circ -
+            \theta)(-\hat{y}) =
+            I\,W\,B\,\cos\theta(-\hat{y})\).
+            The direction of \(\vec{F}_c\) is such as to push \(c\) and the
+            entire current loop downward, in the negative \(y\)-direction.</li>
+<li><span class="item-label">d.</span> Side \(d\): \(\vec{F}_d = I\,L\,B\,\hat{z}\).
+            The direction of \(\vec{F}_d\) is such as to push \(d\) forward,
+            in the positive \(z\)-direction.</li>
+</ol>
+
+<p>Now notice that although the forces on sides \(a\) and \(c\) are no longer zero,
+they have equal and opposite effects and are radial; hence they have no
+effect other than a tendency to deform the loop if it is not rigid.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>The forces on sides \(b\) and \(d\) still operate in such a way as to produce
+torques on the loop:
+<p>\[\vec{\tau}_b = \frac{W}{2} I \ell B \sin\theta\,\hat{y}\,,\]
+<p>\[\vec{\tau}_d = \frac{W}{2} I \ell B \sin\theta\,\hat{y}\,,\]
+<p>and thus the total torque is:
+<p>\[\vec{\tau} = W\,L\,I\,B\,\sin\theta\,\hat{y} =
+                 A\,I\,B\,\sin\theta\,\hat{y}\,.\]
+<p>It is apparent that the torque on the current loop is a maximum for
+\(\theta = 90^\circ\) (i.e. for \(\vec{B}\) in the plane of the loop as in
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>) and zero for \(\theta = 0^\circ\).
+Thus the tendency is for a current loop in a magnetic field to rotate until
+its normal is parallel to \(\vec{B}\), and for it to decelerate as it shoots
+past that alignment.
+We could convert this oscillating loop into a rotating one and use it as a
+means of turning electrical energy into mechanical energy---that is, as a DC 
+motor---if we could reverse the current in the loop just as its normal
+becomes parallel to \(\vec{B}\).
+<p><h3 id="pcap-2-c">2c. Generalization to a Current-Carrying Coil</h3>
+
+It should be noted that it is a simple matter to generalize from the force
+or torque on a single turn loop of current to the force or torque on a many
+turn coil.
+In general, coils are wound with the area of each turn the same as all the
+others and of course the same current would flow through them all.  
+Thus the force or torque on an n-turn coil is generally just \(n\) times the
+force or torque on a one-turn coil.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>Kirby Morgan constructed the Problem Supplement.
+Mark Sullivan gave valuable feedback on an earlier version.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Geometrical Definition of Vector Product</h2>
+
+<p>The vector product of two arbitrary vectors \(\vec{A}\) and \(\vec{B}\) is
+defined as the vector quantity whose magnitude is given by the product of
+the magnitudes of the two vectors times the sine of the angle between the
+vectors when they are placed “tail-to-tail,” and whose direction is
+perpendicular to the plane formed by \(\vec{A}\) and \(\vec{B}\).
+The vector product (also referred to as the “cross product”) is denoted 
+by \(\vec{A} \times \vec{B}\).
+The magnitude of the product may be written as:
+<p>\[|\vec{A} \times \vec{B}| = A B \sin\theta .\]
+<p>There are, however, two directions that are perpendicular to the plane
+formed by \(\vec{A}\) and \(\vec{B}\).
+The correct direction may be chosen by applying the “right-hand rule”:
+“Rotate vector \(\vec{A}\) into vector \(\vec{B}\) through the smaller
+angle between their directions when they are placed tail-to-tail.
+Follow this rotation with the curled fingers of your right hand, and the
+direction of your extended thumb identifies the direction of the vector
+product.”
+This rule is sufficient to distinguish between the two possible choices for
+the direction of a vector product.
+Notice that the order of multiplication in vector products is very important.
+The product \(B \times \vec{A}\) has the same magnitude as
+\(\vec{A} \times \vec{B}\), but the directions of the two products are
+opposite.
+In general:
+<p>\[\vec{A} \times \vec{B} = -\vec{B} \times \vec{A} .\]
+<p>We say that vector products do not “commute,” or that the vector product
+is a “noncommutative” operation.
+<p>If two vectors are parallel, the angle between their directions is zero, so
+by the definition of the magnitude of vector products their cross product is
+zero.
+Similarly, if two vectors are perpendicular, the angle between their
+directions is 90°.
+Since \({\sin}90^\circ = 1\), the magnitude of the vector product of the
+two is just the product of their magnitudes, and the direction of the vector
+product is determined by the right-hand rule.
+By applying these observations to the vector product of the cartesian unit
+vectors \(\hat{x}\), \(\hat{y}\) and \(\hat{z}\), we may derive the following
+useful relations:
+<p>\[\hat{x} \times \hat{x} = \hat{y} \times \hat{y} =
+       \hat{z} \times \hat{z} = 0\]
+<p>\[\hat{x} \times \hat{y} = - \hat{y} \times \hat{x} = \hat{z}\]
+<p>\[\hat{y} \times \hat{z} = - \hat{z} \times \hat{y} = \hat{x}\]
+<p>\[\hat{z} \times \hat{x} = - \hat{x} \times \hat{z} = \hat{y} .\]
+<p>These relations are used in the algebraic definition of vector products.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Algebraic Definition of Vector Product</h2>
+ 
+<p>If we express vectors \(\vec{A}\) and \(\vec{B}\) in their cartesian component
+form, the vector product of \(\vec{A}\) and \(\vec{B}\) may be written:
+<p>\[\vec{A} \times \vec{B} =
+          (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \times
+          (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}).\]
+<p>If this expression is expanded algebraically as we would the product
+\((x + 3) \cdot (2x - 5)\), except that the cross product is used
+instead of scalar multiplication, then this vector product may be expressed
+as a combination of the cartesian components of \(\vec{A}\) and \(\vec{B}\) and
+cross products of the cartesian unit vectors.
+Using the relations between the cartesian unit vectors developed in Appendix
+A and denoting the vector product as a third vector \(\vec{C}\), we may write:
+<p>\[\vec{C} = \vec{A} \times \vec{B} =
+ (A_y B_z - A_z B_y) \hat{x} + (A_z B_x - A_x B_z) \hat{y} +
+ (A_x B_y - A_y B_x) \hat{z}\]
+<p>or:
+<p>\[C_x = A_y B_z - A_z B_y,\]
+<p>\[C_y = A_z B_x - A_x B_z,\]
+<p>\[C_z = A_x B_y - A_y B_x.\]
+<p>The mnemonic for remembering the order of the subscripts on these components
+is to note that, starting from left to right, the first three subscripts 
+in each of the three equations for the components of \(\vec{C}\) are always
+cyclic permutations of \(xyz\) (\(xyz\), \(yzx\), \(zxy\)).
+Another way to remember the order of combination of the unit vectors and the
+components of \(\vec{A}\) and \(\vec{B}\) is to use this determinant:
+<p><div class="centered">\(\vec{C} = \vec{A} \times \vec{B} =
+
+\left|\begin{array}{ccc}\hat{x} & \hat{y} & \hat{z} \\
+                           A_x   &   A_y    &  A_z     \\
+                           B_x   &   B_y    &  B_z \end{array}\right|\)
+</div>
+
+<p>Expansion of this determinant leads to the same expression for \(\vec{C}\)
+derived earlier.
+<p><span class="tryit">Try it:</span>  Show that the vector product of
+\(\vec{A} = 5 \hat{x} - 2 \hat{y}\)
+and
+\(\vec{B} = \hat{x} + \hat{y} + 3 \hat{z}\)
+has these components:
+<p>\[C_x = - 6,\; C_y = - 15,\; C_z = 7.\]
+<p></section>
+
+<p><section id="sect-C" class="module-section section-text"><h2 id="sect-C">C. Direction of the Vector Product</h2>
+
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m123gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Two rules for finding the direction of
+                                   \(\vec{C} = \vec{A} \times \vec{B}\) by:
+                                   (a) the “right hand” rule;
+                                   (b) the “screw” rule.</figcaption></figure></div>
+
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Force on a Charged Particle in a Magnetic Field”
+(MISN-0-122). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Force and Torque” (MISN-0-5). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The “normal” to the plane of the loop is a unit vector
+perpendicular to the plane. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">(1) Adding equal but opposite forces yields zero net force; and
+(2) any <em>radial</em> force produces zero torque. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;6 and 7 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Calculate the force on each of the five current-carrying wire
+segments shown below, if the field is \(\vec{B} = 1.10\,\text{T}\,\hat{x}\),
+\(I = 3.0\,\text{A}\), and \(d = 0.15\,\text{m}\). Consider each wire individually.
+<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<figure class="fig-centered"><img src="figures/m123gr04.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> A section of a current-carrying wire is fixed so that it can
+slide up and down on two vertical metal guides as shown below.
+What magnetic field (magnitude and direction) is needed to prevent the
+sliding section from dropping and breaking the connection?
+The section is \(0.30\,\text{m}\) long, weighs \(5\,\text{N}\), and has a current
+of \(5.0\,\text{A}\) passing through it. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<figure class="fig-centered"><img src="figures/m123gr05.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">3.</span> A rectangular current loop, \(5.0\,\text{cm}\) by \(8.0\,\text{cm}\), is fixed on one
+side so that it rotates about the \(z\)-axis as shown below.
+If it carries a current of \(10\,\text{A}\) and it is in a uniform magnetic field
+of \(\vec{B} = 0.50\,\text{T}\,\hat{x}\), calculate the torque about the
+\(z\)-axis acting on the loop when \(\theta = 60^\circ\). <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<figure class="fig-centered"><img src="figures/m123gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">4.</span> A rectangular current loop, \(4.0\,\text{cm}\) by \(8.0\,\text{cm}\) and
+carrying a current of \(0.1\,\text{A}\), is suspended at a single point as shown.
+It is in a uniform horizontal magnetic field of magnitude \(0.75\,\text{T}\).
+Find the magnitude of the torque acting on the loop when the normal to the
+plane of the loop makes an angle of 30° with respect to the
+magnetic field.m123gr07</li>
+<li><span class="item-label">5.</span> Calculate the magnitude of the maximum torque on a coil
+\(3.0\,\text{cm}\) by \(5.0\,\text{cm}\), composed of 500 turns, when it carries a
+current of \(1.0 \times 10^{-3}\,\text{A}\) in a uniform magnetic field of
+magnitude \(0.050\,\text{T}\).
+<a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">6.</span> A 500-turn square coil (\(2\,\text{cm}\) on a side) in
+the \(x\)-\(z\) plane is in a magnetic field of magnitude \(B = 0.16\,\text{T}\) and
+direction \(\hat{x}\).
+A current is passed through the coil, and it is observed that an external 
+torque of \(-1.6 \times 10^{-3}\,\text{N}\,\text{m}\,\hat{z}\) is required to
+hold the coil in place.
+What are the magnitude and direction of I?m123gr08</li>
+<li><span class="item-label">7.</span> A rectangular current loop is in a magnetic field
+of magnitude \(B = 0.5\,\text{T}\) and direction \(\hat{x}\).
+The plane of the loop makes a 60° angle with the direction of the
+magnetic field.
+The dimensions of the loop and direction of current are as shown
+in the figure, and \(I = 20\,\text{A}\).
+Calculate the forces on each of the four sides.
+Then calculate the torque, on the entire loop, about the \(y\)-axis.m123gr09</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(\vec{F}_1 = 0.495\,\text{N}\,\hat{y}\); \(\vec{F}_2 = 0\);
+           \(\vec{F}_3 = 0.495\,\text{N}\,\hat{y} - 0.495\,\text{N}\,\hat{z} =
+                        0.495\,\text{N}\,(\hat{y} - \hat{z})\);
+           \(\vec{F}_4 = - 0.495\,\text{N}\,\hat{z}\);
+           \(\vec{F}_5 = 0.495\,\text{N}\,\hat{y} - 0.495\,\text{N}\,\hat{z} =
+                        0.495\,\text{N}\,(\hat{y} - \hat{z})\).</li>
+<li><span class="item-label">2.</span> Magnetic field must have a horizontal component of \(3.3\,\text{T}\)
+into the page. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">3.</span> \(\vec{\tau} = - 0.010\,\text{N}\,\text{m}\,\hat{z}\)</li>
+<li><span class="item-label">4.</span> \(\tau = 1.2 \times 10^{-4}\,\text{N}\,\text{m}\)</li>
+<li><span class="item-label">5.</span> \(\tau = 3.75 \times 10^{-5}\,\text{N}\,\text{m}\)</li>
+<li><span class="item-label">6.</span> \(I = 0.05\,\text{A}\).
+           Observed from above, \(I\) flows clockwise around the coil.</li>
+<li><span class="item-label">7.</span> Top:     \(\vec{F} = - 1.4\,\text{N}\,\hat{y}\)</li>
+<li>Front:   \(\vec{F} = - 0.8\,\text{N}\,\hat{z}\)</li>
+<li>Bottom:  \(\vec{F} = 1.4\,\text{N}\,\hat{y}\)</li>
+<li>Back:    \(\vec{F} = 0.8\,\text{N}\,\hat{z}\)</li>
+<li>\(\vec{t} =
+                               6.4 \times 10^{-2}\,\text{N}\,\text{m}\,\hat{y}\)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">1. Recall that we always use a right-handed coordinate system, i.e.
+ \(\hat{x} \times \hat{y} = \hat{z}\), so the positive \(y\)-direction is
+ <em>into the page</em> (away from you).
+ Thus the cube pictured in Problem&nbsp;1 is in the quadrant of 3-dimensional
+ space where all coordinates are positive.  Do not be put off by the
+ orientation of the axes in the figure: axes can be shown in any orientation
+ as long as they show a right-handed coordinate system.
+ 
+ 2. To begin the problem, do as always: Decide on the relevant equation to
+    use, then write down each vector quantity in that equation in terms of
+    unit vectors and given quantities, using symbols to represent the
+    given quantities.  One way to finish the problem is to then solve each
+    component equation separately.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The sliding section of current-carrying wire needs a magnetic force in the 
+ \(+ y\)-direction to cancel the weight of the wire.
+ The direction of the current (and thus \(\vec{\ell}\)) is in the
+ \(+ x\)-direction.
+ Since \(\vec{F}_B = I \vec{\ell} \times \vec{B}\) and \(\vec{F}_B\) must be
+ mutually perpendicular to \(\vec{\ell}\) and \(\vec{B}\), the only possible
+ choice for \(\vec{B}\) is in the positive or negative \(z\)-direction. 
+ Take either choice and apply the right-hand rule to determine if it gives
+ the correct direction for \(\vec{F}_B\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The current in side \(a\) goes left so \(\ell_a\) is in the \(-\hat{x}\)
+ direction.
+ The magnetic field \(\vec{B}\) goes right so \(\hat{B}\) is in the \(+\hat{x}\)
+ direction.
+ The angle between the two is 180° so their vector product is zero
+ (see this module's <em>appendices</em>):
+ 
+ \[(-\hat{x}) \times (+\hat{x}) = 0\,.\]
+ 
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">The current in side \(b\) goes up so \(\ell_b\) is in the \(+\hat{y}\)
+ direction.
+ The magnetic field \(\vec{B}\) goes right so \(\hat{B}\) is in the \(+\hat{x}\)
+ direction.
+ The angle between the two is 90° so their vector product is
+ (see this module's <em>appendices</em>):
+ 
+ \[\vec{F}_B = I L B (\hat{y} \times \hat{x}) = I L B (-\hat{z})\,.\]
+ 
+ The direction \(\hat{z}\) is given by (see this module's <em>appendices</em>):
+ \(\hat{x} \times \hat{y} = \hat{z}\), so the direction \(+\hat{z}\) is
+ <em>out of</em> the page and consequently  \(-\hat{z}\) is <em>into</em> the page.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">First do the example in Sect.&thinsp;2a, <em>in excruciating detail</em>.
+ When you understand every nuance of that example, do the example in
+ Sect.&thinsp;2b in similar detail.
+ Then you should be able to solve these problems on your own.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Recall that \(\vec{r}_b\) is the vector from the rotation axis to the
+ point of application of the force.
+ Now notice that the force on side \(b\) is in the opposite direction to the
+ force on side \(d\) (remember?).
+ Then the axis about which the loop rotates cuts down through the
+ <em>center</em> of the loop, bisecting sides \(a\) and \(c\) [see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>].
+ Then the vector from that central vertical axis out to side \(b\) is:
+ \(\vec{r}_b = (W/2) \hat{x}\) [see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>].
+ We already found that \(\vec{F}_b = I L B (-\hat{z})\), so:
+ 
+ \[\begin{aligned}\vec{\tau}_b = \vec{r}_b \times \vec{F}_b & = (W/2) (I L B) \hat{x} \times (-\hat{z}) \\                                           & = - (W/2) (I L B) \hat{x} \times \hat{z} \\                                           & = + (W/2) (I L B) \hat{y}\end{aligned}\]
+
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">The word “500 turns” indicates that the continuous insulated wire
+was coiled around and around 500 times and then the whole set of 500
+turns was glued together, keeping roughly the same shape as a single turn.
+The result is that 500 times as much current passes any one point on the
+loop as would pass that point if there was only one turn of wire.
+
+<p>If you are having trouble finding the angle, look at the word
+<em>maximum</em>.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m123gr08.svg" alt="" class="physnet-fig"></figure>
+
+<p>A 500-turn square coil (\(2\,\text{cm}\) on a side) in
+the \(x\)-\(z\) plane is in a magnetic field of magnitude \(B = 0.16\,\text{T}\) and
+direction \(\hat{x}\).
+A current is passed through the coil, and it is observed that an external 
+torque of \(-1.6 \times 10^{-3}\,\text{N}\,\text{m}\,\hat{z}\) is required to
+hold the coil in place.
+What are the magnitude and direction of I?</li>
+<li><span class="item-label">3.</span> <figure class="fig-centered"><img src="figures/m123gr09.svg" alt="" class="physnet-fig"></figure>
+
+<p>A rectangular current loop is in a magnetic field
+of magnitude \(B = 0.5\,\text{T}\) and direction \(\hat{x}\).
+The plane of the loop makes a 60° angle with the direction of the
+magnetic field.
+The dimensions of the loop and direction of current are as shown
+in the figure, and \(I = 20\,\text{A}\).
+Calculate the forces on each of the four sides.
+Then calculate the torque, on the entire loop, about the \(y\)-axis.</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;6 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;7 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

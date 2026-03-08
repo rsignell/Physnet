@@ -1,0 +1,346 @@
+<header class="module-header">
+  <h1 class="module-title">Length Contraction and Time Dilation <span class="module-author">(P.Signell, J.Borysowicz, and M.Brandl, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: frame of reference <a href="../m11/" class="module-ref">MISN-0-11</a>, Lorentz transformation
+    <a href="../m12/" class="module-ref">MISN-0-12</a>.</li><li><strong>2.</strong> Transform single-event time and position measurements using
+    the Lorentz transformation <a href="../m12/" class="module-ref">MISN-0-12</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: laboratory frame, rest frame, length contraction,
+    time dilation, twin paradox.</li><li><strong>K2.</strong> Given the Lorentz transformation, derive the relativistic length
+    contraction and time dilation factors.</li><li><strong>K3.</strong> Show that the Lorentz transformation is independent of which
+    frame of reference is considered to be moving and explain how
+    this leads to the twin paradox.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given length and time intervals measured in one frame of reference,
+    find the corresponding length and time intervals measured
+    in a different frame of reference.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p>The measured length of a moving object is always found to be shortened and
+the rate of a moving clock is found to be decreased.
+These effects are derived from the Lorentz transformation and are applied
+to physical systems.
+The symmetry of the Lorentz transformation is used to show the reasoning
+behind the simple form of the “twin paradox.”
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Length Contraction &amp; Time Dilation</h2>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m13gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Defining an object's “length in the
+direction of travel.”</figcaption></figure>
+
+<p><h3 id="pcap-2-a">2a. The Length-Measurement Problem</h3>
+
+The measurement of the length of an object which is
+traveling past you at high speed is not trivial.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>You should put a stationary meter stick ahead of the object, parallel to its
+future path of travel.
+Then, when the object is alongside the meter stick, you must note the
+positions of the two ends simultaneously (just think of what would result
+otherwise).
+Subtracting the two end-position readings would give you the length
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+<p><h3 id="pcap-2-b">2b. One Event in Two Frames</h3>
+
+If an observer in one reference frame, \(A\), and an observer in another
+reference frame, \(B\), each measures the position and time of an event \(O\),
+the position and time measurements in the two frames are related by the
+Lorentz transformation:
+<p>\[x_{OB}(t_{OB}) = k[x_{OA}(t_{OA}) - v_{BA}\,t_{OA}]\]
+<p>\[t_{OB} = k[t_{OA} - v_{BA}\,x_{OA}(t_{OA})/c^2]\]
+<p>where
+<p>\[k = [1 - v_{BA}^2/c^2]^{-1/2}\,.\]
+<p>In our current case, \(x_{OA}(t_{OA})\) might refer to the location of
+one end of our
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>object as measured in the Lab frame at a particular Lab time.
+We say that the object is moving with respect to a Laboratory frame of
+reference \(L\), and our task is to measure the moving object's length in its
+direction of motion, first in the Lab frame and then in a frame of reference
+which is moving along with the object.
+Since the object is at rest in the latter frame, that frame is called the
+object's Rest frame \(R\).
+<p><h3 id="pcap-2-c">2c. Derivation of the Length Contraction Factor</h3>
+
+We label the leading edge of the object #1 and the trailing #2, as in
+the diagram.
+Then the Lab frame end-measurements are related to the Rest frame
+end-measurements by:
+<p>\[x_{1R}(t_{1R}) =
+k_{RL}[x_{1L}(t_{1L}) - v_{RL}\,t_{1L}]\]
+<p>\[x_{2R}(t_{2R}) =
+k_{RL}[x_{2L}(t_{2L}) - v_{RL}\,t_{2L}]\,.\]
+<p>As discussed in Sect.&thinsp;2a, the Lab frame end-measurements must be
+simultaneous,
+<p>\[t_{1L} = t_{2L}\,,\]
+<p>because the object is moving.
+Subtracting the second equation from the first and using the simultaneity of
+measurement in the Lab frame,
+<p>\[x_{1R}(t_{1R}) - x_{2R}(t_{2R}) =
+k_{RL}[x_{1L}(t_L) - x_{2L}\,(t_L)]\,,\]
+<p>where \(t_{L}\) is the single time of measurement in the Lab.
+<p>Now in the Rest frame the object is not moving so measurements of the
+positions of the ends are independent of time, enabling us to write:
+<p>\[x_{1R} - x_{2R} = k_{RL}[x_{1L} - x_{2L}]\,.\]
+<p>Each of the above differences is the length as measured in the indicated
+frame and so we finally obtain:
+<p>\[\ell_{OR} = k_{RL}\ell_{OL}\,.\]
+<p>This is usually written the other way around:
+<p>\[\ell_{OL} = (1 - v_{RL}^2/c^2)^{1/2}\,\ell_{OR}\,.\]
+<p>Thus a moving object will always be measured to be shorter in the direction
+of travel than it will be when at rest and this length contraction is called
+the “Lorentz contraction.”
+<p><h3 id="pcap-2-d">2d. Derivation of the Time Dilation Factor</h3>
+
+Now suppose we measure a time interval between two events.
+For concreteness we will follow a cosmic ray pion (“p<span class="tex-unknown" title="unknown macro">\</span>=i\('\)-on”),
+denoted \(\pi\), from its time of creation at time \(t_1\) in the upper
+atmosphere to the end of its lifetime at time \(t_2\) near the earth's
+surface.
+Our two frames of reference are the Rest frame of the \(\pi\) and the Lab frame
+which is stationary on the surface of the earth.
+We wish to compare the lifetimes of the \(\pi\) as observed from the two
+frames.
+<p>From <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>,
+<p>\[t_{1L} =
+     k_{LR}[t_{1R} - v_{LR}\,x_{1R}(t_{1R})/c^2]\]
+<p>\[t_{2L} =
+      k_{LR}[t_{2R} - v_{LR}\,x_{2R}(t_{2R})/c^2]\,.\]
+<p>To an observer in the Rest frame of the \(\pi\), and \(\pi\) is not moving so its
+creation and annihilation are at the same space point:
+<p>\[x_{1R}(t_{1R}) = x_{2R}(t_{2R})\,.\]
+<p>Subtracting (4) from (5) and using (6) gives:
+<p>\[t_{2L} - t_{1L} = k_{LR}(t_{2R} - t_{1R})\,.\]
+<p>Since the time difference \(t_2 - t_1\) is the lifetime \(\tau\) of the pion, we
+finally get,
+<p>\[\tau_{L} =
+         k \tau_{R} = (1 - v^2/c^2)^{-1/2}\,\tau_{R}\,.\]
+<p>If there is a frame of reference \(R\) in which two events occur at the same
+space point, that will be the frame in which the measured time interval
+between the events will be the smallest.
+Measured values by other observers will be larger by the factor \(k\), and
+this is called the “time dilation” effect.
+Thus all slowly moving pions appear to have about the same lifetime while
+those moving at speeds near that of light appear to live longer, exactly
+in accordance with the factor \(k\).
+<p>One can say that the fast moving pion appears to age more slowly!
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The “Twin Paradox”</h2>
+
+<p><h3 id="pcap-3-a">3a. The Paradox</h3>
+
+The “twin paradox” refers to the differential aging of a set of twins, one of
+whom goes away on a space trip and eventually returns to earth.
+The twin who stayed at home is seen to be much older than the one who took
+the journey.
+You may or may not feel that this is truly a “paradox” but that is what it
+is called.
+<p><h3 id="pcap-3-b">3b. \(A\)'s Space-time Point</h3>
+
+The Lorentz transformation is independent of which frame is considered
+to be the moving one.
+<p>From twin \(A\)'s point of view, twin \(B\) is moving with velocity \(v_{BA}\)
+so that:
+<p>\[x_{OB}(t_{OB}) =
+                 k[x_{OA}(t_{OA}) - v_{BA} t_{OA}]\]
+<p>\[t_{OB} = k[t_{OA} - v_{BA}x_{OA}(t_{OA})/c^2]\,.\]
+<p>However, from \(B\)'s viewpoint, \(A\) is moving and has velocity \(v_{AB} =
+-v_{BA}\).
+Hence we have:
+<p>\[x_{OA}(t_{OA}) =
+                  k[x_{OB}(t_{OB}) + v_{BA}\,t_{OB}]\]
+<p>\[t_{OA} =
+            k[t_{OB} + v_{BA}\,x_{OB}(t_{OB})/c^2]\,.\]
+<p><a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> and <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> are exactly equivalent to <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>.
+We show the equivalence by deriving <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> from
+<a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a> and <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.
+<p><h3 id="pcap-3-c">3c. \(B\)'s Space Point</h3>
+
+<p>Solving <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> for \(t_{OB}\) gives, 
+<p>\[t_{OB} = k^{-1} t_{OA} - v_{BA} x_{OB}(t_{OB})/c^2.\]
+<p>Substituting <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> into <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> gives,
+<p>\[\begin{aligned}x_{OA}(t_{OA}) & = k[x_{OB}(t_{OB}) + v_{BA}(k^{-1}\,t_{OA} - v_{BA}x_{OB}(t_{OB})/c^2] \\                & = k [k^{-1} v_{BA}t_{OA} + x_{OB}(t_{OB})(1 - v_{BA}^2/c^2)] \\                & = k[k^{-1}\,v_{BA}t_{OA} + k^{-2} x_{OB}(t_{OB})]\,.\end{aligned}\]
+
+<p>\[x_{OA}(t_{OA}) = v_{BA}t_{OA} + k^{-1} x_{OB}(t_{OB})\]
+<p>Solving <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> for x\(_{OB}\) gives <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
+<p>\[x_{OB}(t_{OB}) = k[x_{OA}(t_{OA}) - v_{BA}t_{OA}]\,.\]
+<p><h3 id="pcap-3-d">3d. \(B\)'s Event Time</h3>
+
+<p>We can similarly obtain <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> from <a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a> and
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.
+We first solve <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> for \(x_{OB}(t_{OB})\):
+<p>\[x_{OB}(t_{OB}) = k^{-1} x_{OA}(t_{OA}) - v_{BA}t_{OB}.\]
+<p>Then we use <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> to eliminate \(x_{OB}(t_{OB})\) from
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>, and obtain:
+<p>\[\begin{aligned}t_{OA} & = k\{t_{OB} + v_{BA}[k^{-1} x_{OA}(t_{OA}) - v_{BA}t_{OB}]/c^2\} \\        & = k[t_{OB}(1 - v_{BA}^2/c^2) + k^{-1} v_{BA}x_{OA}(t_{OA})/c^2] \\        & = k[k^{-2} t_{OB} + k^{-1} v_{BA}x_{OA}(t_{OA})/c^2]\end{aligned}\]
+
+<p>\[t_{OA} = k^{-1} t_{OB} + v_{BA}x_{OA}(t_{OA})/c^2\]
+<p>Solving <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> for \(t_{OB}\) gives <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>:
+<p>\[t_{OB} = k[t_{OA} - v_{BA}x_{OA}(t_{OA})/c^2].\]
+<p><h3 id="pcap-3-e">3e. Time Interval Symmetry</h3>
+
+Since the Lorentz transformation is symmetric for \(A\) \(\leftrightarrow\) \(B\)
+(with \(v_{BA} \leftrightarrow -v_{BA}\)), all general results have that
+same symmetry.
+Thus if \(A\) sees \(B\)'s clock running slower, \(B\) must see \(A\)'s clock running
+slower.
+If \(A\) and \(B\) are otherwise the same (“twins”) each sees the other age less
+rapidly.
+Thus twin \(A\) should see \(B\) as the younger and twin \(B\) should see \(A\) as the
+younger.
+Hence the paradox: how can each see the other as younger?
+Note, however, that in our derivation the twins could never come back
+together to compare their ages in the same frame of reference; we had no
+“turning around” or “stopping.”
+The question of what would happen if one twin turned around, came back, and
+stopped by the other one, is not answered by Special Relativity: it has
+nothing to say about what happens during accelerations.
+For that one must go to the much more complex General theory of Relativity.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For fifty years, physicists believed and taught that an object
+traveling past at high speed would appear physically distorted
+(“Lorentz contracted”).
+Then Terrell showed how it would really look.
+See “Appearances at Relativistic Speeds” (MISN-0-44). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The notation conventions are given in “Special Relativity: The
+Lorentz Transformation and the Velocity Addition Law” (MISN-0-12). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “The Equivalence Principle: An Introduction to Relativistic
+Gravitation” (MISN-0-110). <a href="#fnref-3" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Problem&nbsp;4 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A neutral pion, <em class="meson">π</em><sup>0</sup>, has a lifetime of
+           \(8.4 \times 10^{-17}\,\text{sec}\) in its own rest frame before decaying
+           into two photons.
+           However in a laboratory experiment, where the pions are observed to
+           be moving, their lifetime is measured to be
+           \(4.2 \times 10^{-16}\,\text{sec}\).
+           Assuming this discrepancy to be due to time dilation, calculate the
+           speed of the pions.</li>
+<li><span class="item-label">2.</span> “There was a young fencer named Fisk, whose style was incredibly
+           brisk.
+           So fast was his action, that Lorentz space contraction foreshortened
+           his foil to a disk.”
+           Assuming his 1.00<span class="unit">&thinsp;m</span> long fencing foil only contracted to 10.0<span class="unit">&thinsp;cm</span>
+           (roughly the size of a good steak knife), how fast was Fisk lunging?</li>
+<li><span class="item-label">3.</span> At the moment of the birth of a set of twins, one child is placed in
+           a spaceship that rapidly accelerates to 0.866<span class="unit">&thinsp;c</span> (0.866 times the
+           speed of light), and travels to Alpha Centauri, 4.33<span class="unit">&thinsp;light years</span>
+           away (measured in the rest frame of the earth.)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the age of each twin when the traveler reaches Alpha
+           Centauri, as measured by the twin on earth.</li>
+<li><span class="item-label">b.</span> Calculate the distance from Alpha Centauri to earth, as measured by
+           the traveling twin.</li>
+<li><span class="item-label">c.</span> How old is the traveling twin, as measured by himself, when he
+           reaches Alpha Centauri?</li>
+<li><span class="item-label">d.</span> How old does the traveling twin perceive the earthbound twin to be?
+</li>
+<li><span class="item-label">4.</span> Suppose you have a twin who is an astronaut.
+           The twin travels at speed 0.9999<span class="unit">&thinsp;c</span> to the vicinity of a star which
+           is 60<span class="unit">&thinsp;light years</span> away from earth (one <span class="unit">&thinsp;light year</span> is the distance
+           light travels in one year).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find your age and your twin's age at the time you observe that your
+           twin reaches the star.</li>
+<li><span class="item-label">b.</span> Show that the length, time and velocity observed by your twin check.
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> \(v = 0.98\,\text{c}\)</li>
+<li><span class="item-label">2.</span> \(v = 0.995\,\text{c}\)</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Age of stationary twin: 5<span class="unit">&thinsp;yrs</span>.; Age of traveling twin: 2.5<span class="unit">&thinsp;yrs</span>.</li>
+<li><span class="item-label">b.</span> 2.165<span class="unit">&thinsp;light years</span></li>
+<li><span class="item-label">c.</span> 2.5<span class="unit">&thinsp;yrs</span>.</li>
+<li><span class="item-label">d.</span> 1.25<span class="unit">&thinsp;yrs</span>. 
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Present age \(+ 60.006\,\text{yr}\)., present age \(+ 0.85\,\text{yr}\).</li>
+<li>Twin observes distance of 0.848507<span class="unit">&thinsp;light years</span>, time of 0.84859<span class="unit">&thinsp;yr</span>.,
+           velocity of \(-0.9999\,\text{c}\).</li>
+<li><span class="item-label">b.</span> Then \((0.848507/0.84859)\,\text{c} = 0.9999\,\text{c}\): check.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[x_\text{OB}(t_\text{B}) =
+                 k[x_\text{OA}(t_\text{A}) - v_\text{BA}\,t_\text{A}]\]
+<p>\[t_\text{B} = k[t_\text{A} - v_\text{BA}\,x_\text{OA}(t_\text{A})/c^2]\]
+<p>\[k = [1 - v_\text{BA}^2/c^2]^{-1/2}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Suppose you have a twin who is an astronaut.
+           The twin travels at speed 0.9999<span class="unit">&thinsp;c</span> to the vicinity of a star which
+           is 60<span class="unit">&thinsp;light years</span> away from earth (one <span class="unit">&thinsp;light year</span> is the distance
+           light travels in one year).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find your age and your twin's age at the time you observe that your
+           twin reaches the star.</li>
+<li><span class="item-label">b.</span> Show that the length, time and velocity observed by your twin check.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See text of Module.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+<p></section>
+

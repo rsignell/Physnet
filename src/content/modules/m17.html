@@ -1,0 +1,665 @@
+<header class="module-header">
+  <h1 class="module-title">Acceleration and Force in Circular Motion <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Draw one-body force diagrams and solve problems involving
+    Newton's second law <a href="../m16/" class="module-ref">MISN-0-16</a>.</li><li><strong>2.</strong> Solve problems involving circular kinematics <a href="../m9/" class="module-ref">MISN-0-9</a>.</li><li><strong>3.</strong> Determine the resultant force produced by a given set of forces
+    <a href="../m14/" class="module-ref">MISN-0-14</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: centripetal force, centripetal acceleration,
+    centrifugal force, banking angle, ideal banking angle.</li><li><strong>K2.</strong> Derive the expression for the ideal banking angle for uniform
+    circular motion.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Produce non-gravitational accelerations as numbers times \(g\)
+    (called “\(g\)'s” or “gees”).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Draw one-body force diagrams for, and solve, problems involving
+    forces, velocity, period, frequency, radius, and mass for an object in
+    uniform circular motion.</li><li><strong>S2.</strong> Apply the expression for the ideal banking angle to problems
+    involving uniform circular motion.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Classical Mechanics in Rotating Frames of Reference: Effects
+    on the Surface of the Earth” (MISN-0-18).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Here are some questions of the types we can answer from a study of
+acceleration and force in uniform circular motion:
+Why are highway curves banked, and what characteristics of vehicles and
+terrain determine the design angle?
+What happens if a car or truck does not match the vehicle characteristics that
+were assumed by the highway department in designing a particular curve?
+Why do drivers of mopeds, bicycles, and motorcycles lean while going around a
+corner?
+How much should they lean?
+What happens if they don't?
+<p>In the film,  2001: A Space Odyssey, the space station rotates so as to
+simulate the force of gravity as we know it at the earth's surface (see
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+The space station is in the shape of two large wheels connected by an axle.
+How does it simulate the gravitational force and at what rate must it turn?
+Is it necessary to vary the rate according to the weight of each space-person?
+<p>Suppose you tie a rock on the end of a long string and then whirl it around
+your head.
+What governs the angle of the string?
+<p>Airplane pilots talk about “\(g\)” forces.
+What are they, and why are they important to pilots?
+How are they measured and what are their (obviously important) physiological
+effects?
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Acceleration and Force</h2>
+
+<p><h3 id="pcap-2-a">2a. The Circle of Motion</h3>
+
+When an object is traveling along a circular arc, we talk about its “circle
+of motion,” whether the object is traveling completely around a circle or
+only around part of a circle.
+If the motion is circular only on an arc, we mentally extend the arc to make
+a complete circle, and that is the “circle of motion.”
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m17gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A car traverses a
+quarter-circle turn, traveling at constant speed so its acceleration
+\(\vec{a}\) is purely radial.
+The car's speed is such that the road exerts only a normal force on the car.
+The turn is banked at angle \(\theta\), which is also the angle by which the
+road force is off the vertical.
+The resultant (net, total) force on the car is labeled \(\vec{F}_r\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Uniform Circular Motion</h3>
+
+For any object in uniform circular motion, its acceleration is radially
+inward, pointing precisely toward the center of the circle of motion, as in
+the example in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The magnitude of the object's acceleration is \(a=v^2/r\), where \(v\) is the
+object's speed and \(r\) is its distance from the center of the circle of
+motion.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>If you are given that an object has many forces on it, and that it is in
+uniform circular motion, then you know that the object's acceleration is
+toward the center of the circle.
+By Newton's second law, this means the <em>resultant</em> force on the object
+must also be toward the center of the circle of motion.
+This is illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><h3 id="pcap-2-c">2c. Example 1: A Car on a Turn</h3>
+
+Our first example of uniform circular motion is a car that is traveling at
+constant speed around a highway curve (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Geometrically, the curve is a circular arc which we can mentally extend to
+make a complete imaginary circle.
+While the car is on the curve, it is maintaining a constant radius from
+the center of that imaginary circle.
+If we were to draw the car's path on an aerial photo, using a drafting
+compass, one leg of the compass would be at the center of that circle and
+the other on the car's path (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Because the car is traveling at constant speed, the acceleration \(\vec{a}\) is
+exactly toward the center of the circle of motion (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Since \(\vec{F}_r = m \vec{a}\), the resultant force on the car must also be
+toward the center of the circle of motion (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+We have drawn the force of the road on the car as being normal to the road:
+this will be the case if the car is traveling at just the right speed
+(more on this later).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m17gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A string-restrained rock is
+whirled about the person's body axis at a constant speed.
+The force of the string on the rock is off the vertical by the angle
+\(\theta\).</figcaption></figure></div>
+
+<p><span class="tryit">Try it:</span>  A 2000<span class="unit">&thinsp;lb</span> car is traveling at 50<span class="unit">&thinsp;mph</span> around the curve
+illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, with \(r=390\,\text{ft}\).
+Show that the acceleration of the car, traveling at a constant 50<span class="unit">&thinsp;mph</span>,
+is \(a=0.43\,g\).
+That is, the acceleration is 43% of the usual acceleration of gravity for
+objects in free fall. <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><h3 id="pcap-2-d">2d. Example 2: Rock on a String</h3>
+
+<p>Our second example is the case of a rock being whirled around the body at
+the end of a string as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The string will only produce a force along its physical direction, as shown
+in the figure.
+We assume the rock is being made to travel at constant speed so its
+acceleration is \(a=v^2/r\) and is exactly toward the center of the circle of
+motion.
+By \(\vec{F}_r = m \vec{a}\), the resultant force on the rock must also be
+toward the center of the circle of motion (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+<p><h3 id="pcap-2-e">2e. Example 3: A Bicyclist Rounding a Corner</h3>
+
+Our third example is the case of a bicyclist tilting sideways while rounding
+a corner, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+We could equally well have used a person rounding a corner while doing any
+of such diverse things as running, riding a moped or a motorcycle, or
+skiing.
+The point is that the person does not want whatever is supporting the body
+to exert a sideways force, one which would tend to throw the person off the
+support sideways.
+Thus in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> we have assumed the person tilts to an angle such that
+the support force on the body has no sideways component.
+We also assume the forward speed is constant so the acceleration is exactly
+toward the center of the circle of motion.
+Then, by \(\vec{F}_r = m \vec{a}\), the resultant force on the person must also
+be exactly toward the center of the circle of motion (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m17gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A bicyclist tilts sideways rounding a
+corner.
+The force of the bicycle on the bicyclist is off the vertical by
+the angle \(\theta\).</figcaption></figure></div>
+
+<p><span class="tex-unknown" title="unknown macro">\enlargethispage</span>1pc
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Proper Highway Banking Angle</h2>
+
+<p><h3 id="pcap-3-a">3a. A Sideways Force is Undesirable</h3>
+
+If the roadway on a highway is properly banked, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, the
+<em>roadway</em> will exert no sideways force on the car as long as the car
+maintains the proper speed.
+This is highly desirable since a sideways force can cause the car to start
+to accelerate (slide) sideways.
+This will happen if the sideways force exceeds the maximum sustainable force
+of non-sliding friction.
+Of course the maximum sustainable non-sliding frictional force depends
+drastically on the condition of the tires and the surface of the road.
+The maximum sustainable frictional force can be close to zero in a snowstorm
+or ice storm, or even in a sudden deluge from a summer rainstorm.
+<p><h3 id="pcap-3-b">3b. Deducing the Angle</h3>
+
+Our condition for the proper banking angle of a highway turn is that the
+road should only exert a normal force on the car, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Our problem is to deduce that proper banking angle, indicated by the symbol
+\(\theta\) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+Data available for the calculation include the radius of the turn and the mass
+and speed of the vehicle.
+<p> Here are the five steps:
+<ul>
+<li><span class="item-label">1.</span> Combine the radius and speed to get the magnitude of the
+car's acceleration.
+The direction of the acceleration is known so now we know \(\vec{a}\).</li>
+<li><span class="item-label">2.</span> Use \(\vec{F}_r = m \vec{a}\) to get \(\vec{F}_r\).</li>
+<li><span class="item-label">3.</span> Require that \(\vec{F}_r\) be the result of adding the known
+gravity force to a <em>normal</em> road force, as shown in the one-body
+diagram in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The magnitude of the road force is made a symbol since, at this point,
+it is unknown.</li>
+<li><span class="item-label">4.</span> Write the force equation in terms of horizontal and vertical
+components.
+This gives two equations in two unknowns (the magnitude of the road
+force and the value of \(\theta\) used to break the road force into
+components).</li>
+<li><span class="item-label">5.</span> Solve for one or both of the unknowns, as desired.</li>
+</ul>
+
+<p><h3 id="pcap-3-c">3c. The Deduced Angle</h3>
+
+The result of carrying out the steps outlined above gives for the proper
+banking angle:
+<p>\[\theta = \tan^{-1}\left(\frac{v^2}{r g}\right)\,,\]
+<p>where \(v\) is the speed of the vehicle, \(r\) is the radius of the turn, and
+\(g\) is the acceleration of gravity in free fall (9.8<span class="unit">&thinsp;m/s<sup>2</sup></span>).
+Incidentally, the normal force \(N\) of the road on the car is:
+<p>\[N = \frac{mg}{\cos\theta} = \frac{\text{weight}}{\cos\theta}\,.\]
+<p><span class="tryit">Try it:</span>  Carry out the five steps listed above and deduce <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a>
+and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+<a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<p><span class="tryit">Try it:</span>  For the example at the end of Sect.&thinsp;2c, show that the proper banking
+angle is 23°. <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+<p><h3 id="pcap-3-d">3d. Analysis of the Results</h3>
+
+First, note that the ideal banking angle, \(\theta\), is independent of the
+vehicle's mass!
+Therefore the same banking angle can serve all vehicles provided they move
+with the design speed:
+<p>\[v = \sqrt{r g \tan\theta}; \qquad \help{9}\]
+<p>For somewhat larger or smaller speeds, the frictional force between tires
+and road will keep the vehicle on the curve if tire tread and road surface
+permit.
+<p><span class="tryit">Try it:</span>  Suppose the road has become icy during a blinding snowstorm and you
+head into a short-radius curve, steeply banked for 55<span class="unit">&thinsp;mph</span>, at 25<span class="unit">&thinsp;mph</span> (as I
+once did).
+What do you think will happen?
+Draw the one-body diagram!
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Other Examples</h2>
+
+<p><h3 id="pcap-4-a">4a. Whirling Rock on a String</h3>
+
+For the whirling rock example of Sect.&thinsp;2, we follow the procedure used in
+Sec.&thinsp;3 and deduce the angle of the string.
+The result is:
+<p>\[\theta = \tan^{-1}\left(\frac{v^2}{r g}\right)\,,\]
+<p>where \(v\) is the speed of the rock, \(r\) is the radius of the circle, and
+\(g\) is the acceleration of gravity.
+    
+<span class="tryit">Try it:</span>  Follow the referenced steps and deduce <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>. <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a>
+<p><h3 id="pcap-4-b">4b. Bicyclist on a Turn</h3>
+
+To deduce the angle of lean, in the turning bicyclist of Sect.&thinsp;2,
+we follow the procedure used above and in Sec.&thinsp;3 to find:
+<p>\[\theta = \tan^{-1}\left(\frac{v^2}{r g}\right)\,,\]
+<p>where \(v\) is the speed of the bike (and rider), \(r\) is the radius of the
+turn-circle, and \(g\) is as usual.
+<p><span class="tryit">Try it:</span>  Follow the referenced steps and deduce <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>. <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+<p><h3 id="pcap-4-c">4c. “Weight” on a Banked Turn</h3>
+
+When a vehicle travels a banked turn, the driver's weight seems to
+increase.
+That is, the driver has the same feeling that would be experienced if the
+force of gravity were suddenly increased.
+Similarly, the vehicle's tires flatten more against the pavement, as though
+the car was also experiencing increased gravity.
+The driver's physical sensations are an increase of the force of the car
+seat on the driver's posterior and similar sensations in the driver's
+internal organs.
+This apparent increase in weight, due to the increased normal force, is
+given by <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+<p><span class="tryit">Try it:</span>  In the example at the end of Sect.&thinsp;2c, show that the effect is as
+though the force of gravity had increased by about 9% while traversing the
+turn.
+<p><h3 id="pcap-4-d">4d. Circular Motion and Weightlessness</h3>
+
+A pilot in a plane can produce a temporary feeling of “weightlessness” by
+aiming the plane slightly upward and then making a tight turn downward.
+The plane thus moves in a circular arc in a vertical plane.
+At the peak of the plane's path, where it is instantaneously parallel to the
+earth's surface, the resultant force is in the same direction as the force of
+gravity.
+If, at that point, the speed and radius are such that \(a = v^2/(r) = g\),
+then the resultant force exactly equals the force of gravity.
+Of course the resultant force on the pilot is the sum of the (downward)
+force of gravity and the (upward) force of the plane's seat on the pilot's
+posterior.
+In our present case the resultant force equals the force of gravity alone,
+so the force of the seat on the pilot must be zero and this is what accounts
+for the feeling of “weightlessness.”
+<p><h3 id="pcap-4-e">4e. Acceleration in \(g\)'s</h3>
+
+People who routinely engage in tight turns, such as fighter pilots, measure
+the accelerations they experience in \(g\)'s, sometimes spelled “gees,”
+which simply means they divide the acceleration in ordinary units by the
+quantity \(g\), expressed in the same units.
+For example, consider the “weightless” turn described above.
+If the pilot continued in the same circle at the same speed, the point at
+the bottom of the circle would be a “one gee” turn. <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a>
+At this instant the pilot's weight would seem to have doubled.
+Similarly, a two gee turn causes an apparent tripling of body weight.
+At four to five gees, insufficient blood reaches the brain and the sitting
+pilot “blacks out.”
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Force-Words for Circular Motion</h2>
+
+<p><h3 id="pcap-5-a">5a. Centripetal Force</h3>
+
+The radial acceleration acting in uniform circular motion, \(a = v^2/r\), is
+frequently referred to as the “centripetal” acceleration.
+The <em>resultant</em> force that produces this acceleration is called the
+“centripetal” force, but note that this (resultant) force is almost always
+the sum of forces produced by various agents.
+<p><h3 id="pcap-5-b">5b. Centrifugal Force</h3>
+
+Newton's third law says that for every force there is an “equal but
+opposite” force, and the force “equal but opposite” to the centripetal
+force is called the “centrifugal” force.
+In the example of the airplane pilot at the bottom of a vertical circular
+turn, the (upward) centripetal force is the force of the seat on the pilot.
+The centrifugal force is the force of the pilot on the seat.
+Similarly, for a person in a horizontal centrifuge-type ride in an amusement
+park, the centripetal force is the radially inward force of the seat on the
+person, producing the observed acceleration, while the centrifugal force
+is the equal but opposite force of the person on the outside edge of the
+seat (if the seat is not strong enough to withstand the centrifugal force,
+there will be an accident).
+<p>In the case of a bicyclist making a sharp turn, the resultant force is
+exerted on the bicycle and rider by the road surface as a force of
+non-sliding friction.
+The centrifugal force is exerted by the bicycle on the ground surface.
+If the bicycle hits a loose pebble or a slippery spot, the coefficient of
+friction may suddenly drop to zero with disastrous results.
+<p>In a common classroom demonstration a student sits on a rotating lab
+stool, holding a weight in an outstretched arm.
+The student's hand exerts the centripetal force on the weight, producing
+its acceleration.
+The weight exerts the reactive centrifugal force on the student's hand,
+and of course this is what the student feels.
+<p><h3 id="pcap-5-c">5c. The Rotating Space Station</h3>
+
+Gravity can be simulated in a space station by causing it to rotate at the
+right speed.
+Consider the rotating space station shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The two persons shown in the sketch are upside-down with respect
+to each other, yet each exerts a centrifugal force on the floor underfoot.
+If the speed of rotation \(v\) is related to \(g\) and the radius \(r\) by
+\(a = v^2 /r = g\), and if each person stands on a scale, the centrifugal
+force each exerts on the local scale will be exactly equal to the person's
+own weight.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m17gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Cross-sectional sketch of a possible space
+station.
+Rotation causes simulation of gravity for each person along the outer rim.</figcaption></figure></div>
+
+<p><h3 id="pcap-5-d">5d. Coriolis Force</h3>
+
+Curving motion produces yet another force that can sometimes be important.
+Called the “Coriolis” force, it arises when one observes trajectories
+from a rotating frame of reference (usually the surface of the earth).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>This is the force that causes the plane of the Foucault pendulum
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>to appear to rotate, both demonstrating the rotation of the earth and
+indicating the latitude of the pendulum.
+The Coriolis force also causes the regularity in the direction of rotation
+of the common extratropical cyclones seen on weather satellite photographs,
+and it is involved in the prevailing directions of the major winds and ocean
+currents.
+It can be demonstrated on a rotating lab stool.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the angle at which the roadbed of a highway
+curve is tipped from the horizontal.
+<p>the reactive force to the centripetal force, to which it is
+equal but opposite.
+<p>the radially-inwardly component
+of acceleration for an object in circular motion.
+<p>the radially-inward component of the
+resultant force on an object in circular motion.
+<p>the banking angle such that, for an
+object at a particular speed undergoing circular motion, there is no
+“sideways” force on the object.
+For a highway turn, this means that the road surface exerts only a normal
+(perpendicular) force on vehicles traveling at the design speed.
+The resultant of the (normal) road force and the force of gravity is the
+centripetal force that causes the vehicle's velocity vector to constantly
+change direction as the vehicle travels through the turn.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Kinematics: Circular Motion” (MISN-0-9). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Pilots can sustain up to 10<span class="unit">&thinsp;gees</span> by staying there no more than
+seconds before returning to 2-3<span class="unit">&thinsp;gees</span> for a short recovery period, and up to
+15<span class="unit">&thinsp;gees</span> in a reclining (rather than sitting) position. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Classical Mechanics in Rotating Frames of Reference: Effects
+on the Surface of the Earth” (MISN-0-18). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This is the pendulum commonly seen in science museums, usually
+several stories tall, consisting of a long wire and a steel ball. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<ol>
+<li><span class="item-label">1.</span> The space station in <em>2001: A Space Odyssey</em> is constructed
+in the shape of two wheels connected by an axle (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> in this module's <em>Text</em> for
+a drawing of one of the wheels and part of the connecting axle).
+If the “wheels” are each 300<span class="unit">&thinsp;m</span> in diameter, what rotational period would
+be necessary in order to simulate the familiar force of gravity at the
+earth's surface?</li>
+<li><span class="item-label">2.</span> As in Problem 1 but for the SKYLAB satellite: what rotational period would be necessary for this
+satellite, which is about 16&thinsp;m in diameter?</li>
+<li><span class="item-label">3.</span> A ball of mass \(m\) is attached to the end of a
+string of length \(\ell\); the other end is tied to the ceiling.
+The ball is set into motion in a circular path as shown.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Make a one-body diagram for the ball.</li>
+<li><span class="item-label">b.</span> What must its speed be for the string to make a given angle
+\(\theta\) with the vertical?</li>
+<li><span class="item-label">c.</span> Find the tension in the string.
+m17gr05</li>
+<li><span class="item-label">4.</span> You are rounding a turn of radius 0.500<span class="unit">&thinsp;mile</span> (2,640<span class="unit">&thinsp;ft</span>) at
+175<span class="unit">&thinsp;mi/hr</span> (257<span class="unit">&thinsp;ft/s</span>) in the Indy&nbsp;500.
+In the following, neglect effects due to rotation of the earth and air
+resistance.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Derive the ideal track banking angle in symbols, then in degrees.
+Sketch a clear one-body force diagram showing all forces, plus the
+resultant, that act on the car.</li>
+<li><span class="item-label">b.</span> Explain why this banking angle is ideal.</li>
+<li><span class="item-label">c.</span> Calculate the force of the car on you, in multiples of your body
+weight.
+</li>
+<li>The Indy&nbsp;500 track was actually built in 1909 and banked for
+100<span class="unit">&thinsp;mi/hr</span> (147<span class="unit">&thinsp;ft/s</span>).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">d.</span> Calculate its actual banking angle.
+Sketch a clear one-body force diagram showing the resultant force for this
+case (100<span class="unit">&thinsp;mi/hr</span>).</li>
+<li><span class="item-label">e.</span> Sketch a clear one-body force diagram showing the force needed to
+keep your 175<span class="unit">&thinsp;mi/hr</span> car at constant radius, as well as the part of that
+force supplied by the horizontal component of the actual track's support.
+Also show the sideways force parallel to the track which must be supplied by
+static and skidding friction between tires and track.
+This is the difference between the above two forces.</li>
+<li><span class="item-label">f.</span> Identify the centripetal and centrifugal forces associated with
+your body, in the sense of stating what body is acting and what body is
+acted on in each case.
+</li>
+<li><span class="item-label">5.</span> A ball of mass \(m\) rolls on the inside of the
+frictionless circular cone of height \(h\) and base of radius \(R\).
+The axis of the cone is vertical, and the apex points down.
+That ball is set into motion in a horizontal circular path of radius \(r\).
+(\(0\,<\,r\,<\,R\))
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a one-body diagram for the ball.</li>
+<li><span class="item-label">b.</span> What is the required speed \(v\) of the ball?
+m17gr06</li>
+</ol>
+
+<h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> \(T = 2\pi\sqrt{r/g} = \pi\sqrt{2d/g} = 25\)&thinsp;s; \(d\) = diameter</li>
+<li><span class="item-label">2.</span> \(T = \pi\sqrt{2d/g} = 5.7\)&thinsp;s</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <img src="figures/m17gr07.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">b.</span> \(v = \sqrt{\ell\,g\,\sin^2\theta/\cos\theta}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">c.</span> \(T = m\,g\,\sec\theta\) <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+<li><span class="item-label">4.</span> a. \(\tan\theta = v^2/(Rg)\)
+ <ol>
+
+</ol>
+</li>
+<li>\(\theta = 38.02^\circ\).</li>
+<li><span class="item-label">b.</span> Track must not exert a sideways force parallel to itself.
+            Then there will be no tendency for a car to skid sideways.</li>
+<li><span class="item-label">c.</span> 1.27&nbsp;times your weight. <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a>
+ 
+m17gr08
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">d.</span> \(\theta_0 = 14.35^\circ\).
+ 
+m17gr09
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">e.</span> <span class="tex-unknown" title="unknown macro">\</span> 
+ 
+m17gr10
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">f.</span> car door (or shoulder belt) on you, you on car door (or shoulder
+            belt)
+ </li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The force diagram looks similar to that of problem&nbsp;3a but with
+           the force \(T\) replaced by a force normal (perpendicular) to
+           the frictionless surface.</li>
+<li><span class="item-label">b.</span> \(\sqrt{rgh/R}\) <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+</li>
+</ol>
+
+<p></section>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><ol>
+<li><span class="item-label">1.</span> Determine the actual acceleration the mass undergoes, in terms
+ of given and desired quantities.
+ Get rid of \(r\) by substituting \(\ell \sin{\theta}\).</li>
+<li><span class="item-label">2.</span> Multiply the acceleration by the mass to get the force acting
+ on the mass.</li>
+<li><span class="item-label">3.</span> Draw the force on the diagram in the problem statement.</li>
+<li><span class="item-label">4.</span> Did you properly point the force toward the center of the circle?</li>
+<li><span class="item-label">5.</span> Write the total force on the mass as \(\vec{T}\), the string's
+ (unknown) force, plus \(m\vec{g}\): these are the only forces acting on the
+ mass.</li>
+<li><span class="item-label">6.</span> Set the force deduced from the acceleration equal to the force
+ deduced from adding the acting forces.
+ This produces a vector equation.</li>
+<li><span class="item-label">7.</span> Rewrite the vector equation as two single-component equations (one
+ for the x-components, one for the y-components), each involving \(\theta\).</li>
+<li><span class="item-label">8.</span> Eliminate \(T\) between the two equations, leaving one equation.</li>
+<li><span class="item-label">9.</span> Solve for \(v^2\).</li>
+</ol>
+
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\sec{\theta} \equiv 1 / \cos{\theta}\)</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body"><ol>
+<li><span class="item-label">1.</span> Completely solve problem&nbsp;4 before attempting this one.</li>
+<li><span class="item-label">2.</span> The surface of the cone is said to be “frictionless,” so the cone surface
+ only exerts a force normal to itself.  That's the physics.  Now using trigonometry,
+ we find that the force of the surface on the ball is at an angle of
+ \(\tan^{-1}{[R/h]}\) from the horizontal.</li>
+</ol>
+
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+ \[\frac{\left[(50\,\text{mi/hr})(5280\,\text{ft/mi})(1/3600\,\text{s/hr})\right]^2}
+             {(390\,\text{ft})(32\unit{ft/s^{2}})} = 0.43\]
+ 
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Taking components as stated:
+ \[\begin{aligned}N \sin\theta & = F_r = \frac{m v^2}{r} \\ N \cos\theta & = m g\end{aligned}\]
+
+ 
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">Solve <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> for \(v\).</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">The equations are exactly the same as in [S-8] but with \(N\) replaced by
+ \(T\), the tension in the string.
+</div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">The equations are exactly the same as in [S-8].</div></div>
+
+<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">\[ \tan^{-1}\theta = \tan^{-1}\left(\frac{v^2}{r g}\right) =
+         \tan^{-1}0.43 = 23^\circ\]
+ <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+</div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">The acceleration of the pilot, at that point, is 1&thinsp;\(g\) (32<span class="unit">&thinsp;ft/s<sup>2</sup></span>)
+ upward.
+ This is obviously a “1<span class="unit">&thinsp;gee</span>” acceleration.
+</div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">\[\vec{F}_\text{on you} = \vec{F}_\text{earth on you} + 
+                                 \vec{F}_\text{car on you} = 
+                                 m_\text{you}\,\vec{a}_\text{you}\]
+ 
+ What <em>is</em> your acceleration?
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Exam Skills K1-K2, this module's <em>ID Sheet</em>.
+The exam may include one or more of these skills, or none.</li>
+<li><span class="item-label">2.</span> You are rounding a turn of radius 0.500<span class="unit">&thinsp;mile</span> (2,640<span class="unit">&thinsp;ft</span>) at
+175<span class="unit">&thinsp;mi/hr</span> (257<span class="unit">&thinsp;ft/s</span>) in the Indy 500.
+In the following, neglect effects due to rotation of the earth and air
+resistance.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Derive the ideal track banking angle in symbols, then in degrees.
+Sketch a clear one-body force diagram showing all forces, plus the resultant,
+that act on the car.</li>
+<li><span class="item-label">b.</span> Explain why this banking angle is ideal.</li>
+<li><span class="item-label">c.</span> Calculate the force of the car on you, in multiples of your body
+weight.</li>
+<li>The Indy&nbsp;500 track was actually built in 1909 and banked for 100<span class="unit">&thinsp;mi/hr</span>
+(147<span class="unit">&thinsp;ft/s</span>).</li>
+<li><span class="item-label">d.</span> Calculate its actual banking angle.
+Sketch a clear one-body force diagram showing the resultant force for this
+case (100<span class="unit">&thinsp;mi/hr</span>).</li>
+<li><span class="item-label">e.</span> Sketch a clear one-body force diagram showing the force needed to
+keep your 175<span class="unit">&thinsp;mi/hr</span> car at constant radius, as well as the part of that force
+supplied by the horizontal component of the actual track's support.
+Also show the sideways force parallel to the track which must be supplied by
+static and skidding friction between tires and track.
+This is the difference between the above two forces.</li>
+<li><span class="item-label">f.</span> Identify the centripetal and centrifugal forces associated with your
+body, in the sense of stating what body is acting and what body is acted on in
+each case.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's text.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;4.</li>
+</ol>
+
+<p></section>
+

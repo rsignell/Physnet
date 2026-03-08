@@ -1,0 +1,146 @@
+<header class="module-header">
+  <h1 class="module-title">Hamilton's Principle, Lagrange's Equations <span class="module-author">(C.P.Frahm)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Use the variational technique to obtain Euler's equations for the
+    solution of the basic problem in the calculus of variations <a href="../m497/" class="module-ref">MISN-0-497</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: Lagrangian, degree of freedom, generalized coordinates
+    (proper and improper), configuration space, phase space, holonomic
+    constraints.</li><li><strong>K2.</strong> State Hamilton's principle in terms of generalized coordinates.</li><li><strong>K3.</strong> Explain the physical significance of Lagrange's undetermined multipliers.</li><li><strong>K4.</strong> Derive Lagrange's equations for generalized coordinates from Hamilton's
+    principle.
+    State the conditions under which the derivation is valid.</li><li><strong>K5.</strong> Derive Lagrange's equations with undetermined multipliers for systems
+    with constraints.
+    State the conditions undo which the derivation is valid.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> For a given mechanical system find the Lagrangian and use Lagrange's
+    equations to obtain the equations of motion for the system.</li><li><strong>S2.</strong> Use Lagrange's equations with undetermined multipliers to find the
+    forces of constraint on a given system.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> J.&thinsp;Marion, <em>Classical Dynamics</em>, Academic Press (1988).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The previous unit established the mathematical fundamentals of
+variational calculus. The present unit is concerned with the application 
+of the variational calculus to classical mechanics. In particular, 
+it will be seen that all of classical mechanics can be
+formulated in terms of a single variational principle known as
+Hamilton's principle. Euler's equations resulting from Hamilton's
+principle are known as the Euler - LaGrange equations or simply
+Lagrange's equations. These equations will be used in this unit to
+solve a number of mechanical problems which are difficult to handle in
+the Newtonian formulation. It should be noted that the formulation of
+classical mechanics in terms of Hamilton's principle is completely
+equivalent to the Newtonian formulation. No new physics is included
+in Hamilton's principle! However, as pointed out in the introduction
+to MISN-0-497, the variational approach does provide new insights and
+facilitates the solution of certain kinds of problems.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read sections 7.1 through 7.4 of Marion. On this first
+reading, concentrate on the general ideas and the important
+definitions. Do not be concerned with mathematical details.
+<p>Optional - Read sections 6-1 through 6-3 in Greenwood.
+<p>Write down definitions for each of the quantities in Output Skill K1.
+<p>Optional -
+Marion does not discuss generalized forces. The simplest way
+to define the generalized force Q. associated with the generalized 
+coordinate \(q_j\) is as follows
+<p>\[Q_j = \sum_i \vec{F}_i \cdot \frac{\partial \vec{r}_i}{\partial q_j}\,,\]
+<p>where \(\vec{F}_i\) is the total force on the i<sup>th</sup> particle and \(\vec{r}_i\)
+is the position of the i<sup>th</sup> particle. Note that the sum is over
+all particles. The significance of generalized forces can
+be seen by considering a small change (\(\delta q_j\)) in the j<sup>th</sup>
+generalized coordinate at a particular time while holding all
+other generalized coordinates fixed. Then
+<p>\[Q_j \delta q_j = \sum_i \vec{F}_i \cdot \frac{\partial \vec{r}_i}{\partial q_j}
+\delta q_j = \sum_i \vec{F}_i \cdot \delta \vec{r}_i = \delta W\,.\]
+<p>Thus \(Q_j \delta q_j\) is the amount of work that would be done by
+all forces acting at the chosen time if the system were to
+undergo a displacement in which the j<sup>th</sup> generalized coordinate
+alone changed by an amount \(\delta q_j\). The similarity between
+\(Q_j \delta q_j\) for generalized quantities and \(F_x \delta_x\) for cartesian
+quantities makes the usage of the terminology “generalized
+force” for \(Q_j\) self-evident.
+<p>Note: If the generalized coordinates are improper then the
+constraint equations are ignored when the displacements \(\delta q_j\) are made.
+<p>Optional - Read section 6-5 in Greenwood.</li>
+<li><span class="item-label">2.</span> Reread sections 7.1 through 7.4 in Marion. Fill in
+mathematical details where necessary.
+<p>Write down from memory Hamilton's principle in terms
+of generalized coordinates.
+<p>Starting from Hamilton's principle in terms of generalized
+coordinates, derive Lagrange's equations. Actually, carry
+through the variational calculus. Don't simply make a
+correspondence as is done in the text.
+<p>Write down the two conditions under which the preceding
+derivation is valid.
+<p>Note: For non-conservative systems, there is a generalized
+version of Hamilton's principle that leads to the
+Euler equations
+<p>\[\frac{d}{dt} \frac{\partial T}{\partial \dot{q_j}} - \frac{\partial T}{\partial q_j} = Q_j\,.\]
+<p>This generalization will not be considered in this course.
+(The interested student is referred to Goldstein, pp 38 - 40)</li>
+<li><span class="item-label">3.</span> (Optional) <br>
+
+Read section 7.5 in Marion. Unfortunately, this presentation
+is not completely clear. Therefore, it is strongly recommended
+that you also read Goldstein, pp.&thinsp;40 - 44 (Begin at the second
+paragraph on p.&thinsp;40).
+<p>Marion states near the bottom of p.&thinsp;207 that the Lagrange
+multipliers are the forces of constraint. It is clear from
+the discussion in Goldstein that this is not true in general.
+The only thing that one can say in general is that:
+<p>\[\sum_\ell \lambda_\ell a_{\ell k} = Q'_k = \nth{k} \text{  generalized force of constraint}\,.\]
+<p>In Example 7.9 in Marion (essentially the same as
+Goldstein's example on p.&thinsp;43) it is fortuitous that the
+Lagrange multiplier is precisely the frictional force.
+Another choice of generalized coordinates would have
+resulted in a less transparent interpretation of the
+Lagrange multiplier.</li>
+<li><span class="item-label">4.</span> Read sections 7.3 and 7.7 in Marion.</li>
+<li><span class="tryit">Try it:</span>  Work these problems in Marion: 7-3, 7-4, 7-9
+<p>Optional, for Output Skill K5:
+<p><span class="tryit">Try it:</span>  Problem -- Particles \(m_1\) and \(m_2\) are constrained by frictionless 
+constraints to move in the vertical \(x\)-\(y\) plane such that \(m_1\)
+remains on the horizontal \(x\)-axis and \(m_2\), remains on the
+vertical \(y\)-axis (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>). The particles are connected by a massless
+inextensible string of length \(\ell\). The initial conditions on
+\(m_1\) are \(x(0) = \ell\), \(\dot{x}(0) = 0\) and the corresponding conditions
+on \(m_2\) are \(y(0) = 0\), \(\dot{y}(0) = 0\). For the case where \(m_1 = m_2 = 0\),
+solve for the tension \(P\) in the string as a function of the
+angle \(\theta\). What is the period of motion in \(\theta\)?
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m498gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. .</figcaption></figure></div>
+</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

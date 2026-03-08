@@ -1,0 +1,715 @@
+<header class="module-header">
+  <h1 class="module-title">The Electrostatic Potential <span class="module-author">(J.S.Kovacs and P.S.Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: conservative force field <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>2.</strong> State the expression for the electrostatic force between
+    two charged particles <a href="../m114/" class="module-ref">MISN-0-114</a>.</li><li><strong>3.</strong> Write down the expression for the electric field of a charged
+    point particle <a href="../m115/" class="module-ref">MISN-0-115</a>.</li><li><strong>4.</strong> Calculate the work done by a force along a given path <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>5.</strong> Use the definition of potential energy to determine the
+    potential energy function associated with the conservative
+    Coulomb force field <a href="../m21/" class="module-ref">MISN-0-21</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: electrostatic (electric) potential, volt.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the electric potential at a given point in space
+    due to a given distribution of discrete point charges (one or more).</li><li><strong>S2.</strong> Calculate the electric potential energy of a charged particle
+    placed at a point in space where the potential is known.</li><li><strong>S3.</strong> Calculate the total potential energy of a given collection of
+    point charges.
+    Using the work-energy principle, determine where this energy
+    goes when the charged particles rearrange.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Overview</h3>
+
+<p>In this module we build on the idea of the electrostatic field to develop the idea of
+<em>electrostatic potential</em>, which is the capacity of an electrostatic field to do mechanical work.
+This is an important concept for designing or repairing almost any electric or electronic device.
+The strength of electrostatic potential is measured in volts, usually using a <em>voltmeter</em>, and is
+often referred to as “the voltage.”
+For example, “The voltage on this Walkman battery is down to 8.2, where it should be at least
+8.8 volts.”
+The electrostatic field is a vector quantity but the electrostatic potential is a scalar quantity.
+We will find that for any electrostatic field which is specified throughout a region, we can perform a
+scalar (one-dimensional) integration on it to get the electrostatic potential throughout the region.
+Similarly, given the electrostatic potential throughout a region, we can take a vector (three-dimensional)
+derivative of it to obtain the electrostatic field throughout the region.
+As an intermediate concept between the electrostatic field and the electrostatic potential, we will deal with
+the <em>electrostatic potential energy</em> of specific charged particles.
+<p><h3 id="pcap-1-b">1b. The Gravitational Analogue</h3>
+
+<p>Recall that gravitational potential energy is a very useful concept.
+For example: If an object is dropped, then its gravitational potential energy is converted
+to kinetic energy and its speed can be easily calculated.
+One obtains an object's gravitational potential energy by calculating the work that must be done against
+the force of gravity while one mechanically moves the object from some reference point to the object's
+present position.
+For example, if you take an object with a mass of 5&nbsp;kg from ground level to the top of a 30&nbsp;m tall
+building, then the potential energy of the object increases by 150&nbsp;J.
+If the object is then dropped from the top of the building down to the ground level, the 150&nbsp;J of
+gravitational potential energy at the top is converted to kinetic energy at the bottom plus some
+energy that went into frictional heating of the the air through which the object passed as it descended.
+Thus the gravitational potential energy at the top equals the work done, against gravity, in taking
+the object from ground to top, and it also equals the work done by gravity in taking the object from
+top to ground.
+One word of caution: When doing electrostatic calculations and making analogies to the gravitational
+case, note that masses always experience a force in the direction of the gravitational field.
+Thus for the electrostatic case the equivalent of a mass is a positive charge since it always experiences
+a force in the direction of the electrostatic field.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Electrostatic Potential Energy and Potential</h2>
+
+<p><h3 id="pcap-2-a">2a. Electrostatic Potential Energy</h3>
+
+If a particle having charge \(q\) is placed at a space-point \(\vec{r}\) in a region where an electrostatic
+field \(\vec{E}\) exists, then the electrostatic field exerts an electrostatic force \(\vec{F}\)
+on the charged particle:
+<p>\[\vec{F} = q \vec{E}\,.\]
+<p>If the charged particle is mechanically moved along some path from one space-point to another
+space-point, the total work done <em>against</em> the electrostatic force is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[W(q,\vec{r}_1 \rightarrow \vec{r}_2, \text{ against }\vec{E}) = 
+               \int_{\vec{r}_1}^{\vec{r}_2} (-\vec{F}) \cdot d\vec{\ell} =
+               - q \int_{\vec{r}_1}^{\vec{r}_2} \vec{E} \cdot d\vec{\ell}\,,\]
+<p>where \(d\vec{\ell}\) is an element of length along the path.
+The electrostatic force is known to be a conservative force, so the work in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is the same
+for all paths connecting the same two end-points and that means we can define a potential energy \(E_p(q,\vec{r})\)
+for a particle with charge \(q\) at space-point \(\vec{r}\) without saying what path was used to get there:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[E_p(q,\vec{r}_2) - E_p(q,\vec{r}_1) = W(q,\vec{r}_1 \rightarrow \vec{r}_2, \text{ against }\vec{E})\,.\]
+<p>Note that only <em>changes</em> in potential energy have been defined.
+However, we can stop talking about changes between two points in space if we specify
+some point \(\vec{r}_0\) as the electrostatic potential energy <em>reference point</em>, a point where we specify
+that the electrostatic potential energy is zero:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[E_p(q,\vec{r}_0) = 0\,.\]
+<p>Then we can talk about the particle's actual potential energy at any point, although it is to be
+understood that we are referring to the change in potential energy when the particle
+is moved from the reference point to the point in question:
+<p>\[E_p(q,\vec{r}) \equiv W(q,\vec{r}_0 \rightarrow \vec{r}, \text{ against }\vec{E})\,.\]
+<p><h3 id="pcap-2-b">2b. Electrostatic Potential</h3>
+
+<p>In dealing with electrostatic devices, it is often useful to deal with a given electrostatic field's
+ability to transfer stored energy to a wide variety of amounts of charge.
+Thus at any space-point \(\vec{r}\) we define the <em>electrostatic potential</em>, \(V(\vec{r})\),
+as the work <em>per unit charge</em> that must be done against the electrostatic field to bring any charge
+from the reference point to the space-point in question.
+Equating the work-per-unit-charge to potential energy-per-unit-charge, we get the electrostatic
+potential, \(V(\vec{r})\), as:
+<p>\[V(\vec{r}) \equiv \frac{E_p(q,\vec{r})}{q} =
+       - \int_{\vec{r}_0}^{\vec{r}} \vec{E} \cdot d\vec{\ell}\,.\]
+<p>This potential is really the difference between the potential at \(\vec{r}\) and
+the potential at the reference point and it is what is displayed on a voltmeter when the
+negative lead is placed on the reference point and the positive lead is placed on the point \(\vec{r}\).
+More generally, the reading displayed on the voltmeter is the amount that the potential at the
+point of the positive lead is higher than the potential at the point of the negative lead.
+It gives the amount of work per unit charge that one must do against the electrostatic field to move
+positive charge from the negative-lead position to the positive-lead position and this equals the amount of
+work the electrostatic field will do in moving positive charge from the positive-lead position
+to the negative-lead position.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-2-c">2c. Case: A Constant Electrostatic Field</h3>
+
+Suppose the magnitude of an electrostatic field is constant throughout a region of space, with the
+value \(E_0\).
+Suppose also that it has the same direction everywhere in the region.
+Then for convenience we can orient our coordinate axes so that the electrostatic field is along
+our \(x\)-axis:
+<p>\[\vec{E}(\vec{r}) = E_0 \hat{x}\,,\]
+<p>where \(\hat{x}\) is a unit vector in the direction of increasing \(x\).
+Then the force on a particle with charge \(q\) is:
+<p>\[\vec{F} = q E_0 \hat{x}\,,\]
+<p>and the particle will have constant acceleration parallel to the \(x\)-axis.
+Let us choose the reference point for the electrostatic potential to be the coordinate origin so the
+potential is:
+<p>\[V(\vec{r}) = V(x) = - \int_0^x E_0 \hat{x}\cdot\vec{dx} = -E_0 \int_0^x dx =
+       -E_0 (x - 0)= -E_0 x\,.\]
+<p>With the usual orientation of coordinate axes, the force on a positively-charged particle will
+be to the right so that is the equivalent of the “downhill” direction in the gravitational case.
+This means that the “uphill” direction must be to the left.
+The reference point, the “bottom of the hill,” is the origin so the “top of
+the hill”, which is in the “uphill” direction from the “bottom”, must be to the left of
+the origin.
+Since the value of \(x\) is negative to the left of the origin, the electrostatic potential is
+positive there (see <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>), and that is as it should be for the “top of the hill.”
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m116gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The unit vector \(\hat{r}\) at point \(\vec{r}\) a
+distance \(r\) from point charge \(Q\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. Case: Two Charged Particles</h3>
+
+Suppose an electrostatic field is produced by a charged particle \(Q\) at the coordinate
+origin.
+Then the electrostatic field at the space-point \(\vec{r}\) is:
+<p>\[\vec{E}(\vec{r}) = k_e \frac{Q}{r^2}\hat{r}\,,\]
+<p>where \(\hat{r}\) is the unit vector, at the point \(\vec{r}\), pointing in the
+direction of increasing \(r\) as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+If a particle with charge \(q\) is placed at this point it is acted on by an electrostatic force: 
+<p>\[\vec{F} = k_e \frac{q Q}{r^2}\hat{r}\,,\]
+<p>which is just the Coulomb force between two charged particles.
+For the potential, it is customary and mathematically easiest to take the reference point as
+any point for which \(r = \infty\).
+Then the potential at \(r\), which is the work-per-unit-charge done against the electrostatic field of
+\(Q\) in bringing a charge from the reference point to radius \(r\), is:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[V(\vec{r}) = \int_\infty^r - k_e Q \frac{1}{r^2} dr = k_e \frac{Q}{r}\,.\]
+<p>The work-per-unit-charge that the electrostatic field will do to take a charge from
+\(r\) to \(\infty\) is the same:
+<p>\[V(\vec{r}) = \int^\infty_r k_e Q \frac{1}{r^2} dr = k_e \frac{Q}{r}\,.\]
+<p>Assuming \(Q\) to be positive, the direction of the electrostatic field is away from the origin so
+that direction, for a positive charge placed “on the hill,” is equivalent to “down hill.”
+The “top of the hill” is at the origin and the potential is infinitely
+positive there.  Some hill!  If \(Q\) is negative, however, note that there is an infintely deep
+potential hole at the origin!
+<p><h3 id="pcap-2-e">2e. Using Conservation of Energy</h3>
+
+<p>We can use conservation of energy to calculate a particle's change in velocity when it
+moves from one point to another solely under the influence of electrostatic forces.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>Fir example, consider the case of two protons that are initially at rest relative to one
+another and are \(10^{-15}\)&thinsp;m apart.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>In this configuration, the set of particles has a potential energy equal to
+\(2.3 \times 10^{-13}\)&thinsp;J and zero kinetic energy.
+If one of the particles is held fixed while the other is released, the
+free particle will move away from the fixed one because of the repulsive
+Coulomb force.
+Its velocity will increase continuously.
+How large a speed will it eventually reach (the proton mass is
+\(1.67 \times 10^{-27}\)&thinsp;kg)?
+Note: When the free particle has moved a very large distance away, so that the
+potential energy of the pair of particles is very close to zero, the total
+energy of this system is almost all in the form of kinetic energy of the free particle.
+We find that. for the numbers cited, its eventual speed is \(1.66 \times 10^7\)&thinsp;m/s,
+about five percent of the speed of light. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Several Point Charges</h2>
+
+<p><h3 id="pcap-3-a">3a. Electrostatic Potential</h3>
+
+If charges \(Q_1\), \(Q_2\), \ldots , are located at distances \(r_{1P}\), \(r_{2P}\),
+\ldots , respectively, from a point \(P\), then the electrostatic potential at
+point \(P\) is:
+<p>\[V = \sum_i k_e \frac{Q_i}{r_{iP}} =
+                  k_e \sum_i \frac{Q_i}{r_{iP}}\,.\]
+<p>This is the sum of the potentials due to each charge alone.
+The reason that the contributions from the individual charges simply add
+is that the potential at any point is defined in terms of the
+work necessary to bring a test charge from infinity to that point, and
+work produced by various sources is additive.
+<p><h3 id="pcap-3-b">3b. Potential Energy</h3>
+
+The electrostatic potential energy of a collection of point charges,
+\(Q_1\), \(Q_2\), \ldots , is just the sum of the potential energies between all
+pairs of the charges.
+Thus the total potential energy of three charges is:
+<p>\[E_p = k_e \frac{Q_1 Q_2}{r_{12}} +
+             k_e \frac{Q_1 Q_3}{r_{13}} +
+             k_e \frac{Q_2 Q_3}{r_{23}}\,,\]
+<p>where \(r_{12}\) is the distance between charges \(Q_1\) and \(Q_2\), etc.
+If you want to program the rule into a computer, using an arbitrary
+number of charges, you must write the equation this way:
+<p>\[E_p=\frac{1}{2}{\sum_{i,j}}' k_e \frac{Q_i Q_j}{r_{ij}} =
+       \frac{k_e}{2}{\sum_{i,j}}'\frac{Q_i Q_j}{r_{ij}}\,,\]
+<p>where the prime on the summation signs mean than you include only terms
+where \(i \neq j\).
+The quantity \(r_{ij}\) is the distance between \(Q_i\) and \(Q_j\).
+The factor of one-half occurs because the summation symbol causes the energy for
+each pair of particles to be included twice (the term \(Q_1Q_2/r_{12}\) is the energy for the
+same pair as is the term \(Q_2Q_1/r_{21}\)).  Another way of saying it is that
+the inter-particle energy for any particular pair is included twice: once for \(i>j\) and
+again for \(i<j\).
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Units</h2>
+
+<p>The unit of the potential V(r) is seen from its defining expression,
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, to be the “newton meter per coulomb,” which is also
+the “joule per coulomb.”
+This unit is called the volt, abbreviated V.
+<p>The unit of electrostatic field, the “newton per coulomb”, is commonly
+expressed in its equivalent form, the “volt per meter.”
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+The authors would like to thank Professor James Linnemann for useful suggestions.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+<p></section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>a scalar field whose
+value at any point in space is usually defined as the work per
+unit charge required to bring a charged particle from infinity to that field
+point.
+For a point in an electronic circuit, it is the work per unit charge
+required to bring a charged particle from the circuit's “ground” to the
+given point (this quantity can be read on a voltmeter).
+<p>the potential
+energy of a charge or group of charges due to their interaction with
+an electrostatic field (this quantity is usually computed by multiplying
+the electrostatic potential at a point in space by electrostatic charge at that
+point).
+<p>the unit of electrostatic potential, abbreviated V;
+volt = joule per coulomb, usually written \(\,\text{V} = \,\text{J}\,\text{C}^{-1}\).
+<p></section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The definition assumes that a bare minimum of work is done, just enough to barely overcome the
+electrostatic force and not, for example, enough to change the particle's kinetic energy.
+The force necessary to barely overcome the electrostatic force is just the negative of the electrostatic
+force. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">(only for those interested) We know both experimentally and theoretically that the electrostatic
+force is a <em>conservative</em> force.
+The theoretical proof uses a remarkable mathematical theorem which says that since
+\(\Grad \times \vec{F} = 0\)
+for all electrostatic forces, a line integral of \(\vec{F}\) between any two points is independent
+of the particular path used for the line integral.
+The line integral of the force is just the work done, so the work done is path-independent
+and that means the force is conservative. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">In any particular problem, the reference point is chosen for convenience.
+In an electrostatic or electronic circuit, the traditional choice for \(\vec{r}_0\) is the negative terminal
+of a battery or the circuit ground point(s).
+In the case of a localized set of electrostatical charges, \(\vec{r}_0\) is taken as infinitely
+far away from the charges so \(r_0 = \infty\).
+Note that \(\vec{r}_0\) can be a set of points or a surface or a region of points as long as
+it takes no work to move among those points so “they are all at the same potential.” <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The voltage across the terminals of flashlight cells is usually 1.5<span class="unit">&thinsp;volts</span>; across
+lantern batteries, 6<span class="unit">&thinsp;volts</span>; radio batteries, 9<span class="unit">&thinsp;volts</span>; car batteries, 12<span class="unit">&thinsp;volts</span>; and
+across the terminals in wall outlets, 110<span class="unit">&thinsp;volts</span> or 220<span class="unit">&thinsp;volts</span> (although
+this is an alternating voltage so the subject benefits from further discussion). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The integration is: \(\int_\infty^r r^{-2}\,dr = -\left.r^{-1}\right|^r_\infty = -\frac{1}{r} + \frac{1}{\infty} =
+          -\frac{1}{r}\,.\) <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a> <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">When only conservative forces act on a system, the total energy,
+kinetic plus potential, is a constant (see MISN-0-21, Sect.&thinsp;3).
+As mentioned earlier, electrostatic forces are conservative forces so any particle moving
+under their sole influence has constant total energy. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">Distances of this magnitude are roughly the size of the separation
+of the particles, neutrons and protons, inside an atomic nucleus. <a href="#fnref-7" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;11 and 12 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m116gr02.svg" alt="" class="physnet-fig"></figure>
+
+           At point \(P_1\) (\(x = -0.300\)&thinsp;m, \(y = 0.000\)&thinsp;m) is located a charge
+           \(Q_1 = - 4.00 \times 10^{-6}\)&thinsp;C.
+           At point \(P_2\) (\(x = 0.000\)&thinsp;m, \(y = 0.400\)&thinsp;m) is located a charge
+           \(Q_2 = - 5.00 \times 10^{-6}\)&thinsp;C.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the potential energy of this system of two charges so
+           arranged.</li>
+<li><span class="item-label">b.</span> If one of the charges (\(Q_1\)) is held fixed and the other
+           (\(Q_2\)) is allowed to move an infinite distance away, what now is
+           the potential energy?</li>
+<li><span class="item-label">c.</span> Where does the difference in potential energy go?</li>
+<li><span class="item-label">d.</span> If the particle having charge \(Q_2\) also has mass \(M = 0.00500\)&thinsp;kg,
+           what is its speed when it is an infinite distance from \(Q_1\)?
+           <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+<li><span class="item-label">2.</span> Referring to the figure of Problem&nbsp;1 above, answer the following:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Due to the two charges what is the total electric potential
+           at the origin?</li>
+<li><span class="item-label">b.</span> If a charge \(Q_3 = +2.00 \times 10^{-6}\)&thinsp;C is placed at the origin
+           and another charge \(Q_4 = +5.00 \times 10^{-6}\)&thinsp;C is placed at
+           \(x = +0.300\)&thinsp;m, \(y = 0.000\)&thinsp;m, what is now the total potential energy
+           of this system of four fixed charges? <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">c.</span> To take the particle \(Q_4\) to infinity would you have to do work
+           or would the electric fields do the work for you as they did in
+           part (b) of Problem&nbsp;1 where the charged particles ended up with
+           kinetic energy?
+</li>
+<li><span class="item-label">3.</span> Two charges, \(q_1 = + 3.0 \times 10^{-6}\)&thinsp;C and
+           \(q_2 = + 2.0 \times 10^{-6}\)&thinsp;C are fixed in space a distance
+           \(d = 5.0\)&thinsp;cm apart, as shown: <br>
+
+           <figure class="fig-centered"><img src="figures/m116gr03.svg" alt="" class="physnet-fig"></figure>
+
+           What is the electric potential at point O?
+           How much work must be done in order to bring a third charge
+           \(q_3 = 2.0 \times 10^{-6}\)&thinsp;C in from infinity to point O?</li>
+<li><span class="item-label">4.</span> Four charges are placed at intervals of 90° around a
+           circle as shown:
+           <figure class="fig-centered"><img src="figures/m116gr04.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">a.</span> Find an expression for the electric potential at the center of
+           the circle.</li>
+<li><span class="item-label">b.</span> What is the electric potential energy of this charge
+           configuration?</li>
+<li><span class="item-label">c.</span> Derive an expression for the work required to bring another
+           charge \(+q\) in from infinity to the center of the circle.</li>
+</ol>
+
+<ol>
+<li><span class="item-label">5.</span> Calculate the electric potential, due to the proton
+           (\(1.6 \times 10^{-19}\,\text{C}\)) in a hydrogen atom, at the mean
+           distance of the orbiting electron (\(5.3 \times 10^{-11}\)&thinsp;m).
+           What is the potential energy of the electron-proton system, the
+           atom, in joules?
+           What is the potential energy of the atom in units of
+           electron-Volts (eV) where eV\( = 1.6 \times 10^{-19}\)&thinsp;J?
+           The energy needed to ionize a hydrogen atom, to remove its
+           electron completely, is known to be 13.6&thinsp;eV.
+           Explain why this is different from your calculated value
+           for the potential energy.</li>
+<li><span class="item-label">6.</span> The sodium ions in a salt crystal each have six chlorine ions
+           surrounding them.
+           The chlorine ions can be considered to be lying on the faces of a
+           cube with the sodium ion at its center.
+           If the sodium-chlorine distance is \(2.82 \times 10^{-10}\)&thinsp;m,
+           how much energy is required to completely separate a sodium ion
+           from its neighboring chlorine ions?</li>
+</ol>
+
+<p> Supplementary Problems:
+<ol>
+<li><span class="item-label">7.</span> Which of the following completions of the statement are correct?
+(More than one may be correct.)
+The static electric potential at a point (in a region of space where
+there are several point charges which contribute to this potential)
+is:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The vector sum of the contributions to this potential from each of the
+point charges.</li>
+<li><span class="item-label">b.</span> The scalar sum of the contributions to this potential from each of the
+point charges.</li>
+<li><span class="item-label">c.</span> The work per unit charge that must be done to bring a positive test
+charge from an infinite distance to that point in space.</li>
+<li><span class="item-label">d.</span> The force per unit charge that would act on a positive test charge
+placed at the point. 
+</li>
+<li><span class="item-label">8.</span> <figure class="fig-centered"><img src="figures/m116gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>Two point charges are separated by a distance \(L\).  
+In case (A) the two are equal charges both in magnitude and sign,
+both being \(+Q\) charges.  
+In case (B) the two charges are of equal magnitude but of opposite
+sign, \(+Q\) and \(-Q\).
+In each of the two cases, find both the electric field intensity,
+\(\vec{E}\), and the electric potential at the point \(P\) midway between the
+two charges.
+<p>Case A: \(\vec{E}(P) =\) 2cm ; \(V(P) =\) 2cm .
+<p>Case B: \(\vec{E}(P) =\) 2cm ; \(V(P) =\) 2cm .</li>
+<li><span class="item-label">9.</span> The units of electric potential are equivalent to which of
+the composite units below? 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> newton per coulomb</li>
+<li><span class="item-label">b.</span> joule per coulomb</li>
+<li><span class="item-label">c.</span> joule per newton</li>
+<li><span class="item-label">d.</span> coulomb per meter</li>
+<li><span class="item-label">e.</span> coulomb per joule
+</li>
+<li><span class="item-label">10.</span> <figure class="fig-centered"><img src="figures/m116gr06.svg" alt="" class="physnet-fig"></figure>
+
+Three point charges, each of charge \(Q = +3.00 \times 10^{-5}\)&thinsp;C are arranged
+at the vertices of an isosceles triangle shown above (one of the charges
+is at \(x = -0.200\)&thinsp;m, \(y = 0.000\)&thinsp;m, another is at \(x = +0.200\)&thinsp;m, \(y = 0.000\)&thinsp;m, and the
+third is at \(x = 0.000\)&thinsp;m, \(y = 0.400\)&thinsp;m.)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the total potential energy of this system of three
+            charges?  </li>
+<li><span class="item-label">b.</span> How much work would you have to do to bring these three charges
+            together this way (bringing them from infinite relative
+            separations)? </li>
+<li><span class="item-label">c.</span> If you released these charges and allowed them to fly apart as a
+            consequence of their mutual repulsion, what total kinetic energy
+            would these have when they got to infinite separation?  </li>
+<li><span class="item-label">d.</span> What is the electric potential at the origin due to this system
+            of three charges arranged in the above triangular configuration?
+              What is the potential at \(x = + 0.3\)&thinsp;m, \(y = 0\)? </li>
+<li><span class="item-label">e.</span> How much work would you have to do to bring charge
+            \(Q' = +1.0 \times 10^{-6}\)&thinsp;C from \(x = + 0.30\)&thinsp;m, \(y = 0\) to
+            the origin?
+            </li>
+<li><span class="item-label">f.</span> Due to the triangle of charges, what is the electric field at
+            the origin? </li>
+<li><span class="item-label">g.</span> What is the force on a charge \(Q'' = -1.00 \times 10^{-6}\)&thinsp;C
+            placed at the origin in the presence of the three triangularly
+            arranged charges? 
+</li>
+<li><span class="item-label">11.</span> <figure class="fig-centered"><img src="figures/m116gr07.svg" alt="" class="physnet-fig"></figure>
+
+           Three point charges, each of charge
+           \(q = 2.0 \times 10^{-6}\)&thinsp;C, are located at
+           \((6.0\,\text{m},8.0\,\text{m})\), \((-6.0\,\text{m},8.0\,\text{m})\),
+           and at the origin of the above cartesian coordinate system.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the electric potential at the point
+           \((0.0\,\text{m},8.0\,\text{m})\) due
+           to these three point charges. </li>
+<li><span class="item-label">b.</span> Determine the electric field at the same point. </li>
+<li><span class="item-label">c.</span> A fourth charge, \(Q = 4.0 \times 10^{-6}\)&thinsp;C is placed at the
+           point \((0.0\,\text{m},8.0\,\text{m})\) having initially been infinitely
+           distant from all other charge.
+           Calculate the change in the potential energy of the charge \(Q\),
+           due to the above three charges. 
+</li>
+<li><span class="item-label">12.</span> <figure class="fig-centered"><img src="figures/m116gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>\(q = + 3.0 \times 10^{-6}\)&thinsp;C,</li>
+<li>\(Q = + 5.0 \times 10^{-6}\)&thinsp;C, \(a = 2.5\)&thinsp;m
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the potential energy of the above assembly of charges.
+           </li>
+<li><span class="item-label">b.</span> Calculate the new potential energy of the system if one of the
+           two objects with charge \(Q\) is physically interchanged with the
+           object with charge \(q\). </li>
+<li><span class="item-label">c.</span> Use the work-energy principle to determine the work done by
+           the external agent which interchanged the objects in part&nbsp;(b).
+           
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 0.360&thinsp;J.</li>
+<li><span class="item-label">b.</span> zero.</li>
+<li><span class="item-label">c.</span> It goes into kinetic energy of the particle with charge \(Q_2\).
+           Because there are no other forces except the electrical force
+           between \(Q_1\) and \(Q_2\), the total energy, kinetic plus potential,
+           is conserved:  (\(E_p + E_k\)) at the position shown, equals
+           (\(E_p + E_k\)) when \(Q_2\) goes to infinity.
+           At infinity \(E_p\) equals zero.
+           When they are as shown in the sketch, \(E_K = 0\).</li>
+<li><span class="item-label">d.</span> \(v = 12.0\)&thinsp;m/s. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(-2.32 \times 10^5\)&thinsp;V.</li>
+<li><span class="item-label">b.</span> \(-0.555\)&thinsp;joules.</li>
+<li><span class="item-label">c.</span> You would need to do work because the potential energy would
+           increase.
+</li>
+<li><span class="item-label">3.</span> \[V_0 = k_e \left[\frac{q_1}{d/2}+\frac{q_2}{d/2}\right]\]
+
+ \[\phantom{V_0} = (8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+ \left[\frac{(2.0 + 3.0) \times 10^{-6}\,\text{C}}
+                       {2.5 \times 10^{-2}\,\text{m}}\right]
+  = 1.8 \times 10^6\,\text{V}\]
+
+\[W = q_3 V_0  =
+   (2.0 \times 10^{-6}\,\text{C})(1.8 \times 10^6\,\text{V}) = 3.6\,\text{J}.\]
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \[V = k_e \left[\frac{q - q + q - q}{a}\right] = 0\]
+</li>
+<li><span class="item-label">b.</span> \[E_p =
+    k_e \left[\frac{q^2}{2a} + \frac{(2q)(-q)}{a\sqrt{2}} +
+      \frac{(2q)(-q)}{a\sqrt{2}} + \frac{(-q)^2}{2 a}\right]\]
+
+ \[ = k_e \frac{q^2}{a} (1 - 2\sqrt{2})\]
+</li>
+<li><span class="item-label">c.</span> \[W = q V = 0\]
+
+</li>
+<li><span class="item-label">5.</span> \[V = k_e \frac{e}{r} =
+           \frac{(8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+           (1.6 \times 10^{-19}\,\text{C})}
+           {5.3 \times 10^{-11}\,\text{m}} = 27\,\text{V}\]
+
+<p> \[E_p = e\,V = (-1.6 \times 10^{-19}\,\text{C})(27\,\text{V})
+ = -4.3 \times 10^{-18}\,\text{J} = -27\,\text{eV}\]
+
+<p>The electron also has kinetic energy of (27/2)&thinsp;eV.</li>
+<li><span class="item-label">6.</span> \[W = 6 \left( k_e \frac{e^2}{r} \right)
+ = (6) (8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+ \left(\frac{(1.6 \times 10^{-19}\,\text{C})^2}
+             {2.82 \times 10^{-10}\,\text{m}}\right)
+ = 4.9 \times 10^{-18}\,\text{J}\]
+</li>
+<li><span class="item-label">7.</span> \(4 k_e Q/L\)</li>
+<li><span class="item-label">8.</span> Zero</li>
+<li><span class="item-label">9.</span> 56.5&thinsp;J</li>
+<li><span class="item-label">10.</span> \(3.78 \times 10^6\)&thinsp;V</li>
+<li><span class="item-label">11.</span> (b)</li>
+<li><span class="item-label">12.</span> (b) and (c) are correct</li>
+<li><span class="item-label">13.</span> \(-(1.69 \times 10^6\,\text{N/C}) \hat{y}\)</li>
+<li><span class="item-label">14.</span> 56.5&thinsp;J</li>
+<li><span class="item-label">15.</span> \(+(1.69\,\text{N}) \hat{y}\)</li>
+<li><span class="item-label">16.</span> \(3.38 \times 10^6\)&thinsp;V</li>
+<li><span class="item-label">17.</span> Zero</li>
+<li><span class="item-label">18.</span> 56.5&thinsp;J</li>
+<li><span class="item-label">19.</span> \(8 k_e Q / L^2\) directed to the right</li>
+<li><span class="item-label">20.</span> \(Q'(V_f - V_i) = - 0.405\)&thinsp;J [you wouldn't have to do the work,
+             the field would do it; work done by field\( = Q'(V_i - V_f)\)].</li>
+<li><span class="item-label">21.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(V = 8.2 \times 10^3\)&thinsp;V</li>
+<li><span class="item-label">b.</span> \(\vec{E} = (2.8\times10^2\,\text{V/m}) \hat{y}\) or \((2.8\times10^2\,\text{N/C}) \hat{y}\)</li>
+<li><span class="item-label">c.</span> \(\Delta E_p = 0.033\)&thinsp;J
+</li>
+<li><span class="item-label">22.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(E_p\text{(initial) } = 0.15\)&thinsp;J</li>
+<li><span class="item-label">b.</span> \(E_p\text{(final) } = 0.17\)&thinsp;J</li>
+<li><span class="item-label">c.</span> \(W_\text{external } = + 0.018\)&thinsp;J
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The potential energy is the work you must do in assembling the system of
+ charges, starting with the charges infinitely distant from one another [i.e.
+ \(E_p(\text{initial}) = 0\)].
+ The work done in assembling the pair \(Q_1\) and \(Q_2\) was calculated in
+ Problem&nbsp;1a.
+ The work done in bringing \(Q_3\) from infinity to the origin can be
+ calculated from knowing the potential at infinity (zero) and at the origin
+ due to \(Q_1\) and \(Q_2\) (Problem&nbsp;2a).
+ To find the potential energy change when \(Q_4\) is brought to the
+ point (0.3&thinsp;m,&thinsp;0), calculate the potential at this point due
+ to \(Q_1\), \(Q_2\) and \(Q_3\) and apply <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+ The result is:
+ 
+ 
+ \[\begin{aligned}E_p(\text{total}) & = & E_p(\text{initial}) + {\Delta}E_p (Q_1 + Q_2) +
+                     {\Delta}E_p(Q_3) + {\Delta}E_p(Q_4) \\
+                             & = &
+           0 + 0.36\,\text{J} + (2 \times 10^{-6}\,\text{C})
+           (-2.3 \times 10^5\,\text{V}) + Q_4 V_{123}(0.3\,\text{m},0)\end{aligned}\]
+
+ 
+ 
+ where \(V_{123}\)(0.3&thinsp;m,0) is the potential at (x = 0.3&thinsp;m,y = 0) due to
+ charges \(Q_1\), \(Q_2\), and \(Q_3\).
+ Alternatively you could use the expression:
+ 
+ \[E_p(\text{total}) =
+                k_e \sum\frac{Q_i Q_j}{r_{ij}}\]
+ 
+ where r\(_{ij}\) is the distance between the pair of charges Q\(_i\) and Q\(_j\),
+ and the summation is over all charge pairs.
+ Neither count a charge pair twice nor calculate the potential
+ energy of interaction of a charge with itself!
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">From mechanics, recall the relationship between a particle's kinetic 
+energy, velocity and mass.
+In this problem we know the particle's kinetic energy and mass, so we can
+solve for its velocity.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Recall that the electron charge is just the negative of the proton
+ charge.
+ You can easily get the answer in joules from the answer given.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">\(\int x^{-n}\,dx = \frac{1}{-n+1} x^{-n+1}\)
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}/\unit{C^{2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m116gr07.svg" alt="" class="physnet-fig"></figure>
+
+           Three point charges, each of charge
+           \(q = 2.0 \times 10^{-6}\,\text{C}\), are located at \((6,8)\), \((-6,8)\),
+           and at the origin of the above cartesian coordinate system.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the electric potential at the point (0,8) due
+           to these three point charges.</li>
+<li><span class="item-label">b.</span> Determine the electric field at the same point.</li>
+<li><span class="item-label">c.</span> A fourth charge, \(Q = 4 \times 10^{-6}\)&thinsp;C is placed at the point
+           \((0,8)\) having initially been infinitely distant from all other
+           charge.
+           Calculate the change in the potential energy of the charge \(Q\),
+           due to the above three charges.
+</li>
+<li><span class="item-label">3.</span> <figure class="fig-centered"><img src="figures/m116gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>\(q = + 3.0 \times 10^{-6}\)&thinsp;C,</li>
+<li>\(Q = + 5.0 \times 10^{-6}\)&thinsp;C, \(a = 2.5\)&thinsp;m
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the potential energy of the above assembly of charges.</li>
+<li><span class="item-label">b.</span> Calculate the new potential energy of the system if one of the
+           \(Q\)'s is interchanged (exchanged, switched) with \(q\).</li>
+<li><span class="item-label">c.</span> Use the work-energy principle to determine the work done by
+           the external agent which interchanged the charges in part&nbsp;(b).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;11 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;12 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

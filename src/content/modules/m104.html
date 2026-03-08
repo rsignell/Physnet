@@ -1,0 +1,235 @@
+<header class="module-header">
+  <h1 class="module-title">The Numerov Algorithm for Satellite Orbits <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State the 3-point finite difference approximation to a second
+    derivative <a href="../m4/" class="module-ref">MISN-0-4</a>.</li><li><strong>2.</strong> State Newton's Second Law <a href="../m14/" class="module-ref">MISN-0-14</a>.</li><li><strong>3.</strong> State Newton's Law of Gravitation <a href="../m101/" class="module-ref">MISN-0-101</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive the recurrence relation for the Numerov Algorithm, to
+    second order and in two dimensions, in a form suitable for use
+    in obtaining satellite trajectories numerically and showing all
+    steps in the derivation.</li><li><strong>K2.</strong> Derive equations for insertion of initial position and velocity
+    in the Numerov Algorithm and communicate a method of obtaining
+    a particular desired accuracy.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Orbits in an Inverse Square Law Force Field: A Computer Project”
+    (MISN-0-105).</li><li><strong>2.</strong> “Computer Algorithm For the Damped Driven Oscillator”
+    (MISN-0-39).</li></ul></div>
+
+
+</section>
+
+
+<p><span class="tex-unknown" title="unknown macro">\mNumber</span>104
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Many problems in science and engineering cannot be solved in terms of known
+functions,even when the underlying equation is known.
+Such a problem is the position as a function of time along a satellite
+orbit or, for that matter, along the earth's orbit around the sun.
+For such cases, one must resort to approximate numerical techniques; one
+such technique is examined in this module.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Equation of Motion</h2>
+
+<p><h3 id="pcap-2-a">2a. Newton's Second Law Plus the Law of Gravitation</h3>
+
+<p>We will numerically determine the trajectory of a satellite in the field of
+a single gravitational source, such as the earth.
+The equation governing such motion can be obtained by combining Newton's
+Second Law,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\vec{F} = m \frac{d^2\vec{r}(t)}{dt^2} \equiv m \vec{r}\,''(t),\]
+<p>with Newton's Law of Gravitation,
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\vec{F} = - \frac{G m m_E}{r^2(t)}\,\hat{r}(t).\]
+<p>We get:
+<p>\[\vec{r}''(t) = - \frac{G m_E}{r^2(t)}\,\hat{r}(t) =
+                        - \frac{G m_E}{r^3(t)}\,\vec{r}(t).\]
+<p>Here \(r(t)\) is the time changing position vector of the mass \(m\) and \(r(t)\)
+is the radially outward pointing unit vector at the position of the mass at
+<p>
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m104gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The vectors used to define a particle's position.</figcaption></figure>
+
+<p>
+time \(t\).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The origin of the coordinate system has been placed at the force
+center.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-2-b">2b. The Equation in Cartesian Coordinates</h3>
+
+We can write the above vector equation in Cartesian component form by
+writing \(\vec{r}\) in terms of Cartesian unit vectors \(\hat{x}\) and \(\hat{y}\):
+<p>\[\vec{r}(t) = x(t)\,\hat{x} + y(t)\,\hat{y}.\]
+<p>The reason for going over to Cartesian coordinates is that \(\hat{x}\) and
+\(\hat{y}\) are independent of time whereas \(r(t)\) is not.
+<p>That is, \(\hat{x}\) and \(\hat{y}\) form a time-independent reference system.
+Then taking components and writing the magnitude of \(\vec{r}\) in terms of
+\(\hat{x}\) and \(\hat{y}\),
+<p>\[|\vec{r}(t)|^2 = x^2(t) + y^2(t),\]
+<p>we get the \(\hat{x}\) equation:
+<p>\[x'' = - \frac{G\,m_E}{\left[ x^2(t) + y^2(t) \right]^{3/2}}\,x(t)
+           \equiv f(t)\,x(t).\]
+<p>Similarly for the y equation:
+<p>\[y\,''(t) = f(t)\,y(t).\]
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Second-Order Numerov Solution</h2>
+
+<p><h3 id="pcap-3-a">3a. “Net-Point” Notation</h3>
+
+We will here use the Numerov method of solving equations involving
+derivatives.
+This method has the advantage of being easily understandable, although
+it is less appropriate for orbit problems than are some other less
+understandable methods.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>In the Numerov method we deal with the solution functions, \(x(t)\) and \(y(t)\),
+as a series of numbers at “net-point” times that are integrally spaced:
+<p>\[t_n \equiv n\,\Delta.\]
+This is illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> for \(x(t)\).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m104gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A function \(x(t)\), specified at equally-spaced values of \(t\).</figcaption></figure></div>
+
+<p>
+We now introduce a more succinct notation for the coordinate positions at
+the net-point times:
+<p>\[x_n \equiv x(t_n) \equiv x(n \Delta),\]
+<p>\[y_n \equiv y(t_n) \equiv y(n \Delta),\]
+<p>and our equations become:
+<p>\[x_n\,'' = f_n x_n,\]
+<p>\[y_n\,'' = f_n y_n,\]
+<p>where:
+<p>\[f_n \equiv - G\, m_E\, \left( x_n^2 + y_n^2 \right)^{-3/2}.\]
+<p><h3 id="pcap-3-b">3b. Finite Difference Approximation</h3>
+
+We will now connect the consecutive values of \(x\) and \(y\) by using the finite
+difference approximation to any function's \(g\)'s second derivative:
+<p>\[g_n\,'' \approx \left( g_{n+1} - 2 g_n + g_{n-1} \right)/\Delta^2.\]
+<p><a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is the result of truncating the following series after
+the second term:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[g_{n+1} + g_{n-1} = 2 g_n + \Delta^2 g_n'' + (\Delta^4/12) g_n^{iv} + \ldots \]
+<p>The truncation is justifiable to the extent that numerical values of \(Delta\)
+will be small so that \(\Delta^4\) will be insignificant compared to
+\(\Delta^2\).
+Keeping that in mind, we apply <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> to the \(x\) and \(y\) functions
+of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and get, with a little rearrangement:
+<p>\[x_{n+1} = (2 + \Delta^2 f_n) x_n - x_{n-1}.\]
+<p>Similarly, the \(y\)-coordinate relation is:
+<p>\[y_{n+1} = (2 + \Delta^2 f_n) y_n - y_{n-1}.\]
+<p>Such truncation of the series at the second term results in an algorithm that
+is referred to as “being of second order.”
+<p><span class="tryit">Try it:</span>  Derive <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>.
+<p><h3 id="pcap-3-c">3c. The Recurrence Relations</h3>
+
+Remembering that \(f_n = - G m_E (x_n^2 + y_n^2)^{3/2}\), we see that knowledge
+of \(x_0\), \(y_0\), \(x_1\), and \(y_1\) will enable us to compute \(x_2\) and \(y_2\).
+Then, using \(x_1\), \(y_1\), \(x_2\), and \(y_2\), we can compute \(x_3\), and
+\(y_3\).
+This process can be repeated until \(x\) and \(y\) are known at any time you
+wish.
+The relations in <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(14)</a> are thus called “recurrence relations.”
+The only remaining problem is the specification of \(x_0\), \(y_0\), \(x_l\) and
+\(y1\).
+<p><h3 id="pcap-3-d">3d. Specifying Initial Position and Velocity</h3>
+
+In order to specify the trajectory, we usually find it most practical to
+specify position and velocity at some particular time.
+This means that we specify:
+<table class="physnet-table"><tbody><tr><td>position:</td><td>\(x_0\), \(y_0\).</td></tr><tr><td>velocity:</td><td>\(x_0'\), \(y_0'\).</td></tr></tbody></table>
+
+In order to convert \(x_0\), \(y_0\), \(x_0'\), \(y_0'\), into \(x0\), \(y0\), \(x_1\),
+and \(y_1\), we subtract <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> at \(t = 0\) to obtain:
+<p>\[x_1 - x_{-1} = 2 \Delta x_0',\]
+<p>while the \(t = 0\) sum <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(14)</a> are:
+<p>\[x_1 = (2 + \Delta^2 f_0)\, x_0 - x_{-1}.\]
+<p>The unknown \(x_{-1}\) can be eliminated from <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> to give:
+<p>\[x_1 = (1 + 2 \Delta^2 f_0)\,x_0 + \Delta x_0\,'.\]
+<p>Similarly,
+<p>\[y_1 = (1 + 2 \Delta^2 f_0)\,y_0 + \Delta y_0\,'.\]
+<p>To summarize, we specify the initial position and velocity components, \(x_0\),
+\(y_0\), \(x_0\,'\), \(y_0\,'\), and then use <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> to obtain \(x_1\) and
+\(y_1\).
+These are combined with \(x_0\) and \(y_0\) to start the recurrence relations
+<a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(14)</a>.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Choice of Step Size</h2>
+
+<p>Finally, how do you know what size time interval \(\Delta\) to use?
+You could attempt to assess the importance of successive terms in
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, but a more reliable method is to decrease \(\Delta\) until
+the predicted trajectory stabilizes.
+That is, until it does not change significantly when \(\Delta\) is made even
+smaller.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Summary</h2>
+
+<p>The algorithm, then, consists of:
+<ul>
+<li><span class="item-label">1.</span> a recurrence relation;</li>
+<li><span class="item-label">2.</span> two initial conditions; and</li>
+<li><span class="item-label">3.</span> a method of assuring desired accuracy.</li>
+</ul>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>I would like to thank Dr.&thinsp;N.&thinsp;R.&thinsp;Yoder for the many insights I gained in
+this area while collaborating with him.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The number of primes will indicate the order of the derivative with
+respect to time in this module. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Newton's Law of Gravitation” (MISN-O-101). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Kinematics: Circular Motion” (MISN-O-9). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For most satellite problems the center of the Earth can be taken to
+be a fixed force center.
+For the motion of the moon, however, that is insufficient due to its large
+mass.
+The methods presented here still apply, but the Earth's mass becomes
+replaced by the mass of the total system.
+Other quantities require careful interpretation.
+For further details, see “Two Body Kinematics and Dynamics” (MISN-O-45). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The Numerov method tends to allow errors to accumulate.
+This is all right if the errors are both positive and negative so they tend
+to cancel out.
+However, for orbit problems the errors tend to all have the same sign
+so a method like the Runge-Kutta is better. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Taylor's Series for the Expansion of a Function About a
+Point” (MISN-O-4). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Orbits in an Inverse Square Law Force Field: A Computer
+Project” MISN-0-105), wherein the presently derived algorithm is used to
+calculate orbits and trajectories. <a href="#fnref-7" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+One or both of these skills may be on the actual exam.</li>
+</ol>
+
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+
+<p>

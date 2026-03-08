@@ -1,0 +1,523 @@
+<header class="module-header">
+  <h1 class="module-title">Simple Harmonic Motion: Shifted Origin and Phase <span class="module-author">(Kirby Morgan)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: potential energy curve <a href="../m22/" class="module-ref">MISN-0-22</a>, simple harmonic
+    motion, displacement, equilibrium, amplitude, phase, initial time, angular
+    frequency, period, frequency <a href="../m25/" class="module-ref">MISN-0-25</a>.</li><li><strong>2.</strong> Calculate quantities such as displacement, velocity, force,
+    angular frequency, and potential energy for SHM <a href="../m25/" class="module-ref">MISN-0-25</a>.</li><li><strong>3.</strong> Find solutions of the equation: \(d^2x/dt^2\,+\,\omega^2\,x\,=\,0\).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define: equilibrium position, displacement from equilibrium
+    position, initial phase, restoring force, linear restoring force, Hooke's
+    law force.</li><li><strong>K2.</strong> State Hooke's law, identifying all quantities, and describe the
+    limitations on its validity.</li><li><strong>K3.</strong> Start with Newton's second law and Hooke's law and use them to
+    obtain the equation of motion for a simple harmonic oscillator.
+    Find its solutions and derive the relationship of frequency and period to
+    force constant and mass.</li><li><strong>K4.</strong> Define angular frequency, frequency and period in terms of the
+    mass \(m\) and force constant \(k\) for a simple harmonic oscillator.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Solve SHM problems involving an equilibrium position that is a
+    finite distance from the origin, and with a finite initial phase.
+    Solve for the force-constant, angular fequency, period, initial phase, and
+    maximum acceleration in terms of given quantities, symbolically and numerically.
+    Solve for the following functions of time as equations with symbols, numbers, and/or graphs
+    as requested: displacement, velocity, acceleration.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Dynamics of Harmonic Motion</h2>
+
+<p><h3 id="pcap-1-a">1a. Force Varies in Magnitude and Direction</h3>
+
+The force associated with simple harmonic motion
+
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>is probably a more complex kind of force than any you have encountered so
+far in dynamics.
+First you met forces of constant magnitude and direction.
+Then there was the centripetal force
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>which varied in direction but had a constant magnitude.
+Still another was the impulsive force,
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>whose direction was constant but whose magnitude varied.
+Here, the force associated with harmonic motion varies both in magnitude and
+direction.
+<p><h3 id="pcap-1-b">1b. Potential Energy For a Restoring Force</h3>
+
+The potential energy function \(E_p\) for a particle undergoing harmonic motion
+can be shown to have a minimum at its equilibrium position.
+Figure&nbsp;1 shows the potential energy curve for a particle oscillating between
+the limits \(x_1\) and \(x_2\), with \(x_0\) being the equilibrium position.
+The force acting on the particle is related to the potential energy by
+<p>\[F=-\frac{dE_p}{dx}\]
+<p>and thus is represented at any point by the negative value of the slope at
+that point.
+The slope is zero where the potential energy is minimum (at \(x = x_0\)),
+therefore the force is zero at the equilibrium position \(x_0\).
+Moreover, since the slope is positive (negative) to the right (left) of
+\(x_0\), the force always points towards \(x_0\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>,
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>making it a point of stable equilibrium.<span class="tex-unknown" title="unknown macro">\FnRef</span>1
+This force is called a restoring force because it always acts to accelerate
+the particle back toward the equilibrium position.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m26gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Potential Energy for a Restoring Force.</figcaption></figure></div>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m26gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Potential energy for SHM.</figcaption></figure>
+
+<p><h3 id="pcap-1-c">1c. Potential Energy for SHM</h3>
+
+The potential energy of a particle undergoing simple harmonic motion about
+the point \(x_0\) is:
+<p>\[E_p = \frac{1}{2} k (x - x_0)^2.\]
+<p>Given that the potential energy for SHM is \(E_p = k x^2/2\)
+for displacement about the point \(x = 0\),<span class="tex-unknown" title="unknown macro">\FnRef</span>1 <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is the more general
+expression for motion about \(x = x_0\).
+The potential energy curve for SHM (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>) has a minimum at the
+equilibrium position and is symmetrical about that point.
+Thus the limits of the motion, the points where the potential energy equals
+the total energy, are equally spaced about the equilibrium position.
+The force is found from the potential energy:
+<p>\[F = - dE_p/dx\]
+<p>\[F = - k (x - x_0).\]
+<p>which is the general form of the SHM force.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Force</h2>
+
+<p><h3 id="pcap-2-a">2a. Hooke's Law</h3>
+
+The relation \(F = - k (x - x_0)\) was first found empirically by Robert Hooke in
+the 17th century and so is known as Hooke's law.
+Hooke found that, for springs and other elastic bodies, the restoring force
+was proportional to the displacement from equilibrium provided the elastic
+solid was not deformed beyond a certain point called the elastic limit.
+Past this point the elastic body will not return to its original shape when
+the applied force is removed.
+It turns out that Hooke's law holds for many common materials and can be
+applied to almost any situation where the displacement is small enough.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Since by Hooke's law the force is linearly proportional to the displacement,
+it is called a linear restoring force or, equivalently, a “Hooke's law
+force.”
+The proportionality constant \(k\) is known as the “force constant.”
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m26gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Mass hung on a spring.  Note that the
+position of stable equilibrium is at \(x_0\), not at the origin.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Example: Mass Hung on a Spring</h3>
+
+Consider now a mass \(m\) attached to a spring of
+negligible mass and force constant \(k\).
+The spring is hung vertically as shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+The force acting to stretch the spring is just the weight of the mass, i.e.
+\(m g\).
+When the mass is hung from the spring it causes the spring to stretch from
+its original length until the magnitude of the restoring force equals the
+weight:
+<p>\[m g = | F | = k x_0\]
+<p>Here we have chosen \(x_0\) as the distance the mass stretches the spring.
+The mass-spring-gravity system thus has an equilibrium point at \(x = x_0\) and
+the resultant force is zero there.
+Now if the mass is displaced from \(x_0\), Hooke's law states that it will
+experience a force \(F = - k (x - x_0)\) acting so as to return the mass to
+\(x_0\) (so long as the elastic limit of the spring is not exceeded).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Equation of Motion</h2>
+
+<p><h3 id="pcap-3-a">3a. Displacement Equation from Hooke's Law</h3>
+
+Hooke's law, \(F = - k (x - x_0)\), and Newton's second law, \(F = m a\), can be
+combined to find the displacement equation for SHM.
+Writing the acceleration as \(d^2x/dt^2\), the equation of motion is:
+<p>\[m\frac{d^2x}{dt^2} = - k (x - x_0),\]
+<p>or:
+<p>\[\frac{d^2x}{dt^2} + \frac{k}{m} (x - x_0)=0.\]
+<p>Letting \(\omega^2 \equiv k/m\) and \(X \equiv x - x_0\), <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> can be
+rewritten in terms of \(X\), the displacement from equilibrium:
+<p>\[\frac{d^2X}{dt^2} + \omega^2 X = 0\]
+<p>which has the general solution
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[X = a \cos\omega t + b \sin\omega t\]
+<p>or the totally equivalent general solution: <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p>\[X = x(t) - x_0 = A \cos(\omega t + \delta_0).\]
+<p>This is just the displacement equation
+
+for a simple harmonic oscillator,
+where \(X = x - x_0\) is the displacement, \(A\) is the amplitude, \(\omega\) is
+the angular frequency, and \(\delta_0\) is the “initial phase.”
+<p><h3 id="pcap-3-b">3b. \(\omega\), \(\nu\) and \(T\) in Terms of Force Constant \(k\).</h3>
+
+The angular frequency,
+\(\omega\), frequency, \(\nu\), and period, \(T\),
+can all be expressed in terms of the force constant \(k\) and mass \(m\).
+Since \(\omega^2 = k/m\), the angular frequency is
+<p>\[\omega = (k/m)^{1/2}.\]
+<p>The period is found to be
+<p>\[T = \frac{2\pi}{\omega} = 2 \pi (m/k)^{1/2},\]
+<p>while the frequency is
+<p>\[\nu = \frac{1}{T} = \frac{1}{2\pi} (k/m)^{1/2}.\]
+<p>Observe that \(\omega\), \(\nu\), and \(T\) all depend only on \(k\) and \(m\) and are
+independent of the amplitude of the oscillations.
+<p><span class="tryit">Try it:</span>  What would \(\omega\), \(\nu\), and \(T\) be when \(m = 3\,\text{kg}\) and
+\(k = 48\,\text{N/m}\)? <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><h3 id="pcap-3-c">3c. Mass Hung on a Spring</h3>
+
+Suppose a spring of negligible mass and of force constant 9.8<span class="unit">&thinsp;N/m</span> hangs
+vertically and has a mass of 0.10<span class="unit">&thinsp;kg</span> attached to its free end.
+We define the direction of positive displacement \(x\) as being <em>downward</em>.
+The equilibrium point is found from <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> to be
+<p>\[x_0 = \frac{mg}{k} = \frac{(0.10\,\text{kg})(9.8\unit{m/s^{2}})}{9.8\,\text{N\,m}} = 0.10\,\text{m}\]
+<p>and Hooke's law can be written:
+<p>\[F = - (9.8\,\text{N/m})\,(x - 0.10\,\text{m}).\]
+<p>Suppose the mass is initially pulled up a distance 0.2<span class="unit">&thinsp;m</span> above its
+equilibrium position and then released.
+It will undergo SHM with its equation for displacement being
+<p>\[X(t) \equiv x(t) - x_0 = 0.20\,\text{m} \cos\left(\frac{9.9}{\,\text{s}}\,t + \pi\right)\,\]
+<p>where the angular frequency, 9.9<span class="unit">&thinsp;radians/s</span>, was found from <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>Note that \(\delta_0 = \pi\,\text{radians} = 180^\circ\) because the mass was
+released from the position of maximum negative displacement (hence zero
+velocity).
+<a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m26gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The oscillator point's position at
+time zero defines the oscillator's initial phase \(\delta_0\).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Scaled Phase Space</h2>
+
+<p>It is often useful to make a pictorial representation of the simultaneous
+values of an oscillator's position and velocity.
+If we scale the velocity axis by a factor of (1/\(\omega\)), the point
+representing the values of the two variables traverses a circle as time
+progresses (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+In fact, it is easy to see that the point goes around the circle clockwise
+with the same frequency as the oscillator.
+Thus in the time it takes the oscillator to execute one complete cycle of
+its straight-line motion, the point representing it in the scaled phase
+space goes around its circle once.
+Then the “angular velocity” \(\omega\) in the equation for the oscillator's
+linear displacement is just the angular velocity of the oscillator's point
+as it goes around its circle in the scaled phase space.
+Finally, on the scaled phase space diagram we can easily plot the
+oscillator's phase angle at time zero, its
+“initial phase,” \(\delta_0\)(see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Usefulness of Hooke's Law</h2>
+
+<p>Hooke's law, an empirical relation describing the elasticity of solids, has
+proved to be very helpful in the quantitative description of the SHM of such
+solids.
+Moreover the derivation of the equation of motion gives valuable insight
+into more complicated systems such as those where frictional forces are
+present.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+ the point beyond which an elastic body does not
+obey Hooke's law.
+<p> the position where the force is zero so
+a particle put there would not move.
+<p> the magnitude of the proportionality constant between
+force and displacement in Hooke's law.
+<p> a restoring force that is linearly
+proportional to displacement from equilibrium (a “linear restoring force”).
+<p> the phase of an oscillation at time zero.
+<p> a restoring force that is linearly
+proportional to displacement from equilibrium.
+<p> a force that always acts toward an equilibrium position.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Simple Harmonic Motion: Kinematics and Dynamics” (MISN-0-25). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Centripetal and \(g\) Forces in Circular Motion” (MISN-0-17). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Momentum, Force and Conservation of Energy” (MISN-0-15). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For help, see sequence [S-1] in this module's <em>Special Assistance
+Supplement</em>. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Small Oscillations” (MISN-0-28). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">If you have not encountered this before, here is all you need to
+know about general solutions of equations like <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> for this module:
+If the highest derivative in the equation is a second derivative, and
+if all terms in the equation contain the unknown function on the right
+side of each term, then any solution that satisfies the equation is in fact
+the unique solution to the equation if the solution contains two independent
+constants undetermined by the equation.
+The two undetermined constants in <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> are \(a\) and \(b\).
+The statement is very powerful, since it says that you need to know nothing
+about differential equations: just find a function with two constants
+that satisfies the equation (you must merely take derivatives) and you are
+guaranteed that you have the only solution!
+<a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> obviously satisfies the criterion.
+Note: If the highest derivative in such an equation is a first derivative,
+then only one undetermined constant is needed. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">We normally omit the word “radians” in stating units; so when you
+see \(\omega\) given in inverse seconds you should always take it to mean
+“radians per second.” <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See “Damped Mechanical Oscillations” (MISN-0-29). <a href="#fnref-8" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Problem&nbsp;8 also occurs in this module's <em>Model Exam</em>.
+<p> Note: Wherever appropriate, take the direction of  stretching the
+spring as the direction of positive displacement.
+<p><ol>
+<li><span class="item-label">1.</span> One end of a horizontal spring is fixed, the other end is found to
+be moved 8.0<span class="unit">&thinsp;cm</span> from its equilibrium position by a force of 20.0<span class="unit">&thinsp;N</span>.
+A mass of 4.0<span class="unit">&thinsp;kg</span> is then attached to that end of the spring and is pulled
+along a frictionless surface to a point 6.0<span class="unit">&thinsp;cm</span> from the equilibrium position.
+The mass is then released at time \(t = 0\) and it executes simple harmonic
+motion.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the force constant of the spring.</li>
+<li><span class="item-label">b.</span> What is the force exerted by the spring on the mass just before it
+is released?</li>
+<li><span class="item-label">c.</span> Write the equation for the displacement of the mass as a function
+of time after it is released.</li>
+<li><span class="item-label">d.</span> Calculate the period and frequency of the oscillations.
+</li>
+<li><span class="item-label">2.</span> A 3.0<span class="unit">&thinsp;kg</span> mass hangs from a spring.
+A 0.50<span class="unit">&thinsp;kg</span> body hung below the mass stretches the spring 5.0<span class="unit">&thinsp;cm</span> farther.
+The body is then removed and the mass starts oscillating.
+Find the frequency of the motion.</li>
+<li><span class="item-label">3.</span> A particle with mass 200.0<span class="unit">&thinsp;g</span> experiences a force whose associated
+potential energy function is \(E_p = (4.0\unit{J/m^{2}}) \cdot (x - 0.20\,\text{m})^2\).
+Find the angular frequency of the motion.</li>
+<li><span class="item-label">4.</span> A 50.0<span class="unit">&thinsp;kg</span> woman standing on the end of a diving board caused it to
+be lowered by 30.0<span class="unit">&thinsp;cm</span> and it then oscillated up and down with her on it.
+Assuming the restoring force of the board was linear, calculate the number of
+times she went up and down in 2.2<span class="unit">&thinsp;s</span>.</li>
+<li><span class="item-label">5.</span> A car can be considered to be mounted on a vertical spring for
+purposes of describing its up and down motion.
+If the springs of a \(1.5 \times 10^3\,\text{kg}\) car are adjusted so that the
+vibrations have a frequency of 3.0<span class="unit">&thinsp;Hz</span>, what is the spring's force constant?
+Find the vibrational frequency if four passengers, averaging 75<span class="unit">&thinsp;kg</span> each, ride
+in the car.</li>
+<li><span class="item-label">6.</span> An object hung on a vertical spring stretches it 15<span class="unit">&thinsp;cm</span>.
+The object is then pulled down another 20.0<span class="unit">&thinsp;cm</span> and released.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the displacement equation for the object.</li>
+<li><span class="item-label">b.</span> Find the velocity and acceleration as functions of time.
+</li>
+<li><span class="item-label">7.</span> A vertically hanging spring has a force constant of 150.0<span class="unit">&thinsp;N/m</span>.
+A 5.0&thinsp;kg mass is now hung from the end of the spring and the mass settles
+down to a new equilibrium position \(x_0\).
+Finally, the mass is displaced 0.20<span class="unit">&thinsp;m</span> below its equilibrium position and
+given an initial velocity of 2.0<span class="unit">&thinsp;m/s</span> downward.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write Hooke's law for the mass-spring system and calculate the
+displacement when the force is 30.0<span class="unit">&thinsp;N</span>.</li>
+<li><span class="item-label">b.</span> Find the displacement equation.</li>
+<li><span class="item-label">c.</span> Calculate the period.
+</li>
+<li><span class="item-label">8.</span> An object undergoing SHM has a mass of 2.0<span class="unit">&thinsp;kg</span> and force
+constant 60.0<span class="unit">&thinsp;N/m</span>.
+Its equilibrium position is at \(x_0 = 0.30\,\text{m}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write Hooke's law and find the position of the object when the
+force on it is 25<span class="unit">&thinsp;N</span>.</li>
+<li><span class="item-label">b.</span> Find the displacement equation if the object: (1) has zero
+velocity when it is at the point \(x = 0.80\,\text{m}\); and (2) at time zero is at
+the equilibrium position and is heading toward negative displacements.
+Then find \(x\) at \(t = 1.0\,\text{s}\).</li>
+<li><span class="item-label">c.</span> Calculate the period of the oscillations.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> a. \(k = \frac{-F}{x - x_0} =
+-\frac{(-20\,{\,\text{N}})}{0.08\,\text{m}} = 250\,\text{N/m}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> \(F = - k (x - x_0) = - (250\,\text{N/m})(0.06\,\text{m}) = - 15\,\text{N}\)</li>
+<li><span class="item-label">c.</span> \(\omega =
+           \left( \frac{250\,\text{N/m}}{4.0\,\text{kg}}\right)^{1/2} = 7.9\,\text{rad/s}\)</li>
+<li>\(x(t) = 0.060\)&thinsp;m \(\cos\left( \frac{7.9}{\,\text{s}} t \right)\)</li>
+<li><span class="item-label">d.</span> \(T = \frac{2 \pi}{\omega} = \frac{2 \pi}{7.9/{\,\text{s}}} = 0.80\,\text{s}\);
+           \(\nu = \frac{1}{T} = 1.3\,\text{Hz}\)
+</li>
+<li><span class="item-label">2.</span> \(k = \frac{-F}{x - x_0} = \frac{m g}{x - x_0} =
+              \frac{(0.50\,\text{kg})(9.8\unit{m/s^{2}})}{0.05\,\text{m}} = 98\,\text{N/m}\)</li>
+<li>\(\nu = \frac{1}{2 \pi} \left( \frac{98\,\text{N/m}}{3.0\,\text{kg}}\right)^{1/2} = 0.91\,\text{Hz}\)</li>
+<li><span class="item-label">3.</span> \(E_p = \frac{k}{2} \left( x-x_0 \right)^2 = 4.0\unit{J/m^{2}} \left( x - x_0 \right)^2\)</li>
+<li>\(\frac{k}{2} = 4.0\unit{J/m^{2}} \Rightarrow k = 8.0\,\text{N/m}\)</li>
+<li>\(\omega = \left( \frac{8.0\,\text{N/m}}{0.20\,\text{kg}} \right)^{1/2} = 6.3\,\text{rad/s}\)</li>
+<li><span class="item-label">4.</span> \(k = \frac{-F}{x - x_0} =
+\frac{mg}{x - x_0} = \frac{(50\,\text{kg})(9.8\unit{m/s^{2}})}{0.30\,\text{m}} = 1600\,\text{N/m}\)</li>
+<li>\(T = 2 \pi \left( \frac{50\,\text{kg}}{1600\,\text{N/m}}\right)^{1/2} = 1.1\,\text{s}\)</li>
+<li>\(\# = \frac{2.2\,\text{s}}{T} = \frac{2.2\,\text{s}}{1.1\,\text{s}} = 2 \text{ times}\)</li>
+<li><span class="item-label">5.</span> \(k=m(2\pi\nu)^2=(1500\,\text{kg})\left[2\pi(3.0\,\text{Hz})\right]^2 = 5.3 \times 10^5\,\text{N/m}\)</li>
+<li>\(\nu=\frac{1}{2\pi}\left(\frac{k}{m_\text{total}}\right)^{1/2}=\frac{1}{2\pi}
+              \left(\frac{5.3 \times 10^5\,\text{N/m}}{1800\,\text{kg}} \right)^{1/2} = 2.7\,\text{Hz}\)</li>
+<li><span class="item-label">6.</span> \(x_0 = \frac{mg}{k} \Rightarrow \frac{k}{m} = \frac{g}{x_0} =
+              \frac{9.8\unit{m/s^{2}}}{0.15\,\text{m}}\)</li>
+<li>\(\omega=\left(\frac{9.8\unit{m/s^{2}}}{0.15\,\text{m}} \right)^{1/2} = 8.1\,\text{rad/s}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(x - 0.15\,\text{m} = 0.20\,\text{m} \cos\left( \frac{8.1}{\,\text{s}} t \right)\)</li>
+<li><span class="item-label">b.</span> \(v=\frac{dx}{dt}=(0.20\,\text{m})(8.1/\,\text{s})
+                                   \left[-\sin\left(\frac{8.1}{\,\text{s}}t\right)\right]\)</li>
+<li>\(a = \frac{dv}{dt} = (-1.6\,\text{m/s})
+              \left( \frac{8.1}{\,\text{s}} \right)\cos\left( \frac{8.1}{\,\text{s}} t \right) =
+    - 13\unit{m/s^{2}} \cos\left( \frac{8.1}{\,\text{s}} t \right).\)
+</li>
+<li><span class="item-label">7.</span> \(x_0=\frac{mg}{k}=\frac{(5.0\,\text{kg})(9.8\unit{m/s^{2}})}{150\,\text{N/m}}=0.33\,\text{m}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(F = (-150\,\text{N/m})(x - 0.33\,\text{m})\)</li>
+<li>displacement \( = (x - 0.33\,\text{m}) = \frac{-30\,\text{N}}{-150\,\text{N/m}} = 0.20\,\text{m}\)</li>
+<li><span class="item-label">b.</span> \(\omega = \left( \frac{150\,\text{N/m}}{5.0\,\text{kg}} \right)^{1/2} = 5.5\,\text{rad/s}\)</li>
+<li>\(x - 0.33\,\text{m} = A \cos\left( \frac{5.5}{\,\text{s}} t + \delta_0 \right)\)</li>
+<li>\(v=\frac{dx}{dt}=-A(\frac{5.5}{\,\text{s}})\sin\left(\frac{5.5}{\,\text{s}}t+\delta_0 \right)\)</li>
+<li>at \(t = 0\): \(0.20\,\text{m} = A \cos\delta_0\)</li>
+<li>\(2\,\text{m/s} = - A \left( \frac{5.5}{\,\text{s}} \right) (\sin \delta_0)\)</li>
+<li>\((0.20\,\text{m})^2 + \left( \frac{2\,\text{m/s}}{5.5/\,\text{s}} \right)^2 =
+              A^2 (\cos^2\delta_0 + \sin^2\delta_0) = A^2\)</li>
+<li>\(A = 0.42\,\text{m}\)</li>
+<li>\(\delta_0=\cos^{-1}\left(\frac{0.20\,\text{m}}{0.42\,\text{m}}\right)=62^\circ=1.1\,\text{rad}\)</li>
+<li>\(x-0.33\,\text{m}=0.42\,\text{m} \cos\left( \frac{5.5}{\,\text{s}} t + 1.1\,{\,\text{rad}} \right)\)</li>
+<li><span class="item-label">c.</span> \(T = \frac{2 \pi}{\omega} = \frac{2 \pi}{5.5/{\,\text{s}}} = 1.1\,\text{s}\)
+</li>
+<li><span class="item-label">8.</span> a. \(F = (- 60\,\text{N/m}) (x - 0.30\,\text{m})\)
+<ol>
+
+</ol>
+</li>
+<li>\(F = 25\,\text{N}\); \(x = - 0.12\,\text{m}\)</li>
+<li><span class="item-label">b.</span> \(x-0.30\,\text{m} = 0.50\,\text{m} \cos\left(\frac{5.5}{\,\text{s}} t + \frac{\pi}{2}\right) \);
+           \(x(1.0\,\text{s}) = 0.65\,\text{m}\)</li>
+<li><span class="item-label">c.</span> \(T = 1.1\,\text{s}\)
+</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m26gr05.svg" alt="" class="physnet-fig"></figure>
+<br>
+
+<p> The force curve is related to the potential energy curve by \(F = - dE_p/dx\):
+<p> <figure class="fig-centered"><img src="figures/m26gr06.svg" alt="" class="physnet-fig"></figure>
+<br>
+
+ Now draw the force curve for: \(E_p = \frac{1}{2} k (x - x_0)^2.\) <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\cos(\theta + \phi) = \cos\phi \cos\theta - \sin\phi \sin\theta\) <br>
+
+ \(X = A \cos(\omega t + \delta_0) =
+ A [\cos\delta_0 \cos\omega t - \sin\delta_0 \sin\omega t]\) <br>
+
+ Let: \(a \equiv A \cos\delta_0\); \(b \equiv - A \sin\delta_0\). <br>
+
+ Then: \(X = a \cos\omega t + b \sin\omega t\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(\omega = \left( \frac{k}{m} \right)^{1/2} =
+ \left( \frac{48\,\text{N/m}}{3\,\text{kg}} \right)^{1/2} = 4\,\text{rad/s}\)
+ <br>
+
+ \(T = \frac{2 \pi}{\omega} =
+ \frac{2 \pi}{4\,\text{s}} = \frac{\pi}{2}\)&thinsp;s; 
+ \(\nu = \frac{1}{T} = \frac{1}{\pi/2\,\text{s}} = \frac{2}{\pi}\,\text{Hz}\)
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body"> \(\omega = \left(\frac{k}{m} \right)^{1/2} =
+ \left( \frac{9.8\,\text{N/m}}{0.1\,\text{kg}} \right)^{1/2} = 9.9\,\text{rad/s}\)
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\(x = A \cos(\omega t + \delta_0)\) <br>
+
+ \(v = dx/dt = -A \omega \sin(\omega t + \delta_0)\) <br>
+
+ at \(t = 0\); \(v = - A \omega \sin\delta_0\) <br>
+
+ if \(v = 0\) then \(\delta_0 = 0\) (or \(n \pi\)); if \(v \neq 0\) then \(\delta_0 \neq 0\)  <br>
+
+ for \(\delta_0 \neq 0\); \(X_i = A \cos\delta_0\) \((t = 0)\) <br>
+
+ \(| \cos\delta_0 | < 1\): \(X_i < A\) <br>
+
+ i.e. amplitude is larger than initial displacement \(X_i\).
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\(F = - dE_p/dx = - k (x - x_0)\)
+<p> <figure class="fig-centered"><img src="figures/m26gr07.svg" alt="" class="physnet-fig"></figure>
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> An object undergoing SHM has a mass of 2.0<span class="unit">&thinsp;kg</span> and force constant
+60.0<span class="unit">&thinsp;N/m</span>.
+Its equilibrium position is at \(x_0 = 0.30\,\text{m}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write Hooke's law and find the position of the object when the
+force on it is 25<span class="unit">&thinsp;N</span>.</li>
+<li><span class="item-label">b.</span> Find the displacement equation if the object has zero velocity at
+the point \(x = 0.80\,\text{m}\).
+Find \(x\) at \(t = 1.0\,\text{s}\).</li>
+<li><span class="item-label">c.</span> Calculate the period of the oscillations.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;8.</li>
+</ol>
+
+</section>
+

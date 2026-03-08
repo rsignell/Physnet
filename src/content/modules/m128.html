@@ -1,0 +1,128 @@
+<header class="module-header">
+  <h1 class="module-title">The Numerov Algorithm for Magnetic Field Trajectories <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Use the Taylor series to expand a function about a point
+    <a href="../m4/" class="module-ref">MISN-0-4</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive the recurrence relation for the Numerov Algorithm, to
+    second order and in two dimensions, in a form suitable for use
+    in obtaining the trajectory of a charged particle in an arbitrary
+    magnetic field.  Show all steps in the derivation.</li><li><strong>K2.</strong> Derive equations for insertion of initial position and velocity
+    in the Numerov Algorithm and communicate a method of obtaining
+    a particular desired accuracy.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Trajectory of a Charged Particle in a Magnetic Field:
+    Cyclotron Orbits (a computer project)” (MISN-0-127).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction and Description</h2>
+
+<p>Many problems in science and engineering
+can not be solved in terms of known functions, even when the under
+lying equation is known. Such a problem is the trajectory of a charged
+particle in a non-uniform magnetic field. For such cases one must
+resort to general numerical techniques: one of the most common is
+examined in this module.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Study Material</h2>
+
+<p>The force on a charged particle in a magnetic field is the Lorentz
+force:
+<p>\[\vec{F} = q \vec{v} \times \vec{B}\]
+<p>where \(q\) is the charge of the particle, \(\vec{v}\) is its velocity, and \(\vec{B}\)
+is the value of the magnetic field at the present location of the
+particle. The present force on the particle is \(\vec{F}\). The force
+influences the particle's trajectory through Newton's Second Law:
+<p>\[\vec{F} = m \vec{a}\]
+<p>where \(m\) is the particle's mass.
+<p>In our case \(\vec{B}\) will always be at right angles to \(\vec{v}\), as is obvious
+from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, hence \(\vec{v}\) can change \(\vec{B}\)'s direction but not its
+magnitude. We will restrict ourselves to motion in the \(x\)-\(y\) plane
+by putting \(\vec{v}\) there initially and putting \(\vec{B}\) in the \(z\)-direction:
+<p>\[\vec{B} = B(x,y) \hat{z}\]
+<p>\[\vec{v} = x' \hat{x} + y' \hat{y}\]
+<p>where a prime denotes derivative with respect to time: \(x'\equiv dx/dt\).
+<p>Equating the forces in <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> and taking components (you do it) we get:
+<p>\[\begin{aligned}mx'' & = q y' B \\ my'' & = -q x' B \\ mz'' & = 0\end{aligned}\]
+
+<p>Forget the third (\(z\)) equation since its solution does not couple to those
+of the \(x\)- and \(y\)-equations.
+Note that the \(x\)- and \(y\)-equations are “coupled”, in that \(x''\) involves
+\(y'\) and \(y''\) involves \(x'\).
+If we define \(a(x,y) \equiv (q/m) B(x,y)\) then <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> can be written:
+<p>\[x'' = ay'\]
+<p>\[y'' = -ax'\]
+<p>or, equivalently,
+<p>\[v'_x(t) = a(t) v_y(t); v'_y(t) = -a(t) v_x(t)\,.\]
+<p>In the Numerov method we deal with the solution functions \(x(t)\),
+\(y(t)\), \(v_x(t)\), and \(v_y(t)\), as a series of numbers at “net-point” times
+that are integrally spaced:
+<p>\[t_n = n \Delta\,.\]
+<p>This is illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> for \(x(t)\).
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m128gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A function \(x(t)\), specified at equally spaced values of \(t\).</figcaption></figure></div>
+
+<p>We then write:
+<p>\[\begin{aligned}x_n     & \equiv x(t_n) \equiv x(n\Delta) \\ y_n     & \equiv y(t_n) \equiv y(n\Delta) \\ v_{x,n} & \equiv v_x(t_n) \equiv v_x(n\Delta) \\ v_{y,n} & \equiv v_y(t_n) \equiv v_y(n\Delta)\end{aligned}\]
+
+              
+and our <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> become:
+<p>\[\begin{aligned}x'_n     & = v_{x,n} \\ y'_n     & = v_{y,n} \\ v'_{x,n} & = a_n v_{y,n} \\ v'_{y,n} & = -a_n v_{x,n}\,.\end{aligned}\]
+
+<p>These are four coupled equations.
+<p>We now connect the consecutive values of the \(x\)'s and \(v\)'s by
+making Taylor's Series expansions of each of them.
+For example:
+<p>\[x(t+\Delta) = x(t) + \Delta x'(t) + \frac{\Delta^2}{2!}x''(t) + \ldots\]
+                
+We will choose a sufficiently small so that terms beyond the second
+will be negligible compared to the first two terms. Then in our
+net-point notation and using <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>:
+<p>\[\begin{aligned}x_{n+1}   & = x_n + \Delta v_{x,n} \\ v_{x,n+1} & = v_{x,n} + \Delta a_n v_{y,n}\end{aligned}\]
+
+<p><span class="tryit">Try it:</span>  You derive the equations for \(y_{n+1}\) and \(v_{y,n+1}\).
+<p>Given the \(t=0\) position and velocity components,
+<p>\[x_0;\; y_0;\; v_{x,0};\; v_{y,0}\]
+<p>we can use the four “recurrence” relations <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> to generate the four
+position and velocity components at time \(t = \Delta\):
+<p>\[x_1;\; y_1;\; v_{x,1};\; v_{y,1}\,.\]
+<p>Putting the latter back into the right hand side of the recurrence
+relations, we get the values at time \(t = 2 \Delta\). Continuing this process,
+we can find the trajectory as far into the future as we wish. We
+must only be careful to put the correct value of \(\vec{B}\) into \(a\) at each
+space-point (\(x_n\),\(y_n\)).
+<p>Finally, how does one know what size time interval \(\Delta\) to use?
+One could attempt to assess the importance of successive terms in
+the Taylor's Series, but a more reliable method is to decrease \(\Delta\)
+until the predicted trajectory stabilizes; that is, until it does
+not change significantly when \(\Delta\) is made even smaller.  However, one
+must be aware that if \(\Delta\) is continually made even smaller, a point will
+be reached where the errors will start increasing due to the computer's
+finite-word-size limit.
+<p>The algorithm, then, consists of:
+<ul>
+<li><span class="item-label">1.</span> recurrence relations</li>
+<li><span class="item-label">2.</span> method of assuring desired accuracy</li>
+<li><span class="item-label">3.</span> insertion of initial conditions.</li>
+</ul>
+                
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+

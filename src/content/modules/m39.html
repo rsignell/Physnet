@@ -1,0 +1,181 @@
+<header class="module-header">
+  <h1 class="module-title">Computer Algorithm for the Damped Driven Oscillator <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Expand a given function about a given point using Taylor's series 
+    <a href="../m4/" class="module-ref">MISN-0-4</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Given the force acting on a damped driven oscillator along with the 
+    oscillator's position and velocity at a specified time, derive a Numerov 
+    type algorithm for the approximate numerical calculation of the oscillator's 
+    position at all past and future times.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Response of a Damped Driven Oscillator” (MISN-0-30).</li><li><strong>2.</strong> “Damped Driven Oscillations; Mechanical Resonances” (MISN-0-31).</li><li><strong>3.</strong> “Laplace Transform Solution for the Damped Driven Oscillator” (MISN-0-47).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Derivation</h2>
+
+<p><h3 id="pcap-1-a">1a. Equation for a Damped Driven Oscillator</h3>
+
+The equation to be solved is that of the damped harmonically-driven
+oscillator
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>acted on by the force:
+ 
+ \[F(t) = - k x(t) - \lambda v(t) + F_0 \cos(\omega t).\]
+<p>Since
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[F(t) = m a(t) = m \frac{dx(t)}{dt} \equiv mx''(t),\]
+<p>and
+<p>\[v(t) = \frac{dx(t)}{dt} \equiv x'(t),\]
+<p>our equation to be solved is:
+<p>\[m x''(t) + k x(t) + \lambda x'(t) - f(t) = 0,\]
+<p>where
+<p>\[f(t) \equiv F_0 \cos(\omega t).\]
+<p><h3 id="pcap-1-b">1b. Approximate Derivatives by Finite Differences</h3>
+
+We now make two power series expansions
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>about time t:
+<p>\[x(t + \Delta)\,=\,x(t)\,+\,\Delta x'(t)\,+\,(\Delta^2/2)x''(t)\,+\,
+(\Delta^3/6)x'''(t)\,+\ldots\]
+<p>\[x(t - \Delta)\,=\,x(t)\,-\,\Delta x'(t)\,+\,(\Delta^2/2)x''(t)\,-\,
+(\Delta^3/6)x'''(t)\,+\ldots\]
+<p>We will choose \(\Delta\) sufficiently small so that we can disregard all terms
+after \(\Delta^2\) without incurring much error.
+Then add and subtract the above equations to obtain:
+<p>\[x(t + \Delta) + x(t - \Delta) \simeq 2x(t) + \Delta^2 x''(t)\]
+<p>\[x(t + \Delta) - x(t - \Delta) \simeq 2\Delta x'(t)\]
+<p>or
+<p>\[x''(t) \simeq \frac{1}{\Delta^2} \left[x(t + \Delta)
+- 2x(t) + x(t - \Delta)\right]\]
+<p>\[x'(t) \simeq \frac{1}{2\Delta}\left[x(t + \Delta) - x(t - \Delta)\right]\]
+<p>which are often quoted in calculus courses.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-1-c">1c. Net-Point Times</h3>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m39gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The labeling system for time net-points.</figcaption></figure></div>
+
+<p>We need a more succinct labeling system at this point or we won't be able to
+see the forest for the trees.
+We define discrete “net-point” times as: \(t_n \equiv n\Delta\), where
+\(\Delta\) is some small time interval (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+We can then rewrite the derivatives at time \(t_n\) as:
+<p>\[x_n'' \simeq \frac{1}{\Delta^2} (x_{n+1} - 2 x_n + x_{n-1})\]
+<p>\[x_n' \simeq \frac{1}{2\Delta} (x_{n+1} - x_{n-1})\]
+<p>Then at time \(t_n\) our basic <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> becomes:
+<p>\[m x_n'' + k x_n + \lambda x_n' - f_n = 0.\]
+<p>Substituting for \(x_n''\) and \(x_n'\):
+<p>\[\frac{m}{\Delta^2}\left(x_{n+1} - 2 x_n + x_{n-1}) + k x_n +
+       \frac{\lambda}{2\Delta}(x_{n+1} - x_{n-1}\right) -f_n = 0\]
+<p>Collecting coefficients of the \(x\) values, we get:
+<p>\[x_{n+1} = A x_n + B x_{n-1} + \Delta^2 C_n\]
+<p>where:
+\[\begin{aligned}A & = & \left(2 - \Delta^2 \frac{k}{m}\right)/D \\
+B & = & -\left(1 - \Delta \frac{\lambda}{2m}\right)/D \\
+C_n & = & \left(\frac{f_n}{m}\right)/D \\
+D & = & 1 + \Delta \frac{\lambda}{2m} \\\end{aligned}\]
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Application</h2>
+
+<p><h3 id="pcap-2-a">2a. Iterating the Recurrence Relation</h3>
+
+Equation (4) is called a three point recurrence relation because it relates \(x\)
+at three successive time net-points.
+If you know \(x_0\) and \(x_1\), you can use this relation to calculate \(x_2\).
+Then knowing \(x_1\) and \(x_2\), you can calculate \(x_3\), etc.
+You can keep up this recurrence procedure until you have reached the time for
+which you wish to know the solution.
+For example, this might be a time sufficiently large so that transient
+effects have died away and only the steady state solution remains.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m39gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The Calculated Curve.
+Draw a smooth curve through the plotted points and you have \(x(t)\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Starting the Iteration</h3>
+
+With a three-point recurrence relation one can calculate values at successive
+time net-points, but one needs two adjacent values in order to get started.
+In the example cited in the preceding paragraph, one needed \(x_0\) and \(x_1\)
+in order to start the procedure.
+Those two initial values generally come from a specification of a “complete
+set of initial conditions.”
+<p>Our <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, being a second order equation for \(x\), always requires that one
+specify two independent conditions on \(x\).
+<p>A common case is where both the position and velocity are known at some
+instant of time.
+Here we will call that time \(t=0\); hence we know \(x_0\) and \(x_1\) by solving
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> at \(n=0\) for \(x_{-1}\) (Note: \(v_0 = x_0'\)), and using that to
+<p>eliminate \(x_{-1}\) from <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> for \(n=0\).
+We thus obtain \(x_1\) in terms of \(x_0\) and \(v_0\) (usually given quantities):
+\[x_1 = \left(1 - \Delta^2 \frac{k}{2m} \right) x_0 +
+
+\left(\Delta - \Delta^2 \frac{\lambda}{2m} \right)v_0 + \Delta^2\frac{f_0}{2m}.\]
+Now the algorithm is complete.
+Put in \(x_0\) and \(v_0\) to get \(x_0\) and \(x_1\), \(x_0\) and \(x_1\) to get \(x_2\),
+\(x_1\) and \(x_2\) to get \(x_3\), etc.
+<p><span class="tryit">Try it:</span>  How would you obtain position values for times earlier than the
+one for which \(x\) and \(v\) are initially known?
+Answer: To see the answer, replace each of the following letters by its
+successor in the alphabet: mdfzshud cdksz.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Damped Driven Oscillations; Mechanical Resonances”
+(MISN-0-31). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Particle Dynamics&thinsp;-&thinsp;The Laws of Motion” (MISN-0-14). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Taylor's Series for the Expansion of a Function About a
+Point” (MISN-0-4). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The second equation above is used in “Response of a Damped
+Driven Oscillator” (MISN-0-30) where a microcomputer is utilized in
+finding solutions. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The force acting on a damped driven oscillator is
+\(F\,=\,-\,kx - \lambda v + F_0 \cos(\omega t)\);
+the oscillator's initial position and speed are \(x_0\) and \(v_0\).  
+Derive without notes, a complete Numerov-type algorithm for the (approximate)
+calculation of the oscillator's position at all times.  
+NOTE: The algorithm is to include the method of use of any three point 
+recurrence relation such as:
+\[x_{n+1} = A x_n + B x_{n-1} + \Delta^2 C_n\]
+
+where:
+\[\begin{aligned}A & = & \left(2 - \Delta^2 \frac{k}{m}\right)/D \\
+B & = & -\left(1 - \Delta \frac{\lambda}{2m}\right)/D \\
+C_n & = & \left(\frac{f_n}{m}\right)/D \\
+D & = & 1 + \Delta \frac{\lambda}{2m} \\\end{aligned}\]
+
+and boundary conditions such as: 
+\[x_1 = \left(1 - \Delta^2 \frac{k}{2m} \right) x_0 +
+\left(\Delta - \Delta^2 \frac{\lambda}{2m} \right)v_0 + \Delta^2\frac{f_0}{2m}.\]
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>

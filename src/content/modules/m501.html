@@ -1,0 +1,171 @@
+<header class="module-header">
+  <h1 class="module-title">Central Force Motion <span class="module-author">(C.P.Frahm)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> For a given mechanical system use Lagrange's equations to obtain the
+    equations of motion for the system <a href="../m498/" class="module-ref">MISN-0-498</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> For arbitrary central force motion (a) determine the expression for the
+    Lagrangian in terms of center of mass and relative coordinates, using the
+    reduced mass concept.
+    (b) Determine the first integrals of motion and the generalized form of
+    Kepler's second law.
+    (c) Determine the differential equation for r as a function of angle.
+    (d) Define turning points and effective potentials and explain how turning
+    points can be determined from a graph of the effective potential.</li><li><strong>K2.</strong> For planetary like motion obtain the general equation of the orbit and
+    classify the orbits in terms of conic sections as a function of the energy.
+    Include definitions and/or explanations.</li><li><strong>K3.</strong> Derive Kepler's third law for planetary like motion.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a particular central force describe qualitatively the orbit using
+    a graph of effective potential.
+    Set up and solve the differential equation for the orbit.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>There are two types of motion which play especially important roles in
+classical as well as quantum) mechanics - harmonic motion and central-force
+motion. Harmonic motion was covered in units 5 and 6 using Newtons laws of
+motion. Central-force motion has been reserved for this unit to illustrate
+the use of the Lagrangian formulation. All of the results of this unit can
+be obtained, of course, without recourse to the Lagrangian formulation. In
+fact you may have obtained them in a previous mechanics course. If that is
+the case, this unit will serve as a review of central-force motion as well
+as an example of the application of the Lagrangian technique.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> <ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Read sections 8.1 and 8.2 of Marion.
+<p>Exercise: Fill in the details leading to eq.&thinsp;8.4 of Marion.</li>
+<li><span class="item-label">b.</span> Read section 8.3 of Marion.
+<p>Exercise: Fill in any missing details in the analysis leading to 
+eqs.&thinsp;8.7, 8.10, 8.12 and 8.14 of Marion.</li>
+<li><span class="item-label">c.</span> Read section 8.4 of Marion.
+<p>Exercise: Fill in any missing details in the analysis leading to
+eqs.&thinsp;8.17 and 8.20.</li>
+<li><span class="item-label">d.</span> Read sections 8.5 and 8.6 of Marion.
+</li>
+<li><span class="item-label">2.</span> Read section 8.7 of Marion. Note that \(a\) and \(b\) are generally
+called the <em>semi-major</em> and <em>semi-minor</em> axes while \(2a\) and \(2b\)
+are called the <em>major</em> and <em>minor</em> axes.
+<p>Exercise: Fill in any missing details in the analysis leading to eq.&thinsp;8.39
+and 8.41.
+<p>Review the definitions and properties of conic sections (as needed) by
+working through Sect.&thinsp;3.
+<p>Exercise: Fill in any missing details in the analysis leading to 
+eqs.&thinsp;8.42 - 8.44  and 8.48.
+<p>Read section 8.9 and the first two paragraphs of section 8.10 in Marion.
+You are not responsible for this material, but it is worth reading through
+one time.</li>
+<li><span class="item-label">3.</span> Work problems&nbsp;8-4, 8-13, 8-14, 8-15 and 8-23 in Marion.</li>
+</ol>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Conic Sections</h2>
+
+<p>A1l conic sections can be represented by the single 
+mathematical expression
+<p>\[\frac{\alpha}{r} = 1 + \epsilon \cos \theta\,,\]
+<p>where \(r\) and \(\theta\) are radial and angular variables respectively
+while \(\epsilon\) and \(\alpha\) are constants:
+<p>\[\epsilon = \text{ eccentricity},\]
+<p>\[\alpha = \text{ semi-latus rectum}.\]
+<p>The name conic section comes from the observation that these
+curves are precisely those obtained as the perimeters of slices
+(or sections) through a right circular cone.
+<p><ol>
+<li><span class="item-label">1.</span> ellipse - the locus of points for which the sum of the 
+distances from two fixed points (\(F\), \(F'\) = foci) is a constant
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+<p>By definition for any point \(P\) on the ellipse:
+<p>\[r + r' = 2 Q = \text{ constant}.\]
+<p>Inspection of the figure then shows that
+<p>\[OV = FB = a = \text{ semimajor axis},\]
+<p>and
+<p>\[VV' = 2 a = \text{ major axis } = \text{ intervertical distance}.\]
+<p>For convenience let:
+<p>\[b = O B = \text{ semiminor axis},\]
+<p>\[\epsilon = \text{ interfocal distance}.\]
+<p>Then inspection of the figure again shows that
+<p>\[OF = a \epsilon\,,\]
+<p>\[b = a \sqrt{1 - \epsilon^2}\,.\]
+<p>To determine the equation of the ellipse note that the
+definition gives:
+<p>\[(r')^2 = (2a - r)^2 = 4 a^2 - 4ar + r^2\,,\]
+<p>while the law of cosines gives
+<p>\[(r')^2 = r^2 + 4 a^2 \epsilon^2 - 2(2 a \epsilon) r \cos (\pi - \theta)\,,\]
+<p>\[= r^2 + 4 a^2 \epsilon^2 + 4 a \epsilon r \cos \theta\,.\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m501gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. .</figcaption></figure></div>
+
+<p>Equating these and rearranging gives
+<p>\[\frac{a (1 - \epsilon^2)}{r} = 1 + \epsilon \cos \theta\,.\]
+<p>This is the equation of a conic section with
+<p>\[\epsilon = \text{ eccentricity}\]
+<p>(justifying the earlier choice of notation)
+<p>\[\alpha = a (1 - \epsilon^2) = \text{ semi-latus rectum}\,.\]
+<p>Letting \(\theta = \pi / 2\) in the equation of the ellipse and
+consulting the figure reveals that
+<p>\[FA = \alpha\,.\]</li>
+<li><span class="item-label">2.</span> parabola - the locus of points equidistant from a straight
+line (\(D\) = directrix) and a point (\(F\) = focus)
+(see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m501gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. .</figcaption></figure></div>
+
+<p>For convenience let
+<p>\[\frac{a}{2} = FV = VO\,.\]
+<p>Then from the figure for any point \(P\) on the parabola
+<p>\[r + r \cos \theta = a\,,\]
+<p>so that
+<p>\[\frac{a}{r} = 1 + \cos \theta\,.\]
+<p>This is the equation of a conic section with an eccentricity
+of 1 and with
+<p>\[\alpha = a = \text{ semi-latus rectum}.\]
+<p>Letting \(\theta = - \pi / 2\), shows that
+<p>\[FA = \alpha\,.\]</li>
+<li><span class="item-label">3.</span> hyperbola - the locus of points for which the difference
+between the distances from two fixed points (\(F\), \(F'\) = foci)
+is a constant (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m501gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. .</figcaption></figure></div>
+
+<p>By definition for any point \(P\) on the hyperbola
+<p>\[r - r' = 2 a = \text{ constant}.\]
+<p>Inspection of the figure then shows that
+<p>\[OV = a\,.\]
+<p>As in the case of the ellipse it is convenient to define
+<p>\[\epsilon = \frac{\text{interfocal distance}}{\text{intervertical distance}}\,.\]
+<p>The definition of a hyperbola then gives
+<p>\[(r')^2 = (2 a + r)^2 = 4 a^2 + 4ar + r^2\,,\]
+<p>which with the law of cosines gives
+<p>\[(r')^2 = r^2 + 4 a^2 \epsilon^2 - 4(4 a \epsilon) r \cos \theta\,.\]
+<p>Equating and rearranging yields
+<p>\[\frac{a (\epsilon^2 - 1)}{r} = 1 + \epsilon \cos \theta\,.\]</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

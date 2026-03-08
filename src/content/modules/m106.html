@@ -1,0 +1,231 @@
+<header class="module-header">
+  <h1 class="module-title">Derivation of Orbits in Inverse Square Law Force Fields <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State the law of Conservation of Energy for a body acted on by a
+    conservative force <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>2.</strong> State the law of Conservation of Angular Momentum for planar 
+    motion <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>3.</strong> Derive the gravitational potential energy function starting from the 
+    Universal Law of Gravitation <a href="../m107/" class="module-ref">MISN-0-107</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Derive Kepler's first law, starting from Conservation of Angular 
+    Momentum, Conservation of Energy, and the potential energy function
+    corresponding to the Universal Law of Gravitation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Orbits in an Inverse Square Law Force Field:  A Computer Project”
+    (MISN-0-105).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The derivation of the elliptical orbits of the planets constitutes
+one of the greatest triumphs of Newtonian Mechanics.
+Perhaps you can imagine Newton's excitement when he completed his derivation
+and realized that for the first time in history the motions of the other
+planets and the earth would now be understood.
+In this unit the shape of orbits produced by the Law of Universal Gravitation
+is rigorously derived.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Derivation of Orbit Integral</h2>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m106gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Polar coordinates.</figcaption></figure>
+
+<p>Our notation is shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The position of the object is denoted by the polar coordinates \(r\) and
+\(\theta\), respectively, from the force-center and from the \(x\)-axis.
+Conservation of angular momentum  for motion in this \(x\)-\(y\) plane gives:
+<p>\[L = m r^2 d\theta/dt = \text{ constant},\]
+<p>yielding:
+<p>\[d\theta = \frac{L}{m r^2} dt.\]
+<p>Conservation of energy gives:
+<p>\[E = \frac{m (dr/dt)^2}{2} + \frac{L^2}{2 I} -
+           \frac{\gamma m\, m_E}{r} = \text{ constant},\]
+<p>where we have added radial and angular kinetic energies to the gravitational
+potential energy.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>We write the moment of inertia as \(I = m r^2\) and collect the numerator
+factors of the gravitational potential energy into a single symbol:
+<p>\[\alpha \equiv \gamma m\, m_E .\]
+<p>Solving for radial velocity,
+<p>\[\frac{dr}{dt} = \sqrt{\frac{2 E}{m} - \frac{L^2}{m^2 r^2} +
+                       \frac{2 \alpha}{m r}},\]
+<p>yielding:
+<p>\[dt = \frac{dr}{\sqrt{(2 E/m) - (L^2/m^2 r^2) +(2 \alpha /m r)}}.\]
+<p>Substituting this into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, we have:
+<p>\[d\theta = \frac{L\,dr}{m r^2 \sqrt{(2 E/m) - (L^2/m^2 r^2) +
+(2 \alpha /m r)}}.\]
+<p>We can integrate, with one integration constant, to find the connection
+between \(r\) and \(\theta\) at various points on the orbit:
+<p>\[\theta - \theta_0 = \int \frac{L\,dr}{m r^2 \sqrt{(2 E/m) -
+                            (L^2/m^2 r^2) + (2 \alpha /m r)}}.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m106gr03.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A fragment of a page from Pierce's
+Integrals (see text).</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Equation of the Orbit</h2>
+
+<p>There are several ways one can go about finding the integral in
+<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+One is to bring one power of \(r\) inside the square root:
+<p>\[\theta - \theta_0 = \frac{L}{m} \int \frac{dr}{r \sqrt{(2 E/m)(r^2) -
+                           (L^2/m^2) + (2 \alpha /m)(r)}}.\]
+<p>and look up this form in a table of integrals.
+For example, <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> contains a fragment of a page from Pierce.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Another way of solving the integral, not recommended as a general practice
+unless you have plenty of time available, is to put the integrand into
+a trivially-integrable form.
+In the present case, this can be effected by defining:
+<p>\[\beta \equiv \frac{L^2}{m \alpha} \qquad \text{and} \qquad
+       \epsilon \equiv \sqrt{1 + (2 E \beta/\alpha)}.\]
+<p>Then one can easily show that <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is algebraically equivalent
+to:
+<p>\[\theta - \theta_0 = \int \frac{\beta\,dr}{\epsilon\, r^2
+\sqrt{1 - \left( \frac{1}{\epsilon} -
+                 \frac{\beta}{\epsilon r} \right)^2}}.\]
+<p>Let \(x \equiv (1/\epsilon) - (\beta/\epsilon r)\) so
+\(dx = (\beta/\epsilon r^2)\,dr\) and the integral becomes:
+<p>\[\theta - \theta_0 = \int \frac{dx}{\sqrt{1 - x^2}}.\]
+<p>Finally, let \(x = \sin y\) so:
+<p>\[dx = \cos y\, dy = \sqrt{1 - x^2}\,dy,\]
+<p>and:
+<p>\[dy = (dx)/\sqrt{1 - x^2}.\]
+<p>Then the final form of the integral is:
+<p>\[\theta - \theta_0 = \int \, dy = y = \sin^{-1} x =
+          \sin^{-1} \left( \frac{1}{\epsilon} -
+          \frac{\beta}{\epsilon r} \right),\]
+or:
+<p>\[\sin\left(\theta - \theta_0 \right) = \frac{1}{\epsilon} -
+                                     \frac{\beta}{\epsilon r}.\]
+<p>In order to set \(\theta_0\) at a convenient value, we first solve for \(r\):
+<p>\[r(\theta) = \frac{\beta}{1 -
+\epsilon \sin\left( \theta - \theta_0 \right)}.\]
+<p>We will require that \(\theta = 0^{\circ}\) gives the largest value of radius, an
+arbitrary but aesthetically pleasing requirement.
+Then:
+<p>\[r(0) = \frac{\beta}{1 + \epsilon \sin\theta_0},\]
+<p>and it is obvious that we want \(\theta_0 = - \pi/2\).
+Then:
+<p>\[r(\theta) = \frac{\beta}{1 - \epsilon \sin(\theta + \pi/2)},\]
+<p>or:
+<p>\[r(\theta) = \frac{\beta}{1 - \epsilon \cos \theta}.\]
+<p>This is the equation of the orbit.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Elliptical Orbits</h2>
+
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m106gr02.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. An elliptical orbit about a force
+center.</figcaption></figure></div>
+
+<p>To show that <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> corresponds to an ellipse requires that we
+show it can be put into the form:
+<p>\[\left( \frac{x - x_c}{a} \right)^2 +
+\left( \frac{y - y_c}{b} \right)^2 = 1,\]
+<p>where \(x_c\) and \(y_c\) are the coordinates of the center of the ellipse, and
+\(a\) and \(b\) are the semi-major and semi-minor axes.
+These quantities are illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+It is obvious that, in our case, \(y_c = 0\).
+The semi-major axis is easily calculated:
+<p>\[a = \frac{r(0) + r(\pi)}{2} =
+            \frac{\beta}{1 - \epsilon^2}.\]
+<p>The semi-minor axis is the value of \((y = r\sin\theta)\) at the orbit point
+where  \((x = r\cos\theta)\) is at the center of the ellipse.
+This is:
+<p>\[x_c = a - r(\pi) = \frac{r(0) - r(\pi)}{2} =
+                          \frac{\beta \epsilon}{1 - \epsilon^2}.\]
+<p>Now \(x_c\) is also given by:
+<p>\[x_c = r_c \cos\theta_c =
+          \frac{\beta\cos\theta_c}{1 - \epsilon\cos\theta_c},\]
+<p>so equating the two forms for \(x_c\) we get:
+<p>\[\frac{\beta\cos\theta_c}{1 - \epsilon \cos\theta_c} =
+       \frac{\beta\epsilon}{1 - \epsilon^2},\]
+<p>and it is obvious by inspection that:
+<p>\[\cos\theta_c = \epsilon.\]
+<p>Then the semi-minor axis is:
+<p>\[b = r_c \sin\theta_c =
+       \frac{\beta}{1 - \epsilon \cos\theta_c} \sqrt{1 - \cos^2\theta_c} =
+       \frac{\beta}{\sqrt{1 - \epsilon^2}}.\]
+<p>Thus to prove that \(r(\theta)\) forms an ellipse, we must show that:
+<p>\[\left( \frac{x - x_c}{a} \right)^2 + \left( \frac{y}{b} \right)^2 =
+1,\]
+<p>where
+<p>\[x = r \cos\theta = \frac{\beta \cos\theta}{1 - \epsilon \cos\theta},
+ \qquad y = r \sin\theta = \frac{\beta \sin\theta}{1 - \epsilon \cos\theta},\]
+<p>and:
+<p>\[x_c = \frac{\beta\epsilon}{1 - \epsilon^2}; \qquad
+       a = \frac{\beta}{1 - \epsilon^2}; \qquad
+       b = \frac{\beta}{\sqrt{1 - \epsilon^2}}.\]
+<p>This demonstration of algebraic manipulation is left to the reader to
+complete.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>We should also note the alternative forms,
+<p>\[a = \frac{\beta}{1 - \epsilon^2} = - \frac{\alpha}{2E} =
+\frac{\alpha}{2 |E|},\]
+<p>and
+\[b = \frac{\beta}{\sqrt{1 - \epsilon^2}} = \frac{L}{\sqrt{2 m |E|}}.\]
+<p>Note that \(E\) is negative because the mass \(m\) is bound to the force center:
+it can not escape unless it achieves positive total energy.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Also since \(E\) is negative, the eccentricity \(\epsilon\) (\(= \cos\theta_c\))
+is between 0 and 1:
+<p>\[\epsilon \equiv \sqrt{1 + (2 E \beta)/\alpha} =
+       \sqrt{1 - (2 |E| \beta)/\alpha} \le 1.\]
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Derivation of the Constants of the Motion for Central
+Forces” (MISN-0-58). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">B.&thinsp;O.&thinsp;Peirce, <em>A Short Table of Integrals</em>, Ginn and Company,
+Boston (1929), form #183. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">An “elegant alternative” derivation is given in <em>Classical
+Mechanics</em>, V.&thinsp;Barger and M.&thinsp;Olsson, McGraw-Hill, New York (1973),
+p.&thinsp;124-126. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Gravitational Potential Energy” (MISN-0-107). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Derive Kepler's first law, starting from Conservation of Angular 
+Momentum, Conservation of Energy, and the potential energy function
+corresponding to the Law of Universal Gravitation.
+Use: \(\beta \equiv L^2/(m \alpha)\),
+     \(\epsilon \equiv \sqrt{1 + (2 E \beta/\alpha)}\),
+     \(x \equiv (1/\epsilon) - (\beta/\epsilon r)\).</li>
+</ol>
+
+<p> From B.&thinsp;O.&thinsp;Peirce's <em>A Short Table of Integrals</em>, Ginn and
+Company (1929), with \(X = a + bx + cx^2\) and \(q = 4ac - b^2\):
+<p>\[\int \frac{dx}{\sqrt{X}} = \frac{1}{\sqrt{c}} \log\left( \sqrt{X} +
+         x\sqrt{c} + \frac{b}{2 \sqrt{c}} \right).\]
+<p>\[\int \frac{dx}{\sqrt{X}} =
+   \frac{1}{\sqrt{c}} \sinh^{-1} \left( \frac{2cx + b}{\sqrt{q}} \right).\]
+<p>\[\int \frac{dx}{\sqrt{X}} =
+   \frac{-1}{\sqrt{-c}} \sin^{-1} \left( \frac{2cx + b}{\sqrt{-q}} \right).\]
+<p>\[\int \frac{dx}{x\sqrt{X}} =
+   \frac{1}{\sqrt{-a}} \sin^{-1} \left( \frac{bx + 2a}{x\sqrt{-q}} \right).\]
+<p>\[\int \frac{dx}{x\sqrt{X}} =
+   \frac{-1}{\sqrt{a}} \sinh^{-1} \left( \frac{2a + bx}{x\sqrt{q}} \right).\]
+<p>\[\int \frac{dx}{x\sqrt{X}} =
+   - \frac{2 \sqrt{X}}{bx}, \text{ if } a = 0.\]
+<p>\[\int \frac{dx}{x^2\sqrt{X}} =
+   - \frac{\sqrt{X}}{ax} - \frac{b}{2a} \int \frac{dx}{x\sqrt{X}}.\]
+<p></section>
+

@@ -1,0 +1,415 @@
+<header class="module-header">
+  <h1 class="module-title">Angular Acceleration in Circular Motion <span class="module-author">(J.Borysowicz and P.Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Given a force at right angles to an axis, calculate the torque it
+    produces about that axis <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>2.</strong> Calculate the moment of inertia, of a given planar set of point
+    masses, with respect to a perpendicular axis <a href="../m41/" class="module-ref">MISN-0-41</a>.</li><li><strong>3.</strong> State the relationship between the angular velocity of a point and
+    its radius and tangential velocity <a href="../m9/" class="module-ref">MISN-0-9</a>.</li><li><strong>4.</strong> State Newton's second law <a href="../m15/" class="module-ref">MISN-0-15</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> For circular motion, differentiate \(s = \theta r\) to derive the
+    relation between linear acceleration, angular acceleration, and radius.</li><li><strong>K2.</strong> Starting from Newton's second law, derive the relation between
+    torque, moment of inertia, and angular acceleration for a point mass in
+    circular motion.</li><li><strong>K3.</strong> For circular motion with constant angular acceleration, derive the
+    general expressions for angular velocity and angular acceleration as
+    functions of time (involves integrals).
+    Check the answers by differentiation.</li><li><strong>K4.</strong> For circular motion with constant angular acceleration, eliminate the
+    time variable between the angular displacement and angular velocity
+    expressions to obtain angular velocity as a function of angular displacement
+    and angular acceleration.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> For circular motion with constant angular acceleration, solve problems involving
+    torque, moment of inertia, angular velocity, rotational displacement, and time.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Two Agents of Change</h2>
+
+<p>In some instances of circular motion we observe only uniformity.
+The motion of planets around the sun or of the moon around the earth are
+examples.
+In many other cases, however, the rate of motion speeds up or slows down
+with time.
+A spinning figure skater, a flywheel, or the wheel of a bicycle will usually
+have an increasing or decreasing speed of rotation.
+One cause of change in the speed of rotation is a change in the moment of
+inertia of the rotating body.
+An example is arm extension by a spinning ice skater.
+Another cause of change in circular motion is an applied external torque.
+For example, a bicycle's wheel will increase its rotational speed due to
+torque exerted through the pressure of the bicyclist's foot on the pedal.
+In this module we will examine the relationship between applied torque and
+circular motion.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Angular and Linear Acceleration</h2>
+
+<p><h3 id="pcap-2-a">2a. Angular Acceleration:  \(\vec{\alpha} = d\vec{\omega}/dt\)</h3>
+
+When the angular velocity of a point moving with circular motion is not
+constant, we describe its rate of change by introducing an
+angular acceleration in a manner analogous to linear acceleration.
+Recall that acceleration in linear motion is defined as the rate of change
+of velocity with time:
+<p>\[\vec{a} = \frac{d\vec{v}}{dt}.\]
+<p> In a similar manner, the angular acceleration
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>is defined as the rate of change of angular velocity with time:
+<p>\[\vec{\alpha} = \frac{d\vec{\omega}}{dt}.\]
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m33gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The tangential component \(\vec{a}_T\), of
+acceleration \(\vec{a}\), is that component perpendicular to \(\vec{r}\).</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Relationship of \(\alpha\) to \(a_T\)</h3>
+
+For the case of circular motion we can avoid the complexities of derivatives
+of vectors by relating the magnitude of the tangential acceleration 
+to the magnitude of the angular acceleration.
+The tangential component of the acceleration is defined as that
+component which is perpendicular to the radius vector, as shown
+in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p>For circular motion, velocity is related to angular velocity by:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[v = \omega r. \qquad \text{(circular motion)}\]
+<p>This velocity is entirely tangential (\(\vec{v}_T = \vec{v}\)).
+<p>Then taking the time derivative of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> and using the chain rule:
+<p>\[a_T = \frac{dv}{dt} = r \frac{d\omega}{dt} + \omega \frac{dr}{dt} =
+r \frac{d\omega}{dt} \qquad \text{(circular motion)}\,.\]
+<p>Thus:
+<p>\[a_T = r \alpha \qquad \text{(circular motion)}.\]
+<p>Note that in these equations the units of \(\omega\) must be radians
+per unit time and the units of \(\alpha\) must be radians per unit time squared.
+<p><h3 id="pcap-2-c">2c. Relationship of \(\vec{\alpha}\) to \(\vec{a}\)</h3>
+
+For a point that is \(\vec{r}\) away from a circular rotator's center of rotation, the
+point's angular acceleration can be calculated from its linear acceleration
+by the relation:
+<p>\[\vec{\alpha} =
+(\vec{r} \times \vec{a})/r^2; \qquad \text{(rigid rotator)}\,.\]
+<p>This can be derived by taking the time derivative of the definition of 
+angular velocity,
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[\vec{\omega} = (\vec{r} \times \vec{v})/r^2\,,\]
+<p>and then making use of:
+\(\vec{v} \times \vec{v} = 0\), \(\vec{\alpha} \equiv d\vec{\omega}/dt\) and, for
+a point on a rigid rotator, \(dr/dt = 0\). <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Producing Angular Acceleration</h2>
+
+<p><h3 id="pcap-3-a">3a. \(\tau = I \alpha\)</h3>
+
+For a point mass in circular motion, for example on the rim of a flywheel at
+radius \(r\), we can easily relate torque to angular acceleration.
+We start with the mass's tangential acceleration [see Equation (4)]:
+<p>\[a_T = \alpha r\,.\]
+<p>By Newton's second law, the tangential force \(F_T\) is:
+<p>\[F_T = m r \alpha. \qquad \help{1}\]
+<p>so the magnitude of the torque \(\vec{\tau}\) is:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\[\tau = r F_T = I \alpha\,.\]
+<p>where \(I \equiv m r^2\) is the moment of inertia of that mass about
+the rotation axis.
+Although it will not be shown here, the fact that \(\alpha\) is the same for all
+points in a rigidly rotating object allows one to prove that:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[\tau_\text{ext} = I \alpha.\]
+<p>for the object as a whole.
+Here \(I\) is the total moment of inertia of the object about the axis,
+obtained by summing the values of \(I\) for the object's component masses, and
+\(\tau_\text{ext}\) is the net external torque about the axis.
+<p><h3 id="pcap-3-b">3b. Deriving \(\vec{\tau} = I \vec{\alpha}\)</h3>
+
+For a general object, angular acceleration is related to torque by
+a vector equation.
+Consider a mass \(m\) in a rigid rotator at position \(\vec{r}\) from the center of
+rotation.
+If force \(\vec{F}\) acts on this mass, we can take the cross product of
+\(\vec{r}\) with both sides of Newton's second law to get:
+<p>\[\vec{r} \times \vec{F} = m \vec{r} \times \vec{a}\,.\]
+<p>Eliminating \(\vec{a}\) for \(\vec{\alpha}\) and using \(I \equiv m r^2\) and
+\(\vec{\tau} \equiv \vec{r} \times \vec{F}\), get:
+<p>\[\vec{\tau} = I \vec{\alpha}\,.\]
+<p>The same relation could be obtained by integrating over all the mass of an
+extended object, with \(\vec{\tau}\) becoming the external torque on the entire
+object.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Of course the torque, moment of inertia and angular acceleration are all
+to be computed with respect to the system's designated center of rotation.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Constant Torque Case</h2>
+
+<p><h3 id="pcap-4-a">4a. Angular Kinematics</h3>
+
+The simplest applications of \(\tau = I \alpha\) will be those in which
+all three quantities \(\tau\), \(I\), and hence \(\alpha\), are constant.
+Just as in the case of linear motion,
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>one can then easily integrate the equations relating \(\theta\), \(\omega\), and
+\(\alpha\) to obtain those quantities as functions of time.
+First we integrate \(d\omega /dt = \alpha\), assuming constant \(\alpha\), to
+obtain:
+<p>\[\omega = \omega_0 + \alpha t ; \qquad (\text{constant } \alpha).\]
+<p>Next we integrate \(d\theta/dt \equiv \omega\) (see above) to obtain:
+<p>\[\theta = \theta_0 + \omega_0 t + \alpha t^2/2; \qquad (\text{constant } \alpha).\]
+<p><a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> can easily be checked by differentiation plus evaluation
+at \(t = 0\).
+<p><h3 id="pcap-4-b">4b. From a Dead Start, \(\omega = (2 \alpha \theta)^{1/2}\)</h3>
+
+We can eliminate the time variable between Eqs. (7) and (8) for the case
+\(\theta_0 = \omega_0 = 0\) and obtain the useful relation:
+<p>\[\omega = (2 \alpha \theta)^{1/2}; \qquad \text{(from a dead start, constant } \alpha)\,.\]
+<p><h3 id="pcap-4-c">4c. Constant-\(\alpha\) and Constant-\(a\) Equations</h3>
+
+Most of us find it easy to remember the circular-motion
+constant-\(\alpha\) equations by analogy with the linear-motion constant-a equations:
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td><strong>Kinematics Magnitudes</strong></td></tr><tr><td></td><td></td><td>Dead-Start</td></tr><tr><td>Position</td><td>Velocity</td><td>Velocity</td></tr><tr><td>\(s = s_0 + v_0 t + a t^2/2\)</td><td>\(v = v_0 + a t\)</td><td>\(v = (2 a s)^{1/2}\)</td></tr><tr><td>\(\theta = \theta_0 + \omega_0 t + \alpha t^2/2\)</td><td>\(\omega = \omega_0 + \alpha t\)</td><td>\(\omega = (2 \alpha \theta)^{1/2}\)</td></tr></tbody></table>
+</div>
+
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td><strong>Force/Torque, Energy, Power Magnitudes</strong></td></tr><tr><td>Kinetic energy</td><td>Force/Torque</td><td>Constant-Velocity Power</td></tr><tr><td>\(E_k = m v^2/2\)</td><td>\(F = m\,a\)</td><td>\(P = F v\)</td></tr><tr><td>\(E_k = I \omega^2/2\)</td><td>\(\tau = I \alpha\)</td><td>\(P = \tau \omega\)</td></tr></tbody></table>
+</div>
+
+Some of the equations shown in these two tables can be rewritten in vector form so
+they have validity beyond linear and circular motion.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>We wish to thank Bill Lane, Steve Smith and their students for suggestions that
+have greatly improved this module.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The Greek letter \(\alpha\), pronounced “al\('\)&thinsp;fa,” is
+universally used to denote angular acceleration. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Kinematics: Circular Motion” (MISN-0-9) for a
+derivation of Equation (3). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The more usual, but equivalent, definition of angular velocity is
+\(\omega \equiv d\theta/dt\) and
+\(\hat{\omega} \equiv (\vec{r} \times \vec{v})/|\vec{r} \times \vec{v}|\).
+Thus \(\vec{\omega}\) is perpendicular to the plane defined by \(\vec{r}\)
+and \(\vec{v}\).
+The quantity \(\vec{\omega}\) cannot be defined by a single equation: for example
+\(\vec{\omega} \neq d\theta/dt\) because \(\theta\) is not a vector quantity. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-9">In vector notation, <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> is written: \(\tau = r F_\perp\), where \(F_\perp\)
+is the component of \(\vec{F}\) perpendicular to the radius vector \(\vec{r}\). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-4">See “Torque and Angular Momentum in Circular Motion”
+(MISN-0-34). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">When \(\vec{\tau}\) and \(\vec{\alpha}\) are not in the same direction,
+\(I\) is a tensor quantity. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Kinematics: Motion in One Dimension,” (MISN-0-7). <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The angular displacement of a particle moving in a circular path
+of radius \(R\) is given as a function of time by:
+<p>\[\theta (t) = a t^2 + b t + c,\]
+<p>where \(a\), \(b\), and \(c\) are constants; \(\theta\) is to be expressed in
+radians and \(t\) in seconds.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What are the units of the constant \(a\)? </li>
+<li><span class="item-label">b.</span> What are the units of the constant \(b\)? </li>
+<li><span class="item-label">c.</span> What is the angular velocity of the particle at time \(t\)? </li>
+<li><span class="item-label">d.</span> What is the particle's angular acceleration at time \(t\)? </li>
+<li><span class="item-label">e.</span> What is its (tangential) velocity at time \(t\)? </li>
+<li><span class="item-label">f.</span> Is this tangential speed constant? </li>
+<li><span class="item-label">g.</span> What is the tangential acceleration of this particle at time \(t\)?
+ </li>
+<li><span class="item-label">h.</span> Is this tangential acceleration constant? 
+</li>
+<li><span class="item-label">2.</span> A Volvo marine engine goes from 1800<span class="unit">&thinsp;rpm</span> to 5400<span class="unit">&thinsp;rpm</span> in 24<span class="unit">&thinsp;seconds</span>.
+Assume the engine's moment of inertia is 100<span class="unit">&thinsp;ft&thinsp;lb&thinsp;s<sup>2</sup></span>.
+What average torque is developed by the engine? 
+<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">3.</span> Assume the mass of a coasting flywheel is 140<span class="unit">&thinsp;kg</span>, essentially
+all located at the rim at a radius of 1.2<span class="unit">&thinsp;m</span> from the axis of rotation.
+The bearings are located at a radius of 4<span class="unit">&thinsp;cm</span> and the initial angular
+velocity is 6<span class="unit">&thinsp;rad/s</span>.
+By the end of one minute, friction has decreased the angular velocity to
+5.4<span class="unit">&thinsp;rad/s</span>.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The moment of inertia of the flywheel. </li>
+<li><span class="item-label">b.</span> The flywheel's average angular acceleration.  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">c.</span> The average frictional torque exerted by the bearings on the
+flywheel.  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">d.</span> The total average frictional force exerted by the bearings on
+the flywheel.  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+</li>
+<li><span class="item-label">4.</span> The flywheel of a miniature steam engine has a mass
+of 0.20<span class="unit">&thinsp;kg</span>, located almost entirely along the rim at a radius of 8.0<span class="unit">&thinsp;cm</span>.
+While the flywheel is rotating at 120<span class="unit">&thinsp;rpm</span> it is decoupled from the engine
+and a braking force of 0.050<span class="unit">&thinsp;N</span> is applied to the rim until the flywheel
+stops.
+For the time period during which the braking occurs, determine the
+flywheel's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> moment of inertia </li>
+<li><span class="item-label">b.</span> angular acceleration </li>
+<li><span class="item-label">c.</span> tangential acceleration of a point on the rim </li>
+<li><span class="item-label">d.</span> total braking time  <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">e.</span> total number of turns (a “turn” is one complete rotation)  <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> No</li>
+<li><span class="item-label">2.</span> 2&thinsp;\(a\)</li>
+<li><span class="item-label">3.</span> 2&thinsp;\(a R\)</li>
+<li><span class="item-label">4.</span> <span class="unit">&thinsp;rad/s</span></li>
+<li><span class="item-label">5.</span> \((2at + b)\,R\)</li>
+<li><span class="item-label">6.</span> \(2at + b\)</li>
+<li><span class="item-label">7.</span> <span class="unit">&thinsp;rad/s<sup>2</sup></span></li>
+<li><span class="item-label">8.</span> Yes</li>
+<li><span class="item-label">9.</span> <span class="unit">&thinsp;1570&thinsp;ft&thinsp;lb</span></li>
+<li><span class="item-label">10.</span> \(-0.01\unit{rad/s^{2}}\)</li>
+<li><span class="item-label">11.</span> 50.4<span class="unit">&thinsp;N</span>, opposite to direction of flywheel velocity at bearings.</li>
+<li><span class="item-label">12.</span> 201.6<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span></li>
+<li><span class="item-label">13.</span> 2.016<span class="unit">&thinsp;N&thinsp;m</span>, opposite to direction of flywheel angular velocity
+vector.</li>
+<li><span class="item-label">14.</span> 4.02<span class="unit">&thinsp;turns</span></li>
+<li><span class="item-label">15.</span> \(-0.25\unit{m/s^{2}}\)</li>
+<li><span class="item-label">16.</span> \(1.28 \times 10^{-3}\unit{kg\,m^{2}}\)</li>
+<li><span class="item-label">17.</span> 4.02<span class="unit">&thinsp;s</span></li>
+<li><span class="item-label">18.</span> \(-3.13\unit{rad/s^{2}}\)</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Note that the vectors \(\vec{r}\) and \(\vec{F}_T\) are at right angles so that
+ \(\theta\) is 90° in the expression:
+ \(| \vec{r} \times \vec{F}_T | = r F_T \sin\theta\).
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\tau = I\,\alpha\).
+ Therefore, averaging over both sides (\(I\) is constant):
+ \(\bar{\tau} = I\,\bar{\alpha}\).
+<p> Also: \(\bar{\alpha} = \frac{\Delta \omega}{\Delta t}\).
+ <span class="tex-unknown" title="unknown macro">\furtherhelp</span>3
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">What are the units of angular velocity?
+<p> What are the units of frequency?
+<p> Which one is given in the problem?
+<p> Which one occurs in the equation you are using?
+<p> What is the conversion factor between them?
+<p> If you are unable to answer any of the above questions, see the Input
+ Skills reference in this module's <em>ID Sheet</em> or see the Volume's
+ <em>Index</em>.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Do Problem&nbsp;2 completely and successfully before attempting this one.</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">First calculate the torque exerted on the flywheel, without considering
+ where it is coming from.</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The torque is exerted by the bearings at their surface of contact with
+ the flywheel.</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\(\Delta\omega = \alpha\,\Delta t\). Also, see [S-2].
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Under constant angular acceleration, \(\theta = (1/2) \alpha t^2\).
+ How many radians are there in a “turn”?
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">We take the time-derivative of both sides of the beginning equation and that yields the
+final equation.  Here are the details.<br>
+
+(1) For the left-hand side of the equation:<br>
+
+ Expand the left side, the angular velocity, in Cartesian Coordinates:
+ \(\vec{\omega} = \omega_x \hat{x} + \omega_y \hat{y} + \omega_z \hat{z}\).<br>
+
+ Take the time-derivative of both sides, using <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> of MISN-0-1, and using the fact that the
+ Cartesian unit vectors are time-independent (\(d\hat{x}/dt = 0\), etc.).
+ Also make use of \(\alpha_x \equiv d\omega_x/dt\), etc.
+ Since \(\alpha_x \hat{x} + \alpha_y \hat{y} + \alpha_z \hat{z} = \vec{\alpha}\),
+ this results in \(\alpha\) as the answer for the left side of the equation.
+ 
+ (2) For the right-hand side of the equation (and putting in our new left side):<br>
+
+ \(\vec{\alpha} = \frac{d}{dt}\left(\frac{\vec{r}\times\vec{v}}{r^2}\right)\)<br>
+
+ \(= \vec{\alpha} = \frac{d(\vec{r}\times\vec{v})}{dt} \left(r^{-2}\right) + 
+ (\vec{r}\times\vec{v}) \frac{d}{dt}(r^{-2})\).<br>
+
+ Now \(r\) is independent of time for our constant-radius motion so the last term is zero and:<br>
+
+ \(\vec{\alpha} = \frac{d(\vec{r}\times\vec{v})}{dt} \left(r^{-2}\right)\)<br>
+
+ \( = \left(\frac{d\vec{r}}{dt} \times \vec{v}\right)\left(r^{-2}\right) + 
+ \left(\vec{r}\times\frac{d\vec{v}}{dt}\right) \left(r^{-2}\right)\).<br>
+
+ The first term on the right side is \((\vec{v}\times\vec{v}/r^2)\) which is zero
+ because the cross product of any vector with itself is zero [see MISN-0-2, <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>,
+ for the case \(\theta = \phi\)].  The second term is \((\vec{r} \times \vec{a})/r^2\).
+ Then:<br>
+
+ \(\alpha = \left(\vec{r} \times \vec{a}\right) \left(r^{-2}\right)\).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 on this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> The flywheel of a miniature steam engine has a mass
+of 0.20<span class="unit">&thinsp;kg</span>, located almost entirely along the rim at a radius of 8.0&thinsp;cm.
+While the flywheel is rotating at 120<span class="unit">&thinsp;rpm</span> it is decoupled from the engine and
+a braking force of 0.050<span class="unit">&thinsp;N</span> is applied to the rim until the flywheel stops.
+For the time period during which the braking occurs, determine the flywheel's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> moment of inertia</li>
+<li><span class="item-label">b.</span> angular acceleration</li>
+<li><span class="item-label">c.</span> tangential acceleration of a point on the rim</li>
+<li><span class="item-label">d.</span> total braking time</li>
+<li><span class="item-label">e.</span> total number of turns
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+</section>
+

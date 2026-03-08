@@ -1,0 +1,679 @@
+<header class="module-header">
+  <h1 class="module-title">Force on a Charged Particle in a Magnetic Field <span class="module-author">(Orilla McHarris)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Calculate the magnitude and direction of the vector product of
+    two given vectors <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>2.</strong> Calculate the force on a charged particle due to a given electric
+    field <a href="../m115/" class="module-ref">MISN-0-115</a>.</li><li><strong>3.</strong> Calculate the centripetal acceleration and angular velocity of a
+    given particle in uniform circular motion <a href="../m17/" class="module-ref">MISN-0-17</a>.</li><li><strong>4.</strong> Calculate the energy of a charged particle in a given electric
+    field <a href="../m117/" class="module-ref">MISN-0-117</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: Lorentz force, magnetic field, magnetic force,
+    magnetic induction, tesla.</li><li><strong>K2.</strong> State the expression for the Lorentz force; define each quantity.</li><li><strong>K3.</strong> Derive the expression for the angular velocity and orbital
+    radius of a charged particle moving in a static magnetic field.</li><li><strong>K4.</strong> Explain why a static magnetic field can neither slow down nor
+    speed up a charged particle.</li><li><strong>K5.</strong> Explain how crossed magnetic and electric fields may be used as a 
+    velocity selector.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a particle's initial position, velocity and charge, draw a diagram
+    of its motion, including direction, in a given magnetic field.</li><li><strong>S2.</strong> Given a particle's initial velocity (or energy), mass and charge,
+    calculate its angular velocity and orbital radius in a given magnetic field.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m122gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Examples of magnetic fields
+and their sources.</figcaption></figure></div>
+
+<p>In a sense, most of us need no introduction to magnets themselves.
+They are the small things that hold little plastic decorations to people's
+refrigerators, the large things that pick up huge piles of scrap metal, and
+the bell part of doorbells - among many other examples.
+No matter what the size or shape of a magnet, it always has two
+“ends” - literally the two ends of a bar magnet, or the two “feet” of a
+horseshoe magnet, or the top side and bottom side of circle of current
+carrying wire - that can be identified as a “north pole” and a “south
+pole” (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+In the region around a magnet there is a “magnetic field.”
+This is described by a vector quantity whose direction at any point is given
+by the tangent to a (often curved) line running from the north pole
+of the magnet (and then continuing back through the magnet from south pole
+to north).
+The exact shapes of these lines for a given magnet can be calculated or
+measured; some examples are just sketched in here to emphasize the idea of a
+field surrounding a magnet.
+Later on we will make calculations assuming a uniform magnetic field.
+Notice that this implies being in a region such as the one between the poles
+of the bent horseshoe, or somewhere where the field is constant in magnitude
+and direction over an area larger than the other dimensions in the
+particular problem.
+In this module we are interested in the effect of a magnetic field upon a
+charged particle.
+Just as an electric field exerts a force on a charged particle,
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>now we will find that a magnetic field can also exert a force on a charged
+particle, although this “magnetic force” is usually quite different from
+the electric one and is zero unless the charged particle is moving.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Lorentz Force</h2>
+
+<p><h3 id="pcap-2-a">2a. The Magnetic Induction Vector</h3>
+
+The field in which we are interested is called the “magnetic induction,”
+\(\vec{B}\).
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>It is the magnetic counterpart of the electric field \(\vec{E}\); but, unlike
+\(\vec{E}\), the magnetic induction exerts a force only on moving
+charges---and then only on moving charges that have some component of
+velocity perpendicular to \(\vec{B}\).
+The force on charged particles in a magnetic field is given by:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[\vec{F}_B = q \vec{v} \times \vec{B},\]
+<p>Where:
+=2pt
+<table class="physnet-table"><tbody><tr><td>[t]r c l
+           \(q\)</td><td>\(=\)</td><td>the charge of the particle</td></tr><tr><td>\(\vec{v}\)</td><td>\(=\)</td><td>the velocity of the particle; and</td></tr><tr><td>\(\vec{B}\)</td><td>\(=\)</td><td>the magnetic induction</td></tr></tbody></table>
+<br>
+
+<p>The vector product used in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, identified by the symbol
+“\(\times\),” is used in many parts of Mechanics, such as in the study of
+torques and angular momentum.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Notice that if the particle in question is negatively charged (for example,
+an electron) a minus sign will come in with the charge and the force will be
+in the direction opposite to the force on a positive charge with a similar
+velocity.
+<p><h3 id="pcap-2-b">2b. Units of Magnetic Induction</h3>
+
+This force on a moving charged particle can be used as a measure of the
+magnetic induction \(\vec{B}\), and from it one can see what the units of
+\(\vec{B}\) are:
+<p>\[\frac{\text{force}}{\text{charge-velocity}} =
+       \frac{\text{mass-acceleration}}{\text{charge-velocity}} =
+       \frac{\text{mass}}{\text{charge-time}} .\]
+<p>The SI units of \(\vec{B}\) are given the special name “tesla,” abbreviated
+T.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[\,\text{T} = 1\,\text{kg/(C\,s)}\]
+<p>Some books call \(1\,\text{T}\) a “weber/m<sup>2</sup>,” although the name tesla is
+more contemporary.
+In addition, in scientific literature, \(B\) is still sometimes given in terms
+of the cgs unit “gauss”: \(\,\text{T} = 10^4\,\text{gauss}\).
+<p><h3 id="pcap-2-c">2c. Electric Plus Magnetic Force: The Lorentz Force</h3>
+
+If we combine the forces on a charged particle due to both an electric field
+ \(\vec{E}\) and a magnetic field \(\vec{B}\), we obtain:
+<p>\[\vec{F} = q \vec{E} + q \vec{v} \times \vec{B}.\]
+<p>This is called the “Lorentz force.”
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p><h3 id="pcap--">. </h3>
+[]2dDirection of Lorentz Force
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m122gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Vector relationships for the magnetic force.</figcaption></figure><figure id="fig-3"><img src="figures/m122gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A diagram for a vacuum gauge.</figcaption></figure></div>
+
+<p>The quantities \(\vec{F}\), \(\vec{E}\), \(\vec{B}\), and \(\vec{v}\) are all vector
+quantities, and it is important to keep track of their directions.
+The vectors \(\vec{F}_E\) and \(\vec{E}\) are in the same direction (or exactly
+opposite direction, if \(q\) is negative), but \(\vec{F}_B\) and \(\vec{B}\) are
+not.
+A vector product always involves three mutually perpendicular directions (see
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+A magnetic field exerts a force on a moving charged particle in proportion
+to that particle's component of velocity perpendicular to \(\vec{B}\), and
+then the force is in the third direction.
+Take the example of a particular kind of vacuum gauge that makes use of a
+magnetic field (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+The gauge is enclosed in a cylindrical glass bulb that looks much like an
+electronic vacuum tube.
+Down the center of the cylinder runs a hot wire.
+Let us take that wire as the y axis of our coordinate system.
+Assume the cylinder sits in a uniform magnetic field directed parallel to the
+\(y\)-axis of our coordinate system.
+What will happen to an electron boiled off the wire at \(y = 0\) in the
+\(x\)-direction?
+From the definition of the vector product, and keeping in mind the fact that
+the electron has a negative charge, we find that the electron that started
+off in the \(x\)-direction is now “pushed” in the negative \(z\)-direction.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Motion In a Uniform Magnetic Field</h2>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m122gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Vector diagram of the change in velocity of a charged particle in a
+38magnetic field.</figcaption></figure>
+
+<p><h3 id="pcap-3-a">3a. Speed Unchanged in the Magnetic Field</h3>
+
+The magnitude of a particle's velocity is not changed by a magnetic field
+since the magnetic field does no work on the particle.
+This is obvious from the definition of work:
+<p>\[W = \int^B_A \vec{F}\,\cdot\,d\vec{s},\]
+<p>and \(d\vec{s}\) is parallel to the velocity \(\vec{v}\).
+Since the force due to the magnetic field is always perpendicular to
+\(\vec{v}\), it can never do work on a charged particle and thus can never
+change the energy or the speed of the particle.
+<p><h3 id="pcap-3-b">3b. Direction of Particle's Motion is Changed</h3>
+
+Although \(\vec{F}_B\) cannot slow down or speed up a particle, it does
+constantly change a particle's direction of motion.
+Take an electron traveling with an initial velocity \(\vec{v} = v \hat{x}\)
+in a magnetic field \(\vec{B} = B \hat{y}\).
+Then \(\vec{F}_B\), which acts always at right angles to the
+electron's direction of motion, pushes the electron constantly to its left
+in the \(x\)-\(z\) plane.
+The electron can never acquire a component of velocity in the \(y\)-direction
+since \(\vec{B}\) is in the \(y\)-direction.
+The easiest way to visualize what the path of the electron looks like is to
+take repeated vector sums: if
+<p>=2pt
+<div class="centered"><table class="physnet-table"><tbody><tr><td>\(\vec{v}_1\)</td><td>\(=\)</td><td>the electron's initial velocity,</td></tr><tr><td>\(d\vec{v}_1\)</td><td>\(=\)</td><td>the change in the electron's
+                     velocity as it</td></tr><tr><td></td><td></td><td>first feels the effect of \(\vec{F}\),</td></tr><tr><td>\(\vec{v}_2\)</td><td>\(=\)</td><td>the “new” velocity, \(\vec{v}_1 + d\vec{v}_1\),</td></tr><tr><td>\(d\vec{v}_2\), \(d\vec{v}_3\), \ldots </td><td>\(=\)</td><td>successive small changes in
+                 velocity,</td></tr><tr><td>\(\vec{v}_2\), \(\vec{v}_3\), \ldots </td><td>\(=\)</td><td>successive “new” velocities,</td></tr></tbody></table>
+</div>
+
+<p>
+then the vector diagram for the electron's change in velocity looks like the
+one shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>: that is, the electron moves in a circle in the
+\(x\)-\(z\) plane.
+Thus the motion of a charged particle in a uniform magnetic field is an
+example of uniform circular motion, and we can calculate such quantities of
+interest as the radius of the circle and the frequency of revolution.
+<p><h3 id="pcap--">. </h3>
+[]3cUniform Circular Motion in a Magnetic Field
+The magnetic field provides the centripetal force necessary for uniform
+circular motion.
+The expression for centripetal force is given by:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[F=\frac{mv^2}{R}\]
+<p>where \(v\) is the orbital speed and \(R\) is the orbital radius.
+<p>In a magnetic field the magnitude of the centripetal force is
+<p>\[F_B = q\,v_\Perp B,\]
+<p>where \(v_{\Perp}\) is the component of \(\vec{v}\) perpendicular to \(\vec{B}\).
+<p>Notice that \(v_\Perp\) is the orbital speed of the charged particle in a
+magnetic field.
+Thus we have
+<p>\[\frac{m v^2_\Perp}{R} = q v_\Perp B\]
+<p>or
+<p>\[R = \frac{m v_\Perp}{qB}.\]
+<p>For uniform circular motion we also know the angular speed is given by:
+<p>\[\omega = \frac{v_\Perp}{R}\]
+<p>so that in a magnetic field
+<p>\[\omega = \frac{q B}{m}.\]
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m122gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The trajectories of charged particles in
+magnetic fields: (a) clockwise around the field vector for a positive
+charge; and (b) counterclockwise around the field vector for a negative
+charge.</figcaption></figure>
+
+<p>It is often of interest to know also the direction in which a given particle
+will turn in a given magnetic field.
+One can determine this for each case by using the equation
+\(\vec{F} = q \vec{v} \times \vec{B}\), or one can notice that a positively
+charged particle will always move clockwise around the axis defined by
+\(\vec{B}\) whereas a negatively charged particle will always move in a
+counterclockwise direction around \(\vec{B}\), assuming the magnetic field is
+pointing at the observer (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+One other thing to notice is that \(\omega\) depends on \(B\) but not on either
+\(R\) or \(v\).
+It was this observation that led to the construction of the first cyclotron.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p><h3 id="pcap-3-d">3d. Helical Motion in a Magnetic Field</h3>
+
+If the particle in question has a component of velocity parallel as well as
+perpendicular to \(\vec{B}\), the trajectory of the particle will be helical.
+So far we have considered the example of a charged particle with all of its
+velocity in a plane perpendicular to \(\vec{B}\), although where it was
+necessary we have been careful to write equations in terms of \(v_\Perp\) so
+that they will still hold true even for a charged particle with a component
+of velocity in the \(\vec{B}\) direction.
+Suppose an electron with a velocity
+<p>\[\vec{v} = v_x \hat{x} + v_y \hat{y}\]
+<p>entered a region of space where the magnetic field is
+\(\vec{B} = (3\,\text{T}) \hat{y}\).
+Then \(v_x\) would be the \(v_\Perp\) we have been talking about and the
+magnetic force
+<p>\[\vec{F}_B = q v_x \hat{x} \times \vec{B}\]
+<p>would still cause the electron to start turning in a circle.
+The \(y\)-component of \(\vec{v}\) would be unaffected by \(\vec{B}\), however,
+and would remain a constant of the electron's motion.
+Thus the electron would exhibit helical motion around a direction parallel 
+to the \(y\)-axis.
+In general, a charged particle with a component of velocity in the direction
+of a magnetic field will exhibit helical motion around an axis by \(\vec{B}\).
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Combined Electric, Magnetic Fields</h2>
+
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m122gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A vacuum gauge employing both magnetic and electric fields.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]4aVacuum Gauge
+Our example of a vacuum gauge may be used to consider what happens when both
+electric and magnetic fields are present at the same time.
+That is, we can calculate the action of the Lorentz force on a moving
+charged particle.
+This particular gauge is essentially a diode: the wire down the center (the
+cathode) is held at ground (zero) potential, while a cylinder around the wire
+(the anode) is held at a positive potential.
+Thus an electron leaving the wire is accelerated outward toward the cylinder
+by the electric force, \(\vec{F}_E = e \vec{E}\).
+In order to make the gauge more efficient, however (so that the electron
+will travel on a longer path and have a chance to ionize more atoms 
+in the “vacuum”), it is placed in a magnetic field with \(\vec{B}\) parallel
+to the central wire (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+We have already seen that the magnetic field alone would make the electron
+move in circles (or a helix) around the wire.
+Combining the outward motion due to the electric field and the circular
+motion due to the magnetic field, we find that the electron spirals out from
+the wire in widening circles until it strikes the cylinder.
+If the radius of the cylindrical anode is 12&thinsp;cm and the potential of the
+anode is 300&thinsp;V, let us calculate how strong \(\vec{B}\) should be so that at
+its final velocity the electron just touches the anode.
+We know that:
+<p>\[B = \frac{m v_\Perp}{q R}\]
+<p>We can calculate the final speed from the anode potential:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\[\frac{1}{2} m v_\Perp^2 = q V\]
+<p>or
+<p>\[v_\Perp = \left(\frac{2 q V}{m}\right)^{1/2}\]
+<p>Thus
+<p>\[B = \frac{1}{R}\left(\frac{2 m V}{q}\right)^{1/2}.\]
+<p>The mass and charge of an electron are \(m = 9.11 \times 10^{-31}\,\text{kg}\)
+and \(q = 1.6 \times 10^{-19}\,\text{C}\), respectively, so
+<p>\[B = \frac{1}{0.12m}\left(\frac{(2)(9.11 \times 10^{-31}\,\text{kg})
+               (300V)}{1.6 \times 10^{-19}\,\text{C}}\right)^{1/2} =
+                4.87 \times 10^{-4}\,\text{T}.\]
+<p>Now it is easy to calculate the frequency with which the electron
+circles the central wire (remember it is independent of energy):
+<p>\[\nu = \frac{\omega}{2 \pi} = \frac{1}{2 \pi}\frac{q B}{m}\]
+<p>\[\nu = \frac{1}{2 \pi} \frac{(1.6 \times 10^{-19}\,\text{C})
+             (4.87 \times 10^{-4}\,\text{T})}{9.11 \times 10^{-31}\,\text{kg}}\]
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m122gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Crossed electric and magnetic fields used
+as a velocity selector</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]4bVelocity Selector
+By appropriately choosing the electric and magnetic fields in a system,
+the magnetic and electric forces will cancel one another for particles
+moving at a specific velocity.
+Notice that the Lorentz force on a moving charged particle will be zero if 
+\(q \vec{E} = - q \vec{v} \times \vec{B}\), and the particle will move in a
+straight line (assuming no other forces are acting on it).
+The phrase “crossed fields” is used to describe this situation because
+\(\vec{E}\) and \(\vec{B}\) must be at right angles to each other as well as to
+\(\vec{v}\) in order for \(q \vec{E} = - q \vec{v} \times \vec{B}\).
+<a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a> illustrates this situation.
+A positively charged particle is sent into a region where, for example,
+\(\vec{E}\) is directed downward and \(\vec{B}\) is directed into the paper.
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>The resulting forces are in opposite directions and will exactly cancel when
+\(v = E/B\).
+Adjustment of the \(\vec{E}\) and \(\vec{B}\) fields for no deflection of a
+given particle can be used in two ways: If \(v\) is unknown, \(E\) and \(B\) can be
+changed until the particle moves in a straight line, and then \(v\) can be
+calculated from the measured magnitudes of \(\vec{E}\) and \(\vec{B}\).
+If on the other hand, one wants to select particles with a given velocity
+out of a group of particles with a range of velocities, \(\vec{E}\) and
+\(\vec{B}\) can be set such that only those particles with the desired velocity
+will pass straight through the velocity selector, while all the other
+particles will bend off to the side or into the walls of the equipment.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>Julius Kovacs made a number of useful suggestions.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+<p>the net force \(\vec{F}\) on a particle with
+charge \(q\) moving with velocity \(\vec{v}\) due to the electric and magnetic
+fields, \(\vec{E}\) and \(\vec{B}\), at the particle's space-point:
+\(\vec{F} = q ( \vec{E} + \vec{v} \times \vec{B})\).
+<p>a vector quantity responsible for a force on a
+moving charged particle.
+For a magnet, the direction of the field at any point is given by the
+tangent to a line running from the “north pole” to the “south pole” of
+the magnet.
+The term “magnetic field” is somewhat ambiguous since it is also sometimes
+used for both \(\vec{B}\), technically the “magnetic induction,” and for
+\(\vec{H}\), technically the “magnetizing force.”
+The SI unit of the magnetic (induction) field is the tesla.
+<p>the force on a moving charged particle due to
+a magnetic field, specified by the equation
+\(\vec{F}_m = q \vec{v} \times \vec{B}\), where the magnetic field \(\vec{B}\)
+is called the “magnetic induction.”
+<p>the technical name for the magnetic field,
+\(\vec{B}\), defined through the characteristic magnetic force on a moving
+charge.
+<p>the SI unit of magnetic induction: abbreviated T;
+\(\,\text{T} = \,\text{kg}/(\,\text{C}\,\text{s})\).
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. The Geometric Definition of the Vector Product</h2>
+
+<p>The vector product of two arbitrary vectors \(\vec{A}\) and \(\vec{B}\) is
+defined as the vector quantity whose magnitude is given by the product of
+the magnitudes of the two vectors times the sine of the angle between the
+vectors when they are placed “tail-to-tail,” and whose direction is
+perpendicular to the plane formed by \(\vec{A}\) and \(\vec{B}\).
+The vector product (also referred to as the “cross product”) is denoted 
+by \(\vec{A} \times \vec{B}\).
+The magnitude of the product may be written as:
+<p>\[|\vec{A} \times \vec{B}| = A B \sin\theta .\]
+<p>There are, however, two directions that are perpendicular to the plane
+formed by \(\vec{A}\) and \(\vec{B}\).
+The correct direction may be chosen by applying the “right-hand rule”:
+“Rotate vector \(\vec{A}\) into vector \(\vec{B}\) through the acute (smaller)
+angle between their directions when they are placed tail-to-tail.
+Follow this rotation with the curled fingers of your right hand, and the
+direction of your extended thumb identifies the direction of the vector
+product.”
+This rule is sufficient to distinguish between the two possible choices for
+the direction of a vector product.
+Notice that the order of multiplication in vector products is very important.
+The product \(\vec{B} \times \vec{A}\) has the same magnitude as
+\(\vec{A} \times \vec{B}\), but the directions of the two products are
+opposite.
+In general:
+<p>\[\vec{A} \times \vec{B} = -\vec{B} \times \vec{A} .\]
+<p>We say that vector products do not “commute,” or that the vector product
+is a “noncommutative” operation.
+<p>If two vectors are parallel, the angle between their directions is zero, so
+by the definition of the magnitude of vector products their cross product is
+zero.
+Similarly, if two vectors are perpendicular, the angle between their
+directions is 90°.
+Since \({\sin}90^\circ = 1\), the magnitude of the vector product of the
+two is just the product of their magnitudes, and the direction of the vector
+product is determined by the right-hand rule.
+By applying these observations to the vector product of the cartesian unit
+vectors \(\hat{x}\), \(\hat{y}\) and \(\hat{z}\), we may derive the following
+useful relations:
+<p>\[\hat{x} \times \hat{x} = \hat{y} \times \hat{y} =
+       \hat{z} \times \hat{z} = 0\]
+<p>\[\hat{x} \times \hat{y} = - \hat{y} \times \hat{x} = \hat{z}\]
+<p>\[\hat{y} \times \hat{z} = - \hat{z} \times \hat{y} = \hat{x}\]
+<p>\[\hat{z} \times \hat{x} = - \hat{x} \times \hat{z} = \hat{y} .\]
+<p>These relations are used in the algebraic definition of vector products.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. The Algebraic Definition of the Vector Product</h2>
+ 
+<p>If we express vectors \(\vec{A}\) and \(\vec{B}\) in their cartesian component
+form, the vector product of \(\vec{A}\) and \(\vec{B}\) may be written:
+<p>\[\vec{A} \times \vec{B} =
+          (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \times
+          (B_x \hat{x} + B_y \hat{y} + B_z \hat{z}).\]
+<p>If this expression is expanded algebraically as we would the product
+\((x + 3) \cdot (2x - 5)\), except that the cross product is used
+instead of scalar multiplication, then this vector product may be expressed
+as a combination of the cartesian components of \(\vec{A}\) and \(\vec{B}\) and
+cross products of the cartesian unit vectors.
+Using the relations between the cartesian unit vectors developed in Appendix
+A and denoting the vector product as a third vector \(\vec{C}\), we may write:
+<p>\[\vec{C} = \vec{A} \times \vec{B} =
+ (A_y B_z - A_z B_y) \hat{x} + (A_z B_x - A_x B_z) \hat{y} +
+ (A_x B_y - A_y B_x) \hat{z}\]
+<p>or:
+<p>\[C_x = A_y B_z - A_z B_y,\]
+<p>\[C_y = A_z B_x - A_x B_z,\]
+<p>\[C_z = A_x B_y - A_y B_x.\]
+<p>The mnemonic for remembering the order of the subscripts on these components
+is to note that, starting from left to right, the first three subscripts 
+in each of the three equations for the components of \(\vec{C}\) are always
+cyclic permutations of \(xyz\) (\(xyz\), \(yzx\), \(zxy\)).
+Another way to remember the order of combination of the unit vectors and the
+components of \(\vec{A}\) and \(\vec{B}\) is to use this determinant:
+<p><div class="centered">\(\vec{C} = \vec{A} \times \vec{B} =
+
+\left|\begin{array}{ccc}\hat{x} & \hat{y} & \hat{z} \\
+                           A_x   &   A_y    &  A_z     \\
+                           B_x   &   B_y    &  B_z \end{array}\right|\)
+</div>
+
+<p>Expansion of this determinant leads to the same expression for \(\vec{C}\)
+derived earlier.
+<p><span class="tryit">Try it:</span>  Show that the vector product of
+\(\vec{A} = 5 \hat{x} - 2 \hat{y}\)
+and
+\(\vec{B} = \hat{x} + \hat{y} + 3 \hat{z}\)
+has these components:
+<p>\[C_x = - 6,\; C_y = - 15,\; C_z = 7.\]
+</section>
+
+<p><section id="sect-C" class="module-section section-text"><h2 id="sect-C">C. The Direction of the Vector Product</h2>
+
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m121gr01.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Two rules for finding the direction of
+                                     \(\vec{C} = \vec{A} \times \vec{B}\) by:
+                                     (a) the “right hand” rule;
+                                     (b) the “screw” rule.</figcaption></figure></div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Point Charge: Field and Force” (MISN-0-115). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Some textbooks also call \(\vec{B}\) the magnetic flux density.
+Colloquially, \(\vec{B}\) is often called just “the magnetic field.”
+However the specific name magnetic induction is used to distinguish
+\(\vec{B}\) from other magnetic field vectors. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For the magnetic force on charged particles in an electric current, see
+“Force on a Current in a Magnetic Field” (MISN-0-123).
+This force is the basis for the operation of electric motors.
+For the converse - the production of a magnetic field by a moving charge,
+see “The Magnetic Field of a Moving Charge” (MISN-0-124) wherein it is
+seen that a moving charge exerts a magnetic force on other charges and
+currents. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Sums, Differences, and Products of Vectors,” (MISN-0-2).
+The vector product is also reviewed in this module's appendices. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Nikola Tesla, Serbian-American Inventor and contemporary of Edison, was
+awarded 112 U.S. patents during his lifetime, among them being patents for
+the power transmissions of alternating current.  (Edison preferred d.c.) <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">Hendrick Antoon Lorentz, Nobel-Prize-winning Dutch theoretical
+physicist, made many important contributions to electromagnetic and
+relativity theory. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Uniform Circular Motion: Centripetal Force, Banking Angles,
+Centrifugal Force” (MISN-0-17). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See “Trajectory of a Charged Particle in a Magnetic Field:
+Cyclotron Orbits (Computer Project)” (MISN-0-127). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See “Particle Energy in an Electrostatic Field” (MISN-0-117). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">Notice, if you have not seen it before, the convention for drawing
+a vector into or out of the paper: for a vector pointed into the paper one
+draws an “\(\times\)” as if we were seeing the feathers on the back of an
+arrow flying away from us, while for a vector pointed out of the paper, one
+draws a “\(\cdot\)” as if the tip of the arrow were coming at us. <a href="#fnref-10" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;7 also occurs in this module's <em>Model Exam</em>.
+<p><figure class="fig-centered"><img src="figures/m122gr09.svg" alt="" class="physnet-fig"></figure>
+
+An electron with charge \(-1.6 \times 10^{-19}\)&thinsp;C and mass
+\(9.1 \times 10^{-31}\)&thinsp;kg has an initial position in the \(x\)-\(y\) plane shown
+in the diagram and an initial velocity \(-4.8\)&thinsp;m/s&thinsp;\(\hat{x}\).
+The magnetic field is zero for \(x > 0\), 0.032&thinsp;T&thinsp;\(\hat{z}\)  for \(x < 0\).
+Note: Until you are told otherwise in a magnetic-force problem, assume that
+\(\vec{E} = 0\).
+Of course the electron <em>has</em> an electric field but it does not act on
+the electron itself via the Lorentz force.
+<ol>
+<li><span class="item-label">1.</span> Sketch the electron's trajectory on the diagram. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+Mark the parts of the trajectory that are <em>straight lines</em> as such, and
+mark the parts of the trajectory that are <em>circular arcs</em> as such.</li>
+<li><span class="item-label">2.</span> Starting from the Lorentz force, calculate the radius
+of curvature for any curved portion of the trajectory.</li>
+<li><span class="item-label">3.</span> Starting from the Lorentz force, calculate the direction and
+magnitude of the electric field which would exactly cancel the magnetic
+force on the electron.
+Add the resulting trajectory to the diagram and label it. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">4.</span> Suppose a number of electrons were at the same initial position
+and moving in the same initial direction shown in the sketch, but with a
+range of velocities.
+Explain how the results of Problem&nbsp;3 could be used to select those electrons
+which have the same initial velocity as the electron in Problems&nbsp;1-3.</li>
+<li><span class="item-label">5.</span> Suppose the particle was not an electron but a proton, a particle
+of opposite charge to that of the electron and with a mass approximately
+2000 times larger.
+Compare all aspects of this proton's trajectory to those of the electron in
+Problems&nbsp;1-3.</li>
+<li><span class="item-label">6.</span> Suppose the electron in the Problems&nbsp;1-3 also had a \(z\)-component
+in its initial velocity.
+Describe the effect on its trajectory.</li>
+<li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m122gr10.svg" alt="" class="physnet-fig"></figure>
+
+An electron with charge \(-1.6 \times 10^{-19}\)&thinsp;C and mass
+\(9.1 \times 10^{-31}\)&thinsp;kg has an initial position in the \(x\)-\(y\) plane shown
+in the diagram and an initial velocity
+\(\vec{v} =
+  (2 \times 10^5\,\text{m/s})\hat{x} - (6 \times 10^5\,\text{m/s})\hat{z}\).
+The magnetic field is zero for negative \(x\) but is 0.01&thinsp;T, into the paper,
+for positive \(x\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch the trajectory of the electron, as projected onto the
+\(x\)-\(y\) plane, on the above diagram. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+Describe the 3-dimensional motion.</li>
+<li><span class="item-label">b.</span> Starting from the Lorentz force, calculate the radius
+of curvature for any curved portion of the trajectory's projection
+onto the \(x\)-\(y\) plane.
+Use the projection of the trajectory onto the \(x\)-\(y\) plane.</li>
+<li><span class="item-label">c.</span> Starting from the Lorentz force, calculate the direction and
+magnitude of the electric field which would exactly cancel the magnetic
+force on the electron. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+Add the resulting trajectory to the diagram and label it appropriately.
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m122gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> \(0.85 \times 10^{-9}\)&thinsp;m.</li>
+<li><span class="item-label">3.</span> \(\vec{E} = - 0.15\)&thinsp;N/C&thinsp;\(\hat{y}\) for \(x \leq 0\), zero 
+           elsewhere: then electron is undeflected and stays on original
+           path. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">4.</span> Electrons with higher initial speed are deflected downward, lower
+           initial speed upward.</li>
+<li><span class="item-label">5.</span> Radius of curved trajectory is 2000 times larger and trajectory
+           curves in opposite direction.</li>
+<li><span class="item-label">6.</span> The electron's trajectory in the region of the \(\vec{B}\)-field is
+           a half turn of a helix.
+           Its trajectory is the line traced out by a point which moves
+           around a cylindrical axis at constant radius and rate while it
+           advances along the axis at a constant rate.
+           Thus the trajectory consists of a curve on a cylindrical surface.</li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m122gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>Region I: straight line in a plane parallel to the \(x\)-\(z\) plane.</li>
+<li>Region II: helical path with the axis of the helix along the
+           \(z\)-axis.</li>
+<li>Region III: straight line in a plane parallel to the \(x\)-\(z\)
+           plane.</li>
+<li><span class="item-label">b.</span> \(R = 0.114\)&thinsp;mm</li>
+<li><span class="item-label">c.</span> \(\vec{E} = - 2000 \hat{y}\)&thinsp;N/C; Trajectory is a straight
+           line from left to right.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><ul>
+<li><span class="item-label">1.</span> Look at the sign of the electron's charge and look at <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.</li>
+<li><span class="item-label">2.</span> Note that no scales are drawn on the figure (on the \(x\)- and
+ \(y\)-axes)  so you can draw the trajectory any size you want.
+ If meters, say, had been marked off along the axes, you would have had to
+ use them and plot your trajectory to scale.</li>
+<li><span class="item-label">3.</span> A “trajectory ” is the particle's “path,” its “trail.”
+ You sketch it by: (i) putting your pen or pencil point on the paper at the
+ position of the particle; and (ii) moving the point along the paper,
+ following the path the particle will take.</li>
+</ul>
+
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">This module's <em>text</em> describes how to deal with \(\vec{v}\) having a
+ component not prependicular to the field.
+ Note that \(\hat{x} \times \hat{y} = \hat{z}\), so \(\hat{z}\) is out
+ of the paper (this is called a “right hand coordinate system.”)
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Why must \(\vec{E}\) be <em>downward</em>?
+ Work the magnetic field part of the Lorentz force and see that it exerts
+ a <em>downward</em> force on the negatively charged electron.
+ Then to cancel that downward magnetic force on the electron we must apply
+ an <em>upward</em> electric force.
+ An upward electric force, on a negatively charged particle like the
+ electron, is exerted by a <em>downward</em> electric field.
+ With the two fields present, the total force on the electron is zero and
+ hence its acceleration is zero.
+ That implies a constant velocity which means a straight-line trajectory.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">If you have trouble with this problem, go back and do problem (3) properly.
+ Then you should be able to do this problem easily.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\,\text{T} = \,\text{kg}\,\text{C}^{-1}\,\text{s}^{-1}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m122gr10.svg" alt="" class="physnet-fig"></figure>
+
+An electron with charge \(-1.6 \times 10^{-19}\)&thinsp;C and mass
+\(9.1 \times 10^{-31}\)&thinsp;kg has an initial position in the \(x\)-\(y\) plane shown
+in the diagram and an initial velocity
+\(\vec{v} =
+  (2 \times 10^5\,\text{m/s})\hat{x} - (6 \times 10^5\,\text{m/s})\hat{z}\).
+The magnetic field is zero for negative \(x\) but is 0.01&thinsp;T, into the paper,
+for positive \(x\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch the trajectory of the electron, as projected onto the
+\(x\)-\(y\) plane, on the above diagram.
+Describe the 3-dimensional motion.</li>
+<li><span class="item-label">b.</span> Starting from the Lorentz force, calculate the radius
+of curvature for any curved portion of the trajectory.
+Use the projection of the trajectory onto the \(x\)-\(y\) plane.</li>
+<li><span class="item-label">c.</span> Starting from the Lorentz force, calculate the direction and
+magnitude of the electric field which would exactly cancel the magnetic
+force on the electron.
+Add the resulting trajectory to the diagram and label it appropriately.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;7 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

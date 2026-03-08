@@ -1,0 +1,341 @@
+<header class="module-header">
+  <h1 class="module-title">Two-Element DC-Driven Series LRC Circuits <span class="module-author">(K.Franklin, P.Signell, and J.Kovacs <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Describe the motion of a damped harmonic oscillator <a href="../m29/" class="module-ref">MISN-0-29</a>.</li><li><strong>2.</strong> State the node and junction circuit rules <a href="../m119/" class="module-ref">MISN-0-119</a>.</li><li><strong>3.</strong> State the relationship between voltage and charge in a capacitor
+                <a href="../m135/" class="module-ref">MISN-0-135</a>.</li><li><strong>4.</strong> State the relationship between voltage and current in an inductor
+                <a href="../m144/" class="module-ref">MISN-0-144</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Start with the relations for
+    the potential drops across each of the three types of passive circuit
+    elements and derive the relation between the current and the important
+    circuit parameters for any two-element series DC-driven \(LRC\) circuit.</li><li><strong>K2.</strong> List the mechanical analogs of the circuit components and
+    important circuit parameters for two-element DC-driven \(LRC\) circuits.</li><li><strong>K3.</strong> Given any two-element DC-driven \(LRC\) circuit, use analogies
+    with the damped harmonic oscillator to sketch a graph of the time
+    dependence of the charge on the capacitor or the current in the circuit.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Three-Element D.C.-Driven Series LRC Circuit” (MISN-0-152).</li><li><strong>2.</strong> “Resonances in LRC Circuits” (MISN-0-154).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Suppose we know how to analyze a circuit containing just capacitors, or
+just resistors, or just self-inductances.
+What happens when two of these three components are connected in series?
+In the present unit we derive the basic equations governing such circuits
+and describe the use of mechanical analogs in solving them.
+In another unit we treat the case where all three types of circuit
+elements are present, working toward the general analysis and synthesis of
+circuits.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Relating \(Q(t)\) and Its Derivatives to \(L\), \(R\), \(C\)</h2>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m151gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Switch is open for \(t < 0\)
+            Switch is closed for \(t > 0\).</figcaption></figure>
+
+<p>The circuit shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> is a closed loop.
+Thus:
+<p>\[V_0 - V_R - V_L = V_C,\]
+<p>where \(V_R\) stands for the potential drop across the resistor, and similarly
+for the capacitor and inductor.
+We can apply Ohm's Law to the resistor and the corresponding relations for
+\(V_C\) and \(V_L\).
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Substituting these into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> gives us:
+<p>\[V_0 = IR + L\dot{I} + \frac{Q}{C},\]
+<p>where dots stand for derivatives with respect to time.
+The signs show that all three elements are assumed to oppose the applied
+voltage \(V_0\), meaning that the voltage source must do work to put charge
+on the capacitor, to put current through the resistor, and to change the
+current going through the inductor.
+<p>Using the definition of current, \(I = dQ/dt\), we convert <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>
+to a relation for the charge on the capacitor:
+<p>\[V_0 = L\ddot{Q} + R\dot{Q} + \frac{1}{C} Q.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m151gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Mechanical Analog for the series \(LRC\)
+Circuit.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Mechanical Analogs</h2>
+
+<p><h3 id="pcap-3-a">3a. The Mechanical Series Circuit</h3>
+
+Compare <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> to the force equation for a damped driven
+spring
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>(see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>):
+<p>\[F_0 = m\ddot{x} + \lambda\dot{x} + kx\,,\]
+<p>where \(k\) is the spring constant (a measure of its stiffness), \(m\) is its
+mass, and \(\lambda\) is the circuit's damping coefficient (this can
+include damping in the spring itself or may be mainly due to a damping
+device such as a shock absorber or a dashpot).
+<p><h3 id="pcap-3-b">3b. Mechanical-Electrical Correspondences</h3>
+
+Notice the similarity between <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+The correspondences are listed in Table&nbsp;1.
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1: Analogies Between the \(LRC\) Circuit and
+ the Damped Driven Oscillator.</td></tr><tr><td>LRC Circuit</td><td>Oscillator</td></tr><tr><td>Inductor</td><td>\(L\)</td><td>Mass</td><td>\(m\)</td></tr><tr><td>Resistor</td><td>\(R\)</td><td>Shock Absorber</td><td>\(\lambda\)</td></tr><tr><td>Capacitor</td><td>\(C^{-1}\)</td><td>Spring</td><td>\(k\)</td></tr><tr><td>Applied Voltage</td><td>\(V_0\)</td><td>Applied Force</td><td>\(F_0\)</td></tr><tr><td>Charge</td><td>\(Q\)</td><td>Position</td><td>\(x\)</td></tr><tr><td>Current</td><td>\(\dot{Q}=I\)</td><td>Velocity</td><td>\(\dot{x}=v\)</td></tr></tbody></table>
+</div>
+
+Notice in Table&nbsp;1 that a large capacitor is the analog of a weak spring.
+That is because, for a given amount of charge stored in it, a larger
+capacitor has less potential difference across it than does a smaller
+capacitor.
+Put another way, it is easier to stretch a <em>weak</em> spring to a larger
+displacement just as it is easier to put more charge into a <em>large</em>
+capacitance.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The \(LC\) Case</h2>
+
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m151gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A two-element \(LC\) circuit</figcaption></figure>
+
+<p><h3 id="pcap-4-a">4a. The \(LC\) Circuit</h3>
+
+We begin the examination of two-element circuits with the \(LC\) case,
+illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+This case is especially interesting because it is like the perfect spring
+attached to a mass.
+That means there is no friction, no energy dissipation.
+In the electric circuit case it means no resistance so no energy
+dissipation.
+In either system, mechanical or electrical, an oscillation once started
+will go on forever.
+Of course in real life such systems are not possible, but one can come
+pretty close.
+<p><h3 id="pcap-4-b">4b. Starting an Oscillation</h3>
+
+In the mechanical case one starts an oscillation be applying a force to the
+mass so as to stretch the spring away from zero displacement from
+equilibrium.
+One then lets go of the mass, perhaps by opening one's fingers, and
+oscillations begin.
+In the electrical case one usually isolates the capacitor and charges it
+from a battery.
+One then disconnects the battery and connects the capacitor to the other
+inductor and the oscillations begin.
+<p><h3 id="pcap-4-c">4c. Oscillations</h3>
+
+In the mechanical oscillations case, the <em>displacement</em> is a sinusoidal
+function of time, alternately taking on positive and negative values with
+respect to the equilibrium position.
+In the electrical oscillations case the <em>charge</em> on the capacitor is a
+sinusoidal function of time, alternately taking on positive and negative
+values.
+In the mechanical oscillations case the energy alternates between kinetic
+energy “stored” in the motion of the mass and potential energy “stored”
+in the compression or extension of the spring.
+In the electrical oscillations case the energy alternates between being
+stored in the inductor's magnetic field and in the capacitor's electric
+field.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m151gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Comparison of solutions in the
+illustrative example.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-d">4d. Mathematical Solution by Analogy</h3>
+
+Consider the circuit shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+Suppose the capacitor is charged by an external source, which is then
+removed at time \(t = 0\).
+What happens to the capacitor charge as time progresses (switch closed)?
+<p>The equivalent mechanical model is just that of <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> after removal of
+the shock-absorber and the applied force (\(R = 0\), \(V_0 = 0\)).
+This leaves a mass with a spring attached, where the mass is displaced from
+equilibrium and then released.
+The result is simple harmonic motion:
+<p>\[x(t) = x_0 \sin\omega t, \text{  where } \omega = \sqrt{k/m}.\]
+<p>Using our analogies in Table&nbsp;1,
+<p>\[Q(t) = Q_0 \sin\omega t, \text{  where } \omega = \sqrt{1/LC}.\]
+<p>These two equations are graphed in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p>The period of oscillation for the \(LC\) circuit is
+\(P=2\pi/\omega= 2\pi\sqrt{LC}\).
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The \(RL\) and \(RC\) Cases</h2>
+
+<p>With three available elements, \(L\), \(R\), and \(C\), there are three possible two-element
+circuits: \(LC\), \(RL\), and \(RC\).
+The \(LC\) case was treated in Sect.&thinsp;4; the other two are covered in this module's
+<em>Problem Supplement</em>.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See MISN-0-135 and MISN-0-144. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Damped Driven Oscillator,” MISN-0-29. <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The circuit for this problem is shown in the sketch below.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>Draw the mechanical analog for the circuit,
+omitting those parts of the general model shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> that do not have
+corresponding elements in the circuit.</li>
+<li><span class="item-label">b.</span> In the mechanical case, the applied force does not affect the
+period or the amplitude of the oscillation of the mass; it merely shifts the
+equilibrium point about which the oscillation occurs.
+The time dependence of \(x\) is thus identical to the equation found in the
+example, except for an added constant and a phase shift:
+<p>\[x(t) = x_1 + x_0 \sin(\omega t + \phi)\,,\]
+<p>where \(x_1 = F_0/k\), and \(x_0\) and \(\phi\) depend on initial conditions.
+Using the appropriate analogies, write the equation for the time dependence
+of \(Q\) in the above \(LC\) circuit.</li>
+<li><span class="item-label">c.</span> Given \(q(0) = 0\) and \(I(0) = 0\) for the above circuit, can you
+evaluate \(Q_0\) and/or \(\phi\) in your answer to part (b) above?
+If so, what are they?</li>
+<li><span class="item-label">d.</span> Graph \(Q(t)\) vs.&thinsp;\(t\) for this circuit.</li>
+<li><span class="item-label">e.</span> By taking the derivative of the charge function in both the
+illustrative example and your answer to part (b), find the shift in current
+caused by the introduction of the induced voltage in the above circuit.
+Assume \(Q(0) = 0\) in both cases.
+</li>
+<li><span class="item-label">2.</span> The circuit for this problem is shown in the sketch below.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr06.svg" alt="" class="physnet-fig"></figure>
+
+<p>Draw the mechanical analog for the circuit,
+omitting those parts of the general model shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> that do not have
+corresponding elements in the circuit.</li>
+<li><span class="item-label">b.</span> The shock absorber in the mechanical case resists any acceleration
+by exerting a force proportional to its rate of contraction.
+The proportionality constant is \(\lambda\).
+Thus when the force is applied to the mass, it accelerates until the
+resistance force just equals the applied force.
+The compression then continues at a constant rate.
+In the electrical case, the induced voltage across the inductor causes an
+increase in current, which causes an increase in the potential difference
+across the resistor.
+As this difference approaches \(V_0\), the net current change per unit time
+goes to zero, and the current approaches a constant value.
+<p>The equation for the velocity of the mass in the mechanical case is:
+<p>\[v(t) = \frac{F_0}{\lambda}\;\left(1 - e^{-\lambda t/m} \right)\,.\]
+<p>Write the corresponding equation for the electrical case.</li>
+<li><span class="item-label">c.</span> <figure class="fig-centered"><img src="figures/m151gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p>Here are graphs of the two equations of part (b).
+Notice that velocity and current time are graphed, since there is no
+accumulating charge.
+What analogy can be made to the position of the mass in the mechanical
+model?
+</li>
+<li><span class="item-label">3.</span> The circuit for this problem is shown in the sketch below.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr08.svg" alt="" class="physnet-fig"><figcaption>Draw the mechanical analog for the circuit,
+omitting those parts of the general model shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> that do not have
+corresponding elements in the circuit.</figcaption></figure>
+</li>
+<li><span class="item-label">b.</span> The force equation for the mechanical case is:
+<p>\[F_0 = \lambda \dot{x} + kx.\]
+<p>There is no mass, so the system will just shift until it is in static
+equilibrium.
+The shock absorber and spring work together to prevent the “overshoot”
+effect discussed in the illustrative example.
+This effect can be seen more easily by studying a graph of the solution,
+which is:
+<p>\[x(t) = \frac{F_0}{k}\; \left( 1 - e^{-kt/\lambda} \right) .\]
+<p>Graphed, this is:
+<p><figure class="fig-centered"><img src="figures/m151gr09.svg" alt="" class="physnet-fig"></figure>
+
+<p>Note that on the left side of the curve the spring compresses easily and
+the velocity is high.
+On the right side of the curve the shock absorber resistance plus the
+increasing spring force reduce the velocity almost to zero.
+<p><span class="tryit">Try it:</span>  Now, using our analogy, write the time dependence of charge for the
+above circuit.</li>
+<li><span class="item-label">c.</span> Sketch a graph of \(Q(t)\) vs. \(t\) for this circuit.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(Q(t) = Q_1 + Q_0 \sin(\omega t + \phi)\), where \(Q_1 = V_0 C\)
+           and \(\omega = \sqrt{1/LC}.\)</li>
+<li><span class="item-label">c.</span> \(\phi = \pi/2\).
+           \(Q_0\) must be found using a second initial condition.</li>
+<li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m151gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">e.</span> Zero.
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(I(t) = (V_0/R)\;\left( 1 - e^{-Rt/L} \right)\).</li>
+<li><span class="item-label">c.</span> \(I = \dot{Q}\) (the definition of current).
+           So if we integrate \(I\), at any point in the circuit, from \(0\) to
+           \(t\), we will get the net movement of charge in the circuit, \(Q\).
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m151gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(Q(t) = C V_0\; \left( 1 - e^{-t/RC} \right) \).</li>
+<li><span class="item-label">c.</span> <figure class="fig-centered"><img src="figures/m151gr14.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> see Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

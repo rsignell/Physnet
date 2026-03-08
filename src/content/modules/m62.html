@@ -1,0 +1,553 @@
+<header class="module-header">
+  <h1 class="module-title">An Overview of Particle Dynamics <span class="module-author">(William Faissler, Northeastern University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> A knowledge of simple kinematics <a href="../m7/" class="module-ref">MISN-0-7</a>.</li><li><strong>2.</strong> A working knowledge of vectors and vector addition <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Describe the nature of a conservation law, and its use.
+    Give an example.</li><li><strong>K2.</strong> State the three conservation laws of particle dynamics; explain
+    all terms and give examples.</li><li><strong>K3.</strong> State Newton's three laws: explain the meaning of all terms, and
+    give examples.</li><li><strong>K4.</strong> Define momentum and kinetic energy.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given an object whose velocity changes in a well-defined situation,
+    determine where the object's increment of momentum and/or kinetic energy
+    came from or went to.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Particle Dynamics - The Laws of Motion” (MISN-0-14).</li><li><strong>2.</strong> “Momentum: Conservation and Transfer” (MISN-0-15).</li><li><strong>3.</strong> “Applications of Newton's Second Law, Frictional Forces”
+    (MISN-0-16).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Why We Study Particle Dynamics</h3>
+
+People have always found motion and its causes to be an exciting and useful
+subject of study.
+Much of man's efforts are devoted to moving things from one place to another.
+Why it is easier to transport a very heavy object on a boat rather than on a
+cart is a question of much practical interest.
+Certainly the natural phenomena involving motion, such as the clouds, winds,
+waves, tides, rivers, avalanches, etc., have always been of greatest interest
+to man.
+Even as early as Aristotle (350 B.C.) attempts were being made to formulate
+the rules which would explain these things.
+Thus interest in the subject matter of particle dynamics dates at least as
+far back as we have written records and continues to this day.
+<p><h3 id="pcap-1-b">1b. What Particle Dynamics Is</h3>
+
+Particle dynamics is the study of the how and why of motion that does not
+involve rotations.
+Its goal is to find a common set of rules that can explain all the varied
+phenomena concerning motion seen in the world around us.
+It aims to explain such things as why some objects fall when released while
+others such as helium balloons rise, why most moving objects very rapidly
+slow down and stop while a hockey puck on ice seems to go so far, why
+billiard balls bounce the way they do; why you can hit a golf ball further
+than you can hit a baseball, how you can make a better drag racer, why a
+small defensive back has so much trouble stopping a big fullback, why it is
+so hard to jump off a small boat, and so on.
+Particle dynamics also deals with such problems as why the earth does not
+fall into the sun, what must be done to send a rocket to the moon, and how
+fast a clock will run.
+In short, the concepts of particle dynamics can be used to explain many of
+the phenomena that you see in the world around you.
+<p><h3 id="pcap-1-c">1c. Validity of the Laws of Particle Dynamics</h3>
+
+The laws of physics, including those presented in this module, are justified
+by their utility and accuracy when used to explain a large collection of
+natural phenomena.
+They are not “proven” in the sense that theorems in geometry are proven.
+Neither are they “proven” by single experiments.
+The laws are simply very shrewd guesses of rules that might explain phenomena
+that are observed.
+Their “proof” is the fact that all of the laws and definitions taken together
+make up a system that enables one to predict what will happen in an
+experimental system.
+Literally millions of such experiments have been done, both very simple ones
+and exceedingly complex ones, and within its range of applicability,
+particle dynamics yields the correct answer.
+Based on this, we “believe” the laws---that is, we are willing to keep
+using them for situations in which we know they are applicable.
+<p><h3 id="pcap-1-d">1d. Real Objects Are Rarely Particles</h3>
+
+Baseballs, beer bottles and airplanes are not particles and hence cannot be
+treated completely by the dynamics developed in this unit.
+For such objects, which have extended dimensions and internal structure, we
+often need to extend the dynamics to include “rotational” quantities, such
+as angular momentum, torque, and moment of inertia.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Conservation Laws</h2>
+
+<p><h3 id="pcap-2-a">2a. What a Conservation Law Is</h3>
+
+A conservation law is nothing more than a statement that for a given system
+there exists some quantity which will remain constant in time, provided
+certain conditions are met.
+As an example, imagine a self-sufficient group of people living and working
+in an environment somewhat isolated from the rest of society, such as a
+secluded South Pacific Island.
+These people have familiar homes, jobs, businesses, etc.
+Some time ago they adopted American currency as the medium of exchange.
+Since they have no mints and since no one foolishly destroys money, the total
+number of dollars on the islands is fixed except when an American merchant
+ship makes an infrequent call to buy some rare native shells.
+The captain of the ship always pays for the shells with American currency,
+thereby increasing the total number of dollars available to the people.
+Between visits of the ship the total number of dollars in the society is
+fixed.
+Any money added to one person's pocket is always balanced by a decrease in
+the money in another's pocket.
+The important point here is that if at any instant the dollar possession of
+all the inhabitants is totaled, the sum is a constant (until a visiting ship
+adds new money).
+A physicist might describe this situation by stating a Conservation of
+Dollars Law: “The total number of dollars on the island is constant as long
+as the island is isolated (the ship is not in port).”
+The number of dollars any person possesses may change fifty times per day,
+but at any instant the sum of all island dollars is fixed, or conserved.
+This is an example of a conservation law.
+<p>This conservation law can be used to describe systems smaller than the whole
+island.
+For instance, if there are three people on the island who trade only with
+each other during some time period, then the number of dollars they have
+among themselves is a constant (conserved) over that time period.
+In this way, the law of conservation of dollars can be applied to any group
+that is isolated from the rest of society (not trading with the rest of
+society).
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><h3 id="pcap-2-b">2b. Conservation of Mass Law</h3>
+
+Perhaps the simplest conservation law in Newtonian physics is that of mass
+conservation.
+The mass of an object is an intrinsic property of the object which, loosely
+speaking, is a measure of how much matter it contains.
+The mass of an object is independent of where the object is, how it is
+moving, its temperature, etc.
+One simple way to determine an object's mass is to weigh it (on a scale that
+compares it to standard weights, such as on a doctor's scale) and then
+compute the mass from the formula:
+<p>\[\text{mass } = \text{ constant } \times \text{ weight }\,,\]
+<p>(i.e., \(m = c w\)).
+If the weight is measured in pounds and mass in kilograms, then
+\(c = 0.454\,\text{kg/lb}\).
+In essence, the conservation of mass law is this:  If a system of masses is
+isolated from all other systems by excluding a flow of mass into or out of
+it, then the sum of the masses of the isolated system is constant.
+This is the case even though the number of objects may be changing (two lead
+blocks may be melted and solidified into one, a block of cheese may be cut
+into ten slices, etc.) and entities within the system may be changing mass
+by mass transfer between themselves (water evaporating from a glass,
+frictional wear of rubber from a tire, etc.).
+<p><h3 id="pcap-2-c">2c. Conservation of Momentum</h3>
+
+The total linear momentum of any system of particles is a constant provided
+the system is isolated from interactions with external objects.
+This total momentum of the system, \(\vec{P}\), is calculated by adding vectorially the
+momenta of the constituent particles.
+A particle's momentum \(\vec{p}\) is defined as the product of its mass and velocity:
+\(\vec{p} = m \vec{v}\).
+<p><a href="#fig-1" class="fig-ref">Figs.&nbsp;1–7</a> show a computer representation of an actual experiment
+that illustrates the conservation of momentum law.
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> shows the paths (trajectories) of two particles of unequal masses
+which were isolated from all other objects and which were passing near each
+other.
+The position of each particle is shown at a number of different times.
+Notice that the particles were deflected from their original trajectories by
+some sort of interaction between the two.
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> shows the velocity vector of each of the particles at the various
+times and <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> shows the momentum vector of each particle at each time.
+Just as you would add up the total number of dollars in our island example
+so also you find the total linear momentum of each object, using vector
+addition.
+For the two objects in our example, this summation is easy.
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> also shows the total linear momentum of the system at the various
+times and you can see that it is constant.
+To summarize, for an isolated system, the vector sum of the momenta of the
+individual particles is a constant even though the momenta of individual
+particles may be changing erratically because of the interactions between
+the particles.
+<p><div class="figure-row figure-row-2"><figure id="fig-1"><img src="figures/m62gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The paths (trajectories) of two particles
+                              that interact with each other.
+                              The numbers and marks on the trajectories indicate
+                              each particle's position at five equally-spaced
+                              instants of time.</figcaption></figure><figure id="fig-2"><img src="figures/m62gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The velocity vectors of the two particles
+                              at the five successive times shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+                              The vectors are drawn with their tails positioned
+                              at the successive positions of the particles.</figcaption></figure></div>
+
+<p>
+<p><div class="figure-row figure-row-2"><figure id="fig-3"><img src="figures/m62gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The momentum vectors of the two particles
+                              and the total linear momentum of the system at
+                              each of the five successive times.</figcaption></figure><figure id="fig-4"><img src="figures/m62gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The kinetic energies of the two particles
+                              of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, plotted as a function of time during
+                              their interaction.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-d">2d. Kinetic Energy: Precise Definition</h3>
+
+The kinetic energy of an object, labeled \(E_k\) by us, is the quantity defined
+as: half the object's mass times the object's velocity squared:
+<p>\[E_k = \frac{1}{2} m v^2.\]
+<p>Kinetic energy is a scalar quantity; it has only a magnitude and can never
+be negative since mass is always positive.
+The momentum for particle 1 is in the left column, for particle 2 in the
+middle and the total momentum is on the right.
+Note that if two objects have the same velocity, then the more massive has
+the greater kinetic energy.
+Note also that if two objects have the same kinetic energy, the less massive
+has the greater velocity.
+With a little more work you can show that if two objects have the same
+magnitude of momentum, \(m v\), then the lighter object has the greater kinetic
+energy.
+<p><div class="figure-row figure-row-2"><figure id="fig-5"><img src="figures/m62gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The total kinetic energy of the two particles as a function of time.</figcaption></figure><figure id="fig-6"><img src="figures/m62gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The potential energy of the two interacting particles as a function of time.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. Energy is Conserved</h3>
+
+The total energy of an isolated system of objects is another
+conserved quantity.
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> shows the kinetic energy of the particles in <a href="#fig-1" class="fig-ref">Figs.&nbsp;1–3</a> moving by
+each other as a function of time.
+<a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> shows the total kinetic energy of the two particles as a function of
+time and it is quite obvious that this is not constant.
+However, a potential energy can be defined that depends only on the relative
+positions of the
+two particles and the nature of the interaction between
+them.
+The nature of potential energy is that, when two particles interact, their
+potential energy increases as their total kinetic energy correspondingly
+decreases.
+The total mechanical energy of the system consists of the sum of the kinetic
+energies and the potential energy.
+<a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> shows the potential energy of the system as a function of time and
+<a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a> shows the total mechanical energy, a constant.
+For most problems involving no friction, only those two forms of energy are
+needed for the conservation law.
+For other problems additional forms of energy must be
+considered; thermal energy, chemical energy, nuclear energy, radiant energy,
+etc.
+When all forms of energy are considered, it is always found that the total
+energy of an isolated system is a constant.
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m62gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The total energy of the two interacting
+particles as a function of time.
+A constant!</figcaption></figure>
+
+<p><h3 id="pcap-2-f">2f. Summary</h3>
+
+The three conservation laws that have been discussed here have many features
+in common and a few important differences.
+Each law refers to a system quantity that is a constant when the system is
+isolated, just as the number of dollars on the island is a constant when the
+island is isolated.
+Two of the quantities, mass and energy, are scalars while the other,
+momentum, is a vector.
+Two of the total quantities, mass and momentum, are obtained by summing the
+masses and momenta of the individual particles making up the system.
+This is not the case for the total energy.
+The total energy is a sum of the total kinetic energy and the potential
+energy.
+The total kinetic energy is found by summing the kinetic energies of the
+individual particles.
+However, the potential energy relates to the interaction of two or more
+particles, so it is not meaningful to refer to a potential energy for any
+individual particle but rather to the potential energy of the system as a
+whole.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Laws of Dynamics</h2>
+
+<p><h3 id="pcap-3-a">3a. Introduction</h3>
+
+
+The laws of dynamics are the rules that tell when
+and how the energy and momentum of a given object may or may not change.
+In a similar manner, the laws of economics are the rules that tell us when
+and how the amount of money possessed by any one person in our island example
+may or may not change.
+When an object interacts with something else, its kinetic energy and momentum
+may change; the laws of dynamics tell how to calculate these effects in terms
+of the forces acting on the object.
+<p><h3 id="pcap-3-b">3b. Other Dynamics</h3>
+
+Newtonian particle dynamics, plus its extension with “rotational” quantities,
+is called “Newtonian dynamics.”
+Combined with Newtonian kinematics it is called “Newtonian mechanics.”
+Newtonian mechanics is itself a subset of “classical mechanics,” which goes
+beyond Newtonian dynamics to also include “special relativity.”
+This means it includes non-Newtonian effects that become significant when
+objects travel at speeds which are not slow compared to the speed of light.
+For dealing with accelerated frames of reference at the same time as high
+speeds, one must go to the higher level “theory of general relativity.”
+Finally, for dynamics on the atomic scale, one must use the even higher
+level (more general, more inclusive, wider) “quantum mechanics.”
+<p>Although the problems we customarily solve using Newtonian particle dynamics
+could be solved more accurately using higher level theories, the increased
+accuracy one would obtain is seldom significant for the problems at hand.
+Furthermore, solutions in those theories can only be obtained with a great
+deal more work if at all.
+<p><h3 id="pcap-3-c">3c. Newton's First Law</h3>
+
+Newton's first law says that a totally isolated object, one with
+no force acting on it, moves at a constant velocity.
+Such an object is located far from everything else, or else is so
+carefully located that there are no forces acting on it.
+<p>Another law, the law of momentum conservation, says that if we have a
+totally isolated system consisting of one object, then that object's
+momentum, \(m \vec{v}\), is a constant and hence its velocity is a constant.
+Thus it appears that Newton's first law may just be a restatement of the law
+of conservation of momentum.
+This is not the case.
+All kinematic measurements must be made from some system of reference.
+The laws of Newtonian dynamics are found to hold only in certain kinds of
+systems of reference, namely, nonaccelerated ones.
+Newton's first law gives us a test to apply to a measuring system to
+determine whether it is a suitable system in which to use Newtonian dynamics:
+observe an isolated object from your reference system; if it has a constant
+vector velocity, then Newtonian dynamics will hold in your reference system.
+<p><h3 id="pcap-3-d">3d. Newton's Second Law: How to Change Momentum</h3>
+
+Newton's second law says that the vector sum of all the external
+forces on an object equals the mass of the object times its acceleration.
+As an equation, this is:
+<p>\[\vec{F} = m \vec{a},\]
+<p>where one must remember that the relevant force is the net external force
+exerted on the object which is accelerating.
+Since momentum is mass times velocity and since the rate of change of
+velocity is its acceleration, this can be stated as:
+<p>\[\vec{F} = d\vec{p}/dt.\]
+<p>In words, the sum of the external forces on an object is equal to the time
+rate of change of the object's momentum.
+This law permits you to calculate the change in the momentum of an object 
+that is not isolated; that is, one which has forces acting on it.
+As such, it complements the law of momentum conservation.
+Note, however, that when the sum of the external forces on an object is zero,
+we get:
+<p>\[d\vec{p}/dt = 0 \qquad (F = 0).\]
+<p>This means that the momentum is constant, just as Newton's first law and the
+law of momentum conservation say for this case.
+The second law also provides a method for measuring forces.
+A single force can be applied to an object of known mass, the acceleration
+can be measured, and then the force can be calculated.
+The force scale arising from this procedure is fully consistent with
+physiological experience: what you consider to be a harder push is measured
+as a larger force by this procedure.
+<p><h3 id="pcap-3-e">3e. Newton's Third Law: Paired Reciprocal Forces</h3>
+
+Newton's third law states that when two objects interact with each other,
+the force the first exerts on the second is always equal and opposite to the
+force the second exerts on the first.
+If you push on a wall, the wall pushes back on you equally hard and in
+exactly the opposite direction.
+If you push harder than the wall can push back, then part of the force you
+exert will go into accelerating your hand through the wall rather than being
+part of the force exerted on the wall.
+As the wall crumbles, the force it exerts on your hand drops dramatically
+and hence so does the force your hand exerts on the wall.
+Rapid acceleration of your hand results.
+We can use this law to show that if two objects interact only with each
+other, then the change in momentum of the first is equal and opposite to the
+change in momentum of the second.
+<p>We put Newton's second law, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, into Newton's third law for each
+particle:
+\[\vec{F}_\text{1 on 2} = - \vec{F}_\text{2 on 1}\]
+<p>\[\frac{d\vec{p}_2}{dt} = - \frac{d\vec{p}_1}{dt}.\]
+<p>Integrating over some time interval,
+<p>\[\Delta\vec{p}_2 = - \Delta\vec{p}_1.\]
+<p>The total momentum change of the two-object system is just the sum of
+the two momentum changes:
+<p>\[\begin{aligned}\Delta\vec{P}_\text{total} & = \Delta\vec{p}_1 + \Delta\vec{p}_2 \\                           & = \Delta\vec{p}_1 - \Delta\vec{p}_1 \\                           & = 0.\end{aligned}\]
+
+<p>The total momentum is unchanged, just as the law of momentum conservation
+says.
+Thus the second law tells how a force causes momentum to change while the
+third law ensures that momentum will be conserved if two particles interact
+only with each other.
+<p><h3 id="pcap-3-f">3f. How An Object's Energies Change</h3>
+
+You have seen how a force causes an object's momentum to change.
+Since momentum is a vector quantity, either its direction or its magnitude
+or both can change.
+A non-zero component of force perpendicular to the velocity causes the velocity's
+direction to change while a non-zero parallel force component causes the
+magnitude of the object's velocity to change and hence it causes the object's
+kinetic energy to change.
+This parallel component also causes the object's potential energy to change.
+Thus, if the object's total energy stays constant, a non-zero parallel component
+causes a continual shift of the object's energy between potential and kinetic.
+<p><h3 id="pcap-3-g">3g. Summary</h3>
+
+The laws of dynamics can be used in situations where the forces on an
+individual object are known and where the conservation laws cannot be
+usefully used.
+The first law provides a way of testing a reference system to see if it is a
+suitable system to use.
+The second law relates forces to changes in an individual object's energy and
+momentum while the third law relates forces between objects so that momentum
+is conserved.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Examples of Using Dynamics</h2>
+
+<p><h3 id="pcap-4-a">4a. A Small Boat Recoils</h3>
+
+If you are standing in a small lightweight boat several feet from a float and
+if you attempt to jump onto the float you will most likely end up in the
+water.
+The problem is that the boat moves relatively freely about on the surface of
+the water (at least at low speeds).
+Thus you and the boat form an essentially isolated system.
+This system starts with zero total momentum so the total momentum will always
+remain zero.
+This means that as you gain momentum toward the float, the boat gains
+momentum away from it.
+Normally when you jump, your legs push against the earth; as you gain
+momentum in one direction, the earth gains momentum in the other direction,
+but since the mass of the earth is so much larger than your mass (about
+\(10^{23}\) times) the earth gains essentially no energy.
+The muscles in your legs must provide only the energy needed to give you
+a sufficient velocity to jump the desired distance.
+During the course of your life, you have learned how much work your legs
+must do (how hard you must jump) in order to go a certain distance.
+<p>Since the mass of the boat is not all that much greater (if any) than your
+mass, as you jump one way the boat recoils the other way and carries off a
+substantial amount of kinetic energy which must be provided by your leg
+muscles.
+As a result the amount of work that would normally be sufficient to get you
+to the float is not enough to accelerate the boat and to get you to the,
+float.
+Hence, splash.
+Presumably after much experience you could get to the point where you could
+jump successfully from the boat to the float, but you will always find it
+harder than jumping an equivalent distance on land.
+<p><h3 id="pcap-4-b">4b. The Universe Recoils</h3>
+
+The results of your jumping may be far greater than you imagine.
+Consider that when you jump upwards, you gain a certain amount of momentum
+upwards.
+The earth must gain the same amount of momentum downwards so that the total
+momentum of you and the earth remains constant.
+However, consider that in the solar system these all form one system.
+According to the law of momentum conservation, as you jump one way, the whole
+solar system recoils in the opposite direction.
+Moreover, the solar system is not isolated.
+The solar system forms a part of our galaxy which in turn forms a part of the
+universe.
+This is really the whole system.
+A somewhat sobering thought is that both you and the smallest ant can cause
+the rest of the universe to recoil.
+<p><h3 id="pcap-4-c">4c. A Train Stops</h3>
+
+It is often the case that when considering an object that is being
+accelerated or decelerated, you will find that the object gains momentum
+from one source and energy from another.
+Consider an electric powered train that is slowing down.
+The usual technique for slowing is to turn off the motors (letting them
+coast) and to apply the brakes.
+This means that the wheels exert a force on the ground and, according to the
+third law, the ground exerts a force on the wheels.
+The latter tends to slow down the train.
+The momentum of the train decreases, hence the momentum of the earth
+increases.
+However, since the mass of the earth is so much greater than the mass of the
+train, the energy of the earth does not increase nearly as much as the
+kinetic energy of the train decreases.
+Where does the extra energy go?
+In fact, the energy is turned into thermal energy and used to: heat up the
+brakes, the track, and the air.
+<p>This is not the only way that the train can be stopped.
+Another way is to use the motors in reverse, running them as generators and
+feeding electrical energy back into the system.
+In this way, as the train does work on the generator the train's kinetic
+energy decreases.
+At the same time the earth still exerts a force on the wheels which tends to
+slow down the train.
+Thus the train stops and the momentum of the train is absorbed by the earth
+while the kinetic energy of the train is fed back into the electrical power
+system to be used somewhere else.
+Clearly both methods satisfy the laws of conservation of energy and momentum
+(otherwise they simply could not be), while the second method saves
+electrical energy and ultimately saves fossil fuel---currently a very
+important idea.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Try listing some of the conservation laws that apply in a card game - there
+are many, some of which are actually useful. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Problem&nbsp;4 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> You are standing on a skateboard that is not moving.
+You jump up in the air, thus acquiring kinetic energy and an upward momentum.
+What object's momentum changed oppositely?
+Where did your kinetic energy come from?</li>
+<li><span class="item-label">2.</span> The earth goes around the sun at the rate of 1<span class="unit">&thinsp;rev/yr</span>.
+The momentum of the earth at any one time is opposite to what it was six
+months earlier.
+What object's momentum changed oppositely?</li>
+<li><span class="item-label">3.</span> A car brakes to a stop at a traffic light, thus losing its momentum and
+kinetic energy.
+Where did they go?</li>
+<li><span class="item-label">4.</span> A bird flying due North suddenly shifts direction to due East and
+slows to half its former speed.
+What changed momentum oppositely?
+Where did three-fourths of the bird's kinetic energy go?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+ 
+Note: Replace each letter by the next letter in the alphabet.
+<p><ol>
+<li><span class="item-label">1.</span> dzqsg; ltrbkd</li>
+<li><span class="item-label">2.</span> rtm</li>
+<li><span class="item-label">3.</span> dzqsg; aqzjd gdzs</li>
+<li><span class="item-label">4.</span> zhq; zhq jhmdshb dmdqfx</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> A bird flying due North suddenly shifts direction to due East and
+slows to half its former speed.
+What changed momentum oppositely?
+Where did three-fourths of the bird's kinetic energy go?</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+</section>
+

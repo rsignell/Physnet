@@ -1,0 +1,477 @@
+<header class="module-header">
+  <h1 class="module-title">Coulomb's Law <span class="module-author">(J.Kovacs)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: electric charge, electric force <a href="../m121/" class="module-ref">MISN-0-121</a>.</li><li><strong>2.</strong> State Newton's second and third laws <a href="../m16/" class="module-ref">MISN-0-16</a>.</li><li><strong>3.</strong> Express an arbitrary vector in terms of the unit vectors
+    associated with a fixed coordinate system <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>4.</strong> Add two or more vectors and determine the magnitude and direction
+    of their resultant <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: charge, coulomb, Coulomb force, electrostatic
+    (interaction), electrostatic force constant (\(k_e\)).</li><li><strong>K2.</strong> State Coulomb's law and identify each of the quantities in the
+    expression, labeling each with its appropriate dimensions.
+    Also draw a sketch showing two charges and labeled with the quantities in
+    Coulomb's law, showing the direction of the forces involved in relation to
+    the signs and positions of the charges.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the magnitude and direction of the resultant
+    force exerted on a given point charge by a given spatial arrangement of
+    other point charges.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Point Charge: Field and Force” (MISN-0-115).</li><li><strong>2.</strong> “Electrostatic Potential Due to Discrete Charges” (MISN-0-116).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>One of the fundamental interactions in nature is the electromagnetic
+interaction.
+It is the interaction that is most directly responsible
+for all of the chemical and biological phenomena that you observe:
+the colors of objects, the solidness of a brick wall, the vapor pressure
+of mercury, the combustibility of gasoline, etc.
+Contrasted with this, your weight on the surface of the earth is a
+consequence of the gravitational interaction, while the energy output of the
+sun and the stars is a consequence of the nuclear interaction.
+The basic property associated with the electromagnetic interaction is the
+electric charge that substances carry.
+This can be attributed to the charge carried by the microscopic constituents
+of matter.
+The basic consequence of the existence of these charges is that a charged
+particle exerts a force on another charged particle.
+The precise nature of this force is expressed in Coulomb's law.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Force between Two Point Charges</h2>
+
+<p><h3 id="pcap-2-a">2a. Static Two-Body Gravitational Force</h3>
+
+Two stationary masses
+exert an attractive force on one another that is
+proportional to their masses and inversely proportional to the square of
+their separation \(r\):
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[|\vec{F}_\text{grav}| = G \frac{m_1 m_2}{r^2}\,.\]
+<p>This is a mutually attractive force: each mass attracts the other with
+this same force, in agreement with Newton's third law.
+Although the magnitudes of the forces on the two are equal, their
+accelerations will not be equal if their masses are not equal.
+For example, the sun and the earth each exert the same force on the other
+but the earth's acceleration toward the sun is \(10^5\) times the sun's
+acceleration toward the earth.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><h3 id="pcap-2-b">2b. Two-Body Electrostatic Force</h3>
+
+In addition to the gravitational force (and apparently independently of any
+gravitational force), two particles may exert a force on each other whose
+origin is attributed to another basic property of the particles, electric
+charge.
+That is, if in addition to the mass, each particle has an electric charge,
+the particles will exert a force on one another that is a consequence of
+the existence of their charges.
+This force is called the electrostatic force.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Unlike the gravitational force, which can only be attractive, the
+electrostatic force can be either repulsive or attractive.
+Furthermore, for the masses and charges of the elementary particles of
+nature such as the electrons and protons, the electrostatic force is
+many orders of magnitude larger than the gravitational force between the
+same two particles.
+<p><h3 id="pcap--">. </h3>
+[]2cThe Electrostatic Force (Qualitative)
+Qualitatively, the force that two charged particles exert on each other via
+the electrostatic interaction can be described as:
+(a) always along the line joining them, (b) either repulsive or attractive
+depending upon whether the charges have the same sign or have opposite signs,
+and (c) dependent upon the separation of the particles, with the magnitude
+of the force decreasing with increasing separation between them.
+In fact, given the particles' charges and their locations, one can
+calculate the force each exerts on the other.
+The mathematical expression that yields the force is called Coulomb's law.
+It is known to be valid over the remarkable range of separation
+distances from as small as \(10^{-15}\)&thinsp;meters to as large as \(10^6\)&thinsp;meters.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m114gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Distances and directions for illustrating
+the  Coulomb force of Particle 1 on Particle 2.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]2dCoulomb's Law
+The simplest expression that demonstrates how the electrostatic
+force depends upon the separation
+between the two charged particles
+can be written down referring to <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The magnitude of the electric force exerted on either particle by the other
+is:
+<p>\[|\vec{F}_e| = \frac{K}{r^2}\,.\]
+<p>The coefficient \(K\)
+is independent of the particle separation,
+depending only on a basic intrinsic property of the two particles
+themselves, their electrical charges.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>The coefficient \(K\) can be both positive and negative, unlike the
+gravitational counterpart which is always negative, indicating both
+repulsion and attraction as possible between the two charged particles.
+Because the electrostatic force can be demonstrated to be proportional to
+the charge on each of the particles, the product of the individual charges
+appears in \(K\).
+Taking this into account, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> may be written for the force exerted on
+<p>charged particle 2 by charged particle 1:
+<p>\[\vec{F}_{e\text{(on particle 2)}} = k_e \frac{Q_1 Q_2}{r^2}\hat{r}\,,\]
+<p>where \(Q_1\) and \(Q_2\) are the charges of particles 1 and 2, respectively,
+and \(\hat{r}\) is the unit vector pointing along the radius vector from
+particle 1 to particle 2 (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The unit of charge that enters in this expression, when \(F\) and \(r\) are in
+MKS units, is the “coulomb.”
+The constant quantity \(k_e\) is called “the electric force constant.”
+Its value is <em>defined</em> to be:
+<p>\[k_e = 8.99 \times 10^9 \,\text{N} \unit{m^{2}} \unit{C^{-2}}.\]
+<p>The newton and meter are defined elsewhere,
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>while the coulomb (symbol “C”) is defined in terms of electrical current
+and time.
+Note that \(k_e\) is the force in newtons that two identical one-coulomb
+charges would exert on one another if they were separated by a distance of
+one meter, just as \(G\) is the gravitational force, in newtons, that two
+one-kilogram masses would exert on each other when separated by one meter.
+<p><h3 id="pcap-2-e">2e. Basic Electric Charges</h3>
+
+Normal atoms and molecules consist of electrons, protons, and neutrons, and
+charge is strictly additive when these particles combine to form composite
+particles or collections of particles.
+Electrons, protons, and neutrons have these amounts of charge:
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>\[Q_e =  -(1.60217733 \pm 0.00000049) \times 10^{-19}\,\text{C}\,,\]
+<p>\[Q_p =  +(1.60217733 \pm 0.00000049) \times 10^{-19}\,\text{C}\,,\]
+<p>\[Q_n =  (-0.4 \pm 1.1) \times 10^{-21}\, |Q_e|\,.\]
+<p>We will generally require only three digits of accuracy so we take the
+charge on the neutron as zero and the charges on the proton and the electron
+as equal but opposite in sign.
+For notation, we use \(Q_e = -Q_p = -e\) where:
+<p>\[e = 1.602 \times 10^{-19}\,\text{C}\,.\]
+<p>All charges that are ever observed are positive or negative integer
+multiples of the charge on the electron (or proton).
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>Obviously, it takes a large number of electrons and/or protons to make a
+coulomb or, for that matter, any of the normally observed amounts of charge
+that are dealt with in standard electronic apparatus.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Several Point Charges</h2>
+
+<p><h3 id="pcap-3-a">3a. Choose a Convenient Coordinate System</h3>
+
+When there are more than two charges, the introduction of a suitable
+coordinate system with a corresponding set of unit vectors greatly
+simplifies the bookkeeping involved in determining the force on any one
+of the particles.
+An example with three charges is shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m114gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A convenient coordinate system for three
+point charges.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Apply Coulomb's Law to All Charge Pairs</h3>
+
+Coulomb's law still describes the electrostatic interaction between all
+pairs of point charges in the system.
+There are two contributions to the force on the charge \(Q_1\) due to charges<span class="tex-unknown" title="unknown macro">\</span>
+\(Q_2\) and \(Q_3\) in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>:
+one that would be exerted on \(Q_1\) if only the pair \(Q_1\) and \(Q_2\) were
+present and the other that would be exerted on \(Q_1\) if only the pair \(Q_1\)
+and \(Q_3\) were present.
+These forces are:
+<p>\[\text{Due to }Q_3 : \vec{F}_3 =
+                                   k_e \frac{Q_1 Q_3}{R_{13}^2} \hat{y}\,,\]
+<p>where \(R_{13}\) is the distance between the charges \(Q_1\) and \(Q_3\) and
+\(\hat{y}\) is a unit vector directed along the positive \(y\)-axis.
+(The force that \(Q_1\) exerts on \(Q_3\) is the negative of the above.)
+<p>\[\text{Due to } Q_2 : \vec{F}_2 =
+                                   k_e \frac{Q_1 Q_2}{R_{12}^2} \hat{R}\,.\]
+<p>Where \(\hat{R}\) is a unit vector (\(|\hat{R}| = 1\)) pointing along the line
+from \(Q_2\) to \(Q_1\).
+<p><h3 id="pcap-3-c">3c. Total Force is a Vector Sum</h3>
+
+The resultant force on \(Q_1\) in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> is the vector sum of the forces
+from the other two charges:
+<p>\[\vec{F} = \vec{F}_2 + \vec{F}_3 =
+ k_e \left( \frac{Q_1 Q_3}{R_{13}^2} \hat{y} +
+            \frac{Q_1 Q_2}{R_{12}^2} \hat{R} \right)\,.\]
+<p>To combine these two vectors it is necessary to write unit vector \(\hat{R}\)
+in terms of its \(x\) and \(y\)-components:
+<p>\[\hat{R} = (\cos \theta) \hat{x} + (\sin \theta) \hat{y}\,, \qquad
+\help{2}\]
+<p>with \(\theta\) as defined in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Then the net force is:
+<p>\[\begin{aligned}\vec{F} & = \vec{F}_2 + \vec{F}_3 \\         & = k_e \left[ \left( \frac{Q_1 Q_3}{R_{13}^2} +
+                \frac{Q_1 Q_2 \sin \theta}{R_{12}^2} \right) \hat{y}
+                + \frac{Q_1 Q_2 \cos \theta}{R_{12}^2} \hat{x} \right]\,.\end{aligned}\]
+
+<p><h3 id="pcap-3-d">3d. Numerical Example</h3>
+
+Numerically, with \(R_{13} = 0.100\,\text{m}\), \(R_{12} = 0.0500\,\text{m}\),
+\(\sin \theta = 0.800\), and \(\cos \theta = 0.600\), the net force on \(Q_1\) in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> can be determined to be
+<p>\[\vec{F} = (46.8\,\text{N}) \hat{y} + (21.6\,\text{N}) \hat{x}\,.\]
+<p>The magnitude of this force is
+<p>\[|\vec{F}| = 51.5\,\text{newtons}\,.\]
+<p>The direction of the force makes an angle \(\phi = 65.2^\circ\) with
+the positive \(x\)-axis as shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+This is a good example to check for yourself.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m114gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The resultant force on charge \(Q_1\) due
+to the  arrangement of charges shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the basic property of a piece of matter that defines
+the strength of its interaction with other matter through electromagnetic
+forces.
+<p>the MKS unit of charge, abbreviated “C,”
+defined as the amount of charge that passes a point in one second due to a
+current of one ampere (“ampere” and “second” are basic SI units).
+<p>an interaction between two charged particles
+that obeys Coulomb's law, i.e. that depends on the product of the charges
+and inversely on the square of the particles' separation.
+<p>an electromagnetic interaction
+that is independent of the motion of charged particles.
+<p>also called the electrostatic force
+constant, written \(k_e\).
+It is the intrinsic strength of the interaction between charged particles
+and as such appears in Coulomb's law and other electric and magnetic
+expressions.
+Its value is <em>defined</em> to be:
+\(k_e \equiv c^2 10^{-7}     \,\text{N} \unit{s^{2}} \unit{C^{-2}} = 
+              8.99 \times 10^9\,\text{N} \unit{m^{2}} \unit{C^{-2}}\).
+Here \(c\) is the speed of light.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Newton's Law of Universal Gravitation” (MISN-0-101). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Recall Newton's second law. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The “static” stresses the fact that this force exists even if
+the particles are stationary relative to the observer.
+This is to distinguish it from the magnetic force that arises when charged
+particles move relative to the observer. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This is not to say that the result is incorrect at distances
+larger than a million meters; that number is merely the upper limit to which
+experiment has verified this inverse-square-law force. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Similarly, the gravitational force between two particles depends
+upon another intrinsic property of the particles, their masses.
+The expression for the gravitational force between two particles (see
+<p>MISN-0-101) is similar to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, both of them decreasing as the
+inverse square of the inter-particle separation.
+The distance-independent coefficients, however, are vastly different.
+As an illustration of this, the electrostatic force between two electrons
+for a given separation is exactly the same as the electrostatic force
+between two protons.
+However, the gravitational force between protons is more than 3 million
+times the gravitational force between two electrons for the same
+separation. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See the Tables at the end of this book. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">Actually, \(|Q_p + Q_e| < 1.0 \times 10^{-21}\,e\). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">The particles called “quarks” constitute the only exception:
+they are the constituents of protons and neutrons and their charges are
+one-third and two-thirds the electronic charge \(e\). <a href="#fnref-8" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;6 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> For the system of three charged particles shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>,
+derive the expression that gives the resultant force on charge \(Q_1\) due to
+charges \(Q_2\) and \(Q_3\):
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Express the resultant in terms of the unit vectors \(\hat{x}\) and
+\(\hat{y}\)  associated with the coordinate system shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, getting
+<a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>.</li>
+<li><span class="item-label">b.</span> Given the numerical values shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, evaluate the
+values of the \(x\) and \(y\)-components of this resultant force, as shown in
+<a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>.</li>
+<li><span class="item-label">c.</span> Putting in the dimensions of all of the quantities that enter
+into the equation used in part (b), above, verify that the correct
+dimensions of the force components are the “newton.”</li>
+<li><span class="item-label">d.</span> Determine the magnitude and direction of this resultant force on
+charge \(Q_1\), getting <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p></li>
+<li><span class="item-label">2.</span> Write down the expression for Coulomb's law.
+Put in the units for each one of the factors in the expression
+(including the electrostatic constant \(k_e\)) and verify that
+you wind up with a force unit. </li>
+<li><span class="item-label">3.</span> A charge \(Q_1 = - 3.0 \times 10^{-6}\)&thinsp;C is located at the origin
+of a cartesian coordinate system while a charge
+\(Q_2 = + 4.0 \times 10^{-6}\)&thinsp;C is located at \(x = + 0.30\)&thinsp;meters,
+\(y = 0\), \(z = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the force on \(Q_1\) due to \(Q_2\). </li>
+<li><span class="item-label">b.</span> Calculate the force on \(Q_2\) due to \(Q_1\). 
+</li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m114gr04.svg" alt="" class="physnet-fig"></figure>
+
+Two balls each of mass \(M = 0.0500\)&thinsp;kilograms are charged and attached
+to two strings of length \(\ell = 0.600\)&thinsp;meters hanging from the same point.
+When the system is in equilibrium each of the balls makes an angle
+of 30.0° with the vertical.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a one-body force diagram for the ball carrying charge \(Q_2\)
+and identify the object that exerts each of those forces on this ball. </li>
+<li><span class="item-label">b.</span> Do the same for the other ball. </li>
+<li><span class="item-label">c.</span> Set up a coordinate system at the location of the ball carrying
+charge \(Q_2\) with \(\hat{x}\) pointing horizontally to the right, \(\hat{y}\)
+vertically upward.
+Express the three forces acting on this ball in terms of these unit
+vectors and the symbols in the sketch (above). 
+What is the resultant (symbolic) force on the ball, based on its acceleration? </li>
+<li><span class="item-label">d.</span> The values of \(\ell\), \(M\), and \(\theta\) on the left side of the sketch
+(above) are the same as those on the right side of the sketch.
+Does this mean that the value of the charge on the left side of the sketch
+is the same as that on the right side (i.e., does \(Q_1 = Q_2\))? </li>
+<li><span class="item-label">e.</span> If \(Q_1 = 4.00 \times 10^{-6}\,\text{C}\), what is the value of \(Q_2\)?
+
+</li>
+<li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m114gr05.svg" alt="" class="physnet-fig"></figure>
+
+At the corners of a square of side length \(d = 0.030\)&thinsp;m are located
+four charges as shown in the diagram above.
+\(Q_1\) is located at the origin of the coordinates, \(Q_4\) is on the \(y\)-axis
+and \(Q_2\) on the \(x\)-axis.
+<table class="physnet-table"><tbody><tr><td>[t]l
+\(Q_1 = - 3.0 \times 10^{-6}\)&thinsp;C</td></tr><tr><td>\(Q_2 = - 9.0 \times 10^{-6}\)&thinsp;C</td></tr><tr><td>\(Q_3 = + 2.0 \times 10^{-6}\)&thinsp;C</td></tr><tr><td>\(Q_4 = + 1.0 \times 10^{-6}\)&thinsp;C</td></tr></tbody></table>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What force does the charge \(Q_1\) exert on \(Q_3\)?  
+What force does \(Q_3\) exert on \(Q_1\)? </li>
+<li><span class="item-label">b.</span> What force does \(Q_4\) exert on \(Q_3\)? </li>
+<li><span class="item-label">c.</span> What force does \(Q_2\) exert on \(Q_3\)? </li>
+<li><span class="item-label">d.</span> What is the resultant force on \(Q_3\)? </li>
+<li><span class="item-label">e.</span> Calculate the direction of this net force measured relative to
+the positive \(x\)-axis. 
+</li>
+<li><span class="item-label">6.</span> Three point charges are located at positions as
+indicated in this diagram:
+<figure class="fig-centered"><img src="figures/m114gr06.svg" alt="" class="physnet-fig"></figure>
+
+<table class="physnet-table"><tbody><tr><td>[t]l
+\(Q_1 = + 5.0 \times 10^{-4}\)&thinsp;C, located at the origin</td></tr><tr><td>\(Q_2 = - 2.0 \times 10^{-4}\)&thinsp;C, located at (\(0, - 8.0\)&thinsp;m)</td></tr><tr><td>\(Q_3 = + 8.0 \times 10^{-4}\)&thinsp;C, located at (6.0&thinsp;m, 8.0&thinsp;m)</td></tr></tbody></table>
+
+<p>Calculate the magnitude and direction of the resultant force
+on charge \(Q_3\). </li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> \(T\), \(F_e\), \(W\) same as in answer \(N\), except that \(F_e\) in this
+case is the force on \(Q_1\) due to \(Q_2\).<br>
+<figure class="fig-centered"><img src="figures/m114gr07.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> (1.2&thinsp;N)&thinsp;\(\hat{x}\)</li>
+<li><span class="item-label">3.</span> (21&thinsp;N)&thinsp;\(\hat{x}\) + (21&thinsp;N)&thinsp;\(\hat{y}\)</li>
+<li><span class="item-label">4.</span> \(-1.80 \times 10^2 \,\text{N} \,\hat{y}\)</li>
+<li><span class="item-label">5.</span> \(\vec{F}_e =
+ k_e \frac{Q_1 Q_2}{4 \ell^2 \sin^2 \theta} \hat{x};\;
+ W = -M g \hat{y};\;
+ \vec{T} = (T \cos\theta) \hat{y} - (T \sin\theta) \hat{x}\)</li>
+<li><span class="item-label">6.</span> \( 2.83 \times 10^{-6}\)&thinsp;C <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">7.</span> 90° clockwise from the positive \(x\)-direction</li>
+<li><span class="item-label">8.</span> \(-1.2 \,\text{N} \,\hat{x}\)</li>
+<li><span class="item-label">9.</span> \(-1 \,\text{N}\,\hat{x} - 2.0 \times 10^2 \,\text{N}\,\hat{y}\)</li>
+<li><span class="item-label">10.</span> \( 2.0 \times 10^1 \,\text{N} \, \hat{x}\)</li>
+<li><span class="item-label">11.</span> See the module text</li>
+<li><span class="item-label">12.</span> It is not moving, so \(\vec{a} = 0\) so
+           \(\vec{F} = \vec{F}_e + \vec{T} + \vec{W} = 0\)</li>
+<li><span class="item-label">13.</span> \((- 21\,\text{N})\,\hat{x} - (21\,\text{N})\,\hat{y}\)</li>
+<li><span class="item-label">14.</span> \(T = \) contact force exerted by the string</li>
+<li>\(F_e = \) non-contact electrostatic force exerted by charge \(Q_1\)</li>
+<li>\(W = \) non-contact gravitational force exerted by the earth</li>
+<li><figure class="fig-centered"><img src="figures/m114gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">15.</span> \(F = 31\)&thinsp;N, away from the origin at an angle that is 51° from the
+           positive \(x\)-axis and 39° from the positive \(y\)-axis.</li>
+<li><span class="item-label">16.</span> No, but Coulomb's law produces a force of \(Q_1\) on \(Q_2\)
+           that is equal and opposite to the force of \(Q_2\) on \(Q_1\), regardless
+           of the relative sizes of \(Q_1\) and \(Q_2\).  This is in agreement
+           with Newton's third law.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\[Q_2 = \frac{(.05\,\text{kg})(9.8\unit{m/s^{2}})(4)(.6\,\text{m})^2
+                     (\sin{30^\circ})^2(\tan{30^\circ})}
+                    {(4.00\times10^{-6}\,\text{C})(8.99\times10^9\unit{N\,m^{2}/C^{2}})} =
+              2.83 \times 10^{-6}\,\text{C}\]
+<p> Note: \(\text{distance between charges } =
+                (2)(0.6\,\text{m})(\sin{30^\circ}) = 0.6\,\text{m}\)&thinsp;.
+ An alternative: note the equilateral triangle formed by the two strings
+ and an imaginary line connecting the balls: all three angles are equal
+ so all three sides are equal.
+ Anyway, sketch the situation roughly to scale and see that the value
+ of the distance is correct.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">If you have trouble with this equation, review MISN-0-1 where such
+expressions are discussed in great detail.
+You can always check such an expression by taking:
+(i) \(\hat{R}\cdot\hat{R}\) to see that it is indeed of unit length;
+(ii) \(\hat{R}\cdot\hat{x}\) to see that the \(x\)-component is correct; and
+(iii) \(\hat{R}\cdot\hat{y}\) to see that the \(y\)-component is correct.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e = 8.99 \times 10^9 \,\text{N} \unit{m^{2}} \unit{C^{-2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Three point charges are located at positions as indicated
+in this diagram:<br>
+<figure class="fig-centered"><img src="figures/m114gr06.svg" alt="" class="physnet-fig"></figure>
+
+<p><table class="physnet-table"><tbody><tr><td>[t]l
+\(Q_1 = + 5.0 \times 10^{-4}\)&thinsp;C, located at the origin</td></tr><tr><td>\(Q_2 = - 2.0 \times 10^{-4}\)&thinsp;C, located at (\(0, - 8.0\)&thinsp;m)</td></tr><tr><td>\(Q_3 = + 8.0 \times 10^{-4}\)&thinsp;C, located at (6.0&thinsp;m, 8.0&thinsp;m)</td></tr></tbody></table>
+
+<p>Calculate the magnitude and direction of the resultant force
+on charge \(Q_3\).</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this Problem&nbsp;6 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

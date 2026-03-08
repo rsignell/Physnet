@@ -1,0 +1,96 @@
+<header class="module-header">
+  <h1 class="module-title">Euler's Methods for Solving Differential Equations; RC Circuits <span class="module-author">(Robert Ehrlich)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 2 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: linear scaling function <a href="../m348/" class="module-ref">MISN-0-348</a>.</li><li><strong>2.</strong> State the expression for the potential difference across a capacitor
+    in terms of the charge stored on the capacitor's plates <a href="../m135/" class="module-ref">MISN-0-135</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Describe the algorithm for solving first order differential equations
+    using Euler's method.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Enter and run a program to compute the exact charge as a function of
+    time on a discharging capacitor in an RC circuit and the approximate
+    charge as a function of time resulting from a numerical solution of the
+    differential equation for an RC circuit using Euler's method.
+    <br>
+ Modify the P1 program (above) so that it computes the charge on a
+    capacitor in an RC circuit when a square wave input is applied.
+    <br>
+ Modify the P1 program (above) so that it computes the charge on a
+    capacitor in an RC circuit using the improved Euler Method.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> A computer with BASIC or FORTRAN or C++.</li>
+</ol>
+</div>
+
+
+</section>
+
+<hr class="section-divider">
+
+
+<section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>MODEL EXAM
+<p><ol>
+<li><span class="item-label">1.</span> Briefly describe the complete algorithm for using Euler's method to solve
+equations of the form: dq/dt=f[q(t),t].
+<p></li>
+<li><span class="item-label">2.</span> Submit your annotated output from your run that computed the exact charge
+as a function of time on a discharging capacitor in an RC circuit and the
+approximate charge as a function of time resulting from a numerical
+solution of the differential equation for an RC circuit using Euler's
+original method.
+Your runs will show:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> one run using data of Sect. 4a, checked against
+Fig.6;</li>
+<li><span class="item-label">b.</span> a graph showing that error decreases linearly with \(\Delta t\) for small \(\Delta t\) and
+that it extrapolates to the origin;</li>
+<li><span class="item-label">c.</span> a graph showing that the answer changes linearly with \(\Delta t\) for small \(\Delta t\) and
+comparing the extrapolated answer to the exact answer (should be close!).
+</li>
+<li><span class="item-label">3.</span> Submit your program changes and annotated output from your run(s) with
+a square wave input, showing: (a) how the output wave-form changes as the
+time constant changes; and (b) remarking on any problems that arise in
+dealing with a rapidly-changing driving term.</li>
+<li><span class="item-label">4.</span> Submit your annotated output from your run with the program (above)
+modified so that it computes the charge on a capacitor in an RC circuit using
+the improved Euler Method, including:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> run(s) with the same constants as in item 3 above, but now using the
+improved Euler method, showing that it is indeed an improvement over
+the simple Euler method;</li>
+<li><span class="item-label">b.</span> a plot showing that error is linear in \((\Delta t)^2\) for small \(\Delta t\) and that the
+error extrapolates to the origin;</li>
+<li><span class="item-label">c.</span> a plot showing that the solution is linear in \((\Delta t)^2\) for small \(\Delta t\) and
+that the value extrapolates to a value close to the exact one;</li>
+<li><span class="item-label">d.</span> a comparison of the relative efficiencies of the simple and improved
+Euler methods for achieving the same accuracy for the same constants
+other than \(\Delta t\).
+</li>
+</ol>
+
+<p>
+</section>

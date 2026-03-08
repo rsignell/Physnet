@@ -1,0 +1,910 @@
+<header class="module-header">
+  <h1 class="module-title">Small Oscillations <span class="module-author">(Peter Signell, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: simple harmonic motion, linear restoring force,
+    frequency, displacement, amplitude, phase <a href="../m26/" class="module-ref">MISN-0-26</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: small oscillation, point of stable equilibrium,
+    linear approximation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a force or potential energy function, show the small
+    oscillation solution's: (i) center point; (ii) force constant; and
+    (iii) frequency.
+    The solution presentation should include: intermediate steps, graphs,
+    and answer checks.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Interatomic Binding and Lattice Energy of Crystalline Solids” (MISN-0-334).</li><li><strong>2.</strong> “Diatomic Molecules: Properties from Rotation-Vibration Spectra” (MISN-0-217).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Approximating Real-Force Oscillations</h3>
+
+The purpose of this lesson is to help you develop skill in using Simple
+Harmonic Motion (SHM) as an approximation to general oscillatory motions.
+Strictly speaking, SHM applies only to oscillations produced by a linear
+restoring force: \(F = -k(x-x_0)\).
+Other forces are non-linear functions of position \(x\) but we often
+approximate them with the SHM force because: (1) the SHM solutions can be
+easily obtained in terms of well-known mathematical functions; (2) most
+oscillations are well-approximated by SHM when their amplitudes, driving
+forces and damping are small; (3) the SHM approximation often gives us
+useful insights; and (4) we often need some approximation with which to check
+the computer program used to obtain the actual motion.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><h3 id="pcap-1-b">1b. Most Forces Look Like SHM Over Small Displacements</h3>
+
+The reason SHM  is a good approximation for “small” oscillations
+is because almost any force function looks rather like the linear SHM force
+if you examine it in a small enough region around the center point of its
+oscillations (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Thus if the amplitude of the oscillation is small enough, for the particular
+force you have at hand, then SHM will be a good enough approximation to the
+actual motion and no further work need be done.
+You must decide whether the SHM solution is good enough for your particular
+application.
+<p><h3 id="pcap-1-c">1c. Checking Computer Codes</h3>
+
+If computer solutions are needed, the computer code should be
+checked by comparing small-amplitude numerical solutions, produced by the
+code, to the corresponding SHM solutions.
+One does this by running the program with the input constants
+temporarily set at a succession of “small oscillation” amplitudes.
+One plots the resulting frequencies versus the log of the amplitude
+and extrapolates the curve to zero amplitude.
+This “zero amplitude” frequency should agree exactly with the SHM
+frequency.
+If they do agree, one then puts the amplitude back at its physical value
+and runs the computer program again to get the physical answer.
+<p><h3 id="pcap-1-d">1d. Real Force In, Approximate Motion Out</h3>
+
+In this module we show you how to start with: (1) some particular restoring
+force: and (2) the mass of the oscillator driven by that force, and from that
+input produce the particular SHM solution which the real oscillation
+approaches as the amplitude approaches zero.
+The “solution” consists of the SHM approximation to: (1) the oscillator's
+frequency (hence also its period); and (2) the center point of its oscillations.
+Using these, you can immediately write down the oscillator's position as a
+function of time.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m28gr00.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A non-linear function usually looks rather
+straight over a small enough region.</figcaption></figure></div>
+
+<p><span class="tex-unknown" title="unknown macro">\enlargethispage</span>0.4cm
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Example: a Pendulum</h2>
+
+<p><h3 id="pcap-2-a">2a. The Physical Oscillator</h3>
+
+Our illustrative example is the simple pendulum.
+This consists of a rod which is pivoted at its upper end and which has a
+weight, called a “bob,” attached at the rod's lower end (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+The rod is assumed to be weightless and of length \(\ell\).
+The bob is assumed to be the size of a mathematical point and is assumed to
+have mass \(m\).
+Our pendulum is assumed to be swinging back and forth, under the influence of
+gravity, without friction.
+We can think of it as a slightly idealized version of the pendulum in a
+Grandmother's or Grandfather's clock.
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m28gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A simple pendulum.</figcaption></figure><figure id="fig-3"><img src="figures/m28gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Position vs. time for the pendulum of <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. The Position Oscillates</h3>
+
+The position of the bob oscillates as the bob travels back and forth
+along its circular-arc trajectory.
+This position is denoted \(s\) in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, and it is taken as zero at the
+lowest point on the trajectory.
+The position \(s(t)\) oscillates: as time increases it goes smoothly from
+positive values to negative ones to positive ones to negative ones, etc.
+(see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><h3 id="pcap-2-c">2c. Finding the Appropriate SHM</h3>
+
+We produce the approximating SHM solution, the one which the real force's
+oscillations approach as amplitude becomes small, by carrying out these three
+steps:
+<ul>
+<li><span class="item-label">1.</span> Obtain the net force acting on the oscillator.
+For our pendulum, we start by noting that two different objects
+exert forces on the bob, which is the mass that oscillates: the earth through
+gravity, and the rod through its point of contact with the bob.
+Show that the resultant force is tangential to the trajectory and its
+component in the direction of increasing \(s\) is: \(F(s) = -mg\,sin(s/\ell)\)
+(this is the only component there is). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>&thinsp;
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup></li>
+<li><span class="item-label">2.</span> Construct a linear force whose value and slope agree with those of
+the true force at the point where the true force descends through zero (the
+point of zero displacement for the oscillations).
+This means that we must first find the place where the true force descends
+through zero, then find the slope of the true force there.
+For our pendulum, the point where the true force (the force on the bob)
+descends through zero is seen by inspection to be \(s = 0\).
+The slope of the force there is: \(dF/ds(0) = -mg/\ell\).
+The linear force which has that value and slope at that point is (check this
+in your head): \(F(s) = -mgs/\ell\).
+For sufficiently small displacements around the origin, the linear force and 
+the true force appear indistinguishable to the eye (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).</li>
+<li><span class="item-label">3.</span> Calculate the SHM frequency for the linear approximating force.
+For our pendulum, the force constant of the approximating SHM is:
+\(k = mg/\ell\).
+This gives the SHM frequency:
+\(\nu_0 = (1/2\pi) \omega\) where \(\omega = \sqrt{g/\ell}\).
+If the pendulum amplitude is small, its frequency is close to this SHM
+frequency.</li>
+</ul>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m28gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Exact and SHM frequencies, model as in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. Comparing the Exact and SHM Values</h3>
+
+In <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> we compare the SHM frequency to the true frequency as a function
+of the amplitude of the oscillations.
+The SHM frequency is independent of the SHM oscillator's amplitude so it is
+plotted as a constant.
+However, the pendulum's frequency varies with the pendulum's amplitude.
+The figure shows that if the pendulum swings to 60°, the SHM prediction
+for the frequency is off by about 6%, but if the swing is to 30°
+then SHM is off by only about 1.5%!
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>In <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> we compare the positions as functions of time for various
+amplitudes.
+Note that the angle of swing must get up to 125° (picture that
+swing!) before the curve no longer looks like an SHM sine
+curve.
+Note also that the frequency decreases (so the period increases in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>)
+as the amplitude increases.
+<div class="figure-full"><figure id="fig-5"><img src="figures/m28gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Position vs. time for various amplitudes,
+model as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Variations</h2>
+
+<p><h3 id="pcap-3-a">3a. Summary</h3>
+
+We must often deal with these variations: (1) the center point of the
+oscillations is not at the coordinate origin; (2) the potential energy is
+specified instead of the force; and (3) rather than a fixed force acting on a
+single mass, we have two masses exerting mutual forces on each other as they
+each oscillate.
+<p><h3 id="pcap-3-b">3b. Oscillation Not About the Origin</h3>
+
+It is often inconvenient to put the origin of the coordinate system at the
+place where the force descends through zero.
+The coordinate position where the force descends through zero is called the
+“Point of Stable Equilibrium” and it is denoted by adding a subscript
+“zero” to the coordinate symbol.
+We will usually refer to the Point of Stable Equilibrium as the “PSE.”
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>For example, if the position of the oscillator is labeled \(x\) then
+its PSE is labeled \(x_0\).
+If the position of the oscillator is labeled \(s\) then its PSE is labeled \(s_0\).
+<p><h3 id="pcap-3-c">3c. The Potential Energy is Specified</h3>
+
+Often a potential energy function is specified rather than a force function.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Since \(F(x) = -dE_p(x)/dx\), \(x_0\) is the point where the slope of \(E_p\),
+\(E_p'\), is ascending through zero.
+The force constant is then the second derivative: \(k = E_p''(x_0)\).
+When the potential energy function \(E_p(x)\) is plotted as a function of \(x\),
+it shows a minimum at the PSE (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m28gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Potential energy vs. displacement, model as
+in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.</figcaption></figure>
+
+<p><h3 id="pcap-3-d">3d. Two Mutually-Interacting Bodies</h3>
+
+If two masses are oscillating due to equal but opposite forces each exerts
+on each other, the parameters we have been using must be reinterpreted.
+Now \(x\) is the (variable) distance between the two objects, \(F(x)\) is
+the force each body exerts on the other, and \(x_0\) is the equilibrium
+separation of the two objects, the separation at which each exerts zero
+force on the other.
+When \(x\) is larger than \(x_0\), the two masses are attracted toward each other;
+when \(x\) is smaller than \(x_0\), they are repelled from each other.
+The force constant for the system is defined as before: \(k=-dF/dx(x_0)\).
+The two objects' oscillations will be identical but 180° out of
+phase (they both head away from each other, then they both
+turn around and head toward each other, then they turn around and head
+away from each other, etc., each oscillating about its own end of \(x_0\)).
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>The SHM frequency is then: \(\nu = (1/2\pi)\sqrt{k/\mu}\), where
+the system's “reduced mass” \(\mu\) is given by:
+\(\mu \equiv m_1 m_2/(m_1 + m_2)\).
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Solution Steps</h2>
+
+<p><ul>
+<li><span class="item-label">1.</span> If \(E_p\) is given, find \(F\).</li>
+<li><span class="item-label">2.</span> Find the PSE.</li>
+<li><span class="item-label">3.</span> Find \(k\).</li>
+<li><span class="item-label">4.</span> Determine the appropriate mass: take \(m\) or calculate \(\mu\).</li>
+<li><span class="item-label">5.</span> Find \(\nu\).</li>
+</ul>
+
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The Point of Stable Equilibrium</h2>
+
+<p><h3 id="pcap-5-a">5a. Formal Solution</h3>
+
+One way for finding the zeros of a function is formally, which means
+setting the function equal to zero and then solving that equation formally.
+The solutions are the function's zeros.
+Then you must find which of those zeros are PSE's by examining the sign of
+\(F'\) at each of them.
+If there is more than one PSE, your particular application must specify
+which PSE to focus on.
+<p>For a linear force, find the PSE without writing anything down.
+For example, in the function \(F(x) = -a(x - b)\), the point \(x = b\) is
+obviously a PSE.
+Here is another linear form for you to try: \(F(x) = -a^2 x + b^2\). <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p>For a quadratic force, use the quadratic root equation.
+For example, for \(F = 3 - 16x + 5x^2\), use the quadratic root
+formula to show that: (1) there is a PSE at \(x_0 = 0.2\) <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a>;
+and (2) there is another root at \(x = 3\) but this one is not a PSE because
+the force is ascending, not descending, through zero there.
+This latter point is called a “point of unstable equilibrium.”
+The word “equilibrium” is used because an object placed at rest at this
+point will not move, and the word “unstable” is used because any small
+displacement of the object from the point will cause the object to be
+accelerated away from that point.
+<p>There are now good computer programs, employing artificial
+intelligence techniques, that can produce most of the known formal
+solutions for roots.
+The most used programs at this time are MACSYMA, REDUCE, and MATHEMATICA.
+<p><h3 id="pcap-5-b">5b. Numerical Techniques</h3>
+
+When a formal solution cannot be found, or sometimes when it cannot be
+found easily, we use numerical techniques.
+<p>Sometimes we use computer programs or calculators (like the HP - 41) that
+incorporate a whole bag of numerical zero-finding tricks.
+If you have access to a zero-finding calculator or computer, try it on the
+quadratic force given above.
+<p>Sometimes we use numerical interpolation, mainly on a hand calculator:
+this always works, albeit slowly.
+Try numerical interpolation on your own calculator, on the force
+\(F(x) = -\cos\,x\).
+Calculate values of \(F(x)\) for various values of \(x\), finding a region where
+\(F\) changes from positive to negative.
+Single out the adjacent pair of points between which \(F\) changes sign.
+Use linear interpolation on this pair of points to predict the point where
+\(F\) is zero.
+Calculate the actual value of \(F\) at that point and repeat the interpolation
+process as many times as you wish. <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a>
+<p><h3 id="pcap-5-c">5c. Graphical Method</h3>
+
+For the graphical method, use your hand calculator and graph 
+paper, or a computer, to plot the force function.
+Note the point where the force descends through zero.
+Increase your accuracy by “blowing up” the region around that zero on
+a new plot.
+Repeat this enlarging process until you have located the PSE to the desired
+accuracy.
+You can try this on the quadratic function given above.
+</section>
+
+<p><section id="sect-6" class="module-section section-text"><h2 id="sect-6">6. The Force Constant</h2>
+
+<p><h3 id="pcap-6-a">6a. Formal Method</h3>
+
+Once the PSE has been found, by whatever means, the force constant \(k\) can
+usually be found formally; that is, by taking the first derivative of the
+force and then evaluating it at the PSE.
+For example,
+<p>\[F = (3 - 16\,x\unit{m^{-1}} + 5\,x^2\unit{m^{-2}})\,\text{N}\,,\]
+<p>can be differentiated at its PSE, \(x_0 = 0.2\,\text{m}\), to obtain:
+\(F' = -14\)&thinsp;N/m.
+Then the force constant can be seen by inspection: \(k = 14\)&thinsp;N/m.
+If you don't know a particular function's derivatives, look them up in a
+table of derivatives
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>or use an appropriate formal-math computer program.
+<p><h3 id="pcap-6-b">6b. Finite Difference and Graphical Methods</h3>
+
+If the derivative cannot easily be taken formally, it can be measured as
+the slope of the force on a graph, or it can be evaluated using finite
+difference equations.
+The graphical method is usually not practical for taking second derivatives,
+so finite difference equations are better when the potential energy function
+is given instead of the force function.
+<p>The relevant finite difference equations are:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\[f'(x)\simeq\frac{f(x+\Delta)-f(x-\Delta)}{2\Delta}\,;\]
+<p>\[f''(x)\simeq\frac{f(x+\Delta)-2f(x)+f(x-\Delta)}{\Delta^2}\,.\]
+<p>In the above formulas \(x\) is the PSE and \(\Delta\) is a small distance.
+The distance \(\Delta\) should be made sufficiently small so that making it
+smaller results in no significant improvement in the value of \(k\) (for our
+present purposes, 2-3 significant digits).
+Do not make \(\Delta\) so small that \(k\)'s first 2-3 digits are affected by
+calculator error.
+You can practice on: \(F = -\,5\,x^{-4} + 20\,x^{-6}\).  <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p>Note that use of the graphical or finite difference methods as a check
+provides a virtually fail-safe method for locating all errors inadvertently
+made while taking formal derivatives.
+<p>Here is a function on which you can easily practice all three
+methods (formal, graphical, and numerical): \(F = -\,\cos\,x\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+For their generous assistance with this module, I would like to thank: Jack
+Hetherington, George Bertsch, Tom Kaplan, Gerry Pollack, Jon Pumplin, Jules
+Kovacs, Robert Spence, and Jerry Cowen.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+ for a particular force, a space-point
+where any small displacement produces a return force (Sections 3b and 5).
+<p> an oscillation whose motion is simple harmonic within
+tolerable limits.
+<p>the straight line which has the same value and slope as the designated
+function at the designated point.
+</section>
+
+<p><section id="table-of-derivatives" class="module-section section-text"><h2 id="table-of-derivatives">Table of Derivatives</h2>
+
+<p><h3 id="pcap--">. Combinations of functions</h3>
+
+<ul>
+<li><span class="item-label">1.</span> \(\frac{d}{dx}\,\left(f(u)\right) = \frac{df(u)}{du}\,\,\,\cdot\,\frac{du}{dx}\)</li>
+<li><span class="item-label">2.</span> \(\frac{d}{dx}\,\left(f\,\pm\,g\right) = \frac{df}{dx}\,\pm\,\frac{dg}{dx}\)</li>
+<li><span class="item-label">3.</span> \(\frac{d}{dx}\,\left(fg\right) = f\,\frac{dg}{dx} + g\,\frac{df}{dx}\)</li>
+<li><span class="item-label">4.</span> \(\frac{d}{dx}\,\left(f/g\right) = \left(g\,\frac{df}{dx} - f\,\frac{dg}{dx}\right)\,/\,g^2\)</li>
+</ul>
+
+<p><h3 id="pcap--">. Specific Functions</h3>
+
+<ul>
+<li><span class="item-label">5.</span> \(\frac{d}{dx}\,\left(x^n\right) = n\,x^{n-1}\)</li>
+<li><span class="item-label">6.</span> \(\frac{d}{dx}\,\left(e^x\right) = \eexp{x}\)</li>
+<li><span class="item-label">7.</span> \(\frac{d}{dx}\,\left(\ln\,x\right) = 1\,/\,x\)</li>
+<li><span class="item-label">8.</span> \(\frac{d}{dx}\,\left(\sin\,x\right) = \cos\,x\)</li>
+<li><span class="item-label">9.</span> \(\frac{d}{dx}\,\left(\cos\,x\right) = -\,\sin\,x\)</li>
+</ul>
+
+<p><h3 id="pcap--">. When the argument contains a constant</h3>
+
+For example, in
+<p>\[\frac{d}{dx}\,\left(\sin\,(ax)\right),\]
+<p>first use formula #1 (\(u = ax\) in this example), then use the formula
+appropriate to the function (#8 in this example).
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For descriptions of the terms “driving forces” and “damping”
+see  Damped Driven Oscillations and Mechanical Resonances (MISN-0-31). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">For help, see sequence S-2 in this module's Special Assistance
+ Supplement. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Small Oscillations Revisited,” MISN-0-32. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For a discussion of classes of equilibrium points, see “Static
+Equilibrium” (MISN-0-6).
+The abbreviation “PSE,” used here, is not in common use: there is no commonly
+used abbreviation. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">For a discussion of how to find the force function corresponding to a
+given potential energy function see “Potential Energy Curves, Force, and
+Motion” (MISN-0-22). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">Note that the total momentum of the two-body system is always zero. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">This is derived in: “Two-Body Kinematics and Dynamics”
+(MISN-0-45). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See the Appendix or, for example,  A Short Table of
+Integrals, B.&thinsp;D.&thinsp;Peirce, Ginn and Co., Boston (1929). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See “Taylor's Series for the Expansion of a Function About a Point”
+(MISN-0-4). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-PS1">See D.&thinsp;I.&thinsp;Miller and R.&thinsp;C.&thinsp;Nelson,  Biomechanics of Sport:
+A Research Approach, Lea &amp; Febiger, Philadelphia (1973), esp. p.&thinsp;85, 98.
+For other details of stepping see “The Control of Walking,” Keir Pearson,
+ Scientific American 235, p.&thinsp;72 (1976). <a href="#fnref-PS1" class="fn-back">↩</a></li><li id="fn-PS2">J.&thinsp;D.&thinsp;Hays, John Imbrie, and N.&thinsp;J.&thinsp;Shackelton, “Variations in the Earth's
+Orbit:  Pacemaker of the Ice Ages,”   Science, 194, 1121 (Dec.&thinsp;10, 1976),
+esp. Figure 9B, center, and  Science News, 110, 356 (Dec.&thinsp;4, 1975).
+For the 25,800 yr. cycle see “Vector Angular Momentum and Torque: Precession
+of the Equinoxes” (MISN-0-77).
+Also: Nigel Calder,  The Weather Machine, Viking Press, NY
+(1976, Viking Compass Edition). <a href="#fnref-PS2" class="fn-back">↩</a></li><li id="fn-PS3">See “Small Oscillations Revisited,” MISN-0-32. <a href="#fnref-PS3" class="fn-back">↩</a></li><li id="fn-PS4">G.&thinsp;Bertsch and K.&thinsp;Stricker, “On the Macroscopic Theory of the Giant Dipole
+State,”  Phys. Rev. C  13, 1312 (1976) and private communication from
+G.&thinsp;Bertsch. <a href="#fnref-PS4" class="fn-back">↩</a></li><li id="fn-PS5">G.&thinsp;L.&thinsp;Pollack, “The Solid State of Rare Gases,”  Rev. Mod. Phys.
+ 36, 748 (1964). <a href="#fnref-PS5" class="fn-back">↩</a></li><li id="fn-PS6">L.&thinsp;H.&thinsp;Nosanow, “Theory of Quantum Crystals,”  Phys. Rev.  146, 120
+(1966). <a href="#fnref-PS6" class="fn-back">↩</a></li><li id="fn-PS7">R.&thinsp;V.&thinsp;Reid,&thinsp;Jr., “Local Phenomenological Nucleon-Nucleon Potentials,”
+ Annals of Physics (NY)  50, 411 (1968). <a href="#fnref-PS7" class="fn-back">↩</a></li><li id="fn-PS8">A.&thinsp;F.&thinsp;Devonshire, “Theory of Barium Titanate”,  Phil. Mag.
+ 40, 1040 (1949). <a href="#fnref-PS8" class="fn-back">↩</a></li><li id="fn-PS9">E.&thinsp;Eichten, K.&thinsp;Gottfried, T.&thinsp;Kinoshita, J.&thinsp;Kogut, K.&thinsp;D.&thinsp;Lane, and
+T.-M.&thinsp;Yan,  Phys. Rev. Lett.  34, 369 (1975). <a href="#fnref-PS9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><h3 id="pcap--">. HOW TO WORK THESE PROBLEMS</h3>
+
+Each problem involves the exercise of eight skills.
+We suggest you practice the first skill across the first few problems,
+one after the other, until you get the hang of it.
+Then come back to the first problem and move on to the next skill.
+The answers are arranged to match that procedure.
+When you have mastered all eight skills, try working the rest of the problems
+straight through.
+Here are the skills:
+<ol>
+<li><span class="item-label">a.</span> Differentiate \(E_p\) and use that derivative to get the force
+function \(F\).</li>
+<li><span class="item-label">b.</span> Solve for the symbolic \(r_0\), a zero of \(F\).</li>
+<li><span class="item-label">c.</span> Substitute numbers to find the numerical value of \(r_0\).</li>
+<li><span class="item-label">d.</span> Plot \(F\) around \(r_0\); check value of \(r_0\) and check descending linearity.</li>
+<li><span class="item-label">e.</span> Differentiate \(F\) to get the symbolic \(F'(r_0)\).</li>
+<li><span class="item-label">f.</span> Substitute numbers to get \(k = - F'(r_0)\).</li>
+<li><span class="item-label">g.</span> Determine the appropriate mass for the frequency formula.</li>
+<li><span class="item-label">h.</span> Calculate \(\nu _0\), the “frequency of small oscillations.”</li>
+</ol>
+
+<p><h3 id="pcap--">. NOTE</h3>
+ The introductory paragraphs and the units that are used
+need not be understood to work these problems!
+Just plunge in and apply each of the eight skills, one after the other.
+Work problems&nbsp;1-6 for practice in using the formal method for skills b-c.
+Work problems&nbsp;7-9 for practice in using the numerical-graphical method for
+skills b-c.
+<p><ol>
+<li><span class="item-label">1.</span>  The Gravity-Body Segment Interaction and Stepping Frequency
+[General Interest, Biomechanics, Simple Pendula]
+<p>Let us see if the stepping frequency in normal human walking can be related
+to the pendulum-swing frequencies of the arm and the lower leg.
+First, we can calculate the arm and leg swing frequencies using body-segment
+mass distribution data.
+The computed frequencies can then be directly compared to the normal stepping
+frequency, or can be combined with observed distance-covered-per-step data
+to compare to normal walking speed.
+<p>The model outlined above treats the arm or lower leg as a pendulum that
+swings freely from its point of suspension.
+Of course each of them is, in reality, driven to some extent, but they should
+swing fairly freely in relaxed walking where the individual does not wish to
+exert much effort.
+Thus our results should be most valid for relaxed walking.
+Nevertheless, we will also be able to gain some insight into the way arm
+positions and motions change for running.
+<p>The arm and the lower leg are not simple pendula, but may be reasonably
+treated as such in a first approximation.
+We will denote the pendulum parameters by the symbols shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>
+in the text.
+<p>In terms of the pendulum mass's arc-displacement s and the effective
+pendulum length \(\ell\), its potential energy function can be written (see
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>):  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p>\[E_p = mg\ell \,[1 - cos(s/\ell )] = 2 mg \ell \,sin^2(s/2 \ell)\,.\]
+<p>To treat the arm-plus-hand system as a simple pendulum, we take data from
+Hanavan's computer model of the adult male and Fischer's estimate of
+radius-of-gyration ratios for body segments.
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>The arm-plus-hand numbers we get for a 5<span class="unit">&thinsp;ft</span>,&thinsp;10<span class="unit">&thinsp;in</span>, 150<span class="unit">&thinsp;lb</span> person are:
+\(\ell = 0.77\,\text{ft}\), \(\text{wt. } = 9.0\,\text{lb}\).
+Thus: \(m = 9.0\,\text{lb}/g\) where \(g = 32\unit{ft/s^{2}}\).
+<p>Note that <a href="#fig-1" class="fig-ref">Figs.&nbsp;1–4</a> in the text illustrate this arm-gravity problem.
+<p>Carry out the eight steps to find the frequency of small oscillations of the
+arm-hand system about the equilibrium position.
+<p> After you have completed the eight skills, carry out these steps
+to see how this problem relates to real life:
+<ul>
+
+</ul>
+</li>
+<li>Check the arm-swing frequency you just computed against your
+own stepping frequency (the frequency at which you take steps when you allow
+your arms to swing like pendulums).</li>
+<li>Use the arm-swing frequency you just calculated and 5 or 6<span class="unit">&thinsp;feet</span> as the
+distance covered per step, or your own measured stepping distance,
+to compute your walking speed in <span class="unit">&thinsp;ft/s</span> or <span class="unit">&thinsp;mi/hr</span>.</li>
+<li>Demonstrate how runners shorten their arm-plus-hand value of \(\ell\) as they
+pick up speed, and explain why they must shorten \(\ell\).</li>
+<li>Use the dependence of \(\nu\) on \(\ell\) to explain why a tall person has to exert
+a significant effort to keep in synchronous step with a short person who is
+walking normally.
+</li>
+<li><span class="item-label">2.</span>  The Earth-Sun Interaction, Orbital Eccentricity
+[General Interest, Astrophysics, Meteorology, Geology].
+The cycle of the earth-orbit's eccentricity, or “out of roundness,” governs
+the time between the earth's short bursts of warm temperature between
+glacial periods, while the two shorter Milankovic cycles participate in
+determining the height and width of these pulses.
+<p><sup class="fn-ref"><a href="#fn-PS2" id="fnref-PS2">PS2</a></sup>
+<p>The earth-orbit eccentricity oscillates on a (roughly) 93,000 year cycle, so
+it will be about that amount of time before the earth has another “high”
+like the just-ending one during which our present civilization developed.
+The period of ice and drought now starting may well provide an interesting
+test of mankind's ability to fashion artificial climates.
+<p><sup class="fn-ref"><a href="#fn-PS3" id="fnref-PS3">PS3</a></sup>
+<p>The present eccentric motion of the earth can be graphically illustrated by
+plotting the current orbit parameters on a potential energy curve.
+Including both the centrifugal and gravitational potentials, we find for the
+earth-sun potential energy function:
+<p>\[E_p(r) = a (r^{-2} - b r^{-1})\]
+<p>where:
+<p>\[a = 2.65649 \times 10^{33}\,\text{J}\unit{(AU)^{2}}\]
+<p>\[b = 2\unit{(AU)^{-1}}\]
+<p>\[\,\text{AU} \equiv \text{one \Quote{Astronomical Unit} of distance} =
+1.49647\,\times 10^{11}\,\text{m}\]
+<p>\[\text{earth mass} = 1.345\,\times 10^{32}\,\text{J}\unit{(AU)^{2}}\unit{yr^{2}}\]
+<p>and \(r\) is the earth-sun separation.
+<p>Carry out the eight steps to find the frequency of small oscillations of the
+earth about its equilibrium distance from the sun.</li>
+<li><span class="item-label">3.</span>  The 8n-8p Interaction in <sup>16</sup>O  [Nuclear Physics].
+The giant resonances are considered some of the most spectacular phenomena in
+nuclear physics, for several reasons.
+First, their coherent group-motions of nuclear particles are very different
+from the individual-particle motions implied by the hallowed shell model.
+Second, they are spectacular simply for their sheer size, sometimes
+comprising 90% or more of all the observed scattering for a given projectile
+and target excitation.
+Finally, they convey information about the nuclear force: for example,
+neutron excitation of the giant isovector dipole state could not occur if
+the two-body nuclear force was isospin independent.
+<p>The giant dipole state in <sup>16</sup>O is due to a separation of the center-of-mass
+(CM) of the eight protons (8p) from that of the eight neutrons (8n).
+If we denote the distance between the two CM's by \(x\), the separation
+potential energy can be written
+<p><sup class="fn-ref"><a href="#fn-PS4" id="fnref-PS4">PS4</a></sup>
+<p>\[E_p(x) = -\,(a + bx^2 + cx^4)\eexp{-dx^2}\]
+<p>\[a = 277.21\,\text{MeV}\]
+<p>\[b = 17.329\,MeV\unit{fm^{-2}}\]
+<p>\[c = 0.7825\,MeV\unit{fm^{-4}}\]
+<p>\[d = 0.16215\unit{fm^{-2}}.\]
+<p>\[m_\text{8p} = 8.34\,\times 10^{-44}\unit{MeV\,s^{2}fm^{-2}}\]
+<p>\[m_\text{8n} = 8.35\,\times 10^{-44}\unit{MeV\,s^{2}fm^{-2}}\]
+<p>Carry out the eight steps to find the frequency of small oscillations of the
+(8p) CM and the (8n) CM about their positions of equilibrium separation.</li>
+<li><span class="item-label">4.</span>  The Argon-Argon “6-12” Interaction
+[Solid State, Low Temperature Physics; Materials Science].
+Solid argon has recently been studied as a model solid, one whose properties
+are theoretically tractable.
+It is a simple solid to study because each atom's electrons are tightly
+bound to it, resulting in each lattice site being occupied by an identical
+neutral argon atom.
+In contrast to ionic crystals, such a neutral-atom solid has no inter-atomic
+Coulombic interactions.
+The remaining interaction is thus weak and of short range, with the result
+that only nearest neighbors can interact significantly.
+This produces a tremendous simplification in deducing the properties of the
+solid from the pair-wise interatomic forces.
+<p>The interaction potential energy for two argon (Ar) atoms a distance r apart
+can be well-represented by the Lennard-Jones function:
+<p><sup class="fn-ref"><a href="#fn-PS5" id="fnref-PS5">PS5</a></sup>
+<p>\[E_p(r) = -ar^{-6} + br^{-12}\]
+<p>\[a = 17.33\unit{eV\,\text{Å}^{6}}\]
+<p>\[b = 2.923\,\times 10^4\unit{eV\,\text{Å}^{12}}.\]
+<p>\[m_{Ar} = 4.135\,\times 10^{-27}\unit{eV\,\text{Å}^{-2}}\unit{s^{2}}\]
+<p>Carry out the eight steps to find the frequency of small oscillations of
+two Ar atoms their positions of equilibrium separation.</li>
+<li><span class="item-label">5.</span> <strong>The He-He “6-12” Interaction
+[Solid State, Liquid State, Quantum Crystal Physics].</strong>
+Helium crystals have aroused interest recently because they are truly
+quantum crystals; the helium atoms of which the crystals are composed cannot
+be treated as classical particles.
+In fact, direct application of classical dynamics produces an erroneous
+unstable equilibrium point exactly at the observed lattice site of an atom,
+along with erroneous stable equilibrium points elsewhere.
+Thus the classical lattice treatment says that the observed stable lattice
+should be unstable, and it erroneously says that other lattice arrangements
+should be stable.
+In the correct quantum treatment, one begins with a potential energy
+function for pairs of atoms, treated as classical point-particle force
+centers, then obtains the potential energy function at any particular
+lattice site by summing over nearby quantum densities.
+<p>The two-body potential energy function for two helium atoms a distance r
+apart is well approximated by
+<p><sup class="fn-ref"><a href="#fn-PS6" id="fnref-PS6">PS6</a></sup>
+<p>\[E_p(r) = a\, \left[ \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^6 \right]\]
+<p>where
+<p>\[a = 40.88\,\text{K}\,k_\text{Boltzmann}\]
+<p>\[\sigma = 2.556\,\text{\text{Å}}.\]
+<p>\[m_{He} = 4.808 \times 10^{-24}\,k_\text{B}\unit{K\,\text{Å}^{-2}}\unit{s^{2}}\]
+<p>Carry out the eight steps to find the frequency of small oscillations of
+two He atoms about their positions of equilibrium separation.</li>
+<li><span class="item-label">6.</span>  The Electron-Proton Interaction (\(\ell=1\))
+[Atomic Physics].
+The hydrogen atom is the simplest of all atoms and the only one for which
+the correct quantum equation can be solved formally.
+The input for the quantum Schr<span class="tex-unknown" title="unknown macro">\</span>"odinger equation is the classical
+electron-proton potential energy function.
+<p>For any \(\ell = 1\) state of atomic hydrogen, the electron(e)-proton(p) potential
+energy function is:
+<p>\[E_p(r) = ar^{-2} - br^{-1}\]
+<p>where:
+<p>\[a = 0.0763\,\text{eV}\unit{nm^{2}}\]
+<p>\[b = 1.440\,\text{eV}\,\text{nm}\]
+<p>\[m_p = 1.043\,\times 10^{-26}\unit{eV\,nm^{-2}s^{2}}\]
+<p>\[m_e = 5.678\,\times 10^{-30}\unit{eV\,nm^{-2}s^{2}}\]
+<p>The first term is the “centrifugal repulsion” and the
+second term is the Coulombic e-p attraction.
+<p>Carry out the eight steps to find the frequency of small oscillations of the
+electron and the proton in the \(\ell = 1\) state of the hydrogen atom.</li>
+<li><span class="item-label">7.</span>  The Reid Nucleon-Nucleon Potential [Nuclear Physics].
+The “Reid soft-core potential” is an interaction sometimes used in nuclear
+calculations to describe the force between each pair of nucleons in a nucleus.
+Here is Reid's potential for the \(^{1}\text{S}_0\) part of the force between a
+neutron (n) and a proton (p):
+<p><sup class="fn-ref"><a href="#fn-PS7" id="fnref-PS7">PS7</a></sup>
+<p>\[E_p(r) = (-he^{-x} - Ae^{-4x} + Be^{-7x})/x\]
+<p>where
+<p>\[x = 0.7\unit{fm^{-1}}\,r\]
+<p>\[A = 1650.6\,\text{MeV}\]
+<p>\[B = 6484.2\,\text{MeV}\]
+<p>\[h = 10.463\,\text{MeV}.\]
+<p>\[m_p = 1.043\,\times 10^{-44}\unit{MeV\,fm^{-2}s^{2}}\]
+<p>\[m_n = 1.044\,\times 10^{-44}\unit{MeV\,fm^{-2}s^{2}}\]
+<p>Carry out the eight steps to find the frequency of small oscillations of a
+neutron and a proton about their positions of equilibrium separation.</li>
+<li><span class="item-label">8.</span>  Ba-Ti-O “1-6-9” Interactions (Solid State Physics,
+Materials Science).
+Barium titanate crystals (BaTiO\(_3\)) are of considerable commercial interest
+because they exhibit a region of ferroelectricity, with a relative dielectric
+constant of the order of ten thousand!
+<p>Our picture of normal barium titanate is that of an ionic crystal in which
+the Ba, Ti, and O ions are regarded as point force centers.
+For any two of the Ba, Ti, or O ions, with charges e\(_1\) and e\(_2\) and a
+distance \(r\) apart, the interaction produces a potential energy represented by
+<p><sup class="fn-ref"><a href="#fn-PS8" id="fnref-PS8">PS8</a></sup>
+<p>\[E_p(r)\,=\,e_1\,e_2\,r^{-1} - \mu\,r^{-6} + \lambda\,r^{-9}.\]
+<p>The first term is the Coulombic interaction, the second is the Van der Waals
+attraction, and the third is a short range repulsion due mainly to the
+exclusion principle.
+The charges on the Ba, Ti, and O ions are \(2e\), \(4e\), and \( - 2e\) respectively,
+with \(-e\) being the charge on the electron.
+<p>For an interacting oxygen-ion-barium-ion pair,
+<p>\[\lambda_\text{O\,-\,Ba} = 6180\unit{eV\,\text{Å}^{9}}\]
+<p>\[\mu_\text{O\,-\,Ba} = 101\unit{eV\,\text{Å}^{6}}\]
+<p>\[e_1\,e_2 = - 4 e^2 = - 57.6\,\text{eV\,\text{Å}}\]
+<p>\[m_\text{O}  = 1.656\times 10^{-27}\unit{eV\,\text{Å}^{-2}s^{2}}\]
+<p>\[m_\text{Ba} = 1.421\times 10^{-26}\unit{eV\,\text{Å}^{-2}s^{2}}\]
+<p>Carry out the eight steps to find the frequency of small oscillations of a
+barium ion and an oxygen ion about their equilibrium separation in BaTiO\(_3\).</li>
+<li><span class="item-label">9.</span>  The Quark-Antiquark “Gluon-Bag” Interaction (\(\ell = 1\))
+[Elementary Particle, High Energy Physics].
+Perhaps the most exciting experimental discovery in recent elementary
+particle physics is that of the \(\psi\) particles, each apparently
+consisting of a charmed quark (\(q\)) and a charmed antiquark (\(\bar{q}\)) held
+together in their bag by gluons.
+(The charm of the quark and antiquark add to zero, so the \(\psi\) has
+no charm.)
+<p>A typical P-state potential energy function assumed for the \(q\) and
+\(\bar{q}\) pair, separated by a distance \(r\) is
+<p><sup class="fn-ref"><a href="#fn-PS9" id="fnref-PS9">PS9</a></sup>
+<p>\[E_p(r) = a\,r^{-2} - b\,r^{-1} + c\,r\]
+<p>where
+<p>\[a = 0.097\unit{GeV\,fm^{2}}\]
+<p>\[b = 0.20\,\text{GeV\,fm}\]
+<p>\[c = 5.0 \unit{GeV\,fm^{-1}}\]
+<p>and:
+<p>\[m_q = m_{\bar{q}} = 1.78\times 10^{-47}\unit{GeV\,fm^{-2}s^{2}}.\]
+<p>Carry out the eight steps to find the frequency of small oscillations of the
+\(q\bar{q}\) pair about their positions of equilibrium separation.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ul>
+<li><span class="item-label">1a.</span> \(F=-(W)\sin(s/\ell)\), where \(W\) is the weight</li>
+<li><span class="item-label">2a.</span> \(F=2ar^{-3}-abr^{-2}\)</li>
+<li><span class="item-label">3a.</span> \(F=[x(-2ad+2b)+x^3(4c-2bd)+x^5(-2cd)]e^{-dx^2}\)</li>
+<li><span class="item-label">4a.</span> \(F=-6ar^{-7}+12br^{-13}\)</li>
+<li><span class="item-label">5a.</span> \(F=a(12\sigma^{12}r^{-13}-6\sigma^6r^{-7})\)</li>
+<li><span class="item-label">6a.</span> \(F=2ar^{-3}-br^{-2}\)</li>
+<li><span class="item-label">7a.</span> \(F=-(1/r)(he^{-ar}+4Ae^{-4ar}-7Be^{-7ar})\)</li>
+<li><span class="item-label">\</span> \(\,\ \ \ \ \ \ -(1/ar^2)(he^{-ar}+Ae^{-4ar}-Be^{-7ar})\);
+           \(a \equiv x/r\)</li>
+<li><span class="item-label">8a.</span> \(F=e_1e_2r^{-2}-6\mu r^{-7}+9\lambda r^{-10}\)</li>
+<li><span class="item-label">9a.</span> \(F=2ar^{-3}-br^{-2}-c\)</li>
+<li><span class="item-label">1b.</span> \(s_0=0\)</li>
+<li><span class="item-label">2b.</span> \(r_0=2/b\)</li>
+<li><span class="item-label">3b.</span> \(x_0=0\)</li>
+<li><span class="item-label">4b.</span> \(r_0=(2b/a)^{1/6}\)</li>
+<li><span class="item-label">5b.</span> \(r_0=\sigma (2)^{1/6}\)</li>
+<li><span class="item-label">6b.</span> \(r_0=2a/b\)</li>
+<li><span class="item-label">7b.</span> graphical or numerical</li>
+<li><span class="item-label">8b.</span> graphical or numerical</li>
+<li><span class="item-label">9b.</span> graphical or numerical or solve cubic equation to get:</li>
+<li><span class="item-label">\</span> \(r_0=\frac{(-3)2^{2/3}b+[54ac^{1/2}+(2916a^2c+108b^3)^{1/2}]^{2/3}}
+                  {(3)2^{1/3}c^{1/2}[54ac^{1/2}+(2916a^2c+108b^3)^{1/2}]^{1/3}}\)</li>
+<li><span class="item-label">1c.</span> \(s_0=0\)</li>
+<li><span class="item-label">2c.</span> \(r_0=1\,\text{AU}\)</li>
+<li><span class="item-label">3c.</span> \(x_0=0\)</li>
+<li><span class="item-label">4c.</span> \(r_0=3.872666\,\text{\text{Å}}  \,\approx\,3.87\,\text{\text{Å}}\)</li>
+<li><span class="item-label">5c.</span> \(r_0=2.86901\,\text{\text{Å}}   \,\approx\,2.87\,\text{\text{Å}}\)</li>
+<li><span class="item-label">6c.</span> \(r_0=0.10597222\,\text{nm} \,\approx\,0.106\,\text{nm}\)</li>
+<li><span class="item-label">7c.</span> \(r_0=0.844818\,\text{fm}   \,\approx\,0.845\,\text{fm}\)</li>
+<li><span class="item-label">8c.</span> \(r_0=2.31836\,\text{\text{Å}}   \,\approx\,2.32\,\text{\text{Å}}\)</li>
+<li><span class="item-label">9c.</span> \(r_0=0.299353627\,\text{fm}\,\approx\,0.299\,\text{fm}\)</li>
+<li><span class="item-label">1d.</span> <img src="figures/m28gr07.svg" alt="" class="fig-inline"> 2d. <img src="figures/m28gr08.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">3d.</span> <img src="figures/m28gr09.svg" alt="" class="fig-inline"> 4d. <img src="figures/m28gr10.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">5d.</span> <img src="figures/m28gr11.svg" alt="" class="fig-inline"> 6d. <img src="figures/m28gr12.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">7d.</span> <img src="figures/m28gr13.svg" alt="" class="fig-inline"> 8d. <img src="figures/m28gr14.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">9d.</span> <img src="figures/m28gr15.svg" alt="" class="fig-inline"></li>
+<li><span class="item-label">1e.</span> \(F'(s_0)=-W/\ell \)</li>
+<li><span class="item-label">2e.</span> \(F'(r_0)=-ab^4/8\)</li>
+<li><span class="item-label">3e.</span> \(F'(x_0)=2(b-ad)\)</li>
+<li><span class="item-label">4e.</span> \(F'(r_0)=-18(a^2/b)(a/2b)^{1/3}\)</li>
+<li><span class="item-label">5e.</span> \(F'(r_0)=-(a/\sigma^2)(18)2^{-1/3}\)</li>
+<li><span class="item-label">6e.</span> \(F'(r_0)=-b^4/(8a^3)\)</li>
+<li><span class="item-label">7e.</span> advice: do it numerically or graphically</li>
+<li><span class="item-label">8e.</span> \(F'(r_0)=-2e_1e_2r_0^{-3}+42\mu r_0^{-8}-90\lambda r_0^{-11}\)</li>
+<li><span class="item-label">9e.</span> \(F'(r_0)=-6ar_0^{-4}+2br_0{-3}\)</li>
+<li><span class="item-label">1f.</span> \(k=11.688\,\text{lb/ft}\)</li>
+<li><span class="item-label">2f.</span> \(k=5.31\times 10^{33}\unit{J/(AU)^{2}}\)</li>
+<li><span class="item-label">3f.</span> \(k=55.2\unit{MeV/fm^{2}}\)</li>
+<li><span class="item-label">4f.</span> \(k=0.01233\unit{eV/\text{Å}^{2}}\)</li>
+<li><span class="item-label">5f.</span> \(k=89.4\,k_\text{B}\unit{K/\text{Å}^{2}}\)</li>
+<li><span class="item-label">6f.</span> \(k=1210\unit{eV/nm^{2}}\)</li>
+<li><span class="item-label">7f.</span> \(k=2130\unit{MeV/fm^{2}}\)</li>
+<li><span class="item-label">8f.</span> \(k=39.1\unit{eV/\text{Å}^{2}}\)</li>
+<li><span class="item-label">9f.</span> \(k=57.6\unit{GeV/fm^{2}}\)</li>
+<li><span class="item-label">1g.</span> \(m=0.28125\unit{lb\,ft^{-1}s^{2}}\)</li>
+<li><span class="item-label">2g.</span> \(m=1.339\times 10^{47}\unit{J\,(AU)^{-2}s^{2}}\)</li>
+<li><span class="item-label">3g.</span> \(m=\text{ reduced mass }= 4.172\times 10^{-44}\unit{MeV\,fm^{-2}s^{2}}\)</li>
+<li><span class="item-label">4g.</span> \(m=\text{ reduced mass }=20.625\times 10^{-28}\unit{eV\,\text{Å}^{-2}s^{2}}\)</li>
+<li><span class="item-label">5g.</span> \(m=\text{ reduced mass }= 2.404\times 10^{-24}\,k_\text{B}\unit{\text{Å}^{-2}s^{2}}\)</li>
+<li><span class="item-label">6g.</span> \(m=\text{ reduced mass }= 5.675\times 10^{-32}\unit{eV\,\text{Å}^{-2}s^{2}}\)</li>
+<li><span class="item-label">7g.</span> \(m=\text{ reduced mass }=52.17 \times 10^{-46}\unit{MeV\,fm^{-2}s^{2}}\)</li>
+<li><span class="item-label">8g.</span> \(m=\text{ reduced mass }=14.83 \times 10^{-28}\unit{eV\,\text{Å}^{-2}s^{2}}\)</li>
+<li><span class="item-label">9g.</span> \(m=\text{ reduced mass }= 8.90 \times 10^{-48}\unit{GeV\,fm^{-2}s^{2}}\)</li>
+<li><span class="item-label">1h.</span> \(\nu_0=1.03\,\text{Hz}\)</li>
+<li><span class="item-label">2h.</span> \(\nu_0=3.17\times 10^{-8}\,\text{Hz}\)</li>
+<li><span class="item-label">3h.</span> \(\nu_0=5.79\times 10^{21}\,\text{Hz}\)</li>
+<li><span class="item-label">4h.</span> \(\nu_0=3.89\times 10^{11}\,\text{Hz}\)</li>
+<li><span class="item-label">5h.</span> \(\nu_0=9.71\times 10^{11}\,\text{Hz}\)</li>
+<li><span class="item-label">6h.</span> \(\nu_0=2.32\times 10^{15}\,\text{Hz}\)</li>
+<li><span class="item-label">7h.</span> \(\nu_0=1.02\times 10^{23}\,\text{Hz}\)</li>
+<li><span class="item-label">8h.</span> \(\nu_0=2.58\times 10^{13}\,\text{Hz}\)</li>
+<li><span class="item-label">9h.</span> \(\nu_0=4.05\times 10^{23}\,\text{Hz}\)</li>
+</ul>
+
+<p></section>
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+\(F(x) = - \cos\,x\)
+<p> formal: \(k = F'(x_0)\)
+<p>\[\text{PSE is at}\ x_0 = 3\pi/2:\ F(3\pi/2) = -\cos(3\pi/2) = 0\]
+<p>\[F' = \sin x:\ \ F'(3\pi/2) = \sin(3\pi/2) = -1 .\]
+<p><strong>graphical:</strong> Use upper graph in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>:  take a \(\Delta x\) of 0.10
+(say), find the corresponding \(\Delta F\), and calculate:
+<p>\[F'=\frac{\Delta F}{\Delta x}=\frac{-0.10}{0.10}=-1.0.\]
+<p>Another way to see it: The \(F\) and \(x\) scales are the same and the line is at
+a 45° angle to the horizontal.
+Thus the magnitude of the slope is unity: its sign is obviously negative.
+
+<p> numerical: (using a hand calculator)
+<div class="centered"><table class="physnet-table"><tbody><tr><td>\(x\)</td><td>\(F\)</td><td></td><td>Differences</td></tr><tr><td>4.70</td><td>0.01239</td><td></td><td></td></tr><tr><td></td><td></td><td>\(>\)</td><td>-0.01000</td></tr><tr><td>4.71</td><td>0.00239</td><td></td><td></td></tr><tr><td></td><td></td><td>\(>\)</td><td>-0.01000</td></tr><tr><td>4.72</td><td>-0.00761</td><td></td><td></td></tr></tbody></table>
+</div>
+
+<p>\[\Longrightarrow F'=\frac{-0.01000}{0.01}=-1.000\]
+<p></div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+ \(E_p\,=\,mgh\): \(h\) is height above the horizontal plane containing the
+bottom point of the swing (a convenient choice for \(E_p\,=\,0\)).
+Then \(h\,=\,\ell\ (1\,-\,\cos\,\theta\)) by simple trig. (&nbsp;<a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>&nbsp;)
+The rest involves differentiating sines and cosines. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+\(F = -5 x^{-4} + 20 x^{-6}\).
+Use hand calculator to evaluate it:
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td></td><td>\(x\)</td><td>\(F\)</td><td>Comments</td></tr><tr><td></td><td>1.9</td><td>4.14&thinsp; \(\times\,10^{-2} \)</td><td>Magnitudes at +\(\Delta\) and -\(\Delta\)</td></tr><tr><td>center</td><td>2.0</td><td>1.00&thinsp; \(\times\,10^{-10}\)</td><td>are not sufficiently</td></tr><tr><td></td><td>2.1</td><td>-2.39&thinsp;\(\times\,10^{-2}\)</td><td>equal.<span class="tex-unknown" title="unknown macro">\</span> Try smaller \(\Delta\).</td></tr><tr><td></td><td>1.99</td><td>3.21&thinsp; \(\times\,10^{-3} \)</td><td></td></tr><tr><td></td><td>2.00</td><td>1.00&thinsp; \(\times\,10^{-10}\)</td><td>Almost.<span class="tex-unknown" title="unknown macro">\</span> Try smaller.</td></tr><tr><td></td><td>2.01</td><td>-3.04&thinsp;\(\times\,10^{-3}\)</td><td></td></tr><tr><td></td><td>1.999</td><td>3.13&thinsp; \(\times\,10^{-4}\)</td><td></td></tr><tr><td></td><td>2.000</td><td>1.00&thinsp; \(\times\,10^{-10}\)</td><td>O.K.;<span class="tex-unknown" title="unknown macro">\</span> \(F'\,\simeq\,-0.3125\)</td></tr><tr><td></td><td>2.001</td><td>-3.12&thinsp;\(\times\,10^{-4}\)</td><td></td></tr></tbody></table>
+</div>
+
+<p>\[check: \; -\frac{5}{16} = -0.3125\]
+<p></div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+\( 0 = -a^2 x_0 + b^2 \ \ \Longrightarrow \ \ x_0 = b^2/a^2\)
+<p>\( F' = -a^2 \ \ \Longrightarrow \ \ k = a^2\)
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+\(E_p = m g \ell [1 - \cos(s/\ell)]\)
+<p>\(F = - E_p' = - dE_p/ds = - m g \sin(s/\ell)\)
+<p>\(F' = \) etc.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+<figure class="fig-centered"><img src="figures/m28gr16.svg" alt="" class="physnet-fig"></figure>
+
+<p></div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">
+PSE (\(x_0\)) is where F is zero:
+<p>\[0 = 3 - 16x_0 + 5x_0^2.\]
+<p>We use the quadratic root equation:
+<p>\[\text{if:  } ax^2 + bx + c = 0\]
+<p>\[\text{then:  } x=\frac{-b\pm(b^2-4ac)^{1/2}}{2a}\]
+<p>\[\text{and find:  } x_0 = 0.2, 3.\]
+<p>Then get the sign of the slope at each point (0.2, 3) by differentiation
+(&nbsp;<a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a>&thinsp;&nbsp;), by sketching the function, or by numerical evaluation at two
+nearby points: see “numerical” part of <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>.
+</div></div>
+
+<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">
+If you can't work this problem, first work those in Sect. 4c.
+Then you should have no trouble.
+The PSE is at; \(x_0 = 0.2\,\text{cm}\).
+The force constant is: \(k = 14\,\text{N/cm}\).
+The mass is: \(m = 1\,\text{gm} = 10^{-3}\,\text{kg} = 10^{-3}\unit{N\,m^{-1}s^{2}}\).
+<a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a>
+<p><table class="physnet-table"><tbody><tr><td>Thus:</td><td>\(\nu=\frac{1}{2\pi}\left(\frac{k}{m}\right)^{1/2}\)</td><td>\( = \frac{1}{2\pi}\,\left(\frac{14\unit{N\,cm^{-1}}}{10^{-3}\unit{N\,m^{-1}s^{2}}} \right)^{1/2}\)</td></tr><tr><td></td><td></td><td>\( = \frac{1}{2\pi}\,\left(\frac{14\unit{cm^{-1}} 10^2\,\text{cm/m}}
+                                              {10^{-3}\unit{m^{-1}\,s^{2}}}\right)^{1/2}\)</td></tr><tr><td></td><td></td><td>\( = 1.88 \times 102 \unit{s^{-1}} = 188 \,\text{Hz}\)</td></tr></tbody></table>
+
+</div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">
+<ul>
+<li>\(F = 3 - 16x + 5x^2\)</li>
+<li>\(F'(x)   = -16 + 10x\)</li>
+<li>\(F'(0.2) = -14 \;(<\,0 \text{ so is PSE)}\)</li>
+<li>\(F'(3)   = +14 \;(>\,0 \text{ so is not PSE)}\)</li>
+</ul>
+
+</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">
+<div class="centered"><table class="physnet-table"><tbody><tr><td>\(x\)</td><td>\(F\)</td><td>Linear interpolation</td></tr><tr><td>3</td><td>.9900</td><td></td></tr><tr><td>4</td><td>.6536</td><td>\(x_0 \simeq 4 + \frac{.6536}{.6536+.2837} = 4.697\)</td></tr><tr><td>5</td><td>-.2837</td><td></td></tr><tr><td>4.6</td><td>.1122</td><td></td></tr><tr><td>4.7</td><td>.0124</td><td>\(x_0 \simeq 4.7 + \frac{.0124}{.0124+.0875} = 4.7124\)</td></tr><tr><td>4.8</td><td>-.0875</td><td></td></tr><tr><td>4.7124</td><td>.0000</td><td>good enough!</td></tr></tbody></table>
+</div>
+
+</div></div>
+
+<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">
+For background on this conversion of units, see “Newton's Second Law of
+Motion” (MISN-0-14).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+ 
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[\text{reduced mass: }\mu =  \frac{m_1 m_2}{m_1 + m_2}\]
+<p><ol>
+<li><span class="item-label">1.</span> Define...(see Output Skill K1 in this module's <em>ID Sheet</em>).</li>
+<li><span class="item-label">2.</span> The present eccentric motion of the earth can be graphically
+illustrated by plotting the current orbit parameters on a potential energy
+curve.
+Including both the centrifugal and gravitational potentials, we find for the
+earth-sun potential energy function:
+<p>\[E_p(r) = a (r^{-2} - b r^{-1})\]
+<p>where:
+<p>\[\begin{aligned}a & = 2.65649 \times 10^{33}\,\text{J}\unit{(AU)^{2}} \\ b & = 2\unit{(AU)^{-1}}\end{aligned}\]
+
+<p>\[1\,\text{AU} \equiv \text{one \Quote{Astronomical Unit of distance}} =
+1.49647 \times 10^{11}\,\text{m}\]
+<p>\[\text{earth mass} = 1.345\,\times\,10^{32}\,\text{J}\unit{(AU)^{-2}}\unit{yr^{2}}\]
+<p>and \(r\) is the earth-sun separation.
+<p>Determine the frequency of small oscillations of the earth about its
+equilibrium distance from the sun, through explicit use of these
+steps, labeled this way in your answers:
+(a) symbolic \(F\); (b) symbolic \(r_0\); (c) numerical \(r_0\); (d) graphical check;
+(e) symbolic \(F'\); (f) numerical \(k\); (g) appropriate mass; and
+(h) numerical \(\nu_0\).</li>
+<li>As always, show all of your reasoning.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's text.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;2.</li>
+</ol>
+
+<p></section>
+

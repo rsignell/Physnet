@@ -1,0 +1,296 @@
+<header class="module-header">
+  <h1 class="module-title">Sourcelessness of the Magnetic Field <span class="module-author">(J.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Some in “Gauss's Law Applied to Charge Distributions with
+    Cylindrical and Planar Symmetry” <a href="../m133/" class="module-ref">MISN-0-133</a>.</li><li><strong>2.</strong> Some in “Electrostatic Capacitance,” <a href="../m135/" class="module-ref">MISN-0-135</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Explain how this Gauss's Law for magnetic fields is a result of
+    the physical property that magnetic “lines of force” are continuous and
+    closed---that there are no isolated magnetic poles (or magnetic charges.)</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Evaluate the flux of \(\vec{B}\) through surfaces (rectangular,
+    cylindrical, spherical) directly and through the use of Gauss's Law for
+    magnetic fields.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+    Reading (1970); for access see this module's <em>Local Guide</em>.</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Gauss's Law applied to Magnetic fields differs from Guass's Law
+applied to electric fields in that the expression of the law for
+magnetic fields has the net flux of \(\vec{B}\) across any closed surface
+always equaling zero: \(\oint \vec{B} \cdot \hat{N}\, ds = 0\).
+For electric fields the right side equals zero only if the net charge
+enclosed by the closed surface is zero, otherwise it's proportional to the
+net charge enclosed.
+This then indicates that “magnetic charges,” the analog of electric
+charges which are the sources of the electric fields, do not exist.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Assigned Readings and Problems</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> In AF
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>read section 19.14.
+Note that \(\epsilon_0 \equiv 1/(4 \pi k_e)\) and \(\mu_0 \equiv 4 \pi k_m\).
+<p>Study again Section 19.2 and Figure&nbsp;19.1 on page 419 where the flux of a
+vector field through a surface is defined.</li>
+<li><span class="item-label">2.</span> Work problems&nbsp;19.26* and 19.27*.
+In Problem&nbsp;19.26, evaluate the flux across surface (\(aefd\)) two ways: first
+directly, then secondly, knowing the flux over all other pieces of the
+closed surface using Gauss's Law for \(\vec{B}\).</li>
+</ol>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Comments</h2>
+
+<p>Referring to Figure&nbsp;19.1 of AF, note that while the direction of vector
+\(\vec{V}\) (or \(\vec{B}\), for our purposes) at a point is unique (determined
+by the physics of the situation in the case of \(\vec{B}\)), the direction of
+the unit vector, \(\hat{N}\) normal to the element of surface on the
+integration surface is somewhat ambiguous.
+It is normal to the surface, but is it “up” or “down”?
+To remove this ambiguity, the convention is adopted that \(\hat{N}\) is normal
+to the surface in such a direction that it points out of the volume enclosed
+by the surface if the surface is closed.
+If the surface is not closed, \(\hat{N}\) points away from the concavity
+enveloped by the surface.
+If the surface is an isolated plane surface the unit normal needs to be
+specified another way.
+<p>Compare the Gauss's Law for magnetic fields,
+\(\oint \vec{B} \cdot \hat{N}\, ds = 0\), over <em>all</em> closed surfaces, with
+that for electric fields:
+<p>\[\oint_S \vec{E} \cdot \hat{N}\, ds = 4 \pi k_e q_0\,,\]
+<p>where \(q_0\) is the charge enclosed by the surface \(S\).
+For example, consider two unlike charges and the electric field
+lines in their vicinity, as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m139gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. .</figcaption></figure></div>
+
+<p>If we surround the positive charge with some imaginary closed surface
+(excluding the negative charge) then notice that the lines of \(\vec{E}\)
+point out of the surface, everywhere on the surface, so that
+\(\vec{E} \cdot \hat{N}\) at every point on the surface is always a positive
+number.
+Thus when this is multiplied by the element of surface area, \(\Delta S\),
+and summed over the whole surface, this adds up to a positive number.
+This positive number is \((4 \pi k_e)\) times the charge enclosed.
+<p>Similarly, if we surround only the negative charge then \(\vec{E}\)
+everywhere points into the surface while \(\hat{N}\) points outward so
+that \(\vec{E} \cdot \hat{N}\) is always negative.
+<p>Now if our imaginary closed surface surrounds some volume between the two
+charges, with the charges not enclosed, then over parts of the surface
+\(\vec{E} \cdot \hat{N}\) is positive while on other parts it is negative.
+Multiplying \(\vec{E} \cdot \hat{N}\) by \(\Delta S\) and summing over the whole
+closed surface we will be adding plus and minus contributions.
+Gauss's Law, in fact, tells us that these contributions add to zero exactly
+if no charge is enclosed.
+Now in this latter case notice that the lines of \(\vec{E}\) are continuous,
+entering the closed surface on one side and leaving it on another, whereas
+in the cases where a charge is enclosed the lines of \(\vec{E}\) emerge from
+or terminate on the charge.
+The charges are the sources of \(\vec{E}\), and the surface integral of
+tells us the “strength” of the source.
+<p>In the case of magnetic fields there are no sources, no magnetic “charges,”
+no isolated magnetic poles.
+Hence, over any closed surface,
+<p>\[\oint_S \vec{B} \cdot \hat{N}\, ds = 0.\]
+<p>The lines of \(\vec{B}\) are continuous, and the negative and positive
+contributions of \(\vec{B} \cdot \hat{N}\) always cancel over any closed
+surface.
+<p>We might ask: what about a bar magnet? 
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m139gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. .</figcaption></figure></div>
+
+<p>
+All of the lines of \(\vec{B}\) appear to emerge from the N-pole and terminate
+on the S-pole (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+So, we might ask, would not the flux of \(\vec{B}\) over a closed surface
+surrounding only the N-pole have only positive contributions making a net
+zero flux impossible?
+The answer is that while the lines do emerge from the N-pole outside of the
+magnet, these lines enter the S-pole of the magnet, are continuous through
+the inside of the magnet, directed toward the N-pole inside the magnet,
+connecting continuously with the lines that leave the N-pole, as shown in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m139gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. .</figcaption></figure></div>
+
+<p>
+The net effect is that when we take into account the contribution to the
+flux through the closed surface from the \(\vec{B}\) inside the magnet,
+the total flux is zero over the closed surface.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Answers to Assigned Problems</h2>
+
+<p><ul>
+<li><span class="item-label">19.26</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(-2400\,\text{T\,cm}\).
+           Be sure you understand why the sign is negative.</li>
+<li><span class="item-label">b.</span> zero.</li>
+<li><span class="item-label">c.</span> \(+2400\,\text{T\,cm} = (B \cos\theta) \times 1500\) where
+           \(\cos\theta = 4/5\), \(\theta\) being the angle between
+           \(\hat{N}\) and \(\vec{B}\)
+</li>
+<li><span class="item-label">19.27</span> \((\mu_0 I b)/(2 \pi) \ell n (1 + a/r) = \) flux of \(\vec{B}\)
+               through coil.
+               This flux is \(+\) or \(-\), depending upon how we defined
+               \(\hat{N}\) direction of coil.
+               To get this answer we need to integrate
+               \(\vec{B} \cdot \hat{N}\, ds\) over the area of the coil.
+               However, \(\vec{B}\) is not constant so we cannot just multiply
+               \(|\vec{B}|\) by the coil's area.</li>
+<li>In the sketch below, \(|\vec{B}|\) at distance \(x\) from the
+               wire is \((\mu_0 I)/(2 \pi x)\) so the flux element through the
+               shaded region is \(d\phi = (b \mu_0 I)/(2 \pi x)\,dx\).
+               
+<figure class="fig-centered"><img src="figures/m139gr04.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ul>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970); for access see this module's <em>Local Guide</em>. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m139gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>The pyramid above is a closed surface formed by the four plane
+triangular surfaces \(aOc\), \(aOb\), \(cOb\) and \(abc\).
+In this region of space there exists a uniform magnetic field
+\(\vec{B} = B_x \hat{x} + B_y \hat{y} + B_z \hat{z}\) where
+\(B_x\) is the \(x\)-component of \(\vec{B}\), etc.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the flux of \(\vec{B}\) through surface \(aOc\)? [H]</li>
+<li><span class="item-label">b.</span> What is the flux of \(\vec{B}\) through surface \(aOb\)? [D]</li>
+<li><span class="item-label">c.</span> What is the flux of \(\vec{B}\) through surface \(cOb\)? [B]</li>
+<li><span class="item-label">d.</span> For surface \(abc\), it could be a tedious chore to find
+the unit normal to the surface.
+Use, instead, Gauss's Law and the results of parts (a), (b), and (c) to find
+the flux of \(\vec{B}\) through the surface. [G]
+</li>
+<li><span class="item-label">2.</span> Consider the field \(\vec{B} = B_1 y \hat{x} + B_1 x \hat{y}\)
+where \(B_1\) is a constant and \(x\) and \(y\) are the cartesian coordinates of
+a point relative to a fixed coordinate system.
+Evaluate the magnitude of the flux of \(\vec{B}\) through the rectangular
+surface of area \(S = ab\) shown below, oriented in the \(y\)-\(z\) plane: [C]
+<p><figure class="fig-centered"><img src="figures/m139gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">3.</span> Consider the field \(\vec{B} = B_0 x \hat{x}\) where \(B_0\) is
+constant and  \(x\) is the distance along the \(x\)-axis.
+Evaluate the flux of this field through the sides of a closed cube, \(A\)
+meters on a side whose edges are parallel to the coordinate axes and one
+corner of which is at the origin of the coordinates: [F]
+<p><figure class="fig-centered"><img src="figures/m139gr07.svg" alt="" class="physnet-fig"></figure>
+
+<p>Use the result to prove that no physical \(\vec{B}\) field can have the
+functional dependence on the coordinates as that written above. [A]</li>
+<li><span class="item-label">4.</span> Explain how Gauss's Law for magnetic fields is a consequence
+of the physical properties that:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> there are no point sources of magnetic fields as there
+are for electric fields; and</li>
+<li><span class="item-label">b.</span> the lines of \(\vec{B}\) are continuous and close on themselves.
+
+In your explanation, illustrate with sketches what Gauss's Law gives
+you if you have a source of the field enclosed by the Gaussian
+(integration) surface and contrast this with a sketch for the case
+of continuous lines of the vector field. [E]</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> For a physically realizable field, the flux of \(\vec{B}\) over any
+closed surface must be zero.
+A field whose \(\vec{B} = B_0 x \hat{x}\) is thus not physically realizable.</li>
+<li><span class="item-label">B.</span> \(-(1/2) b c B_x\).</li>
+<li><span class="item-label">C.</span> \((1/2) S B_1 (b + 2 y_0)\).</li>
+<li><span class="item-label">D.</span> \(-(1/2) a b B_z\).</li>
+<li><span class="item-label">E.</span> See text and comments section of this study guide.</li>
+<li><span class="item-label">F.</span> \(B_0 A^3\).</li>
+<li><span class="item-label">G.</span> \((1/2) (b c B_x + a c B_y + a b B_z)\).</li>
+<li><span class="item-label">H.</span> \(-(1/2) a c B_y\).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m139gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>The pyramid above is a closed surface formed by the four plane
+triangular surfaces \(aOc\), \(aOb\), \(cOb\) and \(abc\).
+In this region of space there exists a uniform magnetic field
+\(\vec{B} = B_x \hat{x} + B_y \hat{y} + B_z \hat{z}\) where
+\(B_x\) is the \(x\)-component of \(\vec{B}\), etc.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the flux of \(\vec{B}\) through surface \(aOc\)?</li>
+<li><span class="item-label">b.</span> What is the flux of \(\vec{B}\) through surface \(aOb\)?</li>
+<li><span class="item-label">c.</span> What is the flux of \(\vec{B}\) through surface \(cOb\)?</li>
+<li><span class="item-label">d.</span> For surface \(abc\), it could be a tedious chore to find
+the unit normal to the surface.
+Use, instead, Gauss's Law and the results of parts (a), (b), and (c) to find
+the flux of \(\vec{B}\) through the surface.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;1.</li>
+</ol>
+
+<p></section>
+

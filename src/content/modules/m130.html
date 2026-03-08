@@ -1,0 +1,619 @@
+<header class="module-header">
+  <h1 class="module-title">Magnetic Dipoles <span class="module-author">(Kirby Morgan)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: electric dipole, electric dipole moment, point dipole
+    <a href="../m120/" class="module-ref">MISN-0-120</a>.</li><li><strong>2.</strong> Calculate the torque, potential energy, and work for an electric
+    dipole in an external electric field <a href="../m120/" class="module-ref">MISN-0-120</a>.</li><li><strong>3.</strong> Calculate the torque on a current loop in an external magnetic
+    field <a href="../m123/" class="module-ref">MISN-0-123</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define the magnetic dipole moment (vector) for a system of \(N\)
+                (fictitious) magnetic monopoles.</li><li><strong>K2.</strong> Define the magnetic dipole moment for a magnetic dipole.</li><li><strong>K3.</strong> Explain the existence of magnetic dipoles in spite of the
+                apparent non-existence of magnetic monopoles.</li><li><strong>K4.</strong> Write expressions for the torque, work, potential energy, and
+                field of magnetic dipoles.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Determine the torque on a magnetic dipole in an external
+                magnetic field and the work done on it in changing its
+                orientation.</li><li><strong>S2.</strong> Determine the potential energy of a given magnetic dipole or
+                system of dipoles in an external field.</li><li><strong>S3.</strong> Determine the magnetic field at some given point in space due
+                to a given magnetic dipole.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Search for Magnetic Monopoles” (MISN-0-140).</li><li><strong>2.</strong> “Magnetic Fields in Bulk Matter: Magnets” (MISN-0-141).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The magnetic dipole moment is defined in a manner similar to the electric
+dipole moment.
+This analogy can be made even though the magnetic monopole has never been
+observed in an experiment.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Fundementals of Magnetic Dipoles</h2>
+
+<p><h3 id="pcap-2-a">2a. Defining the Magnetic Dipole Moment</h3>
+
+The magnetic dipole moment can be defined in a manner analogous to that for
+the electric dipole moment.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The magnetic quantity that corresponds to an electric charge is the
+<em>magnetic monopole</em> (or, for short, <em>magnetic pole</em>).
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>Although a magnetic monopole has never been observed,
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>it nevertheless is used to define the general expression for the magnetic
+dipole moment.
+<p>Consider a collection of \(N\) magnetic monopoles, \(m_1\), \(m_2\), \ldots  m\(_N\).
+Relative to a fixed coordinate system, each pole is located at a point
+given by a vector \(\vec{r}\); \(\vec{r}_1\) for \(m_1\), \(\vec{r}_2\) for \(m_2\),
+etc. (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The <em>magnetic dipole moment</em> \(\vec{\mu}\) (or, for short, the <em>magnetic
+moment</em>) is a vector defined as:
+<p>\[\vec{\mu} \equiv
+                m_1 \vec{r}_1 + m_2 \vec{r}_2 + \ldots + m_N \vec{r}_N
+             \equiv \sum_{i=1}^N m_i \vec{r}_i.\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m130gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Magnetic monopoles \(m_i\) located at
+positions \(\vec{r}_i\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. A Typical Magnetic Dipole</h3>
+
+The most common dipole moment vector is the magnetic dipole: two equal but
+opposite magnetic poles separated by a distance \(\ell\).
+For example, most of the external effects of a small bar magnet, such as
+a compass needle, can be viewed as resulting from equal but opposite poles
+at its two ends.
+With the strength of the poles taken as \(+m\) and \(-m\), the dipole moment of
+<p>this magnet is found from the general definition, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+It is:
+<p>\[\vec{\mu} = m \vec{r}_1 - m\vec{r}_2 = m (\vec{r}_2 - \vec{r}_1),\]
+<p>where \(\vec{r}_1 - \vec{r}_2 = \vec{l}\) is the vector separation of
+the two poles.
+The magnetic dipole moment can thus be written:
+<p>\[\vec{\mu} = m \vec{\ell},\]
+<p>where by definition \(\vec{l}\) points from the South pole to the North pole
+(\(-m\) to \(m\), see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> is analogous to the expression \(\vec{p} = q \vec{l}\) for the
+electric dipole moment.
+As in that case, the magnetic dipole moment of two equal but opposite
+poles is independent of the coordinate system used to describe it:
+it is a property of the system.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m130gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A common magnetic dipole with dipole
+moment \(\vec{\mu} = m \vec{l}\).</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Magnetic Field due to a Dipole</h2>
+
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m130gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. (a) A magnetic dipole oriented in the
+\(z\)-direction; (b) Magnetic field lines around this dipole.</figcaption></figure></div>
+
+<p>The electric dipole analogy is not strictly correct but it can provide us
+with the correct expression for the magnetic field produced by a magnetic
+dipole.
+By the same method used for the electric dipole,
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>the magnetic field due to a point magnetic dipole (i.e. a dipole whose size,
+\(\ell\), is negligible compared with the distance \(r\) to the point where the
+field of the dipole is observed) is:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[\vec{B}(\vec{r}) = k_m
+  \left[ \frac{(3\vec{\mu}\cdot\vec{r})\vec{r}}{r^5} -
+                           \frac{\vec{\mu}}{r^3}\right], \qquad (\ell \ll r).\]
+<p>The field lines for a dipole oriented along the \(z\)-axis are indicated
+in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Existence of Magnetic Dipoles</h2>
+
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m130gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Iron filings placed of a sheet of paper
+over a bar magnet help in visualizing the magnetic field lines.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-a">4a. The Simplest Magnetic Structure is the Dipole</h3>
+
+In electricity, the isolated charge \(q\) can exist by itself; but in
+magnetism, isolated magnetic poles have never been observed.
+The simplest magnetic structure is the magnetic dipole, which is
+characterized by the magnetic dipole moment \(\vec{\mu}\).
+The most familiar example of a magnetic dipole is a bar magnet.
+Iron filings sprinkled on a sheet of paper placed over a bar magnet produce a
+pattern that suggests the dipole may be viewed as two magnetic poles, one at
+each end of the magnet (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+However, all attempts to isolate these poles fail.
+If the bar magnet is cut in half, the halves also turn out to be magnetic
+dipoles and not isolated poles.
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m130gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The dipole moment of a circular current loop
+is perpendicular to the plane of the loop.</figcaption></figure>
+
+<p><h3 id="pcap-4-b">4b. A Current Loop is a Magnetic Dipole</h3>
+
+The explanation for the behavior of the bar magnet can be approached by
+first examining the magnetic field of a circular loop of current.
+The magnetic field produced by a circular loop of current is identical
+<p>to that produced by a point magnetic dipole (see <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> and
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>), so the loop is also a dipole.
+<p>Consider a current loop in the \(x\)-\(y\) plane of area \(A\) carrying a current
+\(I\) in the direction indicated in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+The loop has a dipole moment along the normal (\(\hat{n}\)) to the plane of the
+<p>loop given by \(\vec{\mu} = I A\, \hat{n}\).
+The direction of the normal is given by a right hand rule: when the fingers
+of the right hand curl in the direction of the current, the thumb points
+along the normal.
+<p><h3 id="pcap-4-c">4c. A Bar Magnet Consists of Tiny Current Loops</h3>
+
+The fact that a current loop is a magnetic dipole suggests that the real
+sources of the dipole field produced by a bar magnet are tiny currents
+at the atomic level.
+These currents are produced by orbital electrons in the atoms of the bar
+magnet.
+In a bar magnet, the tiny magnetic dipole moments are aligned such that
+they add together to produce a strong magnetic field.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>Now it is apparent why the magnet always has two poles: no matter how it
+is cut, it will always still contain the tiny current loops which give
+it its dipole field.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Dipole In External Field</h2>
+
+<p><h3 id="pcap-5-a">5a. Torque on a Magnetic Dipole</h3>
+
+A magnetic dipole placed in an external magnetic field experiences a
+torque.
+The torque on a magnetic dipole \(\vec{\mu}\) placed in an external magnetic
+field \(\vec{B}\) is
+<p>\[\vec{\tau} = \vec{\mu} \times \vec{B}\,.\]
+<p>Compare this expression to that for an electric dipole in an electric
+field:
+<p>\[\vec{\tau} = \vec{p} \times \vec{E}.\]
+<p>If \(\vec{\mu}\) makes an angle \(\theta\) with the external magnetic field as
+shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>, then:
+<p>\[\tau = u B \sin\theta.\]
+<p>Thus the torque on the current loop (or any magnetic dipole) is a
+maximum for \(\theta = 90\deg\) and zero for \(\theta = 0\deg\).
+<p><div class="figure-row figure-row-2"><figure id="fig-6"><img src="figures/m130gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A dipole in an external magnetic field.</figcaption></figure><figure id="fig-7"><img src="figures/m130gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. A dipole is rotated in a magnetic Field.</figcaption></figure></div>
+
+<p><h3 id="pcap-5-b">5b. Work Done on a Magnetic Dipole</h3>
+
+Since a magnetic dipole placed in an external magnetic field experiences
+a torque, work (positive or negative) must be done by an external agent
+in order to change the orientation of the dipole.
+<p>Let us calculate how much work is done by the field when rotating the
+dipole from angle \(\theta_A\) to \(\theta_B\) as shown in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+Since the forces vary, we must integrate \(\vec{F} \cdot d\vec{s}\), which can
+be simplified to
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[\begin{aligned}W_{A,B} & = & \int_{\theta_A}^{\theta_B} \tau \, d\theta \\
+        & = & \mu B \int_{\theta_A}^{\theta_B} \sin\theta\,d\theta \\
+        & = & -\mu B (\cos\theta_B - \cos\theta_A).\end{aligned}\]
+
+<p>This can be written as:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>\[W_{A,B} = (-\vec{\mu} \cdot \vec{B}) |_{\theta=\theta_B} -
+                 (-\mu \cdot \vec{B})|_{\theta=\theta_A}.\]
+<p><h3 id="pcap-5-c">5c. Potential Energy of a Magnetic Dipole</h3>
+
+A magnetic dipole has potential energy since the work depends only upon the
+initial and final positions, not the path taken.
+As was done for the electric dipole, we will set the potential energy Ep
+equal to zero when the dipole is at right angles to the field, i.e., when
+\(\theta = 90\deg\).
+Thus the magnetic potential energy of a magnetic dipole is
+<p>\[E_p(\theta) = - W_{90\deg,\theta} =
+                       u B (\cos 90\deg - \cos\theta) .\]
+<p>or:
+<p>\[E_p = -\mu B \cos\theta = -\vec{\mu} \cdot \vec{B}.\]
+<p></section>
+
+<p><section id="sect-6" class="module-section section-text"><h2 id="sect-6">6. Electric/Magnetic Dipole Analogy</h2>
+
+<p>The table below summarizes some relationships that are mathematically similar
+for electric and magnetic dipoles.
+In addition, the dimensions of the quantities (in terms of the
+fundamental dimensions \(M\), \(L\), \(T\), \(Q\)) are given as reminders of both the
+similarities and the differences.
+<p>
+<table class="physnet-table"><tbody><tr><td>[t]| p3.3cm | p3.3cm | p3.3cm |
+<strong>Quantity/Property</strong></td><td><strong>Electric</strong></td><td><strong>Magnetic</strong></td></tr><tr><td>Monopole Charge</td><td>\(q\)  [Q]</td><td>\(m\)  [LT<sup>-1</sup>Q<sup>-1</sup>]</td></tr><tr><td>Dipole Moment</td><td>\(\vec{p}=q\vec{\ell} \hfill [QL] \)</td><td>\(\vec{\mu}=m\vec{\ell}\)  [L<sup>2</sup>T<sup>-1</sup>Q<sup>-1</sup>]</td></tr><tr><td>Field at \(\vec{r}\) due to point dipole at origin</td><td>\(\vec{E} = \newline k_e
+       \left[\frac{(3\vec{p}\cdot\vec{r})\vec{r}}{r^5} -
+       \frac{\vec{p}}{r^3}\right]\)
+                            <br>
+  [MLT<sup>-2</sup>Q<sup>-1</sup>]</td><td>\(\vec{B} = \newline k_m
+           \left[\frac{(3\vec{\mu}\cdot\vec{r})\vec{r}}{r^5} -
+                 \frac{\vec{\mu}}{r^3}\right]\) <br>
+
+             [MT<sup>-1</sup>Q]</td></tr><tr><td>Force on monopole at \(\vec{r}\) due to dipole at origin</td><td>\(\vec{F} = q \vec{E}\), <br>
+ using above \(\vec{E}\) <br>
+
+             [MLT<sup>-2</sup>]</td><td>\(\vec{F} = m \vec{B}\), <br>
+ using above \(\vec{B}\) <br>
+
+             [MLT<sup>-2</sup>]</td></tr><tr><td>Torque exerted on dipole placed in external field</td><td>\(\vec{\tau} =
+       \vec{p} \times \vec{E}_\text{ext}\) <br>
+
+                        [ML<sup>2</sup>T<sup>-2</sup>]</td><td>\(\vec{\tau} =
+    \vec{\mu} \times \vec{B}_\text{ext}\)  <br>
+
+                   [ML<sup>2</sup>T<sup>-2</sup>]</td></tr><tr><td>Potential\(\;\)Energy of dipole in external field</td><td>\(E_p = - \vec{p} \cdot \vec{E}_\text{ext}\) <br>
+
+                    [ML<sup>2</sup>T<sup>-2</sup>]</td><td>\(E_p = - \vec{\mu} \cdot \vec{B}_\text{ext}\) <br>
+
+                    [ML<sup>2</sup>T<sup>-2</sup>]</td></tr></tbody></table>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>This module was based on an earlier module by P.&thinsp;Sojka, J.&thinsp;Kovacs, and
+P.&thinsp;Signell.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Electric Dipoles” (MISN-0-120). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Observing a magnetic monopole would be like finding only a
+“North” pole or only a “South” pole of a magnet.
+In Nature, North poles and South poles are always found together in pairs. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Magnetic Monopole” (MISN-0-140). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Observing a magnetic monopole would be like finding only a
+“North” pole or only a “South” pole of a magnet.
+In nature, North poles and South poles are always found together. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Electric Dipoles” (MISN-0-120). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">\(k_m \equiv 10^{-7}\unit{N/A^{2}} =
+                  10^{-7}\,\text{kg}\unit{m/C^{2}}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a> <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Magnetic Fields in Bulk Matter:  Magnets” (MISN-0-141). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See “Electric Dipoles” (MISN-0-120) for the steps in this simplification. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">This shows that the units of \(\vec{\mu}\) are J/T [S-2]. <a href="#fnref-9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;9 and 10 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A point dipole, with magnetic moment \(\vec{\mu}\), is in an
+external magnetic filed \(B_0\hat{y}\) where \(B_0\) is a constant.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the torque on the dipole for each of these conditions:
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(\vec{\mu} =   \mu \hat{x}\).</li>
+<li><span class="item-label">(ii)</span> \(\vec{\mu} =   \mu \hat{y}\).</li>
+<li><span class="item-label">(iii)</span> \(\vec{\mu} = - \mu \hat{x}\).</li>
+<li><span class="item-label">(iv)</span> \(\vec{\mu} = - \mu \hat{y}\).
+</li>
+<li><span class="item-label">b.</span> Determine the potential energy of the dipole in each of the four
+           orientations given in part (a).</li>
+<li><span class="item-label">c.</span> Determine the work done in turning the dipole:
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> from \(\hat{x}\) to \(\hat{y}\).</li>
+<li><span class="item-label">(ii)</span> from \(\hat{x}\) to \(- \hat{x}\).</li>
+<li><span class="item-label">(iii)</span> from \(\hat{y}\) to \(- \hat{x}\).
+
+</li>
+<li><span class="item-label">2.</span> Consider a point dipole, at the origin, with magnetic moment
+\(\vec{\mu} = (-10^{-2}\unit{m^{2}s^{-1}C})\,\hat{x}\) in a
+uniform external magnetic field \(\vec{B} = 50\,\text{T}\,\hat{y}\).
+Determine:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the potential energy of the dipole.</li>
+<li><span class="item-label">b.</span> the torque on the dipole.
+</li>
+<li><span class="item-label">3.</span> A magnetic dipole \(\vec{\mu}=\mu\hat{x}\) is located at the origin
+of a coordinate system.
+Determine the magnetic field(magnitude and direction) at each of the points
+\(a\), \(b\), \(c\), \(d\) shown in the sketch:
+<p><figure class="fig-centered"><img src="figures/m130gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">4.</span> Determine the magnetic field at each of the four points in
+Problem (3) if \(\vec{\mu} = 2\unit{(J\,T^{-1}})\,\hat{x}\) and \(x_0 = 0.01\,\text{m}\),
+\(y_0 = 0.01\,\text{m}\).</li>
+<li><span class="item-label">5.</span> The magnetic moment \(\vec{\mu}\) of a point dipole in a constant
+magnetic field \(\vec{B}_0\) makes an angle of \(30\deg\) with the field.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the potential energy of the dipole.</li>
+<li><span class="item-label">b.</span> Determine the torque on the dipole.
+</li>
+<li><span class="item-label">6.</span> Determine the magnetic field at points \(a\), \(b\), \(c\), \(d\) shown
+below if the magnetic dipole makes an angle of \(45\deg\) with the positive
+\(x\) and \(y\) axes in the \(x\)-\(y\) plane.
+<p><figure class="fig-centered"><img src="figures/m130gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">7.</span> A point dipole with magnetic moment \(\vec{\mu}\) is in an
+external field \(\vec{B} = B_0 \hat{x}\).
+Since torque and potential energy have the same units, determine the
+direction(s) in which the dipole must be pointing if its torque and
+potential energy are to be “equal.”
+Determine the work that must now be done to reorient the dipole so it points
+in the direction of the field.</li>
+<li><span class="item-label">8.</span> A dipole \(\vec{\mu}_1 = \mu_1 \hat{y}\) is located at the origin,
+while another, \(\vec{\mu}_2 = \mu_2 \hat{y}\), is located at the point
+\(x = x_0\), \(y = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the expression for the magnetic field at the site
+of \(\vec{\mu}_2\) due to \(\vec{\mu}_1\).</li>
+<li><span class="item-label">b.</span> Treating the field due to \(\vec{\mu}_1\) as a field external to
+\(\vec{\mu}_2\) (as it is), find the potential energy of \(\vec{\mu}_2\) in
+this field, hence finding the <em>interac-</em> <em>tion potential energy</em> of these
+two dipoles.
+<p><figure class="fig-centered"><img src="figures/m130gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> Find the interaction potential energy if
+\(x_0 = 0.05\,\text{m}\), \(\mu_1 = 3\unit{J\,T^{-1}}\) and \(\mu_2 = 2\unit{J\,T^{-1}}\).
+Put in the proper units of all quantities and assure yourself that all of
+the units combine properly to give the appropriate units for your answer.
+</li>
+<li><span class="item-label">9.</span> A point dipole with magnetic moment
+\(\vec{\mu} = \mu_x \hat{x} + \mu_y \hat{y}\) is in an external magnetic
+field \(\vec{B} = B_0 \hat{x}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the torque on the dipole?</li>
+<li><span class="item-label">b.</span> Find the potential energy of the dipole.</li>
+<li><span class="item-label">c.</span> How much work must be done to reorient the dipole so it points in
+the direction of the field?
+</li>
+<li><span class="item-label">10.</span> A point dipole \(\vec{\mu}_1 = \mu_1 \hat{y}\) is at the origin,
+while at \(x = 0\), \(y = y_0\) is located another dipole
+\(\vec{\mu}_2 = \mu_2 \hat{x}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the magnetic field at the site of \(\vec{\mu}_2\)
+due to \(\vec{\mu}_1\)?</li>
+<li><span class="item-label">b.</span> Find the energy of the system using \(y_0 = .04\)&thinsp;m,
+\(\mu_1 = .5\unit{J\,T^{-1}}\) and \(\mu_2 = .6\unit{J\,T^{-1}}\).
+
+<p><figure class="fig-centered"><img src="figures/m130gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{\tau} = \vec{\mu} \times \vec{B}\)
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(\vec{\tau} = \mu \hat{x} \times B_0 \hat{y} = \mu B_0 \hat{z}\).</li>
+<li><span class="item-label">(ii)</span> \(\vec{\tau} = \mu \hat{y} \times B_0 \hat{y} = 0\).</li>
+<li><span class="item-label">(iii)</span> \(\vec{\tau} =
+                    - \mu \hat{x} \times B_0 \hat{y} = -\mu B_0 \hat{z}\).</li>
+<li><span class="item-label">(iv)</span> \(\vec{\tau} = - \mu \hat{y} \times B_0 \hat{y} = 0\).
+</li>
+<li><span class="item-label">b.</span> \(E_p = - \vec{\mu} \cdot \vec{B}\).
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(E_p = - \mu B_0 \hat{x} \cdot \hat{y} = 0\).</li>
+<li><span class="item-label">(ii)</span> \(E_p = - \mu B_0 \hat{y} \cdot \hat{y} = - \mu B_0\).</li>
+<li><span class="item-label">(iii)</span> \(E_p = \mu B_0 \hat{x} \cdot \hat{y} = 0\).</li>
+<li><span class="item-label">(iv)</span> \(E_p = \mu B_0 \hat{y} \cdot \hat{y} = \mu B_0\).
+</li>
+<li><span class="item-label">c.</span> \(W = (-\vec{\mu} \cdot \vec{B})_{\theta=\theta_B} -
+                (-\vec{\mu} \cdot \vec{B})_{\theta=\theta_A}\).
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(W = - \mu B_0 - 0 = - \mu B_0\).</li>
+<li><span class="item-label">(ii)</span> \(W = 0 - 0 = 0\).</li>
+<li><span class="item-label">(iii)</span> \(W = 0 - (- \mu B_0) = \mu B_0\).
+
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(E_p = - \vec{\mu} \cdot \vec{B} =
+    - (-10^{-2}\)<span class="unit">&thinsp;m<sup>2</sup></span><span class="unit">&thinsp;s<sup>-1</sup><span class="unit">&thinsp;C</span></span>)\(\, \hat{x}\, \cdot\, \)(50&thinsp;T) \(\hat{y} = 0\).</li>
+<li><span class="item-label">b.</span> \(\vec{\tau} = \vec{\mu} \times \vec{B}
+    = (-10^{-2}\)<span class="unit">&thinsp;m<sup>2</sup></span><span class="unit">&thinsp;s<sup>-1</sup></span>&thinsp;C\()\, \hat{x}\, \times\, \)(50&thinsp;T)\( \hat{y}
+    = - 0.5\)&thinsp;N&thinsp;m&thinsp;\(\hat{z}\),<br>
+
+    where we have used: \(\,\text{T} = \unit{kg\,s^{-1}\,C^{-1}}\).
+</li>
+<li><span class="item-label">3.</span> \(\vec{B} = k_m
+           \left[ \frac{3 \mu \hat{x}\cdot\hat{r}}{r^5} -
+           \frac{\mu \hat{x}}{r^3} \right]\).</li>
+<li>At \(a\):  \(\vec{r} = y_0 \hat{y}\); 
+           \(\vec{B} = k_m
+    \left[ \frac{3 \mu y_0 (\hat{x} \cdot \hat{y})y_0\hat{y}}{y_0^5} -
+     \frac{\mu \hat{x}}{y_0^3} \right] =
+                          - k_m \frac{\mu}{y_0^3}\hat{x}\).</li>
+<li>At \(b\):  \(\vec{r} = x_0 \hat{x}\);
+           \(\vec{B} = k_m
+    \left[ \frac{3 \mu x_0 (\hat{x} \cdot \hat{x})x_0\hat{x}}{x_0^5} -
+    \frac{\mu \hat{x}}{x_0^3} \right] =
+                 2 k_m \frac{\mu}{x_0^3}\hat{x}\).</li>
+<li>At \(c\):  \(\vec{r} = -y_0 \hat{y}\);
+           \(\vec{B} = k_m
+\left[ \frac{-3 \mu y_0 (\hat{x} \cdot \hat{y})(-y_0\hat{y})}{y_0^5} -
+ \frac{-\mu \hat{x}}{y_0^3} \right] =
+                - k_m \frac{\mu}{y_0^3}\hat{x}\).</li>
+<li>At \(d\):  \(\vec{r} = -x_0 \hat{x}\);
+           \(\vec{B} = k_m
+ \left[ \frac{-3 \mu x_0 (\hat{x} \cdot \hat{x})(-x_0\hat{x})}{x_0^5} -
+ \frac{\mu \hat{x}}{x_0^3} \right] =
+                    k_m \frac{\mu}{x_0^3}\hat{x}\).</li>
+<li><span class="item-label">4.</span> At \(a\): <br>
+
+    \(\vec{B} = - k_m \frac{\mu \hat{x}}{y_0^3} =
+  -\frac{(10^{-7}\unit{T\,m\,C^{-1}s})
+                          (2\unit{m^{2}s^{-1}C})\,\hat{x}}
+        {(0.01\,\text{m})^3} = -0.2\,\hat{x}\)&thinsp;T.</li>
+<li>At \(b\):         \(\vec{B} =
+             k_m \frac{\mu \hat{x}}{x_0^3} =
+             \frac{(10^{-7}\unit{T\,m\,C^{-1}s})
+                          (2\unit{m^{2}s^{-1}C})\,\hat{x}}
+                          {(1/2)(0.01\,\text{m})^3} = 0.4\hat{x}\)&thinsp;T.</li>
+<li>At \(c\):  \(\vec{B} = -0.2\,\hat{x}\)&thinsp;T.</li>
+<li>At \(d\):  \(\vec{B} = +0.4\hat{x}\)&thinsp;T.</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(E_p = - \vec{\mu} \cdot \vec{B} = -\mu B_0 \cos30\deg =
+              -0.866 \mu B_0\).</li>
+<li><span class="item-label">b.</span> \(|\vec{\tau}| = |\vec{\mu} \times \vec{B} | =
+              \mu B_0 \sin30\deg = 0.5 \mu B_0\).
+</li>
+<li><span class="item-label">6.</span> \(\vec{\mu} = \mu \frac{\hat{x} + \hat{y}}{\sqrt{2}}\)</li>
+<li>At \(a\): <br>
+ \(\vec{B} = k_m
+    \left[ \frac{3 \mu y_0 \hat{y}}{\sqrt{2} y_0^5} -
+     \frac{\mu}{y_0^3} \frac{\hat{x} + \hat{y}}{\sqrt{2}}
+\right] = k_m \frac{\sqrt{2} \mu}{2 y_0^3}(-\hat{x} + 2 \hat{y})\)</li>
+<li><span class="item-label">7.</span> \(\tau = \mu B_0 \sin\theta\); \(E_p = - \mu B_0 \cos\theta\)</li>
+<li>so \(\sin\theta = - \cos\theta\) which means \(\theta = 135\deg\)
+           or 315\(\deg\)</li>
+<li>\(W = - \mu B_0 (\cos0\deg - \cos135\deg) = - 1.707 \mu B_0\).</li>
+<li>\(W = - \mu B_0 (\cos0\deg - \cos315\deg) = - 0.239 \mu B_0\).</li>
+<li><span class="item-label">8.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{\mu} = \mu \hat{y}; \qquad \vec{r} = x_0\hat{x}\)</li>
+<li>\(\vec{B} = k_m
+  \left[ \frac{(3\vec{\mu}\cdot\vec{r})\vec{r}}{r^5} -
+                                        \frac{\mu}{r^5} \right] =
+k_m \left[ 0 - \frac{\mu \hat{y}}{x_0^3}\right] =
+  k_m \frac{\mu}{x_0^3}\,\hat{y}\).</li>
+<li><span class="item-label">b.</span> \(E_p = -\vec{\mu} \cdot \vec{B} =
+ -\mu_2\hat{y} \cdot
+           \left[ - k_m \frac{\mu_1}{x_0^3}\,\hat{y}\right] =
+               k_m \frac{\mu_1\mu_2}{x_0^3}\).</li>
+<li><span class="item-label">c.</span> \(E_p = \frac{(10^{-7}\unit{m\,kg\,C^{-2}})
+ (2\unit{m^{2}s^{-1}C})
+(3\unit{m^{2}s^{-1}C})}{(5 \times 10^{-2}\,\text{m})^3}
+ = 4.8 \times 10^{-3}\)&thinsp;J.
+</li>
+<li><span class="item-label">9.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{\tau} = \mu_y B_0 \hat{z}\).</li>
+<li><span class="item-label">b.</span> \(E_p = - \mu_x B_0\).</li>
+<li><span class="item-label">c.</span> \(W = - \mu B_0 + \mu_x B_0\),</li>
+<li>\(\;\mu = \sqrt{\mu_x^2 + \mu_y^2}\).
+</li>
+<li><span class="item-label">10.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{B} = 2 k_m \frac{\mu_1}{y_0^3}\,\hat{y}\).</li>
+<li><span class="item-label">b.</span> Zero.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\(\,\text{T} = \,\text{tesla} = \frac{\unit{m\,kg\,C^{-2}}}
+                              {\unit{m\,C^{-1}\,s}} =
+                                          \unit{kg\,s^{-1}\,C^{-1}}\).
+<p> T is the SI unit for magnetic fields.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(W = -\mu B (\cos\theta_B - \cos\theta_A) \newline
+ \,\text{J} = (\text{units of }\mu)\,\text{T}\) <br>
+
+ units of \(\mu = \unit{J\,T^{-1}} = (\unit{kg\,m^{2}\,s^{-2}})/(\unit{kg\,s^{2}\,C^{-1}})
+               = \unit{m^{2}\,s^{-1}\,C}\).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Explain how there can be magnetic dipoles in nature while there
+don't seem to be magnetic monopoles.</li>
+<li><span class="item-label">2.</span> For both electric and magnetic dipoles, write the corresponding
+expressions for torque, work, potential energy and field.</li>
+<li><span class="item-label">3.</span> A point dipole with magnetic moment
+\(\vec{\mu} = \mu_x \hat{x} + \mu_y \hat{y}\) is in an external magnetic
+field \(\vec{B} = B_0 \hat{x}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the torque on the dipole?</li>
+<li><span class="item-label">b.</span> Find the potential energy of the dipole.</li>
+<li><span class="item-label">c.</span> How much work must be done to reorient the dipole so it points in
+the direction of the field?
+</li>
+<li><span class="item-label">4.</span> A point dipole \(\vec{\mu}_1 = \mu_1 \hat{y}\) is at the origin,
+while at \(x = 0\), \(y = y_0\) is located another dipole
+\(\vec{\mu}_2 = \mu_2 \hat{x}\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the magnetic field at the site of \(\vec{\mu}_2\)
+due to \(\vec{\mu}_1\)?</li>
+<li><span class="item-label">b.</span> Find the energy of the system using \(y_0 = 0.04\)&thinsp;m,
+\(\mu_1 = 0.5\unit{J\,T^{-1}}\) and \(\mu_2 = 0.6\unit{J\,T^{-1}}\).
+
+<p><figure class="fig-centered"><img src="figures/m130gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;9 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">4.</span> See Problem&nbsp;10 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

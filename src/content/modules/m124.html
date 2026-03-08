@@ -1,0 +1,509 @@
+<header class="module-header">
+  <h1 class="module-title">The Magnetic Field of a Moving Charge <span class="module-author">(O.McHarris, Lansing Community College)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: lattice <a href="../m118/" class="module-ref">MISN-0-118</a>; magnetic field, magnetic force
+    <a href="../m122/" class="module-ref">MISN-0-122</a>.</li><li><strong>2.</strong> Calculate the electrostatic field \(\vec{E}\) due to a point charge
+    \(q\) <a href="../m115/" class="module-ref">MISN-0-115</a>.</li><li><strong>3.</strong> Calculate the Lorentz force on a charged particle <a href="../m122/" class="module-ref">MISN-0-122</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Use the Lorentz force and the expression for the magnetic field
+    of a moving charged particle to derive the rule that parallel currents
+    attract and anti-parallel currents repel each other.</li><li><strong>K2.</strong> Explain why the electric force between two moving charged
+    particles is usually much larger than the magnetic force between
+    the same two particles and why, on the other hand, the magnetic
+    force is the important force between two current-carrying wires.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a moving charged particle, calculate the electric and
+    magnetic fields produced by that particle at any given point.</li><li><strong>S2.</strong> Given a moving charged particle, calculate the Lorentz force
+    on a second moving charged particle.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Magnetic Field of a Current:  The Ampere-Laplace Equation”
+    (MISN-0-125).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>A current loop placed in a magnetic field behaves much like a magnet placed
+in the same field because the loop of current produces a magnetic field
+just like the magnet does.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>In fact, the magnetic field of a magnet is produced by tiny current loops
+within the magnetic material.
+Here we will study the magnetic field produced by that simplest of
+currents, a single moving charged particle.
+Elsewhere we will sum the fields produced by such particles to obtain the
+fields produced by the sets of moving charges called electric currents.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Magnetic Field of a Charge</h2>
+
+<p><h3 id="pcap-2-a">2a. Three Inter-Particle Forces</h3>
+
+If two particles interact it may be through some combination of
+gravitational, electric, and magnetic forces:
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[\begin{aligned}\vec{F}_{g,12} & = -G \frac{m_1 m_2}{r_{12}^2}\,\hat{r}_{12} \\ \vec{F}_{e,12} & =  k_e \frac{q_1 q_2}{r_{12}^2}\,\hat{r}_{12} \\ \vec{F}_{m,12} & =  k_m \frac{q_1 q_2}{r_{12}^2}\,\vec{v}_1 \times (\vec{v}_2 \times \hat{r}_{12})\,.\end{aligned}\]
+
+<p>Here \(\vec{F}_{12}\) is the force on particle&nbsp;#1 due to particle&nbsp;#2,
+\(G\) is the gravitational force constant, \(k_e\) is the electric force
+constant, \(k_m\) is the “magnetic force constant,” \(q_1\) and \(v_1\) are the
+charge and velocity of particle&nbsp;#1, \(q_2\) and \(v_2\) are the charge and
+velocity of particle&nbsp;#2, and \(\vec{r}_{12}\) is the position vector of
+particle&nbsp;#1 as seen from the position of particle&nbsp;#2 (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The magnetic and electric force constants are related by:
+<p>\[k_m \equiv \frac{k_e}{c^2} \equiv
+                     10^{-7}\,\text{N}\unit{s^{2}}\,\text{C}^{-2}\,,\]
+<p>where \(c \simeq 3 \times 10^8\,\text{m/s}\) is the speed of light in vacuum.
+<p><span class="tryit">Try it:</span>  Show that the magnetic force constant, \(k_m\), is approximately
+\(1/100,000,000,000,000,000\) the size of the electric force constant \(k_e\).
+<p><span class="tryit">Try it:</span>  Show that there is no magnetic force between two particles unless
+<em>both</em> are moving, and that even if they <em>are</em> moving the
+vector products can still make the interaction zero.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m124gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Vector relationships for two moving
+charged particles.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Forces from the Three Fields</h3>
+
+The forces on a particle may be interpreted as being due to fields produced
+by other particles.
+For forces on a particle of mass \(m\), charge \(q\), and velocity \(v\), due to
+gravitational, electric, and magnetic fields, we have:
+<p>\[\begin{aligned}\vec{F}_g & = m\,\vec{\cal G} \\ \vec{F}_e & = q\,\vec{E} \\ \vec{F}_m & = q\,\vec{v} \times \vec{B}\end{aligned}\]
+
+<p>where \(\vec{\cal G}\) is the gravitational field, \(\vec{E}\) is the
+electric field, and \(\vec{B}\) is the magnetic field at the position of
+the particle.
+Note that there is no magnetic force on a particle unless it is moving,
+and even then the force will be zero if the particle's velocity is
+parallel or anti-parallel
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>to the magnetic field.
+<p><h3 id="pcap-2-c">2c. The Three Fields from Particles</h3>
+
+From <a href="#eqn-21" class="eqn-ref">Eqs.&nbsp;(21)</a> and <a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a> we see that a particle of mass \(m\),
+charge \(q\), and velocity \(v\) produces these fields at a space-point
+\(\vec{r}\) (as seen <em>from</em> the position of the particle producing the
+fields, illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>):
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[\begin{aligned}\vec{\cal G}(\vec{r}) & = -G \frac{m}{r^2}\,\hat{r} \\ \vec{E}(\vec{r})      & = k_e \frac{q}{r^2}\,\hat{r} \\ \vec{B}(\vec{r})      & = k_m \frac{q}{r^2}\,\vec{v} \times \hat{r}\,.\end{aligned}\]
+
+<p>Note that the magnetic field is only produced by a moving particle, and then
+only at space-points for which the relative-position vector is neither
+parallel nor anti-parallel to the particle's velocity.
+<p><h3 id="pcap--">. </h3>
+[]2dComparison of \(F_e\) and \(F_m\) for Two Charges
+For two moving charges,
+<a href="#eqn-21" class="eqn-ref">Eqs.&nbsp;(21)</a> show that the magnitudes of \(F_m\) and \(F_e\) are related by:
+<p>\[F_m \leq \frac{|v_1 v_2|}{c^2} F_e\,,\]
+<p>where the “\(\leq\)” sign must be used because one or two sine functions
+from the relevant vector products might also multiply \(F_e\).
+Since \(v_1\) and \(v_2\) are much smaller than \(c\) for ordinary electric
+currents, \(F_m\) is normally very much smaller than \(F_e\).
+However, as we shall see later, \(F_e\) vanishes for the case of two
+current-carrying wires so for that case \(F_m\) is left as the only force
+between them.
+<p><div class="figure-row figure-row-2"><figure id="fig-2"><img src="figures/m124gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A specific example of two moving charged particles.</figcaption></figure><figure id="fig-3"><img src="figures/m124gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The electric and magnetic fields of \(q_1\) at the position of \(q_2\).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-e">2e. A Numerical Example</h3>
+
+Given two moving charged particles, we can calculate the fields set up by
+one of them and then calculate the effect of those fields on the other
+particle.
+This means we can calculate the force that each exerts on the other.
+Take, for example, a charge \(q_1 = -1.0\times 10^{-6}\,\text{C}\)
+instantaneously at the origin of our coordinate system and another charge
+\(q_2 = +1.0\times 10^{-6}\,\text{C}\) at \(\vec{r} = (4.0\,\text{cm})\,\hat{x} +
+(1.0\times10^1\,\text{cm})\,\hat{y}\) (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+Let \(\vec{v}_1 = (3.5 \times 10^{-4}\,\text{m/s})\,\hat{y}\) and
+\(\vec{v}_2 = (- 3.5 \times 10^{-4}\,\text{m/s})\,\hat{x}\).
+For our example we calculate the force on \(q_2\), taking \(q_1\) as the source
+of the fields (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, <a href="#fig-" class="fig-ref">Fig.&nbsp;</a>3, and <a href="#fig-" class="fig-ref">Fig.&nbsp;</a>4).
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>We now make life easier for ourselves by simplifying our notation:
+<p>\[\vec{r} \equiv \vec{r}_{21}\,.\]
+<p>Then the electric and magnetic fields at \(\vec{r}\), the position of \(q_2\),
+due to \(q_1\) are:
+<p>\[\vec{E}(\vec{r}) = k_e \frac{q_1}{r^2}\hat{r}\,,\]
+<p>\[\vec{B}(\vec{r}) =
+        - k_m \frac{v_1 q_1 \sin\theta}{r^2} \hat{z}\,. \help{9}\]
+<p>Thus the electric and magnetic forces on charge \(q_2\) are (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>,
+<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>):
+<p>\[\vec{F}_{e,21} = k_e \frac{q_1 q_2}{r^2}\,\hat{r}
+                        = - 0.78 \,\text{N}\,\hat{r}\,,\]
+<p>\[\vec{F}_{m,21} = q_2 \vec{v}_2 \times \vec{B}(\vec{r})
+  = - k_m \frac{v_1 v_2 q_1 q_2}{r^2} \sin\theta \hat{y}
+  = 3.9 \times 10^{-25}\,\text{N}\,\hat{y}\,.\]
+<p>Note that \(\vec{F}_m\) is negligible compared to \(\vec{F}_e\).
+The total Lorentz force, \(\vec{F}_m + F_e\), is, then, to quotable accuracy:
+<p>\[\vec{F}_{e+m,21} = - 0.78 \,\,\text{N}\,\hat{r}\,.\]
+<p>Note that Newton's third law is satisfied only when \(\vec{v_1}\) and
+\(\vec{v}_2\) are either parallel or anti-parallel (see the appendix).
+<p>When calculating magnetic interactions, calculate the force due to the
+fields on each particle in turn.
+Do not use the fields to obtain the force on one particle and
+then use Newton's third law to obtain the force on the other (see the
+Appendix).
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m124gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The electric and magnetic forces on
+\(q_2\).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Forces between Currents In Wires</h2>
+
+<p><h3 id="pcap-3-a">3a. \(F_E\) is Zero Between Current-Carrying Wires</h3>
+
+Given the ability to calculate the electric and magnetic forces between two
+isolated charges, it is reasonable to ask:
+If those two charges were not isolated but were parts of two currents, what
+could we say about the forces between the two currents?
+The first thing to notice is that there is no electric force between
+current-carrying wires.
+The reason for this is that most materials are electrically neutral overall:
+the charge on the stationary positive ions in the metal's ionic “lattice”
+balances the negative charge on the mobile electrons in the current.
+Since both stationary and moving charges contribute to the total electric
+field, the total electric field is zero.
+In the magnetic interaction, on the other hand, only moving charges count;
+the moving electrons produce a magnetic field but the stationary lattice
+ions do not.
+Thus each wire exerts a magnetic force on the other wire but not an electric
+force.
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m124gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Two parallel current-carrying wires</figcaption></figure>
+
+<p><h3 id="pcap-3-b">3b. Example: Parallel Current-Carrying Wires Attract</h3>
+
+Suppose the currents in two parallel wires are in the same direction: they
+are two streams of electrons moving in the same direction.
+Let us consider the force between one electron in wire #1 and one electron
+in wire #2 and, for simplicity's sake, let those two electrons be at the
+ends of a perpendicular line between the two wires (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+Taking electron #1 as the source of a magnetic field acting on electron #2,
+we go through the calculation of the force on #2 with
+\(q_1 = q_2 = - e\) for electrons:
+<p>\[\vec{B}(\vec{r}) = k_m \frac{v_1 e}{r^2}\hat{z}\,,\]
+	
+and
+<p>\[\vec{F}_{m,21} = q_2 \vec{v}_2 \times \vec{B}(\vec{r})
+       = k_m \frac{v_1 v_2 e^2}{r^2} \hat{y}\,. \help{7}\]
+<p>Thus \(\vec{F}_{m,21}\) points in the positive \(y\)-direction.
+A similar analysis for \(q_1\) shows that \(F_{m,12}\) points in the negative
+\(y\)-direction so the force between the wires is attractive (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>).
+<a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+You can easily modify the above argument to show that when the electrons
+move in opposite directions, so the electric currents in the two wires are
+in opposite directions, the wires repel each other.
+<p>The magnetic force between moving charges can sometimes have a dramatic
+effect.
+For example, when lightning strikes a hollow metal pipe, the attractive
+<em>magnetic</em> force between the electrons moving down the pipe can
+cause the pipe to collapse into a solid bar.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m124gr00.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The magnetic interaction of two parallel
+current-carrying wires.</figcaption></figure></div>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+The Problem Supplement for this module was constructed by Kirby
+Morgan.
+We would like to thank C.&thinsp;Chatdorkmaiprai for suggesting an Appendix
+on the violation of Newton's third law.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. How Newton's Third Law is Violated</h2>
+
+<div class="centered">(for those interested)</div>
+
+If we sum the magnetic forces of two charged particles on each other, we
+find this apparent violation of Newton's third law (after some
+manipulation):
+<p>\[\vec{F}_{m,21} + \vec{F}_{m,12} = 
+  k_e \frac{q_1 q_2}{r^2} \cdot \frac{v_1 v_2}{c^2}
+  \cdot \hat{r} \times (\hat{v}_1 \times \hat{v}_2)\,.\]
+<p>The reason for the apparent violation is that the momentum of the
+electric and magnetic fields has been omitted.
+When that momentum is included (an advanced topic), Newton's third law is
+again obeyed.
+<p><span class="tryit">Try it:</span>  Under what circumstances is the right hand side non-zero?
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Force on a Current in a Magnetic Field” (MISN-0-123)
+and “The Magnetic Field of a Current:  The Ampere-Laplace Equation”
+(MISN-0-125). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">For the gravitational and electric interactions see “Newton's Law
+of Universal Gravitation,” (MISN-0-101) and “Coulomb's Law” (MISN-0-114).
+The magnetic interaction is being introduced in this module. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The commonly-used term “anti-parallel” means “opposite in direction.” <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For a discussion of gravitational field-produced force see “The
+Gravitational Field” (MISN-0-108).
+For electric field-produced force see “Point Charge Field and Force,”
+MISN-0-115).
+For both electric and magnetic field-produced forces, combined into one
+equation, see “Force on a Charged Particle in a Magnetic Field: The Lorentz
+Force” (MISN-0-122). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Recall that one can only refer to a field <em>at a point in
+space</em>, and one can only refer to the force <em>on a particle at that
+point</em>. <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;6 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A moving charge, \(q = 0.50\)&thinsp;C, is at the origin of a coordinate
+system at a certain instant of time.
+Calculate the value of the \(\vec{E}\) and \(\vec{B}\) fields it would set up at
+the point \(x = 1.0\)&thinsp;cm, \(y = 0.0\)&thinsp;cm, \(z = 0.0\)&thinsp;cm for each of three
+different directions of motion:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{v} = 1.0 \times 10^3\,\text{m/s}\,\hat{x}\)</li>
+<li><span class="item-label">b.</span> \(\vec{v} = 1.0 \times 10^3\,\text{m/s}\,\hat{y}\)</li>
+<li><span class="item-label">c.</span> \(\vec{v} =
+         (1.0 \times 10^3\,\text{m/s})[(\hat{x} + \hat{y})/\sqrt{2}]\)
+</li>
+<li><span class="item-label">2.</span> Two electrons separated by 0.10&thinsp;mm move side by side along
+straight paths parallel to the \(x\)-axis with equal velocities of
+\(1.0 \times 10^6\,\text{m/s}\hat{x}\).
+Find the electric and magnetic forces each exerts on the other. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">3.</span> Two charges move relative to each other as shown:
+<p><figure class="fig-centered"><img src="figures/m124gr07.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li>Let \(\vec{B}(\vec{r}_2)\) be the magnetic field at #2 due to #1</li>
+<li>Let \(\vec{E}(\vec{r}_2)\) be the electric field at #2 due to #1</li>
+<li>Let \(\vec{E}(\vec{r}_1)\) be the electric field at #1 due to #2</li>
+<li><span class="item-label">a.</span> Which of the following expressions is correct?
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> \(\vec{B}(\vec{r}_2) =
+                   \frac{1}{c^2} \vec{v}_2 \times \vec{E}_2(\text{at 1})\)?</li>
+<li><span class="item-label">(ii)</span> \(\vec{B}(\vec{r}_2) =
+                   \frac{1}{c^2} \vec{v}_2 \times \vec{E}_1(\text{at 2})\)?</li>
+<li><span class="item-label">(iii)</span> \(\vec{B}(\vec{r}_2) =
+                   \frac{1}{c^2} \vec{v}_1 \times \vec{E}_2(\text{at 1})\)?</li>
+<li><span class="item-label">(iv)</span> \(\vec{B}(\vec{r}_2) =
+                   \frac{1}{c^2} \vec{v}_1 \times \vec{E}_1(\text{at 2})\)?
+</li>
+<li><span class="item-label">b.</span> Find \(F_m/F_e\), the ratio of the magnitude of the magnetic force on particle #2
+to the magnitude of the electric force on that particle.</li>
+<li><span class="item-label">c.</span> If \(F_e \neq 0\), when is \(F_m\) comparable to \(F_e\)?
+</li>
+<li><span class="item-label">4.</span> An electric charge, \(q_2 = - 1.0\)&thinsp;C, moves in a circular orbit
+of radius \(r = 0.25\)&thinsp;nm around another charge \(q_1 = 1.0\)&thinsp;C.
+<p><figure class="fig-centered"><img src="figures/m124gr08.svg" alt="" class="physnet-fig"></figure>
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate \(\vec{B}\) at \(q_1\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">b.</span> What is the magnetic force \(F_m\) on the charge \(q_1\)?
+</li>
+<li><span class="item-label">5.</span> Show that two parallel wires carrying currents in opposite
+directions will repel each other. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">6.</span> Given two charges with these specifications:
+\[\begin{aligned}Q_1 & = & - 1.0 \times 10^4\,\text{C} \\
+Q_2 & = & - 2.0 \times 10^4\,\text{C} \\
+\vec{r}_1 & = & r_1 \hat{x} = (3.0\,\text{cm})\,\hat{x} \\
+\vec{r}_2 & = & r_2 \hat{x} = (4.0\,\text{cm})\,\hat{x} \\
+\vec{v}_1 & = & v_1 \hat{y} = (3.0\,\times\,10^{-4}\,\text{m/s})\,\hat{y} \\
+\vec{v}_2 & = & v_2 \hat{y} = (4.0\,\times\,10^{-4}\,\text{m/s})\,\hat{y}\end{aligned}\]
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a diagram showing the positions and velocities of the
+           charges.</li>
+<li><span class="item-label">b.</span> Determine the symbolic answer for the total force of \(Q_2\) on
+           \(Q_1\).</li>
+<li><span class="item-label">c.</span> Determine the numerical value of the force of part (b).
+</li>
+</ol>
+
+<p>
+<p><ol>
+<li><span class="item-label">1.</span> \(4.5 \times 10^{13}\,\text{N/C}\,\hat{x}\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{B} = 0\)</li>
+<li><span class="item-label">b.</span> \(\vec{B} = - 0.50\,\text{T}\,\hat{z}\)</li>
+<li><span class="item-label">c.</span> \(\vec{B} = - 0.35\,\text{T}\,\hat{z}\)
+</li>
+<li><span class="item-label">2.</span> \(\vec{F}_{e,21} =
+               2.3 \times 10^{-20}\,\text{N}\,\hat{y}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li>\(\vec{F}_{e,12} =
+               - \vec{F}_{e,21}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li>\(\vec{F}_{m,21} =
+               - 2.6 \times 10^{-25}\,\text{N}\,\hat{y}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li>\(\vec{F}_{m,12} =
+               - \vec{F}_{m,21}\) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> (iv)</li>
+<li><span class="item-label">b.</span> \(\frac{F_m}{F_e} = \frac{v_1 v_2 \sin\theta}{c^2}\) <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a></li>
+<li><span class="item-label">c.</span> \(\frac{F_m}{F_e} = 1\) if \(v_1\) and \(v_2\) are nearly \(c\) and
+           \(\theta \rightarrow 90^\circ\)
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{B} = 4.4 \times 10^{20}\)&thinsp;T, into the page</li>
+<li><span class="item-label">b.</span> \(\vec{F}_m = q_1 \vec{v}_1 \times \vec{B} = 0\)
+           since \(\vec{v}_1 = 0\)
+</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m124gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(\vec{F}_{12} =
+           - k_e \frac{Q_1 Q_2}{(r_2 - r_1)^2}
+           \left( \hat{x} - \frac{v_1 v_2}{c^2}\hat{x} \right)\)</li>
+<li><span class="item-label">c.</span> \(\vec{F}_{12} = - 1.8 \times 10^{22}\hat{x}\,\text{N}\)
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m124gr10.svg" alt="" class="physnet-fig"></figure>
+
+ \(\vec{F}_{e,21} =
+ q_2 \vec{E}(\vec{r}_2) = k_e \frac{q_2 q_1}{r^2}\,\hat{y}\)
+ 
+<p> \(\vec{B}(\vec{r}_2) = k_m \frac{- v_1 q_1}{r^2}\,\hat{z}\)
+ 
+<p> \(\vec{F}_{m,21} = q_2 \vec{v}_2 \times \vec{B}(\vec{r}_2) =
+         - k_e \frac{v_1 v_2 q_1 q_2}{r^2 c^2}\,\hat{y}\)
+<p> <em>Signs</em> (\(\pm\)) <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+<p> <em>Numerical</em> <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<p> <em>Value for the electron charge: see this book's Appendices</em>
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\vec{B}(\vec{r}_1) =
+       k_e \frac{q_2 v_2}{r^2 c^2}[\hat{v}_2 \times (- \hat{r})]\)
+ <em>Numerical</em> <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a>
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m124gr11.svg" alt="" class="physnet-fig"></figure>
+
+<p> \(\vec{B}(\vec{r}_2) = k_m \frac{v_1 q_1}{r^2}\,\hat{z}\)
+ 
+<p> \(\vec{F}_{m,21} = - k_m \frac{v_1 v_2 q_1 q_2}{r^2}\,\hat{y}\)
+<p> Likewise:
+ 
+<p> \(\vec{F}_{m,12} = k_m \frac{v_1 v_2 q_1 q_2}{r^2}\,\hat{y}\)
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Note that \(\vec{v}_2\) and \(\vec{B}(\vec{r}_2)\) are mutually perpendicular
+so:
+<p>\[|\vec{v}_2 \times \vec{B}(\vec{r}_2)| = v_2\,B(\vec{r}_2)\,.\]
+<p>Also: \(\sin\theta = \sin[\tan^{-1}(4\,\text{cm}/10\,\text{cm})] = 0.371\)
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">If the force on wire #1 is toward wire #2 and the force on wire #2 is
+ toward wire #1, this is certainly the case of <em>attractive</em> forces.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\(q_2 = -e\) since it is an electron (\(e\) is a positive number, by
+definition).
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">\(8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2}
+  \frac{(-1.602 \times 10^{-19}\,\text{C})^2}{(0.0001\,\text{m})^2}
+ = 2.3 \times 10^{-20}\,\text{N}\)
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">If you are having trouble with signs (\(\pm\)) or with understanding
+ where \(\sin\theta\) came from, see the discussion of
+ vector products and unit vectors in MISN-0-2, MISN-0-121, MISN-0-122, or
+ MISN-0-123.
+ Also be aware that the opposite direction to \(+\hat{z}\) is \(-\hat{z}\).
+</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">\((8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})
+ \frac{(1.0\,\text{C})(2.75 \times 10^8\,\text{m/s})}
+       {(0.25 \times 10^{-9}\,\text{m})^2 (3.0 \times 10^8\,\text{m/s})^2} = 
+ 4.4 \times 10^{20}\,\text{T}\)
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e =  8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}; \qquad
+k_m =  10^{-7}\,\text{N}\unit{s^{2}}\unit{C^{-2}}\]
+<p>\[\text{elementary charge }\equiv e = 1.602 \times 10^{-19}\,\text{C}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Given two charges with these specifications:
+\[\begin{aligned}Q_1 & = & - 1.0 \times 10^4\,\text{C} \\
+Q_2 & = & - 2.0 \times 10^4\,\text{C} \\
+\vec{r}_1 & = & r_1 \hat{x} = (3\,\text{cm})\,\hat{x} \\
+\vec{r}_2 & = & r_2 \hat{x} = (4\,\text{cm})\,\hat{x} \\
+\vec{v}_1 & = & v_1 \hat{y} = (3\,\times\,10^{-4}\,\text{m/s})\,\hat{y} \\
+\vec{v}_2 & = & v_2 \hat{y} = (4\,\times\,10^{-4}\,\text{m/s})\,\hat{y}\end{aligned}\]
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Draw a diagram showing the positions and velocities of the
+           charges.</li>
+<li><span class="item-label">b.</span> Starting with the expression for \(\vec{E}\) due to a point charge,
+           derive the algebraic answer for the total force of \(Q_2\) on
+           \(Q_1\).</li>
+<li><span class="item-label">c.</span> Determine the numerical value of the force of part (b).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;6 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+<p></section>
+

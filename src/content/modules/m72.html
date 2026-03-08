@@ -1,0 +1,549 @@
+<header class="module-header">
+  <h1 class="module-title">Trajectories and Radius, Velocity, Acceleration <span class="module-author">(James M.Tanner, Georgia Institute of Technology)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: tangent (to a curve), miles per hour, meter, second,
+    kilometer, parallel, perpendicular, center of curvature, coordinate origin,
+    radians, vector magnitude, vector direction, vector component <a href="../m2/" class="module-ref">MISN-0-2</a>,
+    speed <a href="../m405/" class="module-ref">MISN-0-405</a>.</li><li><strong>2.</strong> Use symbolic arithmetic; planar vector addition <a href="../m2/" class="module-ref">MISN-0-2</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: acceleration, acceleration vector, bearing, CCW, CW,
+    kinematics, normal (to), position, position vector, radius vector, speed, 
+    time marked trajectory, trajectory, turning rate, velocity, velocity vector,
+    \(\vec{r}\), \(\vec{v}\), \(\vec{a}\).</li><li><strong>K2.</strong> State the reason why so many topics in science and technology have
+    similar kinematics prerequisites.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given a sketch of an object's position, velocity and acceleration vectors
+    at some instant, deduce how the position and velocity vectors are changing.
+    Sketch the trajectory in the neighborhood of this point.</li><li><strong>R2.</strong> Given an origin, an object's time marked trajectory and a specific point
+    on it; deduce and sketch the position and velocity vectors, including values
+    for length and bearing.
+    Also sketch the acceleration vector's direction, getting it inside the right
+    quadrant, or on the right quadrant boundary, with respect to lines parallel
+    and normal to the velocity vector.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Kinematics and Its Uses</h2>
+
+<p><h3 id="pcap-1-a">1a. Motion is Everywhere</h3>
+
+How many times have you looked around and found everything at rest?
+A rare experience indeed.
+And even during such infrequent happenings, there were undetected motions:
+the beat of your heart; the squirm of microscopic life.
+Motion, like sound, so surrounds us that its momentary absence seems to
+suspend the passage of time.
+In fact one familiar measure of time, the day, depends upon an ever present
+motion: the earth's rotation about its own axis.
+<p><h3 id="pcap-1-b">1b. Kinematics Describes Motion</h3>
+
+Kinematics is that part of physics which provides concepts and precise
+mathematical relationships for describing motion.
+By studying kinematics, you can learn: 1. definitions of kinematical
+descriptions like velocity, speed and acceleration; 2. procedures
+for measuring these quantities; and 3. relations between these
+quantities.
+As you do this studying, you can practice by analyzing the motions you
+observe in everyday phenomena.
+<p><h3 id="pcap-1-c">1c. Dynamics Needs Kinematics</h3>
+
+Dynamics, the study of how forces influence motion, relies upon Kinematics
+to describe that motion.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Specifically, Dynamics relates forces to acceleration and then, through
+kinematics, to changes in an object's position, speed and direction of
+motion.
+Thus a good foundation in kinematics is essential to achieving an
+understanding of how motions and positions are influenced by natural
+and man-made forces.
+With such an understanding, motions become not only predictable but
+designable.
+The interpretation and design of motion is a recurring theme throughout
+science and technology, from electrons in integrated circuits to signals
+in nerves to transfer fluids in energy sources to population flow to
+climate-changing geophysical changes.
+This module provides a solid first stage in the acquisition of such
+capabilities.
+</section>
+
+<p>
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Time Marked Trajectories</h2>
+
+<p><h3 id="pcap-2-a">2a. A History of an Object's Motion</h3>
+
+As an object moves through space it traces out a path called its
+“trajectory.”
+The path shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> is that made by a person ice skating.
+Dots on the trajectory indicate the skater's position at the end of each
+second, as might be determined from an overhead multiflash “strobe” photo.
+Our goal is to get detailed information about motion from such a space-time
+history of an object's motion.
+<p><div class="figure-row figure-row-2"><figure id="fig-1"><img src="figures/m72gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An ice skater's trajectory with positions marked at 1&nbsp;sec. intervals.</figcaption></figure><figure id="fig-2"><img src="figures/m72gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The direction of motion and the tangent to the trajectory of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> at the 30&nbsp;sec. mark.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. Deducing Motional Direction</h3>
+
+At each instant an object's direction of motion lies along the tangent to
+its trajectory.
+For example, in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> the tangent to the skater's trajectory at t = 30
+seconds has an east-west orientation; the skater's direction of motion is
+eastward.
+Similarly, the skater's motion is northward at 10 seconds, westward at 20
+seconds, southward at 26 seconds.
+To determine the precise direction of motion at any time, use a straight edge
+to draw a tangent line and then use a protractor to measure the angle to a
+reference direction.
+You might like to measure the skater's direction of motion at t = 6 sec.
+and compare your answer to ours: N44°E. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><h3 id="pcap-2-c">2c. Deducing Speed from the Trajectory</h3>
+
+An object's speed, the maginitude of the velocity vector,
+at any instant can be estimated from its trajectory.
+For example, in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> the skater's speed at 30 seconds can be estimated
+by measuring the distance traveled between 29 and 31 seconds and then
+dividing by the elapsed time.
+To measure this distance, place a thread along the curve and mark the 29
+second and 31 second points on the thread.
+Then straighten the thread along the distance scale.
+We find a speed of approximately 12&thinsp;m/s, 27 miles per hour, at the 30
+second mark. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+Technically, that answer is the average speed over the 2 second interval
+but we use the general rule that the average of a quantity over an interval
+is a good estimate of that quantity's value at the midpoint of the interval.
+Using this method we generated a complete graph of speed vs time (<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+However the initially decreasing speed, followed by a smooth transition to an
+increasing speed, is instantly deducible from the variation in the
+consecutive dot spacings in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m72gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Distance traveled between 29 and
+31&nbsp;seconds, trajectory of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m72gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Speed vs time for the trajectory of
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Position Vector <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{r}\)</h2>
+
+<p>If some point is selected as a reference point, an object can be located
+relative to that point by a vector called the object's “position vector”
+or “radius vector.”
+For example, in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> we have chosen a reference point and labeled it “O.”
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>Then the position vector at 15&nbsp;seconds is the one labeled \(\vec{r}\).
+The position vector's length, the distance from point 0 to the object, is
+called the vector's “magnitude” and here is 20 meters.
+The vector's direction is N35°E.
+As the object moves, its position vector changes in both magnitude and
+direction.
+Thus the position vector is a function of time and this is usually indicated
+by writing it as \(\vec{r}(t)\).
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Velocity: How Position is Changing</h2>
+
+<p><h3 id="pcap-4-a">4a. Speed, Motional Direction</h3>
+
+An object's velocity is a vector which has a magnitude equal to the object's
+speed and a direction identical to that of the object's motion.
+Thus, if drawn originating on the object, the velocity vector is tangent to
+the trajectory as shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+Velocity is a function of time if speed and/or direction of motion are
+changing with time.
+The dependence of velocity on time is symbolized by writing \(\vec{v}(t)\).
+The velocity vector at any one time can be decomposed into components
+parallel and perpendicular to the position vector in order to determine how
+the magnitude and direction of the position are changing.
+This decomposition is illustrated in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a> for the skater's trajectory at
+\(t = 30\)&nbsp;seconds.
+<p><h3 id="pcap-4-b">4b. \(\protect\vec{v}_{\parallel r}\): <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{r}\)'s Length is Changing</h3>
+
+The direction of the component of velocity parallel to \(\vec{r}\),
+\(\vec{v}_{\parallel r}\), indicates whether \(\vec{r}\)'s length, the distance
+from the origin, is increasing or decreasing.
+For an example, see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+There, at \(t = 30\)&thinsp;s, \(\vec{v}_{\parallel r}\) is in the same
+direction as \(\vec{r}\), and consequently the magnitude of \(\vec{r}\) is
+increasing.
+This is verified by observing that at 31&nbsp;seconds the skater is farther from
+the origin than at 30&nbsp;seconds.
+If \(\vec{v}_{\parallel r}\) is opposite to \(\vec{r}\) then \(\vec{r}\) is
+decreasing.
+This is reasonable: motion toward the origin will cause the distance from the
+origin to shorten.
+You can illustrate the latter case by constructing \(\vec{r}\), \(\vec{v}\) and
+\(\vec{v}_{\parallel r}\) at \(t = 1\)&nbsp;second on the skater's trajectory.
+<a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+If \(\vec{v}_{\parallel r}\) is zero, the magnitude of \(\vec{r}\) is not
+changing no matter what any other component of \(\vec{v}\) has for a value.
+<p><span class="tryit">Try it:</span>  Find the four points on the skater's trajectory where
+\(\vec{v}_{\parallel r}\) is zero so the magnitude of \(\vec{r}\) is not
+changing. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><div class="figure-row figure-row-2"><figure id="fig-5"><img src="figures/m72gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Position vector at 15&nbsp;sec., trajectory of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure><figure id="fig-6"><img src="figures/m72gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Velocity vectors at various times, trajectory of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-c">4c. \(\protect\vec{v}_{\perp r}\): <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{r}\)'s Direction is Changing</h3>
+
+For two-dimensional motion the component of \(\vec{v}\) perpendicular to
+\(\vec{r}\), \(\vec{v}_{\perp r}\) is turning clockwise (CW) or counterclockwise
+(CCW).
+You can see in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> that, for the skater's trajectory, \(\vec{r}\) is always
+turning CCW.
+In particular, at \(t = 30\)&nbsp;seconds (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>), \(\vec{v}_{\perp r}\) indicates
+CCW movement;
+this is verified by the direction of the position vector at \(t = 31\)&nbsp;seconds.
+Any time \(\vec{v}_\perp r\) is zero, \(\vec{r}\) is not changing direction.
+<p><span class="tryit">Try it:</span>  Determine whether this occurs at any time on the skater's trajectory in
+<a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m72gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Velocity components at 30&nbsp;sec., trajectory
+of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Acceleration: How <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{V}\) is Changing</h2>
+
+<p><h3 id="pcap-5-a">5a. Acceleration is to Velocity as Velocity is to Position</h3>
+
+Acceleration tells how velocity is changing, entirely analogous to the way
+velocity tells how position is changing.
+Thus components of acceleration parallel and normal to the velocity indicate
+changing speed and changing direction of motion.
+<p><h3 id="pcap-5-b">5b. <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{a}\)<sub><span class="tex-unknown" title="unknown macro">\parallel</span> v</sub>: <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{v}\)'s Length is Changing</h3>
+
+If \(\vec{a}_{\parallel v}\) is in the same direction as \(\vec{v}\), then
+velocity is increasing in magnitude.
+That is, the speed is increasing.
+Of course, if \(\vec{a}\)<sub><span class="tex-unknown" title="unknown macro">\parallel</span> v</sub> is opposite to \(\vec{v}\), then the
+object's speed is decreasing.
+If \(\vec{a}_{\parallel v}\) is zero, the speed is constant.
+<p><h3 id="pcap-5-c">5c. <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{a}\)<sub><span class="tex-unknown" title="unknown macro">\perp</span> v</sub>: <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{v}\)'s Direction is Changing</h3>
+
+A component of acceleration perpendicular to the velocity indicates that the
+velocity vector is turning.
+If the motion is two-dimensional (in a plane), \(\vec{v}\) can be specified as turning
+CW or CCW (See <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>).
+Thus even though an object's speed may be constant, there can still be an
+acceleration resulting from a changing direction of motion.
+Since \(\vec{a}_{\perp v}\) is perpendicular to the velocity vector, it always
+points towards the center of curvature of its neighborhood of the trajectory.
+<p><h3 id="pcap-5-d">5d. Example: A Skater's Acceleration</h3>
+
+Careful inspection of a trajectory permits you to determine the general
+direction of \(\vec{a}\) at any point along the trajectory.
+For the example in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, at \(t = 24\)&nbsp;seconds the skater's speed is seen
+to be increasing and the velocity's direction turning CCW.
+Therefore, the skater's acceleration has a component in the same direction
+as the velocity and a CCW-turning component perpendicular to the velocity.
+These two components and their sum, the acceleration, are shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m72gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Acceleration components for speed
+increasing, \(\vec{v}\) turning CW.</figcaption></figure>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+symbol for the acceleration vector.
+the rate of change of a subject's velocity.
+Accelerations obey the mathematical rules for vectors.
+the time rate of change of an object's velocity
+vector.
+The component parallel to the velocity vector, \(\vec{a}_{\parallel v}\), is the
+rate of change of the velocity vector's magnitude.
+The component normal to the velocity vector, \(\vec{a}_{\perp v}\), is the rate
+of turning of a unit length vector that continually points along the object's
+velocity vector.
+direction specified as an angle from either north or south,
+whichever is closer (e.g. N44°W, S23°E).
+“counter clockwise,” the turning direction opposite to CW.
+“clockwise,” the turning direction of a normal clock's hands.
+the discipline concerned with the mathematical description of
+motion.
+It is much the smaller of the two subfields of Mechanics.
+The other, Dynamics, builds upon Kinematics to relate forces to motion.
+Kinematics has several sometimes-overlapping subdivisions: one dimensional,
+two dimensional, three dimensional, rotational, non-relativistic,
+relativistic.
+perpendicular to.
+the description of an object's location, specified with respect to
+some coordinate system.
+the radius vector to an object's position.
+symbol for the radius vector.
+the vector going from a coordinate system origin to a
+particular point in space.
+an object's trajectory to which marks have been
+added showing the position of the object at various times.
+Often the marks represent equal time intervals, such as would be produced
+by a stroboscopic lamp flashing at a steady rate.
+a line showing the path traveled by an object.
+symbol for the velocity vector.
+the rate of change of an object's position.
+Velocities obey the mathematical rules for vectors.
+the time rate of change of an object's position vector.
+The component parallel to the position vector, \(\vec{v}_{\parallel r}\), is the
+rate of change of the object's distance from the coordinate origin.
+The component normal to the position vector, \(\vec{v}_{\perp r}\), is the
+turning rate of a unit length vector which continually points along the
+object's position vector.
+The length of the velocity vector is called the object's “speed.”
+The direction of the velocity vector is always in the direction of motion.
+ the time rate at which a vector is turning (typically
+expressed in radians per second).
+</section>
+
+<p><section id="deducing-span-class-tex-unknown-title-unknown-macro-protect-span-vec-a-only-for-those-interested" class="module-section section-text"><h2 id="deducing-span-class-tex-unknown-title-unknown-macro-protect-span-vec-a-only-for-those-interested">Deducing <span class="tex-unknown" title="unknown macro">\protect</span>\(\vec{a}\) (Only for Those Interested)</h2>
+
+<p>Given a time marked trajectory, suppose you wish to compute \(\vec{a}\) at some
+point.
+The module text explains how to determine the directions but not the
+magnitudes of \(\vec{a}\)'s components, \(\vec{a}_{\parallel v}\) and
+\(\vec{a}_{\perp v}\).
+Here is a method, illustrated for the 24&nbsp;second point of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>:
+<ul>
+<li><span class="item-label">1.</span> Since \(a_{\parallel v}\) is the rate of change of the speed with
+time, it can be approximated by the change in speed, over some time interval,
+divided by the length of that time interval.
+For our example:
+\(a_{\parallel v}\)(24&thinsp;s)&thinsp;\(\simeq\,[v(25\,\text{s}) - v(23\,\text{s})]
+/(2\,\text{s}) = 0.7\)&thinsp;m/s<sup>2</sup>.</li>
+<li><span class="item-label">2.</span> <span class="tex-unknown" title="unknown macro">\</span> Since \(a_{\perp v}\) is the magnitude of the rate of change of the
+velocity vector due solely to its turning motion, it is given by
+\(a_{\perp v} = v \omega_v\), where \(\omega_v\) is the velocity vector's
+turning rate.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>To estimate this turning rate, measure the angle between the velocity vector
+directions at two times and divide by the time interval between them.
+For our example we find an angle of 52.5° between the 23 and 25<span class="unit">&thinsp;second</span>
+velocity vectors and hence a velocity vector turning rate of:
+\(\omega_v \simeq 52.5^\circ/2\,\text{s} = 26.3^\circ/\,\text{s} = 0.46\,\text{rad/s}\).
+Radian measure must be used if \(a_{\perp v}\) is to have the same units as
+\(a_{\parallel v}\).
+Then: \(a_{\perp v} (24\,\text{s}) = 5.7\,\text{m/s} \times 0.46\,\text{rad/s} =\,2.6\unit{m/s^{2}}\).</li>
+<li><span class="item-label">3.</span> <span class="tex-unknown" title="unknown macro">\</span> Add \(\vec{a}_{\parallel v}\) and \(\vec{a}_{\perp v}\) to get
+\(\vec{a}\) as in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>.</li>
+</ul>
+
+<p><figure id="fig-9" class="fig-left-framed"><img src="figures/m72gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. The skater's acceleration at 24&nbsp;sec.
+(see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).</figcaption></figure>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See, for example, “Newton's Laws” (MISN-0-14). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">If you need assistance in getting the answer, see sequence [S-1] in
+this module's Special Assistance Supplement. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">Smoothness of the curve results from a requirement that forces have a
+finite (not infinite) strength. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Reference points are chosen so as to simplify conceptualization or 
+calculation for specific systems.
+Some examples are: centers of atoms, engine shafts and our planet's sun.
+Good choices for reference points come with experience and insight. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">For calculation of the precise vectors shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>, see the
+Appendix. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">The Greek letter \(\omega\), pronounced “oh meg\('\) ah”, is
+universally used to denote turning rates (“angular velocities”).
+See “Kinematics: Circular Motion” (MISN-0-9) for typical uses and
+“Constants of the Motion for Central Forces” (MISN-0-58) for derivations. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Problems&nbsp;3 and 4 also occur on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> For the ice skater of <a href="#fig-1" class="fig-ref">Figs.&nbsp;1–5</a> at 24&nbsp;seconds:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the radius and positional bearing as seen from the origin
+in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.</li>
+<li><span class="item-label">b.</span> Determine the speed in m/s and miles per hour.</li>
+<li><span class="item-label">c.</span> Determine the bearing of the direction of motion.</li>
+<li><span class="item-label">d.</span> On <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, sketch these vectors: \(\vec{r}\), \(\vec{v}\),
+\(\vec{v}_{\perp r}\), \(\vec{v}_{\parallel r}\), and the directions of
+\(\vec{a}_{\parallel v}\), \(\vec{a}_{\perp v}\), \(\vec{a}\).</li>
+<li><span class="item-label">e.</span> Using only the \(\vec{r}\), \(\vec{v}\) and \(\vec{a}\) vectors of part d,
+deduce how the radius and velocity vectors are changing.
+</li>
+<li><span class="item-label">2.</span> <span class="item-text">Deduce how the position and velocity vectors in the sketch are
+changing.
+Show your reasoning.
+Sketch the trajectory in the neighborhood of this point.</span><img src="figures/m72gr10.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">3.</span> <span class="item-text">Given an object's instantaneous kinematics vectors
+shown in the sketch, state how the position and velocity vectors' lengths and
+bearings are changing.
+Show your reasoning.
+Sketch the trajectory in the neighborhood of this point.</span><img src="figures/m72gr11.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">4.</span> Photographs of Jupiter's moon Io show ejection of globs of volcanic
+material following trajectories similar to that sketched below.
+For the 18 second point: Determine the lengths and angles of the radius and
+velocity vectors and sketch them on the figure.
+Also sketch your best estimate for the direction of the acceleration vector.
+<figure class="fig-centered"><img src="figures/m72gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> For the ice skater:
+<span class="item-text"><ol>
+
+</ol>
+</span><img src="figures/.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">a.</span> 18&thinsp;m, N38°W.</li>
+<li><span class="item-label">b.</span> 5.7&thinsp;m/s = 12.8&thinsp;mph</li>
+<li><span class="item-label">c.</span> approx. S20°W.</li>
+<li><span class="item-label">d.</span> Check \(\vec{a}_{\parallel v}\), \(\vec{a}_{\perp v}\), \(a\), on <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>.</li>
+<li><span class="item-label">e.</span> The radius vector is moving counter-clockwise and is getting
+ smaller, and the velocity vector is increasing both tangentially and radially.
+ 
+m72gr13</li>
+<li><span class="item-label">2.</span> <span class="item-text">\(\vec{v}_{\parallel r}\) is opposite to \(\vec{r}\) so
+ \(r\) is decreasing.<br>
+
+ \(\vec{v}_{\perp r}\) shows \(\vec{r}\) is turning CCW <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a> <br>
+
+ \(\vec{a}_{\parallel v}\) is in the same direction as \(\vec{v}\) so \(v\) is
+ increasing <br>
+
+ \(\vec{a}_{\perp v}\) shows \(\vec{v}\) is turning CW.
+</span><img src="figures/m72gr14.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">3.</span> <span class="item-text">\(\vec{v}_{\parallel r}\) is in the same direction
+           as \(\vec{r}\) so \(r\) is increasing.</span><img src="figures/.svg" alt="" class="fig-item"></li>
+<li>\(\vec{v}_{\perp r}\) is CCW so \(\vec{r}\) is turning CCW.</li>
+<li>\(\vec{a}_{\parallel v}\) is in opposite direction to \(\vec{v}\) so
+           \(v\) is decreasing.</li>
+<li>\(\vec{a}_{\perp v}\) is CW so \(\vec{v}\) is turning CW.m72gr15</li>
+<li><span class="item-label">4.</span> \(r\) = 7.6&thinsp;km</li>
+<li>\(\vec{r} \text{ angle } = 52^\circ\) down from upward vertical</li>
+<li>\(v\) = 0.36&thinsp;km/s</li>
+<li>\(\vec{v} \text{ angle } = 64^\circ\) up from downward vertical.
+<p><figure class="fig-centered"><img src="figures/m72gr16.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><span class="item-text">Read N&thinsp;44°&thinsp;E as “north, 44&nbsp;degrees east.”
+ This means 44° east of northward:
+ <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a> (for assistance with computation of the 44°)</span><img src="figures/m72gr17.svg" alt="" class="fig-item">
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Our thread length was 24 meters on the scale at the top of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+ Then: speed = 24&thinsp;m&thinsp;/&thinsp;2&thinsp;s = 12&thinsp;m/s.
+ You should remember the following conversion which is directly useful on
+ highways in some states and in the rest of the world:
+ 100&thinsp;km/hr = 62.4&thinsp;mi/hr.
+ Then:
+ \(\text{speed } = 12\,\text{m/s}(3.6 \times 10^3\,\text{s/hr})(62.4\,\text{mi}/10^5\,\text{m}) = 27\,\text{mi/hr}\).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><span class="item-text">Note that, for this case, \(\vec{v}_{\parallel r}\) is in the opposite direction
+ to \(\vec{r}\).
+ Then the magnitude of \(\vec{r}\) must be shrinking.
+ <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a> shows that this is indeed the case at this time.</span><img src="figures/m72gr18.svg" alt="" class="fig-item">
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Look for places where the trajectory, hence motion, is normal
+ (perpendicular) to the radius vector: 3&thinsp;s, 4&thinsp;s, 20&thinsp;s, 27&thinsp;s.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Look for places where the trajectory, hence motion, is straight
+ toward or away from the origin: none.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body"><span class="tex-unknown" title="unknown macro">\hrulefill</span>
+<p> <span class="item-text">
+ Step 1: Lay a straight edge (a ruler or a folded paper) along the
+ trajectory and rotate it until the angles on both sides of the 6&nbsp;sec.
+ point look equal.</span><img src="figures/m72gr19.svg" alt="" class="fig-item"> 
+<p> <span class="tex-unknown" title="unknown macro">\hrulefill</span>
+<p> <span class="item-text">Step 2: Draw a dashed line along the straight edge, then remove it.
+ Inspect the line.</span><img src="figures/m72gr20.svg" alt="" class="fig-item">
+<p> <span class="tex-unknown" title="unknown macro">\hrulefill</span>
+<p> <span class="item-text">
+ Step 3: Use the straight edge to draw a northward line through the 6&nbsp;sec.
+ point.</span><img src="figures/m72gr21.svg" alt="" class="fig-item">
+<p> <span class="tex-unknown" title="unknown macro">\hrulefill</span>
+<p> Step 4: Use a protractor to measure the angle between the two lines
+ or drop a perpendicular to the northward line, measure two legs of the
+ resulting triangle and use their ratio and the appropriate inverse
+ trigonometric function.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">All radius vectors must radiate out from the coordinate origin.
+ Thus the coordinate origin must be at the tail end of the radius vector
+ shown in the sketch.
+ Note that \(\vec{v}_{\perp r}\) points CCW around that coordinate origin.
+ This means that the radius vector is changing in a CCW direction.
+ 
+<p> You can see this graphically.
+ Call the radius vector in the sketch \(\vec{r}(t)\).
+ Now draw a radius vector from the same coordinate origin out to the
+ trajectory at a slightly later time and label that vector
+ \(\vec{r}(t + \Delta t)\).
+ The tails of the two radius vectors are at the same point, the coordinate
+ origin.
+ The tip of the head of \(\vec{r}(t + \Delta t)\) is on the trajectory,
+ below and to the right of the tip of \(\vec{r}(t)\).
+ It is obvious that rotation from \(\vec{r}(t)\) to \(\vec{r}(t + \Delta t)\)
+ is in the CCW direction.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><span class="tex-unknown" title="unknown macro">\textbox</span>Note: You may bring a protractor, ruler, and string into the
+Exam Room for exams covering this unit.
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> <span class="item-text">Given an object's instantaneous kinematics vectors
+shown in the sketch, state how the position and velocity vectors' lengths and
+bearings are changing.
+Show your reasoning.
+Sketch the trajectory in the neighborhood of this point.</span><img src="figures/m72gr11.svg" alt="" class="fig-item"></li>
+<li><span class="item-label">3.</span> Photographs of Jupiter's moon Io show ejection of globs of volcanic
+material following trajectories similar to that sketched below.
+For the 18 second point: Determine the lengths and angles of the radius and
+velocity vectors and sketch them on the figure.
+Also sketch your best estimate for the direction of the acceleration vector.
+<p><figure class="fig-centered"><img src="figures/m72gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;3.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+</section>
+

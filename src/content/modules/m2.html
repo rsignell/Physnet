@@ -1,0 +1,979 @@
+<header class="module-header">
+  <h1 class="module-title">Sums, Differences and Products of Vectors <span class="module-author">(J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Given some combination of angle(s) and leg length(s) for a triangle,
+    determine the other angle(s) and leg length(s) <a href="../m401/" class="module-ref">MISN-0-401</a>.</li><li><strong>2.</strong> Define the multiplication of a vector by a number and illustrate with a
+    drawing <a href="../m405/" class="module-ref">MISN-0-405</a>.</li><li><strong>3.</strong> Define the addition and subtraction of two vectors and illustrate with
+    drawings <a href="../m405/" class="module-ref">MISN-0-405</a>.</li></ul></div>
+
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> In two dimensions, add any number of given vectors graphically.</li><li><strong>K2.</strong> Given a vector's components in two dimensions, determine the
+    magnitude of the vector and the angle it makes with each of the two coordinate
+    axes, and conversely.</li><li><strong>K3.</strong> In three dimensions, add and subtract given vectors expressed as
+    (a) a triad of components and (b) in terms of unit vectors along the coordinate
+    axes.</li><li><strong>K4.</strong> Evaluate the scalar product of two given vectors, both in terms of
+    the vectors' components along a fixed set of axes and in terms of the vectors'
+    magnitudes and the angle between them.</li><li><strong>K5.</strong> Evaluate the magnitude of the vector product of two given vectors
+    in terms of: their magnitudes and the angle between them.
+    Determine the direction by either the right-hand rule or the screw rule.</li><li><strong>K6.</strong> Determine the vector product of two vectors, using their given
+    components along a set of Cartesian coordinate axes.</li></ul></div>
+
+    <div class="env-OptionalResources">
+    <br>
+ Ronald C.&thinsp;Davidson and Jerry B.&thinsp;Marion, <em>Mathematical
+    Preparation for General Physics and Calculus</em>, W.&thinsp;B.&thinsp;Saunders Co. (1973),
+    (pp.&thinsp;144-151).
+    </div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Scalars, Vectors, and Others</h3>
+
+Most physical quantities can be classified mathematically as either scalars or
+vectors.
+Values of <em>scalar</em> quantities are single numbers, sizes, and this includes such
+quantities as temperature, work, distance, speed, musical pitch, and
+electric charge.
+Values of <em>vector</em> quantities have both size and direction, and this includes
+such quantities as displacement, velocity, acceleration, force, electric field,
+and momentum.
+There are other quantities whose values cannot be represented by either scalars
+or vectors; examples are color, stress, and inertia.
+<p>The rules for adding, subtracting, and multiplying scalars are just the
+familiar rules of arithmetic and algebra.
+In this module we deal with the rules for adding, subtracting, and
+multiplying vectors, rules that are used throughout professional science
+and engineering.
+<p><h3 id="pcap-1-b">1b. Indicating Vectors Visually</h3>
+
+Just as scalar quantities are referred to in graphs, drawings, text, and
+equations by alphabetic symbols, vector quantities are indicated by the
+use of arrows.
+<p>As a scalar example, suppose the length of a panel of concrete in a highway
+increases as its temperature rises.
+While describing the situation mathematically, we represent the length by the
+symbol \(L\) and the temperature by the symbol \(T\).
+To indicate that the length is a function of temperature, we write \(L(T)\).
+<p>As a vector example, suppose a particular force is changing with time.
+We write \(\vec{F}\) to indicate that we are treating the force as a vector and
+\(t\) to show that we are treating time as a scalar.
+To indicate that the force is a function of time we write \(\vec{F}(t)\).
+If we are only interested in the size of the force, not its direction, we
+write: \(F(t)\).
+<p>When we want to indicate the size and direction of a vector quantity on a
+graph or a sketch of some physical phenomenon, we draw it as an
+arrow, a line with an arrowhead on one end (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The length of the arrow shows the vector quantity's <em>magnitude</em> (its size)
+and the arrowhead shows its direction.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m2gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Force indicated on a diagram.</figcaption></figure>
+
+<p><span class="tryit">Try it:</span>  In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> the force scale is 10<span class="unit">&thinsp;lb per inch</span>.
+Determine the magnitude of the force. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Addition, Subtraction of Vectors</h2>
+
+<p><h3 id="pcap-2-a">2a. General Features</h3>
+
+When the rules of vector addition are properly used to add two vectors,
+the result is a third vector which usually has a different magnitude and
+direction than those of the two vectors being added.
+We here present two methods for adding two vectors: both produce the same
+result.
+In the <em>graphical</em> method you draw the vectors to scale and then
+construct the sum on the drawing and measure its magnitude and direction.
+The result only has the precision of your drawing and does not produce
+symbolic answers.
+In the <em>trigonometric</em> method you sketch the vectors and apply simple rules
+of trigonometry.
+<p><h3 id="pcap-2-b">2b. Addition: Graphical Method</h3>
+
+Here are the rules for adding two vectors graphically:
+<ul>
+<li><span class="item-label">1.</span> Take either of the vectors to be added and draw it on graph paper
+to scale, so it is an arrow of appropriate magnitude and direction.</li>
+<li><span class="item-label">2.</span> Draw the arrow representing the second vector on the same graph,
+to the same scale, with the correct magnitude and direction, but with its tail
+at the head of the first arrow.</li>
+<li><span class="item-label">3.</span> Draw a third arrow on the graph, going from the tail of the first
+arrow to the head of the second arrow.
+This third arrow is the sum of the other two: it is called the “resultant,”
+which is the vector word for “sum.”</li>
+</ul>
+
+These three steps are illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, where each of the
+vectors being added is taken in turn as the first vector.
+Note that the resultant is the same in both cases.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m2gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Two vectors are added two ways:
+(a) \(\vec{A}\) is drawn first and then \(\vec{B}\) is added to it;
+(b) \(\vec{B}\) is drawn first and then \(\vec{A}\) is added to it.
+The resultants in the two methods are the same: they have identical
+magnitudes and directions.</figcaption></figure>
+
+<p><span class="tryit">Try it:</span>  Show, graphically, that the result of \(\vec{A} + \vec{B}\) is the same
+as the result of \(\vec{B} + \vec{A}\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]2cAddition: Trigonometric Method
+The trigonometric method of adding two vectors makes use of the law of cosines.
+This is illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, where \(\vec{R}\) is the “resultant” from
+adding vectors \(\vec{A}\) and \(\vec{B}\).
+The magnitude of \(\vec{R}\) is determined from the right triangle whose
+sides are \(A + B \cos\phi\) and \(B \sin\phi\) and whose hypotenuse is \(R\).
+Here \(\phi\) is the angle \(B\) makes with \(A\).
+Then:
+<p>\[R^2 = (A + B \cos\phi)^2 + B^2 \sin^2\phi\,,\]
+<p>and the magnitude of \(R\) is:
+<p>\[R = \left( A^2 + B^2 + 2AB \cos\phi \right)^{1/2}\,.\]
+<p>Most scientists and engineers either remember this equation or become
+proficient at quickly deriving it.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The angle that vector \(\vec{R}\) makes with the vector \(\vec{A}\) can also be
+expressed in terms of the magnitudes of \(\vec{A}\) and \(\vec{B}\) and the angle
+\(\phi\) by (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>):
+<p>\[\theta =\tan^{-1}\left[\frac{B\sin\phi}{A+B\cos\phi}\right].\]
+<p><span class="tryit">Try it:</span>  Check <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> by measuring and
+<p>then calculating with the relevant quantities in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><div class="figure-row figure-row-2"><figure id="fig-3"><img src="figures/m2gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Using trigonometry to add two vectors.</figcaption></figure><figure id="fig-4"><img src="figures/m2gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Illustration of vector subtraction.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2dSubtraction
+Subtraction is performed by using the rules for vector addition.
+That is, the subtraction of one vector from another is accomplished by adding
+the negative of the vector being “subtracted.”
+The negative of a vector is most easily seen from its geometrical
+representation where the head and the tail of the arrow are interchanged.
+The magnitude of the vector is unchanged but its direction reverses.
+The subtraction \(\vec{A} - \vec{B}\) is illustrated in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+<p>Note also in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> the difference \(\vec{R} - \vec{B}\) must be \(\vec{A}\)
+since \(\vec{A} + \vec{B} = \vec{R}\).
+If the head and tail of \(\vec{B}\) are interchanged, the result is \(-\vec{B}\)
+and that vector can then be added to \(\vec{R}\): \(\vec{R} + (-\vec{B}) =
+\vec{A}\).
+<p><span class="tryit">Try it:</span>  Try it geometrically and see if you get \(\vec{A}\)!
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Product of Two Vectors</h2>
+
+<p><h3 id="pcap-3-a">3a. Two Kinds of Products</h3>
+
+There are two kinds of multiplication possible for two vectors: one produces a
+scalar result while the other produces a vector result.
+Important physical quantities are usually obtained by such multiplication.
+For example, work is often obtained as a <em>scalar</em> product of force and
+displacement vectors, while angular momentum is often obtained as a <em>vector</em>
+product of radius and momentum vectors.
+Each of these kinds of multiplication has its own rules.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m2gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Two rules for
+finding the direction of \(\vec{C} = \vec{A} \times \vec{B}\) by:
+(a) the “right hand” rule; (b) the “screw” rule.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3bThe Scalar Product
+The scalar product of two vectors \(\vec{A}\) and \(\vec{B}\) is the
+magnitude of \(\vec{A}\) times the magnitude of \(\vec{B}\) times the cosine of
+angle between them (this angle is usually denoted \(\theta\)).
+The scalar product is sometimes called the “dot product” because of the
+way it is indicated visually:
+<p>\[\text{scalar product } \equiv \vec{A} \cdot \vec{B} = A B \cos\theta.\]
+<p><span class="tryit">Try it:</span>  Show that the scalar product of two vectors is zero if the two are
+perpendicular.
+<p><span class="tryit">Try it:</span>  Under what other circumstances will the scalar product be zero?
+<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><span class="tryit">Try it:</span>  Let \(\vec{R} = \vec{A} + \vec{B}\) and let \(\theta\) be the angle between
+\(\vec{A}\) and \(\vec{B}\).
+Use \(R = \sqrt{R^2} = \sqrt{\vec{R} \cdot \vec{R}}\) to show that
+\(R = \sqrt{A^2 + B^2 + 2AB\cos\theta}\). <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+Note: Some professionals use this method to produce the “adjacent sides and
+included angle” trig formula.
+<p><h3 id="pcap--">. </h3>
+[]3cThe Vector Product
+The vector product of, say, \(\vec{A}\) and \(\vec{B}\), is itself a
+vector and we will show separately how to find its magnitude and direction.
+The vector product is sometimes called the “cross product” because of the way
+it is indicated visually:
+<p>\[\vec{C} = \vec{A} \times \vec{B}.\]
+<p>The magnitude of \(\vec{C}\) is defined as magnitude of \(\vec{A}\) times the
+magnitude of \(\vec{B}\) times the sine of the angle between them, as measured
+counterclockwise from the direction of \(\vec{A}\) to the direction of \(\vec{B}\):
+<p>\[|\vec{C}| = |\vec{A} \times \vec{B}| = A B \sin\theta.\]
+<p>The direction of the vector \(\vec{C}\) is perpendicular to the plane formed by
+\(\vec{A}\) and \(\vec{B}\) and that narrows it to one of two directions.
+We will here describe two rules for obtaining the exact direction.
+<p> The “right-hand rule”:
+<ul>
+<li><span class="item-label">1.</span> Extend the index finger of your right hand in the direction of
+the first vector (\(\vec{A}\) in the example) with the rest of the fingers closed.</li>
+<li><span class="item-label">2.</span> Rotate the index finger and hand until the index finger aligns with
+the second vector (\(\vec{B}\) in the above example).
+That is, the first of the two vectors denoted in the cross product is rotated
+toward the second through the smaller angle between them (\(\vec{A}\) rotated
+toward \(\vec{B}\) such that \(\theta\) in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> decreases) and the curled
+fingers of the right hand follow this rotation.</li>
+<li><span class="item-label">3.</span> The direction of the extended thumb gives you the direction of
+\(\vec{C}\) (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).</li>
+</ul>
+
+<p> The “screw” rule:
+<ul>
+<li><span class="item-label">1.</span> Imagine placing vectors \(\vec{A}\) and \(\vec{B}\) tail-to-tail,
+as in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.</li>
+<li><span class="item-label">2.</span> Imagine a screw with right hand threads placed where the tails of
+the two vectors come together, with the axis of the screw perpendicular to the
+plane formed by the two vectors (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).</li>
+<li><span class="item-label">3.</span> Imagine a screwdriver placed in the screw with the axis of the
+screwdriver being along the axis of the screw.</li>
+<li><span class="item-label">4.</span> Imagine a spot on the screw, next to vector \(\vec{A}\).</li>
+<li><span class="item-label">5.</span> Turn the screwdriver through the shortest angle so the spot is
+now next to vector \(\vec{B}\).
+The direction the screw went (in or out) is the direction of the product vector
+\(\vec{C}\) (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).</li>
+</ul>
+
+<p><span class="tryit">Try it:</span>  Show that the vector product of two vectors is zero if the two are
+parallel.
+<p><span class="tryit">Try it:</span>  Show that the vector product of a vector with itself is zero.
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Using Cartesian Components</h2>
+
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m2gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Cartesian components of a vector.</figcaption></figure></div>
+
+<p><span class="tex-unknown" title="unknown macro">\enlargethispage</span>.5pc
+<p><h3 id="pcap-4-a">4a. The Components</h3>
+
+You can use the Cartesian components of vectors to add and subtract the vectors
+and to take their scalar and vector products.
+Here is the process for obtaining the components of vectors so the
+components can be combined according to the rules for addition, subtraction,
+and scalar and vector multiplication.
+For two vectors, say \(\vec{A}\) and \(\vec{B}\) (refer to <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> in each step):
+<ul>
+<li><span class="item-label">1.</span> Draw a set of Cartesian (mutually perpendicular) coordinate axes
+and label them \(x\), \(y\), and \(z\), as usual. <a href="#help-20" class="help-link"><span title="Special Assistance">[help&nbsp;20]</span></a>
+Choose the origin and orientation of the axes for convenience in the problem
+being tackled (this will become automatic with experience).
+The results will be independent of your choice of axes.</li>
+<li><span class="item-label">2.</span> Draw lines from each end of both \(\vec{A}\) and \(\vec{B}\) to the
+axes, such that these lines are perpendicular to the axes.
+Thus for the two vectors \(\vec{A}\) and \(\vec{B}\) there will be four such lines
+to each of the three axes (12 lines in all).</li>
+<li><span class="item-label">3.</span> Label \(A_x\) the distance along the \(x\)-axis between the two
+perpendiculars from the ends of \(\vec{A}\).
+Label \(A_y\) and \(A_z\) the similar distances along the \(y\)- and \(z\)-axes for
+\(\vec{A}\).
+Do the same for \(\vec{B}\), labeling the projections along the axes
+\(B_x\), \(B_y\), and \(B_z\).</li>
+<li><span class="item-label">4.</span> Call \(A_x\), \(A_y\), and \(A_z\) the <em>components</em> of \(\vec{A}\) and \(B_x\),
+\(B_y\), and \(B_z\) the <em>components</em> of \(\vec{B}\).</li>
+</ul>
+
+The components of a vector are frequently presented as a triad of numbers, in
+the specific order: \(x\)-component, \(y\)-component, \(z\)-component.
+Thus for \(\vec{A}\) we write:
+<p>\[\vec{A} = (A_x,\,A_y,\,A_z).\]
+<p><span class="tryit">Try it:</span>  Find the numerical values of the components of the vector in
+<a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]4bAddition
+If the two vectors to be added are \(\vec{A}\) and \(\vec{B}\), with components
+\((A_x,\,A_y,\,A_z)\) and \((B_x,\,B_y,\,B_z)\), then the resultant vector
+\(\vec{R}\) has components \((A_x + B_x, A_y + B_y, A_z + B_z)\).
+That is,
+<p>\[\begin{aligned}R_x & = A_x + B_x\,, \\ R_y & = A_y + B_y\,, \\ R_z & = A_z + B_z\,.\end{aligned}\]
+
+<p>Thus if the Cartesian components of two vectors are known, the Cartesian
+components of the resultant are easy to compute.
+The verification of this equation is left to an Appendix.
+<p><span class="tryit">Try it:</span>  Vector \(\vec{A} = (1,0,1)\) while \(\vec{B} = (0,1,-1)\).
+Determine the components of \(R = \vec{A} + \vec{B}\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]4cSubtraction
+If \(\vec{B}\) is to be subtracted from \(\vec{A}\) to produce \(\vec{C}\),
+<p>\[\vec{C} = \vec{A} - \vec{B}\]
+<p>we just use the rules of addition but with the sign of the components of \(\vec{B}\) made negative:
+<p>\[\begin{aligned}C_x & = A_x - B_x\,, \\ C_y & = A_y - B_y\,, \\ C_z & = A_z - B_z\,.\end{aligned}\]
+
+<p><span class="tryit">Try it:</span>  Example: Vector \(\vec{A} = (1,0,1)\) while \(\vec{B} = (0,1,-1)\).
+Determine the components of \(R = \vec{A} - \vec{B}\). <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]4dScalar Product
+In terms of Cartesian components, the scalar or “dot” product of \(A\) and \(B\)
+to form \(C\) is:
+<p>\[C = \vec{A} \cdot \vec{B} = A B \cos\theta =
+       A_x B_x + A_y B_y + A_z B_z.\]
+<p><span class="tryit">Try it:</span>  Vector \(\vec{A} = (1,0,1)\) while \(\vec{B} = (0,1,-1)\).
+Use Cartesian components to determine: \(R = \vec{A} \cdot \vec{B}\). <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]4eVector Product
+The six remaining products of the components of two
+vectors may be combined so that they form the three components of another vector which is used
+in almost all areas of physics and technology.
+This new vector is called the <em>vector product</em> of the two combining vectors and is written with
+a multiplication sign.
+Here is how the vector \(\vec{C}\) is written as the vector product of \(\vec{A}\) and \(\vec{B}\):
+<p>\[\vec{C} = \vec{A} \times \vec{B}\,.\]
+<p>In terms of Cartesian components:
+<p>\[\begin{aligned}C_x & = A_y B_z - A_z B_y \\ C_y & = A_z B_x - A_x B_z \\ C_z & = A_x B_y - A_y B_x\end{aligned}\]
+
+<p>The mnemonic for remembering the order of the subscripts on these components
+is to note that, starting from left to right, the first three subscripts
+are always cyclic permutations of \(xyz\) (\(xyz\), \(yzx\), \(zxy\)).
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><span class="tryit">Try it:</span>  Vector \(\vec{A} = (1,0,1)\) while \(\vec{B} = (0,1,-1)\).
+Determine the components of \(\vec{R} = \vec{A} \times \vec{B}\). <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Using Unit Vectors</h2>
+
+<p><h3 id="pcap-5-a">5a. Cartesian Unit Vectors</h3>
+
+A vector can be written as the sum of its components through the use of
+“unit vectors,” which are three vectors
+of unit length that each point outward
+along one of the three Cartesian coordinate axes you are using.
+We write these unit vectors as \(\hat{x}\), \(\hat{y}\) and \(\hat{z}\),
+where \(\hat{x}\) is a vector of unit length that points in the direction of
+increasing values along the \(x\)-axis, \(\hat{y}\) similarly along the \(y\)-axis,
+and \(\hat{z}\) along the \(z\)-axis.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Since the unit vectors are of unit length, a vector \(\vec{A}\) with components
+\((A_x,A_y,A_z)\) can be written as the sum of three vectors:
+<p>\[\vec{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}.\]
+<p>This addition is illustrated for two dimensions in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+<p><h3 id="pcap-5-b">5b. Products Using Cartesian Unit Vectors and Components</h3>
+
+<p><span class="tryit">Try it:</span>  Use the definitions of products of vectors, <a href="#eqn-8" class="eqn-ref">Eqs.&nbsp;(8)</a> and
+<a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a>, to show that: (<a href="#help-19" class="help-link"><span title="Special Assistance">[help&nbsp;19]</span></a>)
+<p>\[\begin{aligned}\hat{x} \cdot \hat{x}  & = 1, \qquad \hat{y} \cdot \hat{y} = 1, \qquad \hat{z} \cdot \hat{z} = 1, \\ \hat{x} \cdot \hat{y}  & = 0, \qquad \hat{x} \cdot \hat{z} = 0, \qquad \hat{y} \cdot \hat{z} = 0, \\ \hat{x} \times \hat{y} & = \hat{z}, \qquad \hat{y} \times \hat{z} = \hat{x}, \qquad \hat{z} \times \hat{x} = \hat{y}, \\ \hat{x} \times \hat{z} & = - \hat{y}, \qquad \hat{x} \times \hat{x} = 0, \text{ etc.}\end{aligned}\]
+
+<p>Note that, in the vector product, the order (\(xyz\)), in any cyclic
+permutation, has a plus sign on the right hand side.
+Any other order has a minus sign.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p><a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m2gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Illustration of combining unit vectors and a
+vector's components.</figcaption></figure></div>
+
+<p><h3 id="pcap-5-c">5c. The Length of a Vector in Terms of its Components</h3>
+
+To find the length of a vector \(\vec{A}\) write:
+ 
+<p> \[\vec{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}\]
+<p> 
+ and take the scalar product of \(\vec{A}\) with itself:
+ 
+\[\begin{aligned}\vec{A} \cdot \vec{A} & = (A_x \hat{x} + A_y \hat{y} + A_z \hat{z})
+                                 \cdot (A_x \hat{x} + A_y \hat{y} + A_z \hat{z}) \\                       & = A_x^2 + A_y^2 + A_z^2\,.\end{aligned}\]
+
+<p> where we have used the products of unit vectors, <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
+ 
+ Now from the definition of the scalar product, <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, we
+<p> know that \(\vec{A} \cdot \vec{A} = A^2\), which is the square of the length
+ of vector \(\vec{A}\).
+ Then the length of \(A\) is given in terms of its components by the square
+ root of the product of \(A\) with itself, \(\vec{A} \cdot \vec{A}\):
+ 
+<p> \[A = \sqrt{A_x^2 + A_y^2 + A_z^2}\,.\]
+<p><span class="tryit">Try it:</span>  Show that: \(|\vec{A} \times \vec{B}| = |\vec{B} \times \vec{A}|\). <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a>
+<p><span class="tryit">Try it:</span>  Show that: \(\vec{A} \times \vec{B} = - \vec{B} \times \vec{A}\). <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a>
+<p><h3 id="pcap-5-d">5d. Determinant Form of the Vector Product</h3>
+
+Unit vectors can be used to write the vector product in determinant form.
+Some people find it easier to remember these forms:
+<p>\[\vec{C} = \vec{A} \times \vec{B} =
+\left|
+\begin{array}{c c c}
+\hat{x} &  \hat{y} & \hat{z} \\
+A_x   &  A_y   & A_z   \\
+B_x  &  B_y   & B_z   \\
+\end{array}
+\right|\]
+<p>The minors of the unit vectors as co-factors are the appropriate components.
+<a href="#help-16" class="help-link"><span title="Special Assistance">[help&nbsp;16]</span></a>
+<p><span class="tryit">Try it:</span>  Use the determinant method to show that \(\hat{x} \times \hat{y} =
+\hat{z}\). <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+<p><span class="tryit">Try it:</span>  Given \(\vec{A} = 5 \hat{x} - 2 \hat{y}\) and \(\vec{B} = \hat{x} +
+\hat{y} + 3\hat{z}\)), show that \(\vec{A} \times \vec{B} = -6 \hat{x} -
+15 \hat{y} + 7 \hat{z}\). <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a>
+<p><h3 id="pcap-5-e">5e. Representing a Vector by Magnitude and Direction</h3>
+
+It is often convenient to write a vector as the product of a single magnitude and
+a single direction rather than as the sum of its Cartesian Components.
+First we define the magnitude of a vector:
+<p>\[A \equiv |\vec{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2}\,.\]
+<p>Note that the magnitude it always positive.
+Next we define a unit vector that is in the direction of the vector we are representing:
+<p>\[\hat{A} \equiv \frac{\vec{A}}{|\vec{A}|}\,.\]
+<p>Note that \(\hat{A}\) has unit length because we have divided \(\vec{A}\) by its own length.
+Then we can rewrite <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> to show the vector as the product of a
+magnitude and a direction, which is entirely equivalent to the representation of the
+vector in Cartesian components:
+<p>\[\vec{A} = A \hat{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}\,.\]
+<p>Finally, we write the magnitude and direction of the vector product \(\vec{C}\) of two vectors
+\(\vec{A}\) and \(\vec{B}\) in terms of the magnitudes and directions of \(\vec{A}\) and \(\vec{B}\).
+First, the magnitude is:
+<p>\[\begin{aligned}C & = \left[(A_y B_z - A_z B_y)^2 + (A_z B_x - A_x B_z)^2 + (A_x B_y - A_y B_x)^2\right]^{1/2} \\   & = A B \sin{\theta}\,,\end{aligned}\]
+
+<p>where \(\theta\) is the counter-clockwise angle between the directions of \(\vec{A}\) and \(\vec{B}\).
+The direction of the vector product is:
+<p>\[\hat{C} = \frac{\vec{C}}{C} = \frac{\vec{A} \times \vec{B}}{|\vec{A} \times \vec{B}|}
+                  = \frac{(A_y B_z - A_z B_y) \hat{x} + \ldots}{\left[(A_y B_z - A_z B_y)^2 + \ldots \right]^{1/2}}\,.\]
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+Professor James Linneman made several helpful suggestions. Ashlee McFarland pointed out a typo.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">This notation indicates that help is available in sequence [S-1]
+of this module's <em>Special Assistance Supplement</em>. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Mathematically, one says that vector addition is commutative. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">The derivation is in Sect.&thinsp;4d of this module. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Note that the combination \(A_y B_z - A_z B_y\) is the \(x\)-component of this
+vector, expressed with respect to the same coordinate system.
+Two other pairs of products complete the groupings (and, incidentally,
+together with the combinations that form the scalar product, exhaust the
+possibilities of pairs of products of components of \(A\) and
+\(\vec{B}\). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Different authors use different notations for unit vectors along
+the axes of a Cartesian coordinate system.
+We use \(\hat{x}\), \(\hat{y}\) and \(\hat{z}\) for unit vectors along the
+\(x\)-, \(y\)-, and \(z\)-axes, which is a commonly used notation.
+Other authors have used such notations as:
+(\(\hat{i}\), \(\hat{j}\), \(\hat{k}\)),
+(<strong>i</strong>, <strong>j</strong>, <strong>k</strong>),
+(\(\hat{e}_1\), \(\hat{e}_2\), \(\hat{e}_3\)),
+and (\(\hat{u}_x\), \(\hat{u}_y\), \(\hat{u}_z\)).
+All such sets are equivalent. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">This provides a test for whether a Cartesian coordinate system
+is <em>right-handed</em>, which is what we use throughout science and engineering.
+An improperly defined, <em>left-handed</em>, system would produce
+\(\hat{x} \times \hat{y} = - \hat{z}\). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-PS1">Authors use various notations for Cartesian unit vectors.
+We use \(\hat{x}\), \(\hat{y}\) and \(\hat{z}\) for unit vectors along the
+\(x\)-, \(y\)-, and \(z\)-axes, which is a commonly used notation.
+Some authors have used: \(\hat{i}\), \(\hat{j}\),
+\(\hat{k}\); \(\hat{e}_1\), \(\hat{e}_2\), \(\hat{e}_3\); and \(\hat{u}_x\),
+\(\hat{u}_y\), \(\hat{u}_z\).
+All such sets are equivalent. <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: problems&nbsp;13 (part), 21, and 22 (part) also occur in this module's
+<em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m2gr08.svg" alt="" class="physnet-fig"><figcaption>Three vectors, \(\vec{A}\), \(\vec{B}\), and \(\vec{C}\),
+all in a plane, are shown sketched above.
+By arranging the vectors in head-to-tail fashion, sketch:</figcaption></figure>
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{A} + \vec{B}\), to which then add \(\vec{C}\);</li>
+<li><span class="item-label">b.</span> \(\vec{A} + \vec{C}\), to which then add \(\vec{B}\);</li>
+<li><span class="item-label">c.</span> \(\vec{B} + \vec{C}\), to which then add \(\vec{A}\);</li>
+<li><span class="item-label">d.</span> \(\vec{A} - \vec{B}\).
+</li>
+<li><span class="item-label">2.</span> Write down the ordered triad of numbers which represents a vector
+of length 6<span class="unit">&thinsp;units</span> and that lies along the \(y\)-axis of a fixed coordinate
+system.</li>
+<li><span class="item-label">3.</span> Write down the ordered triad of numbers which represents a vector
+of length 6<span class="unit">&thinsp;units</span> that lies in the \(xy\)-plane, making an angle of 30°
+with the \(x\)-axis.</li>
+<li><span class="item-label">4.</span> Express the vectors in problems&nbsp;2 and 3 above in terms of the
+fixed unit vectors along the Cartesian axes.</li>
+<li><span class="item-label">5.</span> A particular vector is given as a zero or null vector.
+Write down the triad that represents this vector.</li>
+<li><span class="item-label">6.</span> <figure class="fig-centered"><img src="figures/m2gr09.svg" alt="" class="physnet-fig"></figure>
+
+\(|\vec{A}| = 4\,\text{units}\), \(|\vec{B}| = 5\,\text{units}\), directions as in the sketch.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Graphically add \(\vec{A}\) and \(\vec{B}\).</li>
+<li><span class="item-label">b.</span> Compute the magnitude of the resultant.</li>
+<li><span class="item-label">c.</span> Determine the direction of the resultant, expressed as:
+<p><ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> The angle between the vector and the positive \(x\)-axis, measured
+counter-clockwise from the  positive \(x\)-axis; this is the standard
+representation of a vector's direction.</li>
+<li><span class="item-label">(ii)</span> The angle between the vector and the positive \(y\)-axis, measured
+clockwise from the positive \(y\)-axis; this is a compass bearing if the positive
+\(y\)-axis represents due north and the positive \(x\)-axis represents due east.
+
+</li>
+<li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m2gr10.svg" alt="" class="physnet-fig"><figcaption>\(|\vec{A}| = 4\,\text{units}\), \(|\vec{B}| = 3\,\text{units}\),
+           \(\theta = 30^\circ\), \(|\vec{C}| = 5\,\text{units}\), \(\phi = 60^\circ\) (see sketch).
+<ol>
+
+</ol>
+</figcaption></figure>
+</li>
+<li><span class="item-label">a.</span> Express \(\vec{A}\), \(\vec{B}\), and \(\vec{C}\) in component form. <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a></li>
+<li><span class="item-label">b.</span> Using these components, evaluate \(\vec{A} + \vec{B} + \vec{C}\).</li>
+<li><span class="item-label">c.</span> Similarly, evaluate \(\vec{A} + \vec{B} - \vec{C}\).
+</li>
+<li><span class="item-label">8.</span> A vector of unit length, \(\hat{x}\), is parallel to the \(x\)-axis of a
+Cartesian coordinate system while another vector of unit length, \(\hat{y}\), is
+along the \(y\)-axis.
+Evaluate the scalar products \(\hat{x} \cdot \hat{x}\), \(\hat{x} \cdot \hat{y}\),
+and \(\hat{y} \cdot \hat{y}\).</li>
+<li><span class="item-label">9.</span> Expressing two vectors in terms of unit vectors along the coordinate
+axes, \(\vec{A} = A_x\hat{x} + A_y\hat{y} + A_z\hat{z}\) and \(\vec{B} =
+B_x\hat{x} + B_y\hat{y} + B_z\hat{z}\), show that the scalar product may be
+written as \(A_x B_x + A_y B_y + A_z B_z\) (use results that you got in
+problem&nbsp;8, above.)</li>
+<li><span class="item-label">10.</span> Consider two vectors, \(\vec{A} = 4\hat{x} + 3\hat{y}\) and
+\(\vec{B} = 5\hat{x} - 12\hat{y}\).
+Find: (a) the length of \(\vec{A}\) starting from the definition of the scalar
+product; (b) the length of \(\vec{B}\); and (c) the angle between \(\vec{A}\) and \(\vec{B}\).</li>
+<li><span class="item-label">11.</span> <figure class="fig-centered"><img src="figures/m2gr11.svg" alt="" class="physnet-fig"><figcaption>Assuming magnitudes (see sketch) \(|\vec{A}| =
+|\vec{B}| = |\vec{C}| = R\), evaluate the following in terms of \(R\):
+<ol>
+
+</ol>
+</figcaption></figure>
+</li>
+<li><span class="item-label">a.</span> \((\vec{A} \times \vec{B}) \times \vec{C}\)</li>
+<li><span class="item-label">b.</span> \((\vec{B} \times \vec{A}) \times \vec{C}\)</li>
+<li><span class="item-label">c.</span> \(\vec{A} \times (\vec{B} \times \vec{C})\)</li>
+<li><span class="item-label">d.</span> \(\vec{C} \times (\vec{A} \times \vec{B})\)
+</li>
+<li><span class="item-label">12.</span> <figure class="fig-centered"><img src="figures/m2gr12.svg" alt="" class="physnet-fig"><figcaption>Given the vectors \(\vec{A}\) and \(\vec{B}\):
+<ol>
+
+</ol>
+</figcaption></figure>
+</li>
+<li><span class="item-label">a.</span> Sketch the graphical representation of the vector sum of \(\vec{A}\)
+and \(\vec{B}\) using the head-to-tail  addition method.</li>
+<li><span class="item-label">b.</span> Using the geometrical definition of the scalar product, prove the
+Law of Cosines for the triangle formed by the above vector sum,
+
+<ol>
+
+</ol>
+</li>
+<li>i.e.;
+<p>\[C^2 = A^2 + B^2 - 2\,A\,B \cos\gamma\,,\]
+<p>where \(C\) is the magnitude of \(\vec{C}\), the sum
+\(\vec{A} + \vec{B}\), \(\gamma\) is the angle opposite side \(C\) in the triangle
+\(ABC\), and \(A\) and \(B\) are the magnitudes of \(\vec{A}\) and \(\vec{B}\),
+respectively. <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a></li>
+<li><span class="item-label">c.</span> Use the definition of the magnitude of the vector product to prove
+the Law of Sines for the same triangle, i.e.;
+<p>\[\frac{\sin\alpha}{A}=\frac{\sin\beta}{B}=\frac{\sin\gamma}{C}\]
+<p>where \(\alpha\), \(\beta\) and \(\gamma\) are the angles of the triangle that are
+opposite sides \(A\), \(B\) and \(C\).
+</li>
+<li><span class="item-label">13.</span> A vector \(\vec{R}\) has its tail at the origin and its head at the
+point (2,&thinsp;5,&thinsp;-3).
+Another vector \(\vec{S}\) has its tail also at the origin, while its head is at
+the point (2,&thinsp;-5,&thinsp;0).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> How long is the \(y\)-component of \(\vec{R}\)?</li>
+<li><span class="item-label">b.</span> How long is the \(y\)-component of \(\vec{S}\)?</li>
+<li><span class="item-label">c.</span> What are the coordinates of the head of the vector (-\(\vec{R}\))?</li>
+<li><span class="item-label">d.</span> What are the coordinates of the head of the vector (or, stated more
+simply, the coordinates of the vector) \(\vec{R}\) + \(\vec{S}\)?</li>
+<li><span class="item-label">e.</span> What are the coordinates of the vector \(\vec{R}\) - \(\vec{S}\)?</li>
+<li><span class="item-label">f.</span> What is the length of the vector \(\vec{R}\) + \(\vec{S}\)?</li>
+<li><span class="item-label">g.</span> What is the length of the vector \(\vec{S}\) - \(\vec{R}\)?</li>
+<li><span class="item-label">h.</span> What is the length of the vector \(\vec{R}\)?
+</li>
+<li><span class="item-label">14.</span> Express vector \(\vec{R}\) (of problem&nbsp;13 above) as a single sum of
+components along the coordinate axes in  terms of the unit vectors along
+those axes.
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup></li>
+<li><span class="item-label">15.</span> Similarly express the vector 3\(\vec{S}\).</li>
+<li><span class="item-label">16.</span> Do the same for the vector 3\(\vec{R} - 2\vec{S}\).</li>
+<li><span class="item-label">17.</span> What angle does the vector \(\vec{R} + \vec{S}\) make with the
+\(z\)-axis?</li>
+<li><span class="item-label">18.</span> What angle does the vector \(\vec{R} - \vec{S}\) make with the
+\(x\)-axis?</li>
+<li><span class="item-label">19.</span> What is the cosine of the angle between the vector \(\vec{R}\) and
+the \(y\)-axis?</li>
+<li><span class="item-label">20.</span> Vector \(\vec{R}\) has its tail at the origin of the coordinate
+system, while its head is at the point \((2,\,5,\,-3)\).
+Vector \(\vec{S}\)&thinsp; likewise has its tail at the origin of the coordinate
+ system, while its head is at point \((2,\,-5,\,0)\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the value of \(\vec{R} \cdot \vec{S}\)?</li>
+<li><span class="item-label">b.</span> Using the result of (a), find the angle between the vectors
+\(\vec{R}\) and \(\vec{S}\).</li>
+<li><span class="item-label">c.</span> Evaluate the magnitude of the vector \(\vec{R} \times \vec{S}\),
+using the result of (b).
+</li>
+<li><span class="item-label">21.</span> Vector \(\vec{T}\) is 4<span class="unit">&thinsp;units</span> long and directed along the \(x\)-axis.
+Vector \(\vec{V}\) is 6<span class="unit">&thinsp;units</span> long and is directed along the \(z\)-axis.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the direction of the vector \(\vec{T} \times \vec{V}\)?</li>
+<li><span class="item-label">b.</span> What is the magnitude of the vector \(\vec{T} \times \vec{V}\)?</li>
+<li><span class="item-label">c.</span> Express \(\vec{T} \times \vec{V}\) in terms of the unit vectors along
+the coordinate axes.
+</li>
+<li><span class="item-label">22.</span> Evaluate:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\hat{x} \times \hat{z}\)</li>
+<li><span class="item-label">b.</span> \(\hat{y} \cdot  \hat{z}\)</li>
+<li><span class="item-label">c.</span> \(\hat{z} \times \hat{z}\)</li>
+<li><span class="item-label">d.</span> \(\hat{y} \times \hat{z}\)</li>
+<li><span class="item-label">e.</span> \(\hat{x} \cdot  \hat{x}\)</li>
+<li><span class="item-label">f.</span> \(\hat{x} \times \hat{y}\)
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> <span class="tex-unknown" title="unknown macro">\</span> <figure class="fig-centered"><img src="figures/m2gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> \((0,\,6,\,0)\)</li>
+<li><span class="item-label">3.</span> \((3\sqrt{3},3,0)\)</li>
+<li><span class="item-label">4.</span> \(\vec{A} = 6\hat{y}\), \(\vec{B} = 3\sqrt{3}\hat{x} + 3\hat{y}\)</li>
+<li><span class="item-label">5.</span> \((0,\,0,\,0)\)
+<p>[4]</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{C}\) = resultant:
+<p>           <figure class="fig-centered"><img src="figures/m2gr14.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(|\vec{C}| = 6.4\,\text{units}\)</li>
+<li><span class="item-label">c.</span> (i) 51° or 0.90<span class="unit">&thinsp;rad</span></li>
+<li>(ii) 39° or 0.67<span class="unit">&thinsp;rad</span>
+</li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\vec{A} = 4\hat{x}\), \(\vec{B} = 2.60\hat{x} + 1.5\hat{y})\),
+\(\vec{C} = 2.5\hat{x} + 4.3\hat{y})\)</li>
+<li><span class="item-label">b.</span> \(\vec{S} = \vec{A} + \vec{B} + \vec{C} = 9.1 \hat{x} + 5.8 \hat{y}\)</li>
+<li><span class="item-label">c.</span> \(\vec{D} = \vec{A} + \vec{B} - \vec{C} = 4.1 \hat{x} - 2.8 \hat{y}\)
+</li>
+<li><span class="item-label">8.</span> \(\hat{x} \cdot \hat{x} = 1\),
+\(\hat{x} \cdot \hat{y} = 0\), \(\hat{y} \cdot \hat{y} = 1\)</li>
+<li><span class="item-label">10.</span> \(|\vec{A}| = 5\), \(|\vec{B}| = 13\), \(\theta = 104^\circ\)</li>
+<li><span class="item-label">11.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \((\vec{A} \times \vec{B}) \times \vec{C} = R^3 \hat{x}\)</li>
+<li><span class="item-label">b.</span> \((\vec{B} \times \vec{A}) \times \vec{C} = - R^3 \hat{x}\)</li>
+<li><span class="item-label">c.</span> \(\vec{A} \times (\vec{B} \times \vec{C}) = 0\)</li>
+<li><span class="item-label">d.</span> \(\vec{C} \times (\vec{A} \times \vec{B}) = - R^3 \hat{x}\)
+</li>
+<li><span class="item-label">12.</span> a. <figure class="fig-centered"><img src="figures/m2gr15.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">13.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 5<span class="unit">&thinsp;units</span></li>
+<li><span class="item-label">b.</span> 5<span class="unit">&thinsp;units</span></li>
+<li><span class="item-label">c.</span> \((-2,\,-5,\,3)\)</li>
+<li><span class="item-label">d.</span> \((4,\,0\,-3)\)</li>
+<li><span class="item-label">e.</span> \((0,\,10,\,-3)\)</li>
+<li><span class="item-label">f.</span> 5<span class="unit">&thinsp;units</span></li>
+<li><span class="item-label">g.</span> \(\sqrt{109} = 10.44\,\text{units}\)</li>
+<li><span class="item-label">h.</span> \(\sqrt{38} = 6.16\,\text{units}\)
+</li>
+<li><span class="item-label">14.</span> \(2\hat{x} + 5\hat{y} - 3\hat{z}\)</li>
+<li><span class="item-label">15.</span> \(6\hat{x} - 15\hat{y}\)</li>
+<li><span class="item-label">16.</span> \(2\hat{x} + 25\hat{y} - 9\hat{z}\)</li>
+<li><span class="item-label">17.</span> 127°</li>
+<li><span class="item-label">18.</span> \(\pi/2\)</li>
+<li><span class="item-label">19.</span> 0.811</li>
+<li><span class="item-label">20.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(-21\,\text{units}\)</li>
+<li><span class="item-label">b.</span> 129.2°</li>
+<li><span class="item-label">c.</span> 25.71<span class="unit">&thinsp;units</span>
+</li>
+<li><span class="item-label">21.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> along negative \(y\)-axis</li>
+<li><span class="item-label">b.</span> 24<span class="unit">&thinsp;units</span></li>
+<li><span class="item-label">c.</span> \(-24\hat{y}\)
+</li>
+<li><span class="item-label">22.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(-\hat{y}\)</li>
+<li><span class="item-label">b.</span> 0</li>
+<li><span class="item-label">c.</span> 0</li>
+<li><span class="item-label">d.</span> \(\hat{x}\)</li>
+<li><span class="item-label">e.</span> 1</li>
+<li><span class="item-label">f.</span> \(\hat{z}\)
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Using a ruler, we find the \(\vec{F}\) vector to be 0.5<span class="unit">&thinsp;in</span> long so
+\(F = 10\,\text{lb/in} \times 0.5\,\text{in} = 5\,\text{lb}\).</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The easiest way is to put a sheet of paper over <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> and put both sheets
+together against a window pane that is illuminated mainly from the other side.
+Trace the first resultant onto the clean sheet, then slide it over to the
+other resultant and see if the magnitude and direction are identical (up to
+your ability to trace and compare visually).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">In <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, measure \(A\), \(B\), and \(R\) with a ruler and measure the angles
+\(\theta\) and \(\phi\) with a protractor.
+Then use your calculator to finish the job, making sure you have set it for
+the proper choice of radians or degrees.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">The magnitude of one or both is zero.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\[R = \left[(\vec{A} + \vec{B}) \cdot (\vec{A} + \vec{B})\right]^{1/2} =
+\left(A^2 + B^2 + 2\vec{A} \cdot \vec{B}\right)^{1/2}\]
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">We find: \(A_x = 1.00\,\text{inches}\), \(A_y = 0.75\,\text{inches}\).
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\[(1,\,0,\,1) + (0,\,1,-1) = (1,\,1,\,0)\]
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">\[(1,\,0,\,1) - (0,\,1,-1) = (1,-1,\,2)\]
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">\[(1,\,0,\,1) \cdot (0,\,1,-1) = 1 \cdot 0 + 0 \cdot 1 + 1 \cdot (-1) = -1\]
+</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">\[(1,\,0,\,1) \times (0,\,1,-1) = (-1,\,1,\,1)\]
+</div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">Use the “right hand” rule or the “screw” rule.
+You could also work with components: \(\hat{x} = (1,0,0)\), \(\hat{y} = (0,1,0)\),
+and \(\hat{z} = (0,0,1)\).
+Then, for example, the \(x\)-component of \(\hat{x} \times \hat{y}\) is:
+\((\hat{x} \times \hat{y})_x = (\hat{x})_y (\hat{y})_z -
+(\hat{x})_z (\hat{y})_y = 0 \cdot 0 - 0 \cdot 1 = 0\).
+</div></div>
+
+<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">\[\hat{x} \times \hat{y} =
+\left|
+\begin{array}{c c c}
+\hat{x} &  \hat{y} & \hat{z} \\
+(\hat{x})_x & (\hat{x})_y & (\hat{x})_z \\
+(\hat{y})_x & (\hat{y})_y & (\hat{y})_z \\
+\end{array}
+\right|
+ =
+\left|
+\begin{array}{c c c}
+\hat{x} &  \hat{y} & \hat{z} \\
+   1    &     0    &    0    \\
+   0    &     1    &    0    \\
+\end{array}
+\right|
+\]
+</div></div>
+
+<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">\[
+\left|
+\begin{array}{c c c}
+\hat{x} &  \hat{y} & \hat{z} \\
+   5    &    -2    &    0    \\
+   1    &     1    &    3    \\
+\end{array}
+\right|
+\]
+</div></div>
+
+<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">If you get
+ 
+ \[C^2 = A^2 + B^2 + 2 A B \cos\gamma\]
+ 
+ then you did not pay  attention to the definition of \(\gamma\) in the
+ statement of the problem.
+ The definition of \(\gamma\) is taken from the usual statement of the
+ relationship between two sides and the included angle in a triangle.
+ 
+<p> If you do not know how to obtain \(\cos(\pi - \gamma)\) from
+ \(\cos(\gamma)\), see “trigonometric functions” in this volume's
+ <em>Index</em>.
+</div></div>
+
+<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">Look at the figure in the problem statement.
+ To find \(C_x\), drop a vertical line from the tip of \(\vec{C}\) to
+ the \(x\)-axis, so the line is perpendicular to the \(x\)-axis.
+ Label this line \(C_y\) and label the \(x\)-axis from the origin out to this
+ line \(C_x\).
+ Notice the right-angle triangle formed by the three lines \(C\), \(C_x\), and
+ \(C_y\) (the vertical line down from the tip of \(\vec{C}\)).
+ You know the values of \(C\) and \(\phi\) so simply apply trigonometry to
+ find \(C_x\).
+ If you don't remember how, see “trigonometric functions” in this
+ volume's <em>Index</em>.
+</div></div>
+
+<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">Answer (which also gives you the way a \(3 \times 3\) determinant is evaluated):
+ \[\vec{A} \times \vec{B} = \hat{x}(A_yB_z - A_zB_y) + \hat{y}(A_zB_x - A_xB_z)
+            + \hat{z}(A_xB_y - A_yB_x)\]
+</div></div>
+
+<p><div id="help-17" class="help-item"><span class="help-num">17.</span><div class="help-body">You can show it any of three ways.
+We suggest that you do all three and then choose the method that suits you best.
+The ways are:
+(1) by expanding \(|\vec{A} \times \vec{B}|\) and \(|\vec{B} \times \vec{A}|\)
+in Cartesian components and showing that the two are equal (the absolute magnitude of
+a vector is given in <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>); or
+(2) by showing that the answer is unchanged if you interchange \(\vec{A}\) and \(\vec{B}\) in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>; or
+(3) by taking the absolute magnitude of each side of
+\(\vec{A} \times \vec{B} = - \vec{B} \times \vec{A}\), in which case the
+absolute magnitude of the right side deletes the over-all minus sign and the proof is complete.</div></div>
+
+<p><div id="help-18" class="help-item"><span class="help-num">18.</span><div class="help-body">You can show it either of two ways.
+We suggest that you do both and then choose the method that suits you best.
+The ways are:
+(1) by expanding the cross-products in Cartesian components; or
+(2) by using the fact that \(\vec{A} \times \vec{B}\) has the same magnitude as
+\(\vec{B} \times \vec{A}\) (see <em>S-17</em>)), in which case the two can differ only by direction,
+and then using the “tight-hand rule” or the “screw” rule to show that
+the direction of either one is opposite to that of the other.</div></div>
+
+<p><div id="help-19" class="help-item"><span class="help-num">19.</span><div class="help-body">As an example, we treat the case \(\hat{x}\cdot\hat{x}=1\):
+
+<p>Method 1. Apply the second method of <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> to the case at hand so \(\vec{A} = \vec{B} = \hat{x}\).  Since \(\hat{x}\) is a unit vector in the \(x\)-direction, \(A_x = B_x = 1\) and \(A_y = B_y = A_z = B_z = 0\).  Then, by <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, \(\hat{x}\cdot\hat{x}= (1\cdot1) + (0\cdot0) + (0\cdot0) = 1\).
+
+<p>Method 2. Apply the first method of <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> to the case at hand so \(A = B = 1\) and \(\cos{\theta} = 1\) so \(\hat{x}\cdot\hat{x} = 1\cdot1\cdot1 = 1\).
+<p></div></div>
+
+<p><div id="help-20" class="help-item"><span class="help-num">20.</span><div class="help-body">The three mutually perpendicular axes are usually set up with the position of the origin and the
+directions of the axes chosen to make the mathematics of the problem as simple as possible.  For
+example, the motion in a problem may be entirely in a plane, whereupon one would normally choose
+the \(\hat{x}\) and \(\hat{y}\) axes to be in that plane.  Then there would be no motion in the \(\hat{z}\)
+direction and the \(z\)-coordinate could be ignored (in that problem).
+
+<p>Any two non-colinear (not parallel) vectors define a plane and the vector (“cross”) product of
+two such vectors is perpendicular to that plane.
+It takes two dimensions to define points in the plane of the two vectors and a third dimension to define
+points out of that plane.
+Thus all vector products need to use three-dimensional coordinate systems.
+
+<p>In the top center sketch in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, imagine placing the \(x\)-axis in the direction of \(\vec{A}\).
+Then imagine the plane that goes through both vectors \(\vec{A}\) and \(\vec{B}\), indicated by the loop in the
+sketch.
+Imagine drawing the \(y\)-axis in that plane, perpendicular to the \(x\)-axis (approximately where
+\(\vec{B}\) is shown in the sketch).
+Finally, imagine drawing the \(z\)-axis perpendicular to the \(x\)- and \(y\)-axes, along the upward
+vertical labeled \(\vec{C}\) in the sketch.
+In this Cartesian coordinate system, any point in space can be uniquely described by its
+\(x\)-, \(y\)-, and \(z\)-coordinates.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K6 in this module's <em>ID Sheet</em>.
+One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> A vector \(\vec{R}\) has its tail at the origin and its head at the
+point (2,&thinsp;5,&thinsp;-3).
+Another vector \(\vec{S}\) has its tail also at the origin, while its head is at
+the point (2,&thinsp;-5,&thinsp;0).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the length of the vector \(\vec{R}\) + \(\vec{S}\)?</li>
+<li><span class="item-label">b.</span> What is the length of the vector \(\vec{S}\) - \(\vec{R}\)?</li>
+<li><span class="item-label">c.</span> What is the length of the vector \(\vec{R}\)?
+</li>
+<li><span class="item-label">3.</span> Vector \(\vec{T}\) is 4<span class="unit">&thinsp;units</span> long and directed along the \(x\)-axis.
+Vector \(\vec{V}\) is 6<span class="unit">&thinsp;units</span> long and is directed along the \(z\)-axis.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the direction of the vector \(\vec{T} \times \vec{V}\)?</li>
+<li><span class="item-label">b.</span> What is the magnitude of the vector \(\vec{T} \times \vec{V}\)?</li>
+<li><span class="item-label">c.</span> Express \(\vec{T} \times \vec{V}\) in terms of the unit vectors along
+the coordinate axes.
+</li>
+<li><span class="item-label">4.</span> Evaluate:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\hat{x} \times \hat{z}\)</li>
+<li><span class="item-label">b.</span> \(\hat{y} \cdot  \hat{z}\)</li>
+<li><span class="item-label">c.</span> \(\hat{z} \times \hat{z}\)</li>
+<li><span class="item-label">d.</span> \(\hat{y} \times \hat{z}\)</li>
+<li><span class="item-label">e.</span> \(\hat{x} \cdot  \hat{x}\)</li>
+<li><span class="item-label">f.</span> \(\hat{x} \times \hat{y}\)
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ul>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2-4.</span> See problems&nbsp;13, 21, and 22 in this module's <em>Problem Supplement</em>.</li>
+</ul>
+
+<p></section>
+

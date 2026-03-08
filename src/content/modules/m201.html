@@ -1,0 +1,781 @@
+<header class="module-header">
+  <h1 class="module-title">The Wave Equation and Its Solutions <span class="module-author">(William C.Lane <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: displacement, velocity <a href="../m7/" class="module-ref">MISN-0-7</a>; frequency, angular
+    frequency, period <a href="../m25/" class="module-ref">MISN-0-25</a>.</li><li><strong>2.</strong> Take the derivative of \(\sin(k x + \omega t\)) with respect to \(t\)
+    while treating \(x\) as a constant whose derivative is zero; alternatively with
+    respect to \(x\) while treating \(t\) as a constant (<a href="../m1/" class="module-ref">MISN-0-1</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: amplitude, wavelength, wave number, phase, phase constant,
+    wave function, wave speed, wave equation, harmonic function, sinusoidal
+    wave, traveling wave, boundary conditions, field.</li><li><strong>K2.</strong> State the one-dimensional wave equation and its general solution.</li><li><strong>K3.</strong> Take the partial derivative of \(\sin(k x + \omega t\)) with respect
+    to either \(x\) or \(t\).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given a wave function for a one-dimensional traveling wave,
+    verify that it satisfies the wave equation.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a sufficient number of parameters associated with a
+    sinusoidal wave, write down the mathematical description of the traveling
+    wave.</li><li><strong>S2.</strong> Determine the unknown parameters of a one-dimensional 
+    sinusoidal wave, given its displacement as a function of either:
+    (i) position at two different times; or
+    (ii) time at two different positions.</li><li><strong>S3.</strong> Determine the unknown parameters of a one-dimensional sinusoidal
+    wave, given the wave function and its first derivative with respect to time
+    at \(x = 0\) and \(t = 0\).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Overview</h2>
+
+<p>Waves and vibrations in mechanical systems constitute one of the most
+important areas of study in all of physics.
+Evidence of the existence of these phenomena can be observed for almost any
+kind of physical system.
+The propagation of sound and light, ocean waves, earthquakes, the
+transmission of signals from the brain are a few examples.
+In this unit we introduce the descriptors of waves and their motions:
+periodicity, amplitude, propagation speed, etc.
+We relate these to symbols in the differential form of the wave equation and
+in its formal solutions.
+We also relate these descriptors to the properties of some simple physical
+systems.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Wave Function</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m201gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A “snapshot” of a water wave showing the
+wave profile at a given instant of time.
+The vertical axis indicates the displacement of water from its average
+level.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-a">2a. Graphical and Mathematical Representation</h3>
+
+Waves are represented mathematically by a wave function that may be
+expressed as a graph or a formal function.
+This function describes the disturbance made by the wave at various times as
+it propagates in space.
+Because the wave function depends on both position and time, when we wish to
+draw a graph of the wave we usually keep one variable fixed.
+For example, <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> shows the profile of a series of water waves at a given
+instant of time.
+You can think of this as a “snapshot” of the wave.
+Alternatively we can examine the time variation of the wave at a specific
+point \(x\).
+If we look at a piece of driftwood as the waves pass, it will bob up and
+down, executing a periodic motion.
+The vertical displacement of the driftwood may also be represented
+graphically, as illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+The exact mathematical form of the wave function, \(\xi = f(x,t)\), depends
+on the type of wave that is being considered.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m201gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Vertical displacement of a floating object
+as a water wave passes.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. Traveling Waves</h3>
+
+One particular form of wave function, \(\xi = f(x - vt)\), corresponds to the
+“traveling wave,” the most common type of wave we encounter.
+A traveling wave consists of a periodic series of oscillations of some
+quantity that travel, or “propagate,” through space with a speed
+characteristic of the wave and the medium through which it travels.
+The expression \(\xi = f(x - vt)\) represents a one-dimensional traveling wave
+propagating in the positive \(x\)-direction with speed \(v\).
+If the oscillations in the medium are simple harmonic oscillations, the
+functional form of the wave function is also harmonic.
+It is important to convince yourself that when \(f(x)\) is a function
+representing some curve then the same function \(f\), but with \((x)\) replaced
+by \((x - a)\), represents a curve with the same shape but shifted along the
+positive \(x\)-axis by an amount “\(a\)” (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+Similarly \(f(x + a)\) represents that curve shifted in the negative
+\(x\)-direction by an amount “\(a\).”
+<p>Try it with some simple, easy to compute function.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>Understanding this is fundamental to understanding the mathematical
+description of wave motion.
+Replacing “\(a\)” by something linear in time, \(a = vt\), gives you a curve
+that propagates either to the right or the left depending on the sign of \(v\).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m201gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Three different functions shifted to the
+right by an amount “\(a\)”:
+the accompanying replacement of \((x)\) by \((x - a)\) is a general property
+of all functions.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Description of the Wave Motion</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]3aThe Harmonic Wave Function
+A harmonic wave function is sinusoidal in functional form and for a
+one-dimensional wave may be expressed as either:
+<p>\[\xi = A\sin\left[\frac{2\pi}{\lambda}(x \pm v t)+\phi_0\right]\,,\]
+<p>or
+<p>\[\xi = A\cos\left[\frac{2\pi}{\lambda}(x \pm vt) + \phi_0\right]\,.\]
+<p>This means that the profile of the wave at a particular time is a sine
+or cosine function, as shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, and that at a particular point in
+space, the wave produces a simple harmonic oscillation in some quantity
+\(\xi\), as indicated in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+The symbols in <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> are explained in the
+remaining paragraphs of this section.
+The parameters \(A\) and \(\phi_0\) are constants determined by the initial
+displacement and initial velocity of \(\xi\) at some point in space.
+<p><div class="figure-row figure-row-2"><figure id="fig-4"><img src="figures/m201gr06.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Snapshot of a harmonic wave function at some specified time \(t\).</figcaption></figure><figure id="fig-5"><img src="figures/m201gr07.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Plot of the same wave as in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, but at a specified point \(x\).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Phase and Phase Constant</h3>
+
+The argument of a harmonic function is called the “phase” of the wave,
+\(\phi\).
+For a one-dimensional traveling wave:
+<p>\[\phi(x,t)=\frac{2\pi}{\lambda}(x \pm v t) + \phi_0\,.\]
+<p>The phase describes the part of a complete wave oscillation that
+is occurring at a given place and time.
+The constant \(\phi_0\) is called the “phase constant” and is the value of
+\(\phi\) at \(x = 0\), \(t = 0\).
+The units of the phase are radians when \(2 \pi\) occurs in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+To express \(\phi\) in degrees, replace \(2 \pi\) radians with its equivalent,
+360°.
+<p><h3 id="pcap-3-c">3c. Amplitude, Wavelength, and Wave Number</h3>
+
+The maximum value that \(\sin\phi\) or \(\cos\phi\) may take is \(\pm 1\), so the
+maximum wave disturbance \(\xi\) is:
+<p>\[\xi_\text{max} = \pm A \,.\]
+<p>This maximum value of \(\xi\) is called the “amplitude” of the wave.
+The point where \(\xi = + A\) is typically called the “crest” of the wave
+and the point where \(\xi = - A\) is called the “trough” of the wave.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The distance from crest to crest (or trough to trough) is called the
+“wavelength,” the distance between points on the wave which have the same
+phase at the same instant of time.
+Figure&nbsp;6 illustrates these wave dimensions for a sinusoidal wave.
+A useful expression involving the wavelength is the definition of a quantity
+called the wave number, \(k\), of a wave,
+<p>\[k=\frac{2 \pi}{\lambda}\,.\]
+<p>Since wavelength has units of length and \(2\pi\) radians is a dimensionless
+quantity, \(k\) has units of inverse length, usually <span class="unit">&thinsp;m<sup>-1</sup></span> or <span class="unit">&thinsp;cm<sup>-1</sup></span>.
+Using the wave number symbol, a one-dimensional sinusoidal wave function may
+be expressed as
+<p>\[\xi = A \sin\left[k(x \pm vt) + \phi_0\right]\,.\]
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m201gr08.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Amplitude and wavelength of a harmonic
+wave.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]3dPhase: Period, Frequency, Angular Frequency
+There are a number of ways of writing the phase of a wave, depending on
+whether one uses period, frequency, or angular frequency.
+For a particle at a fixed point, undergoing simple harmonic motion, we
+can write the phase of its motion as
+<p>\[\phi = \left( \frac{2\pi}{T} \right) t + \phi_0\,,\]
+<p>where \(T\) is the period of the motion, and \(\phi_0\) is the initial phase.
+Comparing <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, we see that the phase
+of a one-dimensional harmonic wave may be written as
+<p>\[\phi=2\pi\left(\frac{x}{\lambda} \pm \frac{t}{T}\right)+\phi_0\,.\]
+<p>Using <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, the phase of a wave is easy to interpret: a change
+in position by one wavelength or a change in time by one period results in a
+change in phase of \(2 \pi\) radians (360°).
+The phase of a harmonic wave may also be expressed in terms of frequency or
+angular frequency.
+Using the relation between period and frequency
+<p>\[\nu=\frac{1}{T}\,,\]
+<p>the phase may be written as
+<p>\[\phi = 2\pi\left( \frac{x}{\lambda} \pm \nu t \right) + \phi_0\,,\]
+<p>or using the relation between frequency and angular frequency
+<p>\[\omega = 2 \pi \nu\]
+<p>and the definition of wave number, <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>, the phase becomes
+<p>\[\phi = kx \pm \omega t + \phi_0\,.\]
+<p><h3 id="pcap--">. </h3>
+[]3eRelations Among Traveling-Wave Descriptors
+By comparing <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, a relation between the wave
+speed \(v\), the wavelength \(\lambda\), and the period \(T\), may be determined
+to be:
+<p>\[v = \frac{\lambda}{T}\,.\]
+<p>This expression may be transformed into several equivalent forms by using
+the definition of frequency and angular frequency:
+<p>\[v = \lambda \nu\, ,\]
+<p>and
+<p>\[v = \frac{\omega}{k}\,.\]
+<p>Using these relations between wave descriptors and their definitions, you
+should be able to transform between the several forms of the wave function
+we have encountered so far.
+These relations and the various forms of the harmonic wave function are
+summarized in Table&nbsp;1.
+The variables used in Table&nbsp;1 are listed in Table&nbsp;2, although you should note that:
+(1) any part of a wave could be used in place of the word "crests"; and (2) the
+descriptions are only meant as reminders of the more complete descriptions given throughout the text.
+<p>
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1.  Useful wave relations and various
+one-dimensional harmonic wave functions.
+Remember that cosine functions may also be used as harmonic wave
+functions.</td></tr><tr><td>Wave Relations</td><td>One-Dimensional Wave Functions</td></tr><tr><td>\(v=\frac{\lambda}{T}\)</td><td>\(\xi =
+              A\sin\left[\frac{2\pi}{\lambda}(x \pm vt)+\phi_0\right]\)</td></tr><tr><td>\(v = \lambda\nu\)</td><td>\(\xi = A \sin\left[ k\,(x \pm vt) + \phi_0\right]\)</td></tr><tr><td>\(v=\frac{\omega}{k}\)</td><td>\(\xi=A\sin\left[2\pi
+            \left(\frac{x}{\lambda}\pm\frac{t}{T}\right)+\phi_0\right]\)</td></tr><tr><td>\(k=\frac{2\pi}{\lambda},\nu=\frac{1}{T}\)</td><td>\(\xi=A\sin\left[2\pi\left(\frac{x}{\lambda}\pm\nu t\right)+\phi_0\right]\)</td></tr><tr><td>\(\omega = 2\pi\nu\)</td><td>\(\xi = A \sin\left[kx \pm \omega t  + \phi_0\right]\)</td></tr></tbody></table>
+</div>
+
+<p>
+<div class="centered"><table class="physnet-table"><tbody><tr><td>Table 2. Variables used in Table&nbsp;1.</td></tr><tr><td>Variable</td><td>Brief Description</td></tr><tr><td>\(\lambda\)</td><td>wavelength: distance between successive crests at one time</td></tr><tr><td>\(T\)</td><td>period: time between successive crests at one place</td></tr><tr><td>\(\xi\)</td><td>wave function: the size of the wave at any time and place</td></tr><tr><td>\(A\)</td><td>amplitude: maximum value of the wave function</td></tr><tr><td>\(v\)</td><td>speed of each crest</td></tr><tr><td>\(t\)</td><td>the time at which the wave function is being described</td></tr><tr><td>\(\phi_0\)</td><td>phase constant: the wave's phase at time zero, place zero</td></tr><tr><td>\(k\)</td><td>wave number: number of waves per unit length at one time</td></tr><tr><td>\(x\)</td><td>the place at which the wave function is being described</td></tr><tr><td>\(\omega\)</td><td>angular frequency: 2\(\pi\) times the frequency</td></tr><tr><td>\(\nu\)</td><td>frequency: rate at which crests go by at one place</td></tr></tbody></table>
+</div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Equation of Wave Motion</h2>
+
+<p><h3 id="pcap-4-a">4a. One-Dimensional Equation of Wave Motion </h3>
+
+By applying Newton's second law and some forms of Hooke's law to the
+deformation \(\xi\) in an elastic medium, a differential equation of motion for \(\xi\)
+may be derived.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>If \(\xi\) is a one-dimensional traveling wave in the elastic medium, the
+differential equation of motion is found to be:
+<p>\[\frac{\partial^2\xi}{\partial t^2} =
+                              v^2\frac{\partial^2\xi}{\partial x^2}\,.\]
+<p>This partial differential equation
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>is called the “characteristic equation” of wave motion in one dimension.
+If, by using Newton's second law, you find for a physical system that the
+equation of motion is of this form, then you know that wave motion can
+result.
+From this differential equation you can read the propagation speed of any
+wave that obeys it.
+<p><h3 id="pcap-4-b">4b. Forms of the General Solution</h3>
+
+Since the wave equation is a second order linear partial differential
+equation, the general solution of the wave equation consists of a linear
+combination of two linearly independent harmonic functions:
+<p>\[\xi(x,t) = f_1(x \pm vt) + f_2(x \pm vt)\,. \]
+<p>You should be able to verify <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> as a solution to
+<a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a>, the wave equation, by direct substitution.
+<p>If the signs of the “\(v t\)” terms are the same in \(f_1\) as in \(f_2\),
+<a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> represents a superposition of two waves traveling in the
+same direction.
+<p>If the signs of “\(v t\)” terms are opposite for the two functions in
+<a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a>, we have the superposition of two waves traveling in
+opposite directions.
+With appropriate choices for boundary conditions, this particular
+solution to the wave equation is called a “standing wave” and it is
+a very important phenomenon in physics.
+It is treated elsewhere.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p><h3 id="pcap-4-c">4c. Restriction to Harmonic Waves</h3>
+
+We can restrict <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> to a description of single-frequency
+harmonic waves by making one term a sine function and the other a cosine
+function (these functions are linearly independent):
+<p>\[\xi(x,t) = A\,\sin[k(x - vt)] + B\,\cos[k(x - vt)] \,.\]
+<p>The two amplitudes \(A\) and \(B\) complete the description of particular waves.
+That is, specifying values for them picks out a specific case from all
+possible waves with the specified frequency and velocity already specified
+<p>in <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a>.
+For example, if the values of \(\xi\) and its first derivative with respect to
+time are known at some point in space and at some instant of time for the
+process at hand (usually at \(x = 0\) and \(t = 0\)), then those values can be
+used to set \(A\) and \(B\).
+As an alternative to <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a>, we can express \(\xi\) as a single
+sine or cosine function (more useful in certain situations):
+<p>\[\xi(x,t) = \xi_0\sin[k(x - vt) + \phi_0] \,,\]
+<p>where <a href="#eqn-18" class="eqn-ref">Eqs.&nbsp;(18)</a> and <a href="#eqn-19" class="eqn-ref">Eq.&nbsp;(19)</a> are connected by:
+<p>\[\xi_0 = \left( A^2 + B^2 \right)^{1/2} \text{ and } \phi_0 =
+                                     \tan\left(\frac{B}{A}\right)\,.\]
+<p>Either way we have two constants that must be established for any particular
+application.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to thank J.&thinsp;Kovacs, O.&thinsp;McHarris, and P.&thinsp;Signell for their 
+contributions to an earlier version of this module.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the maximum value of a wave function.
+the values of the wave function and its
+first time-derivative, at some point in space, at some instant of time.
+a quantity that has a value at each point in space.
+a sinusoidal function; for example,
+\(\sin(kx \pm \omega t)\) or \(\cos(kx \pm \omega t)\).
+a derivative of an expression where only one
+quantity in the expression can vary.
+the argument of a harmonic wave function.
+The phase of a wave specifies what part of a complete oscillation or cycle
+the wave is producing at a given point in space and at a given time.
+the value of the phase of a wave at time \(t = 0\)
+at the origin of the relevant coordinate system.
+a wave whose spatial profile at any given time
+is a sine function and which produces simple harmonic oscillations of the
+wave quantity \(\xi\) at any given point through which the wave passes.
+a periodic series of oscillations that propagate
+through space with a speed characteristic of the wave and the medium through
+which it travels.
+a differential equation of motion whose solutions
+are mathematical representations of waves.
+a mathematical representation of a wave, and the
+solution to the wave equation.
+a quantity inversely proportional to the wavelength
+of a wave; symbolized by \(k\).  Note: \(k = 2 \pi/\lambda\).
+the speed with which a wave propagates through space.
+the distance in space between successive points of
+equal phase on a wave; symbolized by \(\lambda\).
+</section>
+
+<p><section id="partial-derivatives" class="module-section section-text"><h2 id="partial-derivatives">Partial Derivatives</h2>
+
+<p><h3 id="pcap--a">a. Particles and Ordinary Derivatives</h3>
+
+A “particle” is usually specified in part by its position, say \(x\).
+The position of the particle usually changes with time so we write \(x(t)\).
+Then the <em>rate</em> of change of the particle's position with respect to
+time is written \(dx(t)/dt\), and that is its \(x\)-component of velocity.
+It is an example of the use of the ordinary derivative.
+<p><h3 id="pcap--b">b. Fields: Temperature as an Example</h3>
+
+A “field” is specified by its value at each space point \((x)\) at each time
+\((t)\).
+For example, the temperature of the air in this room can be written as
+\(T(x,t)\): at a particular time \(t\) it has a value (in degrees) at
+each space point \(x\) as one moves along some straight line across the room.
+As time changes, the value at each space point along the line changes.
+Note that there are an uncountable infinity of points along the line,
+at each of which the temperature can be specified at any one time.
+This is in contrast to a “particle,” for which there is only one
+position at any one time.
+<p><h3 id="pcap--c">c. A Mental Exercise</h3>
+
+In your mind, go through the process of plotting an ordinary
+two-dimensional graph showing the temperature at all points \(x\) for a fixed
+time \(t\).
+That is, plot \(T(x)\) for a single time \(t\), a “snapshot” of the temperature
+field.
+Now imagine plotting a separate graph showing the temperature at a single
+point (that is, at a single \(x\) value), as a function of time.
+Think about how the measurements would be made in each case.
+<p><h3 id="pcap--d">d. Fields and Partial Derivatives: an Example</h3>
+
+If we want to know the rate of change of temperature, \(T\), with position
+along a line, \(x\), <em>at a fixed time \(t\)</em>, we must take the derivative
+of \(T\) with respect to \(x\) while holding \(t\) fixed.
+This process of holding one variable fixed while taking the derivative with
+respect to another variable is called “taking a partial derivative.”
+It is written with \(\partial\) symbols replacing the usual \(d\) symbols in
+the derivative.
+Here are some examples of taking first and second partial derivatives
+of a particular function \(f(x,t)\):
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(f = (x + vt)^2\)</td></tr><tr><td>\(\partial f/\partial x = 2(x + vt)\)</td><td>\(\partial f/\partial t = 2v(x + vt)\)</td></tr><tr><td>\(\partial^2 f/\partial x^2 = 2\)</td><td>\(\partial^2 f/\partial t^2 = 2v^2\)</td></tr></tbody></table>
+</div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For example, \(f = a x \text{ or } f = C \sin bx\). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Notice that the designation of a wave maximum as a crest or a
+trough is somewhat arbitrary since the maxima at \(\xi = + A\) are identical
+to the maxima at \(\xi = - A\). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For several examples of this derivation, see “Sound Waves and Small
+Transverse Waves on a String” (MISN-0-202). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">For the meaning of “partial differential equation” and “partial
+derivative,” as used in this module, see this module's Appendix. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Standing Waves” (MISN-0-232) and “Standing Waves in Sheets
+of Materials” (MISN-0-233). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">The requirement of two constants may not surprise you since the
+solution of a second order differential equation requires two sequential
+integrations, thus introducing two constants of integration.
+These two constants are called “boundary conditions” or “initial
+conditions,” but both of those terms are misleading since the values used
+are not necessarily on any physical periphery nor are they necessarily
+values for the boundaries of the time interval being studied. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;8, 9, and 10 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Given the function:
+\[\xi(x,t) = A_1 \cos k_1 (x + vt) - A_2 \sin k_2 (x-vt)\,.\]
+Determine whether this a solution to the wave equation, <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p>\[v^2\frac{\partial^2\xi}{\partial x^2} =
+                 \frac{\partial^2\xi}{\partial t^2}\,.\]</li>
+<li><span class="item-label">2.</span> Let \(\xi(x,t) = A \sin(\omega t + kx + \phi_0)\) where \(\phi_0\)
+is the phase constant.
+This wave is traveling in the negative \(x\)-direction at the speed of sound
+in air, 330&thinsp;m/s.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine whether \(\xi(x,t)\) satisfies the wave equation quoted
+in Problem&nbsp;1.</li>
+<li><span class="item-label">b.</span> If \(A = 6.0\)&thinsp;cm, \(\xi(0,0) = 5.196\)&thinsp;cm and
+<p>\[\dot{\xi}(0,0) \equiv \;\left. \frac{\partial\xi}{\partial t} \right|_
+           {\stackrel{\ds x=0}{\ds \hspace{1pt}t\hspace{1pt}=0}} \; =
+                                             + 94.2\,\text{m/s}\,,\]
+<p>find \(\phi_0\), \(\omega\), \(k\), \(T\), \(\nu\), and \(\lambda\).</li>
+<li><span class="item-label">c.</span> Sketch \(\xi(x)\) at \(t = 0\).
+</li>
+<li><span class="item-label">3.</span> A certain one-dimensional wave is observed at a certain instant
+of time to be described by:
+<p>\[\xi(x,t_1) = (1.3\,\text{m})\sin[(1.2\unit{m^{-1}}) x + 16 \pi]\]
+<p>and 12 seconds later by:
+<p>\[\xi(x,t_1 + 12\,\text{s}) =
+      (1.3\,\text{m})\sin[(1.2\unit{m^{-1}})x + 28\pi].\]
+<p>Determine this wave's: (a) amplitude; (b) wavelength; (c) frequency (in
+hertz); (d) speed; and (e) direction of travel.</li>
+<li><span class="item-label">4.</span> A function \(y(x)\) consists of: (1) a straight line that increases
+           from its value of zero at position (\(x_0 - A\)) to its maximum
+           value of \(M\) at position \(x_0\); then (2) another straight line
+           from this maximum value of \(M\) to be the value zero at position
+           (\(x_0 + A\)).
+           Everywhere else, \(y(x)\) is zero.
+           Thus the function is a triangle in the \(x\)-\(y\) plane joining
+           points (\(x_0 - A,0\)), (\(x_0,M\)) and (\(x_0 + A,0\)).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Sketch the function \(y(x)\).</li>
+<li><span class="item-label">b.</span> Sketch the function \(y(x + A)\).</li>
+<li><span class="item-label">c.</span> Sketch the function \(y(x - 2A)\).
+</li>
+<li><span class="item-label">5.</span> Show that \(\xi = \xi_0 \sin(kx-\omega t)\) may be written in the
+           alternative forms:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\xi = \xi_0 \sin[k(x-vt)]\)</li>
+<li><span class="item-label">b.</span> \(\xi=\xi_0\sin\left[\omega\left(\frac{x}{v}-t\right)\right]\)</li>
+<li><span class="item-label">c.</span> \(\xi=
+      \xi_0\sin\left[2\pi\left(\frac{x}{\lambda}-\nu t\right)\right]\)</li>
+<li><span class="item-label">d.</span> \(\xi=
+    \xi_0\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)\right]\)
+</li>
+<li><span class="item-label">6.</span> A one-dimensional sinusoidal wave, of wavelength 2&thinsp;m, travels
+           along the \(x\)-axis (in the positive \(x\)-direction).
+           If its amplitude is 0.5&thinsp;m and it has a period of \(T = 0.5\)&thinsp;s:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down an appropriate wave function to represent this wave.</li>
+<li><span class="item-label">b.</span> If the displacement of the wave is 0.2&thinsp;m at \(x = 0\), \(t = 0\),
+           and \(\dot{\xi}(0,0) = +5.76\)&thinsp;m/s, find the phase constant.
+</li>
+<li><span class="item-label">7.</span> A one-dimensional sinusoidal wave moves along the \(x\)-axis.
+           The displacement at two points, \(x_1 = 0\) and \(x_2 = 2.0\)&thinsp;cm,
+           is observed as a function of time:
+           \[\begin{aligned}\xi(x_1,t) & = & (0.02\,\text{cm})\sin[(3\pi\unit{s^{-1}})t] \\
+           \xi(x_2,t) & = & (0.02\,\text{cm})\sin[(3\pi\unit{s^{-1}})t+
+                                                          \frac{\pi}{2}]\end{aligned}\]
+
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What are the amplitude, frequency, and wavelength of this wave?
+           <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+<li><span class="item-label">b.</span> In which direction and with what speed does the wave travel?
+</li>
+<li><span class="item-label">8.</span> Verify whether or not each of the following functions is a
+solution to the one-dimensional wave equation:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\xi = \xi_0 \cos(\pi t)\)</li>
+<li><span class="item-label">b.</span> \(\xi = \xi_0 \sin M(x + 4vt)\) where \(M\) is a constant</li>
+<li><span class="item-label">c.</span> \(\xi = Y(x - vt)\)
+</li>
+<li><span class="item-label">9.</span> A one-dimensional sinusoidal wave is traveling along the \(x\)-axis
+in the negative \(x\)-direction.
+It can be represented by:
+<p>\[\xi(x,t) = A \cos[\frac{2\pi}{\lambda} F(x,t)].\]
+<p>The wave's frequency is 10&thinsp;Hz and its wavelength is \(\lambda\).
+Write down an appropriate function \(F(x,t)\) which gives this wave the
+properties listed above.</li>
+<li><span class="item-label">10.</span> The displacements at two points in space are observed as a wave
+\(\xi(x,t)\) passes by.
+At the points \(x_1 = 0.5\)&thinsp;m and \(x_2 = 2.5\)&thinsp;m the displacement from
+equilibrium is observed as a function of time.
+These are found to be:
+\(\xi(0.5\,\text{m},t) =
+         (1.5 \times 10^{-4}\,\text{m})\sin[(6\pi\unit{s^{-1}})t]\)<br>
+
+\(\xi(2.5\,\text{m},t) =
+         (1.5 \times 10^{-4}\,\text{m})\sin[(6\pi\unit{s^{-1}})t + 2\pi/3]\)
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the amplitude of this wave?</li>
+<li><span class="item-label">b.</span> What is the frequency of this wave in hertz?</li>
+<li><span class="item-label">c.</span> What is the wavelength?</li>
+<li><span class="item-label">d.</span> What is the speed with which this wave travels?</li>
+<li><span class="item-label">e.</span> What way is the wave traveling?</li>
+<li><span class="item-label">f.</span> What is the time rate of displacement at the point \(x_1\) at times
+           \(t = 0\) and \(t = 0.25\)&thinsp;s?
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> Yes    <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">2.</span> A traveling wave:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Yes, if \(\omega^2 = v^2 k^2\) (see Problem&nbsp;1).</li>
+<li><span class="item-label">b.</span> \(\phi_0 = \pi/3\)&thinsp;radians&thinsp;\( = 60^\circ\)  <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li>\(\omega = 3.14 \times 10^3\unit{s^{-1}}\)   <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li>\(k = 9.5\)<span class="unit">&thinsp;m<sup>-1</sup></span></li>
+<li>\(T = 2 \times 10^{-3}\)&thinsp;s</li>
+<li>\(\nu = 500\)&thinsp;Hz</li>
+<li>\(\lambda = 0.66\)&thinsp;m</li>
+<li><span class="item-label">c.</span> \(\xi(x,t)\) at \(t = 0\):
+<p><figure class="fig-centered"><img src="figures/m201gr09.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">3.</span> A wave described at two times:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(A = 1.3\)&thinsp;m <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">b.</span> \(\lambda = 5.24\)&thinsp;m <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">c.</span> \(\nu = 0.50\)&thinsp;Hz    <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">d.</span> \(v = 2.62\)&thinsp;m<span class="unit">&thinsp;s<sup>-1</sup></span> <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">e.</span> \(-\hat{x}\) direction <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+</li>
+<li><span class="item-label">4.</span> \(y(x_0)\) is the maximum value of \(y(x)\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(y(x)\) has its maximum value when \(x = x_0\):
+<p>            <figure class="fig-centered"><img src="figures/m201gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> \(y(x+A)\) has its maximum value when \(x + A = x_0\):
+<p><figure class="fig-centered"><img src="figures/m201gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> \(y(x-2A)\) has its maximum value when \(x - 2A = x_0\):
+<p><figure class="fig-centered"><img src="figures/m201gr12.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">5.</span> \(k=\omega/v\); \(kv=\omega\); \((\omega/v)=(2\pi/\lambda)\);
+           \(\omega=2\pi\nu\); \(\nu=1/T\).</li>
+<li><span class="item-label">6.</span> Determining the functional form.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\xi = (0.5\,\text{m})\sin\left[\left(\pi\unit{m^{-1}}\right) x -
+             \left(4\pi\unit{s^{-1}}\right)t + \phi_0\right]\)&thinsp;,</li>
+<li>or</li>
+<li>\(\xi = (0.5\,\text{m})\cos\left[\left(\pi\unit{m^{-1}}\right) x -
+             \left(4\pi\unit{s^{-1}}\right) t + \phi_0\right]\).</li>
+<li><span class="item-label">b.</span> \(\phi_0 = 156.4^\circ\) if the sine function is used;<br>
+
+           \(\phi_0 =  66.4^\circ\) if the cosine function is used. <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+</li>
+<li><span class="item-label">7.</span> A wave specified at two times:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(A = 0.02\)&thinsp;cm; \(\nu = 1.5\)&thinsp;/s; \(\lambda = 8.0\)&thinsp;cm <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+<li><span class="item-label">b.</span> The wave moves in the negative \(x\) direction with speed
+           \(v = 12\)&thinsp;cm/s.
+</li>
+<li><span class="item-label">8.</span> Only (c) satisfies this equation.</li>
+<li><span class="item-label">9.</span> \(F(x,t) = x + (10\,\text{Hz}) \lambda t\)</li>
+<li><span class="item-label">10.</span> Displacements at two points:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(1.5 \times 10^{-4}\)&thinsp;m</li>
+<li><span class="item-label">b.</span> 3&thinsp;Hz</li>
+<li><span class="item-label">c.</span> 6&thinsp;m</li>
+<li><span class="item-label">d.</span> \(18\)&thinsp;m/s.</li>
+<li><span class="item-label">e.</span> Toward the negative \(x\)-direction</li>
+<li><span class="item-label">f.</span> \(9 \pi \times 10^{-4}\)&thinsp;m/s and zero respectively.
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Taking the appropriate partial derivatives,
+ \[\begin{aligned}\frac{\partial\xi}{\partial t} & = &
+    - k_1 v A_1 \sin\left[k_1(x+vt)\right]
+                          + k_2 v A_2 \cos\left[k_2(x-vt)\right] \\
+ \Rightarrow \frac{\partial^2\xi}{\partial t^2} & = &
+                - k_1^2 v^2 A_1 \cos\left[k_1(x+vt)\right]
+                + k_2^2 v^2 A_2 \sin\left[k_2(x-vt)\right] \\
+  \frac{\partial\xi}{\partial x} & = &
+                 - k_1 A_1 \sin\left[k_1(x+vt)\right]
+                 - k_2 A_2 \cos\left[k_2(x-vt)\right] \\
+ \Rightarrow \frac{\partial^2\xi}{\partial x^2} & = &
+                 - k_1^2 A_1 \cos\left[k_1(x+vt)\right]
+                 + k_2^2 A_2 \sin\left[k_2(x-vt)\right]\end{aligned}\]
+
+ Comparing the two equations marked \(\Rightarrow\), it is clear that \(v^2\)
+ times the lower one equals the upper one.
+ Thus \(\xi\) is a solution to the wave equation.
+ However, if the velocity \(v\) in the two terms had not been the same, \(\xi\)
+ would not have been a solution.
+ Note that the first term represents a wave of amplitude \(A_1\) and wavelength
+ \(2\pi/k_1\) traveling to the left, while the second term represents a wave of
+ amplitude \(A_2\) and wavelength \(2\pi/k_2\) traveling to the right.
+ These two waves are traveling through the same space points at the same
+ time.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\omega=\frac{\dot{\xi}(0,0)}{A\cos\phi_0} =
+       \frac{94.2\,\text{m/s}}{(6.0\,\text{cm})(1/2)}\)
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(\xi(0,0) = A \sin(0 + 0 + \phi_0) = A \sin\phi_0 = 5.196\)&thinsp;cm<br>
+
+ \(\sin\phi_0 = \frac{\xi(0,0)}{A} = \frac{5.196}{6.0} = 0.866\),<br>
+
+ so:
+ \(\phi_0 = \sin^{-1}(0.866) = 60^\circ\) (\(\pi/3\,\text{radians}\))
+ or
+ 120° (\(2\pi/3\,\text{radians}\))<br>
+
+ To choose the correct value of \(\phi_0\), information from
+ \(\dot{\xi}(0,0)\) must be used:<br>
+
+ \(\dot{\xi}(x,t) \equiv \partial\xi/\partial t = \omega A \cos(kx + \omega t +
+                                             \phi_0)\)<br>
+
+ \(\dot{\xi}(0,0) = \omega A \cos\phi_0 = +94.2\)&thinsp;m/s<br>
+
+ \(\cos\pi/3 = +1/2\), \(\cos(2\pi/3) = -1/2\).<br>
+
+ Since \(\dot{\xi}(0,0)\), \(\omega\), and \(A\) are all positive, \(\cos\phi_0\)
+ must  be positive as well,
+ so \(2\pi/3\) is rejected as a possible value for \(\phi_0\), i.e.
+ \(\phi_0 = \pi/3\).
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Rule: \(\Delta(\text{phase}) =
+ 2\pi\left[\frac{\Delta x}{\lambda}\pm\frac{\Delta t}{T}\right]\).<br>
+
+ For this case,<br>
+
+ phase #1\( = (1.2\unit{m^{-1}}) x + 16\pi\)<br>
+
+ phase #2\( = (1.2\unit{m^{-1}}) x + 28\pi\)<br>
+
+ \(\Delta\)(phase) = 12\(\pi\) <br>
+
+ but \(\Delta x = 0\), hence: \(2\pi\left(\frac{\Delta t}{T}\right)=
+                                     12\pi\), and \(\Delta t=12\)&thinsp;s.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Just look at either \(\xi(x,t_1)\) or \(\xi(x,t_2)\).
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">See Problem&nbsp;1. \(\lambda = 2\pi/(1.2\unit{m^{-1}})\).
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Compare to the general form of the wave equation to get:<br>
+
+ \(k v \Delta t = \Delta \phi\) \(\Rightarrow\) \(v =
+                                12\pi/(1.2\unit{m^{-1}}\;12\,\text{s})\)
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Read and understand this module's <em>text</em>.
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">Note&nbsp;1:&nbsp;\(-203.6^\circ\) is just as good an answer as 156.4°.
+<p> Note&nbsp;2:&nbsp;Electronic calculators face an ambiguity in giving an answer for
+ an inverse trigonometric function.
+ For example, \(\sin(5.74^\circ) = \sin(174.26^\circ) = 0.1\).
+ Therefore \(\sin^{-1}(0.1)\) could be either 5.74° or
+ 174.26°: both are valid mathematical answers to the inverse sine
+ problem, taken in isolation.
+ You must decide which is the right answer by examining other aspects of
+ the problem at hand.
+</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">Compare to the general form of the wave equation to get:<br>
+
+ \((2\pi/\lambda)\Delta x= \Delta\phi\) \(\Rightarrow\)
+      \(\lambda = 2 \pi (2.0\,\text{cm})/(\pi/2)\)
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Verify whether or not each of the following functions is a
+solution to the one-dimensional wave equation:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\xi = \xi_0 \cos(\pi t)\)</li>
+<li><span class="item-label">b.</span> \(\xi = \xi_0 \sin M(x + 4vt)\) where \(M\) is a constant</li>
+<li><span class="item-label">c.</span> \(\xi = Y(x - vt)\)
+</li>
+<li><span class="item-label">3.</span> A one-dimensional sinusoidal wave is traveling along the \(x\)-axis
+in the negative \(x\)-direction.
+It can be represented by:
+<p>\[\xi(x,t) = A \cos\left[\frac{2\pi}{\lambda}\, F(x,t)\right]\,.\]
+<p>The wave's frequency is 10&thinsp;Hz and its wavelength is \(\lambda\).
+Write down an appropriate function \(F(x,t)\) which gives this wave the
+properties listed above.</li>
+<li><span class="item-label">4.</span> The displacements \(\xi(x,t)\) at points in space are observed
+as a wave passes by.
+At the points \(x_1 = 0.5\)&thinsp;m and \(x_2 = 2.5\)&thinsp;m the displacements from
+equilibrium, \(\xi\), are found to be (as functions of time):
+<p>\[\begin{aligned}\xi(0.5\,\text{m},t) & = (1.5 \times 10^{-4}\,\text{m})\sin[(6\pi\unit{s^{-1}})t] \\ \xi(2.5\,\text{m},t) & = (1.5 \times 10^{-4}\,\text{m})\sin[(6\pi\unit{s^{-1}})t + 2\pi/3]\end{aligned}\]
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the amplitude of this wave?</li>
+<li><span class="item-label">b.</span> What is the frequency of this wave in hertz?</li>
+<li><span class="item-label">c.</span> What is the wavelength?</li>
+<li><span class="item-label">d.</span> What is the speed with which this wave travels?</li>
+<li><span class="item-label">e.</span> What direction is the wave traveling?</li>
+<li><span class="item-label">f.</span> What is the time-rate of displacement at the point \(x_1\) at times
+           \(t = 0\) and \(t = 0.25\)&thinsp;s?
+</li>
+</ol>
+
+<p>
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;8.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;9.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;10.</li>
+</ol>
+
+<p></section>
+

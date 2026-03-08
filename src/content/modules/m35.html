@@ -1,0 +1,440 @@
+<header class="module-header">
+  <h1 class="module-title">Moments of Inertia, Principal Moments <span class="module-author">(J.S.Kovacs)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Use the scalar product to determine the angle
+    between two given vectors <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>2.</strong> Set up and solve integrals in one, two, and three
+    dimensions <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>3.</strong> State the law of conservation of angular momentum <a href="../m41/" class="module-ref">MISN-0-41</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Define moment of inertia, principal axes of
+    inertia, and principal moments of inertia.</li><li><strong>K2.</strong> Define the radius of gyration of a rigid body.</li></ul></div>
+
+    
+    <div class="env-ProjectSkills">
+    <br>
+ Given the angular velocity and the angular momentum
+    vectors of a rotating rigid body with respect to some fixed reference
+    system, determine whether or not the axis of rotation is
+    one of the principal axes of the body.  Also determine the moment
+    of inertia of this object with respect to this rotation axis.
+    <br>
+ Calculate the moment of inertia relative to a
+    given axis of simple mass configurations when the mass and the
+    distribution of mass are given.  Also, given the radius of gyration,
+    determine the moment of inertia of a rigid body.
+    <br>
+ Use the conservation of angular momentum principle 
+    to determine the moment of inertia of an irregularly shaped
+    object when a change in location of a part of the object of known
+    moment of inertia produces an observed change in angular velocity.
+    </div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+    Reading (1970). </li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In general, the motion of a rigid body consists of a translation (straight 
+line or some other trajectory motion) of the center of mass plus 
+a rotation of the object about some axis through the center of mass.
+In this unit we treat the second part alone, the case of rotation only.
+Therein, we develop the relationship between the angular momentum and angular velocity vectors.
+If, for some rotation, these two vectors are parallel, the axis of rotation is said to
+be a “principal axis.”
+Involved in these relationships is the concept of <em>moments of inertia</em>.
+We consider how to calculate the moment of inertia of a given object from the 
+definition of that quantity.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. \(L\) and \(\omega\) for a Rotating Rigid Object; Principal Axes of Inertia</h2>
+
+<p><h3 id="pcap-2-a">2a. Discussion</h3>
+
+A point mass moving along a circular path has an angular velocity vector, 
+\(\vec{\omega}\), directed along the axis of the circle, and an angular 
+momentum vector, \(\vec{L}\) , relative to the center of the circle which is 
+parallel to the angular velocity.
+The quantities are related in magnitude by \(L = MR^2 \omega\) where \(M\) is 
+the particle mass and \(R\) is the radius of the circle.
+The combination \(MR^2\) is the moment of inertia of the point mass relative 
+to the axis of rotation.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>An extended rigid body may be viewed as a distribution of point masses.
+If such a rigid body rotates about some fixed axis, the angular velocity 
+vector and the angular momentum vector are not, in general, parallel.
+However, a relation between \(\vec{\omega}\) and the component of \(\vec{L}\) 
+which is parallel to \(\vec{\omega}\) can still be written down.
+The proportionality factor is <em>the moment of inertia of the rigid body 
+relative to the axis of rotation</em>,
+<p>\[L_{\omega} = I_{\omega} \omega,\]
+<p>where \(L_{\omega}\) is the component of \(\vec{L}\) in the same direction as
+\(\vec{\omega}\).
+That is,
+<p>\[\vec{L} \cdot \vec{\omega} = L\omega \cos \alpha \equiv  
+L_{\omega}\omega,\]
+<p>\(\alpha\) being the angle between \(\vec{L}\) and \(\vec{\omega}\).
+\(I\) is the <em>moment of inertia of the rigid body relative to the axis of
+rotation</em> determined by the vector \(\vec{\omega}\).
+For an extended rigid object it is the analog of what \(MR^2\) is for a 
+point object of mass \(M\) moving in a circle of radius \(R\).
+In fact, by considering the rigid body as a collection of point masses, 
+each its own distance from the axis of rotation, one can directly 
+calculate the moment of inertia for the object under consideration.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>The other components of \(\vec{L}\) (those perpendicular to \(\vec{\omega}\)) 
+<p>cannot be related to \(\vec{\omega}\) via a relation such as <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p>Suppose that \(\vec{L}\) is <em>parallel</em> to \(\vec{\omega}\).
+<p>Then \(\vec{L}\) has no components perpendicular to \(\vec{\omega}\), and
+<p><a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> can be written as a <em>vector equation</em>:
+<p>\[\vec{L} = I \vec{\omega}.\]
+<p>The conditions under which <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is satisfied usually exist if the angular velocity \(\vec{\omega}\) is 
+<p>directed along one of the symmetry axes of the object.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>These are called the <em>principal axes of inertia</em> of the object and the
+<p>moments of inertia relative to these axes are the <em>principal moments of 
+inertia</em>.
+<p>As an illustration of these concepts, consider the following situation.
+Suppose that relative to a fixed inertial reference frame the angular 
+momentum vector of a rotating rigid body is given by:
+<p>\[\vec{L} = [A \sin(\alpha) \sin(\omega t+\delta)] \hat{x} + [A 
+\sin(\alpha)\cos(\omega t +\delta)] \hat{y}
++ [A \cos\alpha] \hat{z}.\]
+<p>Here \(A\), \(\alpha\) and \(\delta\) are constants, \(t\) is the time, and \(\omega\)
+is the magnitude of the angular velocity of the rotating rigid body.
+The vector \(\vec{\omega}\) has magnitude and direction given by
+\(\vec{\omega} = \omega \hat{z}\).
+The quantities \(\hat{x}\), \(\hat{y}\), and \(\hat{z}\) are unit vectors along
+the coordinate axes of the inertial reference frame.
+It is clear that \(\vec{L}\) and \(\vec{\omega}\) are not parallel 
+(\(\vec{\omega}\) does not have \(x\)- and \(y\)-components, \(\vec{L}\) does).
+The axis of rotation of this object is thus not one of the principal axes 
+of inertia.
+<p>It can be verified that the magnitude of \(\vec{L}\) is \(A\), the angle 
+between \(\vec{L}\) and \(\vec{\omega}\) is \(\alpha\), and that the moment of 
+inertia of this object relative to the \(z\)-direction is \((A/\omega) \cos 
+\alpha\).
+No other moment of inertia for this body can be determined from the 
+information supplied.
+<p><h3 id="pcap-2-b">2b. Additional Study Material</h3>
+
+<p>In AF
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>study Sections 11.1 and 11.2 (p.&thinsp;210-213), especially Example 11.1 and
+Figure 11.6.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Moment of Inertia by Two Methods</h2>
+
+<p>Learn to get the moment of inertia: (1) by direct calculation; and
+(2) by conservation of angular momentum.
+<p><strong>Study</strong>:
+In AF, Section 11.3 (pp. 213-217), Section 10.5 (pp. 188-189).
+For access, see this module's <em>Local Guide</em>.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Radius of Gyration</h2>
+
+<p>If all of the mass of an object were located at a point instead of being 
+distributed as it is, where should all of this mass be so that the moment 
+of inertia of the mass relative to some axis is the same as for the object 
+itself?
+The distance from the axis to this point is called the <em>radius of 
+gyration</em>, and is usually designated by \(k\).
+The moment of inertia of the object is related to the radius of gyration by:
+<p>\[I = M k^2,\]
+<p>as defined for a point mass \(M\).
+<p>As an example, the radius of gyration of a sphere of radius \(R\) relative 
+to an axis through its center is:
+<p>\[k = \sqrt{0.4} R \simeq 0.632 R.\]
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">These quantities are defined and related in “Torque and Angular
+Acceleration for Rigid Planar Objects: Flywheels” (MISN-0-33).
+See also “Kinematics: Circular Motion” (MISN-0-9). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">This calculation is the subject of the next section of this 
+module. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">However, even if an object has no symmetry associated with it, it
+can be proven that there are at least three mutually perpendicular directions
+<p>for which <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is satisfied if the rotation is about one of these
+axes. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-PS1">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> For Figure 11.6 in AF
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>verify:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The magnitude of \(\vec{L}\) is \(A\).</li>
+<li><span class="item-label">b.</span> The angle between \(\vec{L}\) and \(\vec{\omega}\) is \(\alpha\).</li>
+<li><span class="item-label">c.</span> The moment of inertia of the object with respect to the \(z\)-axis
+is numerically equal to \((A / \omega) \sin\alpha\).
+</li>
+<li><span class="item-label">2.</span> For a rotating rigid body the angular velocity it has relative
+to a fixed coordinate system is given by \(\vec{\omega} = \omega_x \hat{x}
++ \omega_y \hat{y}\), where \(\omega_x\) and \(\omega_y\) are
+constants.
+Its angular momentum relative to this same set of axes is given by:
+\(\vec{L} = L_x \hat{x} + L_y \hat{y}\).
+With \(L_x\) written as \(A \omega_x\) and \(L_y\) written as \(B\omega_y\),
+determine the following:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Is the axis of rotation of this object “fixed”?</li>
+<li><span class="item-label">b.</span> Are \(\vec{L}\) and \(\vec{\omega}\) parallel?</li>
+<li><span class="item-label">c.</span> What is the moment of inertia of this rigid body with respect to
+the given axis of rotation?</li>
+<li><span class="item-label">d.</span> Is the axis about which the rotation is taking place a principal
+axis of rotation for the object?</li>
+<li><span class="item-label">e.</span> Under what condition (expressed in terms of the coefficients \(A\)
+and \(B\)) will this axis be a principal axis for the object?</li>
+<li><span class="item-label">f.</span> What is then the principal moment of inertia relative to this axis?
+</li>
+<li><span class="item-label">3.</span> How would you determine the moment of inertia of an irregularly
+shaped object such as, say, your own body?
+You can't calculate it by direct integration as you would, for example, for
+a cylinder, relative to its axis.
+You can, however, use the principle of angular momentum conservation to
+determine it experimentally.
+<p>Consider that you wish to determine your moment of inertia relative to a
+vertical axis through the center of mass of your body (when you are in a
+standing position).
+If you stand on a rotating turntable rotating at a constant angular speed
+about a vertical axis, the component of your angular moment along the axis
+of rotation is proportional to the moment of inertia you want to determine.
+<p>
+<p><div class="figure-full"><figure id="fig-P1"><img src="figures/m35gr01.svg" alt="Figure P1" class="physnet-fig"><figcaption>Fig.&nbsp;P1. Irregularly shaped object rotating about vertical axis on a
+                                 turntable which rotates with very little frictional loss.
+                                 Two masses \(M\) are located on a massless rod held horizontally fixed
+                                 to the object.</figcaption></figure></div>
+
+<p>The problem is to extract it from the angular momentum which is also
+unknown.
+This can be done by causing a known change in the moment of inertia of the
+system (you and anything you might be holding) and observing the change in
+angular velocity.
+For example, Suppose you are holding a long rod of negligible mass
+horizontally across your body.
+Attached to this rod and free to slide along the rod are two 4 kilogram
+masses (small enough to be treated as point-like), symmetrically placed on
+the rod at opposite sides of your body each 0.6 meters from the vertical
+axis through your body (see <a href="#fig-P1" class="fig-ref">Fig.&nbsp;P1</a>).
+The masses are temporarily held fixed at the 0.6 meter location.
+The system (you and the loaded rod) is observed to rotate at 30 revolutions
+per minute.
+At some instant the masses are released and move out to point \(A\) and \(B\)
+in <a href="#fig-P1" class="fig-ref">Fig.&nbsp;P1</a>, each point being 1.2&thinsp;m from the vertical axis.
+With this rearrangement the system is observed to now rotate at 10 revolutions per minute.
+Determine your moment of inertia from this data.
+<p></li>
+<li><span class="item-label">4.</span> In AF work problems&nbsp;11.1, 11.2, 11.3 and 11.4.</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> For the person on the turntable described in problem&nbsp;3,
+determine the radius of gyration with respect to the vertical axis if the
+person weighs 160 pounds (determine the radius of gyration in meters).</li>
+<li><span class="item-label">b.</span> Determine the radius of gyration of the person plus
+masses-on-the-rod system when the masses are at points \(A\) and \(B\).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Yes, \(\vec{\omega}\) is constant.</li>
+<li><span class="item-label">b.</span> Not in general. Depends on values of \(A\) and \(B\).</li>
+<li><span class="item-label">c.</span> \(\frac{A\omega_x^2 + B\omega_y^2}{\omega_x^2 +\omega_y^2}.\)</li>
+<li><span class="item-label">d.</span> No, \(\vec{L}\) and \(\vec{\omega}\) aren't parallel for arbitrary
+\(A\) and \(B\).</li>
+<li><span class="item-label">e.</span> If \(A = B\) then \(\vec{L} = A\vec{\omega}\) and they are parallel.</li>
+<li><span class="item-label">f.</span> \(A\).
+</li>
+<li><span class="item-label">3.</span> 1.44<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span>.</li>
+<li><span class="item-label">4.</span> AF 11.1  Radius of gyration, when axis is at one end, is 0.612<span class="unit">&thinsp;m</span>.</li>
+<li>AF 11.2 a. \(I = 1.94\unit{kg\,m^{2}}\), \(k = 0.611\,\text{m}\).</li>
+<li>AF 11.2 b. \(I_\text{rod} = 48 ML^2\) where \(M = 0.20\,\text{kg}\) is the total mass of
+the rod and \(L = 1.0\,\text{m}\) is the length of the rod.
+For the system, rod plus masses, \(I_\text{total} = O.966\unit{kg\,m^{2}}\),
+\(k = 0.431\,\text{m}\).</li>
+<li>AF 11.2 c. \(I_\text{total} = 0.642\unit{kg\,m^{2}}\), \(k = 0.351\,\text{m}\).</li>
+<li>AF 11.3  Answers in AF are correct.
+For part (c), recall that the center of mass of the equilateral triangle is
+at the intersection of the medians (see Table 4.1, p.&thinsp;47) which is
+two-thirds of the distance from either vertex to the midpoint of the
+opposite side.</li>
+<li><span class="item-label">5.</span> Answers:  (a) 0.14<span class="unit">&thinsp;m</span>; (b) 0.4<span class="unit">&thinsp;m</span>.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>Note: This Model Exam consists of more detailed step-by-step questions than
+the actual exam is likely to have.
+Consider it both as a Model Exam and a Review.
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 on this module's <em>ID Sheet</em>.
+One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> Relative to the principal axes of the body (call the direction of
+the axes \(\hat{x}\), \(\hat{y}\), and \(\hat{z}\), the principal moments of
+inertia \(I_x\), \(I_y\), and \(I_z\).
+If the body is rotating with an angular velocity \(\omega = -\omega_0 \hat{x}\)
+(where \(\omega_0\) is a positive number), what is the axis about which the
+rotation of this object occurs?  [K]
+Relative to this axis, which way does this object rotate?  [R]
+What angular momentum does this object have?  [M]</li>
+<li><span class="item-label">3.</span> At a certain instant, the angular momentum vector of an object
+relative to fixed cartesian coordinate system is given by:
+<p>\( \qquad \vec{L} = (2\hat{x} + 7\hat{y} - 5\hat{z})\)&thinsp;kg<span class="unit">&thinsp;m<sup>2</sup></span>/s.
+<p>while its angular velocity vector is given by:
+<p>\( \qquad \vec{\omega} = (8\hat{x} + 4\hat{y})\)&thinsp;rad/s.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Is this system rotating about one of the body's principal axes?
+           [E]  Explain.  [V]</li>
+<li><span class="item-label">b.</span> What is the moment of inertia of this body with respect to the
+           \(x\)-, \(y\)-, and \(z\)-axes?  [H]</li>
+<li><span class="item-label">c.</span> What is the magnitude of \(\vec{L}\)?  [P]</li>
+<li><span class="item-label">d.</span> What is the magnitude of \(\omega\)?  [F]</li>
+<li><span class="item-label">e.</span> What is the moment of inertia of this body with respect to the
+           axis determined by the direction of \(\vec{\omega}\)?  [B]
+</li>
+<li><span class="item-label">4.</span> A right circular cylinder of uniform volume density \(\rho\),
+           length \(L\), and radius \(R\), has a total mass \(M\).
+           It is shown in cross-section in the sketch (the length \(L\) is
+           perpendicular to the page).m35gr02
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Express the density \(\rho\) in terms of \(M\), \(L\), and \(R\).  [J]
+
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">b.</span> How much mass is in a cylindrical shell of thickness \(dr\) (shown
+           shaded in sketch), located at a distance \(r\) from the axis of the
+           cylinder?  [T]</li>
+<li><span class="item-label">c.</span> What is the moment of inertia, relative to the axis of the
+           cylinder, of the mass contained in this cylindrical shell of
+           thickness \(dr\)?  [N]</li>
+<li><span class="item-label">d.</span> Sum up, by integration, the contributions to the total moment of
+           inertia from all of the cylindrical shells from the axis out to
+           radius \(R\).  [U]</li>
+<li><span class="item-label">e.</span> Eliminate \(\rho\) from above to get \(I\) in terms of \(M\) and \(R\).
+           [A]</li>
+<li><span class="item-label">f.</span> What is the radius of gyration of this cylinder relative to this
+           axis?  [S]
+</li>
+<li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m35gr03.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li>A nonuniform rod of length \(L\) has a density that increases
+           linearly from the end at \(x = 0\) to the end \(x = L\).
+           The density (mass per unit length) is given by \(\rho = bx\), where
+           \(b\) is a constant and \(x\) is the distance from the end.
+           The density at the \(x = 0\) end is zero.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> At a distance \(x\) from the \(x = 0\) end, what is the mass of an
+           increment of length \(dx\)?  [G]</li>
+<li><span class="item-label">b.</span> Sum up the contributions to the total mass from all of the
+           elements of length \(dx\) to find the total mass of the rod (in
+           terms of \(b\) and \(L\)). [O]</li>
+<li><span class="item-label">c.</span> Where is the center of mass of this rod?
+           If you can't recall the definition of this, refer to a text.  [Q]</li>
+<li><span class="item-label">d.</span> What is the moment of inertia, relative to an axis through
+           \(x = 0\), of the element of mass located in thickness \(dx\) at
+           distance \(x\) from the \(x = 0\) end?  [X]</li>
+<li><span class="item-label">e.</span> What is the total moment of inertia of this rod relative to an
+           axis through the \(x = 0\) end?  [L]
+           What is the radius of gyration of this rod relative to the
+           \(x = 0\) end?  [Y]</li>
+<li><span class="item-label">f.</span> What is the moment of inertia relative to an axis through the
+           center of mass?  (Use the parallel axis theorem.)  [I]</li>
+<li><span class="item-label">g.</span> What is the moment of inertia relative to an axis through the
+           \(x= L\) end?  (Get the answer using the parallel axis theorem and
+           by direct integration.)  [W]
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> \(M R^2/2\).</li>
+<li><span class="item-label">B.</span> 0.55<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span>.</li>
+<li><span class="item-label">E.</span> No.</li>
+<li><span class="item-label">F.</span> \(\sqrt{80}\,\text{rad/s} = 8.94\,\text{rad/sec}\).</li>
+<li><span class="item-label">G.</span> \(bx\,dx\).</li>
+<li><span class="item-label">H.</span> Cannot be determined from information given.</li>
+<li><span class="item-label">I.</span> \(I_c = M L^2 / 18\).</li>
+<li><span class="item-label">J.</span> \(M/(\pi r^2 L) - 1\).</li>
+<li><span class="item-label">K.</span> The \(x\)-axis.</li>
+<li><span class="item-label">L.</span> \(M L^2/2\).</li>
+<li><span class="item-label">M.</span> \(I_x \omega_0\), in the same direction as \(\vec{\omega}\).</li>
+<li><span class="item-label">N.</span> \(2 \pi \rho L r^3\,dr\).</li>
+<li><span class="item-label">O.</span> \(M = - b L^2 / 2\), so \(b = 2M/L^2\).</li>
+<li><span class="item-label">P.</span> \(\sqrt{78}\unit{kg\,m^{2}/s}\).</li>
+<li><span class="item-label">Q.</span> \(X_c = 2 L/3\).</li>
+<li><span class="item-label">R.</span> Use the right-hand rule: if thumb is in direction of \(\omega\),
+           sense of rotation is in direction of curled fingers.</li>
+<li><span class="item-label">S.</span> \(\sqrt{0.5 R^2} = 0.707\,R.\)</li>
+<li><span class="item-label">T.</span> \(2 \rho L \pi r dr\).</li>
+<li><span class="item-label">U.</span> \(\frac{1}{2} \pi \rho L^4\).</li>
+<li><span class="item-label">V.</span> Because \(\vec{L}\) and \(\vec{\omega}\) are not in the same direction.</li>
+<li><span class="item-label">W.</span> \(I = 13/8 M L2\).</li>
+<li><span class="item-label">X.</span> \(dI = b x^3\,dx\).</li>
+<li><span class="item-label">Y.</span> \(k = 0.707 L\).</li>
+</ol>
+
+</section>
+

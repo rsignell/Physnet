@@ -1,0 +1,443 @@
+<header class="module-header">
+  <h1 class="module-title">Newton's Law of Universal Gravitation <span class="module-author">(Paul M.Parker)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: mass, force <a href="../m62/" class="module-ref">MISN-0-62</a>; center-of-mass <a href="../m16/" class="module-ref">MISN-0-16</a>.</li><li><strong>2.</strong> In two dimensions, add a series of vectors graphically and
+    analytically <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>3.</strong> Given a vector's components in two dimensions, determine the
+    magnitude of the vector and the angle it makes with each of the
+    two axes of a cartesian coordinate system, and conversely <a href="../m2/" class="module-ref">MISN-0-2</a>.</li><li><strong>4.</strong> Calculate the centripetal force acting on an object undergoing uniform
+    circular motion <a href="../m17/" class="module-ref">MISN-0-17</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: Newton's law of universal gravitation, universal
+    gravitational constant.</li><li><strong>K2.</strong> Use Newton's law of universal gravitation, your correctly
+    remembered value of \(g\), and a solar system data table, to calculate the value
+    of the universal gravitational constant \(G\).</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the vector gravitational force on one mass due to a
+    given configuration of other masses.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “The Cavendish Experiment” (MISN-0-100).</li><li><strong>2.</strong> “Orbital Motion in an Inverse-Square-Law Force Field”
+    (MISN-0-102).</li><li><strong>3.</strong> “The Gravitational Field” (MISN-0-108).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Newton's Discovery of the Law</h2>
+
+<p><h3 id="pcap-1-a">1a. Terrestrial Objects Accelerate Toward the Earth</h3>
+
+If a compact object such as an apple is released from rest near the surface
+of the earth, it accelerates toward the center of the earth under the
+action of the gravitational force \(F_g = m g\) where \(g\) is the local
+acceleration of gravity.
+The value of \(g\) near the surface of the earth is about 9.81&thinsp;m/s<sup>2</sup>.
+If the object is not released from rest but with some initial velocity
+(not necessarily vertically up or down), the resulting motion is more
+complicated but still exhibits a constant acceleration of 9.81&thinsp;m/s<sup>2</sup>
+directed towards the center of the earth.
+<p><h3 id="pcap-1-b">1b. Newton Related Terrestrial and Celestial Motions</h3>
+
+It was the genius of Newton which connected the gravitational acceleration
+of objects on the earth with the circular motion of the moon around the earth.
+The period \(T\) of this motion is about 27.3&thinsp;days, the duration of one lunar
+cycle.
+The moon is sufficiently close to the earth for the earth-moon distance to be
+determinable by parallax relative to the positions of the background stars.
+This distance is the radius of the moon's orbit around the center of the
+earth and is \(r = 3.84 \times 10^8\)&thinsp;m, just about sixty times the radius of
+the earth (\(R_e = 6.37 \times 10^6\)&thinsp;m, see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Since for uniform circular motion
+<p>\[T = \frac{2\pi r}{v}\,,\]
+<p>the orbital speed \(v\) of the moon can be calculated knowing \(T\) and \(r\),
+hence also its centripetal acceleration \(a = v^2/r\).
+The associated centripetal force is then
+<p>\[F = m a = \frac{m v^2}{r}\,,\]
+<p>where \(m\) is the mass of the moon.
+Newton assumed that this centripetal force acting on the moon is provided by 
+the gravitational attraction between the earth and the moon and therefore the
+associated centripetal acceleration experienced by the moon is the
+acceleration of gravity \(g_m\) that the earth exerts at the site of the moon.
+Carrying out this calculation it is found that earth's acceleration of
+gravity at a distance of sixty earth radii from the center of the earth is
+\(g_m = 2.72 \times 10^{-3}\)&thinsp;m/s<sup>2</sup>.
+Newton observed that this was just about (1/3600) of the acceleration of
+gravity at the surface of the earth (one earth radius from the center of the
+earth).
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m101gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The uniform circular motion of the moon
+around the earth.</figcaption></figure>
+
+<p><h3 id="pcap-1-c">1c. Newton Proposed an Inverse-Square Gravity Force</h3>
+
+Since, going from one earth radius to a distance of sixty earth radii, the
+local acceleration of gravity is reduced by a factor of \((60)^2\), Newton
+concluded that the force of earth's gravity, \(mg\), on an object of mass \(m\)
+is inversely proportional to the square of the distance of this object from
+the center of the earth and directly proportional to its mass \(m\), i.e.,
+<p>\[F = \text{ constant } \times \frac{m}{r^2}\,.\]
+<p>Since Newton's third law requires that two interacting objects exert mutual
+forces of equal magnitude and opposite direction, the above force would also
+have to meet the requirement
+<p>\[F = \text{ constant } \times \frac{M}{r^2}\,,\]
+<p>where \(M\) is the mass of the earth, so it must meet the combined requirement:
+<p>\[F = \text{ constant } \times \frac{M m}{r^2}\,.\]
+<p>We give the proportionality constant the special symbol \(G\), so
+<p><a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> may be written as:
+<p>\[F = \frac{G M m}{r^2}\,.\]
+<p>This equation requires that in SI units the constant \(G\) has the
+dimensions of <span class="unit">&thinsp;N&thinsp;m<sup>2</sup>/kg<sup>2</sup></span>.
+The constant \(G\) must not be confused with \(g\), the local acceleration of gravity which has
+dimensions of <span class="unit">&thinsp;m/s<sup>2</sup></span>.
+The quantity \(G\) is called the “gravitational constant.”
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Center-of-Mass Refinement</h2>
+
+<p><h3 id="pcap-2-a">2a. The Earth and Moon Mutually Interact</h3>
+
+As mentioned in the previous section, the earth-moon gravitational forces
+are mutual as required by Newton's third law.
+Not only does the earth therefore influence the moon's motion, but the moon
+also influences the earth's motion.
+However, since the earth is more massive than the moon, the earth's
+influence on the motion of the moon is the dominating influence and the
+moon's influence on the motion of the earth is much smaller and can be
+neglected in all but very accurate calculations.
+<p><h3 id="pcap-2-b">2b. The Earth and Moon Orbit Their Center-of-Mass</h3>
+
+If the mutually-driven motions of the earth and moon are taken into account
+in a more careful way, it is found that the earth and the moon each
+orbit about their common two-body “center of mass.”
+However, this center of motion for each of them is located close enough to
+the earth's center so that the resulting motion of the moon is not too
+different from our description based on placing the moon's center of motion
+at the center of the earth.
+<p>The distance between the geometrical center of the earth and moon-earth
+system's center-of-mass is about 73% of one earth radius or 1.2% of
+the moon's orbital radius.
+The moon would orbit the earth's center exactly if the earth had
+infinite mass.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Effects of Extended Objects</h2>
+
+<p><h3 id="pcap-3-a">3a. Newton's Law Assumes Point-Like Masses</h3>
+
+We have discussed the earth and the moon as if they interacted 
+gravitationally with their entire masses concentrated at their respective 
+centers in a point-like manner.
+For two spherical objects like the earth and the moon separated by a distance
+large compared to their radii, this seems like a safe assumption.
+But how about an apple close to the surface of the earth?  To the apple,
+does the attracting earth really appear equivalent to a point-like mass M
+located at the earth's center?  Newton was quite concerned about this point
+but finally succeeded in giving a rigorous mathematical proof that the
+answer to the above questions is yes.
+To complete the proof he needed the methods of calculus which he
+invented for that purpose.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The details of Newton's proof show that one may treat a spherical object's
+mass as concentrated at its center if the object has uniform mass
+density or, more generally, if it is spherically symmetric (a mass density 
+which depends only on the distance from the object's center).
+<p><h3 id="pcap-3-b">3b. Asymmetries Lead To Non-Uniform Acceleration</h3>
+
+There is a slight variation in the value of the local acceleration of 
+gravity over the surface of the earth because the earth is
+not a perfect sphere: it is flattened at the poles, and there are mountains, 
+valleys, oceans, different types of soil and bedrock, etc.
+Also, there is a slight reduction in the local values, due to the rotation
+of the earth, at all points on the earth's surface except the poles.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m101gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The weight of an object as a gravitational
+attraction.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Determination of \(G\)  </h2>
+
+<p><h3 id="pcap-4-a">4a. Gravitational Attraction is Equated to Weight</h3>
+
+The gravitational constant \(G\) may be expressed in terms of the mass and
+radius of the earth, and the acceleration of gravity at the earth's surface,
+by equating gravitational force with weight.
+Consider an apple of mass m a distance \(r\) from the center of the earth (and
+therefore a distance (\(r - R_e\)) above the surface of the earth).
+The force of gravity \(F\) on the apple is its local weight \(mg\), and therefore
+the law of gravitation, <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, gives
+<p>\[mg = G \frac{M m}{r^2}\,,\]
+<p>or, the local acceleration of gravity at the distance \(r\) from the center of
+the earth is
+<p>\[g = G\frac{M}{r^2}, \qquad (r \ge R_e)\,.\]
+<p>Applying this equation to a point on the earth's surface where 
+\(r = R_e = 6.37 \times 10^6\)&thinsp;m and \(g = g_e = 9.81\)&thinsp;m/s<sup>2</sup>, we obtain
+<p>\[G = \frac{3.98 \times 10^{14}\,\text{N}\unit{m^{2}}\,\text{kg}^{-1}}{M}\,.\]
+<p>Thus, \(G\) can be calculated if the mass of the earth \(M\) is known.
+<p><h3 id="pcap-4-b">4b. Newton Estimated the Earth's Mass</h3>
+
+Newton did not know the mass of the earth, but he obtained a good estimate
+using the following reasoning.
+The mass of a spherical object of volume (\(4 \pi R_e^3/3\)) is given by
+<p>\[M = \left( \frac{4}{3} \pi R_e^3 \right) \rho\,,\]
+<p>where \(\rho\) is the average density of the earth and \(R_e\) its known radius.
+To estimate the average density of the earth, Newton observed that the
+density of water is 1<span class="unit">&thinsp;g/cm<sup>3</sup></span>, and the density of a heavy metal like iron
+is about 7<span class="unit">&thinsp;g/cm<sup>3</sup></span>.
+A reasonable guess for the average density of the earth would thus be
+about 5<span class="unit">&thinsp;g/cm<sup>3</sup></span>.
+This approach gave Newton an estimate of \(G\) which was within 10% of the
+present accepted value of
+<p>\[G = 6.673 \times 10^{-11}\unit{N\,m^{2}/kg^{2}}\,.\]
+<p>The smallness of \(G\) requires that at least one of two gravitationally
+attracting objects be massive (like the earth) for the gravitational force
+to be readily apparent.
+Attractive forces between smaller objects, like two persons, are negligibly 
+small (at least the gravitational kind) and are therefore completely masked 
+by the gravitational attraction of the earth on each person.
+<p><h3 id="pcap-4-c">4c. Cavendish Makes The First Direct Measurement of \(G\)</h3>
+
+The first laboratory measurement of \(G\) was made by the British scientist 
+H.&thinsp;Cavendish in 1797, seventy years after the death of Newton.
+Note that the measurement of \(G\) can be used, along with <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>,
+to determine the mass of the earth.
+More generally, a knowledge of \(G\) can be used to determine the mass of any
+planet if it has at least one moon whose period can be measured.
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m101gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The gravitational interaction of arbitrary
+masses.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Universality of the Law</h2>
+
+<p>It is believed that Newton's law of gravitation is universal, i.e., it is
+operative everywhere in the universe.
+The value of \(G\) is assumed to be the same everywhere and it is therefore
+called the “universal gravitational constant.”
+There does not exist convincing evidence that the numerical value of \(G\) is
+changing in time on a geological or even a cosmic time scale.
+Thus universally any two point-like masses interact with forces of magnitude
+<p>\[F = G \frac{m_1 m_2}{r^2}\,.\]
+<p>Spherically symmetric objects can be treated as equivalent point-like masses.
+More irregularly shaped objects can also be treated by the law of universal
+gravitation with the help of integral calculus.
+Because of this universality, our earth-apple and earth-moon considerations
+can be transferred without modification to other planets and their moons,
+and as Newton convincingly demonstrated in 1666, to the motion of the
+planets of our solar system around the sun.
+Thus did Newton extend his terrestrial laws of mechanics to the heavens.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+The author wishes to thank Professor James Linneman for several helpful suggestions.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+a law articulated by Sir Isaac
+Newton that describes the gravitational interaction between any two masses.
+<p>the constant of proportionality in
+Newton's law of universal gravitation.
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The German mathematician G.&thinsp;W.&thinsp;Leibniz invented the calculus
+independently but did not apply it to the real world as Newton did.
+For the rest of his life Newton was unwilling to share the credit with Leibniz. <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: A symbol like [S-1] means that, if you have trouble getting the answer,
+you can get help from a sequence in this module's <em>Special Assistance
+Supplement</em>; in this case, from sequence [S-1].
+<p>Problem&nbsp;3 also occurs on this module's <em>Model Exam</em>.
+<p>solar.dat
+<p><ol>
+<li><span class="item-label">1.</span> Determine the ratio of the force of the sun on the moon to the
+force of the earth on the moon.</li>
+<li><span class="item-label">2.</span> Determine the force on you: (a) due to the earth; (b) due to the
+sun; and (c) due to the moon.</li>
+<li><span class="item-label">3.</span> Determine the resultant force on the sun due to the earth and
+Venus when:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> they are on opposite sides of the sun;</li>
+<li><span class="item-label">b.</span> when their directions from the sun are at right angles.
+Sketch the situations.
+</li>
+<li><span class="item-label">4.</span> Find the net force on mass \(m_1\) if all three masses shown below are
+10.0 kg:
+<p><figure class="fig-centered"><img src="figures/m101gr04.svg" alt="" class="physnet-fig"></figure>
+
+<p>Express your answer in terms of the unit vectors \(\hat{x} \rightarrow\) and
+\(\hat{y} \uparrow\).</li>
+<li><span class="item-label">5.</span> Compare the gravitational attraction between a proton and an
+electron in a hydrogen atom to the attraction between the earth and the sun.
+<p>\[\begin{aligned}m_{proton}   & = 1.67\times10^{-27}\,\text{kg} \\ m_{electron} & = 9.11\times10^{-31}\,\text{kg} \\ r_{e-p}      & = 0.53\times10^{-10}\,\text{m}\end{aligned}\]
+
+<p>Note: \(r_{e-p}\) above is the hydrogen atom electron-proton distance.</li>
+<li><span class="item-label">6.</span> Two people, each weighing 150&thinsp;lb, are standing 3.0&thinsp;feet apart.
+Calculate the gravitational force on each due to the other.
+(1&thinsp;lb = 4.448&thinsp;N, 1&thinsp;ft = 0.3048&thinsp;m).</li>
+<li><span class="item-label">7.</span> Use the value given for the universal gravitational constant \(G\), the
+acceleration of gravity at the earth's surface, and the radius of the earth
+to calculate the mean density of the earth.</li>
+<li><span class="item-label">8.</span> (Only for those interested) You are a surveyor using a plumb
+line (a string with a weight at the lower end) near a mountain.
+Assume that the directions to the mountain and to the center of the earth are
+at right angles and that the mass of the mountain is \(3\times10^{14}\)&thinsp;kg.
+By how many degrees will your plumb line be off the vertical if the mountain
+is 3.0&thinsp;km away?
+Sketch the situation.
+<p>Advice: Think of a line drawn from the top end of the plumb line to the
+center of the earth.
+Now think of a line drawn from the bottom end of the plumb line to the
+center of the earth.
+The center of the earth is so far away that the angle between these
+two lines is approximately \(10^{-9}\) degrees!
+Thus you can consider them as parallel for the purposes of this problem.</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \((F_s/F_e) = 2.18\) <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">2.</span> To get numbers to compare to your own answers, put your weight into each of the lines below and, in
+the second and third lines, complete the indicated calculation.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(F_e =\) your weight \qquad  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li>\(F_s =\) your weight \(\times (6.00\times10^{-4})\) \qquad  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li>\(F_m =\) your weight \(\times (3.38\times10^{-6})\)</li>
+<li>Note: the answers given above are <em>not</em> off by a factor of 10. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <table class="physnet-table"><tbody><tr><td>[t] c c c c c 
+ \(e\)</td><td>\(\;\;F_e\;\;\)</td><td>\(s\)</td><td>\(\;\;F_v\;\;\)</td><td>\(v\) </td></tr><tr><td>.</td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(\leftarrow\)</td><td>.</td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(\rightarrow\)</td><td>.</td></tr></tbody></table>
+<br>
+
+\(F_{net} = 2.01\times10^{22}\)&thinsp;N
+<p></li>
+<li><span class="item-label">b.</span> <table class="physnet-table"><tbody><tr><td>[t] r c c c 
+  \(v\)</td><td>.</td><td></td></tr><tr><td>\(F_v\)</td><td>\(\uparrow\)</td><td></td></tr><tr><td></td><td>.</td><td>\(\;\; \ld{}\rightarrow \;\;\)</td><td>. </td></tr><tr><td></td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(s\)</td><td> <span class="tex-unknown" title="unknown macro">\ld</span>\(F_e\) </td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(e\)</td></tr></tbody></table>
+<br>
+
+\(F_{net} = 6.57\times10^{22}\,\text{N}\) <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</li>
+<li><span class="item-label">4.</span> \(\vec{F} = (2.36\times10^{-9}\,\text{N}) \hat{x} + (9.03\times10^{-9}\,\text{N}) \hat{y}\)</li>
+<li><span class="item-label">5.</span> \(F\text{(electron-proton)}/F\text{(earth-sun)} = 1.02\times10^{-69}\)</li>
+<li><span class="item-label">6.</span> \(F = 8.3\times10^{-8}\,\text{lb}\)</li>
+<li><span class="item-label">7.</span> \(\rho = 5.51 \times 10^3\unit{kg/m^{3}}\)</li>
+<li><span class="item-label">8.</span> 0.01°</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The (non-contact) gravitational force of the earth on you is what is commonly
+ called your “weight.”
+ It can be stated in pounds or in newtons.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">According to <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>, the force varies linearly with mass and inversely
+ with the square of the distance.  <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">From <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>:
+ \[\begin{aligned}F_s/F_e & = (G\,m_s\,m_{you}/r_{sy}^2)/(G\,m_e\,m_{you}/r_{ey}^2) \\         & = (m_s/m_e)\cdot\,(r_{ey}/r_{sy})^2 \\         & = \frac{1.99\times10^{30}\,\text{kg}}{5.98\times10^{24}
+                \,\text{kg}}\cdot\left[\frac{6.37\times10^6\,\text{m}}{1.50\times10^{11}\,\text{m}}\right]^2 \\         & = \ldots \end{aligned}\]
+
+<p> Note 1: This ratio is a dimensionless number.
+<p> Note 2: The symbol \(r_{sy}\) is the distance from the
+        sun to you, etc.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">If you convert between mass and weight, do it properly.
+ If you can't remember, look it up in the Index.
+ Also, see [S-1].
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">If you don't remember how to add vectors, look up vector addition in
+ the Index.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The distance of the moon from the sun is not given in the table of data so what should
+ you use for that distance?
+ To answer that question, use the distances of the moon from
+ the earth and the earth from the sun to calculate the
+ moon's distance from the sun when the moon, earth, and sun are all in a line and the moon
+ is on the side of the earth toward the sun and again when the moon is on the side of the earth
+ away from the sun (see the drawing below).  These two distances are the minimum and maximum values
+ for the moon-sun distance.  Try each of those numbers in solving
+ Problem&nbsp;1 and see whether it matters which of the two numbers you use.
+ <figure class="fig-centered"><img src="figures/m101gr05.svg" alt="" class="physnet-fig"></figure>
+
+ 
+ If you still can't get the correct numerical answer, see <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">When people did not get the right numerical answer, we have found that they did not pay close attention to the wording
+ of the problem and hence chose the wrong masses to put into the calculation.
+</div></div>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>solar.dat
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+The exam may include one, both, or neither of those skills.</li>
+<li><span class="item-label">2.</span> Determine the resultant force on the sun due to the earth and
+Venus when:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> they are on opposite sides of the sun;</li>
+<li><span class="item-label">b.</span> when their directions from the sun are at right angles.
+</li>
+<li>Sketch the situations.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's text.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;3.</li>
+</ol>
+
+<p></section>
+

@@ -1,0 +1,609 @@
+<header class="module-header">
+  <h1 class="module-title">Gauss's Law Applied to Cylindrical and Planar Charge Distributions <span class="module-author">(Peter Signell, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: cylindrical symmetry, planar symmetry <a href="../m153/" class="module-ref">MISN-0-153</a>;
+    Gaussian surface, volume charge density <a href="../m132/" class="module-ref">MISN-0-132</a>.</li><li><strong>2.</strong> State Gauss's law and apply it in cases of spherical symmetry
+    <a href="../m132/" class="module-ref">MISN-0-132</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: coaxial cable, cylinder of charge, line of charge,
+    sheet of charge, linear charge density.</li><li><strong>K2.</strong> Justify the Gaussian-Surface shapes that are appropriate for
+    cylindrical and planar charge distributions.</li><li><strong>K3.</strong> State Gauss's Law in equation form and define each symbol.
+    For cylindrical and planar charge distributions, define needed parameters
+    and then, justifying each step as you go, solve Gauss's Law for the
+    symbolic electric field at a space-point.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a specific charge distribution with cylindrical or planar
+    symmetry, use Gauss's law to determine the electric field produced by the
+    charge distribution.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Electric Fields and Potentials Across Charge Layers and In
+    Capacitors” (MISN-0-134).</li><li><strong>2.</strong> “Electrostatic Capacitance” (MISN-0-135).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Overview</h3>
+
+In this module Gauss's law is used to find the electric field
+in the neighborhood of charge distributions that have cylindrical
+and planar symmetry.
+For each of these two symmetries, useful Gaussian surfaces are easily
+constructed.
+Once an appropriate Gaussian surface is constructed, the
+electric field is easily found from Gauss's law:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\oint \vec{E} \cdot \hat{n}\,dS = 4 \pi k_e q_S\]
+<p>where \(q_S\) is the net charge enclosed by the Gaussian surface \(S\) and 
+\(k_e\) is the electrostatic force constant.
+<p><h3 id="pcap-1-b">1b. Usefulness</h3>
+
+It is very useful to know the electric field in the neighborhood of
+cylindrical and planar charge distributions, for these geometries are the
+ones used in coaxial cables and capacitors.
+Knowing the electric fields helps one determine how these devices will react
+in electronic circuits.
+In addition, the same general ideas are used in determining the magnetic
+fields produced in solenoids, transformers, coaxial cables, chokes, and
+transmission lines.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Cylindrical Symmetry: Line Charge</h2>
+
+<p><h3 id="pcap-2-a">2a. Approximating a Real Line by an Infinite One</h3>
+
+When dealing with a line of charge, we will treat it as though its ends had
+been extended to infinity.
+This approximation makes the resulting electric field especially simple
+and easy to solve for.
+The solutions we get for the infinitely long line will be applicable to the
+finite-line case for electric field points that are much closer to the
+middle part of the line than to its ends.
+For practical applications the “infinite line” is almost always a good
+approximation to the actual finite line.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m133gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A cylindrical Gaussian surface is used 
+to apply Gauss's law to a line of charge.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-b">2b. The Gaussian Surface</h3>
+
+For an infinitely long line with uniform linear charge density
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>along it, the preferred Gaussian surface is cylindrical (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+This follows from taking the two rules for constructing Gaussian surfaces
+and combining them with knowledge of the electric field's directions and
+equi-magnitude surfaces.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The axis of the cylindrical surface is along the line of charge, while the 
+surface's radius is that of the point at which you wish to know the electric
+field.
+The length of the cylindrical surface is immaterial.
+<p><h3 id="pcap-2-c">2c. The Electric Field</h3>
+
+Applying Gauss's law, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, to the case of a straight line
+of charge with uniform linear charge density (charge per unit length)
+\(\lambda\), we will show that the magnitude of the electric field at a
+distance \(r\) from the line is:
+<p>\[E = 2 k_e \frac{\lambda}{r}\,.\]
+<p>Proof: If the length of the cylindrical Gaussian surface is \(L\), then the
+charge enclosed by the surface is:
+<p>\[q_S = \lambda\,L\,.\]
+<p>The component of the electric field normal to either flat end of the closed
+cylindrical surface is zero, but the component normal to the cylindrical
+part of the surface is just the field itself:
+<p>\[\oint \vec{E} \cdot \hat{n}\,dS =
+       \int_\text{cyl.} \vec{E} \cdot \hat{n}\,dS +
+       \int_\text{ends} \vec{E} \cdot \hat{n}\,dS =
+         E \int_\text{cyl.} dS + 0 = E (2 \pi r L).\]
+<p>Using Gauss's law, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, to combine <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, we obtain the solution, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+Of course in a real problem our solution would be valid only in the region
+where the distance to the line of charge is much smaller than the distance
+to the line's nearest end.
+As an amusing “aside,” notice that <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> says that the sound
+of a long “line” of traffic will only die off as \(r^{-1}\) rather than
+the \(r^{-2}\) one obtains for a point source.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Other Cylindrical Distributions</h2>
+
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m133gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The Gaussian surface for a cylindrical
+surface charge distribution (on a cylindrical surface of radius \(R\)).</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3aElectric Field of a Cylindrical Surface
+A cylindrical surface with finite radius, constant surface charge density,
+and infinite extent, has an electric field whose preferred Gaussian surfaces
+are identical to those for an infinite charged line (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+This is because both the line and the cylindrical surface have the same 
+geometrical symmetry and hence the same electric field directions and
+equi-magnitude surfaces.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>For a charged surface of radius \(R\) and surface charge density \(\sigma\),
+the amount of charge enclosed by a Gaussian surface of radius \(r\) and
+length \(L\) is:
+<p>\[\begin{aligned}q_S & = 2 \pi R\,L\, \sigma && \quad \text{for } r > R \\     & = 0                   && \quad \text{for } r < R\end{aligned}\]
+
+<p>Exactly as in the case of the line of charge, the integral of the normal
+component of the electric field over the Gaussian surface is:
+<p>\[\oint \vec{E} \cdot \hat{n}\,dS = (2 \pi r L) E.\]
+<p>Then using <a href="#eqn-5" class="eqn-ref">Eqs.&nbsp;(5)</a> and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> in Gauss's law,
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, we find:
+<p>\[\begin{aligned}E & = 4 \pi k_e \frac{\sigma R}{r} && \quad \text{for } r > R \\   & = 0                             && \quad \text{for } r < R\end{aligned}\]
+
+<p><h3 id="pcap-3-b">3b. Linear vs. Surface Charge Density</h3>
+
+We may describe the charge distribution on a cylindrical surface as either
+a surface charge density or a linear charge density.
+<p>The surface charge density \(\sigma\) is the charge per unit area on the
+cylindrical surface:
+<p>\[\sigma = \frac{q}{2 \pi r \ell}\]
+<p>where \(2 \pi r \ell\) is the surface area of a cylinder of radius \(r\) and
+length \(\ell\).
+<p>The linear charge density \(\lambda\) is the (total) charge per unit length
+along the cylindrical surface:
+<p>\[\lambda = \frac{q}{\ell} = 2 \pi r \sigma\,.\]
+<p><span class="tryit">Try it:</span>  Show that if \(q = 1.0 \times 10^{-6}\)&thinsp;C, \(r = 1.0\)&thinsp;cm, and
+\(\ell = 1.0\)&thinsp;m, then \(\sigma = 1.6 \times 10^{-5}\unit{C/m^{2}}\) and
+\(\lambda = 1.0 \times 10^{-6}\,\text{C/m}\).
+<p><h3 id="pcap--">. </h3>
+[]3cThe Coaxial Cable
+A coaxial cable, such as that used to transport TV signals or the signal
+from a pickup to a stereo amplifier, consists of two metallic conductors
+with cylindrical symmetry, sharing a common cylinder axis and separated by
+some kind of insulator.
+The center cylinder is usually a solid copper wire while the outer one is
+usually a sheath of braided wire (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+This construction makes the cable mechanically flexible.
+As far as the electrical properties are concerned, there might as well be
+two concentric cylindrical surfaces
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>as shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The magnitude of the linear charge density on the two cylinders is the same, 
+so the magnitude of the surface charge density is higher on the inner 
+cylinder.
+For ordinary uses the charges on the two cylinders are of opposite sign.
+<p><h3 id="pcap--">. </h3>
+[]3dElectric Field of the Coaxial Cable
+Gauss's law shows that the electric field of a charged coaxial cable is zero
+except between the conducting cylindrical surfaces, where it is equal to the
+field produced by the inner cylinder.
+Applying Gauss's law to the coaxial cable's various regions, as shown in
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, the electric field is readily found to be:
+<p>\[\begin{aligned}\vec{E}_I & = 0 \\ \vec{E}_{II} & = 2 k_e \frac{\lambda}{r}\,\hat{r} \\ \vec{E}_{III} & = 0 \qquad \help{1}\end{aligned}\]
+
+<p>In region II of <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, \(\lambda\) is negative, so that particular electric
+field is directed radially inward.
+<p><div class="figure-row figure-row-2"><figure id="fig-3"><img src="figures/m133gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A cross-sectional view of a typical coaxial cable.</figcaption></figure><figure id="fig-4"><img src="figures/m133gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A cross-sectional view of the charge surfaces in a coaxial cable.
+       The radius of the inner cylinder is exaggerated for the purpose of illustration.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. A Single Sheet of Charge</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]4aApproximation: An Infinite Sheet
+We will restrict ourselves to the case of a uniform planar charge
+distribution of infinite extent: in other words, a flat sheet with a
+uniform surface charge density that extends to infinity.
+These restrictions make the resulting electric field especially simple and
+easy to determine.
+The solutions we get will be valid for any application in which the sheet
+of charge can be approximated by an infinite sheet with the same surface
+charge density.
+This approximation will be a good one when the distances from relevant 
+electric field points to the edges of the physical sheet are all much larger
+than the distance to the nearest point on the sheet of charge.
+Thus the edges will “look” an almost infinite distance away (in
+comparison).
+This will be the case for important charge-storing components in electronic 
+circuits.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m133gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. (a) A cross-sectional view of a Gaussian
+surface (dashed lines) for an infinite plane of charge; and (b) a
+three-dimensional view of the Gaussian surface.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-b">4b. The Gaussian Surface</h3>
+
+For a uniform planar charge distribution of infinite extent, all parts of
+the preferred Gaussian surface can be shown to be either parallel or
+perpendicular to the plane of the charge.
+This requirement would be satisfied, for example, by a box-like surface that
+is cut by the plane into two equal boxes (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+The “parallel or perpendicular” requirement follows from taking the two
+rules for constructing Gaussian surfaces and combining them with our
+knowledge of the electric field's directions and equi-magnitude surfaces.
+Any surface that satisfies the “parallel or perpendicular” requirement is
+acceptable, but rectangular and cylindrical boxes are the easiest to use in
+computing the surface areas and volumes that enter into Gauss's law.
+<p><h3 id="pcap-4-c">4c. The Electric Field</h3>
+
+Applying Gauss's law to a flat infinite sheet with uniform surface charge
+density \(\sigma\), we find that the magnitude of the electric field is
+everywhere the same:
+<p>\[E = 2 \pi k_e \sigma\,.\]
+<p>The direction of the field is normal to the sheet of charge, directed away
+from the sheet for a positive charge density and toward the sheet for a
+negative charge density.
+If the area of one end of the box-like Gaussian surface is \(A\), then the
+charge enclosed by the surface is:
+<p>\[q_S = \sigma\,A\,.\]
+<p>The component of the electric field normal to the side of the Gaussian
+surface is zero on the four sides that cut through the plane and equal to
+the electric field on the other two sides:
+<p>\[\oint \vec{E} \cdot \hat{n} \, dS = 2\,E\,A\,.\]
+<p>Using Gauss's law to combine <a href="#eqn-12" class="eqn-ref">Eqs.&nbsp;(12)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> we obtain
+<a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, the solution.
+Of course in a real problem the constancy of the electric field is
+restricted to regions where the distance to the sheet of charge is much
+smaller than the distance to the sheet's nearest edge.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Two Parallel Sheets of Charge</h2>
+
+<p><h3 id="pcap-5-a">5a. Unequal Surface Charge Densities</h3>
+
+Gauss's law can be easily applied to the case of two infinite parallel
+sheets having uniform surface charge densities \(\sigma\) and \({\sigma}'\),
+respectively.
+To obtain the electric field at some particular point, apply Gauss's law to
+each of the sheets separately and then add the fields from the two sheets
+vectorially.
+Note that the two Gaussian surfaces have one side in common.
+You should obtain the answers: <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p>\[E = 2 \pi k_e (\sigma + \sigma'), \qquad \text{(outside the planes)}\,.\]
+<p>\[E = 2 \pi k_e (\sigma - \sigma'), \qquad \text{(between the planes)}\,.\]
+<p>Note that these equations become particularly simple when \(\sigma\) and
+\({\sigma}'\) are equal.
+Note also that this problem has no symmetry plane so a single preferred
+Gaussian surface could not be drawn: the two rules for constructing such a
+surface could not be satisfied with only our usual prior knowledge of the
+field.
+<p><h3 id="pcap-5-b">5b. Equal Surface Charge Densities</h3>
+
+For two infinite parallel sheets of charge with identical surface charge
+densities, \(\sigma\), we can apply Gauss's law using a single Gaussian
+surface.
+There is a plane of symmetry that is parallel to the two sheets and half way
+between them, so the Gaussian surface must be symmetrical with respect to
+that plane of symmetry.
+In practical terms, the symmetry plane must cut the box-like surface into
+two identical box-like surfaces.
+Note how this symmetry of the Gaussian surface with respect to the problem's
+symmetry plane ensures that the two rules for constructing the preferred
+surface can be satisfied. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+If one end of the surface has area \(A\), the charge enclosed by the surface
+is:
+<p>\[q_S = 2\,\sigma\,A\, .\]
+<p>Then Gauss's law produces:
+<p>\[E = 4 \pi k_e \sigma, \qquad \text{(outside the sheets)},\]
+<p>and
+<p>\[E = 0, \qquad  \text{(between the sheets)}.\]
+<p>These two equations agree with <a href="#eqn-14" class="eqn-ref">Eqs.&nbsp;(14)</a> and <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a>.
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to thank Professor J.&thinsp;Linnemann for a valuable suggestion.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+an electrical cable consisting of two metallic
+concentric cylinders separated by some kind of insulator.
+The electric field is zero both inside the inner cylinder and outside the
+outer cylinder.
+<p>a charge distribution with cylindrical
+symmetry.
+For a cylinder of charge with constant density extending to infinity,
+the associated electric field falls off as (1/\(r\)) outside the surface
+(\(r\) is the radius from the axis of the cylinder).
+<p>a charge distribution along a straight line.
+This is a special case of <em>cylinder of charge</em>.
+<p>the charge per unit length along a line.
+<p>a charge distribution in a plane.
+For a plane of charge with constant density extending to infinity in all
+directions, the associated electric field is everywhere constant and normal
+to the plane.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Gauss's Law and Spherically Symmetric Charge
+Distributions” (MISN-0-132) for an introduction to Gauss's
+law and the rules for using it. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The term “linear charge density” means the charge is being
+described as a certain amount of charge per unit length along the wire.
+This is in contrast to “volume charge density” where the charge is
+described as a certain amount of charge per unit volume within the wire.
+For uniform cross-sectional distributions, the linear charge density equals
+the cross-sectional area times the volume charge density. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For the two rules for constructing Gaussian surfaces, see Ref.&thinsp;1.
+For derivation of the electric field directions and equi-magnitude surfaces
+see “Electric Fields from Symmetric Charge Distributions” (MISN-0-153). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Electric Field from Symmetric Charge Distributions,”
+(MISN-0-153), the section on infinitely long cylindrical charge
+distributions. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">Electrostatic charges reside on the surfaces of metallic
+conductors: see “Electrostatic Properties of Conductors” (MISN-0-136). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;7 and 8 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Two parallel lines of charge, shown coming out of the page in the
+sketch, are a distance \(2.0 d\) apart.
+If both are positively charged, find the electric field as a
+function of \(y\) at points along the perpendicular bisector of the
+line connecting the two [find \(\vec{E}(y)\) for \(x = 0\)].
+<figure class="fig-centered"><img src="figures/m133gr06.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">2.</span> An infinitely long cylinder of charge has a radius
+\(R\) and a volume charge density \(\rho\).
+Find the electric field in the regions \(r < R\) and \(r > R\) and
+show that both lead to the same result at \(r = R\). <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+m133gr07</li>
+<li><span class="item-label">3.</span> Find the electric field inside and outside a
+hollow cylinder of charge whose radius is \(R\), and whose linear charge
+density is \(\lambda\).m133gr08</li>
+<li><span class="item-label">4.</span> A cylinder of charge has volume charge density \(\rho\) and radius \(R_1\).
+Outside it and concentric with it is a cylindrical surface of charge with
+radius \(R_2\).
+The charge on this outer surface has a <em>linear</em> charge density \(\lambda\).
+Find the electric field in each of the three regions defined
+by the cylinder surfaces at \(R_1\) and \(R_2\).
+Show that the result in Problem&nbsp;3 can be obtained from the results in this
+Problem by letting \(R_1 = 0\), \(R_2 = R\).m133gr09</li>
+<li><span class="item-label">5.</span> Find the electric field in the four regions defined by the
+three infinite planes (sheets) of charge in the sketch.
+<p><figure class="fig-centered"><img src="figures/m133gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">6.</span> An infinite slab of charge of thickness \(d\) has a uniform charge
+density \(\rho\), as shown below in cross section in the sketch.
+Use Gauss's law to find the electric field inside and outside the slab.
+<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<figure class="fig-centered"><img src="figures/m133gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">7.</span> Use Gauss's law to find the electric field outside
+and inside two large parallel plates with equal surface charge densities
+\(\sigma\) on the plates and with volume charge density \(\rho\) between the
+plates.
+The distance between the plates is \(d\). <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>m133gr12</li>
+<li><span class="item-label">8.</span> Use Gauss's law to find the electric field in each of the three
+regions defined by two coaxial cylindrical surfaces, each with linear charge
+density \(\lambda\), and with a uniform volume charge density \(\rho\) inside
+the inner cylindrical surface.
+The radii of the two cylindrical surfaces are \(R_1\) and \(R_2\) (see diagram
+below).
+<figure class="fig-centered"><img src="figures/m133gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(E_x = 0\)</li>
+<li>\(E_y = 4 k_e \frac{\lambda y}{(d^2 + y^2)}\) <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+<li><span class="item-label">2.</span> \(\vec{E}(r) = 2 \pi k_e \rho r\,\hat{r}\) for \(r < R\)
+           <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li>\(\vec{E}(r) = 2 \pi k_e \frac{\rho R^2}{r} \,\hat{r}\) for \(r > R\)</li>
+<li>At the surface:
+           \(\vec{E}(R) = 2 \pi k_e \rho R \,\hat{r}\) for \(r = R\)</li>
+<li><span class="item-label">3.</span> Region 1 (\(r < R_1\)): \(\vec{E}(r) =
+           2 \pi k_e \rho r \,\hat{r}\) <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li>Region 2 (\(R_1 < r < R_2\)): \(\vec{E}(r) =
+           2 \pi k_e \frac{\rho R_1^2}{r} \,\hat{r}\)</li>
+<li>Region 3 (\(R_2 < r\)): \(\vec{E}(r) =
+           2 k_e \frac{\rho \pi R_1^2 + \lambda}{r} \,\hat{r}\)</li>
+<li><span class="item-label">4.</span> \(\ds \lim_{R_1 \rightarrow 0}
+            2 \pi k_e \left(\frac{\rho R_1^2}{r}\right) = 0\) ;
+           \(\vec{E} = 0\)    (for \(r < R\))</li>
+<li>\(\ds \lim_{R_1 \rightarrow 0}
+            \left(2 \pi k_e \frac{\rho R_1^2}{r} +
+                      2 k_e \frac{\lambda}{r} \right) =
+                      2 k_e \frac{\lambda}{r}\) ;
+           \(\vec{E}(r) = 2 k_e \frac{\lambda}{r}\hat{r}\) (for \(r>R\))</li>
+<li><span class="item-label">5.</span> In the figure below, note that each row of four arrows shows
+           the field that would be produced by just one plane of charge
+           alone (see the annotations down the right side of the figure).
+<p>           <figure class="fig-centered"><img src="figures/m133gr14.svg" alt="" class="physnet-fig"></figure>
+<br>
+</li>
+<li>\(\vec{E}_I = - 2 \pi k_e \sigma \hat{x}\) ; <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></li>
+<li>\(\vec{E}_{II} = 2 \pi k_e \sigma \hat{x}\) ; \qquad 
+           \(\vec{E}_{III} = - 2 \pi k_e \sigma \hat{x}\) ; \qquad 
+           \(\vec{E}_{IV} = 2 \pi k_e \sigma \hat{x}\).</li>
+<li><span class="item-label">6.</span> “Inside”:  \(\vec{E} = 4 \pi k_e \rho y\,\hat{y}\) ;</li>
+<li>“Outside”: \(\vec{E} = 2 \pi k_e \rho d\,\hat{y}\)</li>
+<li><span class="item-label">7.</span> Outside: \(\begin{array}[t]{l c l}
+\vec{E}_\text{right} & = & + 2 \pi k_e (2\sigma+d\rho)\,\hat{x}\\
+\vec{E}_\text{left}  & = & - 2 \pi k_e (2\sigma+d\rho)\,\hat{x}\\
+\end{array}\)</li>
+<li>Inside: \(\vec{E}= 4 \pi k_e \rho\,x\,\hat{x}\), where
+           \(x\) is measured from the symmetry plane between the plates.</li>
+<li><span class="item-label">8.</span> “Inside” region: \(\vec{E}(r)=
+                           2 \pi k_e \rho\,r\,\hat{r}\)</li>
+<li>“Between” region: \(\vec{E}(r)=
+   2 k_e \frac{\pi R_1^2\rho + \lambda}{r}\,\hat{r}\)</li>
+<li>“Outside” region: \(\vec{E}(r)=
+   2 k_e \frac{\pi R_1^2\rho + 2\lambda}{r}\,\hat{r}\)</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><br>
+
+ \(\ds \oint_{S_I} \vec{E}_I \cdot \hat{n} \, dS = 4 \pi k_e q_{S_I}
+                                                = 0\)<br>
+
+ \(\vec{E}_I \cdot \hat{n} = 0\) on cyl. surf.<br>
+
+ \(\vec{E}_I = 0\)<br>
+
+ \(\ds \oint_{S_{II}} \vec{E}_{II} \cdot \hat{n} \, dS =
+  4 \pi k_e q_{S_{II}} \newline\hspace*{3cm}= 4 \pi k_e \lambda \ell\)  <br>
+
+ \(\vec{E}_{II} \cdot \hat{n} (2\pi r \ell) =
+                           4 \pi k_e \lambda \ell\) 
+ \(\vec{E}_{II} = 2 k_e \frac{\lambda}{r}\,\hat{r}\)<br>
+
+ \(\ds \oint_{S_{III}} \vec{E}_{III} \cdot \hat{n} \, dS =
+ 4 \pi k_e q_{S_{III}} = 0\)<br>
+
+ \(\vec{E}_{III} \cdot \hat{n} = 0\) on cyl. surf.<br>
+
+ \(\vec{E}_{III} = 0\)
+ m133gr15
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body"><br>
+
+ \(\ds \oint_S \vec{E} \cdot \hat{n} \, dS = 4 \pi k_e q_S =
+  4 \pi k_e 2 \sigma A\)<br>
+
+ on ends: \(\vec{E} \cdot \hat{n} (2 A) =
+                                4 \pi k_e 2 \sigma A\)<br>
+
+ outside the planes: \(\vec{E} =
+              4 \pi k_e \sigma\,\hat{n}\)
+<p> <br>
+
+ \(\ds \oint_{S_1} \vec{E} \cdot \hat{n} \, dS = 4 \pi k_e q_S = 0\)<br>
+
+ on ends: \(\vec{E} \cdot \hat{n} (2 A) = 0\)<br>
+
+ between the planes: \(\vec{E} = 0\)m133gr16 
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+ Multiply all shown values by \(2 \pi k_e\):
+ <figure class="fig-centered"><img src="figures/m133gr17.svg" alt="" class="physnet-fig"></figure>
+
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Since the slab has planar symmetry, the field direction is everywhere normal
+ to the slab and the equi-magnitude surfaces are parallel to the slab faces
+ (see MISN-0-153).
+ When you construct Gaussian surfaces, take advantage of the reflection
+ symmetry about the \(x\)-\(z\) plane by choosing the two faces that are parallel
+ to the slab to be equidistant from the slab as well.
+ That way you can write the surface integral of \(\vec{E}\) as:
+ 
+ \[\oint_S \vec{E} \cdot\,d\vec{S} = 2\,E\,A\]
+ 
+ since the field is uniform over the two Gaussian surface areas, and the field
+ must be the same on each surface by symmetry.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Draw a sketch of the situation and on it mark the given quantities.
+ Then  figure out and mark on the sketch the \(\theta\) and \(r\) we use
+ here:<br>
+
+ \(E_y\text{(total)} = E_y\text{(from \#1)} + E_y\text{(from \#2)}\)<br>
+
+ \(E_y\text{(from \#1)} = E\text{(from \#1)}\, \cos\theta\)<br>
+
+ \(E_y\text{(from \#2)} = E\text{(from \#2)}\, \cos\theta\)<br>
+
+ \(E\text{(from \#1)} = E\text{(from \#2)} = 2 k_e \lambda/(r)\)<br>
+
+ where \(r = (d^2 + y^2)^{1/2}\), \(\lambda\) is the charge per unit length
+ along each wire, and \(\cos\theta = y/r\).<br>
+
+ \(E_y\text{(total)} = 4 k_e \lambda y/(r^2) =
+                 4 k_e \lambda y/(d^2 + y^2)\)
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">“Charge volume density” is “charge per unit volume” and in the MKS
+  system is measured in <span class="unit">&thinsp;C/m<sup>3</sup></span>.<br>
+
+ Then: total charge = charge volume density \(\times\) volume,<br>
+
+ where all three quantities refer to “inside the surface.”
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Completely solve Problems&nbsp;1 and 2 first.<br>
+
+ “Linear charge density” is “charge per unit length” and in the MKS
+  system is measured in C/m.<br>
+
+ It is the amount of charge per unit length down the entire cylindrical
+ surface.
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Use Gauss's Law separately on each plane (as though the other did not
+ exist) to get: \(\vec{E}_I\) (due to #1), \(\vec{E}_I\) (due to #2), and
+ \(\vec{E}_I\) (due to #3).
+ Then add them to get \(\vec{E}\) in region I, here labeled \(\vec{E}_I\).
+</div></div>
+
+<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">The concept that has caused students trouble in the past (in Problem&nbsp;2)
+ is directly  and clearly handled in this module's <em>text</em>.
+ Read and understand it there.
+</div></div>
+
+<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">First, try your very best to solve this problem  without Special
+ Assistance.
+ Go back and work through the text <em>again</em>, this time paying special
+ attention to sections relevant to this problem.
+ Remember that you will not have the Special Assistance available at exam
+ time so you need to learn how to work without it.
+ 
+<p> If you try and try and truly fail, then try the Special Assistance in [S-5].
+</div></div>
+
+<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">Calculating the enclosed charge involves techniques you used
+in the two previous problems.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Use Gauss's law to find the electric field outside
+and inside two large parallel plates with equal surface charge densities
+\(\sigma\) on the plates and with volume charge density \(\rho\) between the
+plates. The distance between the plates is \(d\).m133gr12</li>
+<li><span class="item-label">3.</span> Use Gauss's law to find the electric field in each of the three
+regions defined by two coaxial cylindrical surfaces, each with linear charge
+density \(\lambda\), and with a uniform volume charge density \(\rho\) inside
+the inner cylindrical surface.
+The radii of the two cylindrical surfaces are \(R_1\) and \(R_2\) (see diagram
+below).<figure class="fig-centered"><img src="figures/m133gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;7.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, Problem&nbsp;8.</li>
+</ol>
+
+<p></section>
+

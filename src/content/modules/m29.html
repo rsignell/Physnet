@@ -1,0 +1,449 @@
+<header class="module-header">
+  <h1 class="module-title">Damped Mechanical Oscillations <span class="module-author">(Peter Signell, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Work with Simple Harmonic Motion equations, especially the differential
+    equation of motion <a href="../m26/" class="module-ref">MISN-0-26</a>.</li><li><strong>2.</strong> Use and understand complex algebra and complex functions,
+    especially \(\exp(x+iy)\) type functions <a href="../m59/" class="module-ref">MISN-0-59</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: underdamped oscillator, critically damped oscillator,
+    overdamped oscillator, oscillation envelope.</li><li><strong>K2.</strong> Write down the displacement equation solutions for underdamped,
+    critically damped, and overdamped oscillators.
+    Show that each is, in fact, a solution to Newton's Second Law for the force
+    \(F\,=\,-\,kx\,-\,\lambda v\), for the proper relationships of \(\gamma\) and
+    \(\omega\) to \(m\), \(k\), and \(\lambda\).</li><li><strong>K3.</strong> Sketch a graph of the displacement, \(x(t)\) for the
+    underdamped oscillator, labeling the envelope of the oscillations
+    and indicating the initial phase used (not zero).</li><li><strong>K4.</strong> Sketch graphs of displacement vs. time showing the transition from
+    small to large damping, including the critically damped case.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given the decrease of an amplitude with time, find the damping
+    constant and vice versa.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m29gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A simple damped oscillator.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-a">1a. Damping is Universal</h3>
+
+In this module we add damping, or kinetic energy dissipation, to the case of
+simple harmonic motion.
+This is important because such dissipation is always present in real mechanical
+systems.
+In addition, we often wish to design the rate of dissipation in order to damp
+out unwanted oscillatory motions.
+An example of this is the up and down motion of a car wheel after it goes
+over a bump; without damping the wheel would continue to oscillate up and
+down indefinitely.
+<p><h3 id="pcap-1-b">1b. An Example</h3>
+
+In <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> we show a simple damped oscillatory system consisting of a spring,
+a mass, and a damping device (a device that dissipates the kinetic energy of the
+oscillator).
+Without the damping device, the mass will oscillate indefinitely.
+With the device, its motion gradually dies out.
+<p>Inside the cylindrical damping device there is a piston immersed in a fluid.
+This fluid resists the motion of the piston through it.
+This resistance can be controlled by varying the viscosity of the fluid or by
+otherwise varying its ability to bypass the piston.
+<p><span class="tex-unknown" title="unknown macro">\TextAndFigurePage</span>
+<h3 id="pcap-1-c">1c. Varying the Resistance to Motion</h3>
+
+If we gradually increase the ability of the damping device in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> to resist
+motion, we get the series of curves shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+Each curve shows the displacement of the oscillator from its position of static
+equilibrium as a function of time.
+<p>The first curve is with no damping.
+Succeeding curves are for increasing resistance of the damping device to
+motion, such as by making the fluid go from water to light oil to heavy oil to
+thick molasses (the quantity \(\gamma\) is a measure of this increasing
+resistance).
+Note that a point is reached beyond which there are  no oscillations.
+This transition point, called the  critical damping point, occurs at
+\(\gamma = 2 \pi f_0\).
+<p><h3 id="pcap-1-d">1d. Prospectus</h3>
+
+In the rest of this module we will first treat each forces acting on the
+mass separately, then combine the forces.
+This means we will review the restoring force that produces simple harmonic
+motion, then introduce the damping force and see what it does to the motion.
+In the process we will make quantitative the ideas we have discussed.
+This will provide an understanding of a wide variety of cases and devices.
+It will also lay the ground work for considering damped  driven oscillatory
+motion, wherein energy is continually fed into the system as well as being
+dissipated from it.
+<p>The addition of the driving force is treated elsewhere.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+2<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>. (see text).m29gr02
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Forces</h2>
+
+<p><h3 id="pcap-2-a">2a. The Restoring Force</h3>
+
+The restoring force is the force that, at all times, accelerates the oscillator
+back toward the position of static equilibrium.
+If the displacement is sufficiently small for the case at hand, the restoring
+force will be linear to a good approximation so we write it:
+<p>\[F = -\,kx\,.\]
+<p>A force that obeys <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, with an interpretation of \(k\) appropriate for that
+force, is called a “Hooke's law force.”
+If it is the only force acting on a mass, the mass will undergo Simple Harmonic
+Motion (hereafter referred to as “SHM”):
+<p>\[x(t) = x(0)\,\cos{(\omega_0 t + \alpha)}\,.\]
+<p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> into
+\(F=ma\) and show that the equation is satisfied if the constant \(\omega_0\)
+is equal to the correct combination of \(m\) and \(k\).
+<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>&thinsp;
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><h3 id="pcap-2-b">2b. The Damping Force</h3>
+
+A “damping force” is one that, acting by itself, (smoothly) stops motion.
+For example, friction acting on a horizontally coasting bicycle or car is a
+damping force because it gradually brings the vehicle to a halt.
+<p>A damping force must oppose the velocity in order that the resultant
+acceleration is a deceleration.
+This means that, mathematically, the damping force has the opposite sign
+to the velocity.
+The damping force cannot be a constant since that would decrease the velocity
+through zero and then cause it to increase in the direction of the force,
+whereas the damping force (by itself) is to make the motion stop and then
+stay stopped.
+If the damping is sufficiently small for the case at hand, it is likely to
+be linear to a good approximation:
+<p>\[F = -\lambda v\,.\]
+<p>If this is the only force acting on a mass, the velocity will decrease
+to zero exponentially in time:
+<p>\[v(t) = v(0)\,\exp{(-\gamma t)}\,.\]
+<p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> into
+\(F=ma\) and show that the equation is satisfied if the constant \(\gamma\)
+is equal to the correct combination of \(\lambda\) and \(m\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+Since the differential equation is second order and homogeneous, this
+solution is the unique solution (apart from transformations to mathematically
+equivalent functions).
+<p><span class="tryit">Try it:</span>  Visualize <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> as a graph and think of how the
+curve on it changes as the damping constant \(\lambda\) and mass \(m\) are
+increased and decreased. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><span class="tryit">Try it:</span>  Integrate <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> to give:
+\(x(t) = x(0) - [v(0)/\gamma]\,\exp{(-\gamma t)}\).
+<p><h3 id="pcap-2-c">2c. The Two Forces Together</h3>
+
+A linearly-damped linearly-restored oscillator is one in which the force
+acting on the mass is the sum of <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+<p>\[F = -\,kx\,-\lambda v\,.\]
+<p>In this case we will write the solution differently depending on whether
+\(\lambda\) is smaller, equal to, or larger than the combination \(2\sqrt{mk}\).
+These three cases are referred to as “underdamped,” “critically damped,”
+and “overdamped.”
+We could write a single solution for all three cases but it would involve
+complex variables.
+To avoid that, we separate the three cases:
+
+<div class="centered"><table class="physnet-table"><tbody><tr><td>underdamped:       </td><td>\(\lambda\)</td><td>\(<\)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>critically damped: </td><td>\(\lambda\)</td><td>\(=\)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>overdamped:        </td><td>\(\lambda\)</td><td>\(>\)</td><td>\(2\sqrt{mk}\)</td></tr></tbody></table>
+</div>
+
+<p><span class="tryit">Try it:</span>  Note that the progression in the names matches the progression in the
+size of the damping constant \(\lambda\).
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Damped Oscillator Solutions</h2>
+
+<p><h3 id="pcap-3-a">3a. The Underdamped Solution</h3>
+
+For the underdamped case, the solution to \(F=ma\) can be written in the form:
+<p>\[x(t) = A\,e^{-\gamma t}\,\cos{(\omega t + \alpha)}\,.\]
+<p> Here \(A\) and \(\alpha\) must be fixed by two known values of \(x\), or
+its derivatives, at one or two specific times.
+For example, \(A\) and \(\alpha\) could be fixed by knowing \(x\) at two different
+times or by knowing \(x\) at a specific time and the velocity \(v\) at a specific
+time.
+<p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> into
+\(F=ma\) and show that the equation is satisfied if the constants \(\gamma\)
+and \(\omega\) are equal to the correct combinations of \(k\), \(\lambda\), and \(m\):
+<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p>\[\gamma = \lambda/(2 m)\,,\]
+<p>\[\omega = \sqrt{\omega_0^2 - \gamma^2}\,,\]
+<p>where we define the undamped frequency, \(\omega_0\), as usual:
+<p>\[\omega_0 = \sqrt{k/m}\,.\]
+<p>Note that the condition for the underdamped case can be written:
+\(\lambda < \omega_0\).
+<p><span class="tryit">Try it:</span>  Sketch a graph of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
+Note that the frequency of the oscillations, \(\omega\), remains constant in time
+but that the amplitude of the oscillations dies out exponentially.
+To make the sketch, first construct positive and negative decreasing
+exponential functions on the graph using dashed lines.
+The result should be a graph that is symmetric under reflections about the time
+axis.
+Now draw the constant-frequency exponentially-dying oscillations inside the
+dashed-lines “envelope.” <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p><h3 id="pcap-3-b">3b. The Overdamped Solution</h3>
+
+<p>For the overdamped case, \(\gamma > \omega_0\), the solution can be written in
+the form:
+<p>\[x(t) = A'\,e^{-(\gamma + \omega ')t} + B'\,e^{-(\gamma - \omega ')t}\,.\]
+<p>where \(\gamma\) and \(\omega_0\) are as before and:
+<p>\[\omega ' = \sqrt{\gamma^2-\,\omega_0^2}\,.\]
+<p>As in the underdamped case, \(A'\) and \(B'\) must be fixed by two known values of
+\(x(t)\) and/or its derivatives.
+<a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> can be shown to be mathematically equivalent to
+<p><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p><span class="tryit">Try it:</span>   Sketch a graph of <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.
+Note that the curve is just the sum of two decaying exponentials.
+To the inexperienced eye, the sketch will look more or less like a single
+decaying exponential.
+<p><span class="tryit">Try it:</span>  Make sketches of what happens to the curve as you increase the damping
+constant to make it farther and farther from “critical” damping.
+<p><h3 id="pcap-3-c">3c. The Critically Damped Solution</h3>
+
+<p>For the critically damped case, \(\omega = \omega ' = 0\).
+Using this, we can create a simpler form of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> or
+<a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> by letting \(\omega\) or \(\omega '\) approach zero in either
+<p>of those equations.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>This gives:
+<p>\[x(t) = (A'' + B'' t)\,e^{-\gamma t}\,.\]
+<p>Again, \(A''\) and \(B''\) must be fixed by two known values of \(x(t)\) and/or its
+derivatives.
+<p><span class="tryit">Try it:</span>   Sketch a graph of <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
+<p><h3 id="pcap-3-d">3d. The Transition</h3>
+
+In <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> we have plotted \(x(t)\), <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, for increasing
+values of the damping constant \(\lambda\).
+The critically damped case is not shown but corresponds to:
+\(\gamma = \omega_0 = 2 \pi f_0\).
+We have chosen the constants such that \(\alpha = 0\).
+<p>Think of the system shown in the figure as the wheel of a car that
+has just gone over a sharp bump.
+If the shock absorber is worn out and hence inoperative, the damping is zero
+and the wheel oscillates up and down as in the first figure.
+If the shock absorber is almost worn out, so the damping is small, the wheel
+responds as in the next figure.
+If the shock absorber produces too much damping, the wheel takes a long time
+to come back to the equilibrium position, as shown in the last figure.
+Obviously, critical damping is close to what one wants.
+It is also obvious that the shock absorbers must be matched to the weight of
+the car and to the stiffness of its springs.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>The author wishes to thank Jules Kovacs and Julie Junttila for helping to
+put together a study guide for a previous version of this module.
+Production was supported in part by grants from the National Science
+Foundation and from IBM.
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Notes for Those Interested</h2>
+
+<p><h3 id="pcap--a">a. The Equivalence of <a href="#eqn-11" class="eqn-ref">Eqs.&nbsp;(11)</a> and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a></h3>
+
+To see that the two equations are equivalent, note that \(\omega^2=-\omega^2\)
+so \(\omega ' = i \omega\) where \(i = \sqrt{-1}\).
+Make this substitution and finish the conversion using
+\(e^{ix} = \cos{x} + i \sin{x}\). <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><h3 id="pcap--b">b. Derivation of <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a></h3>
+
+To show that <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> is the limit of
+<a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> as \(\omega\) approaches zero, use the
+approximation: \(e^x \approx 1 + x\) for small \(x\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><h3 id="pcap--c">c. Uniqueness of the solution</h3>
+
+A fundamental existence theorem in mathematics guarantees that there is only
+one solution to \(F=ma\) for a force that is linear in \(x\), \(v\), and/or \(a\),
+providing that force contains no higher derivatives and providing the solution
+contains two independently adjustable constants.
+Thus any solution we find that satisfies \(F=ma\), with the restrictions noted,
+is the only solution.
+That is why we we can show that the three forms are equivalent.
+<p>Although the solution is unique in a mathematical sense, it can also be thought
+of as a two-parameter family of solutions, the two parameters being the two
+adjustable constants.
+For example, consider the plotted curve for an underdamped case, showing
+oscillations inside a decaying-exponential envelope.
+Assume the value zero for the phase \(\alpha\) so the curve is at its highest
+value at the origin.
+Now start continuously increasing \(\alpha\) and watch as the curve changes
+shape, going through complete oscillational cycles down and up the vertical
+axis at the origin as \(\alpha\) continues to increase.
+Of course the constant \(A\) can also be varied and together the two variations
+produce the two-parameter family of solutions for fixed \(\lambda\), \(k\), and
+\(m\).
+</section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Damped Driven Oscillatory Motion,” (MISN-0-30). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">If you need help in this, see sequence [S-1] in this module's
+<em>Special Assistance Supplement</em>. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">If you are interested, see this module's <em>Appendix</em>. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">If you are interested in the details, see this module's
+<em>Appendix</em>. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> A meter needle is to be designed so that its amplitude of vibration
+will drop by 99.0% in three oscillations, hence be unobservable after that.
+If the frequency of oscillation of the needle is 2.00 per second, determine
+the design damping constant \(\gamma\).</li>
+<li><span class="item-label">2.</span> An engineering student observing the diving board at the swimming pool
+notices that the vibrating board's amplitude changes from 14.0&thinsp;cm to 8.00&thinsp;cm
+in 0.800 seconds.
+Determine the damping constant \(\gamma\) of the board.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> \(\gamma\) = 3.07<span class="unit">&thinsp;/s</span></li>
+<li><span class="item-label">2.</span> \(\gamma\) = 0.700<span class="unit">&thinsp;/s</span></li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+\(F=ma\) becomes: <br>
+
+\(-kx=m(d^2x/dt^2)x=m[-x(0)\omega_0^2 \cos{(\omega_0 t + \alpha)}] =
+-m \omega_0^2 x\)&thinsp;.
+<br>
+
+We set \(\omega_0^2 = k/m\), substitute it in on the right hand side,
+and the equation is satisfied.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+\(f=ma\) becomes: <br>
+
+\( - \lambda v = m (d/dt) v = m [-v(0) \gamma \exp{(-\gamma t)}] =
+- m \gamma v\)&thinsp;. <br>
+
+We set \(\gamma = \lambda /m\), substitute it in on the right hand side,
+and the equation is satisfied.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+As \(\gamma\) increases the curve falls off more sharply.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+\(x=A\exp{-\gamma t}\cos{(\omega t + \alpha)}\) <br>
+
+Differentiate \(x\) to get: <br>
+
+\(v=-\gamma A \exp{-\gamma t} \cos{(\omega t + \alpha)} - \omega A \exp{-\gamma t} \sin{(\omega t + \alpha)}\) <br>
+
+hence: <br>
+
+\(v=- \gamma x - \omega A \gamma \exp{-\gamma t} \sin{(\omega t + \alpha)}\) <br>
+
+hence: <br>
+
+\(\omega A \exp{-\gamma t} \sin{(\omega t + \alpha)} = - v - \gamma x\)&thinsp;.<br>
+
+Now differentiate \(v\) to get: <br>
+
+\(a=- \gamma v + \omega A \gamma \exp{-\gamma t} \sin{(\omega t + \alpha)} - \omega^2 A \exp{-\gamma t} \cos{(\omega t + \alpha)}\) <br>
+
+or:<br>
+
+\(a=-(2\gamma) v - (\gamma^2 + \omega^2) x\)&thinsp;. <br>
+
+Then \(f=ma\) becomes: <br>
+
+\( - k x - \lambda v = m a = -(2\gamma m) v - [m(\gamma^2 + \omega^2)] x \)&thinsp;. <br>
+
+We set \(\gamma=\lambda/(2m)\) and \(\omega^2=\omega_0^2 - \gamma^2\) and the
+equation is satisfied (with \(\omega_0^2 = k/m\)).
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+ \underline Step 1:  \underline Step 2: <br>
+
+<figure class="fig-centered"><img src="figures/m29gr03.svg" alt="" class="physnet-fig"></figure>
+
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">
+Compare the definitions of \(\omega\) and \(\omega '\) and you will see
+that: \(\omega ' = i \omega\).
+We substitute that into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and find:<br>
+
+\(x = A' e^{-\gamma t - i \omega t} + B' e^{-\gamma t + i \omega t}\)&thinsp;. <br>
+
+Now \(e^{a+b} = e^a\,e^b\) hence: <br>
+
+\(x = e^{-\gamma t} [A' e^{-i\omega t} + B' e^{+i\omega t}]\)&thinsp;. <br>
+
+We now set \(A' = A e^{-i\alpha/2}\) and \(B' = A e^{+i\alpha/2}\) <br>
+
+so we get:
+\(x = A e{-\gamma t}\,\cos{(\omega t + \alpha)}\) which is just <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>. <br>
+
+Note: \(\cos{x} = (e^{ix} + e^{-ix})/2\).
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+Write <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> as: <br>
+
+\(x = e^{-\gamma t} (A' e^{-\omega ' t} + B' e^{+\omega ' t})\)&thinsp;. <br>
+
+We now make \(\omega '\) small so \(e^{\pm \omega ' t} \approx (1 \pm \omega ' t)\)&thinsp;. <br>
+
+Substituting this, we get: <br>
+
+\(x = e^{-\gamma t} [A' (1 - \omega ' t) + B' (1 + \omega ' t)]\)&thinsp;, <br>
+
+or: <br>
+
+\(x = e^{-\gamma t} [ (A' + B') + t (\omega' B' - \omega ' A')]\)&thinsp;. <br>
+
+We now set \(A'' = A' + B'\) and \(B'' = \omega ' (B' - A')\) so we get: <br>
+
+\(x = e^{-\gamma t} (A'' + B'' t)\)&thinsp;, which is just <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills (Knowledge) K1-K4 on this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> An engineering student observing the diving board at the swimming pool
+notices that the vibrating board's amplitude changes from 14.0<span class="unit">&thinsp;cm</span> to 8.00<span class="unit">&thinsp;cm</span>
+in 0.800<span class="unit">&thinsp;seconds</span>.
+Find the damping constant \(\gamma\) of the board.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See the text and Special Assistance Supplement.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;2 in the Problem Supplement.</li>
+</ol>
+
+<p></section>
+

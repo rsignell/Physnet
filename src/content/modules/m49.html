@@ -1,0 +1,192 @@
+<header class="module-header">
+  <h1 class="module-title">Resonances and Poles; Real and Imaginary Worlds <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Describe the time-average steady state power 
+    transferred into a damped driven oscillator from its driving force <a href="../m31/" class="module-ref">MISN-0-31</a>.</li><li><strong>2.</strong> Plot pole trajectories of any given reciprocal of a quadratic
+    function <a href="../m59/" class="module-ref">MISN-0-59</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Suppose there is a narrow resonance in a physical system and
+    state what measurements you could make in order to determine the approximate
+    locations of the nearby poles.
+    State the conditions under which the approximate locations are accurate.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Sketch complex-plane pole trajectories for given single functions
+    of frequency.</li><li><strong>R2.</strong> Given the observed width and position of a resonance, determine
+    the approximate position of a nearby pole.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Locating the Poles</h2>
+
+<p>It can be shown that the time-average steady-state power fed into a damped
+driven oscillator is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[P_\text{ave}(\omega) = \frac{F_0^2 \omega_0^2 \gamma/m}
+                    {(\omega_0^2 - \omega^2)^2 + 4\gamma^2 \omega^2}\,,\]
+<p>where \(\omega\) is the driving frequency (hence the frequency of oscillation
+of the oscillator), \(F_0\) is the amplitude
+of the sinusoidal driving force, \(\omega_0\) is the frequency of the
+oscillator when undamped and undriven, and \(\gamma\) is the damping constant.
+If we consider the frequency of oscillation \(\omega\) to be a complex
+variable, then the denominator can be factored (zeros found) by applying the
+quadratic root formula with \(\omega^2\) as the variable.
+Then the roots of the denominator, \(\omega_p\), are solutions to:
+<p>\[\omega_p^2 = -2\gamma^2 + \omega_0^2 \pm
+                         2i \sqrt{\omega_0^2 - \gamma^2}\,.\]
+<p>In turn, the square root of \(\omega_p^2\) gives the actual roots:
+<p>\[\omega_p = \pm \sqrt{\omega_0^2 - \gamma^2} \pm i \gamma\,.\]
+<p><span class="tryit">Try it:</span>  Square this to prove that it is indeed the square root.
+<p>We can now write:
+<p>\[P_\text{ave}(\omega) = \frac{F_0^2 \omega^2 \; \gamma/m}
+           {(\omega - \omega_1)(\omega -\omega_2)(\omega - \omega_3)
+                                              (\omega - \omega_4)}\,,\]
+<p>where the four \(\omega\)'s are the four values one obtains with the four
+possible sign combinations in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+At each of these roots of the denominator the value of \(P\) becomes
+infinite so \(P\) is said to have a simple pole there.
+The pole locations have an obvious symmetry (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Note that the radius vector to any pole has the length:
+<p>\[\sqrt{\left( {\cal R}e\{\omega_p\} \right)^2 +
+             \left( {\cal I}m\{\omega_p\} \right)^2}\; = \omega_0\,,\]
+<p>which is independent of the amount of damping in the system.
+Thus as you increase the damping the poles trace out trajectories which are
+arcs of circles of constant radius \(\omega_0\).
+<p><span class="tryit">Try it:</span>  Plot these arcs on the graph above.
+<p><span class="tryit">Try it:</span>  When you reach \(\gamma = \omega_0\) the poles are all on the imaginary axis.
+Where do the trajectories go as you continue to increase \(\gamma\) beyond
+\(\omega_0\)?
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m49gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Pole positions are shown by \(+\)'s.</figcaption></figure></div>
+
+<p><span class="tryit">Try it:</span>  What happens as \(\gamma \rightarrow \infty\)?
+<p><span class="tryit">Try it:</span>  How do these trajectories correlate with under damping, critical damping
+and overdamping?
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>We now go back to the small-damping case, \(\gamma \ll \omega_0\), where the
+poles in the first and fourth quadrants have the positions:
+<p>\[\omega_{1,4}= \sqrt{\omega_0^2 - \gamma^2}\, \pm
+                         \gamma \simeq \omega_0 \pm i\gamma\,.\]
+<p>In this case the real parts of these pole positions are both very close to
+the resonant frequency \(\omega_0\), as shown in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m49gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Definitions of resonance parameters.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Resonance Width</h2>
+
+<p>The width \(\Gamma\) of the resonance at half-maximum can be deduced by
+writing:
+<p>\[P(\omega_0 \pm \Gamma/2) = \frac{1}{2}\, P (\omega_0)\,.\]
+<p>The resonance parameters are illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p>For the case \(\gamma \ll \omega_0\), the resonance will turn out to
+have a width \(\Gamma\) which is very small compared to the resonant
+frequency \(\omega_0\) so that the denominator of \(P(\omega_0 + \Gamma/2)\)
+can be written:
+<p>\[[\omega_0^2 - (\omega_0 \pm \Gamma/2)^2]^2 +4\gamma^2
+     (\omega_0 \pm \Gamma/2)^2 \simeq \omega_0^2(\Gamma^2 +4\gamma^2)\,.\]
+<p>Putting this and \(\omega^2 \simeq \omega_0^2\) into (4) yields:
+<p>\[\frac{F_0^2 \omega_0^2 \gamma/m}{\omega_0^2(\Gamma^2 +4\gamma^2)}
+     =\frac{1}{2} \frac{F_0^2\omega_0^2 \gamma/m}{4\gamma^2 \omega_0^2}\,.\]
+<p>for which the solution is \(\gamma =  \Gamma/2\).
+Incidentally, this result confirms that for small damping,
+\(\gamma \ll \omega_0\), we have a narrow width: \(\Gamma \ll \omega_0\).
+<p>Then the imaginary parts of the pole positions for \(\gamma \ll \omega_0\) are
+given by the half-width at half-maximum of the observed resonance.
+Thus as damping is made smaller (\(\gamma\)  smaller), the poles approach the
+real axis from each side and the resonance gets narrower and higher.
+<p>The Appendix shows you the case: \(\gamma = 0.209\, \omega_0\).
+<p><span class="tryit">Try it:</span>  In the Appendix figures, color the \({\cal I}m\{\omega\}\) axis red,
+the vertical surface along the positive \({\cal R}e\{\omega\}\) axis blue.
+<p>
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Pictures of Poles and Resonances</h2>
+
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m49gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Definitions of the three axes for
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> and <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.</figcaption></figure>
+
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m49gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. \(P_\text{ave}(\omega)\).  The surface has been removed
+                                   for \({\cal I}m\{\omega\} > 0\).</figcaption></figure></div>
+
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/M49gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. As in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, but entire surface shown.</figcaption></figure></div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Damped Driven Oscillations; Mechanical Resonances”
+(MISN-O-31). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2"> See “Damped Mechanical Oscillations” (MISN-0-29). <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>These problems also occur on this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Locate the poles of: \(F(\omega ) =
+             \frac{a^2}{(\omega - \omega_0)^2 + a^2} \,\).</li>
+<li><span class="item-label">2.</span> Sketch the pole trajectories resulting from variations of the
+           parameter \(a\) in problem (1).</li>
+<li><span class="item-label">3.</span> For the above case, determine the relations between the pole
+           positions and the resonance width and position.</li>
+<li><span class="item-label">4.</span> If there is a narrow resonance in a physical system, state what
+           measurements you could make in order to determine the approximate
+           locations of the nearby poles.
+           State the conditions under which the approximate locations are
+           accurate.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> Solve the denominator for \(\omega\).</li>
+<li><span class="item-label">2.</span> Your plot should show the two poles fleeing the real axis in
+           opposite directions along a single straight line as \(a\) is
+           increased.</li>
+<li><span class="item-label">3.</span> You should find, good for all values of \(a\):
+           \(\Gamma = 2\, {\cal I}m\{\omega_p\}\), and
+           \(\omega_{res} = {\cal R}e\{\omega_p\}\).</li>
+<li><span class="item-label">4.</span> See this module's <em>text</em>, and think about it.</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>These problems also occur in this module's <em>Problem Supplement</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Locate the poles of: \(F(\omega ) =
+             \frac{a^2}{(\omega - \omega_0)^2 + a^2} \,\).</li>
+<li><span class="item-label">2.</span> Sketch the pole trajectories resulting from variations of the
+           parameter \(a\) in problem (1).</li>
+<li><span class="item-label">3.</span> For the above case, determine the relations between the pole
+           positions and the resonance width and position.</li>
+<li><span class="item-label">4.</span> If there is a narrow resonance in a physical system, state what
+           measurements you could make in order to determine the approximate
+           locations of the nearby poles.
+           State the conditions under which the approximate locations are
+           accurate.</li>
+</ol>
+
+</section>
+

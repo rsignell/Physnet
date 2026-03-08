@@ -1,0 +1,501 @@
+<header class="module-header">
+  <h1 class="module-title">Orbital Motion in an Inverse-Square-Law Force Field <span class="module-author">(Paul M.Parker)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: Newton's law of universal gravitation, universal
+    gravitational constant <a href="../m101/" class="module-ref">MISN-0-101</a>; period, angular velocity <a href="../m9/" class="module-ref">MISN-0-9</a>;
+    angular momentum <a href="../m41/" class="module-ref">MISN-0-41</a>; conic section, eccentricity, (glossary).</li><li><strong>2.</strong> Solve problems involving uniform circular motion produced by a
+    given centripetal force <a href="../m17/" class="module-ref">MISN-0-17</a>.</li><li><strong>3.</strong> Calculate the gravitational force vector on one mass due to a
+    given configuration of other masses <a href="../m101/" class="module-ref">MISN-0-101</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: apogee, central force, perigee.</li><li><strong>K2.</strong> State Kepler's three kinematical laws of planetary motion.</li><li><strong>K3.</strong> State how Newton's law of universal gravitation may be used to justify
+    Kepler's laws.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given a table of solar system data, use Newton's law of universal
+    gravitation and the value of g at the earth's surface to determine
+    the period of revolution, orbital speed, and centripetal acceleration
+    of a given circularly orbiting satellite.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Derivation of Newton's Law of Gravitation” (MISN-0-103).</li><li><strong>2.</strong> “Orbits in an Inverse-Square-Law Force Field: A Computer Project”
+    (MISN-0-105).</li><li><strong>3.</strong> “The Equivalence Principle: An Introduction to Relativistic Gravitation”
+    (MISN-0-110).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Historical Overview</h2>
+
+<p><h3 id="pcap-1-a">1a. Introduction</h3>
+
+Since earliest recorded human history, the motion of the planets in
+the heavens has attracted the attentions of the curious.
+Against the background of the stars whose positions in the sky are
+fixed relative to each other, the motions of the planets appear
+quite complicated and much attention was given over the centuries to
+arriving at some sort of explanation for this seemingly mysterious
+behavior of the planets.
+<p><h3 id="pcap-1-b">1b. Copernicus Proposes a Heliocentric Solar System</h3>
+
+It was the Polish astronomer Nicolaus Copernicus (1473-1543) who
+advanced the idea that all the then known planets were in orbit around a
+single star, our sun.
+In this heliocentric view, the earth is merely one of a number of 
+sun-orbiting planets, not the center of the universe as it was in the
+then widely accepted view of Claudius Ptolemy of Alexandria (2nd century
+ ad) and his successors.
+Copernicus discovered that
+from the heliocentric point of view, the planets appear to orbit the
+sun smoothly and without the puzzling intricacies that earth-bound
+observation introduces.
+<p><h3 id="pcap-1-c">1c. Astronomical Observations Lead to Laws of Motion</h3>
+
+The Danish astronomer Tycho Brahe (1546-1601) spent most of his adult life
+recording the motions of the planets with unprecedented accuracy.
+His German disciple and colleague Johannes Kepler (1571-1630) continued
+his work but unlike Brahe, Kepler enthusiastically accepted the heliocentric
+theory of Copernicus.
+This eventually allowed him to extract from the massive and accurate
+data available to him a set of three laws of planetary motion of
+general validity.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Kepler's Laws of Planetary Motion</h2>
+
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m102gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An illustration of Kepler's second law.</figcaption></figure>
+
+<p><h3 id="pcap-2-a">2a. Kepler's First and Second Laws</h3>
+
+Kepler's first law states that all planets travel in elliptical paths
+with the sun at one of the two foci of the ellipse.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The second law states that the radius vector \(\vec{r}\) between the sun and
+the instantaneous position of a planet “sweeps out” equal amounts
+of area of ellipse in equal intervals of time.
+This means that if the time it takes the planet to go
+from \(B\) to \(C\) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> is equal to the time it takes the planet to go
+from \(D\) to \(E\), the shaded areas in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> will be equal.
+As a consequence, the further the planet is from the sun, the slower
+it will move.
+The planet moves fastest at the perigee \(P\) (the point of closest approach)
+and slowest at the apogee \(A\) (the point farthest away from the sun).
+For the limiting case of a circle Kepler's second law requires the orbiting
+speed to be constant and the type of motion therefore is uniform circular
+motion.
+<p><h3 id="pcap-2-b">2b. Kepler's Third Law</h3>
+
+While the first and second laws apply to each planet individually,
+the third law relates the motions of the planets to each other.
+The law states that the periods \(T_1\) and \(T_2\) of two planets are related
+to the mean radii \(R_1\) and \(R_2\) of their respective orbits by
+<p>\[\frac{T_1^2}{T_2^2} = \frac{R_1^3}{R_2^3}\,.\]
+<p>The period of an orbital motion is defined as the time required to
+complete one orbit.
+The mean radius of an elliptic orbit is defined as the semi-major
+axis of the ellipse, one half the distance between apogee and perigee.
+The discovery of the third law, Kepler writes, was the culmination
+of seventeen years of intensive work.
+“At last, the true relation ... overcame by storm the shadows of my
+mind ... with such fullness of agreement ... that I at first believed
+that I was dreaming.”
+<p>
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Newton's Interpretation</h2>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m102gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The gravitational attraction of two masses.</figcaption></figure>
+
+<p><h3 id="pcap-3-a">3a. Newton Applied His Law of Gravitation</h3>
+
+Newton's discovery of the law of universal gravitation,
+<p>\[F = G\frac{m_1 m_2}{r^2}\,,\]
+<p>naturally led him to investigate whether this type of force, when used
+in the second law of mechanics, \(\vec{F} = m\vec{a}\), would provide the
+dynamical explanation of the three kinematical laws of Kepler.
+Newton found that indeed it did.
+<p><h3 id="pcap-3-b">3b. Kepler's Second Law Results From a Central Force</h3>
+
+The second law of Kepler is a consequence of the fact that the
+gravitational force exerted by the sun and acting on a planet is
+a central force, i.e., at all times directed along the radius vector
+and pointing toward the sun, and not having at any time a component,
+however small, perpendicular to the radius.
+A force of this nature cannot change the angular momentum of the
+planet, \(m v r\), around the sun.
+Therefore, conservation of angular momentum requires that any decrease
+in \(v\) is compensated for by an increase in \(r\), and vice versa.
+This can be shown to require the exact behavior specified by Kepler's
+second law.
+<p><h3 id="pcap-3-c">3c. Inverse-Square Force Yields Kepler's First &amp; Third Laws</h3>
+
+The first and the third laws require the force to be specifically an
+inverse-square force, that is, its magnitude must vary as 1/\(r^2\).
+The detailed proofs are beyond the scope of this module, but a proof of the
+third law for circular orbits will be given in Section 4.
+It can be shown that a compact object moving under the influence
+of a central, inverse-square force will move on a path which is
+a conic section: a hyperbolic path if the force is repulsive, and a
+circular, elliptic or parabolic path if the force is attractive.
+Since the gravitational force is attractive, closed orbits must
+therefore be elliptic (with the circular orbit as a special case).
+Open orbits are parabolic, such as those of non-returning comets which
+pass through the solar system only once.
+(Halley's comet is a returning comet which moves on a highly eccentric
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>elliptic path.)
+Thus, Kepler's first law is a direct consequence of the gravitational
+force being central and inverse-square.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Circular-Orbit Satellite Motion</h2>
+
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m102gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A satellite orbiting the earth.</figcaption></figure>
+
+<p><h3 id="pcap-4-a">4a. Overview</h3>
+
+In this section, we will examine the motion of 
+a satellite orbiting a spherically symmetric, massive object under the 
+influence of the universal gravitational force.
+This could be the motion of a spaceship orbiting the earth, or a spaceship
+orbiting another planet, moon, the sun or another star.
+It could also be the motion of a moon orbiting its planet, or the motion
+of a planet in (near) circular motion around the sun.
+We will discuss this type of motion in terms of a spaceship orbiting
+the earth but the discussion applies equally well to any other of
+the above situations.
+<p><h3 id="pcap-4-b">4b. Gravity Provides The Centripetal Force</h3>
+
+Let the satellite move with uniform circular motion on a path of
+radius \(R\), and therefore a distance of (\(R - R_e\)) above the surface
+of the earth.
+The centripetal force acting on the satellite is the universal
+gravitational force exerted by the earth and its magnitude must
+equal the satellite's mass m times its centripetal acceleration
+\(v^2/R\):
+<p>\[G \frac{Mm}{R^2} = \frac{mv^2}{R}\,.\]
+<p>The mass of the satellite \(m\) can be cancelled which means that
+<a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> is valid for a satellite of any mass.
+Solving for \(v\) one obtains
+<p>\[v = \left( \frac{GM}{R} \right)^{1/2}\,.\]
+<p>The period (time of one revolution) for uniform circular motion is
+<p>\[T = \frac{\text{distance for one revolution}}
+                  {\text{speed during the revolution}} =
+                                             \frac{2\pi R}{v}\,,\]
+<p>and using the expression for \(v\) from <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> gives
+<p>\[T = 2 \pi \left( \frac{R^3}{GM} \right)^{1/2}\,.\]
+<p>This shows that the square of the period of the satellite motion is
+proportional to the cube of the radius \(R\) of the path, in agreement
+with Kepler's third law, at least for circular orbits.
+We can define an “acceleration due to gravity at radius \(R\)
+from the center of the earth,” \(g_R\), and write (where \(R > R_e\)):
+<p>\[g_R = \frac{G M}{R^2}\,,\]
+<p>This allows the expressions for \(v\) and \(T\) to be expressed in the more compact
+forms
+<p>\[v = \left( g_R R \right)^{1/2}; \qquad
+                 T = 2 \pi \left( \frac{R}{g_R} \right)^{1/2}\,,\]
+<p>For a tightly orbiting satellite, say, a spaceship only a hundred
+miles above earth, \(R \approx R_e = 6.37 \times 10^6\)&thinsp;m,
+\(g_R \approx g = 9.81\)&thinsp;m/s<sup>2</sup>, from
+which one determines a period \(T\) of roughly ninety minutes and an orbital
+speed of about 8&thinsp;km/s.
+Note that for a given \(R\), both \(v\) and \(T\) of the satellite's motion are
+fixed.
+As can be seen most directly from <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)</a> and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, the
+larger the orbit, the longer the period and the slower the speed.
+<p><h3 id="pcap-4-c">4c. The Satellite Travels in Free-Fall</h3>
+
+The spaceship and its passengers at all times experience an acceleration
+equal to the local acceleration of gravity.
+They are therefore at all times in a free-fall condition which is
+a condition equivalent to weightlessness.
+Note, then, that the spaceship is weightless not because it is in
+some gravity-free space, which it isn't, but because it is accelerating
+freely in the very real gravitational field of the earth.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Conclusion</h2>
+
+<p><h3 id="pcap-5-a">5a. Planets May Perturb the Orbits of Neighbors</h3>
+
+Extremely refined calculations of planetary motions must take into
+account the secondary effects of the gravitational attraction of the planets
+on each other.
+Careful analysis of these small, so-called perturbations clears up remaining
+discrepancies and allows the prediction of the positions of the planets
+over the centuries with split-second accuracy.
+Such calculations led to the prediction of the existence of two heretofore
+unknown planets and their subsequent discovery, the planet Neptune in 1846
+and the planet Pluto in 1930.
+<p><h3 id="pcap-5-b">5b. Gravitational Mass vs. Inertial Mass</h3>
+
+Some reflection shows that mass, traditionally defined as the amount of
+matter contained in a given object, appears in physics in two different
+aspects: (1) as the coefficient of inertia in Newton's second law - the
+more massive an object, the larger a force is required to produce a
+specified amount of acceleration; and (2) as gravitational mass: the more
+massive an object, the larger a gravitational force it exerts and
+experiences.
+There is no logical necessity that the mass of an object when determined
+by inertial methods is, in the same units, equal to the mass of the object
+when measured by gravitational methods (for example, by weighing it).
+It is therefore meaningful to ask whether the inertial mass of an object
+differs from its gravitational mass, however small the difference may be.
+Experiments to answer this question were first carried out by the
+Hungarian physicist E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os in 1909 and continued by others.
+All these experiments have so far shown that there is no difference
+between inertial and gravitational mass to the accuracy of the
+experiments.
+The best accuracy on record is about one part in \(10^{11}\).
+In other words, if there is a difference between the gravitational
+and inertial mass of an object, it will not show up before the
+eleventh digit in the measurement results!
+Therefore, the distinction between inertial and gravitational mass is
+superfluous and no such distinction is required.
+The equivalence between gravitational and inertial mass has been exploited
+by Einstein in 1911 and forms the cornerstone of his general theory
+of relativity which is primarily a theory of gravitation, constituting
+the first significant advance since the days of Newton.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the point of a satellite's orbit furthest from the focus of its
+elliptical path.
+a force which is radial along the line joining the two
+interacting systems.
+the point of a satellite's orbit closest to the focus of its
+elliptical path.
+a plane curve which may be obtained by cutting a cross
+section of a cone.
+The possibilities include a circle, an ellipse, a parabola, and a hyperbola.
+the ratio of the distance from the focus to a point on a
+conic section, to the distance from a fixed straight line to the same
+point on the conic section.
+The numerical value of the eccentricity, e, determines what kind of curve
+the conic section is:
+<p>\[\begin{aligned}e > 1 & \Longrightarrow \text{ hyperbola} \\ e = 1 & \Longrightarrow \text{ parabola} \\ e < 1 & \Longrightarrow \text{ ellipse} \\ e = 0 & \Longrightarrow \text{ circle}\end{aligned}\]
+
+<p></section>
+
+
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The data indicated that those ellipses were nearly circular, but true
+ellipses they were. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The words “highly eccentric” mean that the orbit is far from
+being circular. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-PS1">The earth's equatorial plane is the plane that includes the
+earth's equator. <a href="#fnref-PS1" class="fn-back">↩</a></li><li id="fn-PS2">The symbol [S-1] means that if you have trouble getting the answer
+you can get help from sequence [S-1] in this module's <em>Special Assistance
+Supplement</em>. <a href="#fnref-PS2" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;7 also occurs in this module's <em>Model Exam</em>.
+<p><div class="centered">1&thinsp;lb (force) = 4.448&thinsp;N; \qquad  1&thinsp;km = 0.6214&thinsp;mi; \qquad 
+               1&thinsp;yr = 3.167\( \times 10^7\)&thinsp;s</div>
+
+<p>solar.dat
+<p><ol>
+<li><span class="item-label">1.</span> Phobos, a moon of Mars, travels in a circular orbit of radius
+\(9.4 \times10^6\)&thinsp;m about that planet.
+Starting from the law of universal gravitation, calculate Phobos's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> orbital speed</li>
+<li><span class="item-label">b.</span> period of revolution</li>
+<li><span class="item-label">c.</span> centripetal acceleration
+</li>
+<li><span class="item-label">2.</span> Using the law of universal gravitation and assuming circular
+orbits with the heavier body fixed at center of the circle, calculate the
+period of revolution (in days) of:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the earth about the sun</li>
+<li><span class="item-label">b.</span> the moon about the earth.
+</li>
+<li>Compare your values to those in the table, which are: (a) a year;
+and (b) a lunar month.</li>
+<li><span class="item-label">3.</span> Find the orbital speed of a satellite in orbit 200&thinsp;km above the
+earth.</li>
+<li><span class="item-label">4.</span> Calculate the shortest possible period of revolution for a
+spaceship orbiting:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the earth</li>
+<li><span class="item-label">b.</span> the moon.
+</li>
+<li><span class="item-label">5.</span> What is the shortest period of revolution for a satellite
+revolving about a planet whose radius is \(1.0 \times 10^3\,\text{km}\) and whose
+surface value of \(g\) is \(5.0\unit{m/s^{2}}\)?
+Calculate the orbital speed and centripetal acceleration of a satellite
+\(1.0 \times 10^2\)&thinsp;km above the planet's surface.</li>
+<li><span class="item-label">6.</span> Find the distance above the earth's surface (in earth radii) a
+satellite orbiting in the earth's equatorial plane
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>must be in order for it to be stationary above a certain location at all
+times.
+(If the orbit does not lie in the equatorial plane, the satellite will
+still be in the same location every day at a given time of day - a very
+useful property for a communications satellite.)</li>
+<li><span class="item-label">7.</span> A spacecraft is in a circular orbit about the moon,
+           \(8.0\times10^1\)&thinsp;miles above the moon's surface.
+           Starting from Newton's law of universal gravitation, calculate the
+           spacecraft's:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> orbital speed,</li>
+<li><span class="item-label">b.</span> period of revolution,</li>
+<li><span class="item-label">c.</span> centripetal acceleration.
+</li>
+<li>Do not use a remembered value for the universal gravitational
+           constant \(G\).
+           Instead, use your instant-recall value of g at the earth's
+           surface and the radius of the earth (in the Solar System Data
+           Table) to find \(G\). <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(v = 2.13 \times 10^3\)&thinsp;m/s.</li>
+<li><span class="item-label">b.</span> \(T = 2.77 \times 10^4\)&thinsp;s = 7.69&thinsp;hr</li>
+<li><span class="item-label">c.</span> \(a = 0.483\)&thinsp;m/\(s^2\)&thinsp;, radially inward.
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(T = 3.17 \times 10^7\)&thinsp;s =
+           367&thinsp;days (1&thinsp;yr.\( = 3.16 \times 10^7\)&thinsp;s).</li>
+<li><span class="item-label">b.</span> \(T = 2.37 \times 10^6\)&thinsp;s = 27.4&thinsp;days
+           &thinsp;(lunar month\( = 2.36 \times 10^6\)&thinsp;s).
+</li>
+<li><span class="item-label">3.</span> \(7.79 \times 10^3\)&thinsp;m/s.</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(T = 5.06 \times 10^3\)&thinsp;s = 84.3&thinsp;min. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>&thinsp;
+<p><sup class="fn-ref"><a href="#fn-PS2" id="fnref-PS2">PS2</a></sup></li>
+<li><span class="item-label">b.</span> \(T = 6.52 \times 10^3\)&thinsp;s = 109&thinsp;min.  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+</li>
+<li><span class="item-label">5.</span> \(T = 2.8 \times 10^3\)&thinsp;s,</li>
+<li>\(v = 2.1 \times 10^3\)&thinsp;m/s, <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li>\(a = 4.1\)&thinsp;m/\(s^2\). <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">6.</span> 5.6 radii <em>above</em> the earth's surface. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">7.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(1.62 \times 10^3\)&thinsp;m/s. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">b.</span> \(7.25 \times 10^3\)&thinsp;s. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+<li><span class="item-label">c.</span> \(-\) (1.40&thinsp;m/\(s^2\))&thinsp;\(\hat{r}\). <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Remember the equations that make up <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, use them to derive <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>,
+ note that minimum \(T\) means minimum \(R\).
+ What is the minimum \(R\) for a satellite orbiting the earth?  For one
+ orbiting the moon?  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">It would make no sense to design an orbit that is below ground level!
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(R_p = 1.0 \times 10^6\)&thinsp;m; \qquad  \(R = 1.1 \times 10^6\)&thinsp;m.
+ 
+ \(g = 5.0\)&thinsp;m/s<sup>2</sup>.
+
+<p> \(g_R = \left( \frac{R_p}{R} \right)^2 g = 4.1\)&thinsp;m/s<sup>2</sup>.
+ 
+<p> \(v_R = \sqrt{g_R\,R} = 2.1 \times 10^3\)&thinsp;m/s.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">The derivation of \(G\) from \(g\) and \(R_e\) is shown in this module's
+ <em>text</em>.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Orbital speed, orbital period, and centripetal acceleration are all
+covered adequately (for this problem) in this module's <em>text</em>.
+For a more elementary discussion of these quantities, see the Index.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">What is the orbital period of all points on the surface of the earth?
+ Then what is the orbital period of the satellite if it stays above a point
+ on the surface of the earth?
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">A question: How far is the satellite from the center of the moon?</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>solar.dat
+<ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+           One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> A spacecraft is in a circular orbit about the moon,
+           \(8.0\times10^1\)&thinsp;miles above the moon's surface.
+           Starting from Newton's law of universal gravitation, calculate the
+           spacecraft's: (a.) orbital speed; (b) period of revolution;
+           (c) centripetal acceleration.</li>
+<li>Do not use a remembered value for the universal gravitational
+           constant \(G\).
+           Instead, use your instant-recall value of g at the earth's
+           surface and the radius of the earth to find \(G\).</li>
+</ol>
+
+<h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;7.</li>
+</ol>
+
+</section>
+

@@ -1,0 +1,633 @@
+<header class="module-header">
+  <h1 class="module-title">Energy Graphs, Motion, Turning Points <span class="module-author">(J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State the relationship between the line integral of a conservative force
+    between specified limits and the potential energy difference between those
+    limits <a href="../m21/" class="module-ref">MISN-0-21</a>.</li><li><strong>2.</strong> Given the graph of a simple function, such as f&thinsp;=&thinsp;x&thinsp;exp(-&thinsp;a&thinsp;x), demonstrate
+    the relationship between slope and derivative at any given point <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>3.</strong> State the law of conservation of energy for mechanical systems, defining
+    kinetic and potential energy <a href="../m21/" class="module-ref">MISN-0-21</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: potential energy curve, energy diagram, turning point.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given the potential energy of a particle as a function of position
+    (in one dimension or radially with spherical symmetry) determine (for a given
+    position) the force acting on that particle and its acceleration, velocity,
+    and turning points (if any).</li><li><strong>S2.</strong> Given the graph of a one-dimensional potential energy function and the
+    total energy of a particle, give a qualitative description of the motion of
+    this particle and locate its turning points and regions of acceleration and
+    deceleration.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>If the potential energy corresponding to a conservative force and the total
+energy of a particle are known, then all dynamical quantities of the particle
+can be found.
+These include the force acting on the particle, the acceleration, the
+velocity, and the kinetic energy, which along with the total and potential
+energy, can all be determined at each point in space.
+The use of potential energy functions and graphs for finding these
+quantities is the subject of this module.
+Here we will restrict ourselves to problems that involve only one coordinate,
+either one-dimensional problems or three-dimensional ones that have spherical
+symmetry, for which the single coordinate \(r\), the distance of the particle
+from the force center, is sufficient.
+The main difference between the two cases is that the coordinate \(x\) goes
+from \(-\infty\) to \(+\infty\) while the coordinate \(r\) goes from 0 to \(\infty\).
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Force and Potential Energy</h2>
+
+<p><h3 id="pcap-2-a">2a. \(E_p\) from \(F(x)\)</h3>
+
+Given a conservative force acting on a particle, that particle's potential
+energy function can be obtained from the line integral of the force function
+along the path taken:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[E_p(x_2) - E_p(x_1) = - \int_{x_1}^{x_2} F(x)\,dx\,,\]
+<p>where \(F(x)\) is the force acting on the particle.
+Then \(E_p(x_2)\) is the particle's potential energy function at any point \(x_2\).
+As usual with potential energies, only differences have any meaning:
+<p>one normally interprets <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> as giving a particle's potential energy at
+any point \(x_2\) relative to its potential energy at some reference point \(x_1\).
+<p>On the other hand, the same integral is often written:
+<p>\[E_p(x) - E_p(x_\text{std ref pt}) =
+                  - \int_{x_\text{std ref pt}}^{x} F(x')\,dx'\,,\]
+<p>where \(x'\) is the “dummy variable of integration.” <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+In fact, this integral is usually written with the standard reference
+point omitted from the left hand side:
+<p>\[E_p(x) = - \int_{x_\text{std ref pt}}^{x} F(x')\,dx'\,.\]
+<p>The standard reference point used to generate any particular \(E_p(x)\)
+can be deduced by simply seeing what value of \(x\) makes \(E_p\) zero.
+<p>For example, suppose \(F(x) = - k x\) so <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> produces: <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p>\[E_p(x_2) - E_p(x_1) = k (x_2^2 - x_1^2)/2\,.\]
+<p>To simplify this equation we normally choose \(x_1\) = 0 and choose \(E_p\) to be
+zero there.
+Thus we have chosen \(x = 0\) as the reference point.
+Now we replace the position symbol \(x_2\) by the equally good (and simpler)
+position symbol \(x\).
+Then we quote: \(E_p(x) = k x^2/2\).
+Any other scientist can see by inspection that we have taken \(E_p\) to be zero
+at \(x = 0\).
+<p><h3 id="pcap-2-b">2b. \(F(x)\) from \(E_p(x)\)</h3>
+
+The force acting on a particle can be found from the particle's potential
+energy function by applying the Intermediate Value Theorem of calculus to
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>This produces the result:
+<p>\[F(x) = - \frac{dE_p(x)}{dx}\,.\]
+<p>Thus the force is the negative derivative of the potential energy function.
+<p>Graphically, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> says that at any given point the force is in the
+direction in which the potential energy decreases and that its magnitude is
+equal to the slope of the potential energy curve at that point.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>For example, we can apply <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> to find the gravitational force near the
+surface of the earth.
+Taking the \(z\)-axis perpendicular to the surface of the earth and increasing
+upward, the potential energy of a particle of mass m is:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[E_p(z) = m g z + \text{ constant}.\]
+<p>The force on the particle is then:
+<p>\[F(z) = - \frac{dE_p}{dz} = - m g\,.\]
+<p>The final minus sign in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, with \(m\) and \(g\) positive, indicates that the
+force is in the direction in which \(z\) decreases, downward.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m22gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An illustrative potential energy curve (see
+text).</figcaption></figure></div>
+
+<p><h3 id="pcap-2-c">2c. \(F(x)\) from Graph of \(E_p(x)\)</h3>
+
+Characteristics of the force on a particle can be deduced from a graph of
+the particle's potential energy plotted as a function of position.
+Such a graph is called a potential energy curve.
+Consider the potential energy curve in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+One immediately notes that the particle with this potential energy is not
+moving freely.
+It feels a force which at each point is the negative of the slope of the
+\(E_p(x)\) curve.
+At all points for which \(x < x_0\) the slope of the curve is negative and
+the particle feels a positive force, one directed to the right.
+Furthermore, because the slope at \(x_1\) is steeper than at \(x_2\), the magnitude of
+the force on the particle is greater at \(x_1\) than at \(x_2\).
+At \(x_0\) the particle feels no force.
+At all points for which \(x > x_0\) the particle feels a negative force, one
+directed to the left.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Deductions From Functional \(E_p(x)\)</h2>
+
+<p><h3 id="pcap-3-a">3a. \(a(x)\) from \(E_p(x)\)</h3>
+
+Knowing a particle's potential energy as a function of position,
+one can deduce the particle's acceleration as a function of position.
+Using Newton's second law, in the form \(a(x) = F(x)/m\), and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, one gets:
+<p>\[a(x) = - \frac{1}{m}\frac{dE_p}{dx}\,.\]
+<p>One need only remember Newton's law and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> and combine them any time
+one wants \(a(x)\).
+<p><h3 id="pcap-3-b">3b. \(v(x)\) from Conservation of Energy</h3>
+
+Although \(v(x)\) can be obtained from \(E_p(x)\) by integrating \(a(x)\),
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>it is generally quicker and easier to use the equation for conservation of
+energy,
+<p>\[\frac{1}{2} m v_0^2 + E_p(x_0) = \frac{1}{2} m v^2(x) + E_p(x)\,.\]
+<p>All we need do is rearrange that equation to get:
+<p>\[v(x)^2 =
+     v_0(x)^2 - \frac{2}{m} \left[ E_p(x)-E_p(x_0)\right]\,.\]
+<p>
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Deductions From Graphical \(E_p(x)\)</h2>
+
+<p><h3 id="pcap-4-a">4a. Energy Diagrams</h3>
+
+If both total energy and potential energy are plotted as functions of
+position on the same graph, useful information about the motion of the
+particle may be determined from that diagram.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>The total energy, potential plus kinetic, is always a horizontal straight
+line on such a graph because its value is independent of position.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p><a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> shows the potential energy curve of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> with two different
+total energies superimposed on it.
+For a given total energy the particle's kinetic energy at each point x can
+be measured as the vertical distance between the potential energy at that
+point and the total energy.
+For example, with total energy \(E_1\), the particle's kinetic energy, when it is
+at position \(x_A\), is the indicated vertical distance shown on the graph.
+For a particle with total energy \(E_2\), its potential energy at \(x_A\) would be
+the same as in the \(E_1\) case but its kinetic energy would be less.
+<p><h3 id="pcap-4-b">4b. Changes in Speed</h3>
+
+Once the kinetic energy \(E_k\) is obtained from the energy diagram, the speed can
+be found:
+<p>\[v = (2\,E_k/m)^{1/2}\,.\]
+<p>However, the direction of the particle's velocity is ambiguous:
+the kinetic energy will match the given \(E_k\) whether the particle is moving to
+the right or to the left.
+However, the particle's change in kinetic energy, and hence its change in
+speed, does depend on its direction of motion.
+For example, if the particle in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> is at \(x_A\) and is moving to the right,
+its kinetic energy is increasing so its speed is increasing.
+Such changes in speed, which depend on the particle's direction of motion,
+are given by the direction of its acceleration, the negative of the slope
+of its potential energy curve [<a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a>].
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m22gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. An illustrative energy diagram showing one
+potential energy and two total energy curves on the same graph.
+Kinetic energy is the difference between the total and potential energies.</figcaption></figure></div>
+
+<p><h3 id="pcap-4-c">4c. Turning Points</h3>
+
+There are often limits on the positions available to a particle: those
+limits are called “turning points” and they depend on the particle's
+potential energy function and on its total energy.
+For example: for a particle with the potential energy function shown in
+<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, and with total energy \(E_1\), the particle can go no farther to the
+left than \(x_1\) and no farther to the right than \(x_2\).
+Thus \(x_1\) and \(x_2\) are the turning points for \(E_1\).
+<p>Consider the situation in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> with the particle at \(x_A\), with total energy
+\(E_1\), and moving left.
+As it moves left its kinetic energy decreases until the particle reaches \(x_1\)
+where its potential energy equals its total energy.
+Since nothing is left for its kinetic energy, its velocity at this point is
+zero.
+However, the particle is only instantaneously at rest.
+<p>Throughout the neighborhood of \(x_1\) the force acts on the particle to the
+right, as can be seen from the negative slope of \(E_p\) in the neighborhood of
+\(x_1\).
+As the particle approaches \(x_1\) from the right, going left, this force causes
+it to slow down, stop as it reaches \(x_1\), then pick up speed to the right.
+Thus point \(x_1\) is truly a “turning point” of the motion.
+Similarly, \(x_2\) is a turning point on the right end of the motion:
+it is the point at which the particle moving to the right comes to a stop,
+then starts back left.
+For total energy \(E_2\) the turning points are \(x_3\) and \(x_4\).
+Now suppose the total energy line is lowered until it goes through the
+minimum of the potential energy curve at point \(x_0\): describe the particle's
+motion for that case. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Dealing with \(E_p(r)\)</h2>
+
+<p>All of the results discussed in this module can be applied to
+three-dimensional cases that have spherical symmetry.
+This means cases where the force, potential energy, velocity,
+etc. depend only on the particle's radius from the origin of coordinates
+(which is normally the origin of the force associated with \(E_p\)).
+For such cases the one-dimensional position “\(x\)” is replaced by the
+radial position “\(r\).”
+That means that \(E_p(r)\) is differentiated with respect to “\(r\)” to get
+\(F(r)\), etc.
+The main difference from Cartesian coordinates is that negative values of \(r\)
+do not exist.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+diagram consisting of the potential energy
+curve and a horizontal line representing the total energy of the particle.
+the graph of
+the potential energy of a particle as a function of position.
+positions at which a particle changes its
+direction of motion.
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Force From Potential Energy</h2>
+
+<p>Here we start with the definition of potential energy difference,
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>,
+<p>\[E_p(x_2) - E_p(x_1) = - \int_{x_1}^{x_2} F(x)\,dx\,,\]
+<p>and invert that equation to derive <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
+<p>\[F(x) = - \frac{dE_p(x)}{dx}\,.\]
+<p>Since the first equation holds for all values of \(x_1\) and \(x_2\) in a given
+range, we let \(x_2 = x_1 + \Delta x\) and write it as:
+<p>\[E_p(x_1 + \Delta x) - E_p(x_1) =
+                - \int_{x_1}^{x_1 + \Delta x} F(x)\,dx\,.\]
+<p>If \(F(x)\) is a continuous function, then by the Intermediate Value Theorem
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>there exists an \(x_0\) in the interval (\(x_1\),\(x_1 + \Delta x\)) such that
+\(F(x_0)\) is an average of \(F(x)\) over that interval:
+<p>\[\frac{1}{\Delta x} \int_{x_1}^{x_1 + \Delta x} F(x) dx =
+                                                        F(x_0)\,.\]
+<p>Combining the above two equations we get:
+<p>\[- \frac{E_p(x_1 + \Delta x) - E_p(x_1)}{\Delta x} =
+                                                       F(x_0)\,.\]
+<p>Now we take the limit of both sides as \(\Delta x \rightarrow 0\).
+Then, as \(\Delta x \rightarrow 0\), we see that \(x_0 \rightarrow x_1\)
+(<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>) and \(F(x_0) \rightarrow F(x_1)\) (<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>).
+Then:
+<p>\[\lim_{\Delta x \rightarrow 0} F(x) = \lim_{\Delta x \rightarrow 0}
+\left[ - \frac{E_p(x_1+\Delta x)-E_p(x_1)}{\Delta x} \right]\,,\]
+<p>so:
+<p>\[F(x_1) = - \frac{dE_p(x_1)}{dx_1}\,.\]
+<p>The equation just above holds for any point \(x_1\) in the given range, so
+the subscripts “1” can be removed and the proof is finished.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. \(v(x)\) and \(x(t)\) from \(a(x)\)</h2>
+
+<p>This appendix deals with how to obtain \(v(x)\) and \(x(t)\) from \(a(x)\).
+Notice the difference from the more straightforward case where all three
+of those quantities are functions of time.
+In that case we obtain \(v(t)\) and \(x(t)\) from \(a(t)\) by integrating with
+respect to time:
+<p>\[v(t_2) - v(t_1) = \int_{t_1}^{t_2} \, a(t)\,dt\,,\]
+<p>\[x(t_2) - x(t_1) = \int_{t_1}^{t_2} \, v(t)\,dt\,.\]
+<p>To obtain \(v(x)\) and \(x(t)\) from \(a(x)\), we first relate \(v\) to \(a(x)\)
+through the chain rule
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>to obtain:
+<p>\[a(x) = \frac{dv}{dt} = \frac{dv}{dx} \frac{dx}{dt} =
+                                                     \frac{dv}{dx} v\,.\]
+<p>Integration of that equation produces the velocity at any point \(x_2\),
+providing one also knows the particle's speed at some one reference point
+\(x_1\) (<a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>):
+<p>\[\int_{x_1}^{x_2} a(x)\,dx =
+                \frac{1}{2} \left[ v(x_2)^2 - v(x_1)^2 \right]\,.\]
+<p>Although we will not be concerned with it in this module, another
+integration can be made using \(v = dx/dt\) in the form
+<p>\[dt = \frac{dx}{v(x)}\,,\]
+<p>producing \(t\) as a function of \(x\), \(t(x)\), and of course a constant of
+integration will be introduced.
+The resulting expression can be inverted to give \(x(t)\).
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Potential Energy, Conservative Forces, the Law of Conservation
+of Energy” (MISN-0-21). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See Appendix A if interested. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For three-dimensional cases, the force points in the direction in which
+the potential energy decreases most rapidly and the magnitude of the force
+is the slope in the direction of most rapid decrease. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Potential Energy, Conservative Forces, the Law of Conservation of
+Energy” (MISN-0-21). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See Appendix B if interested. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">How the various quantities of motion depend upon time cannot be
+determined from such diagrams. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7"><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> above, for example, illustrates that for a particle
+moving in a conservative force field the kinetic plus potential energy of the
+particle at any one point equals the sum at any other point.
+Hence the total energy has a constant value; it is conserved. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See any calculus textbook; for example, G.&thinsp;Thomas,  Calculus and Analytic
+Geometry, third edition,
+Addison-Wesley (1960), Sections 4-8, 4-9. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See “Review of Mathematical Skills-Calculus: Differentiation and
+Integration” (MISN-0-1). <a href="#fnref-9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> All four problems also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Consider the potential energy function \(E_p(x) = 7 x^2 - x^3\).
+Assume the particle interacting with this potential has mass \(M = 60\).
+For this problem let us neglect units.
+Draw a rough sketch of \(E_p(x)\). 
+At a certain instant, the particle is at \(x = +1\) with total energy \(E = 36\)
+and is moving to the right.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the kinetic energy of the particle at this point? </li>
+<li><span class="item-label">b.</span> What is its velocity? </li>
+<li><span class="item-label">c.</span> What is the instantaneous force this particle feels at this point? </li>
+<li><span class="item-label">d.</span> What is the acceleration (magnitude, direction) this particle
+undergoes? </li>
+<li><span class="item-label">e.</span> Therefore, is this particle's speed increasing or decreasing at this
+point? 
+Explain. </li>
+<li><span class="item-label">f.</span> With this particle moving to the right, and from the shape of the
+\(E_p\) curve in the vicinity of this point (\(x = 1\)) determine whether the
+kinetic energy of the particle will increase or decrease. 
+Is this consistent with your answer of (e)? </li>
+<li><span class="item-label">g.</span> For what value of \(x\) will the speed of this particle (moving to the
+right) be zero?
+(You may not actually be able to find the numerical value of \(x\) for which this
+occurs; however, if you do it right you'll have the equation satisfied by \(x\)
+at this point on the graph you've drawn.) </li>
+<li><span class="item-label">h.</span> At this point where \(v = 0\) what is the direction of the
+acceleration of this particle?
+(Get this from determining the sign of the force on the particle as
+determined from the slope of the curve.) 
+With this direction for the acceleration what is the direction of \(v\) an
+instant after the instant when \(v = 0\), hence what is the direction of the
+subsequent motion of the particle? </li>
+<li><span class="item-label">i.</span> On your \(E_p(x)\) plot, show the region of those values of \(x\)
+forbidden to the particle when it has total energy \(E = 36\). </li>
+<li><span class="item-label">j.</span> What are the turning points of the motion of the particle when its
+total energy is 36? 
+</li>
+<li><span class="item-label">2.</span> Consider the same situation as in Problem&nbsp;1 except that at point
+\(x = - 3.0\) the particle of mass \(M = 60\) starts out with speed \(v = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is its kinetic energy? </li>
+<li><span class="item-label">b.</span> What is its potential energy? </li>
+<li><span class="item-label">c.</span> What is its total energy? </li>
+<li><span class="item-label">d.</span> What is the force (magnitude and direction) on the particle? </li>
+<li><span class="item-label">e.</span> What is the magnitude of its acceleration? </li>
+<li><span class="item-label">f.</span> What is the direction of its acceleration? </li>
+<li><span class="item-label">g.</span> When it gets to \(x = 0\), what is its speed? </li>
+<li><span class="item-label">h.</span> When it gets to \(x = 14/3\), what is its speed? </li>
+<li><span class="item-label">i.</span> What is its acceleration (magnitude and direction) at \(x = 14/3\)? </li>
+<li><span class="item-label">j.</span> How far will it go before it turns around? </li>
+<li><span class="item-label">k.</span> Explain your answer to (j). 
+</li>
+<li><span class="item-label">3.</span> A potential energy function is given by \(E_p(r) = - 1/2\,k r^2\)
+where \(r\) is the distance from the origin of the coordinate system to a point
+in space (\(k\) is a constant).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the magnitude of the force on a particle placed at a point
+which is at a distance \(r\) from the origin. </li>
+<li><span class="item-label">b.</span> Find the direction of this force. 
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If the potential energy of a particle is \(E_p = k/r\), \(k\) being
+a constant equal to 10<span class="unit">&thinsp;N&thinsp;m<sup>2</sup></span>, find the force on the particle when it is
+at the point \(x = 0\,\text{m}\), \(y = 1\,\text{m}\), \(z = 2\,\text{m}\). </li>
+<li><span class="item-label">b.</span> What is the direction of the force? 
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> One of the solutions of \(x^3 - 7 x^2 + 36 = 0\).
+There are 3 solutions, call them \(x_1\), \(x_2\), \(x_3\) with
+\(x_1 < x_2 < x_3\) (refer to graph, notice \(x_1\) is negative).
+\(x_2\) is the answer to this question.
+The actual values are \(x_1 = -2\), \(x_2 = 3\), \(x_3 = 6\).</li>
+<li><span class="item-label">2.</span> To right.</li>
+<li><span class="item-label">3.</span> Decreases.</li>
+<li><span class="item-label">4.</span> Zero.</li>
+<li><span class="item-label">5.</span> \(F_x = -11\) (to left).</li>
+<li><span class="item-label">6.</span> After point \(x = 14/3\), the potential energy continues to decrease
+to infinity, total energy remains constant, kinetic energy increases, never
+ goes to zero, so \(v\) never changes direction.</li>
+<li><span class="item-label">7.</span> Forbidden regions: \(x < x_1\), \(x_2 < x < x_3\).
+All other regions are allowed.
+The quoted regions are forbidden because the particle would have a negative
+kinetic energy, hence an imaginary speed in these regions.
+Verify this from the energy diagram you've sketched.</li>
+<li><span class="item-label">8.</span> \(\sqrt{3}\).</li>
+<li><span class="item-label">9.</span> \(a_x = - 11/60\) (to left).</li>
+<li><span class="item-label">10.</span> To left.</li>
+<li><span class="item-label">11.</span> \(E_k = 30\).</li>
+<li><span class="item-label">12.</span> Yes, kinetic energy and speed both are decreasing.</li>
+<li><span class="item-label">13.</span> 69 to right.</li>
+<li><span class="item-label">14.</span> \(v_x = +1\).</li>
+<li><span class="item-label">15.</span> Because \(a_x\) is to left, an instant after \(v_x = 0\), \(v_x\) is to
+left.</li>
+<li><span class="item-label">16.</span> Decreasing.</li>
+<li><span class="item-label">17.</span> Zero.</li>
+<li><span class="item-label">18.</span> A rough sketch of \(E_p(x)\) can be drawn by considering the
+following.
+For very large positive or negative values of \(x\) the \(x^2\) term may be
+neglected compared to the \(x^3\) term.
+Hence, for very large negative values the graph tends to plus infinity while
+for very large positive values the graph goes to negative infinity.
+The graph crosses the \(x\)-axis whenever \(E_p(x)\) is zero.
+There are three roots to a cubic equation.
+In this case the roots are \(x = 0\) (twice) and \(x = 7\).
+You can also determine that the graph has a minimum at \(x = 0\) and a maximum at
+\(x = 14/3\).
+With this information a rough graph can be sketched.</li>
+<li><span class="item-label">19.</span> \(v_x\) is positive and \(a_x\) is negative so \(v_x\) decreases.</li>
+<li><span class="item-label">20.</span> 90.</li>
+<li><span class="item-label">21.</span> \(1.14 = (529/405)^{1/2}\).</li>
+<li><span class="item-label">22.</span> 1.15.</li>
+<li><span class="item-label">23.</span> To infinity.</li>
+<li><span class="item-label">24.</span> 90.</li>
+<li><span class="item-label">25.</span> \(x_1\) and \(x_2\): using results of Answer&nbsp;1 the particle moves
+between points \(x = -2\) and \(x = +3\).</li>
+<li><span class="item-label">26.</span> \(+ k r\);</li>
+<li><span class="item-label">27.</span> Outward radially.</li>
+<li><span class="item-label">28.</span> 2<span class="unit">&thinsp;newtons</span>;</li>
+<li><span class="item-label">29.</span> Outward, along the radial line going through (0,1,2).</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Since \(x_1 \leq x_0 \leq x_1 + \Delta x\),
+ 
+ \[| x_0 - x_1 | \leq \Delta x.\]
+ 
+ Then given any \(\epsilon > \Delta x\),
+ 
+ \[| x_0 - x_1 | < \epsilon.\]
+ 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">We assumed that \(F(x)\) is continuous, so use the definition of continuity.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+ \[a(x)\,dx = v\,dv\]
+ 
+ \[\begin{aligned}\int_{x_0}^x a(x')\,dx' & = \int_{v_0}^v v'\,dv' \qquad \help{5} \\                         & = \left. \frac{v'^2}{2} \right|_{v_0}^v \\                         & = \frac{1}{2}(v^2 - v_0^2)\end{aligned}\]
+
+ 
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">At \(x_0\) the total energy is all in the form of potential energy,
+ hence the velocity of the particle at that point is zero.
+ The acceleration of the particle there is also zero because:
+ 
+ \[F(x_0) = - \left.\frac{dE_p}{dx}\right|_{x_0} = 0.\]
+ 
+<p> The left and right turning points coincide: the particle cannot move!
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">We changed to primed symbols for the variables of integration because we
+ wanted to use unprimed symbols for the upper limits of integration.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The term “dummy variable of integration” is standard usage.
+ It indicates that the symbol used for the variable of integration is
+ immaterial in a definite integral because it does not appear in the final
+ answer.
+ Thus
+ 
+ \[\int_0^1 x\,dx \qquad \text{and} \qquad \int_0^1 y\,dy\]
+ 
+ give exactly the same answer.
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">If you are confused by the force being a function of \(x\) and the integrand
+ being a function of \(x'\), read [S-6].
+ Merely write the force as a function of the variable required in the
+ integrand, \(F(x') = - k x'\), and the integration is easy.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skill K1 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Assume a particle has mass \(M = 60\) and potential energy function
+\(E_p(x) = 7 x^2 - x^3\).
+For this problem let us neglect units.
+Draw a rough sketch of \(E_p(x)\).
+At a certain instant, the particle is at \(x = +1\) with total energy \(E = 36\)
+and is moving to the right.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is the kinetic energy of the particle at this point?</li>
+<li><span class="item-label">b.</span> What is its velocity?</li>
+<li><span class="item-label">c.</span> What is the instantaneous force this particle feels at this point?</li>
+<li><span class="item-label">d.</span> What is the acceleration (magnitude, direction) this particle
+undergoes?</li>
+<li><span class="item-label">e.</span> Therefore, is this particle's speed increasing or decreasing at this
+point?
+Explain.</li>
+<li><span class="item-label">f.</span> With this particle moving to the right, and from the shape of the
+\(E_p\) curve in the vicinity of this point (\(x = 1\)) determine whether the
+kinetic energy of the particle will increase or decrease.
+Is this consistent with your answer to (e)?</li>
+<li><span class="item-label">g.</span> For what value of \(x\) will the speed of this particle (moving to the
+right) be zero?
+(You may not actually be able to find the numerical value of \(x\) for which this
+occurs: however, if you do it right you'll have the equation satisfied by \(x\)
+at this point and you'll be able to identify the point on the graph you've
+drawn.)</li>
+<li><span class="item-label">h.</span> At this point where \(v = 0\) what is the direction of the
+acceleration of this particle?
+(Get this from determining the sign of the force on the particle as
+determined from the slope of the curve.)
+With this direction for the acceleration what is the direction of \(v\) an
+instant after the instant when \(v = 0\), hence what is the direction of the
+subsequent motion of the particle?</li>
+<li><span class="item-label">i.</span> On your \(E_p(x)\) plot show the region of those values of \(x\)
+forbidden to the particle when it has this total energy, \(E = 36\).</li>
+<li><span class="item-label">j.</span> What are the turning points of the motion of the particle when its
+total energy is 36?
+</li>
+<li><span class="item-label">3.</span> Consider the same situation as in Problem&nbsp;1 except that at point
+\(x = - 3.0\) the particle of mass \(M = 60\) starts out with speed \(v = 0\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> What is its kinetic energy?</li>
+<li><span class="item-label">b.</span> What is its potential energy?</li>
+<li><span class="item-label">c.</span> What is its total energy?</li>
+<li><span class="item-label">d.</span> What is the force (magnitude and direction) on the particle?</li>
+<li><span class="item-label">e.</span> What is the magnitude of its acceleration?</li>
+<li><span class="item-label">f.</span> What is the direction of its acceleration?</li>
+<li><span class="item-label">g.</span> When it gets to \(x = 0\), what is its speed?</li>
+<li><span class="item-label">h.</span> When it gets to \(x = 14/3\), what is its speed?</li>
+<li><span class="item-label">i.</span> What is its acceleration (magnitude and direction) at \(x = 14/3\)?</li>
+<li><span class="item-label">j.</span> How far will it go before it turns around?</li>
+<li><span class="item-label">k.</span> Explain your answer to (j).
+</li>
+<li><span class="item-label">4.</span> A potential energy function is given by \(E_p(r) = - 1/2\,k r^2\)
+where \(r\) is the distance from the origin of the coordinate system to a point
+in space (\(k\) is a constant).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the magnitude of the force on a particle placed at a point
+which is at a distance \(r\) from the origin.</li>
+<li><span class="item-label">b.</span> Find the direction of this force.
+</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If the potential energy is \(E_p = k/r\), \(k\) being a constant
+equal to 10&thinsp;N<span class="unit">&thinsp;m<sup>2</sup></span>, find the force on the particle when it is at the point
+\(x = 0\), \(y = 1\), \(z = 2\) (all in meters).</li>
+<li><span class="item-label">b.</span> What is the direction of the force?
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;1.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;2.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;3.</li>
+<li><span class="item-label">5.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;4.</li>
+</ol>
+
+<p></section>
+

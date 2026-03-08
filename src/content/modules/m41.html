@@ -1,0 +1,443 @@
+<header class="module-header">
+  <h1 class="module-title">Dynamics for Circular Motion <span class="module-author">(Peter Signell, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: circular motion, frequency, angular velocity
+    <a href="../m9/" class="module-ref">MISN-0-9</a>; kinetic energy, power (mechanical), work (mechanical)
+    <a href="../m20/" class="module-ref">MISN-0-20</a>.</li><li><strong>2.</strong> State the relation between angular velocity and tangential
+    velocity in circular motion <a href="../m9/" class="module-ref">MISN-0-9</a>.</li><li><strong>3.</strong> State the work-energy principle and the force-power relation for
+    constant velocity <a href="../m20/" class="module-ref">MISN-0-20</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given a planar configuration of rigidly connected masses and
+    an axis perpendicular to its plane, calculate its moment of
+    inertia about the axis.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Use, and justify the use of conservation of angular momentum to
+    solve problems involving torqueless change from one state of
+    uniform circular motion to another.</li><li><strong>S2.</strong> Solve problems involving energy of rotation in circular motion,
+    starting from the equation for kinetic energy in linear motion.</li><li><strong>S3.</strong> Solve problems involving power transfer in uniform circular
+    motion, starting from the equation for power transfer in
+    uniform linear motion.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. The Law is Useful</h3>
+
+The easiest way to achieve a quick understanding of much natural and man-made
+rotational phenomena, and predictive power as well, is through the Law of
+Conservation of Angular Momentum.
+As an example of application to a rotating system, consider a figure skater
+spinning with angular velocity \(\omega\), arms outstretched.
+The skater suddenly draws her arms inward and straightens her body and thereby
+produces a dramatic change in her angular velocity.
+Using the Law of Conservation of Angular Momentum, we can not only predict
+whether her new spin rate will be less or greater than her old one, but also
+make a good quick estimate or a precise calculation of her actual change in
+angular velocity.
+The same technique used in this case can be applied to a huge number of diverse
+systems.
+<p><h3 id="pcap-1-b">1b. The Law Appears to be Exact and Universal</h3>
+
+The Law of Conservation of Angular Momentum is one of the great laws of the
+universe.
+It has been observed to hold, to the limits of measurable accuracy, for the
+incredibly small particles which live only virtually and for incredibly brief
+times within the hearts of atoms, to hold for everyday natural and man-made
+objects, and to hold for the stars and galaxies in distant parts of the
+universe.  
+It is on the same sort of footing as the Law of Conservation of Momentum, in
+that no violation of it has ever been found.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Magnitude of Angular Momentum</h2>
+
+<p><h3 id="pcap-2-a">2a. Definition: Point Mass, Circular Motion</h3>
+
+The symbol \(L\) is universally used to represent the magnitude of mechanical
+angular momentum:  its definition for a point mass m in circular motion is:
+<p>\[L = m v r \qquad \text{(point mass in circular motion)}.\]
+<p>The parameters \(m\), \(v\), and \(r\) are illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The rotating mass \(m\) could be a tiny chunk at a radius \(r\) in a compact disc,
+or it could represent the mass of one of a spinning ice skater's arms
+at an effective radius \(r\).
+It could be a molecule at a radius \(r\) from the center of a centrifuge, an
+electron at a radius \(r\) from the center of its atom, or it could be a car on
+a turn, with radius of curvature \(r\), in the Indy 500.  
+For each of these, we take the product of the object's mass, speed, and radial
+distance from the axis about which it is rotating.
+<p>In reality, angular momentum is a vector quantity, hence it is often written
+\(\vec{L}\).
+However, only its magnitude \(L\), defined above, is needed for dealing with
+planar motion.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m41gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Parameters used in discussing angular
+        momentum.</figcaption></figure>
+
+<p><h3 id="pcap-2-b">2b. The Additive Property of Angular Momentum</h3>
+
+The angular momentum of a collection of masses is just the sum of the angular
+momenta of the individual masses.
+This is especially simple to state mathematically for cases where the masses
+all move in the same plane.
+For two such masses:
+<p>\[L = m_1 v_1 r_1 + m_2 v_2 r_2 \qquad  \text{(planar motion)}.\]
+<p>Here both radii must be measured from the same axis of rotation.
+In general, for \(N\) masses, the additive property is written:
+<p>\[L = \sum_{i = 1}^N m_i v_i r_i \qquad \text{(planar motion)}.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m41gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Examples of rigid planar rotators
+    having two masses.  The masses' radii are measured from a common axis
+    of rotation.</figcaption></figure></div>
+
+<p><h3 id="pcap-2-c">2c. Rigid Objects: Moment of Inertia</h3>
+
+The angular momentum of a rigid planar object is often written as the product
+of the object's angular velocity and its “moment of inertia.”
+Objects for which this is appropriate include the record, the skater, the
+centrifuge, and the car cited above.
+Such a rigid object's component masses all have the same angular velocity and
+thus the angular momentum can be written:
+<p>\[L = \sum_{i = 1}^N m_i v_i r_i = \sum_{i = 1}^N m_i \omega r_i^2 =
+             (m_1 r_1^2 + m_2 r_2^2 + \ldots ) \,\omega =
+                  \left[ \sum_{i = 1}^N m_i r_i^2 \right] \,\omega.\]
+<p>The factored quantity in the brackets is determined solely by the spatial
+distributions
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>and values of the component masses and is independent of the state of rotation
+of the object. 
+It is always denoted by the symbol \(I\):
+<p>\[I = \sum_{i = 1}^N m_i r_i^2 \qquad \text{(planar set of masses)}.\]
+<p>the quantity \(I\) is called the object's “moment of inertia.”
+The angular momentum is then written:
+<p>\[L = I \omega \qquad \text{(rigid planar object)},\]
+<p>which is the rotational analogue of the expression for linear momentum,
+<p>\[p = m v \qquad \text{(linear motion)},\]
+<p>with \(p \rightarrow L\), \(m \rightarrow I\), \(v \rightarrow \omega\).
+The same substitutions occur in other equations that are rotational analogues
+of linear equations.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Conservation of Angular Momentum</h2>
+
+<p><h3 id="pcap-3-a">3a. Torque</h3>
+
+An object in circular motion is said to be experiencing a torque with respect
+to its axis of rotation if it is experiencing a force with a component along
+the direction of motion.
+This checks with our common meaning of the “torque.”
+More precisely, the magnitude of torque is given by:
+<p>\[\tau = r F_{\perp}\,,\]
+<p>where \(F_{\perp}\) is the component of force perpendicular to the object's
+radius vector.
+Torque is actually a vector quantity although only its magnitude is needed
+for dealing with planar motion.
+<p><h3 id="pcap-3-b">3b. Statement of the Conservation Law</h3>
+
+Here is the law of Conservation of Angular Momentum:
+<p><div class="centered"><span class="fbox">
+As long as an object experiences no torque about an axis, the object's angular
+momentum about that axis will be conserved.</span></div>
+
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m41gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Looking down on the figure skater
+    before and after the arms are pulled in.  Here \(r\) and \(r'\) are the
+    body mass's effective radii, before and after.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-c">3c. An Example: The Spinning Skater</h3>
+
+Consider the spinning ice skater who brings in her arms and straightens up her
+body in order to increase her spin rate: her angular momentum about her
+vertical spin axis will be conserved if she experiences no torque about that
+axis.
+Now her only point of contact with an external object which could produce such
+a torque is at the skate-to-ice surface.
+However, this is a very small point and is well lubricated with pressure-melted
+ice water: it can exert only an exceedingly small amount of torque. 
+Thus we can say that her angular momentum is conserved to a high accuracy as
+she moves her body to increase her spin rate.
+Using primes for quantities measured after the body movements, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>,
+the conservation law is:
+<p>\[L = L'\,,\]
+<p>hence:
+<p>\[\omega ' = (r/r')^2 \omega\,.\]
+<p>If the skater cuts her mass's effective radius by a factor of two, she could
+increase her spin rate by a factor of four!
+You can demonstrate this effect quite dramatically using a rotating lab stool
+with heavy weights in your hands that heighten the change in your mass's
+effective radius.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Rotational Kinetic Energy &amp; Power</h2>
+
+<p><h3 id="pcap-4-a">4a. Energy of Rotation: The Flywheel</h3>
+
+Suppose we have a flywheel, perhaps one in an experimental car,
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>and we wish to know how much energy we can store in it for a given angular
+velocity.
+If the flywheel has almost all its mass m on its rim, then that mass is
+essentially all at a single radius r and its rotational kinetic energy is:
+<p>\[E_k = \frac{1}{2} m v^2 = \frac{1}{2} m r^2 \omega^2 = \frac{1}{2} I \omega^2\,.\]
+<p>This is the energy one must put into the flywheel to take it from rest to
+angular velocity \(\omega\).
+It is also the energy one can get back by stopping the flywheel, so one can
+say that it is the energy stored in the flywheel by virtue of its rotation.
+Note that the equation for rotational kinetic energy can be generated from the
+one for linear kinetic energy by making these replacements:
+\(m \rightarrow I\), \(v \rightarrow \omega\).
+<p><h3 id="pcap-4-b">4b. Power Supplied by a Constant Torque In UCM</h3>
+
+A real flywheel has frictional energy losses, and perhaps others as well, and
+thus it requires a driving force in order to maintain a constant angular
+velocity.
+The power that needs to be transferred into the system by a constant driving
+force F acting at a point moving with constant velocity \(v\) is:
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>\[P = \frac{d}{dt} E = \frac{d}{dt} \left( F x \right) =
+F v. \qquad (\text{constant } F)\,.\]
+<p>For our case the force is to act at a radius \(r\) and is to be always
+perpendicular to the rotational axis (for example, the force exerted on a
+flywheel by a belt.)  
+The quantity \(r \times F\) is the magnitude of the torque, \(\tau\), acting on
+the flywheel.
+Since \(r\) and \(F\) are constant in our example, the torque exerted on the
+flywheel will be constant.
+This is UCM so our flywheel is rotating at a constant angular velocity
+\(\omega\).
+Putting these all together,
+<p>\[P = F v = F\, r\, \omega = \tau\, \omega. \qquad (\text{constant } \tau)\,.\]
+<p>This energy flows in as mechanical work and out as frictional heat.
+Note that the conversion from linear to angular quantities can be carried out,
+as usual, through the replacements: 
+\(F \rightarrow \tau\), \(v \rightarrow \omega\).
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Vector Angular Momentum</h2>
+
+<p><h3 id="pcap--">. Only For Those Interested</h3>
+
+When dealing with non-planar motion, one must represent angular
+momentum by a vector, not just the magnitude of a vector.
+This makes Conservation of Angular Momentum into a much more
+powerful tool for the scientist or engineer.
+<p>For an object containing masses \(m^{(1)}\), \(m^{(2)}\) \(\ldots\) at positions
+\(\vec{r}\,^{(1)}\), \(\vec{r}\,^{(2)}\), \(\ldots\), and having velocities
+\(\vec{v}\,^{(1)}\), \(\vec{v}\,^{(1)}\), \(\ldots\) :
+<p>\[\vec{L} = \sum_i \vec{r}\,^{(i)} \times \vec{p}\,^{(i)}.\]
+<p> where the vector cross product is indicated and the masses'
+momenta are given as usual by \(\vec{p}\,^{(i)} = m^{(i)}\, \vec{v}\,^{(i)}\).
+The other relationships in this module, in their full vector glory, are (with
+\(n\) and \(m\) representing Cartesian components and \(x_n\) representing components
+of \(\vec{r}\)):
+<p>\[I_{nm} = \sum_i m^{(i)} x_n^{(i)} x_m^{(i)}\,; \qquad
+                L_n = \sum_m I_{nm} \omega_m\,; \qquad
+                \vec{\tau} = \vec{r} \times \vec{F}\,,\]
+<p>\[\frac{d\vec{L}}{dt} = \vec{\tau} \qquad (\text{consv. of Ang. Mom. when } \tau = 0)\,,\]
+<p>\[P = \vec{F} \cdot \vec{v}. \qquad (\text{constant } \vec{F})\]
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">For the full vector definition see the Appendix. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Spatial distribution \(\equiv\) positions in space. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “An Overview of Dynamics”(MISN-0-62) and “New Flywheel
+Designs for Energy Storage” (MISN-0-46, Learner Originates). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Work and Power” (MISN-0-20). <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<span class="tex-unknown" title="unknown macro">\enlargethispage</span>0.5pc
+ Problems&nbsp;5-8 also occur on this module's <em>Model Exam</em>.
+<ol>
+<li><span class="item-label">1.</span> Calculate the moment of inertia, of the set of
+rigidly connected masses shown, about the axis of rotation shown.
+Each mass \(M\) is 2.0&thinsp;kg and the distances shown are: 2.0<span class="unit">&thinsp;m</span>, 3.0<span class="unit">&thinsp;m</span>, 4.0<span class="unit">&thinsp;m</span>,
+and 5.0<span class="unit">&thinsp;m</span>.m41gr04</li>
+<li><span class="item-label">2.</span> An ice skater is spinning at 3.00<span class="unit">&thinsp;rev/sec</span> about a vertical axis
+with his arms close to his body.
+He then changes his moment of inertia from 1.20<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span> to 1.60<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span>
+by extending his arms straight outward.
+Use conservation of angular momentum to determine his new spin rate.</li>
+<li><span class="item-label">3.</span> Starting from the equation for rotational kinetic energy,
+calculate the change in the skater's kinetic energy in Problem&nbsp;2 above.
+State whether the change was a loss or a gain for the skater.
+Where do you think the increment of energy came from or went to?</li>
+<li><span class="item-label">4.</span> A motor must deliver \(1.5 \times 10^2\,\text{W}\) to maintain a flywheel
+at a constant \(6.00 \times 10^2\,\text{rpm}\).
+If the drive belt's maximum surface strength against abrasion is
+\(5.0 \times 10^1\,\text{N}\), calculate the minimum radius for a “drive pulley” that
+can be used for the belt.m41gr05
+<p>Start from the equation for power delivered by a constant force to maintain
+constant linear velocity.</li>
+<li><span class="item-label">5.</span> If four masses (\(m = 2.0\,\text{kg}\) each) are at the corners of a
+\(6.0\,\text{m} \times 8.0\,\text{m}\) rectangle, find their collective moment of inertia about
+an axis perpendicular to the plane of the rectangle and passing through its
+center.
+Sketch the geometry.</li>
+<li><span class="item-label">6.</span> A particular phonograph turntable and disc have a combined
+moment of inertia of (1/64)<span class="unit">&thinsp;lb&thinsp;ft&thinsp;sec<sup>2</sup></span> and are rotating freely at 30.0<span class="unit">&thinsp;rpm</span>
+(rev/min).
+A fly with mass (1/32)<span class="unit">&thinsp;lb&thinsp;sec<sup>2</sup>/ft</span>, flying in the same direction as a fresh
+coffee spot on the disc, but at half the speed of the spot, lands on the
+spot which is 6.0<span class="unit">&thinsp;inches</span> from the center of the disc.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Justify and use conservation of angular momentum to calculate the
+new rotational frequency of the disc.</li>
+<li><span class="item-label">b.</span> Are the numbers in this problem realistic?
+</li>
+<li><span class="item-label">7.</span> Two sky divers are positioned so their bodies are parallel and
+they are face-to-face in free fall toward the earth.
+They have equal moments of inertia about the single axis passing
+through both of their centers of mass, and one of them is rotating about
+this axis at twice the rotational frequency of the other.
+They now join hands and rotate as a unit.
+Justify and use conservation of angular momentum to calculate the
+percentage loss or gain in mechanical energy due to the hand joining.
+<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+Where does this energy come from or go to?</li>
+<li><span class="item-label">8.</span> A particular jet has four engines, each of which develops
+\(1.8 \times 10^4\,\text{N}\) of thrust (force) at \(7.46 \times 10^6\,\text{W}\).
+Calculate the minimum period in days for the jet to make one revolution around
+the earth.
+(The radius of the earth is \(6.37 \times 10^6\,\text{m}\).)</li>
+</ol>
+
+
+<h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">1.</span> \(2.0\times10^2\unit{kg\,m^{2}}\)</li>
+<li><span class="item-label">2.</span> 2.25<span class="unit">&thinsp;rev/sec</span></li>
+<li><span class="item-label">3.</span> loss of 53<span class="unit">&thinsp;J</span> of energy: goes to heat in arm muscles. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">4.</span> 0.048<span class="unit">&thinsp;m</span> <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">5.</span> \(2.0 \times 10^2\unit{kg\,m^{2}}\)</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Since the turntable turns freely, no external torque can be
+exerted on it; so angular momentum is conserved.
+<p>\[\nu ' = \frac{1 + (x/2)}{1 + x} \nu\,,\]
+<p>where \(x \equiv m r^2 / I = 1/2\); then \(\nu ' = 25\,\text{rpm}\). <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">b.</span> A fly that weighs one pound?
+</li>
+<li><span class="item-label">7.</span> \(1.0\times10^1\)% (i.e., 10%) lost to heat in arm muscles, eventually transferred to the
+surrounding air. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">8.</span> 1.1<span class="unit">&thinsp;day</span> <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Read the first sentence in the problem word by word and make sure you
+ have the orientation of the two sky divers <em>exactly as described
+ there</em> rather than according to some preconceived idea of sky diver
+ orientation.
+<p> If you still can't do this problem, work problems&nbsp;1 and 2 again.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">What are the units of angular velocity?
+<p> What are the units of frequency?
+<p> Which one is given in the problem?
+<p> Which one occurs in the equation you are using?
+<p> What is the conversion factor between them?
+<p> If you are unable to answer any of the above questions, see the Input
+ Skills reference in this module's <em>ID Sheet</em> or see the Volume's
+ <em>Index</em>.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Think to yourself: What equations do I know that relate time (the desired
+ quantity) to one or more of the given quantities (power, force, distance)?
+ Then, if that equation or set of equations has unknowns, what equations do
+ I know that relate those unknowns to given quantities?
+<p> Also:
+<p> \(\frac{(4)(1.8\times10^4\,\text{N})(2 \pi \times 6.37\times10^6\,\text{m})}
+        {(4)(7.46\times10^6\,\text{W})(\,\text{N\,m/W})(3600\,\text{s/hr})(24\,\text{hr/day})}
+ = 1.1\,\text{day}\)
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">We suggest that you just go ahead and add the angular momenta of the fly and
+the turntable before the fly alights.
+Leave any unknown quantity as a symbol.
+If necessary, relate velocity to frequency and radius.
+Then do the same for the angular momenta after the fly alights,
+realizing that the fly and the turntable now have the same rotational
+frequency.
+Equate the “before” angular momentum to the “after” angular momentum and
+solve for the “after” frequency.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> If four masses (\(m = 2.0\,\text{kg}\) each) are at the corners of a
+\(6.0\,\text{m} \times 8.0\,\text{m}\) rectangle, find their collective moment of inertia about
+an axis perpendicular to the plane of the rectangle and passing through its
+center.
+Sketch the geometry.</li>
+<li><span class="item-label">2.</span> A particular phonograph turntable and disc have a combined
+moment of inertia of 1/64<span class="unit">&thinsp;lb&thinsp;ft&thinsp;sec<sup>2</sup></span> and are rotating freely at 30<span class="unit">&thinsp;rpm</span>.
+A fly with mass (1/32)<span class="unit">&thinsp;lb&thinsp;sec<sup>2</sup>/ft</span>, flying in the same direction as a fresh
+coffee spot on the disc, but at half the speed, lights on the spot which is
+6.0<span class="unit">&thinsp;inches</span> from the center of the disc.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Justify and use conservation of angular momentum to calculate the
+new rotational frequency of the disc.</li>
+<li><span class="item-label">b.</span> Are the numbers in this problem realistic?
+</li>
+<li><span class="item-label">3.</span> Two sky divers are face to face in free fall toward the earth.
+They have equal moments of inertia about the single axis passing
+through both of their centers of mass, and one of them is rotating about
+this axis at twice the rotational frequency of the other.
+They now join hands and rotate as a unit.
+Justify and use conservation of angular momentum to calculate the
+percentage loss or gain in mechanical energy due to the hand joining.
+Where does this energy come from or go to?</li>
+<li><span class="item-label">4.</span> A particular jet has four engines, each of which develops
+\(1.8 \times 10^4\)&thinsp;N of thrust (force) at \(7.46 \times 10^6\,\text{W}\).
+Calculate the minimum period in days for the jet to make one revolution around
+the earth.
+(The radius of the earth is \(6.37 \times 10^6\,\text{m}\).)</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ul>
+<li><span class="item-label">1-4.</span> See this module's <em>Problem Supplement</em>, problems&nbsp;5-8.</li>
+</ul>
+
+<p></section>
+

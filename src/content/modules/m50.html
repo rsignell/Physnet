@@ -1,0 +1,385 @@
+<header class="module-header">
+  <h1 class="module-title">Fourier Series and Integrals <span class="module-author">(E.H.Carlson, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Compute definite and indefinite integrals of simple functions,
+    including sine and cosine functions <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>2.</strong> Understand the definite integral as an area <a href="../m1/" class="module-ref">MISN-0-1</a>.</li><li><strong>3.</strong> Be familiar with the possibility of expansion of a
+    function in a power series <a href="../m4/" class="module-ref">MISN-0-4</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K2.</strong> State sufficient conditions for the existence of the Fourier
+    transform of a function.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Estimate the sizes of the Fourier coefficients by inspection of
+    \(f(x)\), considering its overlap with sine and cosine functions and noting
+    discontinuities, cusps, peaks, wiggles in \(f(x)\) of size \(\ell\), and symmetry.</li><li><strong>R2.</strong> Compute the sine and cosine Fourier transform of a given \(f(x)\).</li><li><strong>R3.</strong> Sketch, by inspection, the Fourier transform of a given \(f(x)\).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>Suppose you have a function \(f(x)\) defined in an interval
+<p>\[-L/2 < x < L/2\]
+<p>on the \(x\)-axis, as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m50gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Some function which we
+wish to represent with an appropriate series.</figcaption></figure>
+
+<p>You are probably familiar with the notion that, if \(f(x)\) is
+sufficiently well behaved, you can expand it in a power
+series:
+<p>\[f(x) = a_0 + a_1 x + a_2 x + \ldots ,\]
+<p>a Taylor Series.
+It is also possible to expand it in a series of sine and cosine functions:
+<p>\[\begin{aligned}f(x) &=a_0 + a_1 \cos\left(2 \pi \frac{x}{L}\right) +
+                    a_2 \cos\left(2 \pi \frac{2x}{L}\right) + \ldots + \\      & b_1 \sin\left(2 \pi \frac{x}{L}\right) +
+                    a_2 \sin\left(2 \pi \frac{2x}{L}\right) + \ldots\,,\end{aligned}\]
+
+a Fourier Series.
+<p>Here are the advantages of using a Fourier expansion:
+<p><ul>
+<li><span class="item-label">1.</span> Many problems, such as those involving waves and
+           oscillations, are particularly simple when expressed this way.
+           That is because they generally have some periodicity, some
+           interval of \(x\) over which \(f(x)\) repeats.</li>
+<li><span class="item-label">2.</span> The criteria that \(f(x)\) must satisfy, in order that
+           the series converge, are not very stringent.
+           It is sufficient that, in the interval \(-L/2 < x < L/2\),
+           \(f(x)\) is finite and has a finite number of maxima and minima.
+           It may even have a finite number of discontinuities.
+           These are called Dirichlet's conditions.</li>
+<li><span class="item-label">3.</span> If \(f(x)\) is not periodic in \(x\), we can still use the general
+           idea by letting \(L \rightarrow \infty\), thereby obtaining the
+           Fourier Integral representation:
+<p>\[f(x) = \int_{-\infty}^{\infty} [A(k) \cos(kx) + B(k) \sin(kx)]\,dk\]</li>
+</ul>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m50gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A function \(f(x)\) having three discontinuities, counting
+              the two at \((\pm L/2)\) as one (they are the same).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Fourier Series</h2>
+
+<p><h3 id="pcap-2-a">2a. The Coefficient Equations</h3>
+
+We will discuss the relationship between \(f(x)\) and the coefficients
+\(a_k\), \(b_k\), leaving derivations and proofs to a mathematics text.
+The coefficients are defined by the
+integrals:
+\[\begin{aligned}a_0 & = \frac{1}{L} \int_{-L/2}^{L/2} f(x)\,dx \\ a_k & = \frac{2}{L} \int_{-L/2}^{L/2} f(x) \cos(2 \pi k x/L)\,dx \\ b_k & = \frac{2}{L} \int_{-L/2}^{L/2} f(x) \sin(2 \pi k x/L)\,dx.\end{aligned}\]
+
+<p><h3 id="pcap-2-b">2b. An Example</h3>
+
+Fourier Series are useful not only as a computational tool,
+for which <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> must be evaluated, but even more
+so as a conceptual tool which simplifies the description of \(f(x)\) for
+many applications.
+An example is shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m50gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A voltage wave that is input to a filter.</figcaption></figure></div>
+
+<p>Here the generator produces a repetitive time-varying wave form
+whose voltage across points \(A\), \(B\) is \(V(t)\). The voltage
+across points \(C\), \(D\) will be most clearly expressed when the
+Fourier Series for \(V(t)\) is known.
+Write:
+<p>\[V(t) = V_0 \sum_{k=1}^{\infty}
+                      (a_k \cos\omega_0 k t + b_k \sin\omega_0 k t).\]
+<p>If the filter passes only frequencies above some frequency \(\omega_1\) then
+only voltage Fourier components for which \(k > \omega_1/\omega_0\)0 will
+appear at points \(C\), \(D\).
+One will usually begin the analysis of such a physical problem by
+inspecting \(f(x)\) and seeing which coefficients \(a_k\), \(b_k\) are large and
+which are small or zero.
+This gives insight into the solution, guidance in calculating the series
+coefficients, and a check on possible gross errors in the solution.
+<p><h3 id="pcap-2-c">2c. Partial Sum and Formal Definition</h3>
+
+Suppose we keep only the first \(2n + 1\) terms in the Fourier Series, as we
+certainly would do in any numerical calculation of the coefficients.
+This defines the “partial sum” \(\phi\):
+<p>\[\phi_n(x) = a_0 + \sum_{k=1}^{n} [a_n \cos(2 \pi k x/L) +
+                    b_n \sin(2 \pi k x/L)].\]
+<p>The series obtained as \(n \rightarrow \infty\) defines the Fourier Series if
+\(a_k\) and \(b_k\) are calculated using the Fourier coefficient equations given
+below.
+<p><h3 id="pcap-2-d">2d. Non-Periodic but Localized Functions</h3>
+
+For many physical situations \(f(x)\) will be “localized,”
+i.e., \(f(x) \rightarrow 0\) as \(x \rightarrow \pm \infty\).
+For example, \(f(x)\) may represent a pulse or a wave train of finite
+dimensions.
+Then one can simply pick an interval \(L\) so large that it contains
+essentially all of \(f(x)\), i.e., so that \(f(x) \approx 0\) for \(|x| > L/2\).
+Then \(f(x)\) can be represented by a Fourier Series inside the interval but
+not outside the interval.
+Outside the interval we abandon the Fourier Series and simply set \(f(x)\)
+equal to zero.
+<p><span class="tryit">Try it:</span>  Show that the resulting Fourier Series will not correctly represent
+\(f(x)\) outside the interval.
+<p><h3 id="pcap-2-e">2e. Estimating the Coefficients</h3>
+
+Here is how professionals estimate the coefficients to see which are
+important, which are marginal, and which are negligible:
+<ul>
+<li><span class="item-label">1.</span> \(a_0\) is just the average value of \(f(x)\) over the interval.</li>
+<li><span class="item-label">2.</span> Each \(a_k\), \(b_k\) is proportional to the “overlap” of the
+           corresponding cosine or sine function with \(f(x)\).
+           That is, when \(f(x)\) and \(\cos 2 \pi k x/L\) are large and
+           positive in the same places, negative or zero in the same places
+           etc., then \(a_k\) will be large and positive.
+           (What shape must \(f(x)\) have for \(a_k\) to be large and negative?)
+           The “overlap” idea is central to our method for roughly
+           evaluating the integrals of <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a>, and some
+           particular cases will be discussed in the next few numbered
+           remarks.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m50gr05.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The overlap is large between \(f(x)\) and
+             \(\cos(2 \pi x/L\)). What about the overlap of \(f(x)\) with
+             \(\sin(2 \pi x/L\))?</figcaption></figure></div>
+</li>
+<li><span class="item-label">3.</span> Low values of \(k\) contribute (through \(a_k\) and \(b_k\)) to the
+  overall, broad outline of \(f(x)\), while smaller scale
+  structures (wiggles, peaks, etc.) that occupy a length
+  \(\ell < L\) on the \(x\)-axis require contributions from sine and
+  cosine functions whose wavelength \(\lambda\) is near \(\ell\) in size
+  (\(\lambda = L/k\)).
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m50gr06.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Coefficients \(a_k\), \(b_k\) with \(k = L/\ell\)
+                              will be relatively large.</figcaption></figure></div>
+</li>
+<li><span class="item-label">4.</span> If the size of the smallest structure in \(f(x)\) is \(\ell\),
+  then \(a_k\), \(b_k\) fall off in size rapidly as \(k\) becomes much
+  larger than \(L/k\). The reason can be seen from <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m50gr07.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The integral defining \(a_k\) has many positive
+                              lobes that are nearly cancelled by the adjacent negative one of
+                              nearly the same size; so the whole integral is small.</figcaption></figure></div>
+</li>
+<li><span class="item-label">5.</span> The polynomials \(\phi_n\) are periodic in \(x\), so
+  \(\phi_n(x \pm mL) = \phi_n(x)\), where \(m\) is an integer.
+  Thus \(f(x)\) (which we did not necessarily define outside
+  of \(-L/2 < x < L/2\)) is treated as being periodic.
+  This may introduce a discontinuity or cusp at the points \(x = +L/2\).
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m50gr09.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. </figcaption></figure></div>
+</li>
+<li><span class="item-label">6.</span> Discontinuities in \(f(x)\) are “structure” whose characteristic
+           dimension \(\ell\) is zero. They introduce the requirement that
+           \(a_k \propto 1/k\), \(b_k \propto 1/k\) as \(k \rightarrow \infty\),
+           and likewise, “cusps” (where \(df/dx\) is discontinuous) give \(a_k\),
+           \(b_k \propto 1/k^2\).
+<p><div class="figure-full"><figure id="fig-8"><img src="figures/m50gr11.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Fourier transform of a step function.
+                              \(f(x) = -4/\pi \sum_{k=1,3,5,\ldots} (1/k) \sin(2 \pi k x/L)\).
+                              Can you explain why the \(k\)-even terms are missing?
+                              Hint: sketch-in \(\sin(4 \pi x/L)\). Explain why there
+                              is a minus sign in front.</figcaption></figure></div>
+</li>
+<li><span class="item-label">7.</span> The symmetry of \(f(x)\) may simplify the series.
+           A function \(f(x)\) is called “even” if \(f(x) = f(-x)\) and
+           “odd” if \(f(x) = -f(-x)\).
+           (What are the symmetries of \(\sin x\), of \(\cos x\)?)
+           If \(f(x)\) is even, only \(a_k\)'s will be non zero, if \(f(x)\) is
+           odd, only \(b_k\)'s will be non zero. (Why?)
+<p><div class="figure-full"><figure id="fig-9"><img src="figures/m50gr12.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. Which of \(r\), \(s\), \(t\) is even, odd,
+            neither? Can one function be both even and odd?</figcaption></figure></div>
+</li>
+<li><span class="item-label">8.</span> The partial sum \(\phi_n(x)\) is a least squares fit to \(f(x)\).
+           The error in representing \(f(x)\) by \(\phi_n(x)\) is
+           \(e_n(x) = f(x) - \phi_n(x)\). Of all the possible methods of
+           choosing the coefficients \(a_k\), \(b_k\), that given by
+           <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> minimizes the integral \(I = \int |e_n(x)|^2\,dx\).</li>
+<li><span class="item-label">9.</span> From the fact that <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> do not contain \(n\), we see
+           that when we approximate \(f(x)\) by \(\phi_n(x)\) and determine the
+           coefficients \(a_k\), \(b_k\), \(k < n\), and then decide to make a
+           better approximation \(\phi_p(x)\), \(p > n\), the coefficients
+           \(a_k\), \(b_k\) for \(k < n\) already determined will not change.
+<p><figure id="fig-10" class="fig-left-framed"><img src="figures/m50gr14.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. The cosine functions are plotted with
+                           4-fold vertical exaggeration for clarity.</figcaption></figure>
+</li>
+<li><span class="item-label">10.</span> A single wave at wavelength \(\lambda = L/\ell\) cannot, of
+            course, form the peak. There must be many other waves of wave
+            lengths near \(\lambda = L/\ell\) which add to each other at the
+            position of the peak and cancel each other elsewhere.</li>
+</ul>
+
+<p>
+<p><figure id="fig-11" class="fig-left-framed"><img src="figures/m50gr17.svg" alt="Figure 11" class="physnet-fig"><figcaption>Fig.&nbsp;11. Representation of
+                               \(y(x) = x\), \(-\pi \leq \pi\), by \(\phi_n(x)\) for
+                               \(n = 4\), 6, 10 (only the region where \(x > 0\) is shown).
+                               Here \(b_k = (2/k)\cdot(-1)^k\), \(a_k = 0\).</figcaption></figure>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Fourier Integral</h2>
+
+<p><h3 id="pcap-3-a">3a. Series vs. Integral</h3>
+
+If a function \(f(x)\) is not periodic or is not restricted to a finite
+interval of \(x\), the function cannot be expanded in a Fourier Series
+and one must turn to the Fourier Integral.
+This is equivalent to letting the period or the localization interval
+go to infinity so the sum in the Fourier Series becomes an integral.
+<p><h3 id="pcap-3-b">3b. Transition: Series to Integral</h3>
+
+Here we will make the transition from the Fourier Series to the Fourier
+Integral.
+<p>For simplicity of derivation, let \(f(x)\) be an even function.
+Assume a periodicity or locality of length \(L\) and suppose we have already
+obtained a set of Fourier Series coefficients \(a_k\) where
+\(k\) = 0, 1, 2, \ldots .
+We can write the arguments of the sine and cosine functions as:
+<p>\[2 \pi \frac{k x}{L} = 2 \pi \frac{x}{L/k} = 2 \pi \frac{x}{\lambda_k}\]
+<p>where \(\lambda_k = L/k\) is obviously the wavelength of the k<sup>th</sup> wave in
+the series.
+Note that exactly \(k\) complete waves fit into the periodicity distance \(L\).
+<p>Now suppose we need to make the the interval twice as large, so the interval
+is \(-L \leq x \leq L\), and we recalculate the \(a_k\)'s.
+We will be using the wavelengths \(\lambda_k = 2L/k = 2L\), \(L\), \(2L/3\), \(L/2\),
+\(\ldots\) so all the coefficients we calculated before will still be here
+but with different \(k\) subscripts.
+That means we can use the original graph and not have to rename anything
+if we label things by their <em>wavelength</em>, instead of by
+the \(k\) integer.
+Writing the abscissa as \(\lambda = L/k\) instead of \(k\), we have <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a>.
+<p><div class="figure-full"><figure id="fig-12"><img src="figures/m50gr18.svg" alt="Figure 12" class="physnet-fig"><figcaption>Fig.&nbsp;12. Fourier coefficients added by going to the
+                               larger interval are marked with crosses.</figcaption></figure></div>
+
+<p>As we let the interval \(L\) grow larger and larger, the scale of the graph
+will change and the points labeled by integer values of \(k\) will get ever
+more closely spaced.
+As \(L \rightarrow \infty\) the points go toward becoming a continuum.
+<p><h3 id="pcap-3-c">3c. The Continuum Case</h3>
+
+In the continuum case we want to describe the continuum by some parameter
+that looks like our series-case \(k= L/\lambda\) but which does not involve
+\(L\).
+It is traditional to use the quantity called the “wave number” \(k\) defined
+by:
+<p>\[k = 2 \pi/\lambda.\]
+<p>The Fourier coefficients \(a_k\), \(b_k\), with integer \(k\), now become the
+“Fourier amplitudes” \(A(k)\), \(B(k)\), with a continuous dimensional \(k\).
+<p><span class="tryit">Try it:</span>  What are \(k\)'s dimensions?
+<p>Skipping further details on the transition from a sum to an integral, we
+write the equations equivalent to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+<p>If \(f(x)\) obeys Dirichlet's conditions in every finite interval, no matter
+how large, and if, in addition,
+<p>\[\int_{-\infty}^{\infty} | f(x) |\,dx\]
+<p>is finite, then
+<p>\[f(x) = \int_{-\infty}^{\infty} [A(k) \cos(kx) + B(k) \sin(kx)]\,dk\]
+<p>\[\begin{aligned}A(k) & = \int_{-\infty}^{\infty} f(x) \cos(kx)\,dx \\ B(k) & = \int_{-\infty}^{\infty} f(x) \sin(kx)\,dx.\end{aligned}\]
+
+<p>Note that \(k\) can take on negative values. This feature will
+be important when traveling waves, rather than standing
+waves, are used. However, for our purposes, \(A(k)\) is even
+and \(B(k)\) is odd and we will only plot the portion of each
+that has \(k\) positive.
+<p><h3 id="pcap-3-d">3d. Eyeballing the Amplitudes</h3>
+
+Just as for Fourier Series, the Fourier
+analysis of a function \(f(x)\) into waves of various amplitudes
+and wavelengths can clarify its physical properties, and
+it is often sufficient to get a rough idea of the
+shape of \(A(k)\) and \(B(k)\) by “eyeballing” the function \(f(x)\).
+Most of the ideas presented in the discussion of Fourier
+Series are still valid, including symmetry, overlap, structure size
+verses wavelength, etc.
+<p><figure id="fig-13" class="fig-left-framed"><img src="figures/m50gr21.svg" alt="Figure 13" class="physnet-fig"><figcaption>Fig.&nbsp;13. </figcaption></figure>
+
+<p>Let us consider the examples in <a href="#fig-13" class="fig-ref">Fig.&nbsp;13</a>.
+For small \(k\) (long wavelength) \(cos(kx) \approx 1\) and so near the
+origin, \(A(k)\) is constant and equal to the area under \(f(x)\)
+divided by \(2\pi\). For \(k\) large [\(R\) smaller than any structure
+in \(f(x)\)], \(A(k)\) approaches zero from cancellation of the \(+\)
+and \(-\) lobes of the integral (see <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>). The region in
+which \(A(k)\) drops off rapidly is near \(\lambda = 2 \pi/k \ell\approx \ell\),
+the size of the major structure in \(f(x)\).
+<p><span class="tryit">Try it:</span>  For the examples in <a href="#fig-14" class="fig-ref">Figs.&nbsp;14–16</a>, see if you can justify
+exactly the form of \(A(k)\) and \(B(k)\).
+<p><figure id="fig-14" class="fig-left-framed"><img src="figures/m50gr23.svg" alt="Figure 14" class="physnet-fig"><figcaption>Fig.&nbsp;14. </figcaption></figure>
+
+<p><figure id="fig-15" class="fig-left-framed"><img src="figures/m50gr26.svg" alt="Figure 15" class="physnet-fig"><figcaption>Fig.&nbsp;15. </figcaption></figure>
+
+<p><div class="figure-full"><figure id="fig-16"><img src="figures/m50gr28.svg" alt="Figure 16" class="physnet-fig"><figcaption>Fig.&nbsp;16. </figcaption></figure></div>
+
+<p>The most elegant and useful form of the Fourier integral
+comes when we use the notation of complex numbers. Then
+<p>\[e^{i k x} = \cos(kx) + i \sin(kx), \qquad i = \sqrt{-1},\]
+<p>and we write for the real (or complex) valued function \(f(x)\)
+of the real variable \(x\):
+<p>\[f(x) = \int_{-\infty}^{\infty} G(k) e^{i k x}\,dk\]
+<p>where
+<p>\[G(k) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} f(x)
+                          e^{i k x}\,dk\]
+<p>is the <em>Fourier transform of \(f(x)\)</em> and is generally a complex valued
+function. If \(f(x)\) is real, then \(G(k)\) is related to the
+Fourier amplitudes of <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> by:
+<p>\[A(k) = Re G(k)\]
+<p>\[B(k) = - Im G(k).\]
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Some Indefinite Integrals</h2>
+
+<p>\(\int x \sin ax\, dx = \frac{1}{a^2} \sin ax - \frac{x}{a} \cos ax\)
+<p>\(\int x^2 \sin ax\, dx = \frac{2 x}{a^2} \sin ax -
+                        \frac{x^2 a^2 - 2}{a^3} \cos ax\)
+<p>\(\int x^3 \sin ax\, dx = \frac{3 x^2 a^2 - 6}{a^4} \sin ax -
+                        \frac{a^2 x^3 - 6 x}{a^3} \cos ax\)
+<p>\(\int x \cos ax\, dx = \frac{1}{a^2} \cos ax + \frac{x}{a} \sin ax\)
+<p>\(\int x^2 \cos ax\, dx = \frac{2 x}{a^2} \cos ax +
+                        \frac{a^2 x^2 -2}{a^3} \sin ax\)
+<p>\(\int x^3 \cos ax\, dx = \frac{3 x^2 a^2 - 6}{a^4} \cos ax +
+                        \frac{a^2 x^3 -6 x}{a^3} \sin ax\)
+<p>\(\int e^{a x} \sin px\, dx = e^{a x} \left( \frac{a \sin px - p \cos px}{a^2 + p^2} \right)\)
+<p>\(\int e^{a x} \cos px\, dx = e^{a x} \left( \frac{a \cos px + p \sin px}{a^2 + p^2} \right)\)
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. A Definite Integral</h2>
+
+<p>\(\int_{0}^{\infty} e^{-a^2/x^2} \cos bx \,dx =
+    \frac{\sqrt{\pi}}{2 a} e^{(-b^2/4a^2)}\,, \qquad (ab \neq 0)\)
+</section>
+
+<p>
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> For each function listed below, sketch the function,
+  apply symmetry conditions to see if any set of coefficients are zero,
+  consider structure and overall shape
+  to predict which coefficients may be large, consider
+  the rate at which coefficients approach zero as \(k \rightarrow \infty\)
+  and then use Eqs.&thinsp;(2) to evaluate the coefficients.
+  Each function is defined in \(-\pi \leq x \leq \pi\).
+<p>  (a) \(\begin{array}[t]{c c l c l} f(x) & = & 1 & \text{for} & |x| \leq \pi/2\\
+                                     & = & 0 &           & \text{elsewhere}
+       \end{array}\)
+<p>  (b) \(\begin{array}[t]{c c l c l} f(x) & = & x & \text{for} & |x| \leq \pi/2\\
+                                     & = & 0 &           & \text{elsewhere}
+       \end{array}\)
+<p>  (c) \(\begin{array}[t]{c c l c l} f(x) & = & x & \text{for} & 0 \leq x \leq \pi\\
+                                     & = & 0 &           & \text{elsewhere}
+       \end{array}\)
+<p>  (d) \(f(x) = x^2\) in the interval.</li>
+<li><span class="item-label">2.</span> For each function below, sketch \(A(k)\), \(B(k)\) by inspection
+  of \(f(x)\), then compute \(A(k)\) and \(B(k)\) and compare.
+<p>  (a) <img src="figures/m50gr30.svg" alt="" class="fig-inline">
+<p>  (b) <img src="figures/m50gr32.svg" alt="" class="fig-inline">
+<p>  (c) <img src="figures/m50gr35.svg" alt="" class="fig-inline"></li>
+</ol>
+
+<p></section>
+

@@ -1,0 +1,497 @@
+<header class="module-header">
+  <h1 class="module-title">Electric Field and Potential of Continuous Charge Distributions <span class="module-author">(J.S.Kovacs and P.Signell <br> Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: continuous charge distribution <a href="../m147/" class="module-ref">MISN-0-147</a>,
+    electrostatic potential <a href="../m116/" class="module-ref">MISN-0-116</a>, gravitational potential <a href="../m108/" class="module-ref">MISN-0-108</a>,
+    line charge <a href="../m133/" class="module-ref">MISN-0-133</a>, partial derivative <a href="../m201/" class="module-ref">MISN-0-201</a>.</li><li><strong>2.</strong> Given the continuous function which describes the distribution of
+    a system of charge, calculate the electric potential at any point in space
+    <a href="../m147/" class="module-ref">MISN-0-147</a>.</li><li><strong>3.</strong> Given the function that gives the electric field in a given
+    region of space, determine the electric potential at points in that region
+    <a href="../m147/" class="module-ref">MISN-0-147</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: directional derivative, equipotential surface,
+    gradient.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Given the distribution of charge in a certain region of space,
+    calculate directly the function that gives the electric field at all
+    points in space due to this charge distribution.</li><li><strong>S2.</strong> Given the function that specifies the electric potential at
+    points in space, determine the function which describes the electric field
+    vector at those same space points.</li></ul></div>
+
+    
+    <div class="required-resources"><h4>Required Resources</h4><ol>
+<li><span class="item-label">1.</span> Alonso and Finn, <em>Physics</em>, Addison-Wesley (1970).</li>
+<li><span class="item-label">2.</span> E.M. Purcell, <em>Electricity and Magnetism</em>, Berkeley Physics
+    Course-Vol 2, McGraw-Hill (1965).</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>If you can calculate the electric field at all points due to a given
+charge distribution, you will be in a position to determine completely
+the motion of any charged particle in the field of this distribution.
+Elsewhere the techniques for finding the electric potential due to a given
+distribution are developed.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>In this module the procedure will be developed for getting the electric
+field directly from the given charge distribution as well.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Suggested Procedure</h2>
+
+<p>
+Read sections 1.8 and 1.12 of Purcell.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>
+Note that \(\epsilon_0 \equiv 1/(4 \pi k_e)\) and \(\mu_0 \equiv 4 \pi k_m\).
+<p>
+Also read sections 2.3, 2.4, 2.5, and 2.6 which are appropriate for
+Output Skill S2.
+<p>
+Review section 16.9 of AF,
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>omitting nothing except Example 16.7, which is discussed elsewhere.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>
+Study what is summarized in Table 16.2 on page 351, especially the column
+on the right.<br>
+
+<p>
+Work problems&nbsp;16.25 and 16.26.
+<p>
+Do these by starting with the solutions you got
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>for the potential functions associated with these charge distributions and
+finding the \(\vec{E}\) field by taking the gradient of \(V\).
+The answers to the two AF problems are given in this module's <em>Problem
+Supplement</em>.
+Also work the problems in the <em>Problem Supplement</em>.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Comments</h2>
+
+<p>We use the expression \(\vec{E} = - \Grad V\) throughout this subject.
+If you are totally unfamiliar with the \(\Grad\) operator, see Sect.&thinsp;4.
+Below we present a short review.
+<p>The \(\Grad\) operator is called the “gradient operator” and used to be
+written <strong>grad</strong>.
+Note that it is <em>not</em> written \(\Delta\).
+<p>The relationship \(\vec{E} = - \Grad V\) is a vector relationship and in
+Cartesian coordinates:
+<p>\[\Grad V \equiv \frac{\partial V}{\partial x} \hat{x} +
+                        \frac{\partial V}{\partial y} \hat{y} +
+                        \frac{\partial V}{\partial z} \hat{z},\]
+<p>so that
+<p>\[E_x = -\frac{\partial V}{\partial x}, \qquad
+       E_y = -\frac{\partial V}{\partial y}, \qquad
+       E_z = -\frac{\partial V}{\partial z},\]
+<p>giving the three independent components of \(\vec{E}\) needed to completely
+determine the vector.
+The component of \(\vec{E}\) in any direction \(s\) is:
+<p>\[E_s = -\partial V/\partial s.\]
+<p>For example in the radial direction (radically outward from some origin of
+coordinates):
+<p>\[E_r = - \frac{\partial V}{\partial r}.\]
+<p>For spherically symmetric charge distributions \(V\) depends only on \(r\) so
+the partial derivative with respect to \(r\) becomes the full derivative
+with respect to \(r\) and \(\vec{E}\) has only an \(r\)-component:
+<p>\[\vec{E}(r) = E_r \hat{r} = - \frac{dV}{dr} \hat{r},\]
+<p>where \(\hat{r}\) is a unit vector pointing radically outward from the
+center of the spherically symmetric charge distribution.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. The Gradiant Operator</h2>
+
+<p>If you haven't been previously introduced to the gradient operation,
+its appearance in the relation between \(\vec{E}\) and \(V\) may seem mysterious.
+The following may make it more plausible and acceptable.
+<p>Recall that with \(\vec{E}\) given as a vector function of position in space,
+the force on a charge \(Q\) at any point is given by \(\vec{F} = Q\,\vec{E}\)
+and the work done by this force is:
+<p>\[W = \int_A^B \vec{F} \cdot d\vec{r},\]
+<p>along some path connecting points \(A\) and \(B\).
+Because \(\vec{F} = Q\,\vec{E}\) is a conservative force, this work is
+independent of the path connecting these two points and the integral is
+just the potential energy difference between the two points:
+<p>\[W = Q \int^B_A \vec{E} \cdot d\vec{r} = E_p(A) - E_p(B) =
+                                                         - \Delta E_p,\]
+<p>where \(\Delta E_p \equiv E_p(B) - E_p(A)\) is the change that occurs in
+\(E_p(r)\) in going from \(A\) to \(B\).
+(This may seem a trivial point, but it is an important one.
+You can think of many everyday examples that conform to this definition of
+the change in a quantity:  When an airplane rises from the ground (elevation
+800&thinsp;ft) to its cruising altitude at 32000&thinsp;ft above sea level, its change in
+elevation is its final elevation minus its initial elevation, or +31,200&thinsp;ft.
+When it returns to the ground it undergoes another change in elevation, this
+time of -31,200&thinsp;ft, again final elevation minus the initial elevation.)
+So we have:
+<p>\[Q \int^B_A \vec{E} \cdot d\vec{r} = E_p(A) - E_p(B)\]
+<p>\[\int^B_A \vec{E} \cdot d\vec{r} =
+                    \frac{E_p(A)}{Q} - \frac{E_p(B)}{Q} \equiv V(A) - V(B)\]
+<p>\[\int^B_A \vec{E} \cdot d\vec{r} = - \Delta V = - [V(B) - V(A)].\]
+<p>From this expression the procedure for finding the functional form of
+\(V(\vec{r})\), given the functional form of \(\vec{E}(\vec{r})\) follows by
+direct integration along an appropriate path.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>If the functional form of \(V(\vec{r})\) is known, how do you determine
+\(\vec{E}(\vec{r})\)?
+Again consider the left-hand side of the above equation along a specific
+straight line path whose direction is specified by unit vector \(\hat{s}\) as
+in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m148gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Geometric quantities involved in developing
+the idea of the gradient operator.</figcaption></figure></div>
+
+<p>
+Point \(P\) is some point on the path at which the electric field has the
+value \(\vec{E}(P)\).
+Here \(\vec{E}\) makes an angle \(\theta\) with the straight line path.
+Consider points \(A\) and \(B\), also on the line, and suppose \(A\) and \(B\) are
+a distance \(\Delta S\) apart on the line.
+If \(\Delta S\) is small enough, \(\vec{E}\) does not vary much from \(A\) to \(B\)
+so that we may replace \(\vec{E}\) in the integral from \(A\) to \(B\) by its
+value at point \(P\), \(\vec{E}(P)\).
+(This assumes that \(\vec{E}(P)\) behaves smoothly in the vicinity of \(P\).)
+The component of \(\vec{E}(P)\) along the line is \(Es(P)\).
+The integral from \(A\) to \(B\) is:
+<p>\[\int^B_A E_s\,ds \approx E_s \int^B_A \, ds = E_s \Delta S.\]
+<p>Then:
+<p>\[- \Delta V = - [V(B) - V(A)] =
+       \int^B_A  \vec{E} \cdot d\vec{r} \approx E_s \Delta S,\]
+<p>for a path approaching an infintesimal straight line path.
+In the limit that points \(A\) and \(B\) shrink to point \(P\), this becomes
+exactly:
+<p>\[E_s(P) = - \frac{dV}{ds}.\]
+<p>This says that the component of the vector \(\vec{E}\) along the direction
+\(s\) at point \(P\) is the negative of the directional derivative at point
+\(P\) of the scalar function \(V(\vec{r})\).
+The directional derivative is just the limit indicated above:
+limit as \(\Delta S \rightarrow 0\) of \(\Delta V/\Delta S\) where \(\Delta V\)
+is \(V(B) - V(A)\).
+(With \(V(\vec{r})\) known at all points in the vicinity of \(P\) you can
+imagine that the change in \(V\) is different as you move in different
+directions away from point \(P\).
+The directional derivative indicates the rate of change in any specified
+direction.
+If \(dV/ds\) is zero along some direction, that direction is along the
+equipotential line.)
+<p>
+So this gives you some information about \(\vec{E}\) at point \(P\): you have the
+component of \(\vec{E}\) along the direction \(s\).
+If the direction \(s\) is the \(x\)-direction, you have \(E_x\), if \(s\) is next
+taken to be the \(y\)-direction, this gives you \(E_y\), and \(E_z\) can be
+obtained similarly.
+So \(\vec{E}\) is determined:
+<p>\[\vec{E}(\vec{r}) =
+        E_x(\vec{r}) \hat{x} + E_y(\vec{r}) \hat{y} + E_z(\vec{r}) \hat{z}\]
+<p>\[\vec{E}(\vec{r}) = -
+        \left( \frac{\partial V}{\partial x} \hat{x} +
+               \frac{\partial V}{\partial y} \hat{y} +
+               \frac{\partial V}{\partial y} \hat{y} \right).\]
+<p>\[\vec{E}(\vec{r}) = - \Grad V(\vec{r}).\]
+<p>The partial derivatives are indicated above, because if the direction \(s\)
+coincides with the \(x\)-direction the derivative along the \(x\)-direction is
+taken with \(y\) and \(z\) held constant, etc; but such a prescription is
+precisely what is meant by the term “partial derivative,”
+\(\partial/\partial x\).
+Consider as a simple and familiar example, the gravitational force near the
+surface of the Earth, as illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m148gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Quantities involved in describing
+gravitational force near the surface of the earth.</figcaption></figure></div>
+
+<p>The \(x\)-\(y\) plane is parallel to the surface of the Earth near the surface
+(very close to the surface of the Earth you may consider it a plane).
+The potential energy function for a mass near the surface of the Earth is:
+<p>\[E_p(x,y,z) = m g z + C,\]
+<p>where \(C\) is an arbitrary constant.
+The equipotential surfaces are planes, parallel to the \(x\)-\(y\) plane,
+on which \(z\) has a constant value (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m148gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A gravitational equipotential surface
+near the surface of the earth.</figcaption></figure></div>
+
+<p>(You can, in analogy to the electric potential, define a gravitational
+potential which is the potential energy per unit mass.
+Instead, let us continue to use the familiar potential energy.)
+<p>
+The force \(\vec{F}\) on the mass \(m\) is given by:
+<p>\[\vec{F} = - \Grad E_p(x,y,z)\]
+<p>\[\vec{F} = - \left( \frac{\partial E_p}{\partial x} \hat{x} +
+                          \frac{\partial E_p}{\partial y} \hat{y} +
+                          \frac{\partial E_p}{\partial z} \hat{z} \right)\]
+<p>Because \(E_p\) depends only on \(z\), the directional derivatives in the \(x\)
+and \(y\) directions are zero (if you start at a point and move in those
+directions, \(E_p\) doesn't change).
+For the \(z\) direction,
+<p>\[\vec{F} = - \frac{\partial E}{\partial z} \hat{z} = - m g \hat{z}\]
+<p>as expected.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Brief Answers to Assigned Problems</h2>
+
+<p><span class="tex-unknown" title="unknown macro">\boxedline</span>16.25 AF answer is OK.
+<p><span class="tex-unknown" title="unknown macro">\boxedline</span>16.26 Start from the result you got for the potential due to the
+disk of charge (answer is given in MISN-0-147) to get the electric field.
+The electric field at \(x\) is (using the method of Problem&nbsp;16.25):
+<p>\[\vec{E} = \frac{\hat{x} Q}{2\pi\epsilon_0 R^2}
+                      \left[ - \frac{x}{\sqrt{R^2 + x^2}} + 1 \right] .\]
+<p>Again, expanding \(\sqrt{1 + R^2/x^2}\) for small \(R^2/x^2\), this reduces
+to the field due to a point charge.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Electrostatic Potential Due to a Continuous Charge
+Distribution” (MISN-0-147). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">If the given charge distribution has associated with it some
+symmetry, then Gauss's Law provides a powerful technique for easily and
+directly getting the electric field due to this charge distribution.
+The series of modules MISN-0-153, and MISN-0-132 to MISN-0-135, deal with
+this. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3"><em>Electricity and Magnetism</em>, E.&thinsp;M.&thinsp;Purcell (Berkeley Physics
+Course - Vol 2, McGraw - Hill, 1965).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">M.&thinsp;Alonso and E.&thinsp;J.&thinsp;Finn, <em>Physics</em>, Addison-Wesley,
+Reading (1970).
+For access, see this module's <em>Local Guide</em>. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">“Electric Dipoles” (MISN-0-120). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See MISN-0-147. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See MISN-0-147. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-PS1">“Electrostatic Potential Due to a Continuous Charge Distribution”
+(MISN-0-147), page 6. <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>\[\epsilon_0 \equiv 1/(4 \pi k_e) \qquad \text{and} \qquad \mu_0 \equiv 4 \pi k_m\]
+<p><ol>
+<li><span class="item-label">1.</span> Elsewhere
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>the electric field was given and the reader was asked to calculate the
+potential energy and potential as a function of the distance \(R\) from the
+axis of a cylindrical filament of charge.
+The answer was:
+<p>\[E_p(R) = - \frac{\lambda Q}{2\pi\epsilon_0}\, \ln R + C,\]
+<p>and
+<p>\[V(R) = - \frac{\lambda}{2\pi\epsilon_0}\, \ln R + C'.\]
+<p>Starting from this result for the potential, find the electric field as a
+function of the distance \(R\) from the axis of the filament.</li>
+<li><span class="item-label">2.</span> Inside a sphere of radius \(R\) which has total charge \(Q\)
+distributed uniformly throughout its volume, the electric potential at a
+distance \(r\) from the center of a sphere (\(r\,<\,R\)) is given by:
+<p>\[V(r) = - \frac{Q r^2}{8\pi\epsilon_0 R^3} + C.\]
+<p>Determine the electric field inside this sphere.
+Do it two ways:
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> first, by observing that \(V\) depends only on \(r\) so its gradient
+is only in the \(r\) direction; and</li>
+<li><span class="item-label">(ii)</span> second, by writing \(r^2 = x^2 + y^2 + z^2\) and using the
+Cartesian coordinate form of the gradient.
+
+
+<p></li>
+<li><span class="item-label">3.</span> <figure class="fig-centered"><img src="figures/m148gr04.svg" alt="" class="physnet-fig"></figure>
+
+<p>For the uniformly charged filament of Problem&nbsp;1, find the
+electric field by direct integration.
+Here is guidance if you wish it.
+Consider the point \(P\) a distance \(R\) from the axis of the uniformly charged
+filament (\(\lambda\) coulombs per meter of length).
+Also consider an element of length, \(dS\), of the filament, which is a
+distance \(S\) from that point on the filament (point \(O\)) which is closest
+to \(P\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the electric field at \(P\) due to the element of charge
+contained in the element of length \(dS\).
+(Note the directions of unit vectors \(\hat{R}\) and \(\hat{S}\)).</li>
+<li><span class="item-label">b.</span> Now consider the element of charge which is also a distance \(S\)
+away from point \(O\) but in the opposite direction (in direction \(-\hat{S}\)
+from \(O\)).
+Calculate the contribution to the electric field from this element of
+charge..</li>
+<li><span class="item-label">c.</span> Find the resultant contribution to the field at \(P\) due to these
+two symmetrically placed elements of charge.</li>
+<li><span class="item-label">d.</span> Sum up the contributions from all such pairs of elements
+located from zero to infinite distance from \(O\).
+Note how symmetry has aided you in finding the total field due to this
+filament.
+Compare the method for getting this result with the method for Problem&nbsp;1.
+Your answer should of course be the same.
+
+<p></li>
+<li><span class="item-label">4.</span> <figure class="fig-centered"><img src="figures/m148gr05.svg" alt="" class="physnet-fig"></figure>
+
+<p>Consider now a case where you don't have the aid of symmetry you
+had in Problem&nbsp;3 above.
+Consider a filament of charge uniformly distributed along the \(x\)-axis from
+the origin to \(x = L\).
+The filament has a total charge \(Q\).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Find the charge per unit length.</li>
+<li><span class="item-label">b.</span> Consider a point \(P\) on the \(y\)-axis (located at \(x = 0\),
+\(y = y_0\)).
+Find the contribution to the electric field at \(P\) due to an element of
+charge contained in element of length, \(dx\), located at distance \(x\) from
+the origin along the \(x\)-axis (\(x\,<\,L\)).</li>
+<li><span class="item-label">c.</span> Sum up the contributions due to all elements of charge from the
+origin to \(x = L\), to find the total field at \(P\).</li>
+<li><span class="item-label">d.</span> Now take this result and let \(L \rightarrow \infty\) (if you do
+this correctly, the answer does not get infinite!).
+Using this result, write down the result for the field at \(P\) due to a
+filament that extends from 0 to \(x = - \infty\).
+Then add up the two contributions from two semi-infinite charge filaments
+to get a result identical to what you got in Problem&nbsp;3.
+</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> Answer is in MISN-0-147.</li>
+<li><span class="item-label">2.</span> Answer is in MISN-0-147 [question 2, part (a)].</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(dE(P) = \frac{\lambda\, ds}{4\pi\epsilon_0
+               (R^2 + S^2)^{3/2}} \left[ -S \hat{S} + R \hat{R} \right]\).</li>
+<li><span class="item-label">b.</span> \(\frac{\lambda\, ds}{4\pi\epsilon_0 (R^2 + S^2)^{3/2}}
+                \left[ S \hat{S} + R \hat{R} \right]\).</li>
+<li><span class="item-label">c.</span> \(\frac{\lambda\,R\,ds}{4\pi\epsilon_0 (R^2 + S^2)^{3/2}}
+                                                                \hat{R}\).</li>
+<li><span class="item-label">d.</span> \(E(p) = \lambda \hat{R} / (2 \pi \epsilon_0) R\).
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\lambda = Q / L\).</li>
+<li><span class="item-label">b.</span> \(d\,\vec{E}(P) =
+           \frac{\lambda\, ds}{4\pi\epsilon_0 (x^2 + y_0^2)^{3/2}}
+                \left[ -x \hat{x} + y_0 \hat{y} \right]\).</li>
+<li><span class="item-label">c.</span> \(\vec{E}(P) = \frac{\lambda \hat{x}}{4\pi\epsilon_0}
+ \left[ \frac{1}{\sqrt{L^2 + y_0^2}} - \frac{1}{y_0} \right] +
+                   \frac{\lambda\hat{y}}{4\pi\epsilon_0}
+                 \left[ \frac{L}{y_0 \sqrt{L^2 + y_0^2}} \right]\).</li>
+<li><span class="item-label">d.</span> From a line of charge extending from 0 to \(L = \infty\):
+           <br>
+
+           \(\vec{E}(P,L\rightarrow\infty) =
+              - \frac{\lambda \hat{x}}{4\pi\epsilon_0 y_0} +
+                \frac{\lambda \hat{y}}{4\pi\epsilon_0 y_0}\).</li>
+<li>From a line of charge extending from 0 to \(L = - \infty\):
+           <br>
+
+           \(\vec{E}(P,L\rightarrow -\infty) =
+                \frac{\lambda \hat{x}}{4\pi\epsilon_0 y_0} +
+                \frac{\lambda \hat{y}}{4\pi\epsilon_0 y_0}\).</li>
+<li>From the sum of the above two lines of charge:</li>
+<li>\(\vec{E}(P) = \frac{\lambda \hat{y}}{2\pi\epsilon_0 y_0}\).
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
+           One or more of these skills may be on the actual exam.</li>
+<li><span class="item-label">2.</span> A uniformly distributed line of charge is placed along the
+\(x\)-axis from \(x = 0\) to \(x = a\).
+There is a total charge \(Q\) distributed along this line.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the expression for the electric field at point \(P\)
+along the \(x\)-axis a distance \(x\) from the origin due to an infinitesimal
+segment of charge contained in an infinitesimal segment of length \(ds\) at a
+distance \(s\) from the origin. [C]</li>
+<li><span class="item-label">b.</span> Summing up the contributions from all of the elements of charge,
+find the expression for the electric field at \(P\) due to this line of
+charge. [E]</li>
+<li><span class="item-label">c.</span> The electric potential at \(P\) due to this line of charge is given
+by:
+<p>\[V(x) =
+       \frac{Q}{4\pi\epsilon_0 a}\;\ell n \left(\frac{x}{x - a} \right)\,.\]</li>
+<li><span class="item-label">d.</span> From this potential function (for points along the \(x\)-axis),
+find the function that gives the electric field at points along the
+\(x\)-axis. [G]
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Write down the function that gives the potential energy at a
+distance \(r\) from the origin when there is a point charge \(Q\) at the
+origin. [B]</li>
+<li><span class="item-label">b.</span> Evaluate the gradient of this potential function to determine the
+electric field at distance \(r\) from the origin. [F]
+</li>
+<li><span class="item-label">3.</span> For a parallel plate capacitor, the potential increases linearly
+from one plate to the other if the distance between the plates is small
+compared to the size of the plates.
+Assume this to be true for a capacitor where the potential increases
+from \(V_1\) on plate #1 to \(V_2\) on plate #2, a distance \(D\) away.
+Assume the plates lie in the \(x\)-\(z\) plane and they are separated by a
+distance \(D\).
+Use the gradient operator to determine the electric field between the plates.
+[D]</li>
+</ol>
+
+<p>
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">A.</span> See Exercises, MISN-0-147.</li>
+<li><span class="item-label">B.</span> \(\frac{Q}{4\pi\epsilon_0 r}\)</li>
+<li><span class="item-label">C.</span> \(\frac{\lambda \,ds}{4\pi\epsilon_0 (x - s)^2} \,\hat{x}\).</li>
+<li><span class="item-label">D.</span> \(\vec{E} = - \frac{\partial V}{\partial y}\,\hat{y}\);
+ \(\frac{\partial V}{\partial y} = \)slope of curve \(=
+                        \frac{V_2 - V_1}{D}\),<br>
+
+so \(\vec{E} = - \frac{V_2 - V_1}{D}\,\hat{y}\),
+                                    points from plate 2 to plate 1.</li>
+<li><span class="item-label">E.</span> \(\vec{E}(x) = \frac{\lambda}{4\pi\epsilon_0}
+  \left[ \frac{1}{x - a} - \frac{1}{x} \right] \, \hat{x};
+  \qquad (x > a)\).</li>
+<li><span class="item-label">F.</span> \(\Grad\,V = - \frac{dV}{dr}\,\hat{r} =
+            \frac{Q}{4\pi\epsilon_0 r^2}\,\hat{r}\).</li>
+<li><span class="item-label">G.</span> \(\Grad\,V =
+            - \frac{\partial V}{\partial x}\,\hat{x}\),
+            gives the same \(\vec{E}\) as in answer (E) above.</li>
+</ol>
+
+</section>
+

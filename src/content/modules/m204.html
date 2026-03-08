@@ -1,0 +1,707 @@
+<header class="module-header">
+  <h1 class="module-title">The Doppler Effect <span class="module-author">(Mary Lu Larsen <br> Towson State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: wavefront <a href="../m203/" class="module-ref">MISN-0-203</a>0-430.</li><li><strong>2.</strong> State the relationships between the wavelength, frequency, period, and
+    speed of a wave <a href="../m201/" class="module-ref">MISN-0-201</a>0-430.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: relative speed, Doppler broadening, Doppler effect, Doppler shift.</li><li><strong>K2.</strong> Describe how the Doppler effect is used by astronomers and
+    cosmologists to justify the “expanding universe” model.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Solve any Doppler shift problem by <em>deriving the shift for
+    that particular case alone</em> (not by using the general Doppler shift formula and not by
+    deriving the general case and then using it).</li><li><strong>S2.</strong> Use the Doppler shift formula to determine the Doppler shift for
+    given motions of a sound wave source and a receiver relative to each other as
+    well as to the acoustic medium.</li><li><strong>S3.</strong> Given a value for the Doppler shift, calculate the relative speed
+    between receiver and source.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. The Effect</h3>
+
+You have probably had the experience of hearing an ambulance approaching
+with its siren blaring, and you may have noticed that there was a sharp drop
+in the pitch of the siren as it passed you.
+That was because, as it passed you, the siren changed from coming toward you
+to going away from you.
+To a person in the ambulance the siren stayed at a frequency that was between
+the “coming toward” you (higher) one and the “going away from” you
+(lower) one.
+The single frequency heard by the person in the ambulance was, in fact, the
+frequency you would have heard if the ambulance had been stationary.
+This is true in general: an approaching source of sound shows a higher
+frequency than a stationary sound, and a receding source shows a lower
+frequency.
+This change in the observed frequency of the sound, due to the motion of the
+source, is a consequence of the wave nature of sound and this phenomenon is
+called the “Doppler effect.”
+The change in the observed frequency is called the “Doppler shift.”
+<p>The Doppler effect is useful for measuring the velocities of wave sources.
+For example, it is  used for measuring blood flow non-invasively,
+for measuring the speed of cars, and, since light is also a wave, for
+determining the velocities of stars.
+<p><h3 id="pcap-1-b">1b. Questions to be Answered</h3>
+
+In the search for an understanding of the Doppler effect, several
+interesting questions present themselves:
+<ul>
+<li><span class="item-label">1.</span> Does the Doppler shift depend only on whether the source is
+moving, or on whether both the source and observer are moving, or does it
+perhaps depend only on their relative velocity?</li>
+<li><span class="item-label">2.</span> Does the Doppler shift depend on whether the air, the transporter
+of the sound, is moving?</li>
+<li><span class="item-label">3.</span> Can one derive an exact formula, good for <em>all</em> situations,
+wherein one can plug in all the relevant velocities, plus the frequency of
+the source in its own rest frame, and get out the observed frequency?</li>
+</ul>
+
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Doppler Effect for Sound</h2>
+
+<p><h3 id="pcap-2-a">2a. Wave Source and Receiver Both Stationary</h3>
+
+Here we review the wavelength-frequency-speed equation for the non-Doppler
+case, where the sound wave source and receiver are both at rest with
+respect to the air (the medium in which the sound propagates).
+The source produces waves of wavelength \(\lambda\) and frequency \(\nu\) that
+travel at wave speed \(v\), the speed of sound in air (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+The equation is:
+<p>\[\lambda \nu = v\,.\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m204gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A stationary source producing sound waves
+that reach a stationary receiver.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2bWave Source Approaching Stationary Receiver
+Now we find the equation for the shift in frequency, the Doppler shift, when
+the wave <em>source</em> is moving at speed \(v_{src}\) toward a stationary
+receiver.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>In <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> we show two frames of a “movie” of what is happening.
+At a certain instant of time, wave peak #1 is emitted by the source
+(see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>a).
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>Exactly one wave period \(T\) later, peak #1 has moved a distance \(\lambda\)
+(one wavelength) and peak #2 is emitted (<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>b).
+However, peak #2 is not emitted at the same position in space as
+peak #1 was emitted because in the time \(T\) the wave source has moved a
+distance \(v_{src} T\) (assume that \(v_{src} < v\)).
+Thus it is with each successive wave peak; the source is constantly
+advancing so that each wavelength is diminished by the distance
+\(v_{src} T\).
+The receiver perceives waves of wavelength \(\lambda'\), where
+<p>\[\lambda' = \lambda - v_{src} T\,.\]
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m204gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A moving wave source emitting wave peaks
+that reach a stationary receiver: (a) wave peak #1 is emitted; (b) wave
+peak #2 is emitted.</figcaption></figure></div>
+
+<p>Now, what about the other wave characteristics, such as wave speed and
+frequency?
+Once the wave is introduced into the air, its speed is determined by the
+properties of the medium (density, elastic response, temperature, etc.)
+and not by the way the wave was produced.
+The wave “forgets” its history, i.e. whether its source was moving or not,
+hence the wave speed is still \(v\).
+Although the source is producing waves of frequency \(\nu\), it cannot be this
+frequency that the receiver perceives, but a frequency \(\nuprime\) which satisfies
+the equation:
+<p>\[\nuprime \lambda' = \nuprime (\lambda - v_{src} T) = v\,.\]
+<p>This frequency, \(\nuprime\), determines the pitch heard by the receiver.
+By exploiting the relationship between frequency and period,
+<p>\[T = \frac{1}{\nu}\,,\]
+<p>and using <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> to eliminate \(\lambda\),
+<p><a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> can be rearranged as:
+<p>\[\frac{v_{src}}{v} = \frac{\nuprime - \nu}{\nuprime}\,. \help{3}\]
+<p>We now write \(\Delta\nu\) as the Doppler Shift, the change in frequency:
+<p>\[\Delta\nu \equiv \nuprime - \nu\,.\]
+<p>Then using it to eliminate \(\nuprime\), we get:
+<p>\[\frac{\Delta\nu}{\nu+\Delta\nu} = \frac{v_{src}}{v}\,.\]
+<p>If \(\Delta\nu\) is small compared to \(\nu\), this can be expressed as
+<p>\[\frac{\Delta\nu}{\nu} \approx \frac{v_{src}}{v}\,. \qquad
+                                                (\Delta\nu \ll \nu)\,.\]
+<p>In words, the fractional change in frequency is approximately equal to the
+ratio of the speed of the source to the speed of sound.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m204gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A receiver approaching a stationary source.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2cReceiver Approaching Stationary Source
+Suppose the receiver is approaching a stationary source with speed \(v_{rcv}\) as depicted in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+The receiver would measure the wavelength of the waves as \(\lambda\), just as
+in the case of both source and receiver at rest.
+However, since the receiver is in motion relative to the air in which the waves have
+speed \(v\), the receiver perceives a higher speed for the waves relative to
+the receiver itself:
+<p>\[v_\text{rel} = v + v_{rcv}\,.\]
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>The frequency \(\nuprime\) perceived by the receiver is determined by this relative
+speed and the wavelength \(\lambda\) by the following modified version of
+<p><a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>:
+<p>\[\nuprime \lambda = v_\text{rel} = v + v_{rcv}\,.\]
+<p>Eliminating \(\lambda\) using \(\lambda = v/\nu\), and rearranging as before, we
+obtain:
+<p>\[\frac{\nuprime - \nu}{\nu} = \frac{v_{rcv}}{v}\,.\]
+<p>Substituting \(\Delta\nu\) into <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, we obtain:
+<p>\[\frac{\Delta\nu}{\nu}=\frac{v_{rcv}}{v}\,.\]
+<p>In this situation the fractional change in frequency, \(\Delta\nu/\nu\), is
+exactly equal to the ratio of the speed of the receiver to the speed of sound.
+<p><h3 id="pcap--">. </h3>
+[]2dSource and Receiver Approaching Each Other
+By combining the arguments of the previous two situations, the reader
+should verify that the following equation must be satisfied for waves
+emitted by a moving source and perceived by a moving receiver, approaching
+one another:
+<p>\[\nuprime \left( \lambda - v_{src} T \right) = v + v_{rcv}\,, \qquad \help{4}\]
+<p>which can be transformed into:
+<p>\[\frac{\Delta\nu}{\nu} = \frac{v_{src} + v_{rcv}}{v - v_{src}}\,. \qquad \help{8}\]
+<p><span class="tryit">Try it:</span>  When calculating the Doppler shift, do it  without blindly plugging
+into a prederived formula.
+Use the fact that sound travels with a characteristic speed relative to the
+medium through which it propagates, plus the definition of wavelength and
+frequency, to calculate the frequency shift.
+Count the numbers of waves emitted or received in some appropriate period
+of time by an appropriate source or receiver.
+Finally, check your answer with a remembered formula.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-2-e">2e. Relative Linear Motion: Three Cases</h3>
+
+In the three previously discussed situations, the final expression was
+determined by assuming that the source and the receiver were approaching
+each other along a straight line.
+<p><span class="tryit">Try it:</span>  Reconstruct the arguments for relative motion along a straight
+line for the source and the receiver moving away from each other.
+The following general relationships may thus be established:
+<p>Case 1. Moving source, receiver at rest.
+<p>\[\frac{\Delta\nu}{\nu + \Delta\nu} = \pm\frac{v_{src}}{v}\,,\]
+<p>so, for cases where \(\Delta\nu\) is very small compared to \(\nu\),
+<p>\[\frac{\Delta\nu}{\nu} \approx \pm\frac{v_{src}}{v}\,. \qquad
+                                      (\Delta\nu << \nu)\]
+<p>The plus sign is used for an approaching source, the negative sign for a
+receding source.
+<p>Case 2. Source at rest, receiver moving.
+<p>\[\frac{\Delta\nu}{\nu} = \pm\frac{v_{rcv}}{v}\,.\]
+<p>The plus sign is used for an approaching receiver, the negative sign for a
+receding one.
+<p>Case 3. Source and receiver both moving.
+<p>\[\frac{\Delta\nu}{\nu} =
+                         \frac{\pm v_{src} \pm v_{rcv}}{v \mp v_{src}}\,.\]
+<p>The upper sign on \(v_{src}\) is used for an approaching source, the lower sign for
+a receding one.
+Similarly, the upper sign on \(v_{rcv}\) is used for an approaching receiver,
+the lower sign for a receding one.
+<p><span class="tryit">Try it:</span>  How fast would a piano have to be approaching a receiver for the
+note A (440&thinsp;Hz) to sound like \(B^\flat\) (466&thinsp;Hz), one-half step higher on
+the musical scale?
+Take the speed of sound to be \(3.30 \times 10^2\)&thinsp;m/s. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+<p><h3 id="pcap-2-f">2f. Moving Source Not Equivalent to Moving Receiver</h3>
+
+<p><a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> and <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> are different because the Doppler shift
+<p>produced by motion of the sound wave <em>source</em> is different from that
+produced by an identical relative motion of a sound wave <em>receiver</em>.
+To see the significance of this, imagine two receivers on different ships.
+Suppose the observers know that only one ship is moving, but don't know which
+one it is.
+If one ship emits a blast from its horn and the receiver on the other ship
+measures the sound frequency, the person operating the receiver can use the
+known rest frequency of the horn, the relative speed of the ships, and the
+speed of sound to see whether the measurements are consistent with
+<p><a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> or <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> and thus determine which of the ships
+<p>is moving.
+<p><h3 id="pcap-2-g">2g. The Medium is the Preferred Reference Frame</h3>
+
+The non-symmetry of source and receiver is a direct consequence of the
+fact that sound requires an elastic medium for its propagation.
+In the cases considered so far, air has been that medium.
+A coordinate system fixed in this <em>medium</em> is called a “preferred”
+reference frame for the phenomena: all velocities in a sound-wave problem are
+to be measured with respect to a coordinate system fixed in this frame.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Doppler Effect for Light</h2>
+
+<p><h3 id="pcap-3-a">3a. Introduction</h3>
+
+There is a remarkable difference between the Doppler effect in sound waves
+and the Doppler effect in light waves.
+For light waves there is no preferred frame of reference, no material
+“medium” in which the waves travel.
+In fact, light waves travel at maximum speed through a complete vacuum where
+sound waves cannot travel at all!
+One consequence is that, unlike a sound wave, the speed of a light wave is
+the same to all receivers regardless of their velocities.
+The details are left to a careful derivation elsewhere.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>Nevertheless, when the speed of the <em>source</em> of the light is small
+compared to the speed of light, the Doppler (frequency) shift is given, to a good
+approximation, by the same equation as for the case of sound with a
+moving source and stationary receiver):
+<p>\[\frac{\Delta\nu}{\nu} = \pm \frac{v}{c}\,. \qquad (v \ll c)\]
+<p>Here \(c\) is the speed of light in a vacuum and \(v\) is the <em>relative</em>
+speed of the light source and the receiver, irrespective of which one is
+taken to be at rest.
+The upper sign is used if the source and the receiver are approaching each
+other; the lower sign if they are receding from each other.
+<p><h3 id="pcap--">. </h3>
+[]3bDoppler Broadening of Spectral Lines
+An important example of the Doppler effect for light is the “broadening”
+of spectral lines due to the thermal motion of the atomic or molecular
+sources of light.
+These sources emit or absorb electromagnetic radiation in a spectrum of
+discrete
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m204gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Doppler broadening of the natural spectral
+line shape.</figcaption></figure>
+
+<p>frequencies called “spectral lines.”
+Each spectral “line” may be represented on a graph of radiation intensity
+as a function of frequency and looks as shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+The spectral line has a peak at some frequency \(\nu_0\) and a “width”
+measured at half the peak intensity.
+This width has a minimum value called the “natural line width,”
+representing the fact that frequencies other than \(\nu_0\) may be emitted or
+absorbed, although such frequencies occur with lower intensities.
+However, since the atomic or molecular sources are in random thermal motion
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>with a Gaussian distribution of velocities, the observed frequencies are
+a similar distribution about the peak frequency \(\nu_0\).
+This effect is called the “broadening” of the spectral line (beyond its
+“ natural” width).
+Such a spectral “line” has a width of <em>roughly</em> \(2 \Delta \nu\), where
+\(\Delta\nu\) is the Doppler shift for a source moving at the average speed of
+the thermal distribution.
+<p><span class="tryit">Try it:</span>  If hydrogen atoms on the surface of a blue-white star
+have an average thermal speed of \(2.5 \times 10^4\)&thinsp;m/s, show that the
+Doppler broadening of the H\(_\alpha\) line, \(\lambda = 656.5\)&thinsp;nm,
+is \(7.6 \times 10^{10}\)&thinsp;Hz.  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><h3 id="pcap--">. </h3>
+[]3cReceding Galaxies Emit Doppler Shifted Light
+One of the most important pieces of evidence supporting the expanding
+universe model is the Doppler shift of spectral line frequencies of light
+emitted from stars in distant galaxies.
+These spectral lines are easily identified by comparison with laboratory
+spectra, but are consistently shifted to lower frequencies.
+Such shifts, called “red shifts,” indicate that the star as a whole is
+receding from the earth at a speed determined from <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a>.
+No such stellar spectra have been observed to be Doppler shifted to higher
+frequencies (“blue-shifted”), leading to the inescapable conclusion that
+the galaxies are receding from each other and that the universe is expanding.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Limitations of the Results</h2>
+
+<p>Experience shows that the assumptions about wave motion on which our Doppler
+shift results were derived are not always valid.
+For one thing, the elastic restoring force by which particles in an acoustic
+medium are returned to their equilibrium positions are not always close to
+being linear.
+This is almost always true for large enough displacements (high enough
+“volume” of sound).
+The result is a wave equation with spatial derivatives of higher order than
+\(\partial^2/\partial x^2\).
+The wave speed is then no longer \(\lambda\nu\) and the wave changes
+shape; the wave “disperses.”
+<p>Another limitation to our Doppler shift equations arises from the
+assumption that the speed of the source is less than the speed of the wave.
+However, if the receiver is receding from the source at a speed exceeding
+the wave speed, the wave will never catch up and hence will never be
+observed at all!
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the broadening of the natural
+linewidth of a spectral line, due to the Doppler shift produced by the random
+thermal motion of the atomic or molecular sources of radiation.
+<p>the phenomenon whereby the observed
+frequency of a wave depends on the motions of the wave source and the
+receiver.
+<p>the change in the observed frequency
+of a wave due to the motion of the wave source and/or the receiver.
+<p>the motions of objects that produce the measurable
+quantity called “temperature.”  For a gas, such as air, the velocities of the gas molecules
+have random directions and their magnitudes that are random within a Gaussian
+distribution function (for further discussion see “Energy and Boltzmann
+Distributions,” MISN-0-159).  The temperature of a gas is a simple function of
+the mean value of that distribution.  Thus an increase of temperature is a signal that
+the mean speed of the gas molecules has shifted upward.
+<p>the speed of an object as measured by an observer
+who is moving with respect to another observer who has also measured the
+object's speed.  Consider a road barrier: a “stationary” observer will measure
+its speed as zero, but if its speed is measured by an observer traveling toward it at 
+a high speed, that “relative speed” will not be zero but will be the speed of that
+observer.  In general, fhe speed of an object, as measured by two observers, will
+differ by the speed of either one of the observers itself as measured by the other
+observer.  In the case of sound, the speed of a wave crest as measured by an
+observer at rest with respect to the air, a “stationary” observer, is the
+normally-quoted speed of sound in air, \(v\).  Suppose now that the “stationary”
+observer sees another observer moving at speed \(v_{obs}\) toward the oncoming
+wave crests: this second, “non-stationary,” observer will measure the speed of
+the wave crests as \(v + v_{obs}\).  
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">By “stationary,” we mean with respect to the air through which
+the wave propagates.
+Thus to a “stationary observer” there can be no wind blowing. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The lines denoting wave peaks are drawn along the individual
+crests (peaks) of the sound wave.
+If the wave could be shown in three dimensions, the peak lines would be
+seen to be parts of spherical surfaces spreading out from the source.
+In some commercial textbooks the wave peak lines (or surfaces) are
+erroneously referred to as “wave fronts.” <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">This is one-dimensional relative motion.  For those interested, two-dimensional (vector)
+relative speeds are examined in “Relative Linear Motion and Frames of Reference ,” MISN-0-11. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">This process is illustrated in Problems&nbsp;3 and 4 in the Problem
+Supplement. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Topics in Relativity: Doppler Shift and Pair Production”
+(MISN-0-308). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">For further discussion of thermal motion see this module's <em>Glossary</em>. <a href="#fnref-6" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;6 and 7 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Express Eqs.&thinsp;(15), (17), and (18) in terms of \(\nu\),
+\(\nuprime\) and the speeds of the source and the receiver, without \(\Delta\nu\).</li>
+<li><span class="item-label">2.</span> Taking the speed of sound as \(3.40 \times 10^2\,\text{m/s}\), consider the following six
+situations:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> a receiver moves toward a stationary source at \(1.70 \times 10^2 \,\text{m/s}\),</li>
+<li><span class="item-label">b.</span> a receiver moves away from a stationary source at \(1.70 \times 10^2 \,\text{m/s}\),</li>
+<li><span class="item-label">c.</span> a source moves toward a stationary receiver at \(1.70 \times 10^2 \,\text{m/s}\),</li>
+<li><span class="item-label">d.</span> a source moves away from a stationary receiver at \(1.70 \times 10^2 \,\text{m/s}\),</li>
+<li><span class="item-label">e.</span> a source and a receiver move away from each other, each
+moving relative to the stationary acoustic medium at 85&thinsp;m/s,</li>
+<li><span class="item-label">f.</span> a source and a receiver are stationary relative to each other but
+move with speed \(v = 1.0 \times 10^1 \,\text{m/s}\) relative to the acoustic medium (the air) in
+the direction from the source to the receiver.
+
+<p>In each case the source emits sound waves of frequency \(\nu = 3.00 \times 10^2 \,\text{Hz}\).
+Determine the frequency the receiver detects in each case.
+Also, in part (f), determine the wavelength of the waves.  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">3.</span> A stationary source emits sound waves of frequency \(6.00 \times 10^2\,\text{Hz}\).
+A receiver at rest detects these waves.
+In solving the following parts use numbers, not symbols.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> How many “wavelets” (complete cycles of the traveling wave) does this source emit in 5&nbsp;seconds?</li>
+<li><span class="item-label">b.</span> Over what distance in space is this wave train spread out if the speed of sound is \(3.40 \times 10^2\,\text{m/s}\)?</li>
+<li><span class="item-label">c.</span> What is the distance between adjacent “crests” of this wave?
+Get this result by using the number of wavelets in the wave train of part (a) and the length of the wave train.
+This is the wavelength of the waves.
+Does this agree with the standard way you know for calculating the
+wavelength (given the speed and frequency of the wave)?</li>
+<li><span class="item-label">d.</span> With what speed does this wave train move by the receiver?</li>
+<li><span class="item-label">e.</span> What length of wave train moves by the receiver in 1&thinsp;second?</li>
+<li><span class="item-label">f.</span> How many wavelets are contained in this wave train (of 1&thinsp;second duration)?</li>
+<li><span class="item-label">g.</span> How many wavelets move by the receiver in 1&thinsp;second?</li>
+<li><span class="item-label">h.</span> What frequency of sound does the receiver detect?
+</li>
+<li><span class="item-label">4.</span> The \(6.00 \times 10^2\,\text{Hz}\) source of Problem&nbsp;3 is moving toward a receiver at a
+speed of \(4.0 \times 10^1\,\text{m/s}\) while the receiver moves toward the source at \(6.0 \times 10^1\,\text{m/s}\) with
+respect to the air.
+In solving the following parts use numbers, not symbols.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The source emits sound waves as it moves.
+In 5 seconds, how many wavelets (complete cycles of the traveling wave) has it emitted?</li>
+<li><span class="item-label">b.</span> How far from its original source location has the front of the
+wave train gone (toward the receiver) in this 5&nbsp;seconds?</li>
+<li><span class="item-label">c.</span> How far from the initial source location was the last of the 5&nbsp;second wave train emitted?</li>
+<li><span class="item-label">d.</span> From parts (b) and (c), over what distance in the air is this wave train extended?</li>
+<li><span class="item-label">e.</span> To a receiver at rest with respect to the air, what is the distance between the adjacent wavelets?
+Get this from parts (a) and (d).
+What wavelength does the receiver measure for this sound wave?</li>
+<li><span class="item-label">f.</span> Compare this result with the wavelength that would be observed if the source were at rest.</li>
+<li><span class="item-label">g.</span> How fast does this wave train go by the moving receiver?</li>
+<li><span class="item-label">h.</span> What distance of wave train moves by the receiver in one second?</li>
+<li><span class="item-label">i.</span> How many wavelets go by the receiver in this one second?</li>
+<li><span class="item-label">j.</span> What frequency does the receiver measure?</li>
+<li><span class="item-label">k.</span> Compare the answer to part (j) with the frequency calculated using
+the Doppler shift formula stated in the module text.
+</li>
+<li><span class="item-label">5.</span> A physicist receives a traffic citation for running a red light (\(\lambda = 6.20 \times 10^2 \,\text{nm}\)).
+She claims that, because she was approaching the light, the Doppler effect
+made the light look green (\(\lambda = 5.40 \times 10^2 \,\text{nm}\)).
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the speed the physicist would have had to be traveling for
+her assertion to be true.</li>
+<li><span class="item-label">b.</span> Would she have been exceeding the speed limit?
+</li>
+<li><span class="item-label">6.</span> In this problem, derive the Doppler shift for each part
+           separately, using numbers rather than symbols throughout the
+           derivation, and justifying each basic step.
+           This means following exactly the types of procedures you were led
+           through in Problems 3 and 4, where you were always asked for numbers,
+           never for symbols.
+           For each part below, determine the frequency of sound as measured
+           by the specified receiver.
+           The source frequency is \(\nu = 1.00 \times 10^2 \,\text{Hz}\) in its own rest frame.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The receiver is stationary and the source moves away from it at
+           \(7.0 \times 10^1 \,\text{m/s}\).</li>
+<li><span class="item-label">b.</span> The source is stationary and the receiver moves away from it at
+           \(7.0 \times 10^1 \,\text{m/s}\).</li>
+<li><span class="item-label">c.</span> The receiver and the source move away from each other, each moving
+           at \(1.00 \times 10^2 \,\text{m/s}\) relative to the air.</li>
+<li><span class="item-label">d.</span> The receiver and the source move toward each other, each moving at
+           \(1.00 \times 10^2 \,\text{m/s}\) relative to the air.
+</li>
+<li><span class="item-label">7.</span> An astronomer measures the frequencies of the spectral lines in a
+star's spectrum and finds them to be red-shifted by 2%.
+This measurement is made at a time when the earth's velocity due to its
+motion about the sun makes a right angle with the direction to the star.
+Calculate the speed with which the star appears to be receding from the
+earth.
+Assume the earth is not moving toward or away from the star at the time of
+measurement. <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> Case1: \(\nuprime = \nu \, \frac{v_\text{sound}}{v_\text{sound} \mp v_\text{source}}\). (\(v_\text{receiver} = 0\))  (15\('\))
+<p>Case2: \(\nuprime = \nu \, \frac{v_\text{sound} \pm v_\text{receiver}}{v_\text{sound}}\). (\(v_\text{source} = 0\)) (17\('\))
+<p>Case3: \(\nuprime = \nu \, \frac{v_\text{sound} \pm v_\text{receiver}}{v_\text{sound} \mp v_\text{source}}\).  (18\('\))</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\nuprime = 450\)&thinsp;Hz.</li>
+<li><span class="item-label">b.</span> \(\nuprime = 150\)&thinsp;Hz.</li>
+<li><span class="item-label">c.</span> \(\nuprime = 600\)&thinsp;Hz.</li>
+<li><span class="item-label">d.</span> \(\nuprime = 200\)&thinsp;Hz.</li>
+<li><span class="item-label">e.</span> \(\nuprime = 180\)&thinsp;Hz.</li>
+<li><span class="item-label">f.</span> \(\nuprime = 300\)&thinsp;Hz, \(\lambda' = 1.10\)&thinsp;m.
+</li>
+<li><span class="item-label">3.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 3000.</li>
+<li><span class="item-label">b.</span> 1700&thinsp;m.</li>
+<li><span class="item-label">c.</span> 0.567&thinsp;m, yes.</li>
+<li><span class="item-label">d.</span> 340&thinsp;m/s.</li>
+<li><span class="item-label">e.</span> 340&thinsp;m.</li>
+<li><span class="item-label">f.</span> 600 wavelets.</li>
+<li><span class="item-label">g.</span> 600.</li>
+<li><span class="item-label">h.</span> 600&thinsp;Hz.
+</li>
+<li><span class="item-label">4.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 3000.</li>
+<li><span class="item-label">b.</span> 1700&thinsp;m.</li>
+<li><span class="item-label">c.</span> 200&thinsp;m.</li>
+<li><span class="item-label">d.</span> 1500&thinsp;m.</li>
+<li><span class="item-label">e.</span> 0.500&thinsp;m, 0.500&thinsp;m.</li>
+<li><span class="item-label">f.</span> 0.567&thinsp;m.</li>
+<li><span class="item-label">g.</span> 400&thinsp;m/s.</li>
+<li><span class="item-label">h.</span> 400&thinsp;m.</li>
+<li><span class="item-label">i.</span> 800.</li>
+<li><span class="item-label">j.</span> 800&thinsp;Hz.</li>
+<li><span class="item-label">k.</span> 800&thinsp;Hz.
+</li>
+<li><span class="item-label">5.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(4 \times 10^7\)&thinsp;m/s (approximately, since \(v \ll c\) does not hold).</li>
+<li><span class="item-label">b.</span> Obviously yes. 
+</li>
+<li><span class="item-label">6.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 83&thinsp;Hz.</li>
+<li><span class="item-label">b.</span> 79&thinsp;Hz.</li>
+<li><span class="item-label">c.</span> 55&thinsp;Hz.</li>
+<li><span class="item-label">d.</span> 183&thinsp;Hz.
+</li>
+<li><span class="item-label">7.</span> \(v = 6 \times 10^6\)&thinsp;m/s. <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Notice that the answers to parts (a) and (c) are not the same, even though
+ in both cases the relative speed of the source and the observer are the same.
+ Similarly, the relative speed of the source and the observer in parts (b),
+ (d) and (e) are the same but the Doppler shifts are all different.
+ Also note that (b) of <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> is not applicable because it is
+ an approximation valid only if \(v_s\) is small compared to \(v\).
+ Try parts (c) and (d) a source speed having the value 34&thinsp;m/s.
+ Subequation (b) of <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> is now a better approximation, especially if you retain only
+ one digit beyond the decimal point.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Direct substitution gives:
+ \[\nu'\, \left( \frac{v}{\nu} - v_s \frac{1}{\nu} \right) = v\]
+ and then simple algebraic manipulations give:
+ \[\frac{\nu'}{\nu}\, \left( v - v_s \right) = v\]
+ \[\frac{\nu'}{\nu}\, \left( 1- \frac{v_s}{v} \right) = 1\]
+ \[1 - \frac{v_s}{v} = \frac{\nu}{\nu'}\]
+ \[\frac{v_s}{v} = 1 - \frac{\nu}{\nu'}\]
+ and the result follows immediately.
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Treat the output frequency of Sect.&thinsp;2b as the input frequency for
+ Sect.&thinsp;2c.
+</div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Solution: Since the source of the sound is moving, we use Case 1.
+ Let us calculate the speed \(v_{src}\) from the exact formula, <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a>:
+ 
+ \[\frac{\Delta\nu}{\nu+\Delta\nu} = \frac{v_{src}}{v} \Longrightarrow
+ v_{src} = v \left( \frac{\Delta\nu}{\nu + \Delta\nu} \right)\]
+ 
+ Now \(\nu = 440\,\text{Hz}\), \(\nu + \Delta\nu = 466\,\text{Hz}\), and \(\Delta\nu = 26\,\text{Hz}\)
+ so:
+ \[v_{src} = (330\,\text{m/s}) \left( \frac{26\,\text{Hz}}{466\,\text{Hz}} \right) = 18.4\,\text{m/s}.\]
+ 
+ Now let us calculate \(v_{src}\), using the approximation of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a>:
+ 
+ \[\frac{\Delta\nu}{\nu} \approx \frac{v_{src}}{v}\]
+ 
+ \[v_{src} \approx v \frac{\Delta\nu}{\nu} =
+ (330\,\text{m/s}) \left( \frac{26\,\text{Hz}}{440\,\text{Hz}} \right) \approx 19.5\,\text{m/s}\]
+ 
+ The fractional error introduced by the approximation is 1.1/18.4, about 6.0%.
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\[\frac{\Delta\nu}{\nu_0} = + \frac{v}{c} =
+ \frac{2.5 \times 10^4\,\text{m/s}}{3.0 \times 10^8\,\text{m/s}} = 8.33 \times 10^{-5}\,,\]
+ which is the shift from \(\nu_0\) for the sources that are approaching the
+ receiver with speed \(v\).
+ At any given instant, about the same number are receding from the receiver
+ and for these the shift would have a minus sign.
+ Hence the <em>full</em> width at half maximum would be:
+ 
+ \[2 \Delta\nu = 2 \left(\frac{\Delta\nu}{\nu_0}\right)\,\nu_0 =
+ 2\,(8.33 \times 10^{-5}) \frac{3.00 \times 10^8\,\text{m/s}}{656.5\,\text{nm}} =
+ 7.6 \times 10^{10}\,\text{Hz}.\]
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body"><ol>
+<li><span class="item-label">1.</span> We have found that most students who seek help on this problem simply did
+ not really try to learn the relevant material in the text so they have no idea what
+ the words in the problem mean.
+ One of the most important skills to learn in college is to properly
+ decide when you cannot solve a problem unless you understand the terms involved.
+ This is one of those cases where you need to find the section where the
+ problem's words are used and really understand all of the processes that the terms
+ describe.  That may force you to go back to earlier sections and really learn that
+ material as well.  You will know that you have succeeded in understanding the subject when
+ the meaning of the phrase “red-shifted by 2.00%” is clear to you and you realize that you
+ know how to use the phrase mathematically.</li>
+<li><span class="item-label">2.</span> Another aspect that has stymied some students is that they do not know
+ that they should actually start working on a problem even if they cannot find a formula which
+ contains, on its right-hand-side, the exact list of quantities that are given in the
+ problem.  In real life, one often has to just start working on a problem, using one's general
+ understanding of the phenomenon and see where one <em>can</em> start making correct
+ inferences.  Sometimes quantities whose values are not known simply disappear from the problem due
+ to unforeseen cancellations.</li>
+<li><span class="item-label">3.</span> Finally, there have been a few students who said they understood
+ how to use percentages in describing an increase in a number of apples or an increase in
+ their pay, but who say that applying a percentage increase to a number of cycles
+ per second is mathematically different.  When we have told them that there is no difference mathematically,
+ they have generally gone away satisfied.</li>
+</ol>
+
+</div></div>
+
+<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Notice which quantities must disappear in going from the first equation to the second.
+ Get rid of those quantities by substituting for them in terms of quantities that do occur
+ in the second equation.
+ After that it is just a matter of simple rearrangement to get the second equation in the form shown.
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2.</li>
+<li><span class="item-label">2.</span> In this problem, derive the Doppler shift for each part
+           separately, using numbers rather than symbols throughout the
+           derivation, and justifying each basic step.
+           For each part below, determine the frequency of sound as measured
+           by the specified receiver.
+           The source frequency is \(\nu\) = 100&thinsp;Hz in its own rest frame.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The receiver is stationary and the source moves away from it at
+           70&thinsp;m/s.</li>
+<li><span class="item-label">b.</span> The source is stationary and the receiver moves away from it at
+           70&thinsp;m/s.</li>
+<li><span class="item-label">c.</span> The receiver and the source move away from each other, each moving
+           at 100&thinsp;m/s relative to the air.</li>
+<li><span class="item-label">d.</span> The receiver and the source move toward each other, each moving at
+           100&thinsp;m/s relative to the air.
+</li>
+<li><span class="item-label">3.</span> An astronomer measures the frequencies of the spectral lines in a
+           star's spectrum and finds them to be red-shifted by 2.00%.
+           This measurement is made at a time when the earth's velocity due
+           to its motion about the sun makes a right angle with the direction
+           to the star.
+           Calculate the speed with which the star appears to be receding
+           from the earth.
+           Assume the earth is not moving toward or away from the star at
+           the time of measurement.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;6.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;7.</li>
+</ol>
+
+</section>
+

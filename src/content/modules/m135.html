@@ -1,0 +1,586 @@
+<header class="module-header">
+  <h1 class="module-title">Capacitance and Capacitors <span class="module-author">(William F.Faissler)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Apply Gauss's law to determine the electric field produced by
+    a given planar, spherical, or cylindrical static charge
+    distribution (MISN-0-132, MISN-0-133).</li><li><strong>2.</strong> Derive the expression for the potential difference between the
+    plates of a parallel plate capacitor <a href="../m134/" class="module-ref">MISN-0-134</a>.</li><li><strong>3.</strong> Describe how one reduces a complex circuit having one type of element
+    to a single element using the concept of <em>equivalent elements</em> and
+    illustrating with an example <a href="../m119/" class="module-ref">MISN-0-119</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: capacitance, capacitor, dielectric, dielectric constant,
+    farad.</li><li><strong>K2.</strong> Define capacitance in terms of charge and potential.</li><li><strong>K3.</strong> Use Gauss's law to derive the capacitance of cylindrical
+    and parallel plate capacitors.</li><li><strong>K4.</strong> Derive, from energy and charge conservation principles, the
+    capacitance of capacitors connected in series.</li><li><strong>K5.</strong> Derive, from energy and charge conservation principles, the 
+    capacitance of capacitors connected in parallel.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Calculate the capacitance of a given cylindrical or parallel
+    plate capacitor.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Problem Solving)</h4><ul><li><strong>S1.</strong> Calculate the capacitance of a given series and/or parallel
+    combination of capacitors.</li></ul></div>
+
+    
+    
+    
+    
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Why We Study Capacitors</h3>
+
+This module deals with capacitance, capacitors and a number of 
+related topics.  Although it may appear to you as if capacitance and 
+capacitors are simply a digression in the process of understanding
+the electrostatic field, capacitors are one of the more important
+building blocks used in constructing modern electronic equipment.
+Thus the material you learn from this module is actually useful in
+dealing with electronic circuitry.
+<p><h3 id="pcap-1-b">1b. Capacitance Defined</h3>
+
+Two conductors separated from each other by empty space or by an
+insulator form a capacitor.
+Thus the word “capacitor” refers to a device consisting of the two
+conductors and whatever is in the space between them.
+A good example is the ordinary “Cable Television” cable.
+In this module it will be shown that if 
+one of a capacitor's conductors has a charge of +&thinsp;Q on it and the 
+other has a charge of \(-Q\), then the potential difference, \(V\), between the
+two conductors is linearly proportional to the charge:
+<p>\[V = Q/C.\]
+<p>The proportionality constant's inverse, 
+\(C\), is called the “capacitance” of the capacitor.
+The numerical value of \(C\) depends on the sizes of the two conductors,
+on their relative positions, and on what is between them. 
+It is independent of both \(Q\) and \(V\).
+<p><h3 id="pcap-1-c">1c. A Summary of What Follows</h3>
+
+In this module we will derive the following results, except that we will
+assume vacuum between the plates of capacitors so \(K = 1\):
+<ul>
+<li><span class="item-label">1.</span> For a parallel plate capacitor, the type commonly found in
+electronic circuits:
+<p>\[C = \frac{K A}{4 \pi k_e d}\]</li>
+<li><span class="item-label">2.</span> For a cylindrical capacitor, exemplified by a coaxial cable:
+<p>\[C = \frac{K L}{2 k_e \ln(R_2/R_1)}\]</li>
+<li><span class="item-label">3.</span> For any capacitor, the voltage-current relationship:
+<p>\[i=C\frac{dV}{dt}\]</li>
+<li><span class="item-label">4.</span> For any capacitor, the energy required to charge it:
+<p>\[U=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}Q V=\frac{1}{2}C V^2\]</li>
+<li><span class="item-label">5.</span> For a number of capacitors in parallel, the equivalent
+capacitance:
+<p>\[C_{EQ} = C_1 + C_2 + \ldots + C_n\,.\]
+<p>and for the capacitors in series:
+<p>\[\frac{1}{C_{EQ}}=\frac{1}{C_1}+\frac{1}{C_2}+\ldots+
+                                                      \frac{1}{C_n}\]</li>
+</ul>
+
+<p>Finally, in the last section of the module, the effect of putting
+a dielectric material between a capacitor's conductors (making \(K \neq 1\))
+will be discussed.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Capacitors</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m135gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A parallel plate capacitor.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2aThe Parallel Plate Capacitor
+The prototype of all capacitors is the parallel plate capacitor 
+illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>: we will here show that its capacitance is
+\(C = A /(4 \pi k_e d)\).
+This capacitor consists of two parallel conducting plates, 
+each with area \(A\) and separated by a distance \(d\).
+For the present this gap is assumed to be empty (vacuum); later in the
+module we will discuss what happens in the other usual case where an
+insulating dielectric material is put between the two plates.
+One of the plates has a charge of \(+Q\) while the other has a charge of
+\(-Q\) and in this particular case we have assumed that the upper plate is
+positive while the lower plate is negative.
+<p><span class="tryit">Try it:</span>  By applying Gauss's law, you can easily see that the magnitude of
+the electric field in the gap between the two plates is:
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[E=4 \pi k_e \frac{Q}{A}\]
+<p>and the direction of the electric field is from the upper plate
+to the lower plate as shown in the figure.
+<p>Next you can calculate the potential difference between the two plates,
+here labeled \(A\) and \(B\):
+<p>\[V=-\int_A^B \vec{E} \cdot \,d\vec{\ell} =
+     \int_A^B 4 \pi k_e \frac{Q}{A}\,d\ell\,, = 4 \pi k_e \frac{Q d}{A}\]
+<p>Thus the voltage across the capacitor is proportional to the
+charge on the capacitor, with the constant of proportionality being
+a combination of geometrical factors.  This can be written as 
+\(V = Q/C\)&thinsp;[<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>] where the capacitance \(C\) is given by:
+<p>\[C = \frac{A}{4 \pi k_e d} \qquad \text{(parallel plate)}\]
+<p>You recognize this as the result advertised earlier [<a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>]
+for the case of vacuum (\(K = 1\)); later we will discuss the case 
+of a capacitor made with an insulator other than vacuum.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m135gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. A cylindrical capacitor.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]2bThe Cylindrical Capacitor
+The very common “cylindrical” capacitor is illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+It consists of two concentric cylinders of length \(L\), separated by a gap.
+For now it is empty space. 
+One of the cylinders has a charge of \(+Q\) on it and the other has a charge
+of \(-Q\); in this particular case, the positive charge has been put on the
+inner cylinder.
+<p><span class="tryit">Try it:</span>  By applying Gauss's law you can easily see that the magnitude of the
+electric field in the gap between the two cylinders is: 
+<p>\[E= 2 k_e \frac{Q}{L r} \qquad (R_1 \leq r \leq R_2)\]
+<p>where \(r\) is the radius of the point at which you are calculating the field.
+Next you can calculate the potential difference between the inner and outer
+cylinders:
+<p>\[\begin{aligned}V & = -\int_A^B \vec{E} \cdot\,d\vec{r} = \int_{R_1}^{R_2} 2 k_e \frac{Q}{L}\frac{dr}{r} \\   & = 2 k_e \frac{Q}{L} (\ln R_2 -\ln R_1) \\   & = 2 k_e \frac{Q \ln(R_2/R_1)}{L}\end{aligned}\]
+
+<p>Once again, the voltage is proportional to the charge on either
+cylinder and the constant of proportionality is a collection of geometrical
+factors. 
+Again writing \(V = Q/C\) we find:
+<p>\[C= \frac{L}{2 k_e \ln(R_2/R_1)}\]
+<p><h3 id="pcap-2-c">2c. A Generalization</h3>
+
+In applying Gauss's law to the two configurations considered so 
+far, it was necessary to assume that the point at which the electric 
+field was being calculated was so far from the edges of the plates or
+cylinders that there was no effect due to the variation of the fields 
+near the capacitor's edges.  But what happens when the capacitor plates 
+are so small or the
+cylinders so short that this cannot be true?  It can be shown, although 
+it is beyond the scope of this module to do so, that the form shown in  
+<a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is true in all cases.  For any arrangement of two isolated
+conductors with one having a charge of \(+Q\) and the other \(-Q\), the potential
+difference between the two conductors is proportional to \(Q\) and the constant
+of proportionality \(1/C\) depends only on geometrical factors. 
+For the simple cases of two parallel plates or two concentric cylinders, 
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> or <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, respectively, can be used to calculate the
+capacitance.
+For other, less idealized, geometries more complex formulae must be
+used.  In any case, the capacitance \(C\) can be measured by electronic
+means and the validity of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> is well established by experiment.
+<p><h3 id="pcap--">. </h3>
+[]2dThe Units of Capacitance
+Capacitance is measured in units of farad (abbreviated “F”);
+from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> you can see that if one coulomb of charge is placed
+on a one farad capacitor, there will be a potential of one volt across the
+capacitor.
+For most electronic uses, the farad is a very large unit; commonly used
+capacitors are measured in units of microfarads, nanofarads and even
+picofarads.
+<p><span class="tryit">Try it:</span>  If you rearrange <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> you will find that capacitance has 
+the dimensions of “charge per unit voltage” (voltage = electrostatic
+potential difference).
+<p><h3 id="pcap-2-e">2e. Capacitors Are Neutral</h3>
+
+As illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, the normal capacitor as a whole is electrically
+neutral; one plate of the capacitor has a charge of \(+Q\) on it while the
+other has a charge of \(-Q\). 
+<p>This sometimes creates a semantic problem,
+since capacitors are commonly said to “store charge.”  If you 
+are concentrating on only one plate of the capacitor, then 
+you may well be able to treat the capacitor as if it is “storing
+charge” but in general the capacitor as a whole is electrically neutral.
+When we say, “a capacitor has a charge \(Q\) on it,” we mean
+that it has a charge of \(+Q\) on one plate and \(-Q\) on the other.
+<p><h3 id="pcap--">. </h3>
+[]2fThe Voltage-Current Relation in a Capacitor
+To find out what happens when the applied voltage changes with time, we
+simply rearrange <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and differentiate it:
+<p>\[Q = C\,V\]
+<p>\[\frac{dQ}{dt}=V\frac{dC}{dt}+C\frac{dV}{dt}\]
+<p>\[\frac{dQ}{dt}=C\frac{dV}{dt}\,.\]
+<p>The last equation follows because \(C\), which depends only on
+geometrical constants, is not a function of time so \(dC/dt = 0\).
+Finally, \(dQ/dt\) (the rate of change of the charge on one of the plates) is
+the current flowing in the lead to that plate:
+<p>\[i=C\frac{dV}{dt}\]
+<p>This relationship is often used in determining the effects of capacitors in
+electronic circuits. 
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m135gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The symbol for a capacitor.</figcaption></figure>
+
+<p><h3 id="pcap--">. </h3>
+[]2gThe Symbol for a Capacitor
+The symbol for a capacitor, to be used in drawing
+schematic diagrams, is illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Useful Relationships</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]3aThe Energy Stored in a Charged Capacitor
+It is often useful to know the amount of potential energy stored in a charged
+capacitor. 
+Consider a capacitor \(C\) having charge of \(q\).
+The potential difference between the two plates is given by <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>: \(V = q/C\).
+If a small amount of charge, \(dq\), is moved from one plate to the 
+other, then the amount of work done is: 
+<p>\[dW = V\,dq = q\,dq/C\,.\]
+<p>Moving charge from one plate to the other is equivalent to any other
+method of charging the capacitor.  Thus if you simply integrate
+<a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>, starting with zero charge and ending with a 
+final charge \(Q\), you will have calculated the work needed to charge the
+capacitor and hence you will have calculated the potential energy stored in
+the charged capacitor:
+<p>\[U = \left. \int_O^Q q \,dq/C = \frac{q^2}{2 C} \right|_0^Q\]
+<p>\[ =\frac{Q^2}{2 C} = \frac{1}{2}V Q = \frac{1}{2} C V^2\]
+<p>where the last results follow by using <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m135gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Three capacitors connected in parallel and
+the equivalent capacitor.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3bCapacitors in Parallel
+If two or more capacitors are in parallel, as in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, they
+can be replaced by one equivalent capacitor in any electric circuit.
+In this parallel arrangement the same potential is 
+necessarily applied to all capacitors:
+<p>\[V = \frac{Q_1}{C_1} = \frac{Q_2}{C_2} = \frac{Q_3}{C_3}\]
+<p>If you think about the process of charging the capacitor, you will be able
+to convince yourself that the total charge delivered down the common wire to
+the top plates of the capacitors is simply the sum of the charges on the
+individual top plates:
+<p>\[ Q_\text{tot} = Q_1 + Q_2 + Q_3\]
+<p>but of course
+<p>\[Q_\text{tot} = C_\text{EQ} V\]
+<p>so
+<p>\[C_\text{EQ} =  C_1 + C_2 + C_3\]
+<p>If \(n\) capacitors are connected in parallel, this derivation can be
+generalized to show that the equivalent capacitance is given by:
+<p>\[C_\text{EQ} = C_1 + C_2 + \ldots + C_n . \]
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m135gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The capacitor equivalent to three connected
+in series.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3cCapacitors in Series
+Just as in the parallel case, two or more capacitors in series can be
+replaced by one equivalent capacitor (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+If you start with all the capacitors uncharged and add a charge \(Q\) to
+the top plate of the top capacitor, then \(+Q\) must leave the lower plate
+of the top capacitor, leaving it with a charge of \(-Q\) if the capacitor is
+to remain neutral.  The charge that leaves the lower plate of the
+top capacitor must end up on the top plate of the second capacitor,
+etc.  Thus each of the capacitors ends up with the same charge \(Q\) on
+its top plate.  The voltage across capacitor 1 is then:
+<p>\[V_1 = Q/C_1 ,\]
+<p>across capacitor 2 is
+<p>\[V_2 = Q/C_2 ,\]
+<p>and
+<p>\[V_3 = Q/C_3 ,\]
+<p>The total voltage across all three capacitors in the sum of 
+\(V_1\), \(V_2\), and \(V_3\):
+<p>\[V = V_1 + V_2 + V_3\,.\]
+<p>If the same charge were put on the equivalent capacitor, then
+the voltage across it would be
+<p>\[V=\frac{Q}{C_\text{EQ}}\]
+<p>Since this is the equivalent capacitor, one that can replace the three 
+capacitors,
+then the two voltages must be the same.
+Combining these equations gives:
+<p>\[\frac{Q}{C_\text{EQ}}=\frac{Q}{C_1}+\frac{Q}{C_2}+\frac{Q}{C_3}\]
+<p>so
+<p>\[\frac{1}{C_{EQ}}=\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}\]
+<p>From the derivation above, it should be clear that if n capacitors
+are put in series, the equivalent capacitance would be
+<p>\[\frac{1}{C_\text{EQ}}=\frac{1}{C_1}+\frac{1}{C_2}+\ldots+
+                                                       \frac{1}{C_n}\]
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. </h2>
+</section>
+[]Dielectrics
+<p><h3 id="pcap-capacitor| with dielectric-4">capacitor| with dielectric4. a</h3>
+Capacitors with Insulators
+If the two conducting plates of a capacitor are separated by an
+insulating material, a “dielectric,” then it is found experimentally
+that the capacitance is \(K\) times as great as it is when the same plates
+are separated by vacuum. 
+The constant \(K\) is called the “dielectric constant” of the insulating
+material. 
+It does not depend on the potential
+difference across the capacitor or on the geometry of the capacitor.
+Table&nbsp;1 contains a list of dielectric constants for common materials.
+<p>Since the dielectric constant of the insulating material is a
+multiplier on the capacitance of any capacitor,
+the capacitance of a parallel plate capacitor
+is, in general:
+<p>\[C = \frac{K A}{4 \pi k_e d}\]
+<p>while the capacitance of a similarly insulated cylindrical capacitor 
+is:
+<p>\[C=\frac{K L}{2 k_e \ln(R_2/R_1)}\]
+<p>Since the value of \(K\) for vacuum is 1 by definition of the units,
+<a href="#eqn-10" class="eqn-ref">Eqs.&nbsp;(10)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> are really just special cases of
+<a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
+<p><h3 id="pcap--">. </h3>
+[]4bElectric Fields in Dielectrics
+The effects of dielectrics can be described in terms of the way they alter
+electric fields.
+If a dielectric is placed in a region of space where the electric field
+would otherwise have a magnitude of E, and no other changes are made, then
+the magnitude of the electric field inside the dielectric is found to be
+reduced by a factor of \(K\): it is \(E/K\) where \(K\) is again the dielectric
+constant.
+This fact makes it easy to understand the increase in the capacitance of
+the capacitor when the empty space is replaced by a dielectric.
+As an example, consider the parallel plate capacitor shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m135gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. A parallel plate capacitor with dielectric
+between the plates.</figcaption></figure></div>
+
+<p>If there were no dielectric, the electric field would be: 
+<p>\[E= 4 \pi k_e \frac{Q}{A}\,.\]
+<p>With the dielectric the field is:
+<p>\[E= 4 \pi k_e \frac{Q}{K A}\]
+<p>The potential difference between the two plates is then:
+<p>\[V= 4 \pi k_e \frac{Q d}{K A}\]
+<p>The capacitance is thus as in Eq.&thinsp;(2):
+<p>\[C = \frac{K A}{4 \pi k_e d}\]
+<p><h3 id="pcap--">. </h3>
+[]4cAn Atomic Model
+It is easy to construct an atomic model that makes plausible what is
+happening inside a dielectric subjected to an electric field.
+Each molecule of the dielectric material either already has an electric
+dipole moment or it develops one due to the applied electric field.
+Under the influence of the external electric field, these dipoles are
+aligned.
+The situation is shown in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
+These dipoles are aligned by the external electric field and as a
+result the electric field in the material is reduced.
+A more complete development of this model is the subject of another module.
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m135gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. A dielectric in a capacitor.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]4dDielectric Breakdown
+For each type of dielectric there is a maximum electric field that can be
+applied to it before the dielectric breaks down and becomes a conductor.
+For some dielectrics this “break down” is a reversible process, as with
+insulating liquids, while for others it is irreversible, as with most
+circuit components.
+The maximum electric field that each dielectric can withstand is given in
+Table 1.
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1. Dielectric properties of several materials.</td></tr><tr><td>Material</td><td>Dielectric</td><td>Breakdown</td></tr><tr><td></td><td>constant</td><td>field</td></tr><tr><td></td><td></td><td>(Kv/cm)</td></tr><tr><td>Vacuum</td><td>1.0000</td><td>\(\infty\)</td></tr><tr><td>Air</td><td>1.00054</td><td>8</td></tr><tr><td>Water</td><td>78.</td><td>*</td></tr><tr><td>Paper</td><td>3.5</td><td>140</td></tr><tr><td>Mica</td><td>5.4</td><td>1600</td></tr><tr><td>Porcelain</td><td>6.5</td><td>40</td></tr><tr><td>Fused Quartz</td><td>3.8</td><td>80</td></tr><tr><td>Pyrex Glass</td><td>4.5</td><td>130</td></tr><tr><td>Polyethylene</td><td>2.3</td><td>500</td></tr><tr><td>Polystyrene</td><td>2.6</td><td>250</td></tr><tr><td>Teflon</td><td>2.1</td><td>600</td></tr><tr><td>Pyranol oil</td><td>4.5</td><td>120</td></tr><tr><td>Titanium dioxide</td><td>100</td><td>60</td></tr><tr><td>*conducting</td><td></td><td></td></tr></tbody></table>
+</div>
+
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the charge-storing capability of a capacitor,
+dependent on the geometrical configuration of the capacitor.
+<p>an electrical device that stores equal and
+opposite charge on two conducting surfaces separated by an insulator.
+<p>an insulating material.
+<p>a numerical factor that describes the
+amount to which a dielectric material increases the capacitance of a
+capacitor.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Gauss's Law Applied to Cylindrical and Planar Charge
+Distributions” (MISN-0-133). <a href="#fnref-1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>\[k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\]
+<p>Note: Problems&nbsp;9 and 10 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A capacitor is connected to a 150&thinsp;V voltage source and is
+charged until it holds \(3.2 \times 10^{-8}\,\text{C}\).
+Without being discharged it is then connected to a 450&thinsp;V source.
+How much additional charge is finally stored on the capacitor?</li>
+<li><span class="item-label">2.</span> A 5.7&thinsp;nF capacitor consists of two parallel square plates
+separated by 0.35&thinsp;mm.
+How much charge is stored on the plates when a potential
+difference of 230&thinsp;V is applied to the capacitor?
+With the capacitor still connected to the voltage source the
+plate separation is decreased to 0.25&thinsp;mm.
+What is the new value for the charge stored in the capacitor?</li>
+<li><span class="item-label">3.</span> <figure class="fig-centered"><img src="figures/m135gr08.svg" alt="" class="physnet-fig"></figure>
+
+A particular cylindrical capacitor consists of two coaxial cylindrical
+metal shells with the dimensions given in the figure above.
+Compute the capacitance of the system.</li>
+<li><span class="item-label">4.</span> In Sec.&thinsp;2d of the text a statement was made that the unit
+of capacitance, the farad, is a very large unit.
+In order to begin to get a feeling for how large one farad is,
+suppose you had a parallel plate capacitor with square plates
+separated by a 1&thinsp;mm air gap.
+If the capacitance is 1&thinsp;F, how wide must the plates be?
+Also, calculate the width of the plates for 1&thinsp;\(\mu\)F, 1&thinsp;nF, and 1&thinsp;pF
+capacitors.</li>
+<li><span class="item-label">5.</span> Compute the equivalent capacitances for the following
+arrangements of four capacitors, each of 8.0&thinsp;pF capacitance:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> <figure class="fig-centered"><img src="figures/m135gr09.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">b.</span> <figure class="fig-centered"><img src="figures/m135gr10.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">c.</span> <figure class="fig-centered"><img src="figures/m135gr11.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m135gr12.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">e.</span> <figure class="fig-centered"><img src="figures/m135gr13.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">f.</span> <figure class="fig-centered"><img src="figures/m135gr14.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">g.</span> <figure class="fig-centered"><img src="figures/m135gr15.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">h.</span> <figure class="fig-centered"><img src="figures/m135gr16.svg" alt="" class="physnet-fig"></figure>
+
+</li>
+<li><span class="item-label">6.</span> An electrical engineer needs a 25&thinsp;\(\mu\)F capacitor for a
+“breadboard” circuit he is working on.
+Although the shop's stockroom is temporarily out of 25&thinsp;\(\mu\)F capacitors,
+they do have 20&thinsp;\(\mu\)F capacitors.
+The engineer takes 20 of these capacitors and proceeds to construct
+a series and/or parallel combination of 20&thinsp;\(\mu\)F capacitors until the
+equivalent capacitance is 25&thinsp;\(\mu\)F.
+Sketch a diagram that illustrates the combination of capacitors.</li>
+<li><span class="item-label">7.</span> Consider a parallel plate capacitor with plates separated by a
+1.25&thinsp;mm air gap, each with a surface area of 6.00<span class="unit">&thinsp;m<sup>2</sup></span>.
+The capacitor is charged with a potential difference of 120&thinsp;V across
+the plates.
+How much energy is stored in the capacitor?
+The capacitor is disconnected from the voltage source so the charge
+is now trapped on the plates of the capacitor.
+With one plate fixed, the other plate is moved away from the
+fixed plate, increasing the separation of the plates to 1.50&thinsp;mm.
+What is the new value for the amount of energy stored in the capacitor?
+Calculate the amount of work that must be done to increase the
+plate separation as stated.
+How is this quantity related to the energy stored in the capacitor,
+before and after the change in plate separation?</li>
+<li><span class="item-label">8.</span> A cylindrical capacitor with air between the cylinders has a
+capacitance of 7.5&thinsp;pF.
+The capacitor is connected to a constant voltage source and is
+completely charged.
+Without disconnecting the voltage source, pyranol oil is
+introduced between the cylindrical shells, completely displacing
+the air.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Calculate the new capacitance of the capacitor.</li>
+<li><span class="item-label">b.</span> Does the energy stored in the capacitor increase or decrease?</li>
+<li><span class="item-label">c.</span> Does the energy stored increase or decrease if the capacitor
+           is disconnected from the voltage source before adding the oil?
+           Why or why not?
+</li>
+<li><span class="item-label">9.</span> Compute the capacitance of a parallel plate capacitor with
+           plates of area 25<span class="unit">&thinsp;cm<sup>2</sup></span> separated by 1&thinsp;mm of dielectric 
+           with a dielectric constant of 3.0.</li>
+<li><span class="item-label">10.</span> Show the reduction to one capacitance that is equivalent to:
+            <figure class="fig-centered"><img src="figures/m135gr17.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> \(Q = 6.4 \times 10^{-8}\)&thinsp;C</li>
+<li><span class="item-label">2.</span> \(Q = 1.3 \times 10^{-6}\)&thinsp;C; \(Q' = 1.8 \times 10^{-6}\)&thinsp;C
+           <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
+<li><span class="item-label">3.</span> \(C = 3.3 \times 10^{-11}\)&thinsp;F&thinsp;\( = 33\)&thinsp;pF</li>
+<li><span class="item-label">4.</span> The widths of the plates would be: 10&thinsp;km, 10&thinsp;m, 34&thinsp;cm, and
+           1&thinsp;cm, respectively</li>
+<li><span class="item-label">5.</span> \(C_\text{eq} =\) (a) 2.0&thinsp;pF; (b) 32.0&thinsp;pF; (c) 8.0&thinsp;pF;
+            (d) 8.0&thinsp;pF; (e) 3.2&thinsp;pF; (f) 6.0&thinsp;pF;  (g) 10.7&thinsp;pF;
+            (h) 4.8&thinsp;pF</li>
+<li><span class="item-label">6.</span> <figure class="fig-centered"><img src="figures/m135gr18.svg" alt="" class="physnet-fig"></figure>
+
+           or
+           <figure class="fig-centered"><img src="figures/m135gr19.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">7.</span> \(U = 3.06 \times 10^{-4}\)&thinsp;J; \(U' = 3.67 \times 10^{-4}\)&thinsp;J;
+           \(W = 6.1 \times 10^{-5}\)&thinsp;J <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>; the increase in energy
+           stored is equal to the work done on the capacitor.</li>
+<li><span class="item-label">8.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 34&thinsp;pF</li>
+<li><span class="item-label">b.</span> increases</li>
+<li><span class="item-label">c.</span> decreases; \(Q\) is now constant while C increases, and
+           \[U = \frac{1}{2} \left(\frac{Q^2}{C}\right) \,.\]
+</li>
+<li><span class="item-label">9.</span> \(6.6 \times 10^{-11}\)&thinsp;F \( = 66\)&thinsp;pF</li>
+<li><span class="item-label">10.</span> \(C_\text{EQ} = \frac{C_1 C_2}{C_1 + C_2} + C_3 + C_4\)</li>
+</ol>
+
+</section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">\[Q' = \frac{(5.7 \times 10^{-9}\,\text{F})(0.35\,\text{mm})(230\,\text{V})}
+                   {0.25\,\text{mm}} = 1.8 \times 10^{-6}\,\text{C}\]
+ 
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">As \(d\) changes, in this problem, \(Q\) cannot change so \(V\) changes as well
+ as \(C\).
+ There are several different ways of obtaining the solution,
+ some more succinct then others.
+ Here is a final part of one solution (not a particularly succinct one):
+\[\begin{aligned}W & = \left(\frac{(6.00\unit{m^{2}})}
+                       {(2)(4 \pi)(8.99 \times 10^9\,\text{N}\unit{m^{2}}\,\text{C}^{-2})}\right) \times \\     &   \left(\frac{(144\,\text{V})^2}{1.50 \times 10^{-3}\,\text{m}} - \frac{(120\,\text{V})^2}
+                               {1.25 \times 10^{-3}\,\text{m}}\right) \\     & = 6.1 \times 10^{-5}\,\text{J}\,.\end{aligned}\]
+
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e = 8.99 \times 10^9\,\text{N}\unit{m^{2}}\unit{C^{-2}}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.
+           One or more of these skills, or none, may be on the actual exam.</li>
+<li><span class="item-label">2.</span> Compute the capacitance of a parallel plate capacitor with
+           plates of area 25<span class="unit">&thinsp;cm<sup>2</sup></span> separated by 1&thinsp;mm of dielectric 
+           with a dielectric constant of 3.0.</li>
+<li><span class="item-label">3.</span> Show the reduction to one capacitance that is equivalent to:
+           <figure class="fig-centered"><img src="figures/m135gr17.svg" alt="" class="physnet-fig"></figure>
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See Problem&nbsp;9 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See Problem&nbsp;10 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

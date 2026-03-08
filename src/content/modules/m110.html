@@ -1,0 +1,793 @@
+<header class="module-header">
+  <h1 class="module-title">The Equivalence Principle: An Introduction to Relativistic Gravitation <span class="module-author">(Peter Noerdlinger)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: Archimede's Principle <a href="../m48/" class="module-ref">MISN-0-48</a>, torsion pendulum
+    <a href="../m100/" class="module-ref">MISN-0-100</a>, centripetal and Coriolis forces MISN-0-18).</li><li><strong>2.</strong> Solve problems involving relative linear motion <a href="../m11/" class="module-ref">MISN-0-11</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: gravitational mass, inertial mass, active and passive
+    gravitational mass, (generalized) tidal force.</li><li><strong>K2.</strong> Explain how Galileo's experiment and Newton's second law establish
+    the proportionality of gravitational force to mass.</li><li><strong>K3.</strong> Outline the methods, actual and idealized, used to measure
+    gravitational and inertial mass.</li><li><strong>K4.</strong> Give three examples where inertial forces come into play on you.</li><li><strong>K5.</strong> State: why Einstein suspected that inertial and gravitational
+    forces were essentially the same; and to what level of precision they are known
+    to be equivalent.</li><li><strong>K6.</strong> State one way you could tell that the Earth's pull was present if
+    you were an astronaut orbiting the earth in a sealed capsule of finite size, 
+    and another way if you had a window.</li><li><strong>K7.</strong> State the objective of the Dicke-E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os experiment.
+    Describe what is looked for in the behavior of the torsional penelulum and why.</li><li><strong>K8.</strong> Design a simple experiment that could be used to measure the local
+    acceleration of gravity, \(\vec{g}\).
+    Show that the velocity of the article being used is immaterial to the
+    measurement.</li><li><strong>K9.</strong> Compare Einstein's Equivalence Principle (ignoring any limitations)
+    with Newton's explanation, assuming the earth's gravity field is present.</li><li><strong>K10.</strong> State whether you believe Newton's third law is absolute and
+    justify your belief.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction: Galileo and Newton</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m110gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. .</figcaption></figure></div>
+
+<p><h3 id="pcap-1-a">1a. Galileo's Universal-Acceleration Discovery</h3>
+
+Galileo's most far-reaching discovery was that insofar as air resistance can
+be neglected, all objects released at rest from the same point fall with like 
+acceleration (and hence motion) under the influence of gravity.
+This is commonly illustrated by the experiment of the coin and feather in a
+tube that can be evacuated.
+Galileo's result has been confirmed to our best experimental accuracy
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>(in some cases reaching 11 significant figures) for all kinds of 
+materials and objects, ranging from aluminum and gold to chewing gum, planets 
+in their orbits, and free neutrons (uncharged “elementary” constituents of 
+most nuclei).
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><h3 id="pcap-1-b">1b. Newton's Explanation</h3>
+
+Naturally, Galileo's principle of “equal falling” raises the question: Why? 
+The two answers that have been found satisfactory in different contexts 
+were provided, respectively, by Isaac Newton and Albert Einstein.
+Newton's answer is simplest to understand and we can derive it at once, using
+his second law of motion.
+If a BB shot of mass 0.2<span class="unit">&thinsp;g</span> and a bowling ball of mass 2<span class="unit">&thinsp;kg</span> (\(10^4\) times
+larger) are to fall identically under the law 
+<p>\[\vec{F} = m\,\vec{a},\]
+<p>then the force \(\vec{F}\) on the ball must be \(10^4\) times that on the BB.
+In other words, we must assume that the force of gravity is proportional to
+<p>the very mass \(m\) that we used in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+So we write
+<p>\[\vec{F} = m\,\vec{g}\]
+<p>where \(\vec{g}\) is a constant (for a given location) independent of mass or
+composition.
+For the surface of the Earth, 
+\(\vec{g}\) is found to be within 1% of 9.80&thinsp;m/s<sup>2</sup>, directed down at all
+locations.  
+So Newton decided that the “equal falling” in vacuum can be said to be due
+to what we shall call <em>Newton's Explanation</em>:<br>
+
+<p><div class="centered">
+<div class="env-parbox">[c]0.5in<em>Newton's <br>
+ Explanation</em></div>
+
+
+<span class="fbox"><div class="env-parbox">[c]3.1in
+At any particular point in space and time, the gravitational force on each
+member of a collection of objects will be proportional to its
+Newton's-Second-Law mass.</div>
+</span>
+</div>
+
+<p>We call an object's mass measured using acceleration, not gravity, its 
+ inertial mass; and the (presumably equal) mass using gravity, not 
+acceleration, its  gravitational mass.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Mass Measurement</h2>
+
+<p><h3 id="pcap-2-a">2a. Measuring Inertial Mass</h3>
+
+There can be content to Newton's Explanation only if we can define the 
+inertial mass independently of gravity!
+In fact that is about the first thing we learn in physics.
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>To measure inertial mass, we could set the unknown mass on a disc on a
+frictionless surface (such as an air table), pull it with a constant force,
+and measure its acceleration (<a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
+Then  we put standard masses on the puck until the same force produces the 
+same acceleration.
+The total mass is then equal to \(m\).
+Or, we could take  the object out in free space, attach it to a propulsion
+device of known thrust, and measure the resulting acceleration.
+Then we again use standard masses until we find a combination where the same
+\(F\) produces the same \(a\) in both cases.
+These dynamic systems measure inertial mass, and as such, have no dependence
+on gravity.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m110gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. .</figcaption></figure></div>
+
+ 
+<h3 id="pcap-2-b">2b. Measuring Gravitational Mass</h3>
+
+The gravitational mass is presumably equal to the inertial mass through 
+Newton's Explanation, but we also want to be able to define it independently 
+so that we can test the explanation's accuracy.
+In practice, we usually use instead a spring scale or balance, as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m110gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. .</figcaption></figure></div>
+
+<p>With a spring, we can measure the extension caused by the object, and then
+find the number of standard masses that produces the same extension.
+Or, we could balance the mass with the proper number of standard masses.
+Since the gravitational force is then the same on both sides, the mass is the
+same on both sides.
+These static systems measure gravitational mass, and have total dependence
+on gravity.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Einstein's Explanation</h2>
+
+<p><h3 id="pcap-3-a">3a. Einstein's Approach</h3>
+
+If Newton settled the mass equivalence so well, why did Einstein go on to a
+more sophisticated view?
+Can't we be satisfied with Newton's explanation?  
+Einstein looked for deeper causes.
+Why should the force of gravity be proportional to (inertial) mass?
+Electrical forces are not proportional to mass:  a comb rubbed through our
+hair will pick up bits of paper, but not a whole book!
+If we pull on a rolling object (or on an object in outer space) with a cable,
+the force exerted is proportional to both mass and acceleration, not just to
+mass!
+Gravity is, in a sense
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>the only force proportional to mass alone.
+Why?
+It could be just a “fact of life”:  we are never sure in advance if our
+“why's” have answers.
+But Einstein had, besides a deep vision, some further guideposts.
+One was the special theory of relativity, which we'll steer around here.
+But another is easy to understand and quite practical.
+It can be phrased in terms of “inertial” forces (also called “fictitious
+forces” by some physicists); these are forces that seem like gravity (and
+are measured frequently in “g's”) which are present in an accelerated
+reference frame, such as a rapidly braking car.
+Einstein's answer was to say that such inertial forces and gravitational
+forces are indistinguishable.  
+<p><h3 id="pcap-3-b">3b. The Reality of Inertial Forces</h3>
+
+Inertial forces can seem very real, as you find out when you hit the windshield
+of the car, or if you're in a centrifuge.  Some carnivals have centrifuges big
+enough to hold a person
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>and if you're in one you feel a “force” like gravity pulling you toward
+the rim.
+The centripetal force is the force, as measured by the carnival operator in
+his non-rotating inertial frame of reference, that keeps you in circular
+motion.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>The centrifugal force (“inertial,” “fictitious,” but let's drop that
+baloney) is the one that you perceive as forcing you out toward the rim.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>The Coriolis force
+is an additional inertial force experienced by objects which are moving in a 
+rotating reference frame.
+It is sufficiently real that cannons were missing their targets at long
+range until the Polish army engineer, G.&thinsp;Coriolis, derived the 
+nature of this force in 1835 so that proper corrections could be made.
+<p><h3 id="pcap-3-c">3c. Inertial Force is Proportional to Inertial Mass</h3>
+
+First note that “\(F = ma\)” holds for an object in an inertial reference
+frame, \(O\), where \(m_i\) is the object's inertial mass.
+In a new reference frame \(O'\) accelerating with acceleration \(\vec{A}\) relative
+to the first, the observed acceleration will be
+<p>\[\vec{a}' = \vec{a} - \vec{A}\,.\]
+<p>Yet the applied force, as observed from each frame, is the same (think of the
+force as being produced by, say, a spring scale).
+So I can apply Newton's second law in \(O'\) and separate off the inertial force
+due to the acceleration of \(O'\): <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p>\[\vec{F}' = \vec{F} =
+                m_i(\vec{a}' + \vec{A}) = m_i \vec{a}' - \vec{F}_i\,.\]
+<p>Thus I have proved that the inertial force, \(\vec{F}_i = - m_i \vec{A}\),
+is proportional to inertial mass.
+<p><h3 id="pcap-3-d">3d. Einstein's Equivalence Principle</h3>
+
+It is important to understand the “real” vs. “fictitious” debate because
+it was Einstein's genius to notice that inertial forces have one shocking
+thing  proportional to mass! 
+Einstein conjectured that, therefore, the two forces, the “real”
+gravitational and “fictitious” inertial forces, are, in their essence, one
+and the same thing.
+This principle, properly qualified, is Einstein's Equivalence Principle.
+<p><h3 id="pcap-3-e">3e. Mass Equivalence and Einstein's Equivalence Principle</h3>
+
+Because of the equivalence of gravitational and inertial mass, we can make a 
+non-inertial frame equivalent to an inertial one plus a gravity field
+\(\vec{g}\).
+We can do it by setting the non-inertial-frame field strength \(\vec{g}\) equal
+to the negative of the frame's acceleration \(\vec{A}\) with respect to any
+inertial frame:
+<p>\[\vec{g} \equiv - \vec{A}\,.\]
+<p>The gravity field works because it, like the inertial force, is proportional 
+to mass alone (given the reference frame we're working in).
+So using an accelerated reference frame changes our equations of motion in
+the same way as being in a gravity field!
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>Einstein's Equivalence Principle simply states, then, that:
+<p><div class="centered">
+<div class="env-parbox">[c]0.5in<em>Einstein's <br>
+ Equivalence <br>
+
+       Principle</em></div>
+
+
+<span class="fbox"><div class="env-parbox">[c]3.1in
+The physical effect of a gravity field is indistinguishable (locally)
+<p>from the effect of using an accelerated reference frame.
+Conversely, the physical effects of gravity may be (locally) eliminated by
+using a freely falling reference frame (“locally” is discussed in Sect.&thinsp;4).</div>
+</span>
+</div>
+
+<p>In other words, observers in an accelerating spaceship, far from all masses,
+feel a force not merely “like” the force of gravity, but indistinguishable
+from it.
+And earth-circling astronauts with their rockets turned off seemed free from 
+gravity, so far as local experiments could tell (though they could surely
+notice out the window that they were circling the Earth!).
+In this view, the “equal falling” concept of Galileo is explained by the
+kinematics of acceleration: we view the gravity in terms of an accelerated
+reference frame. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+Thus use of the word “local” and “locally” several places above brings
+us to Qualifications to the statement of Einstein's Equivalence Principle.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Qualifications to the Principle</h2>
+
+<p>In a windowless freely falling elevator, is there really  no way to
+find out if the Earth's gravity is present?
+Well, there are at least three ways, but they are all “nonlocal”; they involve
+comparing measurements in different parts of the elevator, or waiting a while
+(which is nonlocal in the time domain).
+The methods are:
+<p><ul>
+<li><span class="item-label">1.</span> Set up gravimeters, such as freely falling weights, all
+over the elevator.
+Since the elevator cage as a whole responds only to the mean value of the
+gravity on it, it has at a sort of average acceleration.
+However, the Earth's gravity is stronger at the bottom and weaker at the top;
+furthermore, the lines of force converge.
+Thus weights near the top will appear to fall ever-so-slowly up; near the
+bottom, down; and near the walls, toward the center.  
+The guy in the cage detects a “tidal” gravity field like that illustrated in
+the following figure (<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+<p>To understand the sideways arrow on the elevator's right side, think of
+subtracting the two arrows \(a\) and \(b\)
+shown at the right, one of which is the downward acceleration at the center
+and the other the acceleration at the right, where “down” is slightly
+different because the Earth's center is not infinitely far away.</li>
+<li><span class="item-label">2.</span> The cage will eventually hit the bottom.</li>
+<li><span class="item-label">3.</span> A small electric charge suspended in the cage will radiate.  
+(Detection of this involves surrounding the charge with detectors, and is 
+hence nonlocal.)
+This point is quite sophisticated and the radiation would be too small to
+detect under any presently envisioned circumstances.</li>
+</ul>
+
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m110gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Tidal Gravity in a Falling Elevator.
+The arrows \(a\) and \(b\) are accelerations explained in the text.</figcaption></figure>
+
+<p>The upshot of all this is that Einstein's Principle of Equivalence is what is
+called a “local concept”; a sufficiently astute observer can generally
+find out something about where the masses are if he or she is clever enough.
+Nevertheless, the Principle is of utmost importance, as it was a guide for
+formulating the General Theory of Relativity.
+In that theory, the Newtonian part of the gravity (the two large arrows in
+<a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>) is simply due to choice of reference frame, and only the “tidal” 
+part is uniquely defined independent of frame.
+This little tidal part tells us the curvature of space-time!
+But that must be left for another day.
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Applications of the Principle</h2>
+
+<p>We have already seen that the centrifuge is an example where an “artificial” gravity 
+field is created.
+So it is an application of the Equivalence Principle.
+<p>For a fun example, let's find out how fast a 20&thinsp;m radius Ferris wheel must
+rotate for the effective \(g\) to be zero at the top.
+Well, the “centrifugal” acceleration (in the wheel frame) is \(v^2/r\).
+So if \(v^2/(20\,\text{m}) = 9.8\unit{m/s^{2}}\), the effective \(g\) will be zero
+at the top.
+This gives \(v = 14\)&thinsp;m/s, implying rotation at 6.7&thinsp;rpm.
+Use a seat belt!
+<p>People who want to study the Rayleigh-Taylor instability in fluid mechanics
+also use the Equivalence Principle.
+This instability occurs when a heavy fluid floats (rests) on a lighter one.
+After a while, it will try to settle to the bottom by forming first bulges
+and then tongues of heavy fluid extending down in to the lighter one below
+(see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+<div class="figure-full"><figure id="fig-5"><img src="figures/m110gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Rayleigh-Taylor Instability.</figcaption></figure></div>
+
+<p>This instability occurs in plasma physics, planetary physics and atmospheric 
+physics.
+But to study it in the laboratory, how do you ever get the nice smooth 
+layer shown in the first picture?
+If you try to pour the more-dense on top of the less-dense, the water on top
+of oil, you get a devil of a mess.
+The answer is easy: pour the oil on the water and then accelerate the
+whole container downward!
+This reverses the effective \(\vec{g}\).
+It is generally done with an explosive charge to get a large upward
+effective “\(\vec{g}\).”
+</section>
+
+<p><section id="sect-6" class="module-section section-text"><h2 id="sect-6">6. Active, Passive Gravitational Mass</h2>
+
+<p>H. Bondi had pointed out
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>that Newton's law of gravity contains mass both as a source of gravity
+and as the responsible agent in the particle that responds.
+These are, respectively, active and passive roles.
+If particles' active and passive gravitational mass ratios were different
+for different particles, we could place two such particles near each other and
+they would exert unequal forces on each other.
+For example, a particle with an active/passive ratio of zero would attract
+other particles but would not be attracted to them.
+This would violate Newton's third law, as would any variation in the
+active/passive ratio.
+But all laws are established only to some accuracy, including Newton's
+third law!
+<p>The accuracy of L. Kreuzer's experiment
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+<p>to test the equality of the two kinds of mass is accurate to only four
+significant digits.
+And Kreuzer did the best job so far.
+<p>It is hard to test the value of “active” gravitational mass, because we
+have to compare the gravitational force of different laboratory size bodies
+on each other.
+<p><sup class="fn-ref"><a href="#fn-12" id="fnref-12">12</a></sup>
+<p>Passive gravitational mass is easier to measure accurately, so that is the
+kind of gravitational mass which is used in precision tests of the
+equivalence principle.
+</section>
+
+<p><section id="sect-7" class="module-section section-text"><h2 id="sect-7">7. How Exact an Equivalence?</h2>
+
+<p>Everything has its limits,
+<p><sup class="fn-ref"><a href="#fn-13" id="fnref-13">13</a></sup>
+<p>and so it was natural for the Hungarian physicist, Baron
+L.&thinsp;von&nbsp;E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os
+<p><sup class="fn-ref"><a href="#fn-14" id="fnref-14">14</a></sup>
+<p>(in collaborations with D.&thinsp;Pekar and E.&thinsp;Fekete) to be inspired to conduct an
+accurate test
+<p><sup class="fn-ref"><a href="#fn-15" id="fnref-15">15</a></sup>
+<p>of the equality of (passive) gravitational and inertial mass.
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m110gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Effect of Earth's Rotation on a Plumb-Bob
+<br>
+(Exaggerated)</figcaption></figure></div>
+
+<p>Let us try to understand E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os's problems in setting up this test.
+First, note that even if the Earth is perfectly spherical, as we shall assume
+here, a plumb-bob will not hang vertically (toward the Earth's center)
+except at the equator or poles.  
+Elsewhere, the downward force of gravity will combine with the centrifugal 
+force away from the Earth's axis
+<p><sup class="fn-ref"><a href="#fn-16" id="fnref-16">16</a></sup>
+<p>to produce a resultant “effective” gravity as shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>.
+The string will lie along the resultant.
+Of course, the downward force is proportional to gravitational mass
+\(m_{grav}\) and the little component due to centrifugal force is proportional
+to inertial mass \(m_{in}\).
+Hence the angle of the string depends on the ratio \(m_{in}/m_{grav}\).
+We can define this ratio to be unity for one substance (say, lead) by choice
+of Newton's gravity constant,
+<p><sup class="fn-ref"><a href="#fn-17" id="fnref-17">17</a></sup>
+<p>but then we can in principle test the equality for other substances by
+seeing how plumb-bobs hang when made for them.
+Clearly, if we try to measure the angles between some long string which have
+tied to their lower ends lumps of lead, aluminum, soap, and moon rocks, we
+are going to have a crude (low accuracy) experiment.
+E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os and his collaborators decided to make up some torsion
+pendulums, each comprised of a fiber holding a thin bar, at the ends of
+which might be, say, a lump of bismuth and a lump of wood (<a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>).
+<p><sup class="fn-ref"><a href="#fn-18" id="fnref-18">18</a></sup>
+<p><div class="figure-full"><figure id="fig-7"><img src="figures/m110gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Equal-gravitational-masses torsion
+pendulum.</figcaption></figure></div>
+
+<p>Now, however, we are seemingly no better off than with the plumb bob,
+because to measure different
+ratios of \(m_{in}\) to \(m_{grav}\), we have to determine how these pendula would
+hang if the Earth didn't rotate, and compare with the slight possible twist
+of the fiber when it does.
+Now we can't stop the Earth.
+However, each day the Sun's gravity pulls in various directions, and the
+centrifugal force shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> has slightly different corrections, at
+different times of day, for the
+motion of the Earth around the Sun.
+At midnight, the Sun's gravity is weakest and the sun-orbit centrifugal force largest,
+while at noon the opposite holds. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+Thus, if the ratio \(m_{in}/m_{grav}\) varied slightly from substance to
+substance, a torsion pendulum using the two substances and oriented with the
+bar East-West at a temperate latitude would oscillate with a 24 hour period.  
+No such oscillation was found.
+This enabled E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os to set a limit of 5 parts in \(10^9\) for the
+variation of the mass ratio in common substances.
+Later R.&thinsp;H.&thinsp;Dicke
+<p><sup class="fn-ref"><a href="#fn-19" id="fnref-19">19</a></sup>
+<p>of Princeton University and his collaborators P.&thinsp;G.&thinsp;Roll and R.&thinsp;Krotkov
+improved the apparatus.
+In 1962 they set a maximal limit of 1 part in \(10^{11}\) for the variation of
+\(m_{in}/m_{grav}\) between gold and aluminum.
+<p><sup class="fn-ref"><a href="#fn-20" id="fnref-20">20</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+The Project Editor thanks Professor James Linnemann for pointing out typographical errors.</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “How Exact an Equivalence?” which is Sect.&thinsp;7. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Fundamental Forces and Elementary Particle Classifications”
+(MISN-0-225). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Particle Dynamics - The Laws of Motion” (MISN-0-14). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">See “Mass Measurement” (Section 2, this Unit). <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See Ealing Film Loop #80-214. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “Centripetal and `g' Forces in Circular Motion”
+(MISN-0-17). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “Classical Mechanics in Rotating Frames of Reference:  Effects
+on the Surface of  the Earth” (MISN-0-18). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">\(( - m \vec{A})\) is like the \((m \vec{g})\) in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>
+because \(\vec{A}\) and \(\vec{g}\) are both constants. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-10">H.&thinsp;Bondi, <em>Rev.&thinsp;Mod.&thinsp;Phys.&thinsp;29</em>, 423-428 (1957).
+The name is pronounced “Bond' <span class="tex-unknown" title="unknown macro">\</span>=e.” <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">L.&thinsp;B.&thinsp;Kreutzer, <em>Phys.&thinsp;Rev.&thinsp;169</em>, 1007-1012 (1968).
+The name is pronounced “Kroy'tser.” <a href="#fnref-11" class="fn-back">↩</a></li><li id="fn-12">See “The Cavendish Experiment” (MISN-0-100). <a href="#fnref-12" class="fn-back">↩</a></li><li id="fn-13">Including this module, which is nearly over! <a href="#fnref-13" class="fn-back">↩</a></li><li id="fn-14">Pronounced “et' vuss.” <a href="#fnref-14" class="fn-back">↩</a></li><li id="fn-15">R.&thinsp;V.&thinsp;E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os, D.&thinsp;Pek<span class="tex-unknown" title="unknown macro">\</span>'er, and E.&thinsp;Fekete,
+<em>Ann.&thinsp;Phys. 68</em>, 11-16 (1922). <a href="#fnref-15" class="fn-back">↩</a></li><li id="fn-16">This description is in the rotating frame of the Earth, where the
+bob is in equilibrium.
+Note how much more complex is the description in the inertial frame, which
+avoids “fictitious” forces.
+In that frame, we say the bob is not in equilibrium, but is accelerated in
+a circle.
+The necessary acceleration must be provided by a force component in the
+string toward the axis of rotation.
+This gives us the same tilt to the string as just adding real gravity to
+“fictitious” centrifugal force. <a href="#fnref-16" class="fn-back">↩</a></li><li id="fn-17">See “Newton's Law of Gravitation” (MISN-0-101). <a href="#fnref-17" class="fn-back">↩</a></li><li id="fn-18">E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os's pendulum also had one weight a bit below the other,
+for obscure reasons; here we treat a more idealized and superior geometry. <a href="#fnref-18" class="fn-back">↩</a></li><li id="fn-19">Pronounced “Dick' <span class="tex-unknown" title="unknown macro">\</span>=e.” <a href="#fnref-19" class="fn-back">↩</a></li><li id="fn-20">P.&thinsp;G.&thinsp;Roll, R.&thinsp;Krotkov, and R.&thinsp;H.&thinsp;Dicke,
+<em>Ann.&thinsp;Phys.&thinsp;(USA)&thinsp;26</em>, 442-517 (1964). <a href="#fnref-20" class="fn-back">↩</a></li><li id="fn-PS1">If you are unfamiliar with Archimedes's Principle (MISN-0-48),
+note that the buoyant force on a submerged, or floating object 
+is equal to the weight of the fluid it displaces. <a href="#fnref-PS1" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problems&nbsp;22-28 also occur in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> How did Newton explain Galileo's law of “equal falling”?</li>
+<li><span class="item-label">2.</span> Suppose we have two objects of mass \(m\), and we measure the
+gravity force on them when they are at rest and (a) touching, but not
+attached, or (b) attached together by a strong but light dab of glue.
+If the gluing operation does not affect the force of gravity, prove by
+comparing these situations that gravity force is proportional to mass.</li>
+<li><span class="item-label">3.</span> Does the above “proof” show that the gravity force depends on
+mass only?
+How do you react to the “proof”?
+Is it too slick?
+Can you find other situations where such a proof would fail?</li>
+<li><span class="item-label">4.</span> Suppose we wished to measure the large mass in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>b in units
+of the smaller, but had available only one of the small ones, plus standard 
+rockets supplying known thrust (force).
+How could we make the measurement?</li>
+<li><span class="item-label">5.</span> An ordinary household spring scale is not used as in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>a:
+rather a pointer is attached to the lower end of the spring and is read
+against a ruled scale.
+This saves carrying sets of standard weights.
+Suppose the ruled scale is designed for a location where
+\(g = 9.80\)&thinsp;m/s<sup>2</sup>.
+What will be the error in a location where \(g = 9.89\)&thinsp;m/s<sup>2</sup>?
+Does the balance method of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>b suffer from this problem?</li>
+<li><span class="item-label">6.</span> In what kind of reference frame are inertial (“fictitious”)
+forces absent?  
+In what kind are they present?</li>
+<li><span class="item-label">7.</span> Do you regard centrifugal force as real or fictitious?
+Is the force that throws you forward when your car stops real or fictitious?</li>
+<li><span class="item-label">8.</span> Verify the sign in Eqs.&thinsp;(3) and (4).</li>
+<li><span class="item-label">9.</span> An elevator accelerates up at 4.9&thinsp;m/s<sup>2</sup>.
+Apply Newton's second law to a 5&thinsp;kg mass suspended steadily by a spring in
+the elevator (a) in the earth's frame, and (b) in the elevator frame.
+Give numerical values for the quantities in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> for this case.</li>
+<li><span class="item-label">10.</span> A repairman examining a merry-go-round that is running has his
+key chain dangling loosely.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> If the merry-go-round rotates 0.020 times per second and the man is 3&thinsp;m 
+from the axis, find the effective gravity he feels.</li>
+<li><span class="item-label">b.</span> At what angle to the vertical does his key case hang?
+</li>
+<li><span class="item-label">11.</span> Explain how the picture in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> would generalize in three
+dimensions.
+How would it differ if the elevator were cylindrical and rotated steadily
+about a vertical axis as it fell?</li>
+<li><span class="item-label">12.</span> Continuing item (11) above: Find a critical speed of rotation for the 
+elevator such that the little arrows toward or away from the axis would 
+vanish in the elevator frame.
+Hint: the angle \(\theta\) between arrows “a” and “b” in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> is
+\(\theta = r/R\), where \(r\) is the distance off axis at which \(b\) is measured
+(\(a\) being on axis), and \(R\) is the distance (6400&thinsp;km) to the Earth's center.  
+Because this angle is so small, \(|\vec{a} - \vec{b}| \simeq a \theta\).</li>
+<li><span class="item-label">13.</span> Assuming we can eliminate the small horizontal vectors in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>
+by rotation, how could we still test for the presence of gravity (rather 
+than uniform acceleration)?</li>
+<li><span class="item-label">14.</span> A pinball machine is designed to turn off and read “TILT” if it
+is shoved too hard.
+The sensor for this is a pendulum hung inside a metal ring.
+It is normally centered, but will hit the ring if the machine is shoved hard,
+or tilted.
+Describe the behavior of the TILT detector in the case of a hard shove so as
+to show the application of the “inertial force” concept.
+<p><figure class="fig-centered"><img src="figures/m110gr08.svg" alt="" class="physnet-fig"></figure>
+</li>
+<li><span class="item-label">15.</span> A miniature racer (go-cart) driven by a gasoline engine is
+advertised to have an “inertial” clutch.
+The clutch looks like this:
+<figure class="fig-centered"><img src="figures/m110gr09.svg" alt="" class="physnet-fig"></figure>
+
+<p>The motor turns the inner shaft as shown.
+The springs hold the weights “W” toward the shaft.
+When the shaft turns fast enough, the weights move out and touch the outer
+race R, driving it by friction, and so moving the cart.
+Describe the use of inertial forces in this clutch, carefully specifying in
+what reference frame they appear.
+Also describe the operation in the rest frame of the cart, emphasizing the
+action of the spring and its eventual failure to hold in the weights.</li>
+<li><span class="item-label">16.</span> In Kreuzer's experiment a plastic block floats totally immersed
+in a liquid carefully chosen to have the same density, in the sense that the 
+float is in neutral equilibrium (tending neither to rise nor sink).
+Does active or passive gravitational mass determine the densities so
+compared?
+<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup>
+<p>The whole apparatus is placed near a sensitive detector of gravity fields and 
+the float moved delicately to and fro.
+If the detector measure no change in the pull of the float-plus-liquid, does
+this establish that the float has equal mass with the liquid it displaces?
+Active or passive mass?
+Or inertial?)</li>
+<li><span class="item-label">17.</span> If the acceleration of a falling object can be measured to three
+significant figures, how accurately does Galileo's experiment verify the
+Equivalence Principle?</li>
+<li><span class="item-label">18.</span> Draw a vector diagram showing how to add the Sun's and the
+Earth's gravity pull acting on E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os's pendulum (a) at noon, and
+(b) at midnight.
+(Neglect the tilt of the Earth's axis and assume the apparatus is at the
+equator, so you can work in a plane.)</li>
+<li><span class="item-label">19.</span> Assuming that you can add the centrifugal force associated with
+the Earth's motion around the Sun to that associated with the Earth's
+rotation, and making the same assumptions as in question (18) above, draw
+vector diagrams showing how to add these two “forces” at noon and at
+midnight.</li>
+<li><span class="item-label">20.</span> Describe the situation of a Ferris wheel rotating at the right
+speed for you to feel “zero gravity” as you pass the top, in terms of the
+rotating and stationary frames of reference.
+Which description of the cause of your sensations in simpler, in your opinion?  Justify your opinion.</li>
+<li><span class="item-label">21.</span> Deduce the meaning of the term “tidal” used in Sect.&thinsp;4 (it
+does not refer to the earth or ocean tidal forces, but it has a similar
+meaning relative to a standard uniform background force).</li>
+<li><span class="item-label">22.</span> Suppose you ordinarily weigh 150&thinsp;lb.
+In an elevator that is starting to move, you notice that your weight is
+135&thinsp;lb.
+Which way is the elevator starting to go, and what is its acceleration?</li>
+<li><span class="item-label">23.</span> Assuming Einstein's Principle of Equivalence, prove Galileo's law
+of “equal falling.”</li>
+<li><span class="item-label">24.</span> When we say that your weight is due to the Earth's mass and yours, 
+in what sense do we mean “mass” for these two objects: inertial, active 
+gravitational, or passive gravitational?
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Earth.</li>
+<li><span class="item-label">b.</span> You.
+</li>
+<li><span class="item-label">25.</span> A 100&thinsp;gm “weight” (mass = 100&thinsp;gm) is used to balance an
+automobile tire.
+If the weight is 15&thinsp;cm from the axle and the wheel rotates at (20/\(\pi\)) 
+revolutions per second, find:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the centripetal force on the weight in an inertial frame moving with
+the axle.</li>
+<li><span class="item-label">b.</span> the centrifugal force on the weight in the same frame.</li>
+<li><span class="item-label">c.</span> the centrifugal force on the weight in a reference frame rotating
+with the wheel.</li>
+<li><span class="item-label">d.</span> the centripetal force in the same frame.
+</li>
+<li><span class="item-label">26.</span> E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os's original experiment was accurate to about one
+part in (pick the closest answer):
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 100;   b. \(10^9\);   c. \(10^{12}\);  d. \(10^{25}\)
+
+Dicke's improved version was accurate to one part in:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">e.</span> 1000;  f. \(10^4\);   g. \(10^{11}\);  h. \(10^{40}\)
+</li>
+<li><span class="item-label">27.</span> In a reference frame far from gravitating masses and accelerating 
+with acceleration \(A\), Newton's second law takes the modified form <span class="writein">___________</span> ,
+where \(a\) is the acceleration of mass \(m\) as measured by the accelerated 
+observer.</li>
+<li><span class="item-label">28.</span> The Dicke-E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os  experiment couldn't test the effect of
+the Earth's centrifugal force because <span class="writein">___________</span> .
+Instead it looked for variations in the <span class="writein">___________</span> of the Sun and
+<span class="writein">___________</span> force associated with our motion around it.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">22.</span> down, 0.98&thinsp;m/s<sup>2</sup>, or 3.2&thinsp;ft/s<sup>2</sup></li>
+<li><span class="item-label">23.</span> According to the Principle, we may eliminate the gravity force by
+using a freely falling reference frame.
+In this frame, falling objects have no acceleration, as there is no force on 
+them.
+Therefore, they stay together if initially together, which is Galileo's result.
+(You can also prove it by replacing the gravity field by an accelerated
+reference frame in outer space, but the proof is a little longer.)</li>
+<li><span class="item-label">24.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> active gravitational</li>
+<li><span class="item-label">b.</span> passive gravitational
+</li>
+<li><span class="item-label">25.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 24&thinsp;N</li>
+<li><span class="item-label">b.</span> 0</li>
+<li><span class="item-label">c.</span> 24&thinsp;N</li>
+<li><span class="item-label">d.</span> 0
+</li>
+<li><span class="item-label">26.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> b</li>
+<li><span class="item-label">b.</span> b</li>
+<li><span class="item-label">c.</span> b</li>
+<li><span class="item-label">d.</span> b</li>
+<li><span class="item-label">e.</span> g</li>
+<li><span class="item-label">f.</span> g</li>
+<li><span class="item-label">g.</span> g</li>
+<li><span class="item-label">h.</span> g
+</li>
+<li><span class="item-label">27.</span> \(\vec{F} = m(\vec{a} + \vec{A})\)</li>
+<li><span class="item-label">28.</span> it doesn't vary</li>
+<li>gravity force</li>
+<li>the centrifugal</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">inertial frame: \(\vec{F} = m \vec{a}\).
+<p> accelerated frame: total “force” is real one \(+\) inertial one:
+ \[\vec{F}' + \vec{F}_i = m_i \vec{a}'\,.\]
+<p> However:
+ \[\begin{aligned}\vec{a}' & = \vec{a} - \vec{A} \\ \vec{F}' & = \vec{F}\end{aligned}\]
+
+<p> so:
+ \[\vec{F}_i = - m_i \vec{a}\,.\]
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Replace the locally “constant” gravitational field with a
+downward-accelerating reference frame (\(\vec{a} = \vec{g}\)).
+Then by the equivalence principle there will be no gravitational field
+present and neither object will move with respect to the other.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">The sun is on the side of the earth in sunshine, so the dark side is
+ further from the sun.
+ Further distance means lower gravitational pull and higher centrifugal
+ force (\(F_c = m \omega^2 r\) where \(\omega\) is the same everywhere on
+ the earth).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K10 in this module's <em>ID Sheet</em>.</li>
+<li><span class="item-label">2.</span> Suppose you ordinarily weigh 150&thinsp;lb.
+In an elevator that is starting to move, you notice that your weight is
+135&thinsp;lb.
+Which way is the elevator starting to go, and what is its acceleration?</li>
+<li><span class="item-label">3.</span> Assuming Einstein's Principle of Equivalence, prove Galileo's law
+of “equal falling.”</li>
+<li><span class="item-label">4.</span> When we say that your weight is due to the Earth's mass and yours, 
+in what sense do we mean “mass” for these two objects: inertial, active 
+gravitational, or passive gravitational?
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Earth.</li>
+<li><span class="item-label">b.</span> You.
+</li>
+<li><span class="item-label">5.</span> A 100&thinsp;gm “weight” (mass = 100&thinsp;gm) is used to balance an
+automobile tire.
+If the weight is 15&thinsp;cm from the axle and the wheel rotates at (20/\(\pi\)) 
+revolutions per second, find:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> the centripetal force on the weight in an inertial frame moving with
+the axle.</li>
+<li><span class="item-label">b.</span> the centrifugal force on the weight in the same frame.</li>
+<li><span class="item-label">c.</span> the centrifugal force on the weight in a reference frame rotating
+with the wheel.</li>
+<li><span class="item-label">d.</span> the centripetal force in the same frame.
+</li>
+<li><span class="item-label">6.</span> E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os's original experiment was accurate to about one
+part in (pick the closest answer):
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 100;   b. \(10^9\);   c. \(10^{12}\);  d. \(10^{25}\)
+
+Dicke's improved version was accurate to one part in:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">e.</span> 1000;  f. \(10^4\);   g. \(10^{11}\);  h. \(10^{40}\)
+</li>
+<li><span class="item-label">7.</span> In a reference frame far from gravitating masses and accelerating 
+with acceleration \(A\), Newton's second law takes the modified form
+<span class="writein">___________</span>, where \(a\) is the acceleration of mass \(m\) as measured by the
+accelerated observer.</li>
+<li><span class="item-label">8.</span> The Dicke-E<span class="tex-unknown" title="unknown macro">\</span>"otv<span class="tex-unknown" title="unknown macro">\</span>"os  experiment couldn't test the effect of
+the Earth's centrifugal force because <span class="writein">___________</span>.
+Instead it looked for variations in the <span class="writein">___________</span> of the Sun and
+<span class="writein">___________</span> force associated with our motion around it.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See problem&nbsp;22 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">3.</span> See problem&nbsp;23 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">4.</span> See problem&nbsp;24 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">5.</span> See problem&nbsp;25 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">6.</span> See problem&nbsp;26 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">7.</span> See problem&nbsp;27 in this module's <em>Problem Supplement</em>.</li>
+<li><span class="item-label">8.</span> See problem&nbsp;28 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+

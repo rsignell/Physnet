@@ -1,0 +1,335 @@
+<header class="module-header">
+  <h1 class="module-title">Introduction to Electricity and Magnetism <span class="module-author">(Peter Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: force, Newton's laws, weight, acceleration <a href="../m14/" class="module-ref">MISN-0-14</a>,
+    particle <a href="../m7/" class="module-ref">MISN-0-7</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: electric charge, electric field, magnetic field.</li><li><strong>K2.</strong> State how one can determine whether an electric force is 
+    present between two objects.</li><li><strong>K3.</strong> State how one can tell whether an electric field is present.</li><li><strong>K4.</strong> State how one can tell whether a magnetic field is present.</li><li><strong>K5.</strong> Describe the retardation effect.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Post-Options</h4><ul><li><strong>1.</strong> “Coulomb's Law” (MISN-0-114).</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Electricity and Magnetism in General</h3>
+
+The study of general electricity and magnetism involves the interaction
+of charged particles with each other through their electric and magnetic
+fields.
+“Charged particles” here means particles that are electrically charged,
+which means particles that can exert forces on each other which obey the
+equations governing electric and magnetic interactions.
+For two objects, both of which are less than the size of mountains, the
+electric force between the objects, if non-zero, is generally much
+larger than the gravitational force between the objects.
+In fact, the gravitational force between two ordinary objects is usually
+too small to be detectable, while the electric and magnetic forces between
+the two objects can be devastatingly strong, as in lightning and in
+other electrical discharges.
+<p><h3 id="pcap-1-b">1b. Seeing Whether an Electric Force is Present</h3>
+
+Suppose you have two objects that are obviously exerting a force on each
+other and you want to know whether the force is gravitational or
+electric.
+These are competing choices because electric and gravitational forces both
+have the same function of radius, \(1/r^2\), where \(r\) is the distance between
+the objects.
+That means they cannot be distinguished from each other by their dependence
+on \(r\).
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>The way to identify the force involved is simple: (1) measure each object's
+mass by weighing it or by measuring each object's acceleration under a known
+external force; (2) use the Law of Universal Gravitation
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>to calculate the gravitational force that does exist between the two
+objects; and (3) compare that gravitational force to the total \(1/r^2\) force
+that actually exists between the two objects.
+If the total \(1/r^2\) force doesn't equal the gravitational force, then an
+electric force must be present and the two objects must be charged
+electrically.
+Two other ways of saying it are that they must have electric charge or must
+be charges.
+<p><h3 id="pcap-1-c">1c. The Nature of Electric Charge</h3>
+
+When an object is electrically charged, it usually means that one of these
+things have happened: (1) some valence electrons have left the object,
+leaving it with a net positive charge;
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>or (2) some valence electrons from another object have attached themselves
+to the object at hand, giving it a net negative charge; or (3) some valence
+electrons have moved to one side of the object, making that side 
+electrically negative and leaving the other side electrically positive.
+<p><h3 id="pcap-1-d">1d. The Equations Governing E &amp; M</h3>
+
+There are five equations that one must learn how to use in electricity
+and magnetism, a set of four called “Maxwell's Equations” plus one
+called “the Lorentz Force.”
+Maxwell's equations can be stated in either differential or integral form:
+we shall use the integral form since it is simpler mathematically and it is
+the form more often used for applications.
+The Lorentz Force equation is algebraic.
+Once you have calculated the fields from Maxwell's Equations, and then
+the forces those fields exert on charged particles, you still need to
+use Newton's laws to determine the resulting motion of the charged
+particles.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Fields</h2>
+
+<p><h3 id="pcap-2-a">2a. Fields vs. Particles</h3>
+
+The primary quantities in electricity and magnetism are particles and
+fields, and these are very different concepts.
+<p>A particle has a specific location at any particular time.
+For example, we may write \(\vec{r}_A(t)\) as the location of particle \(A\).
+This means the position of particle \(A\), at some particular time \(t\),
+can be found by substituting that value of \(t\) into the expression
+\(\vec{r}_A(t)\).
+The result is the radius vector from the origin to the particle's position
+at that instant.
+Thus at any instant there are three space numbers giving the particle's
+location (these might be the particle's three Cartesian coordinates,
+its \(x\), \(y\), and \(z\) values, or it might be a radius and two angles).
+<p>A field has a value at <em>every</em> point in space at every instant
+of time, in contrast to a particle which has only a single position in
+space at any one time.
+An example of a field is temperature, which has a value at each point in
+space at any one time.
+We write this functional dependence as \(T(\vec{r},t)\).
+If we replace the general symbols \(\vec{r}\) and \(t\) by a particular point
+in space and a particular time \(t\), and we get a number that is the
+temperature at that point at that time.
+Another example of a field is air pressure, where at any one time points
+in space have values for that physical quantity.
+<p><span class="tryit">Try it:</span>  Write down two other quantities that obey the physics definition
+of a “field.”
+<p><h3 id="pcap-2-b">2b. The Electric Field</h3>
+
+There is a non-zero value for the electric field \(\vec{E}\) at a point in
+space at a particular time if a charged particle, being at that point at 
+that time, would feel a force that is linearly proportional to the
+particle's charge in this way:
+<p>\[\vec{F} = q \vec{E}\,,\]
+<p>where \(q\) is the charge on the particle.
+The charge itself can be measured by letting it interact with a standard
+charge,
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>using the law for the interaction of two charged particles:
+<p>\[|\vec{F}| = k_e \frac{q_1 q_2}{r^2}\,,\]
+<p>where \(k_e\) is a universal constant with the value
+\(9 \times 10^9\unit{N\,m^{2}/C^{2}}\).
+The symbol “C” denotes the unit of charge, the coulomb.
+Thus we might say that a particular particle has an electrical charge of
+\(2.54 \times 10^{-9}\,\text{C}\).
+<p><h3 id="pcap-2-c">2c. The Magnetic Field</h3>
+
+There is a non-zero value for the magnetic field \(\vec{B}\) at a point in
+space at a particular time if a charged particle, being at that point at 
+that time, would feel a force that is linearly proportional to the
+particle's charge <em>and velocity</em> in this way:
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>\[\vec{F} = q \vec{v} \times \vec{B}\,.\]
+<p>Here \(q\) is the electric charge on the particle.
+Note that the force is at right angles to both the velocity vector \(v\) and
+the magnetic field vector, and that the magnetic field force is zero if the
+velocity is along the direction of the magnetic field \(B\).
+Thus to test for the presence of a magnetic field \(B\) we must try several
+orientations for the charged particle's velocity.
+<p>A common way of testing for the presence of a significant magnetic field in
+some region of space is to bring a compass there and see if it deflects.
+A compass has internal electric charge moving in circles.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>The force that makes the compass turn is just the force the external
+magnetic field force exerts on that internal circulating charge.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Producing the Fields</h2>
+
+<p><h3 id="pcap-3-a">3a. The Electric Field</h3>
+
+An electric field <em>is produced</em> by: (1) one or more charged particles;
+and/or (2) a time-changing magnetic field.
+Examples of the production by charged particles: (i) the electric field
+in a capacitor due to charged particles on its plates; and (ii) the electric
+field of the earth due to charged particles on its surface.
+An example of production by a time-changing magnetic field: the electric
+field in an inductor due to an alternating current that produces an
+alternating magnetic field.
+<p><h3 id="pcap-3-b">3b. The Magnetic Field</h3>
+
+A magnetic field is produced by: (1) an electric current (a stream of
+charged particles); and/or (2) a time-changing electric field.
+Examples of magnetic fields produced by electric currents: (i) magnets;
+(ii) the magnetic field of the earth (from internal currents inside the
+earth); and (iii) the magnetic field in a transformer.
+An example of a magnetic field produced by a time-changing electric field is
+an electromagnetic wave, such as a radio or TV wave, or an X-ray, or
+light.
+Here the electric field is oscillating sinusoidally and that produces
+a sinusoidally oscillating magnetic wave in step with the electric
+wave.
+In fact, the sinusoidally-varying magnetic wave also produces the electric
+wave so the two feed on each other.
+The result is that the wave can escape its charged-particle source and
+travel through space as an independent quantity.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p><h3 id="pcap-3-c">3c. The Equations Summarized</h3>
+
+Here is what each of the four Maxwell's Equations implies:
+<ul>
+<li>electric charges produce electric fields;</li>
+<li>there is no magnetic charge to produce magnetic fields, no magnetic
+      analog to electric charge;</li>
+<li>time-changing magnetic fields produce electric fields; and</li>
+<li>electric currents and time-changing electric fields produce
+      magnetic fields.</li>
+</ul>
+
+The Lorentz Force on a particle with charge \(q\) and velocity \(\vec{v}\),
+moving in both an electric field \(E\) and a magnetic field \(B\), is:
+<p>\[\vec{F} = q \vec{E} + q \vec{v} \times \vec{B}\,.\]
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Retardation</h2>
+
+<p>Finally, we mention the so-called “retardation” effect, wherein the
+force felt by one charged particle due to another is not instantaneous.
+For example, suppose two positive charges are near each other so each exerts
+a measurable repulsive force on the other.
+Because the charges are “like” charges, being of the same sign (positive),
+the forces on particle #1 points directly away from particle #2.
+Now suppose particle #1 is suddenly moved to a new location.
+The force on particle #2 must shift to point directly away from the new
+location of particle #1, but this shift only occurs after a period of
+time has elapsed.
+The length of this time delay is exactly the amount of time it would take
+a signal traveling at the speed of light to go from object #1 to object
+#2, informing it of particle #1's new location.
+This delay is called the “retardation” effect, but the times involved
+are so short that for many purposes the delay can be considered to be zero.
+That is what we will assume here, but the proper non-zero time must be
+used in some modern high-speed communication designs.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="glossary" class="module-section section-text"><h2 id="glossary">Glossary</h2>
+
+the basic property of a piece of matter that
+defines the strength of its interaction with other matter through
+electromagnetic forces.
+The SI unit of electric charge is the coulomb.
+<p>a vector quantity at each space-point,
+being, at any particular space-point, the force per unit charge experienced
+by a test charge placed at that space-point.
+The electric field is written \(\vec{E}\) and its SI unit is
+newtons/coulomb or, equivalently, volts/meter.
+<p>a (psuedo-) vector quantity at each
+space-point, being, at any particular space-point, the force per unit charge
+per unit velocity normal to the field and to the force, experienced
+by a test charge with velocity \(\vec{v}\) crossing that space-point.
+Technically, the magnetic field \(\vec{B}\) is such that the force on a
+test charge \(q\) traveling with velocity \(\vec{v}\) obeys:
+\(\vec{F} = q \vec{v} \times \vec{B}\).
+The SI unit of magnetic field is the tesla \(\equiv\) newtons per ampere
+per meter.
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. The Vector Product</h2>
+
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m121gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Two rules for
+finding the direction of \(\vec{C} = \vec{A} \times \vec{B}\) by:
+(a) the “right hand” rule; (b) the “screw” rule.</figcaption></figure></div>
+
+<p>The vector product of, say, \(\vec{A}\) and \(\vec{B}\), is itself a
+vector and we will show separately how to find its magnitude and direction.
+The vector product is sometimes called the “cross product” because of the way
+it is indicated visually:
+<p>\[\vec{C} = \vec{A} \times \vec{B}.\]
+<p>The magnitude of \(\vec{C}\) is defined as magnitude of \(\vec{A}\) times the
+magnitude of \(\vec{B}\) times the sine of the angle between them:
+<p>\[|\vec{C}| = |\vec{A} \times \vec{B}| = A B \sin\theta.\]
+<p>The direction of the vector \(\vec{C}\) is perpendicular to the plane formed by
+\(\vec{A}\) and \(\vec{B}\) and that narrows it to one of two directions.
+We will here describe two rules for obtaining the exact direction.
+<p> The “right-hand rule”:
+<ul>
+<li><span class="item-label">1.</span> Extend the index finger of your right hand in the direction of
+the first vector (\(\vec{A}\) in the example) with the rest of the fingers closed.</li>
+<li><span class="item-label">2.</span> Rotate the index finger and hand until the index finger aligns with
+the second vector (\(\vec{B}\) in the above example).
+That is, the first of the two vectors denoted in the cross product is rotated
+toward the second through the smaller angle between them (\(\vec{A}\) rotated
+toward \(\vec{B}\) such that \(\theta\) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> decreases) and the curled
+fingers of the right hand follow this rotation.</li>
+<li><span class="item-label">3.</span> The direction of the extended thumb gives you the direction of
+\(\vec{C}\) (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).</li>
+</ul>
+
+<p> The “screw” rule:
+<ul>
+<li><span class="item-label">1.</span> Imagine placing vectors \(\vec{A}\) and \(\vec{B}\) tail-to-tail,
+as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.</li>
+<li><span class="item-label">2.</span> Imagine a screw with right hand threads placed where the tails of
+the two vectors come together, with the axis of the screw perpendicular to the
+plane formed by the two vectors (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).</li>
+<li><span class="item-label">3.</span> Imagine a screwdriver placed in the screw with the axis of the
+screwdriver being along the axis of the screw.</li>
+<li><span class="item-label">4.</span> Imagine a spot on the screw, next to vector \(\vec{A}\).</li>
+<li><span class="item-label">5.</span> Turn the screwdriver through the shortest angle so the spot is
+now next to vector \(\vec{B}\).
+The direction the screw went (in or out) is the direction of the product vector
+\(\vec{C}\) (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).</li>
+</ul>
+
+<span class="tryit">Try it:</span>  Show that the vector product of two vectors is zero if the two are
+parallel.
+<p><span class="tryit">Try it:</span>  Show that the vector product of a vector with itself is zero.
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The magnetic force has other unique properties by which it can be
+identified. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">The Law: \(F = G m_1 m_2/r^2\). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">Recall that electrons have negative charge and that, if all
+valence electrons (and no others) are present, an object will be 
+electrically neutral. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">As with all units, a more-or-less-arbitrary object is set up
+as the standard and all other objects are compared to this standard in
+order to determine their values. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">The “\(\times\)” symbol in this equation indicates a vector
+product, also called a “cross product.”
+See the Appendix. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">This circulating charge is internal to the electron and is called
+its “spin.” <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">Of course that is precisely what radio and TV waves, X-rays,
+and light waves actually do. <a href="#fnref-7" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K5 in this module's <em>ID Sheet</em>.</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+</ol>
+
+<p></section>
+

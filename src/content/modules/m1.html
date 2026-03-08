@@ -1,0 +1,844 @@
+<header class="module-header">
+  <h1 class="module-title">Simple Differentiation and Integration <span class="module-author">(J.S.Kovacs, Michigan State University)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Vocabulary: trigonometric identity, sin, cos, tan, inverse
+    trigonometric function, curve tangent, function graph, graphical slope,
+    exp, log, ln <a href="../m401/" class="module-ref">MISN-0-401</a>.</li><li><strong>K2.</strong> Define “rate,” state two of its general properties
+    and give the rates for \(x = C\), \(x = C t\), \(x = C t^2\) <a href="../m404/" class="module-ref">MISN-0-404</a>.</li><li><strong>K3.</strong> Explain what is meant by “small enough” and how it
+    is used to distinguish a difference from a derivative <a href="../m404/" class="module-ref">MISN-0-404</a>.</li><li><strong>K4.</strong> Define “velocity,” for motion in a straight line, in these cases:
+    (a) \(v\) is constant;  (b) \(v\) changes uniformly;  (c) \(v\) is any function <a href="../m404/" class="module-ref">MISN-0-404</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Vocabulary: limit.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Differentiate polynomial, exponential, logarithmic, and trigonometric
+    functions.</li><li><strong>R2.</strong> Locate the maxima and minima of any given function.</li><li><strong>R3.</strong> Solve indefinite integrals of polynomial functions.</li><li><strong>R4.</strong> Evaluate definite integrals of polynomial functions.</li><li><strong>R5.</strong> Determine the area under the curve of a given function using the definite integral.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><span class="tex-unknown" title="unknown macro">\par</span>The description of physical phenomena without the results of measurements
+and without mathematics is, at best, incomplete and very limited in its
+scope.
+For example, the observation that the moon orbits the earth is a
+qualitative
+description of that motion.
+The description becomes quantitative when measurements are made that give
+the position of the moon relative to the earth for various times.
+With the accumulation of such data, the description begins to enter the realm
+of science when, on the basis of these data, the location of the moon can be
+predicted for times in the future.
+However, the description achieves full scientific status when it can also be
+arrived at from a basic principle or physical law which not only fully
+predicts all aspects of the observed motion of the moon around the earth,
+but also can be applied to problems of the motion of other objects in other
+environments.
+Relating various observations through physical laws invariably involves the
+use of mathematics.
+In this module, we will consider some of the basic mathematical skills
+necessary for understanding such applications.
+<p><span class="tex-unknown" title="unknown macro">\par</span>The functions whose derivatives are dealt with here constitute most
+of the kinds of functions encountered in an introductory physics course.
+For ready reference, we tabulate the rules and frequently used derivatives
+in Appendix B.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Differentiating Common Functions</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]2aDefinition of the Derivative
+<p><span class="tex-unknown" title="unknown macro">\par</span>The derivative of a function of a single independent variable, \(y(x)\), with
+respect to that independent variable, \(x\), is defined as:
+<p>\[\frac{dy(x)}{dx}=\lim_{\Delta x\rightarrow 0}
+                            \frac{y(x+\Delta x)-y(x)}{\Delta x}\]
+<p>where \(\Delta x\) is a small incremental change in the value of \(x\) that is
+required to go through successive values toward zero as the shown ratio is watched.
+The “limit” in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> <span class="tex-unknown" title="unknown macro">\parenhelp</span>7 means the value that the ratio approaches as the value of
+\(\Delta x\) approaches zero. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<p><span class="tex-unknown" title="unknown macro">\par</span>As an example, consider 
+where \(a\) is a constant.
+This relationship defines a value for \(y\) for each value of \(x\) except at
+\(x=0\).
+The derivative of this function is:
+<p>\[\begin{aligned}\frac{dy(x)}{dx}&=&\frac{d}{dx}\left(\frac{a}{x}\right)\\
+&=& \lim_{\Delta x\rightarrow 0}
+    \frac{\frac{a}{x+\Delta x}-
+    \frac{a}{x}}{\Delta x}\\
+&=& \lim_{\Delta x\rightarrow 0}\frac{-a}{x(x+\Delta x)}
+    \frac{\Delta x}{\Delta x}\\
+&=&-\frac{a}{x^2 }.\\\end{aligned}\]
+
+<p>This function defines a value of the derivative of \(y\) for each value of \(x\)
+except at \(x=0\).
+<p><h3 id="pcap-2-b">2b. Derivatives of Simple Algebraic Functions</h3>
+
+<p><span class="tex-unknown" title="unknown macro">\par</span>It is not necessary to go through the cumbersome limiting procedure each
+time a derivative of a function needs to be determined.
+Instead, some general rules can be used.
+For example, if the function is some power of \(x\), \(y(x)=ax^p\), where \(p\) is
+any positive or negative number, then:
+<p>\[\frac{dy(x)}{dx}=
+   \lim_{\Delta x\rightarrow 0}\frac{a(x+\Delta x)^p -ax^p}{\Delta x}\]
+<p>becomes, after applying the binomial theorem and the limiting procedure,
+<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\frac{d(ax^p)}{dx}=pax^{p-1}.\]
+<p><a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> can be applied any time the derivative of any power of the
+independent variable is desired.
+Because the derivative of a sum of terms is the sum of the derivatives of
+the terms, the above result can be used to produce the derivative of any
+polynomial.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>For example, if
+<p>\[y(t)=y_0 + v_0 t - \frac{g t^2}{2}\]
+<p>where \(y_0\), \(v_0\) and \(g\) are constants, and \(t\) is the independent
+variable, then <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> produces:
+<p>\[\frac{dy(t)}{dt} = v_0 - g t.\]
+<p><h3 id="pcap--">. </h3>
+[]2cSecond Derivatives
+<p><span class="tex-unknown" title="unknown macro">\par</span>The derivative of \(dy(t)/dt\), called the second derivative of \(y(t)\), is
+written:
+<p>\[\frac{d^2 y(t)}{dt^2}.\]
+<p>For example, for the function \(y(t) = y_0 + v_0 t - gt^2/2\), double
+application of <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> produces:
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>\[\frac{d}{dt}\left(\frac{dy(t)}{dt}\right) = - g.\]
+<p>The function \(y(t)\) we are using here is a polynomial of degree two, its first derivative is a
+polynomial of degree one and its second derivative is a polynomial of degree
+zero (just a constant).
+<p><h3 id="pcap--">. </h3>
+[]2dDerivative of a Product
+<p><span class="tex-unknown" title="unknown macro">\par</span>The derivatives of more complicated algebraic functions, such as the
+products or ratios of polynomials, can also be readily found with the aid of
+some basic rules.
+Consider a function which can be written as the product (gf) of two
+functions of the same independent variable; g(x) and f(x).
+The derivative of this function, according to the definition, is:
+<p>\[\frac{d(gf)}{dx}=
+\lim_{\Delta x\rightarrow 0}\frac{g(x+\Delta x)f(x+\Delta x)-g(x)f(x)}
+{\Delta x}.\]
+<p>If \(g(x) f(x + \Delta x)\) is added and subtracted in the numerator, the
+expression may be rewritten in this way:
+<p>\[\frac{d(gf)}{dx} = \lim_{\Delta x\rightarrow 0}
+\left(g(x)h_1(x)
++ h_2(x) f(x+\Delta x)\right)\,,\]
+<p>where
+<p>\[h_1(x) \equiv \frac{f(x+\Delta x)-f(x)}{\Delta x}\]
+<p>and
+<p>\[h_2(x) \equiv \frac{g(x+\Delta x)-g(x)}{\Delta x}\,.\]
+<p>In the limit that \(\Delta x\) goes to zero, the two quantities \(h_1(x)\) and \(h_2(x)\) go to the derivatives of the respective functions while the
+\(f(x + \Delta x)\) multiplying \(h_2(x)\) goes simply to \(f(x)\).
+Thus:
+<p>\[\frac{d(gf)}{dx}=
+           \left(\frac{dg}{dx}\right) f + g \left(\frac{df}{dx}\right) .\]
+<p>Similarly:
+\[\frac{d}{dx}\left(\frac{g}{f}\right) =
+\frac{\left(\frac{dg}{dx}\right) f -
+g \left(\frac{df}{dx}\right)}{f^2}.\]
+<p>These rules enable us to find the derivative of rational algebraic functions
+(polynomials or ratios of polynomials), but not of irrational algebraic
+functions (such as square roots of polynomials).
+<p><h3 id="pcap-2-e">2e. The Chain Rule</h3>
+
+<span class="tex-unknown" title="unknown macro">\par</span>To enable us to find the derivative of an irrational algebraic function, we
+need to use the “chain rule.”
+<p>We are given \(f\) as a function of \(x\) and we suppose we can find its derivative,
+<p>\[\frac{df}{dx}\,.\]
+<p>Now suppose that \(x\) itself is a function of \(t\) so that \(f\) is also a function of \(t\).
+Then the chain rule says that the derivative of \(f(x)\) with respect to \(t\) is:
+<p>\[\frac{df(x(t))}{dt} = \left(\frac{df}{dx}\right)\left(\frac{dx}{dt}\right) .\]
+<p>Using this, the derivative of a function such as
+<p>\[F(x) = (ax^2 + bx + c)^{1/2} ,\]
+<p>where \(a\), \(b\), and \(c\) are constants, can readily be shown to be: <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p>\[\frac{dF(x)}{dx}=\frac{2ax+b}{2(ax^2 +bx+c)^{1/2}}.\]
+<p><h3 id="pcap--">. </h3>
+[]2fDerivatives of Trigonometric Functions
+<p><span class="tex-unknown" title="unknown macro">\par</span>We can evaluate the derivatives of transcendental functions, such as
+\(\sin x\), which cannot be expressed as rational or irrational algebraic
+functions, using rules developed from the definition of the derivative.
+Consider the function \(y(x) = \sin (kx + \delta )\) where \(k\) and \(\delta\)
+are constants.
+The derivative of \(y(x)\) is:
+<p>\[\frac{dy(x)}{dx}=\lim_{\Delta x\rightarrow 0}
+    \frac{\sin(kx + k\Delta x + \delta) - \sin(kx+\delta )}{\Delta x}.\]
+<p>Using a trigonometric identity,
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[\sin A - \sin B = 2 \sin\left(\frac{A-B}{2}\right)
+             cos\left(\frac{A+B}{2}\right) ,\]
+<p>and the limit <span class="tex-unknown" title="unknown macro">\parenhelp</span>7
+<p>\[\lim_{\theta \rightarrow 0}\frac{\sin\theta }{\theta } = 1,\]
+<p>we find that: <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+\[\frac{d}{dx}[\sin(kx + \delta)] = k \cos(kx + \delta).\]
+<p>The derivative of \(\cos(kx + \delta)\) can be obtained directly from the
+above result using the relations
+<p>\[\cos(kx + \delta) = -\sin\left(kx + \delta + \frac{\pi}{2}\right)\]
+<p>and
+<p>\[\cos\left(kx + \delta - \frac{\pi}{2}\right) =sin(kx+\delta),\]
+<p>yielding:
+\[\frac{d}{dx}\cos(kx + \delta ) = - k \sin(kx + \delta).\]
+<p>The derivatives of other trigonometric functions may be obtained from the
+above results and the appropriate trigonometric identities.
+For example, the derivative of \(\tan\theta\)  with respect to \(\theta\)  is:
+<p>\[\frac{d}{d\theta}\tan\theta =
+           \frac{d}{d\theta}\left(\frac{\sin\theta}
+           {\cos\theta}\right) = \frac{1}{\cos^2\theta} = \sec^2\theta .\]
+<p>Similarly, the derivatives of the inverse trigonometric functions, such as
+\(\theta = \arctan x\) (also written as \(\tan^{-1} x\), which means \(\theta\) is
+the angle whose tangent is \(x\)) can also be obtained from the above results
+using the rule:
+<p>\[\frac{dy(x)}{dx}=\frac{1}{\frac{dx(y)}{dy}};
+\;\left(\frac{dx}{dy}\neq 0\right) .\]
+<p>Frequently used derivatives of trigonometric functions are listed in
+Appendix B. /par
+<p><h3 id="pcap-2-g">2g. Derivatives of Exponentials and Logarithms</h3>
+
+<p><span class="tex-unknown" title="unknown macro">\par</span>None of our rules, developed from algebraic and trigonometric functions,
+apply to exponential and logarithmic functions, so here it's necessary to
+begin again with the definition of the derivative.
+If \(x = \log_a F\), then the derivative of \(x\) with respect to \(F\) is:
+<p>\[\begin{aligned}\frac{dx}{dF} & = \frac{d}{dF}\left(\log_a F\right) \\                & = \lim_{\Delta F\rightarrow 0}\frac{\log_a(F+\Delta F)- \log_a(F)}{\Delta F} \\                & = \lim_{\Delta F\rightarrow 0}\frac{\log_a\left(1+\frac{\Delta F}{F}\right) }{\Delta F} \\                & = \lim_{\Delta F\rightarrow 0}\frac{\frac{\Delta F}{F}\log_a
+                                               \left[\left(1+\frac{\Delta F}{F}
+                                               \right)^{F/\Delta F}\right]}{\Delta F}\end{aligned}\]
+
+<p>Here we have used property (3) of logarithms (see Appendix A).
+What is the limit of the argument of this logarithm?
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p>That is, what is:
+<p>\[y = \lim_{x \rightarrow 0} (1 + x)^{1/x} ?\]
+<p>This limit has a definite value, as can be seen by evaluating it and
+plotting it for a few values of \(x\) on both sides of zero.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m1gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A graph of \((1 + x)^{1/x}\) in the vicinity of \(x = 0\).</figcaption></figure></div>
+
+<p>The value of the limit is the transcendental number \(e\), which to 9 decimal
+places is
+<p>\[e = 2.718281828\ldots\]
+<p>As we shall see, \(e\)'s actual value is often of no real interest in physical
+problems, but it enters in a natural way as the exponential base appropriate
+to the mathematical description of many different kinds of physical
+phenomena. /par
+<p><span class="tex-unknown" title="unknown macro">\par</span>Completing the development of the derivative of the logarithm, we get
+<p>\[\frac{d\left(\log_a F\right)}{dF}=\frac{\log_a e}{F}\]
+<p>If we choose the base \(a = e\), then the constant \(\log_a e\) becomes 1 (see
+property (4) of logarithms, Appendix A).
+Because this makes life simpler, we will restrict the remainder of our
+review of derivatives of logarithms and exponentials to that base.
+Furthermore, we write “\(\log_e\)” as simply “\(\ell\)n.”
+Thus, for a variable \(F\), the derivative of “\(\log F\) to the base \(e\),”
+\(\ell n\,F\), is:
+<p>\[\frac{d(\ell n\,F)}{dF}=\frac{1}{F}.\]
+<p>We can obtain the derivative of \(e^x\) with respect to \(x\) from the
+reciprocal relation between the derivatives when the roles of the dependent
+and independent variables are interchanged [See <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>].
+We use
+<p>\[\begin{aligned}x(F) & = & \ell n\,F \\
+F(x) & = & e^x \\
+\frac{dx(F)}{dF} & = & \frac{1}{dF(x)/dx} \\\end{aligned}\]
+
+<p>to get:
+<p>\[\frac{d}{dx}\left(e^x\right) = F = e^x.\]
+<p>Thus the exponential (to the base \(e\)) is its own derivative!
+Finally, using the chain rule, it can be shown that:
+<p>\[\frac{d}{dx}\left(e^{mx}\right) = m e^{mx}.\]
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Derivatives as Graphical Slopes</h2>
+
+<p><h3 id="pcap-3-a">3a. Graph of An Equation</h3>
+
+The functional relationship between two variables, often expressed in the
+form of an equation, may also be displayed on a graph.
+The graphical representation has distinct visual advantages, presenting
+all of the properties of the function in one picture.
+All of the points that lie on the curve are points which satisfy the
+equation connecting the variables.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m1gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The graph of \(F(x) = Ax + b\).</figcaption></figure>
+
+<p>As an example, consider the functional relationship between \(F\) and \(x\)
+given by the equation
+<p>\[F(x) = A x + B,\]
+<p>where \(A\) and \(B\) are constants.
+For every value of \(x\) there is one value
+\(F(x)\) and for every value of \(F(x)\) there is one value of \(x\).
+The points for which this correspondence exists can be connected by a
+continuous curve.
+This graph of the equation can be plotted on a rectangular coordinate system
+in which \(F(x)\) and \(x\) are the perpendicular axes (See <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.).
+The graph of this equation is a straight line, reflecting the linear
+relationship between \(F\) and \(x\).
+Given a value \(x = x_1\), the value of \(F(x)\) which satisfies the equation
+can be obtained from the equation \(F(x_1) = A x_1 + B\) or can be determined
+from the graph [point \(P\) on the graph in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> has coordinates
+\(x_1\), \(F(x_1)\)].
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m1gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The slope of a curve \(G(x)\), at some point
+                              \(P\), equals the slope of the tangent to the curve at that point.</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]3bSlope of a Straight Line
+A property associated with equations which is of importance in physical
+applications and which can most easily be discussed with reference to the
+graph of the equation is the rate at which one variable changes due to
+changes in the other.
+For a graph which is a straight line, the rate is the same as the slope of
+the line (the slope being the tangent of the angle that the line makes with
+the horizontal axis).
+Referring to <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, if \(P_1\) and \(P_2\) are two points whose coordinates
+are [\(x_1\), \(F(x_1)\)] and [\(x_2\), \(F(x_2)\)], then the rate at which \(F\)
+changes between those two points relative to the corresponding change in \(x\)
+is:
+<p>\[\frac{\Delta F}{\Delta x}=\frac{F(x_2)-F(x_1)}{x_2-x_1}.\]
+<p>Let \(\Delta x = x_2 - x_1\) so that \(F(x_2) = F(x_1 + \Delta x)\) and the
+slope of the line may be written as:
+<p>\[\text{slope } \equiv \frac{F(x_1 + \Delta x) - F(x_1)}{\Delta x} \qquad \text{(straight line)}.\]
+<p>For a straight line, the result of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> is clearly the same no
+matter what size we pick for \(\Delta x\).
+That will not be the case for curves that are not straight lines.
+<p><h3 id="pcap--">. </h3>
+[]3cSlopes of Curves
+If we take the limit of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> as \(\Delta x \rightarrow 0\), this
+expression for the slope
+becomes the derivative of \(F\) with respect to \(x\), and we can define the
+slope at a single point on any curve as:
+<p>\[\text{slope at point } x_1 \equiv
+                                \left.\frac{dF(x)}{dx}\right|_{x = x_1}.\]
+<p>For a function whose graph is not a straight line,
+the slope does depend upon the point at which it is evaluated.
+The slope in such cases is the slope of the straight line that is
+tangent to the curve at the point in question (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
+<p><h3 id="pcap-3-d">3d. Finding Maximum and Minimum Points</h3>
+
+The collection of all maximum and minimum points of a
+function can be found by finding the points of zero slope (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+From the definition of slope [see <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a>] it is apparent that the
+slopes at \(P_1\) and \(P_5\) in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> are positive.
+However, the slope at \(P_3\), on the decreasing part of the curve, is
+negative.
+At point \(P_2\), where the tangent to the curve is horizontal, the slope is
+zero.
+Similarly, the slope is zero at \(P_4\).
+The two points, \(P_2\) and \(P_4\), are, respectively, a “maximum point” and
+a “minimum point” of the curve.
+At \(P_2\) all points on the curve in the immediate neighborhood of \(P_2\) have
+\(y(x)\) less than the corresponding value at \(P_2\), while at \(P_4\) all points
+in the neighborhood of \(P_4\) have \(y(x)\) greater than the value of \(P_4\).
+This illustration indicates the method for determining the maximum and
+minimum points of a function:
+Find the values of \(x\) which make the derivative of the function equal to
+zero.
+<p><span class="tryit">Try it:</span>  Show that the locations of the maximum and minima of the function
+<p>\[y(x) = 5 x^3 - 2 x^2 - 3 x + 2.\]
+<p>are at:  \(x = 3/5; x = -1/3\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+Show that the first is where \(y\) is a minimum, the second where it is a
+maximum.
+<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><h3 id="pcap-3-e">3e. Separating into Maxima and Minima</h3>
+
+How do you determine whether a point of zero slope is a maximum or a
+minimum?
+You could plot a graph and examine it, or you could evaluate the second
+derivative of the function at the point in question.
+Referring to <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, the slope of the curve is positive to the left of
+\(P_2\), zero at \(P_2\), and negative to the right of \(P_2\).
+Hence the slope is decreasing.
+The derivative of the slope, the second derivative of the function \(y(x)\)
+itself, is therefore negative.
+Thus the second derivative is negative at a maximum---this is because the
+second derivative is the “bending function” and at a maximum it is bending
+the function down, negatively.
+Correspondingly, at the location of a minimum, the second derivative of the
+function, the “bending,” is positive.
+<p><span class="tryit">Try it:</span>  See for yourself that the function
+<p>\[y(x) = 2x^3 - 3x^2 + 4,\]
+<p>has a maximum at point (0,4) and a minimum at point (1,3).
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m1gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. For the curve shown, the slopes at \(P_1\)
+          and \(P_5\) are positive numbers while the slope at \(P_3\) is negative.
+          At the points \(P_2\) and \(P_4\), where the tangent line is horizontal, the
+          slope is zero.</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Indefinite and Definite Integrals</h2>
+
+<p><h3 id="pcap--">. </h3>
+[]4aIndefinite Integrals
+Knowing the derivative of a function with respect to an independent
+variable, we often wish to determine the function itself.
+The inverse of the derivative is what is needed, and the procedure is called
+“integration.”
+The result of this procedure, the inverse of the derivative, is called
+“the integral” of the function.
+For example, because \(2x\) is the derivative of \(x^2\) with respect to \(x\),
+the integral of \(2x\) with respect to \(x\) is \(x^2\).
+However, \(x^2 + 4\) is also the integral of \(2x\), as is \(x^2 - 10\).
+In fact, because the derivative eliminates any additive constant, the integral of \(2x\)
+is \(x^2 + C\), where \(C\) is an unknown constant.
+Because of the presence of the indefinite constant, \(x^2 + C\) is called the
+“indefinite integral” of \(2x\).
+This process of reversing differentiation, the indefinite integral, is customarily
+written in the form:
+<p>\[\int  \frac{df(x)}{dx}\,dx = f(x) + C.\]
+<p>That is, the indefinite integral of the derivative of some function \(y(x)\) is
+just the function itself plus a constant.
+In general, an indefinite integral is written as:
+<p>\[\int y(x)\,dx\]
+<p>and it is up to the user to determine what function \(y(x)\) is a derivative of, using either
+standard techniques or a symbolic computer program.
+The function being integrated, \(y(x)\), is called “the integrand of
+the integral.”
+Examples:
+<p>\[\begin{aligned}(i) & \int & \left( 4x^2 +7\right) dx=\frac{4}{3}x^3 +7x+C \\
+ (ii) & \int & x^n\,dx = \frac{x^{n+1}}{n+1} + C \\
+ (iii) & \int & \frac{dI(x)}{dx}dx = I(x) + C \qquad \text{for any } I(x). \\\end{aligned}\]
+
+<p>The last result, (iii), can be verified by taking the derivative with respect
+to \(x\) of the right side of each equation, thereby producing the integrand
+of the integral on the left.
+The integrals of other frequently encountered functions, such as those
+appearing to the right of the equality sign for entries in Appendix B, may
+be determined by identifying the integrands as the derivative of sought-for
+answers as illustrated in (iii).
+<p><h3 id="pcap--">. </h3>
+[]4bOther Integration Techniques
+Tables of integrals of functions of many kinds are available and are the
+quickest technique for evaluating the integrals (anti-derivatives) of
+whatever integrand may be at hand.
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>There are also computer programs that can find the anti-derivative for you.
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m1gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The definite integral of \(y(x)\) from \(x_0\) to \(x\) is the area \(A\) that
+                              is under the curve and bounded by \(x_0\) and \(x\).</figcaption></figure></div>
+
+<p><h3 id="pcap--">. </h3>
+[]4cThe Definite Integral as a Change in Quantity
+Another use of the integral is to use a known rate of change of a quantity, given as a function of time, to find
+the change in the total quantity between two times.
+For example, we may know the electric current in a circuit as a function
+of time and we wish to know how much charge accumulated on a capacitor in the circuit over a certain
+time interval.
+We may know the flow rate of a chemical in a pipe as a function of time and wish to know how much of the chemical
+was delivered by the pipe from one time to another.
+We may know the speedometer reading of a vehicle as a function of time and we wish to know
+how far the vehicle traveled between two times.
+In all three cases we can say we have the rate of a quantity, say \(dQ(t)/dt\), as a function of time and we wish to
+find \(\Delta\,Q\,\equiv Q(t_2) - Q(t_1)\), the change in total \(Q\) from time \(t_1\) to time \(t_2\).
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>If the rate is constant then \(\Delta Q\) is just the rate times the time interval:
+<p>\[\Delta Q = \frac{dQ(t)}{dt} (t_2 - t_1)\,, \qquad \text{(constant rate)}\]
+<p>and the apparatus of integration is not needed.
+However, if the rate is not constant then there is no single rate and one cannot take
+“rate times time.”
+If the rate is, say, \(dQ/dt = a t^2 + b t^3\), then we can take the anti-derivative and get the amount as
+a function of time: \(Q(t) = (a/3)t^3 + (b/4)t^4 + C\).
+The amount that \(Q\) changed from time \(t_1\) to time \(t_2\) is then the amount at time \(t_2\) minus the
+amount at time \(t_1\): \(Q(t_2) - Q(t_1) = (a/3)(t_2^3-t_1^3) + (b/4)(t_2^4-t_1^4)\).
+Note that the unknown constant \(C\) is gone and the answer is definite.
+The result is called the “definite integral” and is written with the two times as the “lower limit”
+and the “upper limit” of the integral:
+<p>\[\Delta Q = Q(t_2) - Q(t_1) \equiv \int_{t_1}^{t_2} \frac{dQ(t)}{dt}\,dt\,.\]
+<p>We call the example “the integral from \(t_1\) to \(t_2\) of \((a t^2 + b t^3)\)” and we write it as:
+<p>\[\Delta Q = \int_{t_1}^{t_2}\,(a t^2 + b t^3)\,dt\,.\]
+<p>We write the <em>result</em> of the integration this way:
+<p>\[\int_{t_1}^{t_2}\,(a t^2 + b t^3)\,dt = \left|(a/3)t^3 + (b/4)t^4\right|_{t_1}^{t_2}\,,\]
+<p>where the vertical bars means that one is to evaluate the expression between them at the indicated upper limit
+minus the same expression evaluated at the indicated lower limit.
+In general,
+<p>\[\left|f(x)\right|^b_a \equiv f(b) - f(a)\,.\]
+<p>The first vertical bar is sometimes omitted if that causes no ambiguity.
+Note that vertical bars without limits indicate “absolute value,” a totally unrelated concept.
+Then for our example:
+<p>\[\int_{t_1}^{t_2}\,(a t^2 + b t^3)\,dt = (a/3)(t_2^3-t_1^3) + (b/4)(t_2^4-t_1^4)\,.\]
+<p><span class="tryit">Try it:</span>  Show that:
+<p>\[\int_{1\,\text{s}}^{2\,\text{s}}\,(4\unit{m/s^{4}} t^3 + 5\unit{m/s^{5}} t^4)\,dt = 46\,\text{m}\,.\]
+<p><h3 id="pcap--">. </h3>
+[]4dThe Definite Integral as an Area
+The definite integral of a function between a lower and an upper limit equals the area under
+the function's curve between those two limits (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
+For proof, consider the graph of some function \(y(x)\) shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+The area under the curve, between the value \(x_0\) and some other value \(x\),
+is the area \(A\) shown in the figure.
+If \(x\) is increased by the incremental amount \(\Delta x\), the area under the
+curve increases by some amount we label \(\Delta A\).
+This amount \(\Delta A\) is greater than the area of the rectangle of area
+\(y(x)\,\Delta x\) (the smaller dotted rectangle to the right of \(A\)) and less than the area of the
+larger rectangle \(y(x + \Delta x) \Delta x\).
+The incremental area may be written as:
+<p>\[\Delta A = y(x)\,\Delta x + \text{ an amount less than } [y(x + \Delta x) - y(x)]\,\Delta x.\]
+<p>Then:
+<p>\[\frac{\Delta A}{\Delta x} = y(x) + \text{ an amount less than } y(x + \Delta x) - y(x).\]
+<p>In the limit as \(\Delta x \rightarrow 0,\) the second area on the right goes
+to zero while the left side of the equation becomes \(dA/dx\):
+<p>\[\frac{dA}{dx}=y(x).\]
+<p>Integrating this expression, the area under any \(f(x)\) between any \(x_1\) and
+\(x_2\) is:
+<p>\[A(x_1,x_2) = \int_{x_1}^{x_2} y(x) \,dx.\]
+<p>For parts of the curve that are below the \(x\)-axis, the area between the
+curve and the \(x\)-axis is given a negative numerical value since the
+function is negative there.
+Thus for the graph of the “saw-tooth” function \(y(x)\), shown in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> in the interval
+from \(x = 0\) to \(x = 4a\), there is just as much area below the axis
+(negative area) as there is above the axis (positive area), so they cancel
+and the integral from 0 to \(4a\)  is zero.
+In this interval of \(x\), the saw-tooth function has three straight lines:
+from \(x = 0\) to \(x = a\), from \(x = a\) to \(x = 3a\), and from \(x = 3a\) to \(x = 4a\).
+We integrate each of those lines and get the shaded area in <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a>:
+<p>\[\begin{aligned}\int_0^{4a} y(x)\,dx & = \int_{0}^{a} \frac{x}{a}\,dx
+                                       + \int_a^{3a} \left(-\frac{x}{a} + 2\right)\,dx
+                                       + \int_{3a}^{4a} \left(\frac{x}{a} -4\right)\,dx \\ & = \frac{a}{2} + 0 - \frac{a}{2} = 0\,.\end{aligned}\]
+
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m1gr07.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Graph of a saw-tooth function illustrating that the
+                              integral over the full cycle, 0 to \(4a\), is zero.
+                              The area above the axis, from \(0\) to \(2a\), is equal to
+                              the area below axis, from \(2a\)  to \(4a\).</figcaption></figure></div>
+
+<p><span class="tryit">Try it:</span>  Show that each of the three linear functions in <a href="#eqn-19" class="eqn-ref">Eq.&nbsp;(19)</a> does indeed properly describe its
+portion of the saw-tooth function (an easy way is to plug in two different \(x\) values and show that
+each produces a \(y\) value that is obviously on the corresponding line).
+Then show that integration of each function gives the value shown.
+<p>There are many computer programs that can perform definite integrals numerically.
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+</section>
+ 
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Logarithms</h2>
+
+<p>The logarithm of a number \(F\) to the base \(a\) is the power to which \(a\) must
+be raised to yield the number \(F\):
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>if:</td><td>\(F = a^x\)</td></tr><tr><td>then:</td><td>\(\log_a F = x\) &thinsp;.</td></tr></tbody></table>
+</div>
+
+<p>For example, to the base \(a = 10\), the logarithm of \(F = 100\) is
+\(x = \log_{10} F = 2\),
+while to the base \(a = 2\), the logarithms of \(F = 1,024\) and \(F = 10\) are
+\(x = \log_2 F = 10\) and 3.32, respectively.
+The familiar properties of logarithms, listed below, all follow from the
+definition.
+<p>
+If \(F = a^x\) and \(G = a^y\), then \(FG = a^x a^y = a^{x + y}\), and
+<p>\[\log_a(FG) = x + y = \log_a F + \log_a G.\]
+\[\log_a\frac{F}{G}=\log_a F-\log_a G\]
+\[\log_a F^n = n\,\log_a F\]
+\[\log_a a = 1\]
+\[\log_a 1 = 0\]
+<p>Each of these can be proved using the definition of the logarithm.
+Another useful property expresses the relationship between the logarithms of
+the same number \(F\) in two different bases, \(a\) and \(b\):
+<p>\[\log_b F = (\log_a F)\cdot(\log_b a).\]
+<p>The inverse functional relationships,
+<p>\[x(F) = \log_a F;\qquad \text{and} \qquad F(x) = a^x\]
+<p>define a value of \(x\) for each given value of \(F\), and vice versa.
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Frequently Used Derivatives</h2>
+
+<p>\[\frac{d}{dx}\left(a x^n\right) = n a x^{n-1}\]
+\[\frac{d}{dx}[f(x)g(x)]= g(x)\frac{df(x)}{dx}+f(x)\frac{dg(x)}{dx}\]
+\[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{df(x)}{dx}-f(x)\frac{dg(x)}{dx}}{[g(x)]^2}\]
+\[\frac{d}{dt}[f(x)]=\frac{df}{dx}\cdot \frac{dx}{dt}\]
+\[\frac{df(x)}{dx}=\left[\frac{dx(f)}{df}\right]^{-1}\]
+<span class="tex-unknown" title="unknown macro">\lcr</span><span class="fbox">Trigonometric</span>
+\[\frac{d}{d\theta}\sin\theta = \cos\theta\]
+\[\frac{d}{d\theta}\sin m\theta = m \cos m\theta\]
+\[\frac{d}{d\theta}\cos\theta = - \sin\theta\]
+\[\frac{d}{d\theta}\tan\theta = \sec^2 \theta\]
+\[\frac{d}{d\theta}\cot\theta = - \csc^2 \theta\]
+\[\frac{d}{d\theta}\sec\theta = \sec\theta \tan\theta\]
+\[\frac{d}{d\theta}\csc\theta = - \csc\theta \cot\theta\]
+\[\frac{d}{d\theta}\sin^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]
+\[\frac{d}{d\theta}\cos^{-1}x(\theta)=\frac{-\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]
+\[\frac{d}{d\theta}\tan^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{1+x^2}\]
+<span class="tex-unknown" title="unknown macro">\lcr</span><span class="fbox">Logarithmic</span>
+\[\frac{d}{dx}\log_a U(x) =\left[\frac{1}{U(x)}\right] \left[\log_a e\right]\left[\frac{dU(x)}{dx}\right]\]
+\[\frac{d}{dx}\ell n\,x = \frac{1}{x}\]
+\[\frac{d}{dx}\left(a^x\right) = a^x log_e a\]
+\[\frac{d}{dx}\left(e^{y(x)}\right) =e^{y(x)}\left(\frac{dy(x)}{dx}\right)\]
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">The <em>[S-2]</em> means that, if you need help, turn to the Special
+Assistance Supplement at the end of this module and get advice from Sequence [S-2]. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">A polynomial is a sum of integer powers of the independent
+          variable with constant coefficients.
+          A polynomial of degree \(n\) in general is written as:
+          
+          \[ y(x) = a_0 x^n + a_1 x^{n-1} + \ldots + a_{n-1}x + a_n.\qquad (a_0 \neq 0)\] <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-6">This is the same as applying <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> once to <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a>. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-3">See  Handbook of Chemistry and Physics, Chemical Rubber Publishing Co.
+          The identity can be proved by recalling the expansion for \(\sin(x\pm y)\)
+          and using the substitutions \(A=x+y\) and \(B=x-y\). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The limit of the logarithm of a function is the same as the logarithm of
+ the limit of the same function.
+ <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">On a two-dimensional rectangular plot it is customary to represent
+ points by the ordered pair of numbers [\(x ,y\)] which are, respectively, the
+ horizontal and vertical coordinates of the point.
+ <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-7">For example,  A Short Table of Integrals, Third Revised Edition,
+          B.&thinsp;O.&thinsp;Pierce, Ginn and Co. (1929).
+          There is also a table of integrals included in the
+           Handbook of Chemistry and Physics, Chemical Rubber
+          Publishing Co., any edition. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See <em>Mathematica</em>, S.&thinsp;Wolfram, Addison-Wesley Publ.&thinsp;Co.&thinsp;(1991),
+             <a href="http://www.wolfram.com" class="url">http://www.wolfram.com</a>, and <em>Computing with MAPLE</em>, Francis Wright,
+             Chapman &amp; Hall/CRC (2001) <a href="http://www.maplesoft.com" class="url">http://www.maplesoft.com</a>. There are some
+             400 books on MAPLE and at least as many on MATHEMATICA. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-10">A change in any quantity is commonly written using the upper case Greek letter \(\Delta\). <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-9">See “Numerical Integration” (MISN-0-349). <a href="#fnref-9" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p> Note: Problems&nbsp;16-19 are used in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> Starting from the definition of the derivative, derive the
+expression for the derivative of \(y = a x^n\), text <a href="#eqn-B1" class="eqn-ref">Eq.&nbsp;(B1)</a>.</li>
+<li><span class="item-label">2.</span> Again working directly from the definition, find the expression
+which gives the derivative of \(f(x)/g(x)\) in terms of the derivatives of
+\(f(x)\) and \(g(x)\), text <a href="#eqn-B3" class="eqn-ref">Eq.&nbsp;(B3)</a>.</li>
+<li><span class="item-label">3.</span> Use the chain rule, text <a href="#eqn-B4" class="eqn-ref">Eq.&nbsp;(B4)</a>, to determine the derivative of
+\(F(x) = (ax^2+bx+c)^{1/2}\).</li>
+<li><span class="item-label">4.</span> Show that the derivative with respect to \(\theta\) of \(\tan\theta\)
+is \(\sec^2\theta\), given the derivatives of the sine and cosine.</li>
+<li><span class="item-label">5.</span> Given the derivative of \(\ell n\,x\), text <a href="#eqn-B16" class="eqn-ref">Eq.&nbsp;(B16)</a>, determine the
+expression for the derivative of \(e^x\), simplified text <a href="#eqn-B18" class="eqn-ref">Eq.&nbsp;(B18)</a>.</li>
+<li><span class="item-label">6.</span> Evaluate the derivative of \((x^2+7x+2)/(x+2)\) at \(x = 1\).</li>
+<li><span class="item-label">7.</span> Evaluate the derivative of \(e^{5x}(x^2+5x-7)\) at \(x = 0.2\).</li>
+<li><span class="item-label">8.</span> Show that the derivative of \(-\csc(4\theta-1)\) is
+\(4[\csc(4\theta-1)][\cot(4\theta-1)]\), given the derivatives of sine
+and cosine.</li>
+<li><span class="item-label">9.</span> Show that the slope of the function \(y(x) = 2x^3-3x^2+4\)
+at \(x = -1\) is \(+12\).</li>
+<li><span class="item-label">10.</span> For the function in problem&nbsp;9, show that the slope at \(x = 1/3\)
+is \(-4/3\).</li>
+<li><span class="item-label">11.</span> For the function in problem&nbsp;9, show that the locations of the
+maximum and minimum are, respectively, (0,4) and (1,3).
+With the aid of these results, sketch a graph of the function.</li>
+<li><span class="item-label">12.</span> Referring to Appendix&nbsp;B, show that the integral
+<p>\[\int\left[Y(x)\frac{dZ(x)}{dx} + Z(x)\frac{dY(x)}{dx}\right]\;dx\]
+<p>is: \(Y(x)Z(x) + C\).</li>
+<li><span class="item-label">13.</span> Evaluate the integral of \(6 x^2 - 2\) and show that, if at \(x = 2\) the
+integral is to have the value \(10\), then the integral's arbitrary constant is
+determined and the integral is \(2(x^3 - x - 1)\).</li>
+<li><span class="item-label">14.</span> Evaluate this definite integral: \(\int_{-2}^{+2}\;(5x^2+x)\,dx\)&thinsp;.</li>
+<li><span class="item-label">15.</span> A function \(y(x)\) has these properties:
+<ul>
+
+</ul>
+</li>
+<li><span class="item-label">(i)</span> it is zero for all values of \(x\) up to \(x = 5\), at which point it has
+the value \(y = 10\).</li>
+<li><span class="item-label">(ii)</span> from \(x = 5\) to \(x = 20\) the function falls linearly (as a
+straight line) to zero, after which it is zero for all higher values of \(x\).
+
+Sketch the function and evaluate its integral in the interval \(x = 0\) to
+\(x = 50\).
+(Hint: Make use of the geometrical interpretation of the integral.)</li>
+<li><span class="item-label">16.</span> Verify that \(f(t) = A \cos\omega t + B \sin\omega t\) (where \(A\)
+and \(B\) are constant and \(\omega^2 = k/m\)) is a solution of
+<p>\[m \frac{d^2 f(t)}{dt^2} + k f(t) = 0\,,\]
+<p>where \(d^2 f(t)/dt^2\) is the second derivative of \(f(t)\) and \(k\) and \(m\) are
+constants.</li>
+<li><span class="item-label">17.</span> Evaluate the derivative of \((A \cos 5y)\) at \(y = \pi/20\).</li>
+<li><span class="item-label">18.</span> Evaluate this integral: \(\int x^{1/2}\,dx\)&thinsp;.</li>
+<li><span class="item-label">19.</span> For each of the equations below, find the maximum and/or minimum
+points and distinguish between them.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(y(x) = x^2 + x + 10\).</li>
+<li><span class="item-label">b.</span> \(y(x) = x^3 - 3x + 2\).</li>
+<li><span class="item-label">c.</span> Determine \(A\), \(B\) and \(C\) so the function \(y(x) = Ax^3 + B x^2 + C\) will
+have a minimum at \(x = 1/3\).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<ol>
+<li><span class="item-label">3.</span> \(\frac{a x + b/2}{(a x^2 + b x + c)^{1/2}}\)</li>
+<li><span class="item-label">6.</span> 17/9</li>
+<li><span class="item-label">7.</span> -66.33</li>
+<li><span class="item-label">14.</span> 80/3</li>
+<li><span class="item-label">15.</span> 75</li>
+<li><span class="item-label">17.</span> \(-5 A/\sqrt{2}\)</li>
+<li><span class="item-label">18.</span> \((2/3) x^{3/2} + C\)&thinsp;.</li>
+<li><span class="item-label">19.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(\left(-\frac{1}{2}, \frac{39}{4}\right)\), minimum</li>
+<li><span class="item-label">b.</span> \((-1,4)\), maximum; \((1,0)\), minimum</li>
+<li><span class="item-label">c.</span> as long as \(A= - 2B\), the constants can be anything.  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+</li>
+</ol>
+
+<p></section>
+ 
+<p>
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Find the locations of the maximum and minima of the function:
+ 
+ \[y(x) = 5 x^3 - 2 x^2 - 3 x + 2.\]
+ 
+ First, find \(dy/dx\) and set it equal to zero:
+ 
+ \[\frac{dy}{dx}=15x^2-4x-3=0\]
+ 
+ or
+ 
+ \[(5x - 3)(3x + 1) = 0.\]
+ 
+ Solving for the zeros, maxima or minima of the original function occur at:
+ \(x = 3/5; x = -1/3\).
+ The corresponding values of \(y\) are found by inserting those \(x\) values into
+ the original equation, e.g. at \(x = 3/5\):
+ 
+ \[y=5\left(\frac{3}{5}\right)^3 - 2\left(\frac{3}{5}\right)^2 -
+ 3\left(\frac{3}{5}\right) + 2 = \frac{14}{25},\]
+ 
+ while at \(x = -1/3, y = 70/27\).
+ To find whether these points are maxima or minima, calculate the second
+ derivative:
+ 
+ \[\frac{d^2y}{dx^2}=30x-4,\]
+ 
+ so at \(x = 3/5\),
+ 
+ \[30\left(\frac{3}{5}\right)-4=14>0.\]
+ 
+ Thus a minimum occurs at \((3/5,14/25)\).
+ At \(x = -1/3\):
+ 
+ \[30\left(-\frac{1}{3}\right)-4=-14<0\]
+ 
+ so a maximum occurs at \((-1/3,70/27)\).
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The binomial theorem states that
+ 
+ \[(c+d)^p=c^p+pc^{p-1}d+\frac{p(p-1)}{(1)(2)}c^{p-2}d^2
+                +\frac{p(p-1)(p-2)}{(1)(2)(3)} c^{p-3}d^3+\ldots\]
+ 
+ so the expression \(a(x + \Delta x)^p\) becomes
+ \(ax^p+apx^{p-1}\Delta x\,+  \ldots +a\Delta x^p\).
+ After subtracting \(ax^p\) and dividing by \(\Delta x\), the only term that
+ doesn't contain a factor of \(\Delta x\) is \(apx^{p-1}\), so when the limit as
+ \(\Delta x\rightarrow 0\) is taken, this is the  only non-zero term.
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Applying the trigonometric identity for \(\sin A - \sin B\), where
+ \(A = kx + k \Delta x + \delta\) and \(B = kx + \delta\), we obtain:
+ 
+ \[\sin(kx+k\Delta x + \delta) - \sin(kx+\delta)=
+             2\sin\left(\frac{k\Delta x}{2}\right)
+             \cos\left(kx+\delta + \frac{k\Delta x}{2}\right).\]
+ 
+ After dividing this express by \(\Delta x\) and taking the limit as
+ \(\Delta x \rightarrow 0\), we get:
+ 
+ \[\frac{dy(x)}{dx}=\lim_{\Delta x \rightarrow 0}
+        k\left(\frac{\sin\left(\frac{k\Delta x}{2}\right)}
+       {k\frac{\Delta x}{2}}\right)\cos(kx+\delta+\frac{k\Delta x}{2}).\]
+ 
+</div></div>
+
+<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">The symbols used to express the chain rule in Sect.&thinsp;2e are already used in other ways in this problem,
+ so we make the substitutions \(f \rightarrow F\), \(x \rightarrow g\), and then \(t \rightarrow x\)
+ to get an equivalent chain rule:
+ 
+ \[\frac{dF(g(x))}{dx}= \left(\frac{dF}{dg}\right)\left(\frac{dg}{dx}\right)\,.\]
+ 
+ Comparing the left side to the desired derivative, we make the correspondence:
+ 
+ \[g(x) = ax^2 + bx + c, \quad \text{so: } F(g) = g^{1/2}\,.\]
+ 
+ Then the chain rule gives:
+ 
+ \[\frac{dF}{dx} = \left(\frac{1}{2}g^{-1/2}\right) (2ax +b) = \frac{2ax+b}{2(ax^2 +bx+c)^{1/2}}\,.\]
+ 
+ </div></div>
+
+<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">The slope of the function has a zero at \(x = 0\) and another at \(x = -(2B)/(3A)\).
+ The signs of the second derivatives show the first to be a maximum and the second a minimum.
+ So just set \((1/3) = -(2B)/(3A)\).
+</div></div>
+
+<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The slope of the function has a zero at \(x = 0\) and another at \(x = -(2B)/(3A)\).
+ The signs of the second derivatives show the first to be a maximum and the second a minimum.
+ So just set \((1/3) = -(2B)/(3A)\).  There is also help on the idea of a "limit." <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+</div></div>
+
+<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">As an example of the limiting process, we examine a case where the function does not exist
+at the precise end-point of the limiting process, yet the limit exists as one approaches that end-point.
+In particular, we examine the limit of \(y(x) = \sin(x)/x\) as \(x\) approaces zero.
+Note that at \(x = 0\) both the numerator and denominator are zero so the division cannot be performed, so
+the value of \(y(0)\) is undefined.
+Nevertheless, we can calculate \(y(x)\) for any point \(x \neq 0\) and we get in the vicinity of
+\(x = 0\) (notice the truncated vertical axis):
+<p><figure class="fig-centered"><img src="figures/m1gr08.eps.svg" alt="" class="physnet-fig"></figure>
+
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>x</td><td>y(x)</td></tr><tr><td>0.5</td><td>0.9589</td></tr><tr><td>0.4</td><td>0.9735</td></tr><tr><td>0.3</td><td>0.9851</td></tr><tr><td>0.2</td><td>0.9933</td></tr><tr><td>0.1</td><td>0.9983</td></tr></tbody></table>
+</div>
+
+By inspection we see that the limit of \(y(x)\) as \(x \rightarrow 0\) appears to be the value:
+<p>\[\lim_{x\rightarrow0}\,y(x) = 1\,.\]
+<p>Trying this out further, we find that \(y(0.0001) = 0.9999999983...\).
+Using calculus, one can show that <a href="#eqn-AS1" class="eqn-ref">Eq.&nbsp;(AS1)</a> is an exact expression (see
+“Taylor's Polynomial Expansion for Functions,” MISN-0-4).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Verify that \(f(t) = A \cos\omega t + B \sin\omega t\) (where \(A\) and
+\(B\) are constant and \(\omega^2 = k/m\)) is a solution of
+\[m \frac{d^2 f(t)}{dt^2} + k f(t) = 0\]
+
+where \(d^2 f(t)/dt^2\) is the second derivative of \(f(t)\) and \(k\) and \(m\) are
+constants.</li>
+<li><span class="item-label">2.</span> Evaluate the derivative of \((A \cos 5y)\) at \(y = \pi/20\).</li>
+<li><span class="item-label">3.</span> Evaluate this integral: \(\int x^{1/2}\,dx\)&thinsp;.</li>
+<li><span class="item-label">4.</span> For each of the equations below, find the maximum and/or minimum
+points and distinguish between them.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \(y(x) = x^2 + x + 10\).</li>
+<li><span class="item-label">b.</span> \(y(x) = x^3 - 3x + 2\).</li>
+<li><span class="item-label">c.</span> Determine \(A\), \(B\) and \(C\) so the function \(y(x) = Ax^3 + B x^2 + C\) will
+have a minimum at \(x = 1/3\).
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> (A verification).</li>
+<li><span class="item-label">2.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;17.</li>
+<li><span class="item-label">3.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;18.</li>
+<li><span class="item-label">4.</span> See this module's <em>Problem Supplement</em>, problem&nbsp;19.</li>
+</ol>
+
+<p></section>
+

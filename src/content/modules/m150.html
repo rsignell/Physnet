@@ -1,0 +1,484 @@
+<header class="module-header">
+  <h1 class="module-title">Signal Velocity in a Conductor <span class="module-author">(J.Laverdier and P.Signell)</span></h1>
+  <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
+  </div>
+</header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> State Ohm's Law <a href="../m118/" class="module-ref">MISN-0-118</a>.</li><li><strong>2.</strong> State the two node rules for D.C. circuits <a href="../m119/" class="module-ref">MISN-0-119</a>.</li><li><strong>3.</strong> Explain the conduction mechanism in wires <a href="../m118/" class="module-ref">MISN-0-118</a>.</li><li><strong>4.</strong> Calculate the energy stored in the electric field of a capacitor
+    <a href="../m137/" class="module-ref">MISN-0-137</a>.</li><li><strong>5.</strong> Calculate the capacitance per unit length of a coaxial cable
+    <a href="../m135/" class="module-ref">MISN-0-135</a>.</li><li><strong>6.</strong> Calculate the inductance per unit length of a coaxial cable
+    <a href="../m144/" class="module-ref">MISN-0-144</a>.</li><li><strong>7.</strong> Calculate the energy stored in the magnetic field of an inductor
+    <a href="../m144/" class="module-ref">MISN-0-144</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> When a battery becomes connected to one end of a coaxial cable,
+    describe the subsequent traveling current and voltage waves for the cases:
+    (a) proper termination at the far “load” end; (b) proper termination only
+    at the “input” end; and (c) proper termination at neither end.
+    Sketch figures that illustrate the waves.</li><li><strong>K2.</strong> Outline the derivation of expressions for the velocity of
+    transmission of a switch-closing signal along a transmission line and for
+    the line's effective initial resistance, including the case of a coaxial
+    cable (equations need only be named and/or described).
+    State realistic numerical values for the two output quantities.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Given the characteristics of a battery, a coaxial cable, and a
+    proper-termination load resistor, plus equations for the general case and
+    for the capacitance and inductance per unit length along a coaxial cable,
+    determine the values of the voltage and current waves that travel
+    down the cable after the battery is connected to it and determine the speed
+    of the waves.</li></ul></div>
+
+
+</section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>It has been shown experimentally that the drift velocity of the electrons in 
+a typical current in copper wire is a few feet per hour, yet the signal 
+transmission appears to be virtually instantaneous.
+That is, when you talk to someone in San Francisco on the telephone, an
+electron which is activated in the voice coil of your telephone will not
+arrive in the receiver coil in San Francisco until about the year 2450!
+Nevertheless, you notice no such time lag between the end of your words and
+the beginning of the other person's reply.
+How can this be, since it takes moving electrons to power the receiver?
+In this module we explore the physics of a signal traveling down a two-wire
+circuit (a “transmission line”) as an approximate model for
+signal-transmitting circuits in general.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Description</h2>
+
+<p><h3 id="pcap-2-a">2a. Current and Voltage After a Switch Closes</h3>
+
+When an electric field is introduced into a circuit by closing a switch, the 
+mobile charges in all parts of the circuit do not immediately experience the 
+force due to the electric field.
+Consider the simple circuit of <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, where the switch connecting the
+battery to the transmission line has recently been closed.
+In the time since the switch was closed, the battery's voltage (its
+potential difference) has progressed a certain distance along the wires, and
+a current wave has accompanied it.
+We will derive the speed at which the voltage and current values move down
+the transmission line.
+<p><h3 id="pcap-2-b">2b. Voltage-Current Relationship</h3>
+
+As charges in successive parts of the transmission line are influenced by
+the electric field that accompanies the potential difference, those
+charges begin to drift into the adjacent region which had been neutral.
+The introduction of charge drift into new parts of the transmission line
+is represented by the “current front” that moves in step with the
+“voltage front.”
+Note that no signal has yet reached the resistance \(R_L\) and, until it
+does, \(R_L\) has no influence over the voltage and current values proceeding
+toward it.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m150gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Sketch of a simple transmission line.
+Voltmeters and ammeters have their covers: (a) closed; and (b) open at
+a particular time.
+Corresponding charges and electric and magnetic fields
+are in (c), voltage and current waves in (d).</figcaption></figure></div>
+
+<p>
+The current and voltage fronts constitute a signal activated by the closing
+of the switch.
+How are those fronts related and how fast do they move?
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Current-Voltage Relation and Speed</h2>
+
+<p><h3 id="pcap-3-a">3a. Energy Stored in Circuit</h3>
+
+Let \(v_w\) be the speed at which the wave fronts in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> advance.
+Then in time \(dt\) the fronts advance
+<p>\[dx = v_w \,dt\,,\]
+and in that distance \(dx\), an energy \(dE\) must be stored in the transmission
+line capacitance and inductance:
+<p>\[dE = \frac{1}{2} V^2 \,dC + \frac{1}{2} I^2 \,dL.\]
+<p>Here \(dC\) and \(dL\) are the capacitance and inductance in length \(dx\) of the
+transmission line, as shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+If we call \({\cal C}\) the capacitance per unit length and \({\cal L}\) the
+inductance per unit length then \(dC = {\cal C}\,dx\) and \(dL = {\cal L}\,dx\)
+so we get for the increment of energy:
+<p>\[\begin{aligned}dE & = \frac{1}{2} V^2 {\cal C} \,dx + \frac{1}{2} I^2 {\cal L} \,dx \\    & = \frac{1}{2} \left(V^2 {\cal C} + I^2 {\cal L}\right)\,dx.\end{aligned}\]
+
+<p>Note that the inductance energy is stored in the form of a magnetic field,
+shown as circular arrows around the wires in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+The capacitance energy is stored in the form of an electric field between
+the wires' excess charges.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m150gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. An isolated element \(dx\) of the circuit in
+<a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, with resistance ignored.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Energy Produced by Battery</h3>
+
+The power produced by a battery in a D.C. circuit is the battery's voltage
+times the current it is sending out: \(P = VI\) where \(P = dE/dt\).
+Then the energy produced in time interval \(dt\) is:
+<p>\[dE = VI\, dt.\]
+<p><h3 id="pcap-3-c">3c. Derivation of Propagation Velocity</h3>
+
+Equating the energy produced by the battery to the energy stored in the
+circuit gives us the velocity of propagation of the front in terms of the
+voltage and current:
+<p>\[v_w = \frac{2 V I}{V^2 {\cal C} + I^2 {\cal L}}\]
+<p>The current can be eliminated by relating it to the charge sent out by the
+battery in time \(dt\):
+<p>\[dQ = I dt,\]
+<p>which charges the capacitance in \(dx\):
+<p>\[dQ = V dC = V {\cal C} \,dx.\]
+<p>Hence:
+<p>\[I = {\cal C} V v_w,\]
+<p>where \(v_w\) is the wave front velocity.
+Using this to eliminate \(I\) in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, we get the wave front velocity in
+terms of the transmission line characteristics:
+<p>\[v_w = ({\cal L} {\cal C})^{-1/2}.\]
+<p><h3 id="pcap-3-d">3d. Example: Inductance and Capacitance</h3>
+
+Now it remains to find typical values for self-inductance and
+capacitance along a typical transmission line.
+Commonly such lines are in the form of coaxial cables, as illustrated in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+The self inductance per unit length of this type of conductor is
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[{\cal L} = 2 K_m k_m \ln(b/a)\,,\]
+<p>where \(K_m\) is just slightly greater than unity for the insulation found
+in most coaxial cables.
+The capacitance per unit length for a coaxial cable is
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>\[{\cal C} = \frac{K_e}{2 k_e \ln(b/a)}\,,\]
+<p>where \(b\) is the radius of the outside conductor, \(a\) the radius
+of the inner one.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m150gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. A coaxial cable, consisting of flexible
+concentric cylindrical conductors separated by flexible insulating
+material.</figcaption></figure></div>
+
+<p><h3 id="pcap-3-e">3e. Example: Velocity of Propagation</h3>
+
+Combining <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, we can get the wave front
+velocity in terms of common properties of a coaxial cable's dielectric
+insulator:
+<p>\[v_w = \frac{1}{\sqrt{{\cal C} {\cal L}}}
+           = \frac{1}{\sqrt{(k_m/k_e) K_e K_m}}
+           = \frac{c}{\sqrt{K_e K_m}}\,.\]
+<p>The symbols used above are:
+\(K_e\) is the dielectric constant of the insulating medium (1 for vacuum),
+\(K_m\) is the relative magnetic permeability of the insulating medium (1 for
+vacuum),
+\(k_e\) is the electric force constant,
+\(k_m\) is the magnetic force constant, and
+\(c\) is the speed of light.
+We have used the fact that the speed of light in vacuum, \(c\), is related
+to the electric and magnetic force constants by:
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>\[c = \sqrt{\frac{k_e}{k_m}}\,.\]
+<p>Since \(K_m\) and \(K_e\) are each just slightly greater than unity,
+for commonly used dielectrics,  \(v_w\) is then slightly less than the speed
+of light \(c\).
+<p>
+Note that \(v_w\) is independent of the coaxial cable's length and two radii!
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Time Development: Traveling Waves</h2>
+
+<p><h3 id="pcap-4-a">4a. Overview</h3>
+
+As described earlier and as illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, traveling voltage and current waves go
+down the transmission line after the switch is closed.
+These waves reflect off the load and, altered by the load, head back up the line toward the source.
+When they reach the source they are reflected again and, altered by the source, head back down the line.
+The waves generally decrease with each reflection cycle and eventually a steady state is reached where
+the waves are gone and there is only a steady direct (DC) current determined solely by the source
+and load.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><h3 id="pcap-4-b">4b. Deducing the Reflections</h3>
+
+The characteristics of the reflection at either end of our transmission line can be deduced
+by applying Ohm's law to: (1) the incoming traveling voltage and current waves as they approach
+the end in question; (2) the outgoing traveling voltage and current waves after they leave
+the end; (3) the voltage and current values across the end before the waves
+reach it, again at the instant that both the incoming and outgoing traveling waves are at the end, and
+yet again after the outgoing waves have left the end.
+Note that after a traveling wave passes a point, the total voltage and current at
+that point are the values which were at that point before the wave arrived plus the
+traveling wave values.  Thus a positive traveling wave adds to the values at points it
+passes (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
+However, a positive current wave may subtract from the prior value at a point if that value
+represented a current in the opposite direction.
+<p><h3 id="pcap-4-c">4c. Traveling-Wave Effective Resistance</h3>
+
+We define the traveling-wave effective resistance of the line, denoted \(R^{trav}_{eff}\),
+as the ratio of the value of the traveling voltage to the traveling current.
+From <a href="#eqn-5" class="eqn-ref">Eqs.&nbsp;(5)</a> and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, that value is:
+<p>\[R^{trav}_{eff} \equiv \frac{V}{I} = \sqrt{\frac{\cal L}{\cal C}} =
+    59.96\unit{\m{\Omega}}\,\sqrt{\frac{K_m}{K_e}}\,\ln(b/a)\,. \qquad \help{1}\,,\]
+<p>where \(\Omega\) is the symbol for <em>ohms</em>.
+Since the symbolic factors are not greatly different from unity,
+the effective resistance of such a line for traveling waves will not be greatly
+different from 60&nbsp;ohms.  This traveling wave effective resistance is not to be
+confused with the line's direct current resistance, which we have assumed to be zero.
+<p><span class="tryit">Try it:</span> Let us assume a coaxial cable connected to a 60&nbsp;volt battery that has an
+internal resistance of 60&nbsp;ohms.
+Assume the 60&nbsp;ohm value for \(R^{trav}_{eff}\).
+Show that the initial current wave traveling down the line will leave behind it
+0.5&nbsp;ampere through the line (going one direction in one conductor, the other
+direction in the other conductor), and the initial voltage travelling down the line will
+leave behind it 30&nbsp;volts between the two conductors (“across the line”). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-4-d">4d. Reflection at the End</h3>
+
+When a traveling wave reaches the end of the transmission line, the existence of the
+load there, \(R_L\) in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, and the necessity of Coulomb's Law to be obeyed there, causes a
+different-valued wave to head back up the line toward the source end.
+We will label the traveling voltage wave reaching the end \(V^{trav}_{end,in}\) and the
+traveling voltage wave leaving the end \(V^{trav}_{end,out}\).
+Similarly for the traveling current waves, \(I^{trav}_{end,in}\) and \(I^{trav}_{end,out}\).
+The resistance at the end will be labeled \(R_{end}\).
+Then the incoming and outgoing waves are related by:
+<p>\[V^{trav}_{end,out} =
+       \frac{R_{end} - R^{trav}_{eff}}{R_{end} + R^{trav}_{eff}} \; V^{trav}_{end,in}\,.\]
+<p>The ratio of the two waves is called the <em>reflection coefficient</em> and is written \(\Gamma_{end}\):
+<p>\[\Gamma_{end} = \frac{R_{end} - R^{trav}_{eff}}{R_{end} + R^{trav}_{eff}}\,.\]
+<p>Then
+<p>\[V^{trav}_{end,out} = \Gamma_{end}\, V^{trav}_{end,in}\]
+<p>and
+<p>\[I^{trav}_{end,out} = \Gamma_{end} \,I^{trav}_{end,in}\,.\]
+<p>These equations hold for both ends of the transmission line, even though there is an \(\mathcal{EMF}\)
+at one end and not at the other.
+<p><span class="tryit">Try it:</span> Show that for an open-ended line, where nothing connects the two
+conductors at the load end, the reflected wave travels back up the line doubling the
+voltage and canceling the current produced by the initial wave. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><span class="tryit">Try it:</span> Show that for a shorted-end line, where the two wires are connected
+by zero resistance, the reflected wave travels back up the line canceling
+the voltage and doubling the current produced by the initial wave.
+<p><span class="tryit">Try it:</span> Show that for a <em>properly terminated</em> line, where the two wires are connected
+by a resistance equal to the traveling wave effective resistance, there is no reflected
+wave. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><span class="tryit">Try it:</span> Show that when the source resistance is equal to the traveling wave effective resistance,
+there is no reflection at the source end.
+<p><h3 id="pcap-4-e">4e. Proper Termination</h3>
+
+Reflected waves are considered harmful in transmission lines because reflections from
+earlier signals add to, and hence interfere with, later signals.
+Designers try to choose a proper value for the terminating resistance so that such reflections
+do not occur.
+However, if the resistances at the source and terminus are <em>improper</em>,
+reflections and reflections of reflections will continue to travel up and down the line.
+Figure&nbsp;4 shows an example of improper termination at the load end but proper
+termination at the source end.
+Note that the initial wave down the line is a (60&nbsp;volt, 0.50&nbsp;ampere) wave, while the reflected
+wave is a (15&nbsp;volt, 0.25&nbsp;ampere) wave.
+The reflected wave leaves in its wake 45&nbsp;volts and 0.25&nbsp;ampere.
+If the line has proper termination at the source end, there will be no reflection when the wave
+reaches it so the voltage and current values along the cable will then be steady.
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m150gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Reflected voltage and current waves
+for a case where the terminating resistor is larger than the line's
+effective resistance (assumed to be 60&nbsp;ohms).</figcaption></figure></div>
+
+</section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Conclusion and Caveat</h2>
+
+<p><h3 id="pcap-5-a">5a. Checking Against Observation</h3>
+
+The transmission speed, close to the speed of light, checks with the
+observed (or unobserved!) transmission speed of your voice from coast to
+coast.
+In fact, the delay time due to the finite transmission speed is so short
+that you are usually unable to perceive it.
+Many cross-country telephone transmissions now occur through
+ground-to-satellite-to-ground transmission: such transmission is mainly
+through thin air so the speed of transmission is indeed close to \(c\).
+However, the signal may still go from your receiver to the upload
+transmitter by ordinary wires.
+<p><h3 id="pcap-5-b">5b. Resistive Losses Neglected</h3>
+
+Note that in the above derivation we have neglected the small slowing
+effects of resistance, and of periodic signal-boosting circuitry that is
+needed to overcome such attenuation of the signal.  We have also ignored
+the fact that loads and sources generally have inductance and capacitance.
+Finally, we have not considered real communication signals going down
+the transmission line.  All of these effects are dealt with in real-life
+designs.
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Magnetic Inductance”  MISN-0-144, for the derivation of
+this formula. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Electrostatic Capacitance” MISN-0-135, for a further
+discussion of the construction of coaxial cables and a derivation of their
+capacitance per unit length. <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “The Derivation of the Electromagnetic Wave Equation
+from Maxwell's Equations” (MISN-0-210). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Ideal inductors have zero resistance and ideal capacitors have infinite resistance
+in steady DC circuits so it is as though they were no longer in the circuit.  Also, we have assumed
+that there is zero resistance in the line itself. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See, for example, <em>Principles of Radar</em>, By Members of the
+Staff of the Radar School, Massachussetts Institute of Technology, Third Edition
+by J.F.&nbsp;Reintjes and G.T.&nbsp;Coate, McGraw-Hill Book Co., Inc., New York (1952). <a href="#fnref-5" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+
+<p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
+
+<p>Note: Problem&nbsp;1 also occurs in this module's <em>Model Exam</em>.
+<p><ol>
+<li><span class="item-label">1.</span> A coaxial cable has an inner conductor of radius 0.500&thinsp;mm and
+an outer one of radius 5.00&thinsp;mm.
+The insulating material between the conductors is polyethylene so its
+dielectric constant, \(K_e\), is 2.30 (Table 1, MISN-0-135) and its relative
+magnetic susceptibility, \(K_m\), is 1.00 because polyethylene is non-magnetic.
+It is fed by a \(1.20\times10^2\)&thinsp;V battery that has an internal resistance
+of 0.500&nbsp;\(\Omega\).
+At the other end of the cable there is a \(1.00\times10^3\,\Omega\) resistance.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the inductance and capacitance per unit length
+           along the cable.</li>
+<li><span class="item-label">b.</span> Determine the speed of transmission of the signal wave along the
+           cable.</li>
+<li><span class="item-label">c.</span> Determine the effective initial resistance of the cable.</li>
+<li><span class="item-label">d.</span> Determine the heights of the voltage and current waves that go
+           down the cable from battery to resistance.</li>
+<li><span class="item-label">e.</span> Determine the heights of the voltage and current waves that
+           return from the resistance toward the battery.</li>
+<li><span class="item-label">f.</span> Determine the final (steady-state) voltage and current along the
+           cable.
+</li>
+<li><span class="item-label">2.</span> A transmission line has a source with 80&thinsp;volts and an internal resistance of
+80&thinsp;ohms.  The effective resistance of the line for travelling waves is 80&thinsp;ohms and the
+terminating resistance is 160&thinsp;ohms.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the travelling voltage and current that first travels down the line.</li>
+<li><span class="item-label">b.</span> Determine the reflection coefficient at the terminus.</li>
+<li><span class="item-label">c.</span> Determine the travelling voltage and current that travels back toward toe
+source upon reflection of the first wave.</li>
+<li><span class="item-label">d.</span> Determine the voltage and current on the line after the reflected wave has passed.</li>
+<li><span class="item-label">e.</span> Determine the reflection coefficient at the source.</li>
+<li><span class="item-label">f.</span> Check that the answers to part (c) satisfy Ohm's law for the all times beyond when
+the reflected wave reaches the source.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> \({\cal L} = 4.6052 \times 10^{-7}\,\text{H/m} \Rightarrow 0.461\unit{\m{\mu}H/m}\)</li>
+<li>\({\cal C} = 5.5570 \times 10^{-11}\,\text{F/m} \Rightarrow 55.6\,\text{pF/m}\)</li>
+<li><span class="item-label">b.</span> 0.659&thinsp;\(c\)</li>
+<li><span class="item-label">c.</span> \(91.04\,\Omega\, \approx \, 91.0\,\Omega\)</li>
+<li><span class="item-label">d.</span> 119&thinsp;V, 1.31&thinsp;A \qquad  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">e.</span> 99.1&thinsp;V, \(-1.09\)&thinsp;A</li>
+<li><span class="item-label">f.</span> \(218\,\text{V}\), \(0.22\,\text{A}\)
+</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> 40&thinsp;V, 2.0&thinsp;A</li>
+<li><span class="item-label">b.</span> 0.33</li>
+<li><span class="item-label">c.</span> 13.3&thinsp;V, -0.67&thinsp;A</li>
+<li><span class="item-label">d.</span> 53.3&thinsp;V, 1.33&thinsp;A</li>
+<li><span class="item-label">e.</span> zero</li>
+<li><span class="item-label">f.</span> (check it)
+</li>
+</ol>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
+
+<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+ Using values on Appendix page A6-1 of <em>Introductory Physics for
+ Engineers and Scientists, Vol. 2</em> (Haydn-McNeil Publishing,
+ Plymouth, MI, 1997):
+ 
+ \[2\sqrt{k_e k_m} = 59.96\frac{\,\text{N m}}{\,\text{s}\unit{A^{2}}}
+                        = 59.96 \unit{\m{\Omega}}\]
+ 
+ and note that \(\ln(b/a)\) will be 1 if \(b/a\) is 2.73.
+</div></div>
+
+<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+ This is just a case of two resistors dividing a voltage produced
+ by the internal source in a battery (one of the two resistors is
+ the internal resistance of the battery).
+</div></div>
+
+<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+A gap has an infinite resistance in vacuum and almost so in air.
+As the resistance is raised yoward infinity, the ratio of the numerator to
+denominator in \(\Gamma\) approaches unity (1.00).
+</div></div>
+
+<p></section>
+
+
+<hr class="section-divider">
+
+
+<p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
+
+<p>\[k_e = c^2 k_m\]
+<p>\[\frac{V}{I} = \sqrt{\frac{L}{C}}; \qquad
+       v_w = \frac{1}{\sqrt{{\cal C} {\cal L}}}\]
+<p>\[\text{coax:} \qquad {\cal L} = 2 K_m k_m \ln(b/a); \qquad
+                   {\cal C} = \frac{K_e}{2 k_e \ln(b/a)}\]
+<p><ol>
+<li><span class="item-label">1.</span> See Output Skills K1-K2 in this module's <em>ID Sheet</em>.
+The actual exam may contain either or both of these skills, or neither.</li>
+<li><span class="item-label">2.</span> A coaxial cable has an inner conductor of radius 0.500&thinsp;mm and
+an outer one of radius 5.00&thinsp;mm.
+The insulating material between the conductors is polyethylene so its
+dielectric constant, \(K_e\), is 2.30 (Table 1, MISN-0-135) and its relative
+magnetic susceptibility, \(K_m\), is 1.00 because polyethylene is non-magnetic.
+It is fed by a \(1.20\times10^2\)&thinsp;V battery with an internal resistance of
+0.50&nbsp;\(\Omega\).
+At the other end of the cable there is a \(1.00\times10^3\,\Omega\) resistance.
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> Determine the speed of transmission of the signal wave along the
+cable.</li>
+<li><span class="item-label">b.</span> Determine the effective initial resistance of the cable.</li>
+<li><span class="item-label">c.</span> Determine the heights of the voltage and current waves that go
+down the cable from battery to resistance.</li>
+<li><span class="item-label">d.</span> Determine the heights of the voltage and current waves that
+return from the resistance toward the battery.</li>
+<li><span class="item-label">e.</span> Determine the final (steady-state) voltage and current along the
+cable.
+</li>
+</ol>
+
+<p><h4 class="brief-ans">Brief Answers</h4>
+
+<p><ol>
+<li><span class="item-label">1.</span> See this module's <em>text</em>.</li>
+<li><span class="item-label">2.</span> See problem&nbsp;1 in this module's <em>Problem Supplement</em>.</li>
+</ol>
+
+<p></section>
+
