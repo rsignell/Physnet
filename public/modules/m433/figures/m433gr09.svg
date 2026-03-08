@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   xml:space="preserve"
+   width="76"
+   height="180"
+   viewBox="0 0 76 180"
+   sodipodi:docname="m433gr09.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs6" /><sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" /><g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="ink_ext_XXXXXX"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,180)"><g
+       id="g10"
+       transform="scale(0.1)"><path
+         d="M 10,680 H 190.063 V 5.35938 L 10,5.35938 V 680"
+         style="fill:#d3d2d2;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path12" /><path
+         d="M 10,680 H 190.063 V 5.35938 l -180.063,0 z"
+         style="fill:none;stroke:#231f20;stroke-width:2.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path14" /><path
+         d="m 145.359,1131.44 h 179.996 c 61.922,0 66.243,90 0,90 H 145.359 m 225.36,-44.64 h 179.996"
+         style="fill:none;stroke:#231f20;stroke-width:20.16;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path16" /><g
+         id="g18"
+         transform="scale(10)"><text
+           transform="matrix(1,0,0,-1,10,126.536)"
+           style="font-variant:normal;font-weight:normal;font-size:9.9999px;font-family:Swis721LtCnBT;-inkscape-font-specification:Swis721LtCnBT;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text22"><tspan
+             x="0 3.303906 8.0648432 12.82539 15.387499 20.148438 26.428514 29.273827 34.092968 37.396873"
+             y="0"
+             sodipodi:role="line"
+             id="tspan20">tuningfork</tspan></text></g><path
+         d="M 190,1040 V 5.94531 H 10.0039 V 1040"
+         style="fill:none;stroke:#231f20;stroke-width:10.08;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path24" /></g></g></svg>

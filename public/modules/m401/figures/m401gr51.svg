@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   xml:space="preserve"
+   width="333.33334"
+   height="93.333336"
+   viewBox="0 0 333.33334 93.333336"
+   sodipodi:docname="m401gr51.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs6" /><sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" /><g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="ink_ext_XXXXXX"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,93.333333)"><g
+       id="g10"
+       transform="scale(0.1)"><path
+         d="M 220,120.719 H 1794.64 M 220,120.719 1569.28,660"
+         style="fill:none;stroke:#231f20;stroke-width:5.04;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path12" /><path
+         d="M 1570,660.719 1794.82,120.656"
+         style="fill:none;stroke:#231f20;stroke-width:5.0003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path14" /><path
+         d="m 1487.2,624.719 36.18,-82.406 82.41,36.175"
+         style="fill:none;stroke:#231f20;stroke-width:2.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path16" /><g
+         id="g18"
+         transform="scale(10)"><text
+           transform="matrix(1,0,0,-1,13,7.60781)"
+           style="font-variant:normal;font-weight:normal;font-size:9.9999px;font-family:Swis721LtCnBT;-inkscape-font-specification:Swis721LtCnBT;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text30"><tspan
+             x="0 171.00029"
+             y="0"
+             sodipodi:role="line"
+             id="tspan20">AB</tspan><tspan
+             x="148.536"
+             y="-54"
+             id="tspan22">C</tspan><tspan
+             x="162.00011 167.18291 170.03564 176.76141 181.51414"
+             y="-27"
+             sodipodi:role="line"
+             id="tspan24">0.5cm</tspan><tspan
+             x="76.536003 81.718811 84.571548 91.297722 96.050453"
+             y="6.552"
+             sodipodi:role="line"
+             id="tspan26">1.3cm</tspan><tspan
+             x="212.90401 218.46689 225.94463 232.54893"
+             y="-18"
+             sodipodi:role="line"
+             id="tspan28">AC=?</tspan></text></g><path
+         d="m 2269.12,346.082 h 90"
+         style="fill:none;stroke:#231f20;stroke-width:5.04;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.6131;stroke-dasharray:none;stroke-opacity:1"
+         id="path32" /></g></g></svg>
