@@ -1,0 +1,353 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Definition of Uncertainty</h2>
+
+<p>Heisenberg's Uncertainty Relation is often stated
+<p><sup class="fn-ref"><a href="#fn-See \Quote{The Uncertainty Relations} (MISN-0-241)." id="fnref-See \Quote{The Uncertainty Relations} (MISN-0-241).">See \Quote{The Uncertainty Relations} (MISN-0-241).</a></sup>as:
+<p><div class="eqn-block" id="eqn-1">\[\Delta x \cdot \Delta p \ge \fract{\hbar}{2}.\]</div>
+
+<p><figure class="fig-centered"><img src="figures/m243gr01.svg" alt="" class="physnet-fig"><figcaption>Fig.&thinsp;1. A possible probability density.</figcaption></figure>
+
+<p>Since the lower limit of this uncertainty product has a precise value,
+the uncertainties in position and momentum, \(\Delta x\) and \(\Delta p\), must
+have correspondingly precise definitions.
+How would one precisely define, say, the uncertainty in the position of an
+atom in a diatomic molecule or of an electron in an atom?
+Any such specification must begin with a precise knowledge of the spatial
+probability distribution \(P(x)\) for the particle being considered.
+Suppose we have the probability distribution \(P(x) = |\psi (x)|^2\) shown
+in Fig.&thinsp;1.
+The “position” of this particle can be reasonably stated
+<p><span class="tex-unknown" title="unknown macro">\footnotemark</span>[1]
+<p>as:
+<p><div class="eqn-block" id="eqn-2">\[{\rm \Quote{position}\;} = \bar{x} \pm \Delta x,\]</div>
+
+<p>where \(\bar{x}\) is the particle's mean position.
+<p>One meaning one might try to ascribe to Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>2) is that if one
+determines the position of the particle a large number of times, it will be
+found to be within the limits in Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>2) in 50% of the
+<p>determinations.
+We would say “it is within those limits 50% of the time.”
+<p>However, it has been found that in order to be able to derive and state a
+<p>universal lower limit to the uncertainty product shown in Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>1),
+one needs a different kind of specification of uncertainty.
+The one used to derive the limit shown in Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>1) is that of
+<p>“root-mean-square (RMS) deviation from the mean”:
+<p>\[\Delta x = \sqrt{ \overline{(x - \bar{x})^2}\ }.\]
+
+<p><span class="tryit">Try it:</span>  Identify each piece of the above quote with an ever deeper part of
+the expression on the right hand side of the equation.
+<p>The next task is to see how to compute \(\bar{x}\) and
+\(\overline{(x - \bar{x})^2}\) from the probability density \(P(x)\).
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Quantum Mechanical Mean Values</h2>
+
+<p><h3 id="pcap-2-a">2a. Definition of Mean Value</h3>
+
+For a set of \(N\) identical objects located at positions \(x_n\) (\(n = 1\),
+2, \ldots , \(m\)) the mean value of, say, \(x^4\) for these objects would be
+(Appendix A):
+<p>\[\overline{x^4} = \sum_{n=1}^{m} x^4 P(x_n)\,.\]
+
+<p>where \(P(x_n)\) is the fraction of the objects located at \(x_n\) and the bar
+over \(x\) indicates its mean value.
+Equally, \(P(x_n)\) is the probability that any one specific object is located
+at \(x_n\).
+In general, the mean value of a function \(f(x)\) is then (Appendix A):
+<p>\[\overline{f(x)} = \sum_{n=1}^{m} f(x_n) P(x_n).\]
+
+<p>Generalizing to a continuum of locations \(x\),
+<p><div class="eqn-block" id="eqn-3">\[\overline{f(x)} = \int_{-\infty}^{+\infty} f(x) P(x)\, dx,\]</div>
+
+<p>where \(P(x)\) is now the  probability density at the point \(x\).
+This mean value equation is used throughout statistical physics.
+<p><sup class="fn-ref"><a href="#fn-See, for example, \Quote{Energy Distribution Functions} (MISN1-0-159)." id="fnref-See, for example, \Quote{Energy Distribution Functions} (MISN1-0-159).">See, for example, \Quote{Energy Distribution Functions} (MISN1-0-159).</a></sup><h3 id="pcap-2-b">2b. Mean Value and Probability Density in Quantum Physics</h3>
+
+For quantum physics, the mean position of an object described by the wave
+function \(\psi (x)\) is:
+<p>\[\bar{x} = \int_{-\infty}^{+\infty} x P(x)\, dx =
+                 \int_{-\infty}^{+\infty} x |\psi(x)|^2\, dx,\]
+
+<p>since the quantum mechanical probability density
+<p><sup class="fn-ref"><a href="#fn-ln \Quote{Numerical Solution of the Schrodinger Equation for the
+Hydrogen Atom} (MISN-0-245), quantization of energy is seen to be due to
+the requirement that the probability of finding the hydrogen atom's electron
+somewhere in space is unity." id="fnref-ln \Quote{Numerical Solution of the Schrodinger Equation for the
+Hydrogen Atom} (MISN-0-245), quantization of energy is seen to be due to
+the requirement that the probability of finding the hydrogen atom's electron
+somewhere in space is unity.">ln \Quote{Numerical Solution of the Schrodinger Equation for the
+Hydrogen Atom} (MISN-0-245), quantization of energy is seen to be due to
+the requirement that the probability of finding the hydrogen atom's electron
+somewhere in space is unity.</a></sup>is \(|\psi|^2\).
+Thus, given any \(\psi(x)\) representing the state of a particle, we can
+perform the above integral and obtain the mean value of the particle's
+position.
+<p><sup class="fn-ref"><a href="#fn-ln \Quote{The Time-Dependent Schr\"{o}dinger Equation: Derivation of
+Newton's Second Law} (MISN-0-248), it is found that Newton's Second Law is
+exactly valid only for free particles, particles experiencing constant
+forces, and Simple Harmonic Oscillators." id="fnref-ln \Quote{The Time-Dependent Schr\"{o}dinger Equation: Derivation of
+Newton's Second Law} (MISN-0-248), it is found that Newton's Second Law is
+exactly valid only for free particles, particles experiencing constant
+forces, and Simple Harmonic Oscillators.">ln \Quote{The Time-Dependent Schr\"{o}dinger Equation: Derivation of
+Newton's Second Law} (MISN-0-248), it is found that Newton's Second Law is
+exactly valid only for free particles, particles experiencing constant
+forces, and Simple Harmonic Oscillators.</a></sup>Similarly, the particle's mean square position can be calculated from its
+wave function:
+<p>\[\overline{x^2} = \int_{-\infty}^{+\infty} x^2 P(x)\, dx =
+                 \int_{-\infty}^{+\infty} x^2 |\psi(x)|^2\, dx,\]
+
+<p>For example, one can straightforwardly find that the mean square position
+for the ground state of a simple harmonic oscillator is (Appendix B):
+<p>\[\overline{x^2} = \int_{-\infty}^{+\infty} x^2
+     \left( a^{1/4} \pi^{-1/4} e^{-ax^2/2} \right)^2\;dx = \fract{1}{2a}\,,\]
+
+<p>where the harmonic oscillator parameters are related to \(a\) by:
+<p>\[a = \sqrt{k m}/\hbar.\]
+
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The General Rule for Mean Values</h2>
+
+<p><h3 id="pcap-3-a">3a. Mean Value of Momentum</h3>
+
+In the preceding section we obtained the rule for computing mean values of
+functions of the coordinate parameter \(x\):
+<p>\[\overline{f(x)} = \int_{-\infty}^{+\infty} f(x) |\psi(x)|^2\, dx.\]
+
+<p>Suppose, however, that we wish to find the mean value of a function of
+momentum.
+The problem that arises can be illustrated with the momentum itself.
+Suppose we were to try:
+<p><div class="eqn-block" id="eqn-4">\[\bar{p} ={\rm?} \int_{-\infty}^{+\infty} p\, |\psi(x)|^2\, dx.\]</div>
+
+<p>Replacing \(p\) by its  derivative operator
+<p><sup class="fn-ref"><a href="#fn-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)." id="fnref-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242).">See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242).</a></sup>and then taking the complex conjugate of the entire equation, one finds:
+[S-1]
+<p><sup class="fn-ref"><a href="#fn-See this module's Special Assistance Supplement." id="fnref-See this module's Special Assistance Supplement.">See this module's Special Assistance Supplement.</a></sup>\[\bar{p}^* = - \bar{p} \hs ({\rm assuming\;equation\;(\eqnno{4})},\]
+
+<p>which means that the mean momentum of any object is an imaginary number.
+<p>This is ridiculous so Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>4) is ruled out.
+The rule that works is:
+<p>\[\bar{p} = \int_{-\infty}^{+\infty} \psi^*(x)\;p\;\psi(x)\, dx =
+
+ \int_{-\infty}^{+\infty} \psi^*(x)\,\left( -i\hbar\fract{d}{dx} \right)
+                 \psi(x)\, dx.\]
+
+<p>After an integration by parts, one finds that the mean momentum is now a
+real number with the restriction that: [S-2]
+<p>\[|\psi(+\infty)|^2 = |\psi(-\infty)|^2.\]
+
+<p>This condition turns out to be obeyed for those wave functions that are of
+practical use.
+<p><h3 id="pcap-3-b">3b. Mean Value of Functions of Position and Momentum</h3>
+
+The general rule, then, is to sandwich a function between  * and   in order
+to find its mean value:
+<p><div class="eqn-block" id="eqn-5">\[\overline{f(x,p)} = \int_{-\infty}^{+\infty} \psi^*(x)\;
+            f\left( x,\;-i\hbar\fract{d}{dx} \right) \;\psi(x)\, dx.\]</div>
+
+<p>For example, one can straightforwardly find the mean square momentum for
+the ground state of the simple harmonic oscillator: [S-3]
+<p>\[\overline{p^2} = \fract{\hbar^2 a}{2} \hs {\rm (SHO,\;ground\;state)}.\]
+
+<p></section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Mean Values and Rms Deviations</h2>
+
+<p><h3 id="pcap-4-a">4a. Uncertainty in Position</h3>
+
+The quantum mechanical uncertainty in position, \(\Delta x\), is defined to be
+the root-mean-square (RMS) deviation from the mean position:
+<p>\[\Delta x \equiv \sqrt{\ \overline{(x - \bar{x})^2}\ }\,.\]
+
+<p>Carrying out the square and using the mean value equation, Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>3):
+<p>\[(\Delta x)^2 =
+
+  \int_{-\infty}^{+\infty} (x^2 - 2x\bar{x} + \bar{x}^2)\,P(x)\,dx =
+\overline{x^2} - 2 \bar{x}^2 + \bar{x}^2 = \overline{x^2} -\bar{x}^2.\]
+
+<p>Then:
+<p>\[\Delta x = \sqrt{\overline{x^2} - \bar{x}^2}\,.\]
+
+<p><h3 id="pcap-4-b">4b. Uncertainty in Momentum</h3>
+
+Similarly, the RMS uncertainty in momentum is:
+<p>\[\Delta p =
+          \sqrt{\overline{(p - \bar{p})^2}} = \sqrt{\overline{p^2} - \bar{p}^2}.\]
+
+<p>Is the mean of a sum equal to the sum of the means?
+Is the mean of a product or quotient equal to the product or quotient of
+the means?
+Does this answer depend on whether all factors but one are constant?
+<p></section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. The SHO Uncertainty Product</h2>
+
+<p><h3 id="pcap-5-a">5a. Mean Position for the Harmonic Oscillator</h3>
+
+We will illustrate the calculation of uncertainties with the ground state
+of a simple harmonic oscillator (SHO).
+The SH0 is an interesting case because, for example, the atoms in diatomic
+molecules exhibit radial harmonic oscillations about the molecular center
+of mass for small displacements from equilibrium.
+The SHO ground state wave function is:
+<p><sup class="fn-ref"><a href="#fn-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)." id="fnref-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242).">See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242).</a></sup><div class="eqn-block" id="eqn-6">\[\psi(x) = (a/\pi)^{1/4} e^{-a x^2/2}, \hs a \equiv \sqrt{k m}/\hbar.\]</div>
+
+<p>where the potential and total energies are:
+<p>\[V(x) = \fract{1}{2} k x^2; \hs E_0 = \fract{\hbar^2 a}{2 m} =
+            \fract{\hbar}{2}\sqrt{k/m}.\]
+
+<p>Here \(\psi(x)\) has been normalized to unit probability of finding the
+oscillator somewhere in all of space:
+<p>\[1 = \int_{-\infty}^{+\infty} P(x)\, dx =
+              \int_{-\infty}^{+\infty} |\psi(x)|^2\, dx.\]
+
+<p>Since our wave function is symmetrical about the origin, the mean position
+is zero [S-4]:
+<p>\[\bar{x} = \int_{-\infty}^{+\infty} x \,|\psi(x)|^2\, dx =
+ \sqrt{a/\pi} \int_{-\infty}^{+\infty} x e^{-a x^2}\,dx = 0.\]
+
+<p>One can immediately see that the integral is zero by noting that the
+integrand is antisymmetrical about the origin while the limits are
+symmetrical.
+<p><h3 id="pcap-5-b">5b. Mean Square Position and Momentum</h3>
+
+The mean square position is not zero and can be directly found by integration
+(Appendix B):
+<p>\[\overline{x^2} = \fract{1}{2 a},\]
+
+<p>and so the position uncertainty is:
+<p>\[\Delta x = 1/\sqrt{2a}.\]
+
+<p>The square of the momentum is given by:
+<p>\[p^2 \psi = 2m [E - V(x)] \psi = \hbar^2 (a - a^2 x^2) \psi .\]
+
+<p>The mean square momentum follows immediately:
+<p>\[\overline{p^2} = \hbar^2 a / 2.\]
+
+<p>Since the mean momentum is zero [S-5], the uncertainty in momentum is [S-6]:
+<p>\[\Delta p =  \hbar \sqrt{a/2}.\]
+
+<p><h3 id="pcap-5-c">5c. Product of Uncertainties in Position and Momentum</h3>
+
+The product of the uncertainties in position and momentum for the ground
+state of the SHO turns out to be the minimum allowed by the Uncertainty
+Relation!
+<p><sup class="fn-ref"><a href="#fn-See \Quote{The Uncertainty Relations} (MISN-0-241)." id="fnref-See \Quote{The Uncertainty Relations} (MISN-0-241).">See \Quote{The Uncertainty Relations} (MISN-0-241).</a></sup></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Mean Values</h2>
+
+<p>Let \(N(x_n)\) represent the numbers of objects at various positions \(x_n\).
+The mean (average) value of \(x^4\) for those objects is:
+<p>\[\overline{x^4} = \fract{1}{N} \sum_{n=1}^{m} x^4 N(x_n),\]
+
+<p>where the \(N\) objects are distributed among \(m\) positions.
+The fraction \(F(x_n)\) of the \(N\) objects which are located at \(x_n\) is:
+<p>\[F(x_n) = \fract{N(x_n)}{N}.\]
+
+<p>We can rewrite the mean value in terms of this fraction:
+<p>\[x = \overline{x^4} = \sum_{n=1}^{m} x^4 F(x_n),\]
+
+<p>However, the fraction of the objects at \(x_n\) can be reinterpreted as the
+probability \(P(x_n)\) that any one of them is there:
+<p>\[F(x_n) = P(x_n),\]
+
+<p>and hence:
+<p>\[\overline{x^4} = \sum_{n=1}^{m} x^4 P(x_n),\]
+
+<p>For a continuum of locations \(x\):
+<p>\[\overline{x^4} = \int_{-\infty}^{+\infty} x^4 P(x)\, dx.\]
+
+<p>where \(P(x)\) is now a probability density, not the probability of \(x\).
+Note that just as the sum of all fractions of the whole is unity, so also
+the probability of finding one object somewhere is unity:
+<p>\[1 = \sum_{n=1}^{m} F(x_n) = \sum_{n=1}^{m} P(x_n) = 1,\]
+
+<p>or:
+<p>\[1 = \int_{-\infty}^{+\infty} P(x)\, dx.\]
+
+<p></section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Solving Gaussian Integrals</h2>
+
+<p>The function \(e^{-ax^2}\) is-called a  Gaussian function.
+It is frequently met in physics and in statistics so the method of solution
+of its integral is worthwhile knowing.
+<p><span class="tex-unknown" title="unknown macro">\boxed</span>Method 1
+Find the appropriate form in a Table of Integrals.
+<p><sup class="fn-ref"><a href="#fn-We recommend that you own a table of integrals, such as that above, or:
+{\it Table of Integrals, Series and Products}, I.\,S.\,Gradshteyn and
+I.\,M.\,Ryzhik, Academic Press, New York and London (1965); or
+{\it Mathematical Tables from the Handbook of Chemistry and Physics},
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates)." id="fnref-We recommend that you own a table of integrals, such as that above, or:
+{\it Table of Integrals, Series and Products}, I.\,S.\,Gradshteyn and
+I.\,M.\,Ryzhik, Academic Press, New York and London (1965); or
+{\it Mathematical Tables from the Handbook of Chemistry and Physics},
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates).">We recommend that you own a table of integrals, such as that above, or:
+{\it Table of Integrals, Series and Products}, I.\,S.\,Gradshteyn and
+I.\,M.\,Ryzhik, Academic Press, New York and London (1965); or
+{\it Mathematical Tables from the Handbook of Chemistry and Physics},
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates).</a></sup>For example, in  A Short Table of Integrals, B.&thinsp;O.&thinsp;Peirce, Ginn &amp; Co.
+(Xerox Corporation), Boston (1929), one finds on page 63:
+<p><span class="tex-unknown" title="unknown macro">\UnframedEpsFigure</span>m243gr02
+<p>Hence:
+<p>\[\overline{x^2} =
+               \sqrt{a/\pi} \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx.\]
+
+<p>Because the integrand is symmetric, this can be written:
+<p>\[\overline{x^2} = \sqrt{a/\pi} 2 \int_0^{+\infty} x^2 e^{-a x^2}\,dx.\]
+
+<p>Now by No.&thinsp;494 in Peirce's book this becomes:
+<p>\[\overline{x^2} =
+           \sqrt{a/\pi}\; 2\, \fract{1}{4a} \sqrt{\pi/a} = \fract{1}{2a}.\]
+
+<p><span class="tex-unknown" title="unknown macro">\boxed</span>Method 2
+<p>\[\begin{aligned}\int_{-\infty}^{+\infty} e^{-a x^2}\,dx & = 
+         \sqrt{\int_{-\infty}^{+\infty} e^{-ax^2}\,dx\;
+               \int_{-\infty}^{+\infty} e^{-ay^2}\,dy} \\
+ & = \sqrt{\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}
+                                         e^{-a(x^2+y^2)}\,dx\,dy} \\
+ & = \sqrt{\int_0^{+\infty} e^{-ar^2}\,2\pi r\,dr}\,. \\\end{aligned}\]
+
+<p>where the planar area integration has been re-expressed in polar coordinates.
+Now let \(z \equiv r^2\) so that \(dz = 2rdr\):
+<p>\[\int_{-\infty}^{+\infty} e^{-a x^2}\,dx = 
+         \sqrt{\pi \int_0^{+\infty} e^{-az}\,dz} = \sqrt{\pi/a}.\]
+
+<p>\[\begin{aligned}\overline{x^2} & = \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx \\
+               & = -\fract{d}{da} \int_{-\infty}^{+\infty} e^{-a x^2}\,dx \\
+               & = -\fract{d}{da} \sqrt{\pi/a} = \fract{1}{2a} \sqrt{\pi/a}\,.\\\end{aligned}\]
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-See \Quote{The Uncertainty Relations} (MISN-0-241)."> <a href="#fnref-See \Quote{The Uncertainty Relations} (MISN-0-241)." class="fn-back">↩</a></li><li id="fn-See, for example, \Quote{Energy Distribution Functions} (MISN1-0-159)."> <a href="#fnref-See, for example, \Quote{Energy Distribution Functions} (MISN1-0-159)." class="fn-back">↩</a></li><li id="fn-ln \Quote{Numerical Solution of the Schrodinger Equation for the
+Hydrogen Atom} (MISN-0-245), quantization of energy is seen to be due to
+the requirement that the probability of finding the hydrogen atom's electron
+somewhere in space is unity."> <a href="#fnref-ln \Quote{Numerical Solution of the Schrodinger Equation for the
+Hydrogen Atom} (MISN-0-245), quantization of energy is seen to be due to
+the requirement that the probability of finding the hydrogen atom's electron
+somewhere in space is unity." class="fn-back">↩</a></li><li id="fn-ln \Quote{The Time-Dependent Schr\"{o}dinger Equation: Derivation of
+Newton's Second Law} (MISN-0-248), it is found that Newton's Second Law is
+exactly valid only for free particles, particles experiencing constant
+forces, and Simple Harmonic Oscillators."> <a href="#fnref-ln \Quote{The Time-Dependent Schr\"{o}dinger Equation: Derivation of
+Newton's Second Law} (MISN-0-248), it is found that Newton's Second Law is
+exactly valid only for free particles, particles experiencing constant
+forces, and Simple Harmonic Oscillators." class="fn-back">↩</a></li><li id="fn-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)."> <a href="#fnref-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)." class="fn-back">↩</a></li><li id="fn-See this module's Special Assistance Supplement."> <a href="#fnref-See this module's Special Assistance Supplement." class="fn-back">↩</a></li><li id="fn-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)."> <a href="#fnref-See \Quote{The Schrodinger Equation in One Dimension} (MISN-0-242)." class="fn-back">↩</a></li><li id="fn-See \Quote{The Uncertainty Relations} (MISN-0-241)."> <a href="#fnref-See \Quote{The Uncertainty Relations} (MISN-0-241)." class="fn-back">↩</a></li><li id="fn-We recommend that you own a table of integrals, such as that above, or:
+{\it Table of Integrals, Series and Products}, I.\,S.\,Gradshteyn and
+I.\,M.\,Ryzhik, Academic Press, New York and London (1965); or
+{\it Mathematical Tables from the Handbook of Chemistry and Physics},
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates)."> <a href="#fnref-We recommend that you own a table of integrals, such as that above, or:
+{\it Table of Integrals, Series and Products}, I.\,S.\,Gradshteyn and
+I.\,M.\,Ryzhik, Academic Press, New York and London (1965); or
+{\it Mathematical Tables from the Handbook of Chemistry and Physics},
+Charles Hougman, Chemical Rubber Publishing Co. (1931 and later dates)." class="fn-back">↩</a></li></ol></aside>

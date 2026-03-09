@@ -1,0 +1,147 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Description of Changes</h2>
+
+<p>Consider two quantities \(t\) and \(x\) which are related so that
+\(x\) is a function depending on the independent variable \(t\). Then any
+change in the quantity \(t\) is accompanied by a corresponding change in
+the quantity \(x\), as illustrated in the graph of <span class="fig-ref">Fig.&nbsp;A1</span>. (For example,
+the relationship between \(t\) and \(x\) might specify how the distance
+\(x\) traveled by a car varies with the time \(t\), or how the temperature \(x\)
+of the air varies with the height \(t\) above sea level.)
+<p>Suppose that we are interested in how \(x\) varies with \(t\) near some
+particular value \(t\) . When \(t = t_0\), the function \(x\) has some
+corresponding value \(x_0\) . For purposes of comparison, let us consider some
+changed value \(t_c\) of \(t\) where \(x\) has some corresponding value \(x_c\). The
+“change” of the quantity \(t\) is then conventionally denoted by the
+symbol \(\Index{delta}\Delta t\) and is defined as the
+difference:
+<p><div class="display-eqn" id="eqn-A1">\[\Delta t = t_c - t_0\]</div>
+
+<p>(i.e., as the changed value minus the original value of \(t\)).*
+<p><div class="advice-box">*  The symbol \(\Delta t\) is to be regarded as a <em>single</em> 
+algebraic symbol in which the capital Greek Letter \(\Delta\) (“delta”) is
+supposed to designate a difference.</div>
+
+<p>Similarly, the corresponding change of the quantity \(x\) is denoted by 
+\(\Delta x\) and defined as
+<p><div class="display-eqn" id="eqn-A2">\[\Delta x = x_c - x_0\]</div>
+
+<p>Note that each of the changes \(\Delta t\) or \(\Delta x\) may be positive,
+negative, or zero (depending on whether the changed value is larger than,
+smaller than, or equal to the original value).
+<p><figure id="fig-A1" class="module-figure module-figure-left"><img src="../../modules/m404/m404gr01.svg" alt="Figure A1"><figcaption><strong>Fig.&nbsp;A1.</strong> Comparison between the
+change \(\Delta t\) of a variable \(t\) and the corresponding change
+\(\Delta x\) of the function \(x\).</figcaption></figure>
+
+<p><h3 id="ss-"></h3>
+[]General Properties of Changes
+A quantity \(x\) may be functionally related to one or more other
+quantities, such as \(u\) or \(w\). (For example, \(u\) might be \(5 t\) and \(w\)
+might be \(2 t^2\), or \(u\) and \(w\) might be unrelated to each other). How then
+does \(x\) change when the other quantities are changed?
+<p>Suppose that \(x\) is merely a constant multiple of some other
+quantity \(u\) so that
+<p>\[x = C u\]
+
+<p>where \(C\) is some constant (i.e., a quantity which remains unchanged in
+a given situation). What then is the change in \(x\) produced by some
+specified change in \(u\)? Consider some original value \(u\) where \(x = x_0\)
+and some changed value \(u_c\) where \(x = x_c\). Then the corresponding change
+in \(x\) is
+<p>\[\Delta x = x_c - x_0 = Cu_c - Cu_0 = C(u_c - u_0) =
+                               C \Delta u\,.\]
+
+<p>Thus,
+<p><div class="display-eqn" id="eqn-A3">\[\text{if } x = C u\text{, then }  \Delta x = C \Delta u\,.\]</div>
+
+<p>This conclusion can be stated in words:
+<p><hr>
+A4The change in a constant multiple of a quantity is
+equal to the multiple of the corresponding change of this quantity.
+<p>(For example, when prices change, the change in the cost of
+5&thinsp;apples is 5&thinsp;times as large as the change in the cost of one apple.)
+<p>As another simple case, suppose that a quantity \(x\) is equal to
+the sum of two other quantities \(u\) and \(w\) so that
+<p>\[x = u + w\,.\]
+
+<p>What change in \(x\) is then produced by specified changes in the quantities
+\(u\) and \(w\)? Consider some original values \(u_0\) and \(w_0\) of these
+quantities, and some changed values \(u_c\) and \(w_c\). Then the corresponding
+change in \(x\) is
+<p>\[\Delta x = x_c - x_0 = (u_c + w_c) - (u_0 + w_0) = 
+(u_c - u_0) + (w_c - w_0)\,.\]
+
+<p>Thus,            
+<p><div class="display-eqn" id="eqn-A5">\[\text{if } x = u + w\text{, then } \Delta x = \Delta u + \Delta w\,.\]</div>
+
+<p>This conclusion can be stated in words:
+<p><hr>
+A6The change in a sum is equal to the sum of the 
+individual changes.
+<p>(For example, when prices change, the change in the total cost of a
+basket of apples and pears is equal to the change in the cost of the
+apples plus the change in the cost of the pears.)
+<p><h3 id="ss-"></h3>
+[]Advantage of Considering Small Changes
+Suppose that a quantity \(x\) is somehow related to some other
+quantity \(t\). Then it is usually easy to describe how \(x\) changes when
+\(t\) is changed by a small amount, although it may be quite difficult
+to find how \(x\) changes when \(t\) is changed by some large amount. For
+example, it may be quite simple to describe how the concentration \(x\)
+of one of the substances in a chemical reaction changes during any
+time interval \(\Delta t\) as small as 0.001&thinsp;second. On the other hand, it
+might be a very complex task to find how the concentration \(x\) changes
+during a time interval as large as 3&thinsp;hours.
+<p>An understanding of the relation between small changes can,            
+however, be used as the basis of a very powerful method of prediction.        
+For example, suppose that we can easily specify how a situation
+changes during any time interval \(\Delta t\) which is sufficiently small (say,
+0.1&thinsp;second). Then we can use information about the situation at
+some time \(t\) to predict the resulting situation 0.1&thinsp;second later,
+i.e., at the time \(t_0 + 0.1\)&thinsp;second. Then we can, in turn, use this
+information to predict the situation 0.1&thinsp;second later, i.e., at the
+time \(t_0 + 0.2\)&thinsp;second. Then we can, in turn, use this information to
+predict the situation 0.1&thinsp;second later, i.e., at the time \(t_0 +
+0.3\)&thinsp;second. Proceeding in this way repetitively, we can thus continue
+making successive predictions until we arrive at predictions 1000&thinsp;seconds
+after the time \(t_0\), or 10&thinsp;hours after \(t_0\), or even a century 
+after \(t_0\)! (With some ingenuity and the help of electronic computers,
+these successive calculations can often be carried out quite rapidly.)
+<p>In summary, simple information about small enough changes can be
+used repetitively to generate information about changes which are as
+large as one pleases. Hence a consideration of small changes is the
+basis of an extremely useful method of prediction which is used 
+extensively in all the sciences. We shall illustrate this method more
+specifically in Sec.&thinsp;D and shall use it frequently throughout the
+course.
+<p><p><strong>Knowing About Related Changes</strong></p>
+
+<p><div class="problem" id="prob-A1"><p><strong>Problem&nbsp;A1: </strong>
+
+The graph in <span class="fig-ref">Fig.&nbsp;A2</span> shows how the number \(N\) of <em>Paramecium
+aurelia</em> organisms in a fluid culture depends on the time \(t\) since
+the culture was begun. (a) Consider an original value \(t_0 = 3\)&thinsp;day,
+and a change \(\Delta t = 1\)&thinsp;day. What are the corresponding values of \(t_c\),
+\(N_0\), \(N_c\), and \(\Delta N\)? (b) Consider an original value \(t = 5\)&thinsp;day,
+and the same change in time, \(\Delta t = 1\)&thinsp;day. What are the corresponding
+values of \(t_c\), \(N_0\), \(N_c\), and \(\Delta N\)? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[105]</span></p>
+
+
+<p><div class="problem" id="prob-A2"><p><strong>Problem&nbsp;A2: </strong>
+
+Five horizontal girders, each of length \(G\), form a bridge section
+of total length \(B = 5 G\). After a cold night, the warm morning
+sun causes each girder to expand so that its length changes by
+\(\Delta G = 0.50\)&thinsp;foot. What is the change \(\Delta B\) in the total length of
+the bridge section? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[112]</span></p>
+
+<p><figure id="fig-A2" class="module-figure module-figure-left"><img src="../../modules/m404/m404gr02.svg" alt="Figure A2"><figcaption><strong>Fig.&nbsp;A2.</strong> </figcaption></figure>
+
+</section>
