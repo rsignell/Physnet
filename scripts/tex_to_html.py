@@ -610,6 +610,16 @@ class PhysnetConverter:
         if name in ('endinput', 'TxStart', 'TxEnd'):
             return '', i
 
+        # \ChapterFirstPage{title}{outline}{intro} — Reif chapter opener
+        if name == 'ChapterFirstPage':
+            title, i = get_arg(text, i)
+            outline, i = get_arg(text, i)
+            intro, i = get_arg(text, i)
+            title_html = self._process(title)
+            outline_html = self._process(outline)
+            intro_html = self._process(intro)
+            return f'<h1>{title_html}</h1>\n<div class="chapter-outline">{outline_html}</div>\n<p>{intro_html}</p>', i
+
         # \index{...} — index entry, suppress
         if name == 'index':
             _, i = get_arg(text, i)

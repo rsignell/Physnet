@@ -1,0 +1,120 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p>         
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>The calculation of scattering cross sections is one of the most 
+important uses of Fermi's Golden Rule. Since Fermi's rule involves only 1
+matrix element of the interaction, it is a  first-order approximation to the
+exact result. This approximation in turn suggests an approximation to the
+ scattering amplitude, a complex quantity closely related to the cross 
+section. It is this last approximation that is called the Born approximation.
+In this unit we shall use the Born approximation to calculate elastic
+scattering amplitudes and cross sections for simple potentials.
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The references in this unit are to Anderson. To review the meaning
+of the scattering cross sections, read section 3.2 through the beginning 
+of the discussion of Rutherford scattering. For a given
+target the cross sections are defined as follows:
+<p>\[{\rm \fract{d \sigma}{d \Omega} = \fract{number\;scattered\;per\;unit\;time\;
+into\;solid\;angle\;d \Omega}{number\;incident\;per\;unit\;time\;per\;unit\;area}}\]
+
+<p>\[{\rm \sigma = \int \fract{d \sigma}{d \Omega} d \Omega = \fract{number\;
+scattered\;per\;unit\;time}{number\;incident\;per\;unit\;time\;per\;unit\;area}}\]
+
+<p>
+\(\sigma\) is the total  elastic cross section. We shall not deal with
+ inelastic scattering in which particles are created or destroyed
+(or in the internal state of the target or projectile changes).
+<p>The cross section is a measure of the probability that an 
+interaction occurs; the larger the cross section, the greater the
+probability that an interaction will take place when a particle is
+incident on the target. In general the cross section depends on
+the initial and final states of both the target and the projectile
+(including energy, spin, angle of scatter, etc.&thinsp;). To calculate
+the cross section a knowledge of the  dynamics (nature of the 
+interaction) is required.
+<p>The above definitions treat the target as a single scatterer.
+We are almost always interested in extracting the cross section
+for a single microscopic scatterer from measurements made on a
+macroscopic target consisting of a great many such scatterers. In
+this case one must divide the cross section of the macroscopic
+target by the  number of scatterers in the path of the beam.
+Note that this recipe assumes the target is very thin. (Why?)
+As an exercise do the following problem:
+<p>A beam of protons of 3&nbsp;centimeter diameter contains
+\(10^{10}\,\text{protons/(sec\,cm}^2\,\text{)}\).
+It is normally incident on a thin foil whose thickness \(t\) is such that
+\(\rho t = 0.0001\,\text{gm/cm}^2\), where \(\rho\) is the density of the
+foil.
+The scatterers in this problem are the atomic nuclei of the
+foil which have an atomic weight of \(A = 200\).
+A counter placed at an angle of \(45^\circ\) with respect to the beam
+direction is located 1&thinsp;m from the target.
+It accepts all protons that cross an area of \(10\,\text{cm^2}\)
+which is perpendicular to the line joining the counter to the target. 
+There are 2.1&nbsp;protons observed in the counter per second.
+What is the differential cross section \(d\sigma/d\Omega\) for proton-nucleus 
+elastic scattering at \(45^\circ\)?
+<p>(Answer: 0.01&thinsp;barns/ster; \(1\,\text{barn} \equiv 10^{-24}\,\text{cm}^2\))</li>
+<li><span class="item-label">2.</span> To gain practice calculating cross sections classically, solve
+problem 3.1.</li>
+<li><span class="item-label">3.</span> Now for some quantum scattering theory. The definitions of the
+cross section are the same but the method of calculation is different.
+<p>Begin by reading section 11.1 through equation 11.2. Equation
+11.1 is the  asymptotic form of the wave function for elastic 
+scattering. That is; it describes the wave  far from the interaction
+region; in the interaction region the wave is much more complicated.
+Note that the wave-function in this case represents the superposition 
+of the ingoing and outgoing particle fluxes, rather than the
+state of a single particle as we have been used to. (We can achieve
+the same results in a more physical and intuitive manner by using
+single particle wave-packets which propagate in space and time - 
+but this is a more difficult approach.) \(f(\theta)\) is called the 
+ elastic scattering amplitude;
+``elastic'' is often omitted when it causes no
+confusion to do so, and we shall do so here. \(f\) depends only on
+the scattering angle \(\theta\) in problems with azimuthal symmetry - 
+this shall always be the case for us. (Of course, \(f\) also depends on
+energy, which particles are scattering, etc.. The above statement
+refers only to the angular dependence of \(f\).) Equation 11.2 is
+the connection between \(f\) and the differential scattering cross
+section. Note that \(f\) is a complex function, but \(d \sigma / d \Omega\)
+is always real and positive.
+<p>You need not follow the derivation of equation 11.2; but you
+should memorize equations 11.1 and 11.2 and be sure you understand
+what the 2 terms in equation 11.1 represent.</li>
+<li><span class="item-label">4.</span> Now read section 11.2 through the end of the paragraph containing
+equation 11.22. Equation 11.18 is the form of the Golden rule
+needed. In what sense is the interaction time - dependent?
+Equation 11.21 is the Born approximation to the scattering
+amplitude. The ``derivation'' given in the text is ``hand-waving'';
+it clearly does not give the phase of the scattering amplitude
+(which is certainly specified in equation 11.21). However, the
+cross section is surely proportional to \(R\), so that the amplitude
+must vary as \(\sqrt{R}\). And certainly, it makes sense that the states
+\(i\) and \(f\) are plane-wave eigenstates of the ``free'' Hamiltonian
+(Hamiltonian far from the interaction region). (Needless to say,
+there are much better derivations of this approximation.) The
+upshot of the Born approximation in any case is that, to lowest
+order in the interaction, the scattering amplitude is proportional
+to the matrix element of \(V\) between plane-wave states.</li>
+<li><span class="item-label">5.</span> Use the Born approximation to solve problems 11.6, 11.8, and 11.10.</li>
+</ol>
+
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>
