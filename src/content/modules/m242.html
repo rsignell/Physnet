@@ -1,0 +1,578 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction and Overview</h2>
+
+<p>The goal here is to understand how the classical Bohr model of the
+atom failed and to develop its successor, the Schr"odinger Equation.
+To these ends we first examine the failure of the classical orbital model
+in some detail, while picking up useful ideas and terminology.
+We then determine a criterion for introducing necessary changes in the
+theory and use it to construct the Schr"odinger Equation for potential-
+less regions of space.
+After a quick application to see how the new theory overcomes the problems
+associated with its predecessor, we move on to the full Schr"odinger
+Equation with forces.
+Solutions are obtained for the simple harmonic oscillator.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Classical Attempt and Failure</h2>
+
+<p><h3 id="pcap-2-a">2a. Similarities: Electron-Proton, Earth-Sun Systems</h3>
+
+As a first attempt to determine the basis of atomic structure one would
+certainly try to capitalize on the similarities between the earth-sun system
+and the hydrogen atom, that simplest of all atomic systems.
+In this atom, the central proton is almost 2,000 times heavier than the
+electron, which means that to a very good approximation the proton's
+position can be taken to be the center of mass of the atom.
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>In this respect, it is similar to the earth-sun system.
+Furthermore, the force keeping the electron bound to the proton in the
+hydrogen atom is just the Coulombic interaction, an inverse square law,
+again as in the earth-sun system:
+<p>\[\vec{F}_{ep}=-(\frac{e^2}{4\pi \epsilon _0})(\frac{1}{r^2})\,
+\hat{r}=-(1.44\,\text{eV}\,\text{nm})(\frac{1}{r^2})\,\hat{r}\]
+<p>\[\vec{F}_{ES}=-(\gamma M_EM_S)(\frac{1}{r^2})\,\hat{r}=-(4.95\times
+10^{72}\,\text{eV}\,\text{nm})(\frac{1}{r^2})\,\hat{r}\]
+<p>Thus the forces for the earth-sun and electron-proton systems differ only
+by their (constant) strength factors.
+<p><h3 id="pcap-2-b">2b. Orbital Radius From System Energy</h3>
+
+If the hydrogen atom's electron obeys Newton's Second Law, just as does the
+earth as it orbits the sun, then the electron should traverse an orbit
+similar to the earth's but reduced in size.
+What size would that be?
+Since we experimentally know
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>the energy of the ground state of the hydrogen atom, \(E_0 = -13.6\)&thinsp;eV,
+a good method for finding the radius would be to obtain it from that energy.
+In the earth-sun system, assuming a circular orbit, one can easily relate
+the radius and energy by combining Newton's Second Law for centripetal
+acceleration with the Law of Universal Gravitation, 
+<p>\[M_Ev_E^2/r_0=\gamma M_EM_S/r_0^2,\]
+<p>eliminate the velocity in the energy expression 
+<p>\[E_0 = \frac{1}{2}M_Ev_E^2-\gamma M_EM_S/r_0\]
+<p>and substituting for the (\(M_Ev^2\)) term gives 
+<p>\[r_0=-\frac{(\gamma M_EM_S)}{2E_0}.\]
+<p>Since the energy of a bound object like the earth is negative
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>we can write:
+<p>\[r_0=\frac{(\gamma M_EM_S)}{2|E_0|}\]
+<p>The relation of \(r_0\) and \(E_0\) to the earth's potential energy \(V(r)\) is
+illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+To find the radius of the electron's presumed orbit in the hydrogen atom,
+we need only compare equations (1) and (2) for the two force laws, then
+<p>alter <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> to make it an energy-radius relation for the
+electron-proton system:
+<p>\[r_0=(\frac{e^2}{4\pi \epsilon _0})\frac{1}{2|E_0|}.\]
+<p>With \(E_0 = -13.6\)&thinsp;eV, \(r_0\) (H ground state) \(= 0.053\)&thinsp;nm.
+This \(r_0\) is called the <em>Bohr radius</em>.
+It was first calculated by A.&thinsp;Bohr, using a somewhat different method.
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m242gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Energy versus radius for an inverse
+square law force.
+A typical bound state radius and energy are marked.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Erroneous Prediction: Synchrotron Radiation</h3>
+
+There are two major problems associated with the classical orbital model of
+the hydrogen atom, problems which did not arise in the application to the
+solar system.
+The first is related to the very large centripetal acceleration of the
+electron in the hydrogen atom, some 1025 times that of the earth in its
+orbital motion.
+Classical electromagnetic theory predicts, and experiment confirms, that
+all charged particles emit electromagnetic energy when macroscopically
+accelerated.
+Such light emitted by circularly orbiting charged particles is called
+synchrotron radiation because it is a constant fact of life for those using
+synchrotrons, devices in which beams of electrons travel in circular
+evacuated tubes.
+In order to make up for the electrons' continual loss of energy by
+synchrotron radiation, energy must be constantly fed to the particles.
+In the ground state of the hydrogen atom, contrary to what happens in a
+synchrotron, the electron does not emit synchrotron radiation.
+In fact, no loss of energy of any kind has ever been observed for a
+hydrogen atom ground state electron.
+<p><h3 id="pcap-2-d">2d. Erroneous Prediction: Continuous Energies and Radii</h3>
+
+A second problem associated with the orbital atomic model is that classical
+orbits can be at any negative energy and hence at any radius.
+However, it is well established experimentally
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>that in the hydrogen atom only those energies occur which satisfy the Bohr
+formula:
+<p>\[E_n=-\left(\frac{e^2}{4\pi \epsilon _0}\right)^2\frac{m_e}{2\hbar ^2n^2};\]
+<p>This discrete set of allowed energies implies a discrete set of allowed
+<em>orbits</em>.
+For circular orbits, one straightforwardly finds the allowed <em>radii</em>
+to be:
+<p>\[r_n = n^2 r_0; \qquad n = 1, 2, 3, \ldots\]
+<p>where \(r_0\) is the Bohr radius.
+Every hydrogen atom is found to have exactly the same discrete set of
+energies, and they are not changed as a result of collisions.
+This is in sharp contrast to the binary gravitational systems such as
+the Earth and the sun, Mars and the sun, etc.
+<p><h3 id="pcap-2-e">2e. Summary of the Classical Orbital Models Problems</h3>
+
+One can summarize the two erroneous predictions of the classical orbital
+model as saying that an electron in the ground state of the hydrogen atom
+would lose energy by synchrotron radiation and thus quickly and continuously
+spiral in toward the proton.
+This predicted quick collapse of the hydrogen atom does not, in fact, take
+place; the ground state is completely stable and so the classical orbital
+model is wrong.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. The Schr"odinger Equation for V=0</h2>
+
+<p><h3 id="pcap-3-a">3a. Wave Properties of Electron May Be Important</h3>
+
+One might expect that since the hydrogen atom Bohr radius is so extremely
+small, it might be comparable to the deBroglie wavelength of the electron.
+If that is true, then one would expect the wave properties of the electron
+to be important and classical particle mechanics would certainly fail
+to describe the electron in the hydrogen atom.
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p><h3 id="pcap-3-b">3b. Wavelength of Electron: Larger Than Bohr Radius</h3>
+
+It is easy to compute the deBroglie wavelength of the hydrogen atom ground
+state electron.
+If the wavelength is small compared to the Bohr radius then classical
+mechanics should decsribe the situation well.
+If fact, however, the wavelength so computed turns out to be <em>larger</em>
+than the Bohr radius!
+It is then obvious
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p>that wave properties are important and the question becomes one of how
+to set up a new mechanics which builds-in the deBroglie wave properties and
+yet reduces to the classical description when the wavelength is small
+compared to the size of the interaction region.
+<p><h3 id="pcap-3-c">3c. Example of a Wave Function</h3>
+
+For sound waves or waves on a string, the one-dimensional spatial
+dependence of standing waves is usually written:
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[\psi (x)=A\sin (2\pi x/\lambda ).\]
+<p>We will assume that standing waves, not traveling waves, are appropriate to
+the case of a bound state, where the bound particle stays in the region
+around the force center.
+<p><h3 id="pcap-3-d">3d. deBroglie's Relation to Schr"odinger Equation</h3>
+
+Taking the second derivative of \(\psi\) with respect to \(x\) and applying
+deBroglie's relation between momentum and wavelength, we get:
+<p>\[\frac{d^2\psi (x)}{dx^2}=-\frac{p^2}{\hbar ^2}\psi (x).\]
+<p>For any spatial point x where the potential energy function for the
+particle, V(x),
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>is zero <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> becomes:
+<p>\[-\frac{\hbar ^2}{2m}\frac{d^2\psi }{dx^2}=E\psi; \qquad V(x)=0.\]
+<p>and \(E\) is the particle's total energy.
+<p><a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> is the equation Schr"odinger found for a particle at any
+<p>point where \(V = 0\).
+<p><h3 id="pcap-3-e">3e. Rules for Constructing the Schr"odinger Equation</h3>
+
+We have made a plausible argument for <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> but quantum mechanics
+is more general than classical mechanics and so cannot be derived from it.
+Quantum mechanics, and the Schr"odinger equation in particular, arises
+from a set of rules from which one can properly derive both classical and
+quantum effects.
+Here are the rules by which the Schr"odinger equation is usually
+constructed for a single particle in a potential \(V\):
+<ul>
+<li><span class="item-label">(i)</span> Write down the classical energy equation, 
+<p>\[E=\frac{p^2}{2m} + V\,.\]</li>
+<li><span class="item-label">(ii)</span> Multiply on the right by the wave function \(\psi(x)\),
+<p>\[E\psi =\frac{p^2}{2m}\psi + V\psi ;\]
+<p>where \(\psi\) is to be determined later, and;</li>
+<li><span class="item-label">(iii)</span> Replace each component of the momentum by the corresponding
+momentum derivative operator:
+<p>\[p_x=-i\hbar \frac{d}{dx},\]
+<p>\[p_y=-i\hbar \frac{d}{dy},\]
+<p>\[p_z=-i\hbar \frac{d}{dz}.\]</li>
+</ul>
+
+
+For our one-dimensional \(x\)-axis case, with zero potential, the above three
+rules immediately reproduce <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>.
+<p>We must now examine methods of solving <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> for cases of interest,
+and especially see if it solves the problems encountered by the classical
+orbital model of the atom.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Limited Free Motion: Quantization</h2>
+
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m242gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Rudimentary model of a bound
+state; for illustrating quantization of energy.</figcaption></figure>
+
+<p><h3 id="pcap-4-a">4a. Impenetrable Walls</h3>
+
+A very crude model that exhibits some of the features of bound states is
+shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, where a particle is constrained to one-dimensional
+motion in the interval \(-a < x < a\) by impenetrable walls at its boundaries.
+The fact that the walls are impenetrable means that \(\psi(x)\) is zero inside
+them, since \(|\psi|^2\) is the particle's probability density
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>and the probability of finding the particle inside the impenetrable walls
+is presumably zero.
+<p><h3 id="pcap-4-b">4b. Boundary Conditions At Walls</h3>
+
+The wave function \(\psi(x)\) must be point-wise continuous,
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+<p>so we have the boundary conditions on the wave function in the free region:
+<p>\[\psi (\pm a)=0.\]
+<p><figure id="fig-3" class="fig-left-framed"><img src="figures/m242gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The first two wave functions of
+Eqs.&thinsp;(13).</figcaption></figure>
+
+<p><h3 id="pcap-4-c">4c. Schr"odinger Equation General Solution in Free Region</h3>
+
+<p>The general. solution to the Schr"odinger <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> in the free region
+between the walls of <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> is easily verified by differentiation to be:
+<p>\[\psi _k(x)=A(k)\sin kx+B(k)\cos kx,\]
+<p>where \(k\equiv\sqrt{2m|E|/\hbar}\).
+<p><h3 id="pcap-4-d">4d. Apply the Boundary Conditions</h3>
+
+There are two integration constants, \(A\) and \(B\), because of the second
+derivative in the Schr"odinger equation: at any given energy these two
+constants are determined by the boundary conditions, <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.
+One can go through algebraic manipulations (Appendix A) or merely
+draw sine and cosine waves between the walls which obey the boundary
+conditions, as illustrated in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p>The wave functions are:
+<p>\[\psi _1(x)=\frac{1}{\sqrt{a}}\cos (\frac{\pi x}{2a});\]
+<p>\[\psi _2(x)=\frac{1}{\sqrt{a}}\sin (\frac{2\pi x}{2a});\]
+<p>\[\psi _3(x)=\frac{1}{\sqrt{a}}\cos (\frac{3\pi x}{2a});\]
+<p>etc., where the factors (\(1/\sqrt{a}\)) come from the requirement that the
+wave functions be normalized.
+This means that the wave functions contain a multiplying factor such that
+the total probability of finding the particle in the interval
+\(-a < x < a\) is 100%:
+<p>\[1.00=\int_{-a}^{+a}P_n(x)\,dx=\int_{-a}^{+a}|\psi _n(x)|^2\,dx.\]
+<p><h3 id="pcap-4-e">4e. Energy is Quantized</h3>
+
+Comparing equations (12) and (13), one sees that the energies are
+restricted to the values:
+<p>\[E_n=\frac{\hbar ^2\pi ^2n^2}{8ma^2};n=1,2,3, \ldots\]
+<p>The energy is said to be quantized, meaning that it is restricted to a set
+of discrete values.
+<p><sup class="fn-ref"><a href="#fn-12" id="fnref-12">12</a></sup>
+<p></section>
+
+<p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Quantization From Realistic Forces</h2>
+
+<p><h3 id="pcap-5-a">5a. Concept of Cut-Off Radius</h3>
+
+<p>How can we apply our Schr"odinger <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a>, valid only where the
+potential energy is zero, to the real world with forces which produce bound
+states?
+Fortunately, realistic forces generally become negligibly small beyond some
+finite radius from the force center.
+An arbitrarily-drawn example is shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
+We can make the good approximation of setting the potential equal to zero
+beyond a <em>cut-off radius</em> \(r_c\), and then use our \(V = 0\)
+<p>Schr"odinger equation in the outside region.
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m242gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. An example potential illustrating
+the concept of cut-off radius (\(r_c\)).</figcaption></figure>
+
+<p><h3 id="pcap-5-b">5b. Central Forces</h3>
+
+Most interesting forces are central forces, spherically symmetric about
+their force centers.
+We will consider one such force, using its force center as origin and not
+worrying about its shape inside \(r_c\).
+If you want, you can picture the force as the Coulombic one between the
+electron and the proton for a hydrogen atom in its ground state.
+A reasonable value for the cut-off radius might be 20 Bohr radii.
+That is, 20 times the classical turning point radius for energy \(E_0\).
+<p><h3 id="pcap-5-c">5c. The Schr"odinger Equation in Three Dimensions</h3>
+
+Our previous Schr"odinger equation was in one dimension, but realistic
+forces are, of course, in a three-dimensional world.
+Following the three rules given in Section 2, we get:
+<p>\[E\psi (x,y,z)=
+-\frac{\hbar ^2}{2m}(\frac{d^2}{dx^2}+
+   \frac{d^2}{dy^2}+\frac{d^2}{dz^2})\psi (x,y,z),V=0;\]
+<p>written in the abbreviated form:
+<p>\[E\psi =-\frac{\hbar ^2}{2m}\Grad ^2\psi .\]
+<p><h3 id="pcap-5-d">5d. The Radial Wave Equation</h3>
+
+In spherical coordinates the Schr"odinger equation becomes
+<p><sup class="fn-ref"><a href="#fn-13" id="fnref-13">13</a></sup>
+<p>(Appendix B):
+<p>\[Eu(r)=-\frac{\hbar ^2}{2m}\frac{d^2u(r)}{dt^2},V(r)=0,\]
+<p>where \(u(r)\) is called the radial wave function.
+<p>So that the solution to <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> is also a solution to the original 
+<a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> we have to require \(u(r)\) to vanish at the origin:
+<p><sup class="fn-ref"><a href="#fn-14" id="fnref-14">14</a></sup>
+<p>\[u(0) = 0.\]
+<p><h3 id="pcap-5-e">5e. The Radial Probability Density</h3>
+
+The <em>radial probability density</em> \(P(r)\) is obtained from the radial wave
+function \(u(r)\) in the usual manner:
+<p>\[P(r)=|u(r)|^2.\]
+<p>This means that the probability of finding the particle between spherical
+shells of radius \(r_1\) and \(r_2\) is:
+<p>\[P(r_1<r<r_2)=\int_{r_1}^{r_2}P(r)\,dr=\int_{r_1}^{r_2}|u(r)|^2\,dr.\]
+<p>The normalization integral becomes:
+<p>\[1.00=\int_0^\infty |u(r)|^2\,dr,\]
+<p>with a lower limit which differs from that in the one-dimensional case.
+<p><h3 id="pcap-5-f">5f. Integration Constants For the Radial Equation Solutions</h3>
+
+<p>Since our radial Schr"odinger <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> still contains a second
+derivative we would expect to have two integration constants in the
+solution, one determined by the boundary condition at the origin,
+<a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a>, and the other determined by some other boundary condition.
+<p>The integration constants would, in general, be different at each energy.
+<p><h3 id="pcap-5-g">5g. Bound State Solution Beyond Cut-Off Radius</h3>
+
+Bound states have negative energies so it is convenient to define 
+<p>\[\kappa \equiv \sqrt{-2mE}/\hbar =\sqrt{2m|E|}/\hbar,\]
+<p>and put our radial Schr"odinger <a href="#eqn-17" class="eqn-ref">Eq.&nbsp;(17)</a> into the form:
+<p>\[\frac{d^2u(r)}{dt^2}=\kappa ^2u(r);E<0,V(r)=0.\]
+<p>The solution to <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a> can be seen by inspection (taking the
+derivatives mentally) to be:
+<p>\[u(r)=A(\kappa )e^{\kappa r}+B(\kappa )e^{-\kappa r};E<0,V(r)=0.\]
+<p>As noted, this is the solution for all negative energies and for all
+continuously-connected space points outside the range of the potential.
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m242gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The function \(A(\kappa\)) for the
+electron-proton Coulomb interaction cut off at \(r_c = 30 r_0\).
+The dots along the \(\kappa\)-axis mark the Bohr formula
+(\(r_c\rightarrow\infty\)) values.</figcaption></figure>
+
+<p><h3 id="pcap-5-h">5h. Boundary Conditions Lead to Discrete States</h3>
+
+The probability that the particle would be found to be outside the cut-off
+radius is:
+<p>\[P(r_c)<r<\infty )=\int_{r_c}^\infty |u(r)|^2\,dr=\int_{r_c}^\infty
+|A(\kappa )e^{\kappa r}+B(\kappa )e^{-\kappa r}|^2\,dr.\]
+<p>which is infinite because of the exponentially rising term.
+This is an obvious absurdity since most of the probability should be within
+the range of the force, and especially since the total probability of being
+somewhere in all of space must be unity!
+The wave function (21) is said to be <em>unnormalizable</em> for non-zero
+values for \(A\) since these do not permit the particle to have merely 100%
+probability of being somewhere in all of space.
+The only way in which the radial wave function (21) can represent a bound
+state of a physical system is for \(A(\kappa)\) to be zero.
+This, then, constitutes the second boundary condition necessary to
+completely specify the wave function everywhere.
+In general, no matter what potential is used, \(A(\kappa)\) is some function
+determined by the nature of the force in the region \(0<r<r_c\).
+Suppose that for some particular force \(A(\kappa)\) has the functional
+form shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
+<p><sup class="fn-ref"><a href="#fn-15" id="fnref-15">15</a></sup>
+<p>These are a discrete set, so the bound-state solutions are at those values
+of \(\kappa\) where \(A(\kappa) = 0\), labeled \(\kappa_1\), \(\kappa_2\), \(\ldots\),
+in the figure.
+The bound states produced by the Schr"odinger equation are discrete
+regardless of what force is present.
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Boundary Conditions on a Free Wave</h2>
+
+<p>We begin with the free-particle solutions, <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>:
+<p>\[\psi _k(x)=A(k)\sin kx+B(k)\sin kx,\]
+<p>and apply the impenetrable-walls simultaneous boundary conditions
+<p>\[\psi(\pm a)=0.\]
+<p>These two conditions yield, respectively;
+<p>\[0=+A(k) \sin ka+B(k)\cos ka,\]
+<p>\[0=-A(k)\sin ka+B(k)\cos ka.\]
+<p>How can we make both equations be satisfied simultaneously?
+There are four minimum possibilities:
+<ul>
+<li><span class="item-label">(i)</span> \(A(k)=B(k)=0\),</li>
+<li><span class="item-label">(ii)</span> \(A(k)=\cos ka=0\),</li>
+<li><span class="item-label">(iii)</span> \(B(k)=\sin ka=0\),</li>
+<li><span class="item-label">(iv)</span> \(\sin ka=\cos ka=0\).</li>
+</ul>
+
+The first of these can be immediately eliminated because it results in
+\(\psi = 0\) everywhere, and the fourth is impossible to satisfy.
+The two possibilities are left:
+<ul>
+<li><span class="item-label">(i)</span> \(A=0\) and \(\cos ka=0\) hence \(ka=\frac{n\pi}{2}\);
+             \(n=1, 3, 5, \ldots\)</li>
+<li><span class="item-label">(ii)</span> \(B=0\) and \(\sin ka=0\) hence \(ka=\frac{n\pi}{2}\);
+             \(n=2, 4, 6, \ldots\)</li>
+</ul>
+
+In general, then, \(k=\frac{n\pi}{2}\); \(n=1, 2, 3, \ldots\).
+<p>Substituting these combinations into <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> produces the allowed
+wave functions of <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>.
+<p></section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Laplacian In Spherical Coordinates</h2>
+
+<p><h3 id="pcap-B-a">Ba. Laplacian in Spherical Coordinates</h3>
+
+By judicious use of:
+<p><sup class="fn-ref"><a href="#fn-16" id="fnref-16">16</a></sup>
+<p>\[x = r\sin\theta\cos\phi\]
+<p>\[y = r\sin\theta\sin\phi\]
+<p>\[z = r\cos\theta,\]
+<p>one can derive the equality:
+<p><sup class="fn-ref"><a href="#fn-17" id="fnref-17">17</a></sup>
+<p>\[\begin{aligned}\nabla^2 & \equiv & \frac{\partial^2}{\partial x^2} +
+       \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \\
+         & =      & \frac{1}{r^2}\partiald{r}
+          \left( r^2\partiald{r} \right) +
+          \frac{1}{r^2\sin\theta}\partiald{\theta}
+          \left( \sin\theta\partiald{\theta} +
+                 \frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial\phi^2}
+          \right) \\\end{aligned}\]
+
+<p><h3 id="pcap-B-b">Bb. The Radial Equation</h3>
+
+By the method of separation of coordinates, one finds the solutions to be of
+the form:
+<p><sup class="fn-ref"><a href="#fn-18" id="fnref-18">18</a></sup>
+<p>\[\psi_{n\ell m}(r,\theta,\varphi) =
+       R_{n\ell}(r)Y_{\ell m}(\theta,\phi)\]
+<p>where
+<p>\[Y_{\ell m}(\theta ,\varphi )\equiv
+       \sqrt{\left(\ell + \frac{1}{2} \right)
+       \frac{(\ell - m)!}{(\ell + m)!}}
+       \; P_\ell^m(\cos\theta)\frac{1}{\sqrt{2\pi}}e^{im\phi}\]
+<p>\[P_\ell^m = \frac{(1-z^2)^{m/2}}{2^\ell\ell!}
+                  \frac{d^{m+\ell}}{dz^{m+\ell}}(z^2-1)^\ell ;\]
+<p>where: \(m,\ell = 0, 1, 2, \ldots\); \(m \leq \ell\).
+<p>If one defines
+<p>\[u_{n\ell}(r)\equiv rR_{n\ell}(r),\]
+<p>then the equation for \(u_{n\ell}(r)\) for a potential \(V(r)\) is:
+<p>\[\left( -\frac{\hbar ^2}{2m}\frac{d^2}{dr^2} +
+       \frac{\ell (\ell +1)\hbar ^2}{2mr^2} + V(r)\right) u_{n\ell}(r) =
+       E_n u_{n\ell}(r).\]
+<p>The second term in the brackets is the quantum-mechanical equivalent of the
+classical angular-motion kinetic-energy term.
+<p><sup class="fn-ref"><a href="#fn-19" id="fnref-19">19</a></sup>
+<p><h3 id="pcap-B-c">Bc. The Boundary Condition at the Origin</h3>
+
+The boundary condition at the origin is determined by an unusual property of
+the Laplacian operator when acting on an inverse-radius function.
+<p>To see this, suppose the radial wave function approaches a constant as the
+radius approaches zero:
+<p>\[\lim_{r\rightarrow 0} u(r)\rightarrow a.\]
+<p>The full wave function approaches that constant divided by the radius:
+<p>\[\lim_{r\rightarrow 0} \psi(r) \rightarrow \frac{a}{r}.\]
+<p>In the full Schr"odinger equation, then, one has, where this approximation
+is valid;
+<p>\[\nabla^2\psi = \nabla^2\frac{a}{r} =
+         \frac{1}{r^2}\partiald{r} r^2 \partiald{r} \left( \frac{a}{r} \right) = 0,\]
+<p>except at the origin.
+<p>If one integrates the function \([\Grad ^2(a/r)]\) throughout a volume
+including the origin, the result is:
+<p><sup class="fn-ref"><a href="#fn-20" id="fnref-20">20</a></sup>
+<p>\[\int \left( \nabla^2 \frac{a}{r} \right) \,dV = -4\pi a,\]
+<p>regardless of the size of the volume.
+This independence of the size of the volume is logical in view of <a href="#eqn-30" class="eqn-ref">Eq.&nbsp;(30)</a>.
+Thus the radius of the volume can be shrunk to zero and the answer
+(\(-4\pi a\)) remains.
+<p>None of the other terms in our Schr"odinger equation are capable of
+generating such an anomalous function in the neighborhood of the origin, so
+the equation cannot be satisfied unless the constant in <a href="#eqn-29" class="eqn-ref">Eq.&nbsp;(29)</a>
+<p>is zero:
+<p>\[\lim_{r\rightarrow 0} u(r) \rightarrow 0.\]
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Two-Body Kinematics and Dynamics” (MISN-0-45). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “Hydrogen-like Energy Levels” (MISN-0-215) and
+“Transitions and Spectral Analysis” (MISN-0-216). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Potential Energy and Motion: Potential Curves, Turning
+Points” (MISN-0-22). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The notation \(r_0\) for the Bohr radius is somewhat misleading
+since \(n=1\) for that state.
+It is traditional, however, to use zero as a subscript on all ground state
+quantities. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See “Transitions and Spectral Analysis” (MISN-0-216). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See “The Time-Dependent Schr"odinger Equation: Derivation of
+Newton's Second Law” (MISN-0-248), wherein Newton's Second Law is found to
+be the first term in a power series, the next term of which is computed and
+examined.
+Thus the relationship of quantum and classical mechanics is made precise. <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">See “deBroglie Waves” (MISN-0-240). <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">See “Wave Equations and Solutions” (MISN-0-201). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">Sometimes written \(U(x)\). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">See “deBroglie Waves” (MISN-0-240), “The Uncertainty
+Principle” (MISN-0-241) and “Exponential Quantum Decay Through a Barrier”
+(MISN-0-250). <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">Justification for the continuity of \(\psi(x)\) involves replacing
+the walls by finite repulsive potentials and then letting them become
+infinite. <a href="#fnref-11" class="fn-back">↩</a></li><li id="fn-12">The only way one can make a new wave function for <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> is by
+inserting at least a half more oscillation into one of the wave functions.
+This results in quantized wave function curvatures, hence quantized wave
+function second derivatives, hence quantized energies. <a href="#fnref-12" class="fn-back">↩</a></li><li id="fn-13">The rest of the discussion in this section is restricted to states of zero
+angular momentum, not a significant restriction for present purposes. <a href="#fnref-13" class="fn-back">↩</a></li><li id="fn-14">Not to be explained further here, except that otherwise the
+<p>\(\nabla^2\) operator in the right side of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> would produce a
+delta function which could not be matched on the left side of the equation. <a href="#fnref-14" class="fn-back">↩</a></li><li id="fn-15">See “Numerical Solution of the Schr"odinger Equation for the
+Hydrogen Atom” (MISN-0-245), in which is developed the computer algorithm
+used to generate <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> of the present unit. <a href="#fnref-15" class="fn-back">↩</a></li><li id="fn-16">See, for example, <em>Methods of Theoretical Physics</em>,
+          P.&thinsp;M.&thinsp;Morse and H.&thinsp;Feshbach, McGraw-Hill, NY (1953). <a href="#fnref-16" class="fn-back">↩</a></li><li id="fn-17">Note the change of notation for the derivatives, to agree with
+<p>          common usage, from that used in <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a>.
+          There is no operational distinction between the two notations for
+          the case at hand, where the coordinate components are entirely
+          independent of each other. <a href="#fnref-17" class="fn-back">↩</a></li><li id="fn-18">See, for example, <em>Methods of Theoretical Physics</em>,
+          P.&thinsp;M.&thinsp;Morse and H.&thinsp;Feshbach, McGraw-Hill, NY (1953). <a href="#fnref-18" class="fn-back">↩</a></li><li id="fn-19">See “Derivation of the Constants of the Motion for Central Forces”
+(MISN-0-58). <a href="#fnref-19" class="fn-back">↩</a></li><li id="fn-20">Use the divergence theorem to convert the integrand to an
+          integral over a spherical surface. <a href="#fnref-20" class="fn-back">↩</a></li></ol></aside>
+
+<hr class="section-divider">
+
+Note: this module's skills are all Knowledge so a Problem Supplement is out of order.
+<p>Exercises:
+<p>El. Starting with Newton's Second Law and the Universal Law of Gravitation,
+derive the relation between a satellite's radius and its energy (Equation
+(4)].
+<p>E2. Starting from Newton's Second Law, the Coulombic inter-
+action, and the ground state energy for atomic hydrogen, derive the Bohr radius.
+<p>E3. Obtain the ratio of the acceleration of the electron in orbit at the
+Bohr radius to the acceleration of the earth in its orbit.
+<p>E4. Derive the ratios of the Bohr radii for excited states to that for the
+ground state.
+<p>E5. Compute the deBroglie wavelength of the electron in its orbit at the
+Bohr radius and compare it to the size of the Bohr radius itself.
+Compare it to the Bohr circum-
+ference.
+<p>E6. Use the standing wave expression [Equation (6)] and deBroglie's
+relation to obtain the potential-less one-
+dimensional Schr'odinger equation (Equation (8)].
+<p>E7. Show that Equation (12) is a solution to Equation (8).
+<p>E8. Show the &nbsp;3 of Equation (13) is a solution to Equation (8) with proper
+boundary conditions, and that it is normalized.
+<p>E9. Show that Fquations (17) and (19) lead to Equation (20).
+<p>E10. Using the full-scale version of <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> given in Appendix D, show
+that the zeros of the coefficient of the rising exponential are just where
+one would expect them from the Bohr formula, except for n > 4.
+For n = 4, explain the observed shift to the left on the basis of the cut-
+off on the attractive Coulombic potential.
+<p>Ell. Draw an energy level diagram for the cut-off simple harmonic
+oscillator, equation (24), and compare to the energy level spacings in the
+hydrogen atom.
+MISN-0-242-9                                         S2
+<p>E12. Show that, for the ground state of the simple harmonic oscillator, 51
+of the probability is outside the clas-
+sical turning points, hence in a region of imaginary velocity (see “The Probability Integral,” in integral tables, and see MISN-0-250-x for a further discussion of imaginery velocity).
+<p>E13. Show that, for the ground state of the simple harmonic oscillator, the
+amount of probability beyond the cut-off points used for <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a> is 2.7 x
+10 10
+convergent series for large arguments of The Probability Integral in integral tables).
+<p>
+<hr class="section-divider">
+
+Note: this module's Output Skills are all Knowledge so a Model Exam is not needed.
+<p>Model Exam:
+<p>1. Starting with Newton's Second Law and the Coulombic inter-
+action, derive the classically-predicted relation between the hydrogen atom's energy and radius.
+Use the ground state energy of the atom to find the Bohr radius.
+<p>2. Describe the failure(s) of the classical orbital model of the atom.
+<p>3. Demonstrate the classical particle mechanics would not be expected to be correct for the hydrogen atom.
+<p>4. Recite the rules for construction of the full Schrodinger Equation.
+Illustrate the rules by writing down the Schrodinger Equation for a given
+potential energy function.
+<p>5. Draw the wave function for the first excited state of a free particle between impenetrable walls and show that it satisfies the Schrodinger Equation and appropriate boundary conditions.
+Determine its energy.
+<p>6. Describe to the examiner in words and diagram how energy quantization is produced by the Schrodinger Equation and boundary conditions.
+<p>7. Given the rising-exponential-coefficient plot for a system, determine its allowed energies.
+<p>Examiner Notes:
+<p>Problem&nbsp;6 is to be a mini-lecture without notes.
+It is to be sufficiently complete so as to convey an understanding of the
+subject to a naive listener: otherwise, you are to assess the exam “Not
+Yet.”

@@ -1,0 +1,245 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Introduction</h2>
+
+<p>The solution to an electrostatic problem is complete when the charge
+distribution is everywhere specified. For then, the potential and electric
+fields are given directly as integrals over this charge distribution:
+<p>\[U(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{dq'}{|\vec{r}
+- \vec{r'}|}\]
+<p>or
+<p>\[\vec{E}(\vec{r}) = \frac{1}{4 \pi \epsilon_0} \int \frac{(\vec{r}
+- \vec{r'})}{|\vec{r} - \vec{r'}|^3}\, dq'\]
+<p>For complicated charge distributions, these integrals can be very
+difficult, if not impossible, to do analytically. Approximate numerical
+calculations can be carried out by hand or by digital computer. However, 
+in cases where some of the charge distribution is not known, this
+is even impossible. One example would be any problem where conductors
+are involved. Although the potential or total charge on the conductors
+may be known, the exact distribution of charge may not be known.
+<p>In order to handle such problems, alternative methods for calculating 
+the potential and / or electrical field are required. This unit
+develops one of these methods. The method is essentially a means to
+obtain the potential \(U (\vec{r})\) in charge-free space. The electrostatic
+field can then be calculated as well as the charge distribution on all
+conductors.
+<p>The method uses the fundamental <em>differential equation</em> (as opposed
+to integral equation) for the potential \(U (\vec{r})\). In charge-free space,
+this equation reads:
+<p>\[\nabla^2 U (\vec{r}) = \nabla^2 U (x,y,z) = 0\,.\]
+<p>The operator \(\nabla^2\) is called the “Laplacian.” The problems in this
+section will have certain symmetries which can he exploited in order
+to simplify the computations. The two cases treated in this unit involve 
+the symmetry of the geometries with respect to reflection through
+the origin and through the \(z\)-axis. Certain types of coordinate systems
+are especially appropriate when these symmetries are present. The
+spherical coordinate system is generally used when the geometry is
+symmetric with respect to reflection through the origin (sometimes the
+phrase “symmetric about the origin” is used). The cylindrical coordinate
+system is generally used when the geometry is symmetric with respect to
+reflection through the \(z\)-axis (“symmetric about the \(z\)-axis”). Thus,
+the “Laplacian” will need to be expressed in each of these coordinate
+systems. The method of solution results in the potential being expressed
+as an infinite series of functions. The coefficients in the series are
+then chosen so as to satisfy all boundary conditions in the problem.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read Ch.&thinsp;3, “Solution of Electrostatic Problems,” Secs.&thinsp;3 - 1 to
+3 - 6 of the text. Write down Poisson's equation (3-5b) and
+Laplace's equation (3-9). Write down the definitions of all
+symbols involved in these equations. Write down the derivation
+of Poisson's equation beginning with the differential form of
+Gauss' Law (3-3).</li>
+<li><span class="item-label">2.</span> Read the Supplementary Notes, Sec.&thinsp;I, for a discussion of
+spherical and cylindrical coordinates. Write down the definitions
+of the spherical and cylindrical coordinates, including the geometric 
+diagrams in the Supplementary Notes. Write down the algebraic 
+equations given in eqs.&thinsp;3 and 4 of the Supplementary
+Notes for the relationship of both sets of coordinates to rectangular 
+coordinates.
+<p>Note: On the Unit test you will be given an expression for
+the Laplacian. You will then have to state whether or
+not the expression is a valid form of Laplacian and
+which coordinate system is used to write down the
+Laplacian.</li>
+<li><span class="item-label">3.</span> Write down Theorem I (Superposition Theorem) and
+Theorem II (Uniqueness Theorem). See the Supplementary
+Notes, Sec.&thinsp;II, for a discussion of the importance of these two
+Theorems in solving Laplace's equation. You may be asked for
+such a discussion on the unit test.</li>
+<li><span class="item-label">4.</span> Write down the derivation of the two ordinary differential
+equations (eq.&thinsp;3-16 and 3-17) for the electrostatic potential
+in spherical coordinates in the case where the potential is
+independent of the azimuthal angle \(\phi\). You are to begin with
+eq.&thinsp;3-13 and assume that
+<p>\[U (\vec{r}) = U (r, \theta) = Z (r) P (\theta)\]
+<p>In your derivation of eq.&thinsp;13-17, you can leave the separation
+constant as \(k\) since \(k = n (n + 1)\) where \(n\) is an integer can be
+established only after solving eq.&thinsp;3-16.</li>
+<li><span class="item-label">5.</span> Write down the derivation of the two ordinary differential
+equations (eq.&thinsp;3-25) for the electrostatic potential in
+cylindrical coordinates in the case where the potential is
+independent of the \(z\)-coordinate. (Caution: This \(r\) and \(\theta\)
+are different from those appearing in Procedure 4). The two
+ordinary differential equations come directly from eq.&thinsp;3-25.
+That is, if \(U (r, \theta) = Y (r) S (\theta)\), then the ordinary
+differential equation are:
+<p>\[r \frac{d}{dr} \left( r \frac{dY}{dr} \right) - k Y = 0\]
+<p>and
+<p>\[\frac{d^2S}{d \theta^2} + k S = 0\]</li>
+<li><span class="item-label">6.</span> Read the Supplementary Notes, Sec.&thinsp;III. Write down equations
+(6), (7), (8), and (9) of the Supplementary Notes and be prepared 
+to write them down from memory when asked.</li>
+<li><span class="item-label">7.</span> Read very carefully the solution of the potential of an
+uncharged conducting sphere placed in an <em>initially</em> uniform
+electric field \(\vec{E}_0\) as given in Sec.&thinsp;3-5 of the text. This is a
+prototype solution which can be used as a model for other problems. 
+You will have to refer to this solution when carrying
+out Procedure No.&thinsp;8.</li>
+<li><span class="item-label">8.</span> Solve the following problems:</li>
+<li>Problems&nbsp;3-1, 3-2, 3-8, 3-11, 3-12</li>
+</ol>
+
+</section>
+
+<p><section id="supplementary-notes" class="module-section section-text"><h2 id="supplementary-notes">Supplementary Notes</h2>
+
+<p><ol>
+<li><span class="item-label">I.</span> Spherical coordinates \((r, \theta, \phi)\) as in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m505gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Spherical coordinates (\(r\),\(\theta\),\(\phi\)).</figcaption></figure></div>
+
+<p>Any point \(P\) can be located by the radius vector \(\vec{r}\). The radius
+vector \(\vec{r}\) can be expressed in terms of rectangular coordinates as
+<p>\[\vec{r} = x \vec{i} + y \vec{j} + z \vec{k}\]
+<p>Alternatively, the radius vector \(\vec{r}\) can be expressed in terms of
+spherical coordinates \((r, \theta, \phi)\) which are defined as follows:
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">i)</span> the variable \(r\) is the magnitude of \(\vec{r}\), that is, the
+distance from the origin to \(P\).</li>
+<li><span class="item-label">ii)</span> the polar angle \(\theta\) is the angle between the \(z\)-axis and \(\vec{r}\).</li>
+<li><span class="item-label">iii)</span> the azimuthal angle \(\phi\) is the angle in the \(x - y\) plane between
+the \(x\)-axis and the projection of \(\vec{r}\) onto the \(x - y\) plane.
+
+<p>It is relatively easy to derive the following algebraic relations:
+<p>\[x = r \sin \theta cos \phi\]
+<p>\[y = r \sin \theta \sin \phi\]
+<p>\[z = r \cos \theta\]
+<p>Cylindrical coordinates \((r, \theta, z)\) as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
+<p><div class="figure-full"><figure id="fig-2"><img src="figures/m505gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Cylindrical coordinates (\(r\),\(\theta\),\(z\)).</figcaption></figure></div>
+
+<p>In this case, the radius vector \(\vec{r}\) can be expressed in terms of
+cylindrical coordinates \((r, \theta, z)\) which can be defined as follows
+<p><ol>
+
+</ol>
+</li>
+<li><span class="item-label">i)</span> the variable \(r\) is the magnitude of the <em>projection</em> of \(\vec{r}\)
+onto the \(x - y\) plane.</li>
+<li><span class="item-label">ii)</span> the azimuthal angle \(\theta\) is the angle in the \(x - y\) plane between
+the \(x\)-axis and the projection of \(\vec{r}\) onto the \(x - y\) plane.</li>
+<li><span class="item-label">iii)</span> the variable \(z\) is the same as in the rectangular coordinate
+system with \((x, y, z)\).
+
+<p>It is relatively easy to derive the following algebraic relations:
+<p>\[x = r \cos \theta\]
+<p>\[y = r \sin \theta\]
+<p>\[z = z\]</li>
+<li><span class="item-label">II.</span> Superposition and Uniqueness Theorems for Laplace's Equation
+<p>Theorem I is called the Superposition Theorem. It's
+importance rests with the fact that it is sometimes possible to obtain
+a set of functions \(\{ U_n( \vec{r} ) \} ^\infty _{n=1}\) which are all 
+solutions to Laplace's equation
+<p>\[\nabla^2 U_n (\vec{r}) = 0\]
+<p>These solutions can be found by the separation-of-variables method, say,
+in a particular coordinate system. Then, if \(C_n\) are a set of arbitrary
+constants, we can write
+<p>\[U (\vec{r}) = \sum_{n=1}^\infty C_n U_n (\vec{r}) = C_1 U_1 (\vec{r}) +
+C_2 U_2 (\vec{r}) + \ldots\]
+<p>and obtain the result that U(n) also satisfies Laplace's equation since
+<p>\[\nabla^2 U (\vec{r}) = \nabla^2 \left( \sum_{n=1}^\infty C_n U_n (\vec{r})
+\right) = \sum_{n=1}^\infty \nabla^2 U_n (\vec{r}) = 0\]
+<p>Theorem II is called the Uniqueness Theorem. It's
+importance rests with the fact that any solution to Laplace's equation
+which satisfies all boundary conditions on the solution is unique (up
+to an arbitrary additive constant). This means in essence that equation
+(5) of the Supplementary Notes is the <em>general</em> solution to Laplace's
+equation in the particular coordinate system. In practice, then the
+solution of Laplace's equation with a given set of boundary conditions
+proceeds as follows:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">1.</span> Choose a coordinate system which exploits any symmetries in
+the potential problem.</li>
+<li><span class="item-label">2.</span> Write down the expansion in eq.&thinsp;5 for the potential,
+<p>\[U = \sum_n C_n U_n\]</li>
+<li><span class="item-label">3.</span> Use physical and / or mathematical arguments to determine the
+constants \(C_n\) so that \(U\) satisfies all boundary conditions.
+Usually, only a few of the \(C_n\) are non-zero. If the appropriate 
+coordinate system has been chosen, this determination of
+the \(C_n\) is relatively straightforward.</li>
+<li><span class="item-label">4.</span> The expression determined in step 3 must then be the solution
+to the given potential problem up to an arbitrary additive
+constant.
+</li>
+<li><span class="item-label">III.</span> Zonal and Cylindrical Harmonics
+<p>The zonal and cylindrical harmonics are the solutions \(U_n (\vec{r})\) in
+spherical and cylindrical coordinates when the potential is independent
+of the azimuthal coordinate \(\phi\) and \(z\)-coordinate, respectively. The
+expressions for each set of solutions are as follows:
+<p>Zonal harmonics-
+<p>\[U_n = \left\{ \begin{array}{l l}
+r^n P_n (\theta)           & n = 0, 1, 2, \ldots \\
+r^{- (n + 1)} P_n (\theta) & n = 0, 1, 2, \ldots \\
+\end{array} \right. \] 
+<p>The functions \(P_n (\theta)\) are known as Legendre polynomials. They are 
+polynomials in the variable \(\cos \theta\). See Table 3-1 of the text. You will
+need only the first few Legendre polynomials in this course. Then,
+the general solution to Laplace's equations is
+<p>\[U (r, \theta) = \sum_{n = 0}^\infty A_{n + 1} r^n P_n (\theta) +
+\sum_{n = 0}^\infty C_{n+1} r^{- (n + 1)} P_n (\theta)\]
+<p>The constants \(A_{n + 1}\), have been introduced to complement the \(C_{n+1}\) because
+of the two different types of solutions \(U_n\). Each term in the expansion
+in eq.&thinsp;7 can be given a physical interpretation. See Sec.&thinsp;3-5 of the
+text for such an interpretation.
+<p>Cylindrical harmonics-
+<p>\[U_n = \left\{ \begin{array}{l l}
+r^n \cos n \theta, r^n \sin n \theta       & n = 0, 1, 2, \ldots \\
+r^{-n} \cos n \theta, r^{-n} \sin n \theta & n = 0, 1, 2, \ldots \\
+\end{array} \right. \] 
+<p>Then,
+<p>\[U (r, \theta) = \sum_{n = 0}^\infty A_{n + 1} r^n \cos n \theta +
+\sum_{n = 1}^\infty A'_{n + 1} r^n \sin n \theta\]
+<p>\[+ C_1 \ell n r + \sum_{n = 1}^\infty C_{n + 1} r^{-n} \cos n \theta +
+\sum_{n = 1}^\infty C'_{n + 1} r^{-n} \sin n \theta\]
+<p>It may be instructive to write out the first few terms in each sum above.
+Thus,
+<p>\[U (r, \theta) = (A_1 + A_2 r \cos \theta + A_3 r^2 \cos 2 \theta + \ldots )\]
+<p>\[+ (A'_2 r \sin \theta + A'_3 r^2 \sin 2 \theta + \ldots ) + C_1 \ell n r +
+(C_2 \cos \frac{\theta}{r} + C_3 \cos \frac{2 \theta}{r^2} + \ldots ) +\]
+<p>\[(C'_2 \sin \frac{\theta}{r} + C'_3 \sin \frac{2 \theta}{r^2} + \ldots )\]
+<p>Each term in eq.&thinsp;10 above can be given a physical interpretation as
+in the previous case. The constants are chosen so as to satisfy all
+boundary conditions. The method of argument proceeds as outlined in
+Sec.&thinsp;3.5 on the use of zonal harmonics.</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

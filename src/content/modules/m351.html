@@ -1,0 +1,356 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Euler's Method</h2>
+
+<p><h3 id="pcap-1-a">1a. Original Euler's Method</h3>
+
+The simplest algorithm for the numerical solution of first-order differential
+equations of the form
+<p>\[\frac{dq}{dt}(t) = f[q(t),t]\,,\]
+<p>where \(f\) is some known function, is based on the Euler method.
+This method replaces the differential equation by a finite difference
+equation through the substitution of
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>\[\frac{dq}{dt}(t)\simeq\frac{\Delta q}{\Delta t}=\frac{q(t+\Delta t)-q(t)}{\Delta t}\]
+<p>into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+This approximation is the basis of the original Euler method, wherein we
+solve <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> for \(q(t + \Delta t)\):
+<p>\[q(t+\Delta t)=q(t)+\frac{dq}{dt}(t)\Delta t\]
+<p>and obtain \(dq/dt\) from <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
+<p><h3 id="pcap-1-b">1b. Improved Euler's Method</h3>
+
+The basis of the improved Euler's method is the observation that the right
+hand side of <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is a better approximation to the derivative dq/dt at the
+intermediate time \(t + \Delta t/2\) than at the time \(t\).
+This gives:
+<p>\[\frac{dq}{dt}(t+\frac{1}{2}\Delta t)=\frac{q(t+\Delta t)-q(t)}{\Delta t}\,.\]
+<p>The reason for this improvement is illustrated in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> can be rearranged to give:
+<p>\[q(t+\Delta t)\simeq q(t)+\Delta t\frac{dq}{dt}(t+\frac{1}{2}\Delta t\]
+<p>where the derivative at the intermediate time, \(t +\Delta t/2\), can be approximated
+by the average of the derivatives at times \(t\) and \(t + \Delta\).
+<p>\[\frac{dq}{dt}(t+\frac{1}{2}\Delta t)\simeq
+              \frac{1}{2}\left[\frac{dq}{dt}(t+\Delta t)+\frac{dq}{dt}(t)\right]\,.\]
+<p><a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> and <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> yield the improved Euler equation:
+<p>\[q(t+\Delta t)\simeq 
+  q(t)+\frac{\Delta t}{2}\left[\frac{dq}{dt}(t)+\frac{dq}{dt}(t + \Delta t)\right]\,.\]
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m351gr00.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Graphical basis of the improved Euler method.
+The slope of curve (a) is the right side of both <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, that of
+curve (b) is the left side of <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, and that of curve (c) is the left side of
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>. It is obvious that (c)'s slope is a better approximation to (a)'s slope
+than is (b)'s.</figcaption></figure></div>
+
+<p><a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> represents a substantial improvement on Euler's original method
+given in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>, but it requires knowledge of \(dq/dt\) at time \(t + \Delta t\) which,
+through <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, requires \(q(t + \Delta t\)) and that is the very quantity we are
+trying to find!
+The “improved Euler method” specifies that the required \(dq/dt\) at \(t + \Delta t\) is
+to be obtained by: (1) getting a crude estimate of \(q(t + \Delta t\)) from <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>;
+and (2) putting that crude estimate into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> to get the required
+derivative.
+<p><h3 id="pcap-1-c">1c. The RLC Circuit</h3>
+
+In the circuit shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>, an EMF (an applied voltage \(V_a\)) is connected
+across the series combination of a switch \(S\), a resistor \(R\), an inductor \(L\), and
+a capacitor \(C\).
+We are interested in determining how the current in the circuit varies as a
+function of time after the switch is closed.
+Kirchhoff's second rule, otherwise known as the loop equation, states that
+around any closed loop the sum of the potential drops equals the sum of the
+EMF's.
+Applying this rule to the circuit shown in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> after the switch is closed
+gives:
+<p>\[V_R + V_L + V_c = V_a\,.\]
+<p>The voltages across \(R\), \(L\), and \(C\) can be expressed in terms of the current \(I\),
+its time rate of change \(dI/dt\), and the charge \(q\) on the capacitor \(C\):
+<p>\[V_R=IR;\;V_L=L\frac{dI}{dt};\;V_C = q/C\,.\]
+<p>Substitution of <a href="#eqn-9" class="eqn-ref">Eqs.&nbsp;(9)</a> into <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> yields
+<p>\[L\frac{dI}{dt}+IR+q/C = V_a\]
+<p>or:
+<p>\[\frac{dI}{dt}=\frac{1}{L}[V_a - IR -q/C]\,.\]
+<p>In order to find the current \(I\) as a function of time, we must solve <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>
+together with the relation
+<p>\[I=\frac{dq}{dt}\,,\]
+<p>which is the definition of the current flowing away from one plate of the 
+capacitor.
+This is also the current which flows through the elements \(R\) and \(L\) because 
+this is a single loop circuit.
+<a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> can be solved using the Euler methods.
+The two special cases we shall consider are:
+<ol>
+<li><span class="item-label">1</span> Free oscillations of the \(RLC\) circuit when \(V_a\) = (applied voltage) = 0;</li>
+<li><span class="item-label">2</span> Forced oscillations of the \(RLC\) circuit with \(V_a = V_0\,\sin\,\omega t\);</li>
+</ol>
+
+<p>The two first order differential equations, <a href="#eqn-10" class="eqn-ref">Eqs.&nbsp;(10)</a> and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>, can be made
+into a single second order differential equation by differentiating <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>
+with respect to time and substituting it into <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a>.
+This gives:
+<p>\[L\frac{d^2I}{dt^2}+R\frac{dI}{dt}+\frac{I}{C}+\frac{dV_a}{dt}=0\,.\]
+<p>Methods other than Euler's must be used to solve the problem in this form.
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m351gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The RLC series circuit.</figcaption></figure>
+
+<p><h3 id="pcap-1-d">1d. Applying the Two Euler Methods to RLC Circuits</h3>
+
+In the original Euler method we use the first order Taylor expansions:
+<p>\[\begin{aligned}q(t + \Delta t) & = q(t) + q'(t)\,\Delta t \\ I(t + \Delta t) & = I(t) + I'(t)\,\Delta t\end{aligned}\]
+
+<p>where first derivatives have been indicated by primes.
+In the improved Euler method the derivatives \(q'(t)\) and \(I'(t)\) in <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> are
+replaced by the average values:
+<p>\[\frac{1}{2}[q'(t) + q'(t + \Delta t)]\]
+<p>and
+<p>\[\frac{1}{2}[I'(t) + I'(t + \Delta t)]\,.\]
+<p>Note that: \(I(t)\,\equiv\,q'(t)\,\equiv\,dq/dt\).
+<p>The exact sequences of steps followed in the two Euler methods are shown in
+<a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+In order to begin the process we must specify two initial conditions, since
+there are two first order differential equations (or one second order
+equation).
+We shall arbitrarily assume the initial conditions, \(I = 0\) and \(q = 1\) at time
+\(t = 0\).
+We next calculate values for the charge and current at the next value of the 
+time, \(t + \Delta t\), using the original Euler's method [<a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>], as well as an
+updated value for the derivative \(I'(t + \Delta t\)).
+For the original Euler's method we advance the time by \(\Delta t (t\,\rightarrow\,t + \Delta t)\),
+and loop back to repeat the process (dotted line).
+In the improved Euler method we compute improved values for \(q(t + \Delta t\)) and
+\(I(t + \Delta t)\) before completing the loop.
+Note that it was necessary to compute the original values for \(q(t + \Delta t)\) and
+\(I(t + \Delta t)\) before we could get the improved values since the improved values
+make use of the derivatives, \(q'(t + \Delta t)\,\equiv\,I(t + \Delta t)\) and \(I'(t + \Delta t)\),
+found from <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m351gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Flow diagram for the two Euler methods.</figcaption></figure></div>
+
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Several Exact Solutions </h2>
+
+<p><h3 id="pcap-2-a">2a. Zero Applied Voltage</h3>
+
+If the applied voltage \(V_a\) is zero, then in certain cases free oscillations
+can occur in the \(RLC\) series circuit.
+If \(V_a\) is taken to be zero for all times, then \(dV_a/dt\) is also zero, in which
+case <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> has the exact solution:
+<p>\[ I = I_0\,e^{-(R/2Lt)} \sin\,\omega_0t\,,\]
+<p>where
+<p>\[\omega_0=\frac{1}{\sqrt{LC}}\left(1-\frac{R^2C}{4L}\right)^{1/2}\,.\]
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m351gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Computer output for the free underdamped oscillator
+(hand-drawn solid line).
+Also shown is the exponential damping factor (dashed line), computed directly
+from its exact formal expression.
+The times \(t_1\),...,\(t_4\) are one period apart.</figcaption></figure></div>
+
+<p>The computer-generated curve of <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> is the approximate solution obtained
+using the improved Euler's method.
+The gradually decaying oscillations of the curve agree with the general form
+of the exact solution, in which an oscillatory factor, \(\sin\,\omega_0 t\), is multiplied
+by a “damping factor” \(\exp[-(R/2\,L)t]\).
+As long as \(R^2 C/4L\) is much less than one, then <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> which gives a value
+for \(\omega_0\), reduces to
+<p>\[\omega_0\approx\frac{1}{\sqrt{LC}};\;\left[\text{for } R << (4L/C)^{1/2}\right]\,;\]
+<p>where \(\omega_0\) is \(2\pi\) times the frequency of the free oscillations.
+The period \(T\) of the oscillations is given by:
+<p>\[T=\frac{2\pi}{\omega_0}\approx2\pi\sqrt{LC}\,.\]
+<p>The appearance of the damping factor \(e^{(-R/2L)t}\), in <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>, implies that the
+envelope i.e., the non-oscillatory curve drawn tangent to the solution (see
+the hand-drawn dotted curve in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>), should fall to a fraction \(1/e\,\approx\,0.368\)
+of its initial value after a time
+<p>\[\tau=\frac{2L}{R}\,.\]
+<p>By examining the expressions for \(\omega_0\) in <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> we see that \(\omega_0\) will be
+a real number only if 
+<p>\[1-\frac{R^2C}{4L} > 0\,,\]
+<p>which therefore requires that:
+<p>\[ R < (4L/C)^{1/2}\,.\]
+<p>If \(R\) exceeds the critical value \(\sqrt{4 L/C}\). then \(\omega_0\)
+becomes imaginary and the factor \(\sin\,\omega_0 t\) is replaced by the exponential of a
+real number.
+For this “overdamped” case the solution becomes a pure decaying exponential
+and no longer oscillates.
+For this reason, when \(R\) has the borderline value, \(R = \sqrt{4 L/C}\), the
+circuit is said to be criticall damped.
+<p><h3 id="pcap-2-b">2b. Sinusoidal Applied Voltage</h3>
+
+If the applied voltage is a sinusoidal function of time, then forced
+oscillations occur in the \(RLC\) circuit.
+When the applied voltage is given by \(V_a=\,V_0\sin\,\omega t\), then <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> again
+has an exact solution.
+If the initial conditions are chosen properly, the current is a sinusoidal
+function of time, with the same oscillation frequency as the applied voltage:
+<p>\[I = I_m\,\sin(\omega t - \phi)\,,\]
+<p>\[I_m=\frac{V_0}{Z}\]
+<p>and the quantity \(Z\) is known as the impedance and is given by
+<p>\[Z=\left[R^2+\left(\omega L-\frac{1}{\omega C}\right)^2\right]^{1/2}\,.\]
+<p>The quantity \(\phi\) appearing in <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a> is the phase shift which is the relative
+shift between the sine curves describing the applied voltage and the current
+as functions of time; \(\phi\) is given by
+<p>\[\phi=\tan^{-1} \frac{\left(\omega L - \frac{1}{\omega C}\right)}{R}\,.\]
+<p>If the initial conditions are chosen arbitrarily, the solution will not have
+a purely sinusoidal time dependence.
+Generally these departures from a sinusoidal shape occur at times close to
+\(t = 0\) and then gradually disappear.
+For this reason such initial departures from a sinusoidal shape are known as
+transient currents.
+They occur whenever the initial conditions are other than those consistent
+with the specific solution which is purely sinusoidal [<a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a>].
+<a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> shows a computer generated solution obtained using the improved
+Euler's method.
+The initial conditions used in this case (\(q_0 = 1\) and \(I_0 = 0\)), are such that
+there evidently is a transient current present initially.
+After the transient current dies out, the amplitude and phase of the
+resulting sine wave should be consistent with that given by <a href="#eqn-21" class="eqn-ref">Eq.&nbsp;(21)</a>.
+<p><h3 id="pcap-2-c">2c. Resonance in \(RLC\) Circuit</h3>
+
+Like any system whose oscillations are driven by an external source, an \(RLC\)
+circuit can resonate when the oscillation frequency of the external source
+matches the “natural” frequency of the circuit.
+(The natural frequency is the frequency of free oscillations).
+At resonance the amplitude of the current has a greater value than for any
+other frequency.
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m351gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Computer output for \(V_a = V_0\,\sin\,\omega t\),
+showing transient current present at times near \(t = 0\).
+At much later times the function becomes purely sinusoidal.</figcaption></figure></div>
+
+<p>To find the frequency at which the amplitude of the current \(I_m = V_0/Z\) reaches
+its maximum, we must find the frequency for which \(Z\) is a minimum.
+Since the factor (\(\omega L - 1/\omega C)^2\) which appears in <a href="#eqn-22" class="eqn-ref">Eq.&nbsp;(22)</a> can not
+be negative, \(Z\) will have its smallest possible value when this factor is zero:
+<p>\[\left(\omega L-\frac{1}{\omega C}\right)^2 = 0\,.\]
+<p>Solving <a href="#eqn-24" class="eqn-ref">Eq.&nbsp;(24)</a> for \(\omega\) yields
+<p>\[\omega= \frac{1}{\sqrt{L C}}\,.\]
+<p>Note that the resonant frequency given by <a href="#eqn-25" class="eqn-ref">Eq.&nbsp;(25)</a> is the same as the 
+approximate frequency of free oscillations, given by <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a>.
+This means that the circuit shows the greatest “response” (maximum amplitude
+current), when the applied voltage has a frequency equal to the natural
+frequency, i.e., the frequency of free oscillations.
+<p><h3 id="pcap-2-d">2d. Error Analysis</h3>
+
+It is easy to compare the accuracy of the improved and original Euler
+method's.
+In the improved Euler method we find \(q(t + \Delta t)\) using <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> in which the 
+derivative \(dq/dt(t + \Delta t)\) needs to be evaluated using the original Euler
+method, that is:
+<p>\[\frac{dq}{dt}(t+\Delta t)=\frac{dq}{dt}(t)+\Delta t\frac{d^2q}{dt^2}(t)\]
+<p>Combining <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-26" class="eqn-ref">Eq.&nbsp;(26)</a> yields:
+<p>\[q(t+\Delta t)=q(t)+\Delta t\frac{dq}{dt}(t)+\frac{\Delta t^2}{2}\frac{d^2q}{dt^2}(t)\,.\]
+<p>This is the correct Taylor expansion for \(q(t + \Delta t)\) up to terms second order in
+\(\Delta t\).
+The size of the \(\Delta t^2\) term therefore, represents the difference between the 
+original and improved Euler methods.
+Clearly, the accuracy of both methods improves as \(\Delta t\) decreases.
+In the case of the \(RLC\) circuit there are three time intervals of importance:
+<ol>
+<li><span class="item-label">1.</span> The period of free oscillations \(T = 2\pi/\omega_0\), where \(\omega_0\) is given
+by <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a>.</li>
+<li><span class="item-label">2.</span> The damping time for free oscillations, \(\tau = 2L/R\).</li>
+<li><span class="item-label">3.</span> The period of the forced oscillations \(T = 2\pi/\omega\), where \(\omega\) is the
+frequency of the applied voltage: \(V_a(t) = V_0\sin\,\omega t\).</li>
+</ol>
+
+<p>In order for either the original or the improved Euler method to give
+accurate results, the time step \(\Delta t\) must be chosen to be small compared to
+all three of these times.
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Computer Implementation</h2>
+
+<p><h3 id="pcap-3-a">3a. Input</h3>
+
+The program
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>first reads numerical values for the parameters <code>R</code>, <code>L</code>, <code>C</code>, <code>D</code>, <code>N</code>, <code>VO</code>, and <code>W</code>, where
+<p><table class="physnet-table"><tbody><tr><td><code>R</code></td><td>=</td><td>resistance</td></tr><tr><td><code>L</code></td><td>=</td><td>inductance</td></tr><tr><td><code>C</code></td><td>=</td><td>capacitance</td></tr><tr><td><code>DT</code></td><td>=</td><td>\(\Delta t\) (time step)</td></tr><tr><td><code>N</code></td><td>=</td><td>number of time steps</td></tr><tr><td><code>V0</code></td><td>=</td><td>\(V_0\)(amplitude of  applied voltage)</td></tr><tr><td><code>W</code></td><td>=</td><td>\(\omega\) (frequency of applied voltage).</td></tr></tbody></table>
+
+<p>After reading the data and setting the initial conditions, the program
+proceeds to advance the time in the sequence: \(0\), \(\Delta t\), \(2\Delta t\),
+\(3\Delta t\), \ldots , \(N\Delta t\).
+For each new value of the time, it calculates new values of the charge and
+current from the old values, using the improved Euler's method.
+In addition to printing out a table of numerical values giving the current
+at each time, the program also displays a graph of current against time.
+<p><h3 id="pcap-3-b">3b. Output</h3>
+
+The sample output shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> and <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> were obtained using two data cards
+with the following numerical values for the parameters:
+<div class="centered"><table class="physnet-table"><tbody><tr><td></td><td>\(\ccode{R}\)</td><td>\(\ccode{L}\)</td><td>\(\ccode{C}\)</td><td>\(\ccode{DT}\)</td><td>\(\ccode{N}\)</td><td>\(\ccode{V0}\)</td><td>\(\ccode{W}\)</td></tr><tr><td><a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a></td><td>0.2</td><td>2.0</td><td>2.0</td><td>1.0</td><td>55.0</td><td>0.0</td><td>0.00</td></tr><tr><td><a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a></td><td>1.0</td><td>8.0</td><td>8.0</td><td>2.0</td><td>55.0</td><td>0.7</td><td>0.25</td></tr></tbody></table>
+</div>
+
+<p>In the first case, since the applied voltage is zero (\(\ccode{V0} = 0\)), and since the
+values used for <code>R</code>, <code>L</code>, and <code>C</code> satisfy <a href="#ineq-19" class="eqn-ref">Ineq.&nbsp;(19)</a>, the solution is a damped
+oscillatory one, as previously discussed.
+In the second case, the sinusoidally varying applied voltage (\(\ccode{V0}\,\neq\,0\)), yields
+a solution which is also sinusoidal, apart from a transient effect.
+</section>
+
+<p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. A Project: Examine Accuracy</h2>
+
+<p><h3 id="pcap-4-a">4a. Accuracy For Free Oscillations</h3>
+
+Run the program using a number of data sets all of which have \(V_0 = 0\) and
+various values for the other parameters.
+Verify that the <a href="#ineq-19" class="eqn-ref">Ineq.&nbsp;(19)</a> must be satisfied if the solution is to be an
+oscillatory one, by using values of <code>R</code> slightly less than and slightly greater
+than the value for critical damping.
+For the oscillatory solutions, see if their detailed shape agrees with the
+form of the exact solution (equation).
+To verify that the shape of the curve in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a> is correct, we may identify
+the times \(t_1\), \ldots , \(t_4\) at which the current \(I\) has its positive maxima:
+Reading <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, for example, we find:
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td></td><td>\(\mathbf{t_1}\)</td><td>\(\mathbf{t_2}\)</td><td>\(\mathbf{t_3}\)</td><td>\(\mathbf{t_4}\)</td></tr><tr><td>current (\(I\))</td><td>0.2757</td><td>0.1818</td><td>0.0912</td><td>0.0522</td></tr><tr><td>time (\(t\))</td><td>10.0000</td><td>21.0000</td><td>34.0000</td><td>46.0000</td></tr></tbody></table>
+</div>
+
+<p>The time from \(t_1\) to \(t_4\) represents three periods, so we empirically find
+\(\mathcc{T} = (t_4 - t_1)/3 = 12\)&thinsp;sec.
+The theoretical value for the period may be found using <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> which yields
+\(\mathcc{W} = 0.494\) and \(\mathcc{T} = 2\pi/\omega = 12.6\)&thinsp;sec.
+Carry out a similar analysis for your own data.
+<p><h3 id="pcap-4-b">4b. Accuracy For Forced Oscillations, Resonances</h3>
+
+Run the program using a number of data sets with various values for the 
+parameters, except for <code>VO</code> which is kept at some fixed nonzero value.
+In particular, try a range of values for <code>W</code> with the other parameters held
+fixed.
+See if the maximum amplitude current is observed at the predicted resonant
+frequency, [<a href="#eqn-25" class="eqn-ref">Eq.&nbsp;(25)</a>].
+Use enough values for <code>W</code>, above and below resonance, to be able to plot by
+hand a resonance curve (amplitude of the current versus frequency).
+Note, that when you vary <code>W</code> you should also vary <code>DT</code>, since \(\mathcc{DT} = 0.5/\mathcc{W}\).
+This will have the effect of giving the same number of points per cycle
+for each run.
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Fortran, Basic, C++ Programs</h2>
+
+
+All programs are at
+<div class="centered"><a href="http://www.physnet.org/home/modules/support_programs" class="url">http://www.physnet.org/home/modules/support_programs</a></div>
+
+which can be navigated to from the home page at
+<div class="centered"><a href="http://www.physnet.org" class="url">http://www.physnet.org</a></div>
+
+by following the links: \(\rightarrow\) <a href="modules" class="url">modules</a> \(\rightarrow\) <a href="support programs" class="url">support programs</a>,
+where the programs are:
+<div class="centered">
+<a href="m351p1f.for" class="url">m351p1f.for</a>, Fortran;<br>
+<a href="m351p1b.bas" class="url">m351p1b.bas</a>, Basic;<br>
+<a href="m351p1c.cpp" class="url">m351p1c.cpp</a>, C++;<br>
+<a href="lib351.h" class="url">lib351.h</a>, needed Library for C++ program;
+</div>
+
+</section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See “Numerical Solutions of Differential Equations for RC Circuits Using
+Euler's Method” (MISN-0-350). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Runge-Kutta Method for Solving Differential Equations,”
+(MISN-0-367) or “The Numerov Method for Solving Differential Equations,
+Illustrated with the Damped Driven Oscillator,” (MISN-0-39). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">For BASIC, FORTRAN, and C++ implementations, see this module's Computer Program
+Supplement. <a href="#fnref-3" class="fn-back">↩</a></li></ol></aside>

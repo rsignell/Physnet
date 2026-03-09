@@ -1,0 +1,195 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>This unit is a continuation of the material which was started in the
+preceding unit. The new topics include integration and differentiation
+of Fourier series, Parseval's identity, complex Fourier series, and 
+orthonormal functions and series.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read from the middle of page 184 to 185 of Spiegel.
+Read section 14.4 of Arfken.</li>
+<li><span class="item-label">2.</span> Underline in the text or write out the definitions and explanations
+of the terms and concepts of Output Skill K1 using an explanatory equation 
+where necessary. One or two sentences should be sufficient.</li>
+<li><span class="item-label">3.</span> Memorize Theorem 7-2 of Spiegel.</li>
+<li><span class="item-label">4.</span> Memorize and write from memory Theorem 1-11 on page 7 of Spiegel.
+This theorem gives the conditions for differentiating a Fourier
+series term-by-term and having the resultant series converge to
+the derivative of the function. See the Supplementary Notes,
+item 3.</li>
+<li><span class="item-label">5.</span> Read the Supplementary Notes.</li>
+<li><span class="item-label">6.</span> Read these Solved Problems in Spiegel;
+<div class="centered">
+<table class="physnet-table"><tbody><tr><td>[t]l
+7.13 (Parseval's identity)</td></tr><tr><td>7.14 (Differentiation and Integration)</td></tr><tr><td>7.24 (Orthogonal functions)</td></tr></tbody></table>
+
+</div>
+</li>
+<li><span class="item-label">7.</span> Solve these Supplementary Problems in Spiegel:
+<div class="centered">
+<table class="physnet-table"><tbody><tr><td>[t]l
+7.37 (Refer to 7.32b not 7.36b; differentiation)</td></tr><tr><td>7.38 (Parseval's identity)<sup>*</sup></td></tr><tr><td>7.44 (Orthogonal functions)</td></tr><tr><td>7.49 (Orthogonal functions)</td></tr></tbody></table>
+
+</div>
+
+<p><sup>*</sup> Replace 7.38b by
+<p>\[\sum_{n+1}^{\infty} \frac{1}{(2n - 1)^6} = \frac{\pi^6}{960}\,.\]
+<p>Solve Problem&nbsp;14.4.1 (Integration) in Arfken.</li>
+<li><span class="item-label">8.</span> Read through this following example for computing the Fourier
+coefficients \(c_n\) in complex notation:
+<p>Let \(f(x) = 3x\) on \(- \pi \leq x \leq \pi\).
+Compute the Fourier coefficients \(c_n\) where
+<p>\[f(x) = \sum_{n= - \infty}^{\infty} c_n e^{\imath n x}\]
+<p>and
+<p>\[c_n = \frac{1}{2 \pi} \int_{- \pi}^{\pi}
+f(x) e^{- \imath n x}\,dx\,.\]
+<p>Thus
+<p>\[c_n = \frac{3}{2 \pi} \int_{- \pi}^{\pi} x e^{- \imath n x}\,dx\,.\]
+<p>From integral tables,
+<p>\[c_n = \frac{3}{2 \pi} \left[ \frac{e^{- \imath n x}}{- n^2}
+(- \imath n x - 1) \right]_{x = - \pi}^{x = \pi}\]
+<p>and
+<p>\[c_n = \frac{3 \imath (-1)^n}{n}, \; n \neq 0\]
+<p>from \(n = 0\),
+<p>\[c_n = \frac{3}{2 \pi} \int_{-\pi}^{\pi} x\,dx = 0\,.\]
+<p>Thus
+<p>\[f(x) = 3 \imath \sum_{- \infty}^{\infty} \frac{(-1)^n}{n}
+e^{\imath n x}, \; n \neq 0\,.\]
+<p>Of course, the Fourier coefficients can can be found by computing
+\(a_n\) and \(b_n\) and then using the formulas in the Supplementary Notes
+to calculate \(c_n\).
+<p>Problem: Compute the Fourier coefficients \(c_n\) using the method
+outlined in this procedure for these two cases:
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">i)</span> \(f(x) = 1, \;\; - \pi \leq x \leq \pi\).</li>
+<li><span class="item-label">ii)</span> \(f(x) = x^2, \;\; - \pi \leq x \leq \pi\).
+</li>
+</ol>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Supplementary Notes</h2>
+
+<p><h3 id="pcap-3-a">3a. Complex notation and Fourier series</h3>
+
+Suppose \(f(x)\) satisfied Dirichlet conditions on \((- L, L)\).
+Then, at a point of continuity,
+<p>\[f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty}
+\left( a_n \cos\frac{n \pi x}{L} + b_n \sin\frac{n \pi x}{L} \right)\]
+<p>where
+<p>\[a_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\frac{n \pi x}{L}\,dx, \;
+n \geq 1\]
+<p>and
+<p>\[b_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin \frac{n \pi x}{L}\,dx, \;
+n \geq 1\,.\]
+<p>By definition
+<p>\[\cos \phi = \frac{e^{\imath \phi} + e^{- \imath \phi}}{2}\]
+<p>and
+<p>\[\sin \phi = \frac{e^{\imath \phi} - e^{- \imath \phi}}{2 \imath}\,.\]
+<p>Then
+<p>\[f(x) = \frac{a_0}{2} + \sum_{n} \left[ \frac{1}{2} (a_n - \imath b_n)
+e^{\frac{\imath n \pi x}{L}} + \frac{1}{2} (a_n + \imath b_n) e^{- \frac{\imath n \pi x}{L}
+}\right]\]
+<p>\[= \sum_{n=1}^{\infty} \left( \frac{a_n + \imath b_n}{2} \right) 
+e^{-\frac{\imath n \pi x}{L}} + \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( \frac{a_n -
+\imath b_n}{2} \right) e^{\frac{\imath n \pi x}{L}}\,.\]
+<p>Let \(n\) be replaced by \(- n\) in the first summation. So:
+<p>\[f(x) = \sum_{n = -\infty}^{-1} \left( \frac{a_{-n} + \imath b_{-n}}{2} \right) 
+e^{\frac{\imath n \pi x}{L}} + \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( \frac{a_n -
+\imath b_n}{2} \right) e^{\frac{\imath n \pi x}{L}}\,.\]
+<p>Define
+<p>\[c_n = \frac{a_{-n} + \imath b_{-n}}{2} \text{  if } n < 0\]
+<p>\[c_0 = \frac{a_0}{2}\]
+<p>and
+<p>\[c_n = \frac{a_n - \imath b_n}{2} \text{  if } n > 0\,.\]
+<p>Then
+<p>\[f(x) = \sum_{n = -\infty}^{\infty} c_n e^{\frac{\imath n \pi x}{L}}\]
+<p>where
+<p>\[c_n = \frac{1}{2L} \int_{-L}^{L} f(x) e^{-\frac{\imath n \pi x}{L}}\,dx\,.\]
+<p><h3 id="pcap-3-b">3b. Orthogonal functions</h3>
+
+Equations (9), (10), (11), (12), (13), and (15) of Chapter 7 in Spiegel are only
+true if the functions involved are real. If the functions are complex
+as in Supplementary Problem&nbsp;7.44, then these equations need to be
+changed. The change to be made is simply to include complex conjugation
+for one of the functions. So, the more general equations are:
+<p>9': \[\int_a^b A^*(x) B(x)\,dx = 0\]
+<p>10': \[\int_a^b A^*(x) A(x)\,dx = \int_a^b |A(x)|^2\,dx = 1\]
+<p>11': \[\int_a^b \phi_m^*(x) \phi_n(x)\,dx = 0, \;\; m \neq n\]
+<p>12': \[\int_a^b \phi_m^*(x) \phi_n(x)\,dx = \int_a^b |\phi_m(x)|^2\,dx = 1\]
+<p>13': \[\int_a^b \phi_m^*(x) \phi_n(x)\,dx = \delta_{mn}\]
+<p>and
+<p>15': \[\int_a^b \omega(x) \psi_m^*(x) \psi_n(x)\,dx = \delta_{mn}\,.\]
+<p>By definition, the process of complex conjugation is given as
+<p>\[(a + \imath b)^* = a - \imath b\]
+<p>where \(a\) and \(b\) are real and \(\imath = \sqrt{-1}\)&thinsp;.
+<p><h3 id="pcap-3-c">3c. Conditions for differentiating term-by-term</h3>
+
+As mentioned in Procedure 5, the conditions for differentiating a
+Fourier series term-by-term and having the resultant series converge
+to the derivative of the limit of the original series are listed in
+Theorem 1-11 on page 7 of Spiegel. This theorem can be written in
+notation relevant to this Unit as follows:
+<p>Theorem 1-11. If \(f(x)\) satisfied Dirichlet conditions on \((-L, L)\)
+and is continuous at \(x\) so that the series
+<p>\[\frac{a_0}{2} + \sum_{n=0}^{\infty} \left( a_n \cos \frac{n \pi x}{L} +
+b_n \sin \frac{n \pi x}{L} \right)\]
+<p>converges to \(f(x)\) while the series
+<p>\[\frac{\pi}{L} \sum_{n=0}^{\infty} n \left(a_n \sin \frac{n \pi x}{L} -
+b_n \cos \frac{n \pi x}{L} \right)\]
+<p>is <em>uniformly</em> convergent in \((-L, L)\), then
+<p>\[\frac{df}{dx} = \frac{\pi}{L} \sum_{n=0}^{\infty} n \left( a_n \sin
+\frac{n \pi x}{L} - b_n \cos \frac{n \pi x}{L} \right)\,.\]
+<p><h3 id="pcap-3-d">3d. Normalization coefficient</h3>
+
+Given a function \(\psi(x)\) on \(a \leq x \leq b\). The constant \(C\) is called the
+<em>normalization coefficient</em> of \(\psi(x)\) on \(a \leq x \leq b\) if
+<p>\[\psi'(x) = C \psi(x)\]
+<p>\[\int_a^b |\psi'(x)|^2\,dx = 1\,.\]
+<p><h3 id="pcap-3-e">3e. Complete set of functions</h3>
+
+Consider a set of functions \(\{ \psi_n(x) \}_{n=1}^N\) defined on \(a \leq x \leq b\)
+such that
+the \(\psi_n(x)\) are an orthonormal set with weight function \(\omega(x)\). That is,
+<p>\[\int_a^b \omega(x) \psi_m^*(x) \psi_n(x)\,dx = \delta_{mn}\,.\]
+<p>This set of functions is a <em>complete set</em> if no non-trivial function
+\(g(x)\) exists such that
+<p>\[\int_a^b \omega(x) \psi_n^*(x) g(x)\,dx = 0\]
+<p>for all \(n\). Then, we can expand an arbitrary function \(f(x)\) defined on
+\(a \leq x \leq b\) and satisfying certain continuity criterion as
+<p>\[f(x) = \sum_n c_n \psi_n(x)\]
+<p>where
+<p>\[c_n = \int_a^b \omega(x) \psi_n^*(x) f(x)\,dx\,.\]
+<p>Examples:
+<p><ol>
+<li><span class="item-label">(a)</span> \(\left\{ \sqrt{\frac{1}{2L}}, \sqrt{\frac{1}{L}} \sin \frac{n \pi x}{L},
+\sqrt{\frac{1}{L}} \cos\frac{n \pi x}{L} \right\}_{n=1}^{\infty}\)
+<p>is an orthonormal and complete set on \((-L, L)\).</li>
+<li><span class="item-label">(b)</span> \(\left\{\sqrt{\frac{2}{L}} \sin \frac{n \pi x}{L} \right\}_{n=1}^{\infty}\)
+<p>is an orthonormal and complete set on \((0,L)\).</li>
+<li><span class="item-label">(c)</span> \(\left\{ \sqrt{\frac{1}{L}}, \sqrt{\frac{2}{L}} \cos 
+\frac{n \pi x}{L} \right\}_{n=1}^{\infty}\)
+<p>is an orthonormal and complete set on \((0,L)\).
+<p>The weight function \(\omega(x) = 1\) in each case above.</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

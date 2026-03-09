@@ -1,0 +1,79 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>At this stage we shall use the harmonic oscillator to illustrate
+many of the concepts we have developed in previous units. We will
+also introduce raising and lowering operators which are of great use
+in many areas of quantum mechanics.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> The Schrodinger equation is \((T + V) \psi = E \psi\). To express the
+equation in the momentum space representation, it is only
+necessary to express \(T\) and \(V\) in that representation:
+<p>\[T = \frac{p_x^2}{2 m}, \; V = \frac{1}{2} k x^2 = - \frac{1}{2}
+k \hbar^2 \frac{\partial^2}{\partial p_x^2}\]
+<p>
+The equation is thus,
+<p>\[\frac{-\hbar^2 k}{2} \frac{\partial^2 \phi}{\partial p_x^2} + 
+\frac{p_x^2}{2 m} \phi = E \phi\]
+<p>
+where \(\phi\) is the time-independent wave function in momentum space.</li>
+<li><span class="item-label">2.</span> 
+<ol>
+
+</ol>
+</li>
+<li><span class="item-label">a.</span> The equation in procedure 1 is exactly of the same form as
+<p>\[\frac{- \hbar^2}{2 m} \frac{\partial^2 \psi}{\partial x^2} + 
+\frac{1}{2} k x^2 \psi = E \psi\]
+<p>with \(k\) and \(1 / m\) interchanged. Use this observation and the
+known coordinate space wave-functions to write the  normalized
+momentum space wave-functions for \(n = 0, 1\) and 2. Substitute
+your momentum-space wave functions into the Schrodinger equation 
+and verify that they are indeed the required eigenfunctions.
+Also verify the normalization explicitly for \(n = 1\).</li>
+<li><span class="item-label">b.</span> From your previous work, you should know how \(\phi_n (p)\) and 
+\(\psi_n (x)\) are related by Fourier transformation. Write down the 
+connection. Verify this connection explicitly (in either direction)
+for \(n = 0, 1\) and 2.
+</li>
+<li><span class="item-label">3.</span> Define new dimensionless operators by
+<p>\[p \equiv p_x / \hbar \sqrt{\alpha} \text{  and } q \equiv 
+\sqrt{\alpha} x \text{  where  } \alpha \equiv m \omega / \hbar\]
+<p>The raising operator a+ is defined by
+<p>\[a^+ \equiv \frac{1}{\sqrt{2}} (q - ip); \; a \equiv \frac{1}{\sqrt{2}}
+(q + ip)\]
+<p>is the lowering operator.</li>
+<li><span class="item-label">4.</span> Show that \([q, p] = i\). Show that \([a, a^+] = 1\). Express \(p\) 
+and \(q\) in terms of \(a^+\) and \(a\). Show that the Hamiltonian is
+<p>\[1 / 2 (p^2 + q^2) \hbar \omega = (a^+ a + 1 / 2) \hbar \omega\]
+<p>Knowing the eigenvalues of \({\cal H}\), deduce the eigenvalues of \(a^+ a\).
+For this reason \(a^+ a\) is sometimes called the “number operator.”
+BEWARE of non-commuting operators in this computation.</li>
+<li><span class="item-label">5.</span> \[{\cal H} (a \psi_n) = (a^+ a + 1/2) \hbar \omega (a \psi_n) =\]
+\[\frac{1}{2} \hbar \omega a \psi_n + \hbar \omega a^+ a^2 \psi_n =\]
+\[\frac{1}{2} \hbar \omega a \psi_n + \hbar \omega a (a^+ a \psi_n) -
+\hbar \omega [a, a^+ a] \psi_n =\]
+\[\frac{1}{2} \hbar \omega a \psi_n + n \hbar \omega a \psi_n - 
+\hbar \omega [a, a^+ a] \psi_n\]
+<p>Use the commutator of Output Skill R1 to evaluate the commutator
+and obtain the desired result. Follow a similar procedure for
+\({\cal H} (a^+ \psi_n)\).</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

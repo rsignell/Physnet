@@ -1,0 +1,128 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>In this and the following unit we shall briefly explore the Hilbert
+Space in which the operators of quantum mechnaics merrily change one state
+into another. Our aim is to get a better understanding of the relationship 
+between the various possible states of the system and the possible
+properties that these states can have.
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Read chapter 6 up to postulate 3 on page 206. The superposition
+principle is contained in postulate 2 and the subsequent discussion.
+Note that the \(c_i\) in equation 6.3 are in general <em>complex</em> numbers.</li>
+<li><span class="item-label">2.</span> The  Scalar product of two wave-functions \(\psi_a\) and 
+\(\psi_b\) is defined by
+ 
+\[< \psi_a | \psi_b > \equiv \int \psi_a^* (\vec{r}) \, \psi_b (\vec{r}) \,
+d^3 \vec{r}\]
+<p>
+Let \(\phi_a\) and \(\phi_b\) be the momemtum space wave-functions corresponding
+to \(\psi_a\) and \(\psi_b\). Show that
+ 
+\[< \phi_a | \phi_b > \equiv \int \phi_a^* (\vec{p}) \, \phi_b (\vec{p}) \, 
+d^3 \vec{p} = < \psi_a | \psi_b >\]
+<p>
+Because the scalar product is  independent of the  representation of the
+states and depends  only on the  states themselves, we may write
+simply \(< a | b >\) for the scalar product. How is \(< a | b >\) related to
+\(< b | a >\)?</li>
+<li><span class="item-label">3.</span> Continue reading through the beginning of the paragraph in which
+equation 6.12 appears. The necessary properties and the connection
+are contained in postulate 4 and the definitions following it.</li>
+<li><span class="item-label">4.</span> The best deinition of “hermitian operator” to remember is equation
+6.10. If you use equation 6.8, you must be prepared to derive
+equation 6.10 from it.
+ 
+The <em>adjoint</em> or <em>hemitian conjugate</em>, \(Q^+\), of an operator \(Q\) 
+(called “Hermitian adjoint” by the book) is defined by equation 6.11.
+Hermitian operators are therefore their own hermitian conjugates
+and are said to be “self-adjoint.”</li>
+<li><span class="item-label">5.</span> Read up to the theorem at the bottom of page 209 The discussion
+given applies to the case when \(Q\) is the Hamiltonion. More generally
+let \(\psi = \Sigma_i c_i \psi_i\) where \(Q \psi_i = q_i \psi_i\), i.e. the \(\psi_i\) 
+are eigentates of \(Q\)
+with eigenvalues \(q_i\). All possible eigenstates are present in the
+sum (although perhaps with a zero coefficient), and we assume for
+simplicity that the eigenstates are <em>non-degenerate</em>; i.e. there is
+a 1 to 1 correspondence between the eigenstates and the eigenvalues.
+The probability of obtaining \(q_i\) from a measurement of \(Q\) when the
+system is in the state \(\psi\) is \(| < \psi_i | Q \psi > |^2\). Assume that
+\(< \psi_i | \psi_j > = \delta i j\).
+(You will prove this below). Then show that \(| < \psi_i | Q \psi > |^2 = |c_i|^2\) 
+provided \(\psi\) is normalized.
+ 
+The  act of measurement forces the system into an eigenstate of \(Q\).
+If \(Q\) commutes with the Hamiltonian (see below), the system will
+remain in that eigenstate until disturbed again. We shall discuss
+this further in the next unit.</li>
+<li><span class="item-label">6.</span> Read the 2 proofs and be sure you can reproduce them.</li>
+<li><span class="item-label">7.</span> Read the rest of the section. Make sure you can derive equation
+6.16. You need not prove the corollary at the bottom of page 211,
+equation 6.16 already gives the result. Now solve problems&nbsp;6.l;
+6.2 a, c; 6.3, 6.4, 6.5 to gain some practice with the ideas we've
+introduced. Once again, you are reminded that the energy operator
+is \({\cal H}\), and  not the expression suggested in problem&nbsp;6.2b.</li>
+<li><span class="item-label">8.</span> Read section 2 through the end of the proof of the corollary on
+page 213. The conclusion that \([P, Q] = 0\) does not follow from the
+argument given in the book. It is <em>indeed</em> possible for \(\psi\) to be
+a simultaneous eigenstate of \(P\) and \(Q\) even if \([Q, P] \neq 0\). However,
+if for <em>every</em> eigenvalue of \(P\), say \(p_i\), there is an eigenfunction
+\(\psi_i\) which is also an eignefunction of \(Q\), it follows that \([P, Q] = 0\).
+ 
+What are the implications of this for the measurement process?
+Problem&nbsp;6-5 shows that unless \(\psi\) is an eigenfunction of \(Q\), \(\Delta Q\) for
+that state is non-zero. Therefore, in order to be able to measure
+\(P\), \(Q\) simultaneously to arbitrary accuracy \((\Delta P = \Delta Q = 0\)), we 
+require the existence of a complete family of simultaneous eigenstates
+of \(P\) and \(Q\). (More on “completeness” in the next unit). This in
+turn requires \([P, Q] = 0\). To summarize:
+ 
+
+It is possible to simultaneously measure two observables to
+arbitrary accuracy if and only if they commute.
+ 
+Commuting observables are called “compatible” for this reason. In
+view of the above discussion we see at once that we cannot
+simultaneously measure \(x\) and \(p_x\) to arbitrary accuracy, agreeing with
+the uncertainty principle. We also see that in order to have a set
+of energy eigenstates which are eigenstates of an operator \(Q\), we
+require \([Q, {\cal H}] = 0\).</li>
+<li><span class="item-label">9.</span> An eigenvalue is said to be  degenerate if and only if there exist
+two linearly independent wave-functions \(\psi_1\) and \(\psi_2\) which are both
+eigenfunctions corresponding to the eigenvalue. (Linearly
+independent means that \(\psi_1\) is not constant multiple of \(\psi_2\).) Two
+eigenstates (eigenfunctions) are said to be degenerate if and
+only if they correspond to the same eigenvalue and are linearly
+independent.</li>
+<li><span class="item-label">10.</span> Be certain that you can reproduce the proof of the corollary on
+page 213.</li>
+<li><span class="item-label">11.</span> Read the rest of section 6.2. Be sure you can derive equation
+6.18. Most operators do not explicity depend on the time so
+that \(\partial Q / \partial t = 0\). Equation 6.18 then shows that the expectation
+value of \(Q\) is constant in time if \([Q, {\cal H}] = 0\). When a measurment of
+\(Q\) is made on a system, the system is forced into an eigenstate
+Of \(Q\). The expectation value of \(Q\) in the eigenstate is, of course,
+the eigenvalue. If \([Q, {\cal H}] = 0\), this expectation value is constant
+in time. Let the eigenvalue (expectation value) be \(q_i\). Referring
+to equation 6.16, what are the values of the \(c\)'s as functions of
+time? How does this prove the statement at the end of procedure 4?</li>
+<li><span class="item-label">12.</span> For additional practice, solve problems&nbsp;6.6, 6.7 and 6.9.</li>
+</ol>
+
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

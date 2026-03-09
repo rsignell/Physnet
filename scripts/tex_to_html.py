@@ -233,6 +233,10 @@ class PhysnetConverter:
     def _dispatch(self, name, text, i):
         """Handle one macro. Return (html_fragment, new_pos)."""
 
+        # Empty name: backslash followed by non-alpha (digit, space, etc.) — skip it
+        if not name:
+            return '', i
+
         # ── Inline math ──
         if name == 'm':
             arg, i = get_arg(text, i)
@@ -303,9 +307,13 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             return f'<a href="#fig-{num}" class="fig-ref">Fig.&nbsp;{num}</a>', i
 
-        if name == 'Eqnref':
+        if name in ('Eqnref', 'Eqref'):
             num, i = get_arg(text, i)
             return f'<a href="#eqn-{num}" class="eqn-ref">Eq.&nbsp;({num})</a>', i
+
+        if name == 'EqnXref':
+            ref, i = get_arg(text, i)
+            return f'Eq.&nbsp;({ref})', i
 
         if name == 'Eqnsref':
             num, i = get_arg(text, i)
@@ -326,6 +334,230 @@ class PhysnetConverter:
             mid = ref.split('-')[-1]
             return (f'<a href="../m{mid}/" class="module-ref">'
                     f'MISN-0-{mid}</a>'), i
+
+        # ── Reif-style section structure (older module format) ──
+        if name == 'SubSect':
+            title, i = get_arg(text, i)
+            title_html = self._process(title)
+            sid = re.sub(r'\W+', '-', title.lower()).strip('-')
+            return f'<h2 id="subsect-{sid}">{title_html}</h2>\n', i
+
+        if name == 'xpSubSubSect':
+            num, i = get_arg(text, i)
+            letter, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            title_html = self._process(title)
+            sid = f'{num}{letter}'
+            return f'<h3 id="pcap-{sid}">{num}{letter}. {title_html}</h3>\n', i
+
+        if name in ('TxtFigureRef', 'TxtFigRef'):
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="fig-ref">Fig.&nbsp;{sec}{num}</span>', i
+
+        if name == 'TxtSectRef':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="sect-ref">Sect.&nbsp;{sec}{num}</span>', i
+
+        if name in ('TxtEqnRef',):
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="eqn-ref">Eq.&nbsp;({sec}{num})</span>', i
+
+        if name == 'FullFigure':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            cap, i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            fig_id = f'{sec}{num}'
+            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
+            return (f'<figure id="fig-{fig_id}" class="module-figure">'
+                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
+                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        if name in ('TxtProb',):
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            title_html = self._process(title)
+            pid = f'{sec}{num}'
+            return f'<div class="problem" id="prob-{pid}"><p><strong>Problem&nbsp;{pid}: {title_html}</strong>\n', i
+
+        if name in ('ProbAns',):
+            content, i = get_arg(text, i)
+            return f'<p class="prob-ans"><em>Answer:</em> {self._process(content)}</p>\n', i
+
+        if name in ('AnsRef',):
+            ref, i = get_arg(text, i)
+            return f'<span class="ans-ref">[{ref}]</span>', i
+
+        if name in ('TxtHelp',):
+            content, i = get_arg(text, i)
+            return f'<span class="help-ref">{self._process(content)}</span>', i
+
+        if name == 'DisplayEqn':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            eq, i = get_arg(text, i)
+            eid = f'{sec}{num}'
+            return f'<div class="display-eqn" id="eqn-{eid}">\\[{eq}\\]</div>\n', i
+
+        if name == 'UnframedFigure':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            cap, i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            fig_id = f'{sec}{num}'
+            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
+            return (f'<figure id="fig-{fig_id}" class="module-figure">'
+                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
+                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        if name == 'LeftFigure':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            cap, i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            fig_id = f'{sec}{num}'
+            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
+            return (f'<figure id="fig-{fig_id}" class="module-figure module-figure-left">'
+                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
+                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        if name == 'TwoFigures':
+            # \TwoFigures{sec}{num1}{cap1}{file1}{sec}{num2}{cap2}{file2}
+            args, i = get_n_args(text, i, 8)
+            sec1, num1, cap1, f1, sec2, num2, cap2, f2 = args
+            id1, id2 = f'{sec1}{num1}', f'{sec2}{num2}'
+            s1 = f'../../modules/{self.module_id}/{f1}.svg'
+            s2 = f'../../modules/{self.module_id}/{f2}.svg'
+            return (f'<div class="two-figures">'
+                    f'<figure id="fig-{id1}" class="module-figure">'
+                    f'<img src="{s1}" alt="Figure {id1}">'
+                    f'<figcaption><strong>Fig.&nbsp;{id1}.</strong> {self._process(cap1)}</figcaption>'
+                    f'</figure>'
+                    f'<figure id="fig-{id2}" class="module-figure">'
+                    f'<img src="{s2}" alt="Figure {id2}">'
+                    f'<figcaption><strong>Fig.&nbsp;{id2}.</strong> {self._process(cap2)}</figcaption>'
+                    f'</figure></div>\n'), i
+
+        if name in ('SugFrameRef', 'PraFrameRef'):
+            ref, i = get_arg(text, i)
+            label = 'Suggestion' if name == 'SugFrameRef' else 'Practice'
+            return f'<span class="frame-ref">[{label}&nbsp;{ref}]</span>', i
+
+        if name == 'ProbHead':
+            title, i = get_arg(text, i)
+            # optional second arg (section letter)
+            if i < len(text) and text[i] == '{':
+                _, i = get_arg(text, i)
+            return f'<p><strong>{self._process(title)}</strong></p>\n', i
+
+        if name == 'SubSectTitle':
+            title, i = get_arg(text, i)
+            sid = re.sub(r'\W+', '-', title.lower()).strip('-')
+            return f'<h3 id="ss-{sid}">{self._process(title)}</h3>\n', i
+
+        if name == 'TxtRelRef':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="eqn-ref">Eq.&nbsp;({sec}{num})</span>', i
+
+        if name in ('MinorEqn',):
+            eq, i = get_arg(text, i)
+            return f'\\[{convert_math(eq)}\\]\n', i
+
+        if name == 'MajorDisplayEqn':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            eq, i = get_arg(text, i)
+            eid = f'{sec}{num}'
+            return f'<div class="display-eqn" id="eqn-{eid}">\\[{convert_math(eq)}\\]</div>\n', i
+
+        if name in ('boldm',):
+            content, i = get_arg(text, i)
+            return f'<strong>\\({convert_math(content)}\\)</strong>', i
+
+        if name in ('TxtPrac',):
+            content, i = get_arg(text, i)
+            return f'<div class="practice-note">{self._process(content)}</div>\n', i
+
+        if name == 'TxtDefinition':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            term, i = get_arg(text, i)
+            defn, i = get_arg(text, i)
+            did = f'{sec}{num}'
+            return (f'<div class="definition" id="def-{did}">'
+                    f'<strong>Definition&nbsp;{did}: {self._process(term)}</strong> — '
+                    f'{self._process(defn)}</div>\n'), i
+
+        if name == 'TxtDefRef':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="def-ref">Defn.&nbsp;{sec}{num}</span>', i
+
+        if name == 'TxtExample':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            eid = f'{sec}{num}'
+            return (f'<div class="example" id="ex-{eid}">'
+                    f'<p><strong>Example&nbsp;{eid}: {self._process(title)}</strong>\n'), i
+
+        if name == 'TxtHelpTwo':
+            h1, i = get_arg(text, i)
+            h2, i = get_arg(text, i)
+            return (f'<span class="help-refs">{self._process(h1)} {self._process(h2)}</span>'), i
+
+        if name in ('MeSuppl',):
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name in ('TxtRule',):
+            return '<hr>\n', i
+
+        if name in ('TxtAdvice',):
+            content, i = get_arg(text, i)
+            return f'<div class="advice-box">{self._process(content)}</div>\n', i
+
+        if name in ('unitname',):
+            content, i = get_arg(text, i)
+            return f'<em>{self._process(content)}</em>', i
+
+        # ── Reif-style cross-refs (Table) ──
+        if name == 'Table':
+            cols, i = get_arg(text, i)   # number of columns
+            fmt, i = get_arg(text, i)    # column format
+            caption, i = get_arg(text, i)
+            cap_html = self._process(caption)
+            return f'<div class="table-caption"><strong>{cap_html}</strong></div>\n', i
+
+        # ── Particle symbols ──
+        if name == 'lel':
+            return '<em class="lepton">e</em>', i
+
+        if name == 'ccon':
+            return 'c', i
+
+        if name == 'lcr':
+            # \lcr{left}{center}{right} — three-column layout, use center
+            left, i = get_arg(text, i)
+            center, i = get_arg(text, i)
+            right, i = get_arg(text, i)
+            parts_html = []
+            for part in (left, center, right):
+                h = self._process(part)
+                if h.strip():
+                    parts_html.append(h)
+            return ' '.join(parts_html), i
 
         # ── Section structure ──
         if name == 'Sect':
@@ -503,6 +735,17 @@ class PhysnetConverter:
 
         if name == 'newline':
             return '<br>\n', i
+
+        if name in ('par',):
+            # Paragraph break — consume one braced group if present (Reif style \par{...})
+            if i < len(text) and text[i] == '{':
+                content, i = get_arg(text, i)
+                return f'<p>{self._process(content)}', i
+            return '<p>', i
+
+        if name in ('nointerlineskip', 'allowbreak', 'obeylines',
+                    'sloppy', 'fussy', 'emergencystretch'):
+            return '', i
 
         if name in ('newpage', 'clearpage', 'pagebreak'):
             return '', i
@@ -815,8 +1058,9 @@ class PhysnetConverter:
             return f'<em class="quark">{_QUARKS[name]}</em>', i
 
         _MESONS = {
-            'mpi': 'π', 'mK': 'K', 'mKb': 'K̄', 'meta': 'η', 'mrho': 'ρ',
-            'momega': 'ω', 'mphi': 'φ', 'mW': 'W', 'mgamma': 'γ',
+            'mpi': 'π', 'mK': 'K', 'mKb': 'K̄', 'meta': 'η', 'metap': 'η′',
+            'mrho': 'ρ', 'momega': 'ω', 'mphi': 'φ', 'mW': 'W', 'mgamma': 'γ',
+            'mAtwo': 'A₂', 'mf': 'f', 'mfp': 'f′',
         }
         if name in _MESONS:
             return f'<em class="meson">{_MESONS[name]}</em>', i
@@ -1124,8 +1368,9 @@ def convert_module(module_dir, module_id):
     dat_text = read('-dat.tex')
     meta = parse_dat(dat_text, conv) if dat_text else {}
 
-    # Convert each section
-    tx_html  = conv.convert(read('-tx.tex'))
+    # Convert each section (try -tx.tex first, then -b.tex as fallback)
+    tx_text = read('-tx.tex') or read('-b.tex')
+    tx_html  = conv.convert(tx_text)
     ps_html  = conv.convert(read('-ps.tex'))
     as_html  = conv.convert(read('-as.tex'))
     me_html  = conv.convert(read('-me.tex'))

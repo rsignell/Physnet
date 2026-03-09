@@ -1,0 +1,1135 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p><h3 id="pcap-1-a">1a. Classical vs. Quantum Distributions</h3>
+
+While the Boltzmann distribution adequately describes
+the distribution of particle energies in many systems (such
+as gases at normal temperatures and pressures), it fails
+completely in systems where quantum effects are important.
+One very important case occurs in the study of the properties
+of metals. The so-called conduction electrons in a
+metal may be considered as a “gas” confined to the interior
+of the metal. Application of the Boltzmann distribution
+to this gas results in incorrect conclusions concerning
+the contributions of the electrons to the specific heat
+and magnetic susceptibility of the metal. In such cases
+it is necessary to use the correct quantum statistical
+distribution.
+<p><h3 id="pcap-1-b">1b. Quantum Distributions: Fermi-Dirac and Bose-Einstein</h3>
+
+There are two different quantum distributions since
+there are two fundamentally different types of particles--fermions,
+which obey the Pauli exclusion principlet, and
+bosons, which are not restricted by the exclusion principle.
+Fermions are particles which have half-odd integer
+spin such as electrons, protons, neutrons, and some nuclei.
+These particles have a Fermi-Dirac energy distribution.
+Bosons are particles with zero or integer spin such as
+photons, pions, and some nuclei. These particles have a
+Bose-Einstein energy distribution. In situations where
+classical physics provides an adequate description, the
+Boltzmann distribution is a close approximation to both
+the Fermi-Dirac and Bose-Einstein distributions.
+<p>No two fermions can occupy exactly the same quantum state.
+<p><h3 id="pcap-1-c">1c. Distribution Among Energy Levels</h3>
+
+The distribution of particles among energy levels
+is described by giving the occupation numbers \(N_i\), the
+number of particles having energy \(E_i\). The index \(i\)
+ranges over a set of values (integers, for example)
+which distinguish the possible energies which the particles
+can have. There are two important quantities
+which are related to the distribution. One, the Fermi
+Energy �F is the energy of the highest occupied level
+at absolute zero temperature. The other quantity is
+the chemical potential&nbsp; which is equal to the Fermi
+Energy at absolute zero but decreases as temperature
+increases, eventually becoming negative. We discover
+that as the temperature increases or density decreases,
+the limit of the Fermi Distribution is the Boltzmann
+Distribution.
+<p><sup class="fn-ref"><a href="#fn-The chemical potential appears as a normalization constant in our
+discussion, but it is an important quantity in thermodynamics and
+statistical mechanics where it appears as the quantity which determines
+the equilibrium concentration of reactants in chemical
+reactions. The term \Quote{chemical} is to be interpreted in a very
+broad sense to include all sorts of reactions which proceed to an
+equilibrium state--nuclear and elementary particle reactions,
+transitions between various energy levels of atoms and molecules,
+transitions between states of ionization of atoms, to name just a
+few. For example, see the book by L.D. Landau and E.M. Lifshitz,
+\textit{Statistical Physics}, Addison-Wesley; Reading, MA (1958), Chapters 10
+and 11." id="fnref-The chemical potential appears as a normalization constant in our
+discussion, but it is an important quantity in thermodynamics and
+statistical mechanics where it appears as the quantity which determines
+the equilibrium concentration of reactants in chemical
+reactions. The term \Quote{chemical} is to be interpreted in a very
+broad sense to include all sorts of reactions which proceed to an
+equilibrium state--nuclear and elementary particle reactions,
+transitions between various energy levels of atoms and molecules,
+transitions between states of ionization of atoms, to name just a
+few. For example, see the book by L.D. Landau and E.M. Lifshitz,
+\textit{Statistical Physics}, Addison-Wesley; Reading, MA (1958), Chapters 10
+and 11.">The chemical potential appears as a normalization constant in our
+discussion, but it is an important quantity in thermodynamics and
+statistical mechanics where it appears as the quantity which determines
+the equilibrium concentration of reactants in chemical
+reactions. The term \Quote{chemical} is to be interpreted in a very
+broad sense to include all sorts of reactions which proceed to an
+equilibrium state--nuclear and elementary particle reactions,
+transitions between various energy levels of atoms and molecules,
+transitions between states of ionization of atoms, to name just a
+few. For example, see the book by L.D. Landau and E.M. Lifshitz,
+\textit{Statistical Physics}, Addison-Wesley; Reading, MA (1958), Chapters 10
+and 11.</a></sup><h3 id="pcap-1-d">1d. Distribution per Unit Energy Interval</h3>
+
+By multiplying the number of particles in an
+energy level by the number of levels per unit energy
+interval we obtain the distribution of particles per
+unit energy interval. This allows us to replace sums
+over energy levels by integrals over a range of
+energies, a replacement which is generally a convenience.
+However this convenience involves an approximation: we
+are replacing a discrete set of energy levels with a
+continuous distribution, a number of levels per unit
+energy interval, called the density of states.
+<p><sup class="fn-ref"><a href="#fn-The approximation involved is much like describing a string by
+its linear mass density (i.e., mass per unit length) although
+we know that the string is really composed of discrete masses
+(molecules, atoms, elementary particles). In the case of the
+Fermi Energy Distribution the error involved is proportional
+to $1/N$ where $N$ is the total number of particles. For macroscopic
+systems $N$ is usually greater than about $10^{19}$." id="fnref-The approximation involved is much like describing a string by
+its linear mass density (i.e., mass per unit length) although
+we know that the string is really composed of discrete masses
+(molecules, atoms, elementary particles). In the case of the
+Fermi Energy Distribution the error involved is proportional
+to $1/N$ where $N$ is the total number of particles. For macroscopic
+systems $N$ is usually greater than about $10^{19}$.">The approximation involved is much like describing a string by
+its linear mass density (i.e., mass per unit length) although
+we know that the string is really composed of discrete masses
+(molecules, atoms, elementary particles). In the case of the
+Fermi Energy Distribution the error involved is proportional
+to $1/N$ where $N$ is the total number of particles. For macroscopic
+systems $N$ is usually greater than about $10^{19}$.</a></sup>Armed with the density of states function and the energy
+distribution function we discover that the Fermi Energy
+is directly related to the number of particles per unit
+volume. We also determine the chemical potential as a
+function of temperature and density.
+<p><h3 id="pcap-1-e">1e. Peculiar Properties of a Fermi Gas</h3>
+
+When we apply the Fermi distribution to the problems
+of calculating the pressure and specific heat of a gas of
+fermions we discover a behavior at low temperatures and
+high densities which is quite unlike the properties pre-
+dicted by the Boltzmann distribution. While the specific
+heat of a Boltzmann gas is constant, the specific heat of
+the Fermi gas goes to zero as the temperature goes to
+zero. On the other hand, the pressure of a Boltzmann
+gas goes to zero as the temperature goes to zero, but the
+pressure of a Fermi gas goes to a constant value greater
+than zero. These peculiar properties are effects of the
+Pauli Exclusion Principle. Even at absolute zero all
+the particles cannot be in the lowest energy state but
+must fill all the lowest states sequentially. Thus the
+aggregate has a non-zero total energy and a non-zero
+pressure.
+<p><sup class="fn-ref"><a href="#fn-It is this so-called degenerate pressure of electrons which prevents
+the ultimate gravitational collapse of most stars which have used up
+all of their thermonuclear energy sources. Normally a star as
+massive as the sun is prevented from collapsing under the weight of
+its own gravitational forces by sources of heat energy which provide
+the pressure to keep it in equilibrium. When the energy sources are
+used up the star begins to cool and collapse. As the density in-
+creases, the electrons are ionized from the atoms and form an
+electron gas. If the electrons were not fermions the collapse would
+continue indefinitely as the star cooled. However because the
+electron gas becomes degenerate the pressure does not drop to zero
+and thus eventually supports the star against further collapse. The
+collapse is halted when the star has reached a size not much larger
+than the earth (the original volume was $10^6$ times the earth's volume)
+
+and the density of the material composing it is about \m{100,000\unit{g/cm\up{3}}}.
+Recently evidence of \Quote{dead} stars composed of a degenerate neutron
+gas has been discovered. These neutron stars are only about 10 miles
+in diameter and have densities of \m{10^{14}\unit{g/cm\up{3}}}." id="fnref-It is this so-called degenerate pressure of electrons which prevents
+the ultimate gravitational collapse of most stars which have used up
+all of their thermonuclear energy sources. Normally a star as
+massive as the sun is prevented from collapsing under the weight of
+its own gravitational forces by sources of heat energy which provide
+the pressure to keep it in equilibrium. When the energy sources are
+used up the star begins to cool and collapse. As the density in-
+creases, the electrons are ionized from the atoms and form an
+electron gas. If the electrons were not fermions the collapse would
+continue indefinitely as the star cooled. However because the
+electron gas becomes degenerate the pressure does not drop to zero
+and thus eventually supports the star against further collapse. The
+collapse is halted when the star has reached a size not much larger
+than the earth (the original volume was $10^6$ times the earth's volume)
+
+and the density of the material composing it is about \m{100,000\unit{g/cm\up{3}}}.
+Recently evidence of \Quote{dead} stars composed of a degenerate neutron
+gas has been discovered. These neutron stars are only about 10 miles
+in diameter and have densities of \m{10^{14}\unit{g/cm\up{3}}}.">It is this so-called degenerate pressure of electrons which prevents
+the ultimate gravitational collapse of most stars which have used up
+all of their thermonuclear energy sources. Normally a star as
+massive as the sun is prevented from collapsing under the weight of
+its own gravitational forces by sources of heat energy which provide
+the pressure to keep it in equilibrium. When the energy sources are
+used up the star begins to cool and collapse. As the density in-
+creases, the electrons are ionized from the atoms and form an
+electron gas. If the electrons were not fermions the collapse would
+continue indefinitely as the star cooled. However because the
+electron gas becomes degenerate the pressure does not drop to zero
+and thus eventually supports the star against further collapse. The
+collapse is halted when the star has reached a size not much larger
+than the earth (the original volume was $10^6$ times the earth's volume)
+
+and the density of the material composing it is about \m{100,000\unit{g/cm\up{3}}}.
+Recently evidence of \Quote{dead} stars composed of a degenerate neutron
+gas has been discovered. These neutron stars are only about 10 miles
+in diameter and have densities of \m{10^{14}\unit{g/cm\up{3}}}.</a></sup></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Fermi-Dirac Statistics</h2>
+
+<p><h3 id="pcap-2-a">2a. The Fermi-Dirac Distribution</h3>
+
+The Fermi-Dirac distribution for a system of \(N\)
+non-interactingt fermions in thermal equilibrium at
+absolute temperature \(T\) is:
+<p>\[\mathrm{(F-D Distr.)  } N_i = \frac{g_i}{e^{(\epsilon_i - \mu)/kT}+1}\]
+<p>The quantum-mechanically allowed energy levels of the
+fermions are denoted by \(\epsilon_i\) and the numbers \(g_i\) are the
+number of different quantum states corresponding to the
+level \(\epsilon_i\). (Example: Suppose \(\epsilon_1\), \(\epsilon_2\),..., etc. are the
+energy levels in a hydrogen atom. Then the corresponding \(g1\), \(g_2\),... etc. are
+\(g_1 = 2\), \(g_2 = 8\), \(g_3 = 18\),... <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>)
+Note that \(N_i\) is the average number of particles having energy \(\epsilon_i\),
+\(k\) is Boltzmann's constant (\(k = 1.38 \times 10^{23}JK^{-1})\), and \(\mu\)
+is a constant called the chemical potential which is
+determined by the requirement that all the \(N_i\) add up to
+\(N\), the total number of particles in the system:
+<p>\[N = \sum_i \frac{g_i}{e^{(\epsilon_i - \mu)/kT}+1}\]
+<p>Usually, \(N\) will be a very large number--for example, the
+number of valence electrons which constitute the conduction
+electron gas in sodium is \(2.5 \times 10^{28}\) per cubic
+meter. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p><sup class="fn-ref"><a href="#fn-Non-interacting means that we neglect forces between particles such
+as gravitational or electrical. A gas of non-interacting particles
+is often called a \Quote{perfect gas}. In theory we must allow some interaction,
+in particular, occasional collisions between particles
+which allow the system to come to thermal equilibrium. If there
+were no interactions at all then a system not initially in an
+equilibrium state would never come to thermal equilibrium. For
+example, imagine that all the particles initially had the same velocity.
+Without random collisions the velocities would forever remain the
+same. The presence of random collisions, however, would
+eventually lead to an equilibrium distribution of velocities." id="fnref-Non-interacting means that we neglect forces between particles such
+as gravitational or electrical. A gas of non-interacting particles
+is often called a \Quote{perfect gas}. In theory we must allow some interaction,
+in particular, occasional collisions between particles
+which allow the system to come to thermal equilibrium. If there
+were no interactions at all then a system not initially in an
+equilibrium state would never come to thermal equilibrium. For
+example, imagine that all the particles initially had the same velocity.
+Without random collisions the velocities would forever remain the
+same. The presence of random collisions, however, would
+eventually lead to an equilibrium distribution of velocities.">Non-interacting means that we neglect forces between particles such
+as gravitational or electrical. A gas of non-interacting particles
+is often called a \Quote{perfect gas}. In theory we must allow some interaction,
+in particular, occasional collisions between particles
+which allow the system to come to thermal equilibrium. If there
+were no interactions at all then a system not initially in an
+equilibrium state would never come to thermal equilibrium. For
+example, imagine that all the particles initially had the same velocity.
+Without random collisions the velocities would forever remain the
+same. The presence of random collisions, however, would
+eventually lead to an equilibrium distribution of velocities.</a></sup><h3 id="pcap-2-b">2b. Functional Dependence of the Chemical Potential</h3>
+
+The chemical potential \(\mu\) depends in general on
+three things: (a) the composition of the system;
+(b) the number of particles per unit volume; and
+(c) the temperature. By composition of the system
+we mean such considerations as the properties of the
+particles composing the system (masses, spins, etc.
+of the particles) and the external forces applied to
+them.
+<p><sup class="fn-ref"><a href="#fn-For example, in the free electron theory of metals we imagine that
+the boundary of the metal constitutes a box within which the con-
+duction electrons are free to move. So we describe the forces on
+the electrons in this case by saying that as long as an electron is
+within the box, there is zero force on it but if it comes to the
+side of the box it feels a strong (infinite for an \Quote{ideal} box)
+repulsive force which prevents it from escaping from the box." id="fnref-For example, in the free electron theory of metals we imagine that
+the boundary of the metal constitutes a box within which the con-
+duction electrons are free to move. So we describe the forces on
+the electrons in this case by saying that as long as an electron is
+within the box, there is zero force on it but if it comes to the
+side of the box it feels a strong (infinite for an \Quote{ideal} box)
+repulsive force which prevents it from escaping from the box.">For example, in the free electron theory of metals we imagine that
+the boundary of the metal constitutes a box within which the con-
+duction electrons are free to move. So we describe the forces on
+the electrons in this case by saying that as long as an electron is
+within the box, there is zero force on it but if it comes to the
+side of the box it feels a strong (infinite for an \Quote{ideal} box)
+repulsive force which prevents it from escaping from the box.</a></sup>Thus composition determines the energy levels
+\(\epsilon_i\) and the multiplicities \(g_i\) which appear in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+We will see later that the right hand side of <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>
+is proportional to the volume \(V\) of the system therefore
+\(\mu\) depends on \(N/V\), the number of particles per
+unit volume. And finally, the dependence on temperature
+is obvious since the temperature occurs explicitly
+in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>.
+<p><figure id="fig-1" class="fig-left-framed"><img src="figures/m168gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Occupation Probability for temperatures above zero.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Occupation Probability: Effect of the Exclusion Principle</h3>
+
+The Fermi-Dirac distribution given in <a href="#eqn-" class="eqn-ref">Eq.&nbsp;()</a>1</section>
+ illustrates
+the effect of the Pauli exclusion principle: no more
+than one fermion can occupy a given quantum state. Since
+there are \(g_i\) quantum states with energy \(\epsilon_i\), the ratio
+\(N_i/g_i\) is the average number of particles in one quantum
+state. Denote this ratio, the Fermi-Dirac Occupation Probability, \(P_i\):
+<p>\[(\mathrm{F-D Occ. Prob}.)\;\;P_i = \frac{N_i}{g_i} = \frac{1}{e^{\epsilon_i-\mu)/kT}+1}\]
+<p>But the denominator of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> is always greater
+than one since the exponential is always positive. <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+Thus \(P_i\) is always a number between zero and one--there
+can never be more than one particle in a given quantum
+state. The number \(P_i\) can be thought of as the probability
+that the state is occupied. <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> shows a qualitative
+plot of \(P_i\) vs. \(\epsilon_i\) for some temperature greater than zero.
+Note that at the energy \(\epsilon_i = \mu\), the occupation probability is
+\(P_i = 1/2\).
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m168gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Occupation Probability for zero temperature.</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. Absolute Zero Temperature: The Fermi Energy</h3>
+
+At absolute zero temperature the \(N\) fermions occupy
+the \(N\) lowest energy quantum states and the states higher
+than the \(N\) lowest are empty.
+<p><sup class="fn-ref"><a href="#fn-We know that, for a gas with a Boltzmann distribution, the tempera-
+ture is proportional to the average energy of a particle of the gas
+(see U157, U159). Thus at zero temperature all of the particles
+should be in the lowest energy state (which is zero energy for free
+particles). In the case of fermions, the Pauli exclusion principle
+tells us that no more than one particle can occupy a given quantum
+state. Therefore the lowest average energy per particle is achieved
+when the $N$ lowest energy quantum states are filled sequentially." id="fnref-We know that, for a gas with a Boltzmann distribution, the tempera-
+ture is proportional to the average energy of a particle of the gas
+(see U157, U159). Thus at zero temperature all of the particles
+should be in the lowest energy state (which is zero energy for free
+particles). In the case of fermions, the Pauli exclusion principle
+tells us that no more than one particle can occupy a given quantum
+state. Therefore the lowest average energy per particle is achieved
+when the $N$ lowest energy quantum states are filled sequentially.">We know that, for a gas with a Boltzmann distribution, the tempera-
+ture is proportional to the average energy of a particle of the gas
+(see U157, U159). Thus at zero temperature all of the particles
+should be in the lowest energy state (which is zero energy for free
+particles). In the case of fermions, the Pauli exclusion principle
+tells us that no more than one particle can occupy a given quantum
+state. Therefore the lowest average energy per particle is achieved
+when the $N$ lowest energy quantum states are filled sequentially.</a></sup>The energy level which
+corresponds to the highest filled state is called the
+Fermi level and the value of the energy is called the
+Fermi energy \(\epsilon_F\). As we will see, \(\epsilon_F\) is related only to
+the number density
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>
+<p>of particles and the masses of
+the individual particles. We can verify that the states
+up to \(\epsilon_F\) but not beyond are filled and also that the
+value of \(\mu\) at \(T = 0\) is equal to the Fermi energy \(\epsilon_F\) by
+examining the expression for \(P_i\) given in <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>) in
+the limit as \(T \rightarrow 0\). <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a>. <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a> shows the graph of
+\(P_i\) vs \(\epsilon_2\) for \(T = 0\).  A gas of fermions which is at absolute zero
+temperature is said to be “degenerate.”
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Fermion Energy Distribution</h2>
+
+<p><h3 id="pcap-3-a">3a. Energy Distribution Function</h3>
+
+The energy distribution function \(f(\epsilon)\) is defined
+this way:
+<p>\(f(\epsilon)d\epsilon =\) number of particles per unit volume
+which have energies in the range \(\epsilon\) to \(\epsilon+d\epsilon\).
+<p>The Fermi-Dirac energy distribution function may be obtained
+from the Fermi-Dirac occupation probability by
+multiplying the occupation probability by the number of
+quantum states per unit volume per unit energy interval
+\(g(\epsilon)\):
+<p>\[f(\epsilon)d\epsilon = p(\epsilon) \times g(\epsilon)d\epsilon\]
+<p>where:
+<ul>
+<li>\(f(\epsilon)d\epsilon\) is the number of particles/volume in the energy range
+      \(\epsilon\) to \(\epsilon+d\epsilon\),</li>
+<li>\(p(\epsilon)\) is the probability of a particle occupying the state, and</li>
+<li>\(g(\epsilon)d\epsilon\) is the number of states/volume in the energy range
+      \(\epsilon\) to \(\epsilon+d\epsilon\).</li>
+</ul>
+
+The quantity \(g(\epsilon)\) is called the “density of states”
+<p><sup class="fn-ref"><a href="#fn-The word \textit{density} in density of states refers to the fact that
+$g(9(\epsilon)$
+is the number of states per unit energy interval---not to the fact
+that it also happens to be a quantity per unit volume." id="fnref-The word \textit{density} in density of states refers to the fact that
+$g(9(\epsilon)$
+is the number of states per unit energy interval---not to the fact
+that it also happens to be a quantity per unit volume.">The word \textit{density} in density of states refers to the fact that
+$g(9(\epsilon)$
+is the number of states per unit energy interval---not to the fact
+that it also happens to be a quantity per unit volume.</a></sup>and for a system of free
+<p><sup class="fn-ref"><a href="#fn-The term \Quote{free} implies a system of fermions with no forces applied
+to them except that they are confined to a box of a given volume." id="fnref-The term \Quote{free} implies a system of fermions with no forces applied
+to them except that they are confined to a box of a given volume.">The term \Quote{free} implies a system of fermions with no forces applied
+to them except that they are confined to a box of a given volume.</a></sup>fermions of mass \(m\) and spin \(s\) the expression is found to be
+<p><sup class="fn-ref"><a href="#fn-See Appendix B, \Quote{Density of States.}" id="fnref-See Appendix B, \Quote{Density of States.}">See Appendix B, \Quote{Density of States.}</a></sup>\[g(\epsilon) = \begin{cases}
+                      \frac{2s+1}{4\pi^2} \left \frac{2m}{\hbar^2}^{3/2} \sqrt{\epsilon} &
+                            for \epsilon \gte 0. \\
+                      0 & for \epsilon < 0.\\
+                      \end{cases}
+                      \]
+                      
+
+Using \(p(\epsilon)\) from <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>) and \(g(\epsilon)\) from <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>)
+we obtain
+<p><sup class="fn-ref"><a href="#fn-We substituted $s = 1/2$ in obtaining \Eqnref{5}) since the fermions which
+we will usually deal with are electrons, protons, or neutrons. All have $s = 1/2$." id="fnref-We substituted $s = 1/2$ in obtaining \Eqnref{5}) since the fermions which
+we will usually deal with are electrons, protons, or neutrons. All have $s = 1/2$.">We substituted $s = 1/2$ in obtaining \Eqnref{5}) since the fermions which
+we will usually deal with are electrons, protons, or neutrons. All have $s = 1/2$.</a></sup>the Fermi-Dirac Distribution Function:
+<p>\[f(\epsilon) =
+  \frac{1}{2\pi^2}\left(\frac{2 m}{\hbar^2}\right)^3/2 \frac{\epsilon}[e^(\epsilon-\mu/kT\]+1.</section>
+
+<p>The three functions, \(p(\epsilon)\), \(g(\epsilon)\), and \(f(\epsilon)\), are shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m168gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The number of particles per unit energy
+                              interval (c) is the product of the number of states
+                              per unit energy interval (b) and the occupation
+                              probability of a state (a).</figcaption></figure></div>
+
+<p><h3 id="pcap-3-b">3b. Relation Between the Fermi Energy and Number Density</h3>
+
+The Fermi Energy \(\epsilon_F\) is proportional to the two-thirds power
+of the number density of particles \(n\), is
+inversely proportional to their masses \(m\), and also
+depends on the spin of the particles. For spin one-half
+particles the relation is:
+<p>\[\epsilon_F = \frac{\hbar^2}{2m}\left(3\pi^2n\right)^{2/3}\]
+<p><a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>) is derived by using the definition of \(\epsilon_F\). At
+absolute zero temperature all the energy states from
+\(\epsilon = 0\) to \(\epsilon = \epsilon_F\) are occupied so that the total number of
+particles \(n\) in a unit volume is just the total number of
+states between \(\epsilon = 0\) and \(\epsilon = \epsilon_F\). The total number of
+states is found by integrating the density of states from
+\(\epsilon = 0\) to \(\epsilon = \epsilon_F\). Thus
+<p>\[N = \int_{0}^{\epsilon_F} g(\epsilon) d\epsilon =
+            \frac{1}{2\pi^2}\left(\frac{2m}{\hbar^2}\right)^{3/2} \int_0^{\epsilon_F}\sqrt{\epsilon}d\epsilon\]
+<p>Doing the integral in <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> we obtain <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
+<p><h3 id="pcap-3-c">3c. Chemical Potential as a Function of Temperature</h3>
+
+<p>Equationref2 determines \(\mu\) as a function of temperature.
+This equation may be rewritten in terms of the energy distribution function
+<p>\[N = \int_{-\infty}^{+\infty} V f(\epsilon) d\epsilon =
+              \int_{-\infty}^{+\infty} \frac{Vg(\epsilon)d\epsilon}{e^{(\epsilon - \mu)/kT}+1}\]
+<p>where \(V\) is the volume of the system. Substituting for
+\(g(\epsilon)\) from <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> this becomes
+<p><sup class="fn-ref"><a href="#fn-We have again put $s = 1/2$ in the expression for $g(\epsilon)$." id="fnref-We have again put $s = 1/2$ in the expression for $g(\epsilon)$.">We have again put $s = 1/2$ in the expression for $g(\epsilon)$.</a></sup>\[n = \int_0^\infty \frac{1}{2\pi^2}\left(2m\]\hbar ^2\right )^3/2 \(\dfrac{\sqrt{\epsilon} d\epsilon}{e^{\epsilon - \mu)/kT}+1}\)
+<p>where \(n = N/V\) is the number density of particles.
+<p>For \(T > 0\), the integral is of a type known as a Fermi-Dirac integral:
+<p>\[F_r(z) = \int_0^\infty \frac{x^r dx}{e^{x-z}+1}\]
+<p>Integrals of this type have been tabulated in several
+places.
+<p><sup class="fn-ref"><a href="#fn-J.\,McDougall and E.C.\,Stoner, Phil.\,Trans.\,Roy.\,Soc.\,London, \textbf{237}, 67
+(1938). A.C.\,Beer, M.N.\,Chase, P.F.\,Choquard, Helv.\,Phys.\,Acta, \textbf{28},
+529	(1955).	R.E.\,Dingle, Appl.\,Sci.\,Res., Sec.\,B, \textbf{62}, 25 (1957)." id="fnref-J.\,McDougall and E.C.\,Stoner, Phil.\,Trans.\,Roy.\,Soc.\,London, \textbf{237}, 67
+(1938). A.C.\,Beer, M.N.\,Chase, P.F.\,Choquard, Helv.\,Phys.\,Acta, \textbf{28},
+529	(1955).	R.E.\,Dingle, Appl.\,Sci.\,Res., Sec.\,B, \textbf{62}, 25 (1957).">J.\,McDougall and E.C.\,Stoner, Phil.\,Trans.\,Roy.\,Soc.\,London, \textbf{237}, 67
+(1938). A.C.\,Beer, M.N.\,Chase, P.F.\,Choquard, Helv.\,Phys.\,Acta, \textbf{28},
+529	(1955).	R.E.\,Dingle, Appl.\,Sci.\,Res., Sec.\,B, \textbf{62}, 25 (1957).</a></sup>If we make the substitution of variables
+\(x = \epsilon/kT\) and \(z = \mu/kT\) then <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> becomes
+<p>\[n = \frac{1}{2\pi^2}\left(\frac{2mkT}{\hbar^2}\right)^{3/2}
+             \int_0^\infty \frac{\sqrt{\epsilon} dx}{e^{x-z}+1}\,. \; \help{7}\]
+<p>The integral occurring in <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> is \(F_{1/2}(z)\) which is
+usually denoted simply as \(F(z)\). Thus
+<p>\[n = \frac{1}{2\pi^2}\left(\frac{2mkT}{\hbar^2}\right)^{3/2} F\left(\frac{\mu}{kT}\,.\]
+<p>It is convenient to replace \(n\) in <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> by substituting
+its expression in terms of \(\epsilon_F\), <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, since some constants
+like \(\hbar\), \(\pi\), and \(m\) cancel making the resulting expression
+simpler:
+<p>\[\frac{2}{3}\left(\frac{\epsilon_F}{kT}\right)^{3/2} = F\left(\frac{\mu}{kT}\,.\]
+<p>Equationref13 can be inverted numerically to find
+\(mu\) as a function of temperature and Fermi energy. The result
+is shown in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>. To make the graph universal we have plotted it
+using \(\epsilon_F\) as the unit of energy.
+The chemical potential has the dimensions of energy so \(\mu/\epsilon_F\) is
+the ordinate while \(kT/\epsilon_F\) is the abscissa. The principal features
+of \(mu\) as a function of \(kT\) are that \(mu \rightarrow \epsilon_F\) as
+\(kT/\epsilon_F \rightarrow 0\) and \(\mu \rightarrow -\infty\) as \(kT/\epsilon_F \rightarrow \infty.
+Although it is not apparent from the graph it is also
+true that \)\mu /kT \rightarrow  -\infty \( as \)kT/\epsilon _F \rightarrow  \infty \(\,.
+
+\CaptionedLeftFramedFigure{4}{Chemical potential as a function of temperature.}{m168gr04}
+
+\CaptionedFullFramedFigure{5}{Fermi occupation probability p vs. e/e
+                              for several values of the ratio kT/e.}
+
+\CaptionedFullFramedFigure{6}{Fermi energy distribution f. To make the
+                              graph universally applicable, the dimensionless
+                              quantity feF/n is plotted as the ordinate.}
+
+\pcap{3}{d}{Occupation Probability and Energy Distribution: Variation With
+Temperature and Density}
+The graphs
+
+\Footnote{The graphs were plotted by solving \Eqnref{13} for \)\mu \( given a value
+for \)kT/\epsilon _F\( and substituting this value of \)\mu \( in \Eqnsref{3} and \Eqnssref{5}.}
+
+in \Figsref{5} and \Figssref{6} illustrate the characteristics of the Fermi-Dirac occupation
+probability and energy distribution for various temperatures and densities.
+To make the graphs universally applicable all quantities are given in terms of
+dimensionless variables. For example, energy is measured
+in units of \)\epsilon _F\( so the abscissas of the graphs show \)\epsilon /\epsilon _F\(.
+Since \)f\( has the dimensions of (energy)\)^-1\((volume)\)^-1\(
+the ordinate of \Figref{6} is \)f\epsilon _F/n\( which is dimensionless.
+Also, each curve is labeled by the value of the dimensionless ratio \)kT/\epsilon _F\(.
+Thus the set of curves in each figure can be taken to represent curves for different
+temperatures at a fixed \)\epsilon _F\( (i.e., at a fixed number
+density \)n\( since \)\epsilon _F\( is directly related to \)n\( by \Eqnref{6}
+or they may represent different number densities for a fixed temperature.
+When the ratio \)kT/\epsilon _F\( is large we can say that the temperature is high
+(or the density is low) and when the ratio \)kT/\epsilon _F\( is small the
+temperature is low (or the density is high). For
+example the curve labeled \)kT = .01 \epsilon _F\( represents a
+temperature one hundred times smaller than the temperature represented by the
+curve labeled \)kT = \epsilon _F\( if we consider a system of fixed density.
+On the other hand, if we consider the temperature to be fixed, the
+curve \)kT = \epsilon _F\( represents a density \)n\( of 1000 times
+less than the density represented by the curve \)kT = .01 \epsilon _F\(. \help{4}
+
+\CaptionedFullFramedFigure{7}{Boltzmann and Fermi-Dirac distributions
+                              compared for high temperature or low density.}{m168gr07}
+
+\pcap{3}{e}{Transition to the Boltzmann Distribution}
+Examining \Figref{5}, we can observe the transition
+from a degenerate Fermi gas (\)kT/\epsilon _F = 0\() to a gas which
+is more and more closely described by the Boltzmann distribution
+as \)kT/\epsilon _F\( becomes large. When \)kT = 0\(, \Figref{5}
+shows that all the states up to \)\epsilon _F\( are filled while
+those above \)\epsilon _F\( are empty. When the temperature (or
+density) is such that \)kT = .01 \epsilon _F\( the distribution
+
+\Footnote{This case is especially interesting since it represents the
+situation for conduction electrons in a metal at room temperatures. The
+number density of such electrons in a typical metal is such that \)\epsilon _F\(
+is about 2 or 3 eV. For example, sodium has a Fermi energy of
+3.l\,eV. \help{3} Room temperature (about 300\,\text{K}) corresponds to
+\)kT = .026<span class="unit">&thinsp;eV</span>\( so \)kT/\epsilon _F \approx  .Ol\(.}
+
+is still very close to the zero temperature distribution with
+about 1\% of the particles having been raised
+from states within a few times \)kT\( below \)\epsilon _F\( to states
+within a few times \)kT\( above \)\epsilon _F\(. The chemical potential
+is now a little smaller than \)\epsilon _F\(, more precisely
+\)\mu  = .99992 \epsilon _F\(. As the temperature increases (or
+density decreases), more and more particles go into
+higher states and \)mu\( decreases further. At \)kT = .2 \epsilon _F\(,
+\)\mu  = .965 \epsilon _F\(. At \)kT = .5 \(\epsilon_F\), \(mu = .743 \epsilon_F\).
+At \(kT = \epsilon_F\), \(mu\) has become negative and at \(kT = 10 \epsilon_F\),
+\(\mu\) has become very large and negative. The curve in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> for
+4kT = 10 \epsilon _F\( looks almost like a straight line, but if
+we plot it on a different scale as in \Figref{7}, we see
+that it is very close to an exponentially decreasing
+distribution. For comparison, the Boltzmann distribution
+\)\exp [(\mu -\epsilon )/kT]\( is plotted as the dashed line.
+For higher temperatures (or lower densities) the Fermi
+distribution will more and more closely approximate
+the Boltzmann distribution. This is so since \)mu\( becomes more and more
+negative as \)kT/\epsilon _F\( gets larger so that even when
+\)\epsilon  = 0\(, the exponential term in the denominator of the
+Fermi-Dirac distribution is much larger than one.
+For \)\epsilon  > 0\(, the term is even larger,
+so we can neglect the \Quote{1} in the denominator and the
+expression becomes that for the Boltzmann distribution.
+Thus the Boltzmann distribution is the limit of the
+Fermi-Dirac distribution for either high temperatures or low densities.
+}
+
+\Sect{4}{Applications}{\SectType{TextMultiPara}}{
+
+\pcap{4}{a}{Calculatin the Pressure and Specific Heat of a Perfect Gas}
+The pressure and specific heat of a perfect gas
+
+\Footnote{A perfect gas is a gas of non-interacting particles. See the
+          footnote in Sect.\,2a.}
+
+may be calculated very simply once the energy per
+unit volume (energy density) \)u\( of the gas has been
+determined. The equation of state of the gas which
+relates its pressure \)P\(, volume, and temperature is
+obtained from the relation
+
+\Footnote{This relation holds for a perfect gas. However the relation depends
+on the assumption that the velocities of the particles are much
+smaller that the speed of light so that the effects of special rela-
+tivity are not important. For an ultra-relativistic gas, i.e , one whose
+particles have velocities very nearly the speed of light, the
+relation becomes P = u/3.}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+\Eqn{14}{P = \frac{2}{3} u\,.}
+
+The specific heat, or heat capacity at constant volume
+per unit volume, \)c_v\(, is obtained from the relation
+
+\Footnote{The heat capacity at constant volume is defined to be the heat
+energy absorbed per unit temperature change. The specific heat CV
+is the heat capacity per unit volume: c = ~Q/~T where ~Q = heat
+absorbed by a unit volume of gas for a Yemperature change ~T. Con-
+servation of energy tells us that the heat absorbed QQ must equal
+the change in energy ~u if the volume remains constant so
+c = du/dT.}
+
+\Eqn{15}{c_v = \frac{du}{dT}\,.}
+
+For example, in a perfect Boltzmann gas of monatomic
+particles the average energy of a particle is
+
+\Eqn{16}{\bar{\epsilon}_{Boltz} = \frac{3}{2} k T\,.}
+
+For a gas whose density is n particles per unit volume,
+therefore, the total energy per unit volume is
+
+Boltz Boltz 2                        (17)
+
+Thus the pressure is
+
+  PB 1 = nkT = NkT                   (18)
+and the specific heat is
+
+     v Boltz = 2-nk.                 (19)
+
+The calculations (sections 4b and 4c, following) for the
+case of a Fermi gas lead to Fermi-Dirac integrals which
+in general must be evaluated numerically. However, we
+can obtain approximate expressions in the two limiting
+cases: the low density, high temperature (Boltzmann)
+limit and the low temperature, high density (degenerate)
+limit. It is left as an exercise [E-9] to verify that
+in the high temperature or low density limit, the energy,
+pressure, and specific heat of the Fermi gas go to the
+Boltzmann values [5-14]. In section 4d we outline the
+calculations for the degenerate limit.
+
+\pcap{4}{b}{Energy of a Perfect Fermi Gas}
+
+To obtain an expression for the total energy of a
+Fermi gas we note that
+
+f(�)d� = # of fermions per unit volume
+in the energy range � to �+d�
+
+and so
+
+�f(�)d� = energy per unit volume of the
+fermions in this energy range.
+                   U168                  21
+
+So the total energy per unit volume is
+
+u = J ~f (�)d�
+
+2 ~ 2 ( ~ 2 )    J~o ( � -1l ) / k T    d �
+
+(2m) 3/2 (kT) 5/21 x   dx
+2rr2 ~           � eX- Z+l
+( 2m) 3/ 2 (kT) 5/ 2 F 3/ 2 (kT) -
+
+The average energy per particle is
+
+� = u = 32 ~F 3/2 (kT) / F3/2 (~F) �     (21)
+
+\pcap{4}{c}{Pressure and Specific Heat of a Perfect Fermi Gas}
+
+The equation of state is obtained by finding ~ as a
+function of temperature and density from Eq.\,(12) or
+(13), putting this result in (20) and then using the
+relation P = 2u/ 3:
+
+(2m) 3/2 (kT) 5/ F3/2 (kT)
+
+The specific heat at constant volume may be obtained from
+the relation CV = du/dT. The results must be evaluated
+numerically since we do not have explicit analytic ex-
+pressions for the Fermi-Dirac integrals.
+
+\pcap{4}{d}{The Degenerate Limit: Low Temperature, High Density}
+
+For the nearly degenerate gas, i.e., kT<<�F, the
+case when the temperature is low and/or the density is
+high, we can derive approximate analytic expressions for
+the energy density u, the pressure P, and the specific
+heat CV in terms of temperature and density. We obtain
+the following approximate expression for u using the
+U168                  22
+
+asymptotic expansion for F3/2(~/kT) given in Appendix A
+
+[ 5- 5 ] :
+
+u ~ 3 n~F 3/2 2 ~15/2[l + 5(1rkT)2      ]
+
+We must also obtain ~ as a function of temperature from
+
+Eq.\,(13) . Substituting the expansion for F (Il/kT) given
+in the Appendix A, Eq.\,(A5) we get:
+
+2 (kF) 3/ 2 ~ 2 ( 1~ ) 3/ 2 [ 1 + 1 (~kT) 2 ]
+
+Or
+        [ 1  +  1 ( Ir kT ) 2 ] 2 / 3          ( 2 4 )
+
+So [S-15]
+
+�F  ~  11[l  +  ~( ~1 )2] �                    (25)
+
+So [S-16]
+
+       F [1  -  112 (~kT) ] �                  (26)
+
+Substitute (26) into (23) and keep terms only up to
+(kT) 2, then [S- 1 7 ]
+
+u ~ ~ nEF[l + l52(1r~kT)2] .                 (27)
+
+Using the relations P = 2u/3 and CV = du/dT we obtain
+expressions for the pressure and specific heat of the
+nearly degenerate gas [S-19]:
+
+PD   ~ -- n~F[l + 152( ~ ) ]                (28)
+
+Cv Deg       2  ~F   �                         (29)
+U168                  23
+
+Thus we see that the pressure for a nearly degenerate
+gas is much larger than for a Boltzmann gas while the
+specific heat is much smaller:
+
+2 ~F ~ 1 as T + �
+Boltz
+
+Cv Deg ~ ~ kT << 1 as T + O.
+v Boltz       F
+}
+
+\Sect{A}{FERMI-DIRAC INTEGRALS}{\SectType{TextMultiPara}}{
+
+\pcap{A}{a}{Definition of Fr(z).
+
+The Fermi-Dirac integrals are:
+
+Fr(z) f ~_z 1                                  (Al)
+
+The most often used integrals are F3/2(z) which occurs
+in determining the total energy of a system of fermions
+and Fl/2(z) which occurs in determining the chemical
+potential ~ in terms of number density n and temperature
+
+\pcap{A}{b}{Convergent Series When z ~ O
+
+For z < O and for values of r > -1, there is a con-
+vergent series expansion for (Al)
+
+F (z) = r (r+l) ~ )n r+l ~              (A2)
+n=l        n
+
+where r (r+l) is the gamma function. If z << -1 then the
+first few terms of the series give a good approximation
+to Fr(z). Since the series is alternating the error
+
+in using the first N terms of the series is less
+than
+
+(N~l)z
+r (r+l) e      +l
+
+N+l)r
+
+~Some properties of the gamma function are: r(r+l) = rr(r);
+if r is a positive integer then r(r+l) = r!; r(3/2) = ~-/2;
+r(5/2) = 2 r(2) For more details see, for example, the book
+
+by G. Arfken. Mathematical ~ethods for Physicists, 2nd ed.
+(Academic Press, New York 1970) c.10.
+U168                   25
+
+Thus, for example, for r = 1/2
+
+F(z) ~ ~ eZ for z << -1.                 (A3)
+
+The percentage error in using one term is less than
+
+eZ/2~ which is about 13
+and 2 
+
+\pcap{A}{c}{Asymptotic Series When z > O}
+
+The series (A2) does not converge if z > O. In
+this case there exists a so-called asymptotic series
+the first two terms of which are given belowt
+
+Fr(Z) ~ Zr+l {1 + ~      + ...} .       (A4)
+
+The fact that the series is \Quote{asymptotic} means that one
+cannot obtain an arbitrarily good approximation by taking
+a sufficient number of terms. In fact, for any given
+value of z, there is an optimum number of terms which
+gives the best approximation and taking a greater number
+of terms gives a poorer approximation! Both the optimum
+number of terms and the quality of the approximation in-
+crease as z becomes larger. For example, for r = 1/2,
+
+F(z) ~ 2 z3/2 {1 + ~ + . . . } for z >> 1. (A5)
+
+The two terms shown are optimum for z 3 1.5 and there
+is about 1-1/2
+z gets larger (at z = 6 the error is only . 1
+
+F3/2(Z) ~ 25 Z5/2{1 + 5~2 + ...}   for z >> 1. (A6)
+
+A method for obtaining this series is described by L.D. Landau and
+E.M. Lifshitz in Statistical Physics (Addison-Wesley, Reading, ~A,
+1958) p. 163-4.
+}
+
+\Sect{B}{DETERMINI.~G THE DENSITY OF STATES}{\SectType{TextMultiPara}}{
+
+\pcap{B}{a}{Free Particles in a Box: Overview
+
+~Y
+
+Figure Bl.
+
+We will determine the density of states for a free
+particle of mass m and spin s confined to a cubic box of
+edge L. Although we have chosen free particles (no ex-
+ternal forces) and a cubic box to make the calculation
+simple, the result can be shown to hold for particles
+moving under any arbitrary external forces and confined
+to a volume of any shape or size~. The procedure we use
+is as follows. First determine the quantum mechanically
+allowed states expressed in terms of the allowed values
+of momenta that the particle can have. Since momentum
+is a vector, the allowed values will be represented as
+points in the three dimensional momentum space whose
+axes are the components of the momentum p , p , and p .
+Knowing the allowed values we can then determine the
+number of allowed values per unit volume of momentum
+
+~R. Courant and D. Hilbert. Methods of Mathematical Physics, Vol. 1,
+First Engl ish Edition (Interscience; New York, 1953) pp. 429-445.
+The discussion in Courant and Hilbert requires a knowledge of the
+properties of the Schrodinger Equation and some familiarity with
+differential equations.
+U168                   27
+
+space. Since there are 2s+1 spin orientations for a
+particle of spin s we must multiply the number of
+allowed momentum values per unit volume of momentum
+space by 2s+1 to obtain the total number of quantum
+states per unit volume of momentum space. We can
+then convert this to the number of states per unit
+magnitude of momentum interval (this involves an
+approximation which becomes more exact as the magni-
+tude of the momentum gets larger and larger). Finally
+we can convert the number of states per unit magnitude
+of momentum interval to the number of states per
+unit energy interval.
+
+\pcap{B}{b}{Determining the Allowed Momentum Values
+
+� � ~ h
+
+h
+
+,S2L
+
+j 2hL
+
+Figure B2. Allowed states as points in momentum space.
+
+To determine the allowed momentum values we use
+a few basic principles of quantum mechanics. Particles
+are represented by waves whose wavelength ~ is related
+to their momentum p by the de Broglie condition
+p = ~k where k = 2 ~
+U168                      ~g
+
+The interpretation of the waves is that the square of
+the absolute value of the amplitude of the wave at a
+given point represents the probability of finding the
+particle near that point. Thus the fact that the par-
+ticles are confined to the box means that the waves must
+have zero amplitude at the boundaries of the box, i.e.,
+they must be standing waves. Finally, free particles
+are represented by sinusoidal waves. If we assume that
+the box has faces along x = O, y = O, z = O, x = L,
+y = L, z = L as depicted in \Figref{Bl}, an expression
+which automatically satisfies the condition that it is
+zero along the z = O face, the y = O face, and the z = O
+face is
+sin(kxx)sin(kyy)sin(kzz),                (Bl)
+
+where kx, ky, and kz are related to the x, y, and z
+components of momentum by the deBroglie condition
+
+P X = ~kX
+
+py = ~ky
+
+Pz = ~kz .
+
+To be zero along the x = L face, the y = L face, and the
+z = L face we must have
+
+k L = n
+kyL = ny~
+
+kzL = nz~,
+where nx, ny, and nz are integers. Thus the only allowed
+U168                   29
+
+states are those which have momenta
+
+Px = ~kx nx L
+
+py = ~ky = n
+
+pz = ~kz = n ~ ~
+
+where n , nv, n = +1, +2, +3, etc~. Not all of these are
+different states. A state obtained by changing the sign
+of n , n , or n is the same as the original state since
+it only changes the sign of the expression (Bl) and this
+has no significance according to the principles of quan-
+tum physics. The allowed states are depicted in \Figref{B2}
+as dots plotted in momentum space (coordinate axes p ,
+py, pz). The dots have coordinates ~n /L, ~ny/L,
+~n /L so it is apparent that they are arranged in a cubic
+lattice with successive dots separated by ~/L = h/2L.
+
+\pcap{B}{c}{Density of Quantum States in Momentum Space
+
+In order to determine the number of quantum states
+per unit volume of momentum space we note that in \Figref{B2}
+each dot which represents an allowed momentum value has a
+cube of momentum space surrounding it of edge (h/2L). To-
+gether all these cubes fill up momentum space. Thus each
+dot occupies a volume of momentum space of (h/2L)3. Also
+there is a dot in each of the eight octants which represents
+the same momentum state (corresponding to a change of sign
+of one or more of nx, ny, nz). So there is a total volume
+of momentum space of
+
+8(2-L' L3 '
+
+Note that n , n , n cannot be zero since if any of them are zero the
+
+wave expression (Bl) is identically zero - which would mean that no
+particle exists in the box.
+U168                  30
+
+for each momentum state. Thus the density of states in
+momentum space, i.e., the number of states per unit volume
+of momentum space is the reciprocal of h3/L3:
+
+(h3)-1 L3
+
+Also we must consider that the particles may have internal
+states - for example, electrons with spin 1/2 have two spin
+states - so that we must multiply expression (B6) by the
+number of internal states. For particles with spin s the
+nubmer of internal states is 2s+1 so the density of quan-
+tum states in momentum space is
+
+2s31 L3 .                       (B2
+
+\pcap{B}{d}{Number of States Per Unit Momentum Interval
+
+p~Y
+
+Figure B3.
+
+Let's convert this result into a number of states per
+unit magnitude of momentum interval and then into a number
+of states per unit energy interval. All states whose mag-
+nitude of momentum is less than p are contained within a
+sphere of radius p in momentum space. Thus the number of
+momentum states contained in this sphere is the volume of
+U168                  32
+volume of coordinate space is
+
+g(p) = G(p) = (2s+1) P �               ( )
+
+\pcap{B}{e}{Nu~ber of States Per Unit Energy Interval
+
+To obtain g(�), the number of states per unit volume
+per unit energy interval we note that, for free particles,
+the total energy is the kinetic energy:
+
+� = 12 mv2 = P .                          (B5)
+
+So, to a range of momenta dp there corresponds a range
+of energy d� given by
+
+d� = a~ dp = m dp -
+
+The number of states in the range d� is equal to the
+number in the corresponding range dp
+
+g(�) d� = g(p)dp
+
+s o
+
+g(�) = g(p) m_ = (2s~1) 4~pm .            (B6)
+
+Thus
+
+( 2s~1 (2m)3/2 ~�   for � > �
+
+g(�) = ~                                  (B7)
+for � < O
+}\)
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-The chemical potential appears as a normalization constant in our
+discussion, but it is an important quantity in thermodynamics and
+statistical mechanics where it appears as the quantity which determines
+the equilibrium concentration of reactants in chemical
+reactions. The term \Quote{chemical} is to be interpreted in a very
+broad sense to include all sorts of reactions which proceed to an
+equilibrium state--nuclear and elementary particle reactions,
+transitions between various energy levels of atoms and molecules,
+transitions between states of ionization of atoms, to name just a
+few. For example, see the book by L.D. Landau and E.M. Lifshitz,
+\textit{Statistical Physics}, Addison-Wesley; Reading, MA (1958), Chapters 10
+and 11."> <a href="#fnref-The chemical potential appears as a normalization constant in our
+discussion, but it is an important quantity in thermodynamics and
+statistical mechanics where it appears as the quantity which determines
+the equilibrium concentration of reactants in chemical
+reactions. The term \Quote{chemical} is to be interpreted in a very
+broad sense to include all sorts of reactions which proceed to an
+equilibrium state--nuclear and elementary particle reactions,
+transitions between various energy levels of atoms and molecules,
+transitions between states of ionization of atoms, to name just a
+few. For example, see the book by L.D. Landau and E.M. Lifshitz,
+\textit{Statistical Physics}, Addison-Wesley; Reading, MA (1958), Chapters 10
+and 11." class="fn-back">↩</a></li><li id="fn-The approximation involved is much like describing a string by
+its linear mass density (i.e., mass per unit length) although
+we know that the string is really composed of discrete masses
+(molecules, atoms, elementary particles). In the case of the
+Fermi Energy Distribution the error involved is proportional
+to $1/N$ where $N$ is the total number of particles. For macroscopic
+systems $N$ is usually greater than about $10^{19}$."> <a href="#fnref-The approximation involved is much like describing a string by
+its linear mass density (i.e., mass per unit length) although
+we know that the string is really composed of discrete masses
+(molecules, atoms, elementary particles). In the case of the
+Fermi Energy Distribution the error involved is proportional
+to $1/N$ where $N$ is the total number of particles. For macroscopic
+systems $N$ is usually greater than about $10^{19}$." class="fn-back">↩</a></li><li id="fn-It is this so-called degenerate pressure of electrons which prevents
+the ultimate gravitational collapse of most stars which have used up
+all of their thermonuclear energy sources. Normally a star as
+massive as the sun is prevented from collapsing under the weight of
+its own gravitational forces by sources of heat energy which provide
+the pressure to keep it in equilibrium. When the energy sources are
+used up the star begins to cool and collapse. As the density in-
+creases, the electrons are ionized from the atoms and form an
+electron gas. If the electrons were not fermions the collapse would
+continue indefinitely as the star cooled. However because the
+electron gas becomes degenerate the pressure does not drop to zero
+and thus eventually supports the star against further collapse. The
+collapse is halted when the star has reached a size not much larger
+than the earth (the original volume was $10^6$ times the earth's volume)
+
+and the density of the material composing it is about \m{100,000\unit{g/cm\up{3}}}.
+Recently evidence of \Quote{dead} stars composed of a degenerate neutron
+gas has been discovered. These neutron stars are only about 10 miles
+in diameter and have densities of \m{10^{14}\unit{g/cm\up{3}}}."> <a href="#fnref-It is this so-called degenerate pressure of electrons which prevents
+the ultimate gravitational collapse of most stars which have used up
+all of their thermonuclear energy sources. Normally a star as
+massive as the sun is prevented from collapsing under the weight of
+its own gravitational forces by sources of heat energy which provide
+the pressure to keep it in equilibrium. When the energy sources are
+used up the star begins to cool and collapse. As the density in-
+creases, the electrons are ionized from the atoms and form an
+electron gas. If the electrons were not fermions the collapse would
+continue indefinitely as the star cooled. However because the
+electron gas becomes degenerate the pressure does not drop to zero
+and thus eventually supports the star against further collapse. The
+collapse is halted when the star has reached a size not much larger
+than the earth (the original volume was $10^6$ times the earth's volume)
+
+and the density of the material composing it is about \m{100,000\unit{g/cm\up{3}}}.
+Recently evidence of \Quote{dead} stars composed of a degenerate neutron
+gas has been discovered. These neutron stars are only about 10 miles
+in diameter and have densities of \m{10^{14}\unit{g/cm\up{3}}}." class="fn-back">↩</a></li><li id="fn-Non-interacting means that we neglect forces between particles such
+as gravitational or electrical. A gas of non-interacting particles
+is often called a \Quote{perfect gas}. In theory we must allow some interaction,
+in particular, occasional collisions between particles
+which allow the system to come to thermal equilibrium. If there
+were no interactions at all then a system not initially in an
+equilibrium state would never come to thermal equilibrium. For
+example, imagine that all the particles initially had the same velocity.
+Without random collisions the velocities would forever remain the
+same. The presence of random collisions, however, would
+eventually lead to an equilibrium distribution of velocities."> <a href="#fnref-Non-interacting means that we neglect forces between particles such
+as gravitational or electrical. A gas of non-interacting particles
+is often called a \Quote{perfect gas}. In theory we must allow some interaction,
+in particular, occasional collisions between particles
+which allow the system to come to thermal equilibrium. If there
+were no interactions at all then a system not initially in an
+equilibrium state would never come to thermal equilibrium. For
+example, imagine that all the particles initially had the same velocity.
+Without random collisions the velocities would forever remain the
+same. The presence of random collisions, however, would
+eventually lead to an equilibrium distribution of velocities." class="fn-back">↩</a></li><li id="fn-For example, in the free electron theory of metals we imagine that
+the boundary of the metal constitutes a box within which the con-
+duction electrons are free to move. So we describe the forces on
+the electrons in this case by saying that as long as an electron is
+within the box, there is zero force on it but if it comes to the
+side of the box it feels a strong (infinite for an \Quote{ideal} box)
+repulsive force which prevents it from escaping from the box."> <a href="#fnref-For example, in the free electron theory of metals we imagine that
+the boundary of the metal constitutes a box within which the con-
+duction electrons are free to move. So we describe the forces on
+the electrons in this case by saying that as long as an electron is
+within the box, there is zero force on it but if it comes to the
+side of the box it feels a strong (infinite for an \Quote{ideal} box)
+repulsive force which prevents it from escaping from the box." class="fn-back">↩</a></li><li id="fn-We know that, for a gas with a Boltzmann distribution, the tempera-
+ture is proportional to the average energy of a particle of the gas
+(see U157, U159). Thus at zero temperature all of the particles
+should be in the lowest energy state (which is zero energy for free
+particles). In the case of fermions, the Pauli exclusion principle
+tells us that no more than one particle can occupy a given quantum
+state. Therefore the lowest average energy per particle is achieved
+when the $N$ lowest energy quantum states are filled sequentially."> <a href="#fnref-We know that, for a gas with a Boltzmann distribution, the tempera-
+ture is proportional to the average energy of a particle of the gas
+(see U157, U159). Thus at zero temperature all of the particles
+should be in the lowest energy state (which is zero energy for free
+particles). In the case of fermions, the Pauli exclusion principle
+tells us that no more than one particle can occupy a given quantum
+state. Therefore the lowest average energy per particle is achieved
+when the $N$ lowest energy quantum states are filled sequentially." class="fn-back">↩</a></li><li id="fn-">Number density = number of particles per unit volume. <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-The word \textit{density} in density of states refers to the fact that
+$g(9(\epsilon)$
+is the number of states per unit energy interval---not to the fact
+that it also happens to be a quantity per unit volume."> <a href="#fnref-The word \textit{density} in density of states refers to the fact that
+$g(9(\epsilon)$
+is the number of states per unit energy interval---not to the fact
+that it also happens to be a quantity per unit volume." class="fn-back">↩</a></li><li id="fn-The term \Quote{free} implies a system of fermions with no forces applied
+to them except that they are confined to a box of a given volume."> <a href="#fnref-The term \Quote{free} implies a system of fermions with no forces applied
+to them except that they are confined to a box of a given volume." class="fn-back">↩</a></li><li id="fn-See Appendix B, \Quote{Density of States.}"> <a href="#fnref-See Appendix B, \Quote{Density of States.}" class="fn-back">↩</a></li><li id="fn-We substituted $s = 1/2$ in obtaining \Eqnref{5}) since the fermions which
+we will usually deal with are electrons, protons, or neutrons. All have $s = 1/2$."> <a href="#fnref-We substituted $s = 1/2$ in obtaining \Eqnref{5}) since the fermions which
+we will usually deal with are electrons, protons, or neutrons. All have $s = 1/2$." class="fn-back">↩</a></li><li id="fn-We have again put $s = 1/2$ in the expression for $g(\epsilon)$."> <a href="#fnref-We have again put $s = 1/2$ in the expression for $g(\epsilon)$." class="fn-back">↩</a></li><li id="fn-J.\,McDougall and E.C.\,Stoner, Phil.\,Trans.\,Roy.\,Soc.\,London, \textbf{237}, 67
+(1938). A.C.\,Beer, M.N.\,Chase, P.F.\,Choquard, Helv.\,Phys.\,Acta, \textbf{28},
+529	(1955).	R.E.\,Dingle, Appl.\,Sci.\,Res., Sec.\,B, \textbf{62}, 25 (1957)."> <a href="#fnref-J.\,McDougall and E.C.\,Stoner, Phil.\,Trans.\,Roy.\,Soc.\,London, \textbf{237}, 67
+(1938). A.C.\,Beer, M.N.\,Chase, P.F.\,Choquard, Helv.\,Phys.\,Acta, \textbf{28},
+529	(1955).	R.E.\,Dingle, Appl.\,Sci.\,Res., Sec.\,B, \textbf{62}, 25 (1957)." class="fn-back">↩</a></li></ol></aside>
