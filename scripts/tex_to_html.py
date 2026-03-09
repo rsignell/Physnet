@@ -573,6 +573,133 @@ class PhysnetConverter:
             title, i = get_arg(text, i)
             return f'<p class="icap"><strong>{self._process(title)}:</strong></p>\n', i
 
+        # \scap{num}{TITLE} — section caption (older format), like \Sect
+        if name in ('scap', 'spcap'):
+            num, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            title_html = self._process(title)
+            sid = f'sect-{num}'
+            return f'<section id="{sid}" class="module-section section-text"><h2 id="{sid}">{num}. {title_html}</h2>\n', i
+
+        # \eqn{label}{math} — numbered/labeled equation (older format)
+        if name == 'eqn':
+            label, i = get_arg(text, i)
+            eq, i = get_arg(text, i)
+            eq_math = convert_math(eq)
+            if label.strip():
+                return f'<div class="eqn-block" id="eqn-{label}">\\[{eq_math}\\]</div>\n', i
+            return f'\\[{eq_math}\\]\n', i
+
+        if name == 'SubSubSectTitle':
+            title, i = get_arg(text, i)
+            sid = re.sub(r'\W+', '-', title.lower()).strip('-')
+            return f'<h4 id="sss-{sid}">{self._process(title)}</h4>\n', i
+
+        # \fract{num}{den} — fraction (older alternative to \frac)
+        if name == 'fract':
+            num, i = get_arg(text, i)
+            den, i = get_arg(text, i)
+            return f'\\(\\frac{{{convert_math(num)}}}{{{convert_math(den)}}}\\)', i
+
+        # \mTitle{title} \mAuthor{author} — metadata macros in body text (ignore)
+        if name in ('mTitle', 'mAuthor'):
+            _, i = get_arg(text, i)
+            return '', i
+
+        # \endinput / \TxStart — document delimiters
+        if name in ('endinput', 'TxStart', 'TxEnd'):
+            return '', i
+
+        # \index{...} — index entry, suppress
+        if name == 'index':
+            _, i = get_arg(text, i)
+            # May have second arg {actual}{sort} form
+            if i < len(text) and text[i] == '{':
+                _, i = get_arg(text, i)
+            return '', i
+
+        # \mathrm{...} in text context — just render content
+        if name == 'mathrm':
+            content, i = get_arg(text, i)
+            return self._process(content), i
+
+        # \imath — dotless i (math symbol)
+        if name == 'imath':
+            return '\\(\\imath\\)', i
+
+        # Listing macros (m253 uses listings package for BASIC/Fortran code)
+        if name == 'lstset':
+            _, i = get_arg(text, i)
+            return '', i
+
+        if name == 'lstinputlisting':
+            # optional [options] then {filename}
+            if i < len(text) and text[i] == '[':
+                end = text.find(']', i)
+                i = end + 1 if end != -1 else i
+            fname, i = get_arg(text, i)
+            return f'<pre class="code-listing"><em>[Listing: {fname}]</em></pre>\n', i
+
+        if name == 'lstinline':
+            content, i = get_arg(text, i)
+            return f'<code>{html_lib.escape(content)}</code>', i
+
+        # \mbox{text} — text in math mode, treat as plain text
+        if name == 'mbox':
+            content, i = get_arg(text, i)
+            return self._process(content), i
+
+        # \CaptionAfterFigure — same as CaptionAfterFullFramedFigure
+        if name == 'CaptionAfterFigure':
+            cap, i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            return (f'<figure class="fig-centered">'
+                    f'<img src="{self.figures_path}/{fname}.svg" '
+                    f'alt="" class="physnet-fig">'
+                    f'<figcaption>{cap_html}</figcaption>'
+                    f'</figure>\n'), i
+
+        # \hs — horizontal space (thin space in math)
+        if name == 'hs':
+            return '\\;', i
+
+        # \rem{...} — revision history comment, suppress
+        if name == 'rem':
+            _, i = get_arg(text, i)
+            return '', i
+
+        # \SectTitle{label}{TITLE} — section title (older format)
+        if name == 'SectTitle':
+            label, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            title_html = self._process(title)
+            sid = f'sect-{label}'
+            return f'<section id="{sid}" class="module-section section-text"><h2 id="{sid}">{label}. {title_html}</h2>\n', i
+
+        # \TxtTwoDisplayEqns{label}{lhs1}{rhs1}{lhs2}{rhs2}
+        if name == 'TxtTwoDisplayEqns':
+            label, i = get_arg(text, i)
+            lhs1, i = get_arg(text, i)
+            rhs1, i = get_arg(text, i)
+            lhs2, i = get_arg(text, i)
+            rhs2, i = get_arg(text, i)
+            eid = label
+            eq = (f'\\begin{{aligned}}{convert_math(lhs1)} &= {convert_math(rhs1)} \\\\'
+                  f'{convert_math(lhs2)} &= {convert_math(rhs2)}\\end{{aligned}}')
+            return f'<div class="eqn-block" id="eqn-{eid}">\\[{eq}\\]</div>\n', i
+
+        # \eqref{label} — standard LaTeX equation reference
+        if name == 'eqref':
+            ref, i = get_arg(text, i)
+            return f'<span class="eqn-ref">({ref})</span>', i
+
+        # \TxtDefEqnStaRef{sec}{num} — definition/equation/statement reference
+        if name == 'TxtDefEqnStaRef':
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="def-ref">({sec}{num})</span>', i
+
         if name == 'SubSubSect':
             (_id, title, content), i = get_n_args(text, i, 3)
             inner = self._process(content)
@@ -628,6 +755,17 @@ class PhysnetConverter:
                         f'<img src="{self.figures_path}/{fname}.svg" '
                         f'alt="" class="physnet-fig">'
                         f'</figure>\n'), i
+
+        if name in ('CaptionAfterFullFramedFigure', 'CaptionAfterLeftFigure',
+                    'CaptionAfterFullUnframedFigure'):
+            cap, i = get_arg(text, i)
+            fname, i = get_arg(text, i)
+            cap_html = self._process(cap)
+            return (f'<figure class="fig-centered">'
+                    f'<img src="{self.figures_path}/{fname}.svg" '
+                    f'alt="" class="physnet-fig">'
+                    f'<figcaption>{cap_html}</figcaption>'
+                    f'</figure>\n'), i
 
         if name == 'CharacterUnframedFigure':
             fname, i = get_arg(text, i)

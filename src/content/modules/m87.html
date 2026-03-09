@@ -1,0 +1,349 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+.* 6/17/86 mpm
+.RD MOD.LIB 
+.RD MOD/TX.LIB
+.DM PT
+.TL 'MISN-6-83''
+..
+.HD
+.CE 3
+PRINT VS FILM: A PROJECT
+.SP
+by
+.SP
+Peter Signell
+.SP 3
+.SC
+PURPOSE_______
+.PA
+The main object of this project was to make an adversary comparison of
+specific film loops and printed material, each of which has been designed to
+provide the best assistance we an devise toward the realization of the same
+set of mental images.
+The comparisons were to cover students'; (1) belief in, or acceptance of, the
+material being presented; (2) the feeling of communication of a detailed
+motion; and, (3) interest in the ideas and material being presented.
+.SC
+POSSIBLE USE OF OUTCOMES________________________
+.PA
+Suppose it turns out that, according to the above-listing three criteria,
+films are not superior to printed materials for any significant fraction of
+students.
+Then that result a be combined with similar comparative studies using
+performance criteria1
+.BF
+1See A Guide for Improving Visualized Instruction____________________________________________, Francis M.Dwyer, Learning
+Services, State College, PA (1972).
+.EF
+to greatly restrict the circumstances under which films
+should be produced and then screened during lecture periods.
+The point here is that lecture-period screening constitutes a time-out from
+other instructional activities for all students.
+In addition, the very high cost of film production and reproduction must be
+weighed against the lower cost and generally greater instructional efficiency
+of printed materials.1
+.SC
+CHOICE OF TOPICS________________
+.PA
+The topics to be presented by film and printed materials were chosen both for
+their importance in physics and for the probability that out students would
+have had no prior visualized instruction in them.
+The first topic chosen was the movement of complex-plane poles in response
+to changes in physical parameters, along with the relationship of pole
+appearance and position to real-world resonance characteristics.
+.SC
+THE SEARCH FOR A 3D ALGORITHM_____________________________
+.PA
+The complex plane is a mathematical construct, so for our purposes had to be
+filmed by animation techniques.
+Individual pictures of the singularities of a number of useful functions had
+already been constructed by hand,2
+.BF
+2See Tables of Functions with Formulae and Curves____________________________________________, E.Jahnke and F.Emde,
+Dover Publ., New York (1945).
+.EF
+but only at great expense in terms of human labor.
+Animation would only be feasible if the individual frames could be
+economically constructed by a computer-driven plotter.
+.PA
+For plotting a real function of a complex variable, one needs a computer
+algorithm which will: (1) plot in three dimensions (hereafter 3D); (2)
+successfully handle poles and zeros; and, (3) remove hidden lines.
+The only 3D computer algorithms which we could locate were based on either
+the checkerboard or cut-out techniques.
+The first of these methods turned out to be too inaccurate for smooth
+animation, while the second was too incomplete to successfully represent
+poles as they neared the real axis.
+.PA
+The technique successfully used by Jahnke and Emde3 was that of (hand)
+plotting contours and gradients.
+.BF
+3E.Jahnke and F.Emde, ibid____.
+.EF
+A number of persons told us that they had actually seen computer-produced
+contour-gradient plots with hidden line removal.
+We followed all such leads back to their sources and in every case found that
+what had actually been seen was either a checkerboard or a cut-out
+representation.
+We contacted all computer centers and program repositories which were
+suggested to us, and obtained abstracts of all programs whose titles
+suggested the possibility of true contour-gradient plotting.
+None contained what we were looking for.
+A number of existing algorithms did, however, give us interesting clues as to
+what might be done.
+.SC
+THE DEVELOPMENT OF A CONTOUR-GRADIENT ALGORITHM_______________________________________________
+.PA
+Upon concluding that a contour-gradient algorithm almost certainly did not
+exist, we set about to invent and develop one ourselves.
+We spend two years on this project and in the end were successful (see
+figure, next page).
+The algorithm we produced would indeed allow the smooth animation of 3D
+plots, but our victory turned to ashes.
+The complexity of the computer program produced prohibitive computer charges
+and incredibly long plotting times.
+Furthermore, a very short animated sequence which we produced was visually
+beautiful but oddly ineffective instructionally.
+Thus, after considerable cost in dollars  and labor, we abandoned the
+smoothly animated complex plane films.
+However, the effort did produce a product: part of the contour-gradient
+algorithm was submitted for publication.
+.SC
+ALTERNATIVES TO SMOOTH 3D ANIMATION___________________________________
+.PA
+When the abandonment of smooth 3D animation became a significant possibility,
+two other projects for obtaining data relative to the project's basic goals
+were started.
+The first was the development of a different topic which would involve only
+2D computer plots, hence would be fast, straightforward, and relatively
+inexpensive.
+The second project started with an investigation of the unexpected
+instructional ineffectiveness of the complex-plane sequence and would up with
+a new approach to the complex-plane animation problem.
+.RS
+.NL 62
+.SP 48
+.LN -2
+.IN 2
+.MS 2
+.SI 2
+Fig.1. Computer-generated contour-gradient plot of a simple pole, looking
+along its real coordinate.
+The computer program did not use the symmetry of this example, and the
+orientation of the observer can be varied at will.
+Cover the upward line, down to the pole, with your thumb for a more
+three-dimensional appearance.
+Notice the visible edges on the pole.
+.IN 0
+.LN +2
+.MS #S
+.SP 2
+.SC
+2D ANIMATION: THE MOTION OF QUANTUM PROBABILITY_______________________________________________
+.PA
+The films of Goldberg, Schey, and Schwartz (GSS) suggested a topic amenable
+to smooth 2D animation.
+The GSS films very effectively depicted the intriguing effects of potential
+barriers and wells on moving one-dimensional quantum wave packets.
+However, neither my colleagues nor myself could articulate any instructional
+goals relevant to those films.
+.PA
+It occurred to me that the computer algorithm developed by GSS for numerical
+solution of the time-dependent Schro;dinger equation might be used to produce
+a time-dependent picture of what goes on in a nucleus during alpha decay,
+at least according to the conventional explanation.
+This picture would have the assets of being able to: (i) connect a phenomenon
+observed in the macroscopic student lab (radioactive decay) with a complex
+microscopic picture; (ii) connect the observed time-changing characteristics
+of a probability distribution with the classical three-line derivation of
+exponential decay given in the textbooks and lab manuals; and, (iii) startle
+some of the faculty by showing that their particle-like picture of what
+happens during exponential decay actually holds only for those very early
+times during which decay is not exponential.
+Other instructional objectives were added but they were not dependent on the
+a-decay process.
+.SC
+MODIFICATION OF THE GSS ALGORITHM_________________________________
+.PA
+Upon application of the GSS algorithm to the a-decay problem, we immediately
+ran into a major difficulty; before we could get to the exponential decay
+times, the leading edge of the escaping probability reflected from the outer
+end of the computer algorithm's finite radial grid, came back and reentered
+the nucleus, and thereby destroyed the approach to exponentiality.
+After a number of failures with absorptive functions, we found a Pade,
+approximate which produced a negligible amount of reflected wave during the 
+times we were interested in.
+.SC
+PRODUCTION AND FORMATIVE EVALUATION___________________________________
+.PA
+Armed with a scenario and a working computer algorithm we made a
+computer-animated film showing the radial a-distribution inside and outside
+the nuclear surface during decay, as given by the conventional explanation
+utilizing the time-dependent Schro;dinger equation.
+The film was then shown to naive subjects who were asked to raise a hand as
+soon as the film definitely became unclear.
+Armed with the resulting (unwelcome) information, we would rethink, the
+scenario, reshoot the film, and again show it to naive subjects.
+This cycle was repeated seven times before an acceptable version was
+produced.
+The result is a film of utter simplicity.
+Viewers find it hard to believe that so much effort was needed in order to
+come to such a straightforward and artless film.
+.SC
+EFFECTS OF NUMEROUS REVISIONS ON PRODUCERS__________________________________________
+.PA
+The film and the print module were developed separately in an attempt to
+ensure that a maximum effort would be put into each.
+The large number of film revisions was hard on the film team, and in fact the
+very last change was contracted out to a commercial film laboratory because
+of the film team's exhaustion.
+Similarly, the many reconstructions of the print module strained the patience
+and professional standards of our typist.
+.SC
+A CONVEYANCE OF MOTION IN THE PRINT MEDIUM__________________________________________
+.PA
+I decided early-on that the main emphasis in the first-stage print module
+would be on the pictorial communication of a detailed motion rather than on,
+say, the production of a module which would be a model of format or
+expository writing skill.
+However, even modest success in the restricted aim eluded us for some time.
+For example, the print module paper was found to be a mechanically
+inhospitable medium for the depiction of motion by the use of thumb-flip
+technique.
+.PA
+It was not until December of 1973 that I came upon a satisfactory and
+seemingly universal method of imparting a feeling for motion in the print
+medium.
+In that month's issue of the magazine Skiing______ there appeared a sequence of
+stills which appeared to impart a vivid feeling for motion when the eye was
+appropriately scanned along the printed page.
+Interestingly, such scanning was not suggested in the accompanying text.
+Furthermore, another sequence of stills on the next page seemed to me to
+impart no such feeling.
+.SC
+TESTING THE SKIING FORMAT_________________________
+.PA
+We tested the two Skiing______ sequences on college students, blue collar workers,
+college faculty, and middle school students, few of whom were skiers.
+Each subject was asked to scan the two sequences in turn and report any
+feeling of motion.
+The results were remarkably uniform.
+All claimed to feel the motion in the first sequence, while only a few
+claimed it for the second one.
+What was it about the first sequence, in contrast to the second sequence,
+which enhanced the communication of a motion?
+.SC
+CRITICAL PARTS OF SUCCESSFUL FORMAT___________________________________
+.PA
+We made a number of laboratory experiments to find which parts of the
+successful Skiing______ format were critical to its success, since Skiing's________
+lay-out person could shed no light on the "why" of what she did.
+We found that the essential aspects were these: (i) a full-page black
+background; (ii) rounded edges on the stills; (iii) vertical sequencing;
+and, (iv) a choice of stills based on the criterion of maximum feeling of
+motion rather than one based on, say, equal time intervals.
+This latter criterion was not apparent from study of the successful
+Skiing______ sequence since it had happened to be of a uniform circular motion
+(a "wheelie").
+For that case the optimum choice had equal time intervals.
+.PA
+The reason for aspect (ii), rounded corners, appears to be that square
+corners catch the eye and prevent the kind of scan which concentrates on the
+motion itself.
+Similarly, the black background seems to beneficially concentrate attention
+on the motion.
+As to the poorness of horizontal sequencing, as in Skiing's________ second (and
+unsuccessful) example, the linguist R.T.McCoy suggested to us that the
+viewers probably attempt to "read" it rather than scan it for motion.
+This hypothesis could presumably be tested on old-school Chinese readers.
+Interestingly, we found that circular sequencing did not enhance circular
+motion.
+.SC
+EVALUATION OF THE FILM AS A PRINT-MODULE ADD-ON_______________________________________________
+.PA
+The a-decay film loop and print module were tested on 39 students during
+June, 1974, in a standard self-paced general physics course.
+Each student learned from the print module, containing the carefully-chosen
+and presented stills sequences, without being aware of the availability of
+the film.
+After a student had received an "Excellent" on a mastery-graded exam for the
+module, he/she was asked to go to another room for a short interview.
+There, an interviewer who was unknown to the student asked questions, had the
+student view the film on a self-viewing projector, and then asked more
+questions.
+By this procedure we attempted to discover the extent to which the print
+medium could succeed without the film, and the extent to which the film
+produced added value.
+The questions we asked and the responses we received are summarized on the
+next page.
+After obtaining the data, however, we felt that it was very inconclusive and
+that this was due primarily to the rudimentary nature of the evaluation
+instrument.
+.PG
+.SC
+REVISION OF THE SUMMATIVE EVALUATION INSTRUMENT_______________________________________________
+.PA
+In order to obtain professional advice on construction of a good evaluation
+instrument, I followed a trail which led from David Born (the University of
+Utah) to Donald Tosti (the Independent Learning Institute, San Rafael) to
+Dick Clark (the ERIC Center, Stanford) to Lee Shulman (Michigan State
+University).
+Professor Shulman worked last year at the Stanford ERIC Center with Dick
+Clark, a master of evaluation.
+.PA
+Shulman has started me on the road to a much-improved instrument, the first
+draft of which is shown in Appendix D.
+Half the students are to be interviewed, with the final form of this
+instrument, before they see the film.
+The other half are to be interviewed after they have seen the film.
+The responses to the three questions are to be cross-correlated and free-form
+post-interviews to be conducted.
+.PG
+.SC
+THE COMPLEX PLANE AGAIN: SOLUTION!__________________________________
+.PA
+A smoothly animated sequence we had made for the complex plane series had
+seemed oddly ineffective for instructional purposes.
+After puzzling over this for some time, it occurred to me that the problem
+was that there was too much information to keep track of in the
+constantly-changing images.
+Of the available options, the best seemed to be cut down on the number of
+frames presented to the viewer.
+.PA
+We filmed the basic complex-plane sequence again, now using only every
+48th frame.
+Each frame was held on the screen for 1 second, then lap-dissolved into the
+next frame over a period of 1 second.
+Thus the net rate of movement remained the same as with smooth animation,
+but now viewers said that they had time to absorb and compare the changes.
+Furthermore, the dissolves produced a beautiful illusion of motion.
+Every time I have presented this lap-dissolved sequence to an audience they
+have made appreciative sounds as two poles approach each other, merge into
+one, and then separate again and move off in new directions.
+.PA
+The lap-dissolve sequence was made with the inexpensive old checkerboard
+algorithm since we no longer needed the micro-accuracy necessary for smooth
+animation.
+The cost was further reduced, of course, by the need to plot a far smaller
+number of frames.
+.SC
+PROPOSAL FOR THE COMPLEX PLANE SERIES_____________________________________
+.PA
+We now propose to make the complex plane films utilizing the lap-dissolve
+technique to simulate motion.
+Corresponding print modules are to be constructed along wit a companion
+evaluation instrument similar to that developed for the a-decay package.
+We hope to try the materials in physics and math classes at the college, high
+school, and middle-school levels.
+.SC
+ACKNOWLEDGMENTS_______________
+.PA
+Preparation of this module was supported in part by the National
+Science Foundation, Division of Science Education Development
+and Research, through Grant #SED 74-20088 to Michigan State
+University.
+<p>

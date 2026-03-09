@@ -1,0 +1,309 @@
+<header class="module-header">
+  <div class="module-meta-row">
+  </div>
+</header>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction and Overview</h2>
+
+<h3 id="pcap-1-a">1a. Finding All Bound States Can Be Important</h3>
+
+It is all very well to be able to use numerical techniques to
+find some of the bound states of a particular potential, but
+there are occasions where one would like to be sure
+of finding all of a potential energy function's bound states.
+For example, it can easily happen that adjustment of a
+potential-function parameter, in order to match the energy of a
+real-life bound state, results in a large energy shift for
+another observed bound state. Another example is the case
+where nature shows only one bound state for a particular
+system, yet a presumably applicable potential function produces
+two or more bound states. Thus one may need to locate
+all bound states of any given potential in order to make a
+complete comparison to data.
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m253gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Hydrogen atom wave functins for 3 energies near the ground state energy \(E_0\).  A non-linear scale has been used.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-b">1b. Bound State: Increasing Exponential is Missing</h3>
+
+Bound states occur only at isolated energy values
+because those are the only values where an exponentially-increasing
+part of the solution vanishes. Except at such
+energies Schr"odinger equation solutions become rising ex-
+ponentials at large radius as shown in Figure 1. For such
+cases the solution cannot be normalized to unity. That is,
+the condition that the bound particle has 100% probability
+of being found somewhere in all of space,
+<p>\[1.00 = \int_{0}^{\infty} |u_{BS}(r)|^2 dr\,,\]
+<p>cannot be satisfied if \(u\) has a large-radius behavior like
+either (\(+e^{Kr}\)) or (\(-e^{Kr}\)) because then the integral will always
+diverge (be infinite). The problem is to find all of
+the discrete energies at which the exponentially-increasing
+part of the solution vanishes.
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m253gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. Wave function inside and outside
+a potential.</figcaption></figure>
+
+<p><h3 id="pcap-1-c">1c. The “Outside” Solution</h3>
+
+In any region “outside” a potential, meaning in a region where
+the potential energy \(Ep\) is zero or negligibly small, the solution
+to the zero-angular-momentum Schr"odinger equation is:
+<p>\[u_{0} = Ae^{Kr} + Be^{-Kr}\,; \quad \help{1}\]
+<p>where \(A\) and \(B\) are functions of \(K\) but not of radius. This solution
+can be easily verified by direct substitution into a potential-less
+Schr"odinger equation, along with the identification of \(K\):
+<p>\[E = -\hbar^{2} K^{2}/2m\,; \quad \help{1}\]
+<p>Notice that, if \(A\) is not zero, the \(A\) term will always win
+out over the \(B\) term for large enough radius (see Fig.&thinsp;2). That is why
+the solution always increases exponentially for large
+radius - except at those precise values of \(K\), hence
+of energy, where \(A(K)\) is precisely zero.
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m253gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Locating the zeros of
+the exponentially-rising solution.</figcaption></figure></div>
+
+<p><h3 id="pcap-1-d">1d. Findinq the Zeros of \(A(K)\)</h3>
+
+The problem of finding the bound state energies
+reduces to finding the zeros of \(A\), which is easily accomplished
+by plotting \(A\) vs \(K\) on a graph. A curve
+is obtained by numerically solving the Schr"odinger
+equation at each of a number of \(K\)-values (energies).
+Then \(A\) is determined at each energy from the solution
+values at two different radii outside the potential:
+<p>\[\begin{aligned}u_1 \equiv u(r_1) & = Ae^{Kr_1} + Be^{-Kr_1} \\ u_2 \equiv u(r_2) & = Ae^{Kr_2} + Be^{-Kr_2}\end{aligned}\]
+
+<p>These two equations in two unknowns can be easily
+solved for \(A\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><h3 id="pcap-1-e">1e. An Iterative Homing Procedure</h3>
+
+Once the bound state energies have been fairly well
+delineated, an iterative automatic homing procedure can
+be used to find precision values for both the energy and
+wave function (solution “\(u\)”). There are a number of such
+procedures.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[1]See, for example, “An Automatic Variational Method for
+Schr"odinger-Equation Bound States” (MISN-0-265, UC) and “Automatic
+Difference-Equation
+Methods for Schr"odinger Bound States” (MISN-0-245, UC).
+</section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Preparing for Numerical Solution</h2>
+
+<p><h3 id="pcap-2-a">2a. Simplifying the Schr"odinger Equation</h3>
+
+Prior to numerical work we can simplify the
+Schr"odinger equation by scaling its energies relative
+to a convenient radius scale. That is, we can first choose
+an appropriate unit of radius for graph plotting or other
+purposes, such as Bohr radius, fm, or whatever, then use
+a new measure of radius relative to those units:
+<p>\[R \equiv r/r_{0}.\]
+<p>To simplify the Schr"odinger equation we must choose an
+energy scale \(E_0\), defined in terms of \(r_0\) by
+<p>\[E_0 \equiv \hbar^2 / (2 m r_0^2)\,,\]
+<p>and use new measures of energy which are relative to those
+units:
+<p>\[\epsilon \equiv E/E_0 \;\;; \epsilon_p \equiv E_p/E_0\,.\]
+<p>Then the Schr"odinger equation can be written simply:
+<p>\[d^{2}u/dR^{2} = [\epsilon_{p}(R) - \epsilon] u\,.\quad \help{3}\]
+<p>This form is easier to use in numerical calculations because
+it has fewer symbols to be programmed. Its “outside”
+\((\epsilon_{p} = 0)\) solution is:
+<p>\[u_{0} = Ae^{\kappa R} + Be^{-\kappa R}\,\qquad \kappa \equiv \sqrt{-\epsilon}\,.\quad \help{4}\]
+<p><h3 id="pcap-2-b">2b. Modifications for an Energy Shift</h3>
+
+The Schr"odinger equation depends only on the difference
+of energies [see <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> above], so a constant
+can be added to each energy without altering the solution.
+This is sometimes desirable for making correspondence with
+other calculations. For example, the harmonic oscillator
+potential must usually be shifted in energy in order to
+match its minimum to that of a particular potential it is
+being used to approximate.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[2]See “Quantized Small Oscillation Technique” (MISN-0-264, UC)
+<p>In any case, with an energy shift \(\epsilon_{c}\) we can define
+new energy variables:
+<p>\[\epsilon_{p}^{\prime} \equiv \epsilon_{p} + \epsilon_{c} \;\;; \epsilon^{\prime} \equiv \epsilon + \epsilon_{c}\,.\]
+<p>Then <a href="#eqn-3" class="eqn-ref">Eqs.&nbsp;(3)</a> and <span class="eqn-ref">(4)</span> become:
+<p>\[d^{2}u/dR^{2} = [\epsilon_{p}^{\prime}(R) - \epsilon^{\prime}] u\,,\]
+<p>\[u_{0} = Ae^{\kappa^{\prime} R} + Be^{-\kappa^{\prime} R} \,; \qquad \kappa^{\prime} \equiv \sqrt{\epsilon_{c}-\epsilon^{\prime}}\,.\quad \help{5}\]
+<p><figure id="fig-4" class="fig-left-framed"><img src="figures/m253gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. A cut-off potential.</figcaption></figure>
+
+<p><h3 id="pcap-2-c">2c. Example: Cut-Off Hydrogen Atom Potential</h3>
+
+An easily checked result can be obtained for the
+hydrogen atom, but with its Coulomb potential
+set equal to zero beyond some “cut-of” radius \(r_c\) as shown in Fig.&thinsp;4.
+Then we only need go a short distance beyond \(r_c\)
+in order to pick up \(u(r_l)\) and \(u(r_2)\). The value of
+\(r_c\) can be chosen as small
+as 3 Bohr radii tor the ground state, while at least 7 Bohr
+radii of potential is needed to produce the first excited
+state. A convenient radial unit to use
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[3]See Sect.&thinsp; 2a
+<p>is the Bohr radius:
+<p>\[r_{0} \equiv \hbar c/(\alpha m c^{2}) \simeq 0.53 \,\text{nm}\,.\]
+<p>Substituting <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> into <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> the energy-scale parameter is:
+<p>\[E_{0} \equiv \alpha^{2} m c^{2}/2\,.\]
+<p>This is just the negative of the atom's ground state
+energy! Thus the scaled potential energy function is:
+<p>\[e_{p}(R) = -2/R\,.\]
+<p><figure id="fig-5" class="fig-left-framed"><img src="figures/m253gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The cut-off oscillator well.</figcaption></figure>
+
+<p><h3 id="pcap-2-d">2d. Cut-Off Radial Oscillator</h3>
+
+A widely applicable and easily checked potential
+energy function is that of the radial harmonic oscillator:
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[4]See: “Simple Harmonic Motion II” (MISN-0-26), “Small Oscillation Technique”
+(MISN-0-28), and “Quantized Small Oscillation Technique” (MISN-0-264).
+<p>\[E_{p}(r) = kr^{2}/2\,.\]
+<p>Its energy levels are given by :
+<p>\[E_{n} = h \nu_{0}(2n + \frac{3}{2})\;:  n = 0, 1, 2, 3, \ldots \;; 2 \pi \nu_{0} \equiv \sqrt{k/m}\,.\]
+<p>In quantum phenomena the potential is usually better
+represented by the form (see Fig.&thinsp;5):
+<p>\[\begin{aligned}r \leq r_{c} \,: & E_{p}(r) = \frac{1}{2}k(r^{2} - r_{c}^{2})\,, \\
+r \geq r_{c} \,: & E_{p}(r) = 0\,.\end{aligned}\]
+
+<p><figure id="fig-6" class="fig-left-framed"><img src="figures/m253gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. The well of Fig.&thinsp;5 shifted upward by \(kr_c/2\).</figcaption></figure>
+
+<p>However, it is customary to quote harmonic oscillator
+solutions in the form of <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> and then let them be subsequently
+adjusted to the requirements of particular applications. We accomodate
+to that convention by shifting our energies upward by
+\(k r_{c} /2\) (see Fig.&thinsp;6). Our new energies are:
+<p>\[\begin{aligned}r \leq r_{c} \,: & E^{\prime}_{p} = k r^{2} /2\,, \\
+r \geq r_{c} \,: & E^{\prime}_{p} = k r_{c}^{2} /2\,.\end{aligned}\]
+
+<p>We then define scale factors:
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[5]See Sect.&thinsp;2a
+<p>\[\begin{aligned}r_{0} & \equiv & (\hbar/2 \pi \nu_{0} m)^{1/2}\,, \\
+E_{0} & \equiv & \hbar^{2}/2 m r_{0}^{2} = h \nu_{0}/2\,.\end{aligned}\]
+
+<p>and obtain a simplified Schr"odinger equation:
+<p>\[\begin{aligned}R \leq R_{c} \,: d^{2}U/dR^{2} & = (R^{2} - \epsilon^{\prime})u\,, \\ R \geq R_{c} \,: d^{2}U/dR^{2} & = (R_{c}^{2} - \epsilon^{\prime})u\,,\end{aligned}\]
+
+<p>where:
+<p>\[\begin{aligned}R & \equiv & r/r_{0}\,, \\
+\epsilon^{\prime}& \equiv & E^{\prime}/E_{0}\,.\end{aligned}\]
+
+<p><figure id="fig-7" class="fig-left-framed"><img src="figures/m253gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Numerical solution for the wave function.</figcaption></figure>
+
+<p><h3 id="pcap-2-e">2e. Dealing With Numerical Potentials</h3>
+
+Sometimes the potential energy function is known
+only at a discrete number of radial points (see Fig.&thinsp;7), whether
+from experiment or theory, so interpolative techniques
+must be used in order to solve the Schr"odinger equation.
+One method is to fit all of the potential energy values with a
+combination of phenomenological functions. After adjustment of the
+functions' parameters for a sufficiently precise fit, the resulting
+potential energy function can be used directly in the computer
+technique normally used with formal potential energy functions.
+Another method is to use a standard computer “Table Look-Up”
+subroutine with, say, automatic quadratic interpolation.
+Such a subroutine must be given a table of potential energy
+values and a table of corresponding radii. Upon sending the
+routine a radius, it fits the three nearest-radius values
+with a quadratic, then evaluates the quadratic at the desired
+radius. Finally, some investigators prefer to fit different
+regions of the potential energy numbers with separate functions
+and then branch appropriately in the various regions
+of the numerical solution.
+<p><figure id="fig-8" class="fig-left-framed"><img src="figures/m253gr08.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. Joining the “inside” and “outside” wave 
+functions.</figcaption></figure>
+
+</section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Procedure for Numerical Solution</h2>
+
+<p><h3 id="pcap-3-a">3a. Finding the “Outside” Wave Function</h3>
+
+In general, the wave function outside the potential
+is found numerically by use of a computational algorithm.
+A common example of such an algorithm, specifically applicable
+to the present case, is given elsewhere.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[6]See “Numberical Demonstration of Energy Quanitzation for Atomic
+Hydrogen” (MISN-0-245, UC).
+<p>A saving in computation time can be gained in the present case
+where we only need the wave function outside the potential.
+In that region the algorithm's primary solution
+function \(y(R)\) is simply proportional to the \(u(R)\) we seek (see Fig.&thinsp;8):
+<p>\[\text{\Quote{outside} :}\; y(R) = c\,u(R)\]
+<p>Now, any constant times a solution is also a solution so \(y\) itself is a
+solution in the outside region. Thus we merely
+solve for \(y\) and call its values, at two outside
+radii, \(u_{1}\) and \(u_{2}\). We have made available
+a computer programs to automatically
+get \(y\) at two such points.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[7]See Appendix A
+<p><h3 id="pcap-3-b">3b. Finding \(\kappa\) for \(e^{\pm\kappa R}\)</h3>
+
+No matter what potential has been used, one must calculate \(A\)
+by comparing the “outside” solution \(y\) to:
+<p>\[y_{0}(R)= Ae^{\kappa R} + Be^{-\kappa R}\,.\]
+<p>This means finding \(y\) at two outside net-points and using
+the two equations to eliminate \(B\) and solve for \(A\). The
+values of \(\kappa\) can be easily determined by putting the above
+form into the Schr"odinger equation for \(u_{0}\). The result is:
+<p>\[\kappa = \sqrt{\epsilon_{p}\textrm{(outside)} - \epsilon}\,,\quad \help{4}\]
+<p>where \(\epsilon_{p}\)(outside) is usually zero for negative \(\epsilon\)'s and a
+positive constant for positive ones.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[8]See Sect.&thinsp;2.
+<p><h3 id="pcap-3-c">3c. Finding \(A\) for Each Energy</h3>
+
+Values of \(y\) at two outside radii are used to find \(A\):
+<p>\[A = \frac{y_2 e^{-\kappa R_{1}} - y_{1} e^{-\kappa R_{2}}}{e^{\kappa (R_{2}-R_{1})} - e^{-\kappa (R_{2}-R_{1})}} \,,\quad \help{2}\]
+<p>One can use this formula with a pre-made program (see Appendix A),
+for a computer, or perform the calculation
+manually. Repeating this calculation for a number of different
+\(\epsilon\) values, the \(A\) vs. \(\epsilon\) curve can be plotted and sketched-in
+smoothly. To obtain high accuracy the region around a
+zero of \(A\) can be blown up, in the photographic sense, until
+the \(A\) points are highly linear. Graphical or numerical
+interpolation is then very accurate <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a><a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>. Finally, the
+bound state energies can be put back into the Schr"odinger
+Equation program and the wave function tails examined
+visually as a check.
+<p>
+NOTE: Be sure to include only one <code></code>�FUNCTION ep�,
+that for the appropriate potential, in your program at a time.
+<p><h3 id="pcap-3-d">3d. Precision Energies and Wave Functions</h3>
+
+<p>Once the bound states of a given potential have been
+located, we recommend switching to methods which automatically
+“home in on” solutions to produce precise energies and precise
+and/or functional representations of the wave functions. Such
+methods are given elsewhere.
+<p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[9]See “An Automatic Variational Method for Schr"odinger-Equation Bound
+States” (MISN-0-265) and “Automatic Difference-Equation Methods for
+Schr"odinger-Equation Bound States” (MISN-0-245).
+</section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+
+I would like to thank Brian Sharpee for formatting this module and for writing the BASIC
+program that is included.
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+
+</section>
+
+<p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Qbasic to Calculate Bound States</h2>
+
+<p>
+<pre class="code-listing"><em>[Listing: m253p1b.bas]</em></pre>
+
+</section>
+
+<p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Sample Results: Hydrogen Atom</h2>
+
+<p><pre class="code-listing"><em>[Listing: m253_results1.dat]</em></pre>
+
+<p></section>
+
+<p><section id="sect-C" class="module-section section-text"><h2 id="sect-C">C. Sample Results: Harmonic Oscillator</h2>
+
+<p><pre class="code-listing"><em>[Listing: m253_results2.dat]</em></pre>
+
+<p></section>
+
+<p>
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li><li id="fn-"> <a href="#fnref-" class="fn-back">↩</a></li></ol></aside>
