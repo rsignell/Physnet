@@ -468,6 +468,8 @@ footer a { color: rgba(255,255,255,0.8); }
   display: block;
   margin: 0 auto 0.5rem;
 }
+.module-cover-fig { margin: 0.5rem auto 1.5rem; text-align: center; }
+.module-cover-fig .physnet-fig { max-width: 260px; }
 .physnet-fig-inline { height: 1.2em; vertical-align: middle; }
 .physnet-fig-item   { max-width: 120px; float: right; margin-left: 1rem; }
 .fig-item { max-width: 140px; float: right; margin-left: 1rem; }
