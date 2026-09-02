@@ -51,6 +51,31 @@ def get_n_args(text, pos, n):
     return args, pos
 
 
+def skip_opt_arg(text, pos):
+    """Skip a single optional [...] argument (brace/bracket balanced) if the
+    next non-space character is '['.  Returns the new position."""
+    n = len(text)
+    j = pos
+    while j < n and text[j] in ' \t\n':
+        j += 1
+    if j >= n or text[j] != '[':
+        return pos
+    depth = 0
+    while j < n:
+        ch = text[j]
+        if ch == '\\':
+            j += 2
+            continue
+        if ch == '[':
+            depth += 1
+        elif ch == ']':
+            depth -= 1
+            if depth == 0:
+                return j + 1
+        j += 1
+    return pos
+
+
 def find_env_end(text, pos, env_name):
     """Find the matching \\end{env_name} starting from pos, respecting nesting.
     Returns (content, pos_after_end)."""
@@ -80,8 +105,15 @@ def convert_math(s):
     """Translate Physnet math macros to standard LaTeX for KaTeX."""
     s = re.sub(r'\\vect\{([^{}]*)\}', r'\\vec{\1}', s)
     s = re.sub(r'\\uvec\{([^{}]*)\}', r'\\hat{\1}', s)
+    # \unit{…} may contain a nested \up{N} exponent; render the unit name in
+    # upright text with the exponent kept *outside* \text{} (KaTeX rejects a
+    # bare ^ inside \text{}).
+    def _unit(m):
+        body = m.group(1)
+        body = re.sub(r'\\up\{([^{}]*)\}', r'}^{\1}\\text{', body)
+        return r'\,\text{' + body + '}'
+    s = re.sub(r'\\unit\{((?:[^{}]|\{[^{}]*\})*)\}', _unit, s)
     s = re.sub(r'\\up\{([^{}]*)\}',   r'^{\1}',     s)
-    s = re.sub(r'\\unit\{([^{}]*)\}', r'\\,\\text{\1}', s)
     s = s.replace(r'\degrees', r'^\circ')
     s = s.replace(r'\degreesC', r'^{\circ}\,\text{C}')
     s = s.replace(r'\degreesF', r'^{\circ}\,\text{F}')
@@ -281,9 +313,15 @@ class PhysnetConverter:
 
         # ── Display math ──
         if name == 'Eqn':
-            _label, i = get_arg(text, i)
-            eq, i     = get_arg(text, i)
-            return f'\\[{convert_math(eq)}\\]', i
+            label, i = get_arg(text, i)
+            eq, i    = get_arg(text, i)
+            math = convert_math(eq)
+            lbl = label.strip()
+            if lbl:
+                return (f'<span class="eqn-block" id="eqn-{lbl}">'
+                        f'\\[{math}\\]'
+                        f'<span class="eqn-number">({lbl})</span></span>'), i
+            return f'\\[{math}\\]', i
 
         # ── Footnotes ──
         if name == 'Footnote':
@@ -327,6 +365,11 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             return (f'<a href="#help-{num}" class="help-link">'
                     f'<span title="Special Assistance">[help&nbsp;{num}]</span></a>'), i
+
+        if name == 'parenhelp':
+            num, i = get_arg(text, i)
+            return (f'<a href="#help-{num}" class="parenhelp-link" '
+                    f'title="Special Assistance">(help&nbsp;{num})</a>'), i
 
         if name in ('prrqone', 'prrqtwo'):
             ref, i = get_arg(text, i)
@@ -564,6 +607,7 @@ class PhysnetConverter:
             return self._sect(text, i)
 
         if name in ('pcap', 'xpcap'):
+            i = skip_opt_arg(text, i)   # optional [\Index{…}] entries
             (sec, letter, title), i = get_n_args(text, i, 3)
             title_html = self._process(title)
             pid = f'pcap-{sec}-{letter}'
@@ -1246,21 +1290,7 @@ class PhysnetConverter:
 
     def _sect(self, text, i):
         # Skip optional [index entries] argument if present
-        n = len(text)
-        j = i
-        while j < n and text[j] in ' \t\n':
-            j += 1
-        if j < n and text[j] == '[':
-            depth = 0
-            while j < n:
-                if text[j] == '[': depth += 1
-                elif text[j] == ']':
-                    depth -= 1
-                    if depth == 0:
-                        j += 1
-                        break
-                j += 1
-            i = j
+        i = skip_opt_arg(text, i)
         (num, title, sect_type_raw, content), i = get_n_args(text, i, 4)
         inner      = self._process(content)
         title_html = self._process(title)
@@ -1405,10 +1435,23 @@ class PhysnetConverter:
         return f'<{tag}>\n' + '\n'.join(html_items) + f'\n</{tag}>\n'
 
     def _eqnarray(self, content):
-        """Convert eqnarray* to an aligned LaTeX block for KaTeX."""
-        # eqnarray uses & for alignment, \\ for new row
-        # KaTeX's aligned environment uses & and \\
-        eq = convert_math(content.strip())
+        """Convert eqnarray* to an aligned LaTeX block for KaTeX.
+
+        eqnarray rows are 3-column: ``lhs & rel & rhs``.  KaTeX's ``aligned``
+        is 2-column (``lhs & rhs``), so fold the middle relation column into
+        the right-hand side: ``A & = & B`` -> ``A &= B``.
+        """
+        rows = re.split(r'\\\\', content.strip())
+        fixed = []
+        for row in rows:
+            if not row.strip():
+                continue
+            cells = row.split('&')
+            if len(cells) >= 3:
+                row = (cells[0].rstrip() + ' &' + cells[1].strip() + ' '
+                       + '&'.join(cells[2:]).lstrip())
+            fixed.append(row.strip())
+        eq = convert_math(' \\\\ '.join(fixed))
         return f'\\[\\begin{{aligned}}{eq}\\end{{aligned}}\\]\n'
 
     def _skill_env(self, content, heading):
@@ -1541,6 +1584,20 @@ def convert_module(module_dir, module_id):
         parts.append(f'    <span class="meta-pill">⏱ {meta["hours"]} hour(s)</span>')
     parts.append(f'  </div>')
     parts.append('</header>\n')
+
+    # ── Cover graphic ──
+    # The MISN cover cartoon (mNgr00) is placed by the nphmods.sty module
+    # template, not the body text, so it is never referenced by a figure
+    # macro.  Inject it here when the converted SVG is present.
+    for cover_dir in (os.path.join(module_dir, 'figures'),
+                      os.path.join('public', 'modules', module_id, 'figures')):
+        cover_svg = os.path.join(cover_dir, f'{module_id}gr00.svg')
+        if os.path.exists(cover_svg):
+            parts.append('<figure class="fig-centered module-cover-fig">')
+            parts.append(f'<img src="figures/{module_id}gr00.svg" alt="" '
+                         f'class="physnet-fig">')
+            parts.append('</figure>\n')
+            break
 
     # ── Learning objectives ──
     if meta.get('id_items'):

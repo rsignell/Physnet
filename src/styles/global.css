@@ -446,6 +446,19 @@ footer a { color: rgba(255,255,255,0.8); }
   margin: 1.25rem 0;
   overflow-x: auto;
 }
+/* Numbered display equations: \Eqn{N}{…} → equation + right-aligned (N) */
+.module-content .eqn-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.module-content .eqn-block .katex-display { flex: 1; margin: 1.25rem 0; }
+.module-content .eqn-number {
+  flex: none;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
 /* Figure layouts */
 .figure-row {
   display: flex;
@@ -514,6 +527,14 @@ figure figcaption {
   text-decoration: none;
   vertical-align: super;
 }
+.parenhelp-link {
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+  color: #7c3aed;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.parenhelp-link:hover { text-decoration: underline; }
 .help-item {
   display: flex;
   gap: 0.75rem;
