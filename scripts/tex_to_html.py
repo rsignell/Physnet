@@ -137,7 +137,12 @@ class PhysnetConverter:
     def convert(self, text):
         text = self._strip_comments(text)
         text = self._strip_preamble(text)
-        return self._process(text)
+        html = self._process(text)
+        # A superscript [S-N] hint marker is a footnote-style reference: it
+        # should hug the word or punctuation it follows, not float after a
+        # space (the source usually has "... be: \help{4}").
+        html = re.sub(r'[ \t\n]+(<sup class="help-link">)', r'\1', html)
+        return html
 
     # ── Pre-processing ────────────────────────────────────────────────────────
 

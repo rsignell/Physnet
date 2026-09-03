@@ -536,8 +536,14 @@ figure figcaption {
 }
 .help-link:hover,
 .help-link a:hover { text-decoration: underline; }
-sup.help-link { font-size: 0.7em; }
-.help-link-inline { font-size: 0.9em; }
+sup.help-link {
+  font-size: 0.72em;
+  /* sit like a footnote mark, not way up in the air */
+  vertical-align: 0.35em;
+  margin-left: 0.1em;
+  line-height: 0;   /* don't stretch the line it sits on */
+}
+.help-link-inline { font-size: 0.9em; white-space: nowrap; }
 
 .help-item {
   padding: 0.25rem 0 0.75rem;
