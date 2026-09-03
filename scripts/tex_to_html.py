@@ -119,6 +119,10 @@ def convert_math(s):
     s = s.replace(r'\degreesF', r'^{\circ}\,\text{F}')
     s = s.replace(r'\AA', r'\text{Å}')
     s = s.replace(r'\dfrac', r'\frac')
+    # MISN shorthands KaTeX doesn't know
+    s = re.sub(r'\\ds\b', r'\\displaystyle ', s)
+    s = re.sub(r'\\OverArc\{([^{}]*)\}', r'\\overset{\\frown}{\1}', s)
+    s = re.sub(r'\\Overline\{([^{}]*)\}', r'\\overline{\1}', s)
     s = re.sub(r'\\text\{([^{}]*)\}', r'\\text{\1}', s)   # passthrough
     return s
 
