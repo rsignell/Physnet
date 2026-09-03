@@ -103,8 +103,11 @@ def find_env_end(text, pos, env_name):
 
 def convert_math(s):
     """Translate Physnet math macros to standard LaTeX for KaTeX."""
-    s = re.sub(r'\\vect\{([^{}]*)\}', r'\\vec{\1}', s)
-    s = re.sub(r'\\uvec\{([^{}]*)\}', r'\\hat{\1}', s)
+    # magnitude first (its argument may itself contain \vect)
+    s = re.sub(r'\\vecmag\{((?:[^{}]|\{[^{}]*\})*)\}', r'\\left|\1\\right|', s)
+    s = re.sub(r'\\vect?prime\{([^{}]*)\}', r"{\\vec{\1}}'", s)
+    s = re.sub(r'\\ve[cx]t?\{([^{}]*)\}', r'\\vec{\1}', s)   # \vect \vex \vec
+    s = re.sub(r'\\uve[cx]\{([^{}]*)\}', r'\\hat{\1}', s)    # \uvec \uvex
     # \unit{…} may contain a nested \up{N} exponent; render the unit name in
     # upright text with the exponent kept *outside* \text{} (KaTeX rejects a
     # bare ^ inside \text{}).
@@ -656,6 +659,32 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             word = 'Rule' if name == 'TxtRuleRef' else 'Statement'
             return f'<span class="def-ref">{word}&nbsp;{sec}{num}</span>', i
+
+        # Cross-references into the Reif textbook (chapter-numbered)
+        if name == 'ChRef':
+            ch, i = get_arg(text, i)
+            return f'<span class="ch-ref">Ch.&nbsp;{ch}</span>', i
+        if name in ('TutSectRef',):
+            sec, i = get_arg(text, i)
+            return f'<span class="sect-ref">Tutorial&nbsp;Sect.&nbsp;{sec}</span>', i
+        if name in ('TxtSectChRef',):
+            ch, i = get_arg(text, i)
+            sec, i = get_arg(text, i)
+            return f'<span class="sect-ref">Sect.&nbsp;{sec} of Ch.&nbsp;{ch}</span>', i
+        if name in ('TxtEqnChRef',):
+            ch, i = get_arg(text, i)
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="eqn-ref">Eq.&nbsp;({sec}-{num}) of Ch.&nbsp;{ch}</span>', i
+        if name in ('TxtEqnsRef', 'TxtEqnssRef'):
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            return f'<span class="eqn-ref">Eqs.&nbsp;({sec}-{num})</span>', i
+
+        if name == 'Order':
+            content, i = get_arg(text, i)
+            return (f'<p class="order-note"><strong>&rarr;</strong> '
+                    f'{self._process(content)}</p>\n'), i
 
         if name == 'TxtExample':
             sec, i = get_arg(text, i)
