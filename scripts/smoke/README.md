@@ -57,6 +57,16 @@ HTML, used to shake out converter bugs before a bulk re-run.
 `-as.tex` is now fetched and converted alongside `-tx.tex` for both smoke
 modules, so the inline hint pointers resolve.
 
+## Figure re-conversion (m1: all 9 EPS -> SVG)
+
+The `mNgrNN.svg` files were originally made with Inkscape's EPS importer,
+which drops word spaces ("graphof G(x)") and mis-maps the CorelDRAW
+"Symbol" font, so theta rendered as `q`, phi as `f`, Delta as `D`, pi as
+`p`.  Re-converted m1's figures through `epstopdf` (Ghostscript) then
+`pdftocairo -svg` (poppler): text becomes glyph outlines, spacing and
+Greek letters correct.  Script: `scripts/eps_to_svg.sh`.  Source EPS
+re-fetched from Drive (`m1gr00.eps` .. `m1gr08.eps`).
+
 ## Converter changes
 
 9.  `\help{N}` / `\parenhelp{N}` now render as `[S-N]` (superscript / inline
