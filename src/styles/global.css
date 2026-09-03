@@ -446,15 +446,18 @@ footer a { color: rgba(255,255,255,0.8); }
   margin: 1.25rem 0;
   overflow-x: auto;
 }
-/* Numbered display equations: \Eqn{N}{…} → equation + right-aligned (N) */
+/* Numbered display equations: \Eqn{N}{…} → centered equation with the
+   number (N) parked at the right margin, like a LaTeX \tag. */
 .module-content .eqn-block {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  position: relative;
+  display: block;
 }
-.module-content .eqn-block .katex-display { flex: 1; margin: 1.25rem 0; }
+.module-content .eqn-block .katex-display { margin: 1.25rem 0; }
 .module-content .eqn-number {
-  flex: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
