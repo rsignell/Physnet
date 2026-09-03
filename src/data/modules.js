@@ -20,7 +20,7 @@ export const SUBJECTS = [
       { id: 'm404', title: 'Physical Changes and Rates', hasHtml: true },
       { id: 'm405', title: 'Vectors', hasHtml: true },
       { id: 'm406', title: 'Description of Motion', hasHtml: true },
-      { id: 'm407', title: 'Scalars and Vectors in Physics', hasHtml: true },
+      { id: 'm407', title: 'Component Description of Vectors', hasHtml: true },
       { id: 'm408', title: 'Straight-Line Motion in Three Dimensions', hasHtml: true },
       { id: 'm409', title: 'Two-Dimensional Motion: Vectors', hasHtml: true },
       { id: 'm410', title: 'Newton\'s Second Law - One-Dimensional' },
