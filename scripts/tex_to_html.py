@@ -587,6 +587,13 @@ class PhysnetConverter:
             b = self._reif_fig(f'{sec2}{num2}', self._process(cap2), f2)
             return f'<div class="two-figures">{a}{b}</div>\n', i
 
+        if name == 'ThreeFigures':
+            # {s}{n}{f} x3, no captions
+            (s1, n1, f1, s2, n2, f2, s3, n3, f3), i = get_n_args(text, i, 9)
+            parts = ''.join(self._reif_fig(f'{s}{n}', '', f)
+                            for s, n, f in ((s1, n1, f1), (s2, n2, f2), (s3, n3, f3)))
+            return f'<div class="two-figures">{parts}</div>\n', i
+
         if name == 'TableAndFigure':
             # {tsec}{tnum}{tcap}{tabular}{fsec}{fnum}{fcap}{fname}
             (tsec, tnum, tcap, tbody, fsec, fnum, fcap, fname), i = get_n_args(text, i, 8)
@@ -664,6 +671,9 @@ class PhysnetConverter:
         if name == 'ChRef':
             ch, i = get_arg(text, i)
             return f'<span class="ch-ref">Ch.&nbsp;{ch}</span>', i
+        if name == 'ChRefNo':
+            ch, i = get_arg(text, i)
+            return ch, i
         if name in ('TutSectRef',):
             sec, i = get_arg(text, i)
             return f'<span class="sect-ref">Tutorial&nbsp;Sect.&nbsp;{sec}</span>', i
