@@ -135,6 +135,9 @@ class PhysnetConverter:
     # ── Public entry point ────────────────────────────────────────────────────
 
     def convert(self, text):
+        # Source files from the Windows CorelDRAW/LaTeX toolchain are CRLF;
+        # normalise so stray \r never reaches the output or a regex.
+        text = text.replace('\r\n', '\n').replace('\r', '\n')
         text = self._strip_comments(text)
         text = self._strip_preamble(text)
         html = self._process(text)
@@ -1647,18 +1650,30 @@ def convert_module(module_dir, module_id):
     parts.append('</header>\n')
 
     # ── Cover graphic ──
-    # The MISN cover cartoon (mNgr00) is placed by the nphmods.sty module
-    # template, not the body text, so it is never referenced by a figure
-    # macro.  Inject it here when the converted SVG is present.
-    for cover_dir in (os.path.join(module_dir, 'figures'),
-                      os.path.join('public', 'modules', module_id, 'figures')):
-        cover_svg = os.path.join(cover_dir, f'{module_id}gr00.svg')
-        if os.path.exists(cover_svg):
-            parts.append('<figure class="fig-centered module-cover-fig">')
-            parts.append(f'<img src="figures/{module_id}gr00.svg" alt="" '
-                         f'class="physnet-fig">')
-            parts.append('</figure>\n')
-            break
+    # Some MISN modules open with a cover cartoon (mNgr00) placed by the
+    # nphmods.sty template, never referenced by a figure macro.  But mNgr00
+    # is just as often "Figure 1" (referenced in the text), or a leftover
+    # copy of another module's cover left in the source folder.  Inject it
+    # only when it is (a) this module's own file -- the EPS %%Title names
+    # mNgr00.eps, not some other module's -- and (b) not referenced anywhere
+    # in the body.
+    cover_eps = os.path.join(module_dir, f'{module_id}gr00.eps')
+    cover_is_own = False
+    if os.path.exists(cover_eps):
+        with open(cover_eps, encoding='latin-1', errors='replace') as f:
+            head = f.read(600)
+        m = re.search(r'%%Title:\s*\S*?([A-Za-z0-9]+gr00)\.eps', head)
+        cover_is_own = bool(m and m.group(1) == f'{module_id}gr00')
+    referenced = f'{module_id}gr00.svg' in tx_html
+    if cover_is_own and not referenced:
+        for cover_dir in (os.path.join(module_dir, 'figures'),
+                          os.path.join('public', 'modules', module_id, 'figures')):
+            if os.path.exists(os.path.join(cover_dir, f'{module_id}gr00.svg')):
+                parts.append('<figure class="fig-centered module-cover-fig">')
+                parts.append(f'<img src="figures/{module_id}gr00.svg" alt="" '
+                             f'class="physnet-fig">')
+                parts.append('</figure>\n')
+                break
 
     # ── Learning objectives ──
     if meta.get('id_items'):
@@ -1690,7 +1705,26 @@ def convert_module(module_dir, module_id):
         parts.append('<hr class="section-divider">\n')
         parts.append(me_html)
 
-    return '\n'.join(parts)
+    html = '\n'.join(parts)
+
+    # ── Localise cross-module figure references ──
+    # A module that reuses another module's figure (e.g. m3-tx.tex writes
+    # \CaptionedFullFramedFigure{1}{...}{m1gr01}) ships its own copy of that
+    # EPS in its source folder (m3gr01.eps).  Rewrite the reference to this
+    # module's prefix whenever the local copy exists, so each module's page
+    # pulls only from its own public/modules/<id>/figures/ directory.
+    def _localise(m):
+        num = m.group(2)
+        local_svg = os.path.join('public', 'modules', module_id, 'figures',
+                                 f'{module_id}gr{num}.svg')
+        local_eps = os.path.join(module_dir, f'{module_id}gr{num}.eps')
+        if m.group(1) != module_id and (os.path.exists(local_svg) or
+                                        os.path.exists(local_eps)):
+            return f'src="figures/{module_id}gr{num}.svg"'
+        return m.group(0)
+    html = re.sub(r'src="figures/([A-Za-z0-9]+)gr(\d+)\.svg"', _localise, html)
+
+    return html
 
 
 # ── CLI entry point ───────────────────────────────────────────────────────────

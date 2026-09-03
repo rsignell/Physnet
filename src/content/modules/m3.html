@@ -34,12 +34,12 @@ in Appendix B.
 
 <p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Differentiating Common Functions</h2>
 
-<p><h3 id="pcap--">. </h3>
-[]2aDefinition of the Derivative
+<p><h3 id="pcap-2-a">2a. Definition of the Derivative</h3>
+
 <p><p>The derivative of a function of a single independent variable, \(y(x)\), with
 respect to that independent variable, \(x\), is defined as:
-<p>\[\frac{dy(x)}{dx}=\lim_{\Delta x\rightarrow 0}
-                            \frac{y(x+\Delta x)-y(x)}{\Delta x}\]
+<p><span class="eqn-block" id="eqn-1">\[\frac{dy(x)}{dx}=\lim_{\Delta x\rightarrow 0}
+                            \frac{y(x+\Delta x)-y(x)}{\Delta x}\]<span class="eqn-number">(1)</span></span>
 <p>where \(\Delta x\) is a small incremental change in the value of \(x\) that is
 required to go to zero as the prescribed ratio is examined.
 <p><p>As an example, consider 
@@ -47,13 +47,10 @@ where \(a\) is a constant.
 This relationship defines a value for \(y\) for each value of \(x\) except at
 \(x=0\).
 The derivative of this function is:
-<p>\[\begin{aligned}\frac{dy(x)}{dx}&=&\frac{d}{dx}\left(\frac{a}{x}\right)\\
-&=& \lim_{\Delta x\rightarrow 0}
+<p>\[\begin{aligned}\frac{dy(x)}{dx} &= \frac{d}{dx}\left(\frac{a}{x}\right) \\ &= \lim_{\Delta x\rightarrow 0}
     \frac{\frac{a}{x+\Delta x}-
-    \frac{a}{x}}{\Delta x}\\
-&=& \lim_{\Delta x\rightarrow 0}\frac{-a}{x(x+\Delta x)}
-    \frac{\Delta x}{\Delta x}\\
-&=&-\frac{a}{x^2 }.\\\end{aligned}\]
+    \frac{a}{x}}{\Delta x} \\ &= \lim_{\Delta x\rightarrow 0}\frac{-a}{x(x+\Delta x)}
+    \frac{\Delta x}{\Delta x} \\ &= -\frac{a}{x^2 }.\end{aligned}\]
 
 <p>This function defines a value of the derivative of \(y\) for each value of \(x\)
 except at \(x=0\).
@@ -66,11 +63,10 @@ For example, if the function is some power of \(x\), \(y(x)=ax^p\), where \(p\) 
 any positive or negative number, then:
 <p>\[\frac{dy(x)}{dx}=
    \lim_{\Delta x\rightarrow 0}\frac{a(x+\Delta x)^p -ax^p}{\Delta x}\]
-<p>becomes, after applying the binomial theorem and the limiting procedure,
-<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p>becomes, after applying the binomial theorem and the limiting procedure,<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>
 <p><sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[1]The [S-2] means that, if you need help, turn to the Special
 Assistance Supplement at the end of this module and look at Sequence [S-2].
-<p>\[\frac{d(ax^p)}{dx}=pax^{p-1}.\]
+<p><span class="eqn-block" id="eqn-2">\[\frac{d(ax^p)}{dx}=pax^{p-1}.\]<span class="eqn-number">(2)</span></span>
 <p>Equation (2) can be applied any time the derivative of any power of the
 independent variable is desired.
 Because the derivative of a sum of terms is the sum of the derivatives of
@@ -86,8 +82,8 @@ polynomial.
 <p>where \(y_0\), \(v_0\) and \(g\) are constants, and \(t\) is the independent
 variable, then <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> produces:
 <p>\[\frac{dy(t)}{dt} = v_0 - g t.\]
-<p><h3 id="pcap--">. </h3>
-[]2cSecond Derivatives
+<p><h3 id="pcap-2-c">2c. Second Derivatives</h3>
+
 <p><p>The derivative of \(dy(t)/dt\), called the second derivative of \(y(t)\), is
 written:
 <p>\[\frac{d^2 y(t)}{dt^2}.\]
@@ -97,8 +93,8 @@ application of rule (2) produces:
 <p>This \(y(t)\) is a polynomial of degree two, its first derivative is a
 polynomial of degree one and its second derivative is a polynomial of degree
 zero (just a constant).
-<p><h3 id="pcap--">. </h3>
-[]2dDerivative of a Product
+<p><h3 id="pcap-2-d">2d. Derivative of a Product</h3>
+
 <p><p>The derivatives of more complicated algebraic functions, such as the
 products or ratios of polynomials, can also be readily found with the aid of
 some basic rules.
@@ -120,12 +116,12 @@ expression may be rewritten in this way:
 <p>In the limit that \(\Delta x\) goes to zero, the two quantities \(h_1(x)\) and \(h_2(x)\) go to the derivatives of the respective functions while the
 \(f(x + \Delta x)\) multiplying \(h_2(x)\) goes simply to \(f(x)\).
 Thus:
-<p>\[\frac{d(gf)}{dx}=
-           \left(\frac{dg}{dx}\right) f + g \left(\frac{df}{dx}\right) .\]
+<p><span class="eqn-block" id="eqn-3">\[\frac{d(gf)}{dx}=
+           \left(\frac{dg}{dx}\right) f + g \left(\frac{df}{dx}\right) .\]<span class="eqn-number">(3)</span></span>
 <p>Similarly:
-\[\frac{d}{dx}\left(\frac{g}{f}\right) =
+<span class="eqn-block" id="eqn-4">\[\frac{d}{dx}\left(\frac{g}{f}\right) =
 \frac{\left(\frac{dg}{dx}\right) f -
-g \left(\frac{df}{dx}\right)}{f^2}.\]
+g \left(\frac{df}{dx}\right)}{f^2}.\]<span class="eqn-number">(4)</span></span>
 <p>These rules enable us to find the derivative of rational algebraic functions
 (polynomials or ratios of polynomials), but not of irrational algebraic
 functions (such as square roots of polynomials).
@@ -134,16 +130,16 @@ functions (such as square roots of polynomials).
 <p><p>To enable us to find the derivative of an irrational algebraic function, we
 need to use the “chain rule.”
 <p>We are given \(f\) as a function of \(x\) and we suppose we can find its derivative,
-<p>\[\frac{df}{dx}\,.\]
+<p><span class="eqn-block" id="eqn-25">\[\frac{df}{dx}\,.\]<span class="eqn-number">(25)</span></span>
 <p>Now suppose that \(x\) itself is a function of \(t\) so that \(f\) is also a function of \(t\).
 Then the chain rule says that the derivative of \(f(x)\) with respect to \(t\) is:
-<p>\[\frac{df(x(t))}{dt}= \left(\frac{df}{dx}\right)\left(\frac{dx}{dt}\right) .\]
+<p><span class="eqn-block" id="eqn-5">\[\frac{df(x(t))}{dt}= \left(\frac{df}{dx}\right)\left(\frac{dx}{dt}\right) .\]<span class="eqn-number">(5)</span></span>
 <p>Using this, the derivative of a function such as
 <p>\[F(x) = (ax^2 + bx + c)^{1/2} ,\]
-<p>where \(a\), \(b\), and \(c\) are constants, can readily be shown to be: <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
-<p>\[\frac{dF(x)}{dx}=\frac{2ax+b}{2(ax^2 +bx+c)^{1/2}}.\]
-<p><h3 id="pcap--">. </h3>
-[]2fDerivatives of Trigonometric Functions
+<p>where \(a\), \(b\), and \(c\) are constants, can readily be shown to be:<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup>
+<p><span class="eqn-block" id="eqn-6">\[\frac{dF(x)}{dx}=\frac{2ax+b}{2(ax^2 +bx+c)^{1/2}}.\]<span class="eqn-number">(6)</span></span>
+<p><h3 id="pcap-2-f">2f. Derivatives of Trigonometric Functions</h3>
+
 <p><p>We can evaluate the derivatives of transcendental functions, such as
 \(\sin x\), which cannot be expressed as rational or irrational algebraic
 functions, using rules developed from the definition of the derivative.
@@ -160,29 +156,29 @@ The derivative of \(y(x)\) is:
              cos\left(\frac{A+B}{2}\right) ,\]
 <p>and the limit
 <p>\[\lim_{\theta \rightarrow 0}\frac{sin\theta }{\theta } = 1,\]
-<p>we find that: <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
-\[\frac{d}{dx}[\sin(kx + \delta)] = k \cos(kx + \delta).\]
+<p>we find that:<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
+<span class="eqn-block" id="eqn-7">\[\frac{d}{dx}[\sin(kx + \delta)] = k \cos(kx + \delta).\]<span class="eqn-number">(7)</span></span>
 <p>The derivative of \(\cos(kx + \delta)\) can be obtained directly from the
 above result using the relations
 <p>\[\cos(kx + \delta) = -\sin\left(kx + \delta + \frac{\pi}{2}\right)\]
 <p>and
-<p>\[\cos\left(kx + \delta - \frac{\pi}{2}\right) =sin(kx+\delta),\]
+<p><span class="eqn-block" id="eqn-8">\[\cos\left(kx + \delta - \frac{\pi}{2}\right) =sin(kx+\delta),\]<span class="eqn-number">(8)</span></span>
 <p>yielding:
-\[\frac{d}{dx}\cos(kx + \delta ) = - k \sin(kx + \delta).\]
+<span class="eqn-block" id="eqn-9">\[\frac{d}{dx}\cos(kx + \delta ) = - k \sin(kx + \delta).\]<span class="eqn-number">(9)</span></span>
 <p>The derivatives of other trigonometric functions may be obtained from the
 above results and the appropriate trigonometric identities.
 For example, the derivative of \(\tan\theta\)  with respect to \(\theta\)  is:
-<p>\[\frac{d}{d\theta}\tan\theta =
+<p><span class="eqn-block" id="eqn-10">\[\frac{d}{d\theta}\tan\theta =
            \frac{d}{d\theta}\left(\frac{\sin\theta}
-           {\cos\theta}\right) = \frac{1}{\cos^2\theta} = \sec^2\theta .\]
+           {\cos\theta}\right) = \frac{1}{\cos^2\theta} = \sec^2\theta .\]<span class="eqn-number">(10)</span></span>
 <p>Similarly, the derivatives of the inverse trigonometric functions, such as
 \(\theta = \arctan x\) (also written as \(\tan^{-1} x\), which means \(\theta\) is
 the angle whose tangent is \(x\)) can also be obtained from the above results
 using the rule:
-<p>\[\frac{dy(x)}{dx}=\frac{1}{\frac{dx(y)}{dy}};
-\;\left(\frac{dx}{dy}\neq 0\right) .\]
+<p><span class="eqn-block" id="eqn-11">\[\frac{dy(x)}{dx}=\frac{1}{\frac{dx(y)}{dy}};
+\;\left(\frac{dx}{dy}\neq 0\right) .\]<span class="eqn-number">(11)</span></span>
 <p>Frequently used derivatives of trigonometric functions are listed in
-Appendix B. /par
+Appendix B. 
 <p><h3 id="pcap-2-g">2g. Derivatives of Exponentials and Logarithms</h3>
 
 <p><p>None of our rules, developed from algebraic and trigonometric functions,
@@ -203,7 +199,7 @@ The limit of the logarithm of a function is the same as the logarithm of
 <p>\[y = \lim_{x \rightarrow 0} (1 + x)^{1/x} ?\]
 <p>This limit has a definite value, as can be seen by evaluating it and
 plotting it for a few values of \(x\) on both sides of zero.
-<p><div class="figure-full"><figure id="fig-1"><img src="figures/m1gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A graph of \((1 + x)^{1/x}\) in the vicinity of \(x = 0\).</figcaption></figure></div>
+<p><div class="figure-full"><figure id="fig-1"><img src="figures/m3gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. A graph of \((1 + x)^{1/x}\) in the vicinity of \(x = 0\).</figcaption></figure></div>
 
 <p>The value of the limit is the transcendental number \(e\), which to 9 decimal
 places is
@@ -211,9 +207,9 @@ places is
 <p>As we shall see, \(e\)'s actual value is often of no real interest in physical
 problems, but it enters in a natural way as the exponential base appropriate
 to the mathematical description of many different kinds of physical
-phenomena. /par
+phenomena. 
 <p><p>Completing the development of the derivative of the logarithm, we get
-<p>\[\frac{d\left(\log_a F\right)}{dF}=\frac{\log_a e}{F}\]
+<p><span class="eqn-block" id="eqn-13">\[\frac{d\left(\log_a F\right)}{dF}=\frac{\log_a e}{F}\]<span class="eqn-number">(13)</span></span>
 <p>If we choose the base \(a = e\), then the constant \(\log_a e\) becomes 1 (see
 property (4) of logarithms, Appendix A).
 Because this makes life simpler, we will restrict the remainder of our
@@ -221,20 +217,18 @@ review of derivatives of logarithms and exponentials to that base.
 Furthermore, we write “\(\log_e\)” as simply “\(\ell\)n.”
 Thus, for a variable \(F\), the derivative of “\(\log F\) to the base \(e\),”
 \(\ell n\,F\), is:
-<p>\[\frac{d(\ell n\,F)}{dF}=\frac{1}{F}.\]
+<p><span class="eqn-block" id="eqn-14">\[\frac{d(\ell n\,F)}{dF}=\frac{1}{F}.\]<span class="eqn-number">(14)</span></span>
 <p>We can obtain the derivative of \(e^x\) with respect to \(x\) from the
 reciprocal relation between the derivatives when the roles of the dependent
 and independent variables are interchanged [See <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>].
 We use
-<p>\[\begin{aligned}x(F) & = & \ell n\,F \\
-F(x) & = & e^x \\
-\frac{dx(F)}{dF} & = & \frac{1}{dF(x)/dx} \\\end{aligned}\]
+<p>\[\begin{aligned}x(F) &= \ell n\,F \\ F(x) &= e^x \\ \frac{dx(F)}{dF} &= \frac{1}{dF(x)/dx}\end{aligned}\]
 
 <p>to get:
-<p>\[\frac{d}{dx}\left(e^x\right) = F = e^x.\]
+<p><span class="eqn-block" id="eqn-15">\[\frac{d}{dx}\left(e^x\right) = F = e^x.\]<span class="eqn-number">(15)</span></span>
 <p>Thus the exponential (to the base \(e\)) is its own derivative!
 Finally, using the chain rule, it can be shown that:
-<p>\[\frac{d}{dx}\left(e^{mx}\right) = m e^{mx}.\]
+<p><span class="eqn-block" id="eqn-18">\[\frac{d}{dx}\left(e^{mx}\right) = m e^{mx}.\]<span class="eqn-number">(18)</span></span>
 <p></section>
 
 <p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Derivatives as Graphical Slopes</h2>
@@ -247,7 +241,7 @@ The graphical representation has distinct visual advantages, presenting
 all of the properties of the function in one picture.
 All of the points that lie on the curve are points which satisfy the
 equation connecting the variables.
-<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m1gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The graph of \(F(x) = Ax + b\).</figcaption></figure>
+<p><figure id="fig-2" class="fig-left-framed"><img src="figures/m3gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The graph of \(F(x) = Ax + b\).</figcaption></figure>
 
 <p>As an example, consider the functional relationship between \(F\) and \(x\)
 given by the equation
@@ -270,11 +264,11 @@ On a two-dimensional rectangular plot it is customary to represent
  points by the ordered pair of numbers [\(x ,y\)] which are, respectively, the
  horizontal and vertical coordinates of the point.
 
-<p><div class="figure-full"><figure id="fig-3"><img src="figures/m1gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The slope of a curve \(G(x)\), at some point
+<p><div class="figure-full"><figure id="fig-3"><img src="figures/m3gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. The slope of a curve \(G(x)\), at some point
                               \(P\), equals the slope of the tangent to the curve at that point.</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]3bSlope of a Straight Line
+<p><h3 id="pcap-3-b">3b. Slope of a Straight Line</h3>
+
 A property associated with equations which is of importance in physical
 applications and which can most easily be discussed with reference to the
 graph of the equation is the rate at which one variable changes due to
@@ -289,18 +283,18 @@ is:
 <p>\[\frac{\Delta F}{\Delta x}=\frac{F(x_2)-F(x_1)}{x_2-x_1}.\]
 <p>Let \(\Delta x = x_2 - x_1\) so that \(F(x_2) = F(x_1 + \Delta x)\) and the
 slope of the line may be written as:
-<p>\[\text{slope } \equiv \frac{F(x_1 + \Delta x) - F(x_1)}{\Delta x} \qquad \text{(straight line)}.\]
+<p><span class="eqn-block" id="eqn-16">\[\text{slope } \equiv \frac{F(x_1 + \Delta x) - F(x_1)}{\Delta x} \qquad \text{(straight line)}.\]<span class="eqn-number">(16)</span></span>
 <p>For a straight line, the result of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> is clearly the same no
 matter what size we pick for \(\Delta x\).
 That will not be the case for curves that are not straight lines.
-<p><h3 id="pcap--">. </h3>
-[]3cSlopes of Curves
+<p><h3 id="pcap-3-c">3c. Slopes of Curves</h3>
+
 If we take the limit of <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> as \(\Delta x \rightarrow 0\), this
 expression for the slope
 becomes the derivative of \(F\) with respect to \(x\), and we can define the
 slope at a single point on any curve as:
-<p>\[\text{slope at point } x_1 \equiv
-                                \left.\frac{dF(x)}{dx}\right|_{x = x_1}.\]
+<p><span class="eqn-block" id="eqn-17">\[\text{slope at point } x_1 \equiv
+                                \left.\frac{dF(x)}{dx}\right|_{x = x_1}.\]<span class="eqn-number">(17)</span></span>
 <p>For a function whose graph is not a straight line,
 the slope does depend upon the point at which it is evaluated.
 The slope in such cases is the slope of the straight line that is
@@ -327,10 +321,9 @@ Find the values of \(x\) which make the derivative of the function equal to
 zero.
 <p><span class="tryit">Try it:</span>  Show that the locations of the maximum and minima of the function
 <p>\[y(x) = 5 x^3 - 2 x^2 - 3 x + 2.\]
-<p>are at:  \(x = 3/5; x = -1/3\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<p>are at:  \(x = 3/5; x = -1/3\).<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
 Show that the first is where \(y\) is a minimum, the second where it is a
-maximum.
-<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+maximum.<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
 <p><h3 id="pcap-3-e">3e. Separating into Maxima and Minima</h3>
 
 How do you determine whether a point of zero slope is a maximum or a
@@ -350,7 +343,7 @@ function, the “bending,” is positive.
 <p><span class="tryit">Try it:</span>  See for yourself that the function
 <p>\[y(x) = 2x^3 - 3x^2 + 4,\]
 <p>has a maximum at point (0,4) and a minimum at point (1,3).
-<p><div class="figure-full"><figure id="fig-4"><img src="figures/m1gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. For the curve shown, the slopes at \(P_1\)
+<p><div class="figure-full"><figure id="fig-4"><img src="figures/m3gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. For the curve shown, the slopes at \(P_1\)
           and \(P_5\) are positive numbers while the slope at \(P_3\) is negative.
           At the points \(P_2\) and \(P_4\), where the tangent line is horizontal, the
           slope is zero.</figcaption></figure></div>
@@ -359,8 +352,8 @@ function, the “bending,” is positive.
 
 <p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Definite and “Indefinite” Integrals</h2>
 
-<p><h3 id="pcap--">. </h3>
-[]4aIndefinite Integrals
+<p><h3 id="pcap-4-a">4a. Indefinite Integrals</h3>
+
 Knowing the derivative of a function with respect to an independent
 variable, we often wish to determine the function itself.
 The inverse of the derivative is desired here, and the procedure is called
@@ -382,12 +375,7 @@ This will be true if \(y(x)\) is the derivative of \(F(x) + C\) with respect to
 \(x\).
 The function being integrated, \(y(x)\), is called “the integrand.”
 Examples:
-<p>\[\begin{aligned}(i) & \int & \left( 4x^2 +7\right) dx=\frac{4}{3}x^3 +7x+C \\
- (ii) & \int & x^n\,dx = \frac{x^{n+1}}{n+1} + C \\
-(iii) & \int & \frac{dx}{x}=\ell n\,x + C \\
- (iv) & \int & \cos\theta\,d\theta = \sin\theta + C \\
-  (v) & \int & e^x dx = e^x + C                   \\
- (vi) & \int & \frac{dI(x)}{dx}dx = I(x) + C \qquad \text{for any } I(x). \\\end{aligned}\]
+<p>\[\begin{aligned}(i) &\int \left( 4x^2 +7\right) dx=\frac{4}{3}x^3 +7x+C \\ (ii) &\int x^n\,dx = \frac{x^{n+1}}{n+1} + C \\ (iii) &\int \frac{dx}{x}=\ell n\,x + C \\ (iv) &\int \cos\theta\,d\theta = \sin\theta + C \\ (v) &\int e^x dx = e^x + C \\ (vi) &\int \frac{dI(x)}{dx}dx = I(x) + C \qquad \text{for any } I(x).\end{aligned}\]
 
 <p>The last result, (vi), can be verified by taking the derivative with respect
 to \(x\) of the right side of each equation, thereby producing the integrand
@@ -425,8 +413,8 @@ We can let \(g(x) = x\) and \(df(x)/dx = \cos x\), so:
 <p>\[\int \,x\, \cos x\, dx = x \sin x + \cos x + C.\]
 <p><span class="tryit">Try it:</span>  Try making the other choice, \(g(x) = \cos x\) and \(df(x)/dx = x\)
 so \(f(x) = (1/2) x^2\), and see what happens.
-<p><h3 id="pcap--">. </h3>
-[]4cOther Integration Techniques
+<p><h3 id="pcap-4-c">4c. Other Integration Techniques</h3>
+
 Other difficult-to-perform integrations may be reduced to tractable
 form by the introduction of a new variable.
 Integrands involving radicals, such as \(\left(a^2 + x^2 \right)^{1/2}\),
@@ -444,11 +432,11 @@ cast into certain standard forms.
 integrals.
 <sup class="fn-ref"><a href="#fn-" id="fnref-"></a></sup>[8]See “Numerical Integration” (MISN-0-349) and “Formal Mathematical
           Solutions by Computer” (MISN-0-361).
-<p><div class="figure-full"><figure id="fig-5"><img src="figures/m1gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The integral of \(y(x)\) from \(x_0\) to \(x\) equals the area that
+<p><div class="figure-full"><figure id="fig-5"><img src="figures/m3gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. The integral of \(y(x)\) from \(x_0\) to \(x\) equals the area that
                               is under the curve and bounded by \(x_0\) and \(x\).</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]4dDefinite Integrals
+<p><h3 id="pcap-4-d">4d. Definite Integrals</h3>
+
 While the derivative of a function equals the slope of the curve
 representing the function, the integral of a function equals the area under
 the function's curve (see <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>).
@@ -478,7 +466,7 @@ Thus for the graph of the sine function, shown in <a href="#fig-6" class="fig-re
 from \(x = 0\) to \(x = 2\pi\), there is just as much area below the axis
 (negative area) as there is above the axis (positive area), so they cancel
 each other and the integral from 0 to 2\(\pi\)  is zero:
-<p><div class="figure-full"><figure id="fig-6"><img src="figures/m1gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Graph of \(\sin x\) illustrating that the
+<p><div class="figure-full"><figure id="fig-6"><img src="figures/m3gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Graph of \(\sin x\) illustrating that the
                               integral over the full cycle, 0 to 2\(\pi\), is zero.
                               The part of the area above the axis, \(0\) to \(\pi\), is equal to
                               the part of the area below axis, \(\pi\)  to \(2\pi\).</figcaption></figure></div>
@@ -507,15 +495,15 @@ The familiar properties of logarithms, listed below, all follow from the
 definition.
 <p>
 If \(F = a^x\) and \(G = a^y\), then \(FG = a^x a^y = a^{x + y}\), and
-<p>\[\log_a(FG) = x + y = \log_a F + \log_a G.\]
-\[\log_a\frac{F}{G}=\log_a F-\log_a G\]
-\[\log_a F^n = n\,\log_a F\]
-\[\log_a a = 1\]
-\[\log_a 1 = 0\]
+<p><span class="eqn-block" id="eqn-A1">\[\log_a(FG) = x + y = \log_a F + \log_a G.\]<span class="eqn-number">(A1)</span></span>
+<span class="eqn-block" id="eqn-A2">\[\log_a\frac{F}{G}=\log_a F-\log_a G\]<span class="eqn-number">(A2)</span></span>
+<span class="eqn-block" id="eqn-A3">\[\log_a F^n = n\,\log_a F\]<span class="eqn-number">(A3)</span></span>
+<span class="eqn-block" id="eqn-A4">\[\log_a a = 1\]<span class="eqn-number">(A4)</span></span>
+<span class="eqn-block" id="eqn-A5">\[\log_a 1 = 0\]<span class="eqn-number">(A5)</span></span>
 <p>Each of these can be proved using the definition of the logarithm.
 Another useful property expresses the relationship between the logarithms of
 the same number \(F\) in two different bases, \(a\) and \(b\):
-<p>\[\log_b F = (\log_a F)\cdot(\log_b a).\]
+<p><span class="eqn-block" id="eqn-12">\[\log_b F = (\log_a F)\cdot(\log_b a).\]<span class="eqn-number">(12)</span></span>
 <p>The inverse functional relationships,
 <p>\[x(F) = \log_a F;\qquad \text{and} \qquad F(x) = a^x\]
 <p>define a value of \(x\) for each given value of \(F\), and vice versa.
@@ -523,27 +511,27 @@ the same number \(F\) in two different bases, \(a\) and \(b\):
 
 <p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Frequently Used Derivatives</h2>
 
-<p>\[\frac{d}{dx}\left(a x^n\right) = n a x^{n-1}\]
-\[\frac{d}{dx}[f(x)g(x)]= g(x)\frac{df(x)}{dx}+f(x)\frac{dg(x)}{dx}\]
-\[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{df(x)}{dx}-f(x)\frac{dg(x)}{dx}}{[g(x)]^2}\]
-\[\frac{d}{dt}[f(x)]=\frac{df}{dx}\cdot \frac{dx}{dt}\]
-\[\frac{df(x)}{dx}=\left[\frac{dx(f)}{df}\right]^{-1}\]
+<p><span class="eqn-block" id="eqn-B1">\[\frac{d}{dx}\left(a x^n\right) = n a x^{n-1}\]<span class="eqn-number">(B1)</span></span>
+<span class="eqn-block" id="eqn-B2">\[\frac{d}{dx}[f(x)g(x)]= g(x)\frac{df(x)}{dx}+f(x)\frac{dg(x)}{dx}\]<span class="eqn-number">(B2)</span></span>
+<span class="eqn-block" id="eqn-B3">\[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{df(x)}{dx}-f(x)\frac{dg(x)}{dx}}{[g(x)]^2}\]<span class="eqn-number">(B3)</span></span>
+<span class="eqn-block" id="eqn-B4">\[\frac{d}{dt}[f(x)]=\frac{df}{dx}\cdot \frac{dx}{dt}\]<span class="eqn-number">(B4)</span></span>
+<span class="eqn-block" id="eqn-B5">\[\frac{df(x)}{dx}=\left[\frac{dx(f)}{df}\right]^{-1}\]<span class="eqn-number">(B5)</span></span>
 <span class="fbox">Trigonometric</span>
-\[\frac{d}{d\theta}\sin\theta = \cos\theta\]
-\[\frac{d}{d\theta}\sin m\theta = m \cos m\theta\]
-\[\frac{d}{d\theta}\cos\theta = - \sin\theta\]
-\[\frac{d}{d\theta}\tan\theta = \sec^2 \theta\]
-\[\frac{d}{d\theta}\cot\theta = - \csc^2 \theta\]
-\[\frac{d}{d\theta}\sec\theta = \sec\theta \tan\theta\]
-\[\frac{d}{d\theta}\csc\theta = - \csc\theta \cot\theta\]
-\[\frac{d}{d\theta}\sin^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]
-\[\frac{d}{d\theta}\cos^{-1}x(\theta)=\frac{-\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]
-\[\frac{d}{d\theta}\tan^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{1+x^2}\]
+<span class="eqn-block" id="eqn-B6">\[\frac{d}{d\theta}\sin\theta = \cos\theta\]<span class="eqn-number">(B6)</span></span>
+<span class="eqn-block" id="eqn-B6'">\[\frac{d}{d\theta}\sin m\theta = m \cos m\theta\]<span class="eqn-number">(B6')</span></span>
+<span class="eqn-block" id="eqn-B7">\[\frac{d}{d\theta}\cos\theta = - \sin\theta\]<span class="eqn-number">(B7)</span></span>
+<span class="eqn-block" id="eqn-B8">\[\frac{d}{d\theta}\tan\theta = \sec^2 \theta\]<span class="eqn-number">(B8)</span></span>
+<span class="eqn-block" id="eqn-B9">\[\frac{d}{d\theta}\cot\theta = - \csc^2 \theta\]<span class="eqn-number">(B9)</span></span>
+<span class="eqn-block" id="eqn-B10">\[\frac{d}{d\theta}\sec\theta = \sec\theta \tan\theta\]<span class="eqn-number">(B10)</span></span>
+<span class="eqn-block" id="eqn-B11">\[\frac{d}{d\theta}\csc\theta = - \csc\theta \cot\theta\]<span class="eqn-number">(B11)</span></span>
+<span class="eqn-block" id="eqn-B12">\[\frac{d}{d\theta}\sin^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]<span class="eqn-number">(B12)</span></span>
+<span class="eqn-block" id="eqn-B13">\[\frac{d}{d\theta}\cos^{-1}x(\theta)=\frac{-\frac{dx}{d\theta}}{(1-x^2 )^{1/2}}\]<span class="eqn-number">(B13)</span></span>
+<span class="eqn-block" id="eqn-B14">\[\frac{d}{d\theta}\tan^{-1}x(\theta)=\frac{\frac{dx}{d\theta}}{1+x^2}\]<span class="eqn-number">(B14)</span></span>
 <span class="fbox">Logarithmic</span>
-\[\frac{d}{dx}\log_a U(x) =\left[\frac{1}{U(x)}\right] \left[\log_a e\right]\left[\frac{dU(x)}{dx}\right]\]
-\[\frac{d}{dx}\ell n\,x = \frac{1}{x}\]
-\[\frac{d}{dx}\left(a^x\right) = a^x log_e a\]
-\[\frac{d}{dx}\left(e^{y(x)}\right) =e^{y(x)}\left(\frac{dy(x)}{dx}\right)\]
+<span class="eqn-block" id="eqn-B15">\[\frac{d}{dx}\log_a U(x) =\left[\frac{1}{U(x)}\right] \left[\log_a e\right]\left[\frac{dU(x)}{dx}\right]\]<span class="eqn-number">(B15)</span></span>
+<span class="eqn-block" id="eqn-B16">\[\frac{d}{dx}\ell n\,x = \frac{1}{x}\]<span class="eqn-number">(B16)</span></span>
+<span class="eqn-block" id="eqn-B17">\[\frac{d}{dx}\left(a^x\right) = a^x log_e a\]<span class="eqn-number">(B17)</span></span>
+<span class="eqn-block" id="eqn-B18">\[\frac{d}{dx}\left(e^{y(x)}\right) =e^{y(x)}\left(\frac{dy(x)}{dx}\right)\]<span class="eqn-number">(B18)</span></span>
 </section>
 
 <p>
@@ -622,7 +610,7 @@ constants.</li>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(\int A r e^{kr}\,dr\) \qquad  (\(A\) and \(k\) are constants) <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">a.</span> \(\int A r e^{kr}\,dr\) \qquad  (\(A\) and \(k\) are constants)<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup></li>
 <li><span class="item-label">b.</span> \(\int x^{1/2}\,dx\)
 </li>
 <li><span class="item-label">20.</span> For each of the equations below, find the maximum and/or minimum
@@ -644,7 +632,7 @@ have a minimum at \(x = 1/3\).
 <li><span class="item-label">3.</span> \(\frac{a x + b/2}{(a x^2 + b x + c)^{1/2}}\)</li>
 <li><span class="item-label">6.</span> 17/9</li>
 <li><span class="item-label">7.</span> -66.33</li>
-<li><span class="item-label">14.</span> (a) 80/3;  (b) 1/5 <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>; (c) 1/2 <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<li><span class="item-label">14.</span> (a) 80/3;  (b) 1/5<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>; (c) 1/2<sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup></li>
 <li><span class="item-label">15.</span> \(A x [\ell n(kx) - 1] + C\)</li>
 <li><span class="item-label">16.</span> 75</li>
 <li><span class="item-label">18.</span> \(-5 A/\sqrt{2}\)</li>
@@ -663,7 +651,7 @@ have a minimum at \(x = 1/3\).
 </li>
 <li><span class="item-label">a.</span> \(\left(-\frac{1}{2}, \frac{39}{4}\right)\), minimum</li>
 <li><span class="item-label">b.</span> \((-1,4)\), maximum; \((1,0)\), minimum</li>
-<li><span class="item-label">c.</span> as long as \(A= - 2B\), the constants can be anything.  <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<li><span class="item-label">c.</span> as long as \(A= - 2B\), the constants can be anything.<sup class="help-link"><a href="#help-8" title="see Sequence [S-8] in the Special Assistance Supplement">[S-8]</a></sup>
 </li>
 </ol>
 
@@ -675,7 +663,7 @@ have a minimum at \(x = 1/3\).
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Find the locations of the maximum and minima of the function:
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;3d)</span></h3><div class="help-body">Find the locations of the maximum and minima of the function:
  
  \[y(x) = 5 x^3 - 2 x^2 - 3 x + 2.\]
  
@@ -713,7 +701,7 @@ have a minimum at \(x = 1/3\).
  so a maximum occurs at \((-1/3,70/27)\).
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The binomial theorem states that
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;2b)</span></h3><div class="help-body">The binomial theorem states that
  
  \[(c+d)^p=c^p+pc^{p-1}d+\frac{p(p-1)}{(1)(2)}c^{p-2}d^2
                 +\frac{p(p-1)(p-2)}{(1)(2)(3)} c^{p-3}d^3+\ldots\]
@@ -725,7 +713,7 @@ have a minimum at \(x = 1/3\).
  \(\Delta x\rightarrow 0\) is taken, this is the  only non-zero term.
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Applying the trigonometric identity for \(\sin A - \sin B\), where
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Section&nbsp;2f)</span></h3><div class="help-body">Applying the trigonometric identity for \(\sin A - \sin B\), where
  \(A = kx + k \Delta x + \delta\) and \(B = kx + \delta\), we obtain:
  
  \[\sin(kx+k\Delta x + \delta) - \sin(kx+\delta)=
@@ -741,7 +729,7 @@ have a minimum at \(x = 1/3\).
  
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Set \(z \equiv kr\) so the integral becomes:
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;problem 19)</span></h3><div class="help-body">Set \(z \equiv kr\) so the integral becomes:
  
  \[I = \frac{A}{k^2} \int z e^z\,dz\,.\]
  
@@ -756,7 +744,7 @@ have a minimum at \(x = 1/3\).
  where we have used: \(d(e^z)/dz = e^z\).
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">The symbols used to express the chain rule in Sect.&thinsp;2e are already used in other ways in this problem,
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Section&nbsp;2e)</span></h3><div class="help-body">The symbols used to express the chain rule in Sect.&thinsp;2e are already used in other ways in this problem,
  so we make the substitutions \(f \rightarrow F\), \(x \rightarrow g\), and then \(t \rightarrow x\)
  to get an equivalent chain rule:
  
@@ -772,18 +760,18 @@ have a minimum at \(x = 1/3\).
  
  </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Define \(z \equiv 5y\), so \(dz = 5dy\) hence \(dy = (1/5) dz\) and:
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;14b)</span></h3><div class="help-body">Define \(z \equiv 5y\), so \(dz = 5dy\) hence \(dy = (1/5) dz\) and:
 <p>\[\int_0^\infty e^{-5y}\,dy = \frac{1}{5} \int^\infty_0 e^{-z}\,dz = \frac{1}{5} (1)\,.\]
 <p></div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Define \(z \equiv \cos \theta\) giving \(dz = -(\sin \theta)\,d\theta\) hence \((\sin\theta\,d\theta) \equiv -z\,dz\),
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;14c)</span></h3><div class="help-body">Define \(z \equiv \cos \theta\) giving \(dz = -(\sin \theta)\,d\theta\) hence \((\sin\theta\,d\theta) \equiv -z\,dz\),
  where \(\theta = 0\) is the same as  \(z = 1\), and where \(\theta = \pi/2\) is the same as \(z = 0\).
  Then:
  
  \[\int_0^{\pi /2}\,\cos\theta\;\sin\theta\,d\theta = -\int_1^0 z\,dz = \int_0^1 z\,dz\,.\]
 <p></div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">The slope of the function has a zero at \(x = 0\) and another at \(x = -(2B)/(3A)\).
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;20c)</span></h3><div class="help-body">The slope of the function has a zero at \(x = 0\) and another at \(x = -(2B)/(3A)\).
  The signs of the second derivatives show the first to be a maximum and the second a minimum.
  So just set \((1/3) = -(2B)/(3A)\).
 </div></div>
@@ -835,3 +823,4 @@ have a minimum at (1/3,0) and a maximum at (0,1).
 </ol>
 
 <p></section>
+
