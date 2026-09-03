@@ -292,6 +292,15 @@ class PhysnetConverter:
         # ── Inline math ──
         if name == 'm':
             arg, i = get_arg(text, i)
+            # Some sources mis-tag a multi-line derivation as inline \m{},
+            # sticking \medskip\newline between the "=" lines -- invalid in
+            # KaTeX, so the whole \(...\) leaks as raw text.  Promote such a
+            # block to a display \begin{aligned} instead.
+            if re.search(r'\\(?:newline|medskip|smallskip|bigskip)\b', arg):
+                arg = re.sub(r'\\(?:medskip|smallskip|bigskip)\b', '', arg)
+                arg = re.sub(r'\\newline\b', r' \\\\ ', arg)
+                return (f'\\[\\begin{{aligned}}{convert_math(arg)}'
+                        f'\\end{{aligned}}\\]'), i
             return f'\\({convert_math(arg)}\\)', i
 
         if name == 'vect':
@@ -1643,6 +1652,11 @@ def parse_dat(text, conv):
 
 # ── Full module assembler ─────────────────────────────────────────────────────
 
+# Modules visually confirmed to open with a decorative cover cartoon
+# (mNgr00, placed by nphmods.sty, not referenced in the text).
+COVER_MODULES = {'m1', 'm4', 'm10'}
+
+
 def convert_module(module_dir, module_id):
     def read(suffix):
         path = os.path.join(module_dir, f'{module_id}{suffix}')
@@ -1684,30 +1698,22 @@ def convert_module(module_dir, module_id):
     parts.append('</header>\n')
 
     # ── Cover graphic ──
-    # Some MISN modules open with a cover cartoon (mNgr00) placed by the
-    # nphmods.sty template, never referenced by a figure macro.  But mNgr00
-    # is just as often "Figure 1" (referenced in the text), or a leftover
-    # copy of another module's cover left in the source folder.  Inject it
-    # only when it is (a) this module's own file -- the EPS %%Title names
-    # mNgr00.eps, not some other module's -- and (b) not referenced anywhere
-    # in the body.
-    cover_eps = os.path.join(module_dir, f'{module_id}gr00.eps')
-    cover_is_own = False
-    if os.path.exists(cover_eps):
-        with open(cover_eps, encoding='latin-1', errors='replace') as f:
-            head = f.read(600)
-        m = re.search(r'%%Title:\s*\S*?([A-Za-z0-9]+gr00)\.eps', head)
-        cover_is_own = bool(m and m.group(1) == f'{module_id}gr00')
-    referenced = f'{module_id}gr00.svg' in tx_html
-    if cover_is_own and not referenced:
-        for cover_dir in (os.path.join(module_dir, 'figures'),
-                          os.path.join('public', 'modules', module_id, 'figures')):
-            if os.path.exists(os.path.join(cover_dir, f'{module_id}gr00.svg')):
-                parts.append('<figure class="fig-centered module-cover-fig">')
-                parts.append(f'<img src="figures/{module_id}gr00.svg" alt="" '
-                             f'class="physnet-fig">')
-                parts.append('</figure>\n')
-                break
+    # A few MISN modules open with a decorative cover cartoon (mNgr00),
+    # placed by the nphmods.sty template and never referenced by a figure
+    # macro.  But mNgr00 is just as often "Figure 1", a leftover copy of
+    # another module's cover, or orphaned draft content -- indistinguishable
+    # without looking at the picture.  So inject it only for modules that
+    # have been visually confirmed to have one.
+    if (module_id in COVER_MODULES
+            and f'{module_id}gr00.svg' not in tx_html
+            and (os.path.exists(os.path.join(module_dir, 'figures',
+                                             f'{module_id}gr00.svg'))
+                 or os.path.exists(os.path.join('public', 'modules', module_id,
+                                                'figures', f'{module_id}gr00.svg')))):
+        parts.append('<figure class="fig-centered module-cover-fig">')
+        parts.append(f'<img src="figures/{module_id}gr00.svg" alt="" '
+                     f'class="physnet-fig">')
+        parts.append('</figure>\n')
 
     # ── Learning objectives ──
     if meta.get('id_items'):
