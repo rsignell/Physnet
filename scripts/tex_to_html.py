@@ -343,6 +343,22 @@ class PhysnetConverter:
                         f'<span class="eqn-number">({lbl})</span></span>'), i
             return f'\\[{math}\\]', i
 
+        if name == 'FiveEqns':
+            # \FiveEqns{eqnum}{row1}...{row5} -- five 2-column aligned rows
+            num, i = get_arg(text, i)
+            rows = []
+            for _ in range(5):
+                r, i = get_arg(text, i)
+                if r.strip():
+                    rows.append(r.strip())
+            math = convert_math(' \\\\ '.join(rows))
+            block = f'\\[\\begin{{aligned}}{math}\\end{{aligned}}\\]'
+            lbl = num.strip()
+            if lbl:
+                return (f'<span class="eqn-block" id="eqn-{lbl}">{block}'
+                        f'<span class="eqn-number">({lbl})</span></span>'), i
+            return block, i
+
         # ── Footnotes ──
         if name == 'Footnote':
             num,  i = get_arg(text, i)
@@ -894,9 +910,8 @@ class PhysnetConverter:
             'Gamma','Delta','Theta','Lambda','Xi','Pi',
             'Sigma','Upsilon','Phi','Psi','Omega',
             'hbar','ell','Re','Im','wp','aleph',
-            'ldots','cdots','ddots','vdots',
+            'ddots','vdots',
             'left','right','big','Big','bigg','Bigg',
-            'quad','qquad',
             'Longrightarrow','longrightarrow','Longleftarrow','longleftrightarrow',
             'mapsto','longmapsto','hookrightarrow','hookleftarrow',
             'overrightarrow','overleftarrow','overbrace','underbrace',
@@ -918,6 +933,13 @@ class PhysnetConverter:
         # ── Problem-set / assistance ──
         if name == 'BriefAns':
             return '<h4 class="brief-ans">Brief Answers</h4>\n', i
+
+        if name == 'MeGivens':
+            # \MeGivens{title}{reference material provided during the exam}
+            (title, content), i = get_n_args(text, i, 2)
+            return (f'<div class="me-givens">'
+                    f'<h4 class="me-givens-title">Given: {self._process(title)}</h4>'
+                    f'{self._process(content)}</div>\n'), i
 
         if name == 'AsItem':
             (num, ref, content), i = get_n_args(text, i, 3)
@@ -958,6 +980,18 @@ class PhysnetConverter:
 
         if name == 'newline':
             return '<br>\n', i
+
+        # Math spacing/symbol macros that leak into running text (between
+        # adjacent \m{} groups, inside \Quote{}, etc.).  \m{}/$..$ math goes
+        # through convert_math, which keeps these, so this only fires in text.
+        if name in ('ldots', 'dots', 'textellipsis'):
+            return '&hellip;', i
+        if name == 'cdots':
+            return '&middot;&middot;&middot;', i
+        if name in ('quad',):
+            return '&emsp;', i
+        if name in ('qquad',):
+            return '&emsp;&emsp;', i
 
         if name in ('par',):
             # Paragraph break — consume one braced group if present (Reif style \par{...})

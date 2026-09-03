@@ -17,7 +17,7 @@ with sync_playwright() as pw:
             "() => [...document.querySelectorAll('.katex-error')].map(e => e.getAttribute('title'))")
         raw = p.evaluate(r"""() => {
             const t = document.querySelector('.module-content')?.innerText || '';
-            return (t.match(/\\[a-zA-Z]{2,}\{|\\\[|\\\]|tex-unknown/g) || []).slice(0, 12);
+            return [...new Set(t.match(/\\[a-zA-Z]{2,}|\\\[|\\\]|tex-unknown/g) || [])].slice(0, 12);
         }""")
         imgs = p.evaluate("""() => [...document.querySelectorAll('.module-content img')]
             .filter(i => !(i.complete && i.naturalWidth > 0))

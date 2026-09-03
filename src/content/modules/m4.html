@@ -5,6 +5,10 @@
   </div>
 </header>
 
+<figure class="fig-centered module-cover-fig">
+<img src="figures/m4gr00.svg" alt="" class="physnet-fig">
+</figure>
+
 <section id="objectives" class="module-section section-objectives">
 <h2>Learning Objectives</h2>
 
@@ -69,9 +73,9 @@ its value and the value of each of its derivatives at some point \(x_0\).
 We can put that value and those derivatives into the Taylor Series and use
 it to evaluate \(f(x)\) at any other point \(x\) that is in neighborhood of
 \(x_0\):
-<p>\[f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots\]
+<p><span class="eqn-block" id="eqn-1">\[f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots\]<span class="eqn-number">(1)</span></span>
 <p>The complete definition of the Taylor Series is:
-<p>\[f(x) = \sum_{n=0}^{n=\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\,,\]
+<p><span class="eqn-block" id="eqn-20">\[f(x) = \sum_{n=0}^{n=\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\,,\]<span class="eqn-number">(20)</span></span>
 <p>where \(f^{(n)}(x_0)\) is the \(n^{th}\) derivative of \(f(x)\), evaluated at \(x_0\).
 The quantity \(n!\) is the factorial (\(n! = 1 \cdot 2 \cdot 3 \cdots (n-1) \cdot n\)).
 <p><h3 id="pcap-2-b">2b. Truncating the Series</h3>
@@ -85,17 +89,13 @@ Here is a specific example: Suppose you wish to have a power series
 expansion of \(f(x) = \sin x\) about the point \(x_0 = 0\), where \(x\) is in
 radians.
 To make the power series we evaluate the terms of the Taylor Series:
-<p><span class="tex-unknown" title="unknown macro">\FiveEqns</span>2f(x)       = + \sin  x & \Longrightarrow  f(0)     = 0   
-            f'(x)      = + \cos  x & \Longrightarrow  f'(0)    = 1   
-            f''(x)     = - \sin  x & \Longrightarrow  f''(0)   = 0   
-            f'''(x)    = - \cos  x & \Longrightarrow  f'''(0)  = - 1
-            f''''(x)   = + \sin  x & \Longrightarrow  f''''(0) = 0   
+<p><span class="eqn-block" id="eqn-2">\[\begin{aligned}f(x)       = + \sin x & \Longrightarrow f(0)     = 0 \\ f'(x)      = + \cos x & \Longrightarrow f'(0)    = 1 \\ f''(x)     = - \sin x & \Longrightarrow f''(0)   = 0 \\ f'''(x)    = - \cos x & \Longrightarrow f'''(0)  = - 1 \\ f''''(x)   = + \sin x & \Longrightarrow f''''(0) = 0\end{aligned}\]<span class="eqn-number">(2)</span></span>
 <p>Putting these and further derivatives into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> gives us the power series:
-<p>\[\sin x = x - \frac{x^3}{6} + \frac{x^5}{120} - \ldots\]
+<p><span class="eqn-block" id="eqn-3">\[\sin x = x - \frac{x^3}{6} + \frac{x^5}{120} - \ldots\]<span class="eqn-number">(3)</span></span>
 <p>For cases where \(x\) is much smaller than 1, \(x^3\) is much smaller than
 \(x\) and hence \(x^5\) is much much smaller than \(x\).
 Then we can truncate the series after the first term:
-<p>\[\sin x \simeq x \qquad (x^2 \ll 1)\,.\]
+<p><span class="eqn-block" id="eqn-4">\[\sin x \simeq x \qquad (x^2 \ll 1)\,.\]<span class="eqn-number">(4)</span></span>
 <p><h3 id="pcap-2-d">2d. Convergence of the Series</h3>
 
 How rapidly does the series approach the correct answer?
@@ -105,7 +105,7 @@ As an example, suppose \(x = \pi/6 = 30^\circ\) so that \(\sin x = 0.500\).
 Then various truncations of the series for the expansion of \(\sin x\)
 about the origin gives:
 <p><div class="centered">
-<table class="physnet-table"><tbody><tr><td>TERMS</td><td>APPROXIMATION</td><td>SUM</td><td>ERROR</td><td>% ERROR</td></tr><tr><td>1</td><td>\(x\)</td><td>0.523599</td><td>\(+ 0.023599\)</td><td>\(+ 5\)</td></tr><tr><td>2</td><td>\(x - x^3/6\)</td><td>0.499674</td><td>\(- 0.000326\)</td><td>\(- 0.07\)</td></tr><tr><td>3</td><td>\(x - x^3/6 + x^5/120\)</td><td>0.500002</td><td>\(+ 0.000002\)</td><td>\(+ 0.0004\)</td></tr></tbody></table>
+<table class="physnet-table"><tbody><tr><th>TERMS</th><th>APPROXIMATION</th><th>SUM</th><th>ERROR</th><th>% ERROR</th></tr><tr><td>1</td><td>\(x\)</td><td>0.523599</td><td>\(+ 0.023599\)</td><td>\(+ 5\)</td></tr><tr><td>2</td><td>\(x - x^3/6\)</td><td>0.499674</td><td>\(- 0.000326\)</td><td>\(- 0.07\)</td></tr><tr><td>3</td><td>\(x - x^3/6 + x^5/120\)</td><td>0.500002</td><td>\(+ 0.000002\)</td><td>\(+ 0.0004\)</td></tr></tbody></table>
 
 </div>
 
@@ -129,38 +129,38 @@ significant at the desired level of accuracy.
 In order to work with finite difference equations we usually write
 Taylor's series in an especially convenient notation.
 <p>First we substitute \(x = x_0 + \Delta\) into <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>:
-<p>\[f(x_0 + \Delta) = f(x_0) + \frac{f'(x_0)}{1!}\Delta +
+<p><span class="eqn-block" id="eqn-6">\[f(x_0 + \Delta) = f(x_0) + \frac{f'(x_0)}{1!}\Delta +
 
-                              \frac{f''(x_0)}{2!}\Delta^2 + \ldots\]
+                              \frac{f''(x_0)}{2!}\Delta^2 + \ldots\]<span class="eqn-number">(6)</span></span>
 <p>A similar expression is written with \(x = x_0 - \Delta\).
 The subscript on \(x_0\) is then dropped and the two equations
 are written as one:
-<p>\[f(x\pm\Delta) = f(x)\pm\frac{f'(x)}{1!}\Delta+
-\frac{f''(x)}{2!}\Delta^2\pm\frac{f'''(x)}{3!}\Delta^3+\ldots\]
+<p><span class="eqn-block" id="eqn-7">\[f(x\pm\Delta) = f(x)\pm\frac{f'(x)}{1!}\Delta+
+\frac{f''(x)}{2!}\Delta^2\pm\frac{f'''(x)}{3!}\Delta^3+\ldots\]<span class="eqn-number">(7)</span></span>
 <p>We say “\(f\) at \(x\) plus or minus delta equals \(f\) at \(x\) plus or minus \(f\)
-prime at \(x\) over one factorial times delta plus \ldots ”
+prime at \(x\) over one factorial times delta plus &hellip;”
 <p><h3 id="pcap-3-b">3b. A Finite Difference Approximation for \(f'(x)\)</h3>
 
 An approximation for \(f'(x)\) can be obtained by subtracting
 \(f(x - \Delta)\) from \(f(x + \Delta)\):
-<p>\[f(x+\Delta)-f(x-\Delta)=
-          2\frac{f'(x)}{1!}\Delta+2\frac{f'''(x)}{3!}\Delta^3+\ldots\]
+<p><span class="eqn-block" id="eqn-8">\[f(x+\Delta)-f(x-\Delta)=
+          2\frac{f'(x)}{1!}\Delta+2\frac{f'''(x)}{3!}\Delta^3+\ldots\]<span class="eqn-number">(8)</span></span>
 <p>For small \(\Delta\), the \(\Delta^3\), \(\Delta^5\), etc. terms will
 be much smaller than the \(\Delta\) term .
 Truncating and solving for \(f'(x)\) gives:
 <p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
-<p>\[f'(x)\simeq\frac{f(x+\Delta)-f(x-\Delta)}{2\Delta}\,.\]
+<p><span class="eqn-block" id="eqn-9">\[f'(x)\simeq\frac{f(x+\Delta)-f(x-\Delta)}{2\Delta}\,.\]<span class="eqn-number">(9)</span></span>
 <p><h3 id="pcap-3-c">3c. Approximations for Higher Derivatives</h3>
 
 An approximation for \(f''(x)\) can be obtained by adding \(f(x + \Delta)\)
 to \(f(x - \Delta)\).
 Truncating and solving for \(f''(x)\) gives:
-<p>\[f''(x) \simeq \frac{f(x+\Delta) - 2 f(x) +
-                                     f(x-\Delta)}{\Delta^2}\,.\]
+<p><span class="eqn-block" id="eqn-10">\[f''(x) \simeq \frac{f(x+\Delta) - 2 f(x) +
+                                     f(x-\Delta)}{\Delta^2}\,.\]<span class="eqn-number">(10)</span></span>
 <p>Approximations for higher derivatives can be developed by similar techniques.
-You might wish to verify that: <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
-<p>\[f'''(x)\simeq\frac{f(x+2\Delta)-2f(x+\Delta)+2f(x-\Delta)-
-                     f(x-2\Delta)}{2\Delta^3}\]
+You might wish to verify that:<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
+<p><span class="eqn-block" id="eqn-11">\[f'''(x)\simeq\frac{f(x+2\Delta)-2f(x+\Delta)+2f(x-\Delta)-
+                     f(x-2\Delta)}{2\Delta^3}\]<span class="eqn-number">(11)</span></span>
 <p><h3 id="pcap-3-d">3d. A Handy Check of Formal Derivatives</h3>
 
 <p><a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>, <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a>, and <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> offer a quick
@@ -235,8 +235,8 @@ terms of the power series for \(\cos x\).</li>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> by formal differentiation <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
-<li><span class="item-label">b.</span> by numerical differentiation (using finite difference approximations). [E] <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<li><span class="item-label">a.</span> by formal differentiation<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup></li>
+<li><span class="item-label">b.</span> by numerical differentiation (using finite difference approximations). [E]<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
 </li>
 <li><span class="item-label">9.</span> Determine the first three terms of the power series expansion,
 about the origin, of the function:
@@ -266,7 +266,7 @@ about the origin, of the function:
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Evaluate Eq.(4) with one more term, so you include \(f'''\), substituting
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;3c)</span></h3><div class="help-body">Evaluate Eq.(4) with one more term, so you include \(f'''\), substituting
  these values successively for \(\Delta\): (\(2\Delta\), \(\Delta\), \(-\Delta\),
  and \(-2\Delta\)).
  This gives you four equations that you can properly substitute into
@@ -275,9 +275,9 @@ about the origin, of the function:
  just the proper quantity remaining.
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(f'(x) = -2 x (x^2 + 4)^{-2}\) hence \(f'(1) = -2/25\).</div></div>
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from PS, problem 8a)</span></h3><div class="help-body">\(f'(x) = -2 x (x^2 + 4)^{-2}\) hence \(f'(1) = -2/25\).</div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">Students have asked: “What are \(x\) and \(\Delta\) when \(x = 1\)?”
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from PS, problem 8b)</span></h3><div class="help-body">Students have asked: “What are \(x\) and \(\Delta\) when \(x = 1\)?”
  
  Answer: if \(x = 1\) and, say, \(\Delta = 0.01\), then in equations such
  as <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>: \(x + \Delta = 1.01\) and \(x - \Delta = 0.99\).
@@ -306,18 +306,19 @@ about the origin, of the function:
 </ol>
 
 
-<p><span class="tex-unknown" title="unknown macro">\MeGivens</span>Table of Derivatives
+<p><div class="me-givens"><h4 class="me-givens-title">Given: Table of Derivatives</h4>
 <p>
- <div class="centered"><table class="physnet-table"><tbody><tr><td>Combinations of Functions</td><td>Specific Functions</td></tr><tr><td>\(\frac{d}{dx} \left(f(u) \right) =
+ <div class="centered"><table class="physnet-table"><tbody><tr><th>Combinations of Functions</th><th>Specific Functions</th></tr><tr><td>\(\frac{d}{dx} \left(f(u) \right) =
               \frac{df(u)}{du} \cdot \frac{du}{dx}\)</td><td>\(\frac{d}{dx} \left( x^n \right) = n x^{n-1}\)</td></tr><tr><td>\(\frac{d}{dx} \left(f \pm g \right) =
                             \frac{df}{dx} \pm \frac{dg}{dx}\)</td><td>\(\frac{d}{dx} \left( e^x \right) = e^x\)</td></tr><tr><td>\(\frac{d}{dx} \left(f g \right) =
                           f \frac{dg}{dx} + g \frac{df}{dx}\)</td><td>\(\frac{d}{dx} \left( \ln x \right) = 1 / x\)</td></tr><tr><td>\(\frac{d}{dx} \left( f/g \right) =
                   \left( g \frac{df}{dx} - f \frac{dg}{dx} \right) / g^2\)
-  \qquad </td><td>\(\frac{d}{dx} \left( \sin x \right) = \cos x\)</td></tr><tr><td></td><td>\(\frac{d}{dx} \left( \cos x \right) = - \sin x\)</td></tr></tbody></table>
+  &emsp;&emsp;</td><td>\(\frac{d}{dx} \left( \sin x \right) = \cos x\)</td></tr><tr><td></td><td>\(\frac{d}{dx} \left( \cos x \right) = - \sin x\)</td></tr></tbody></table>
 </div>
 
  
- 
+ </div>
+
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <p><ol>
