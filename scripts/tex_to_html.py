@@ -105,7 +105,8 @@ def convert_math(s):
     """Translate Physnet math macros to standard LaTeX for KaTeX."""
     # magnitude first (its argument may itself contain \vect)
     s = re.sub(r'\\vecmag\{((?:[^{}]|\{[^{}]*\})*)\}', r'\\left|\1\\right|', s)
-    s = re.sub(r'\\vect?prime\{([^{}]*)\}', r"{\\vec{\1}}'", s)
+    s = re.sub(r'\\ve[cx]t?prime\{([^{}]*)\}', r"{\\vec{\1}}'", s)
+    s = re.sub(r'\\uve[cx]prime\{([^{}]*)\}', r"{\\hat{\1}}'", s)
     s = re.sub(r'\\ve[cx]t?\{([^{}]*)\}', r'\\vec{\1}', s)   # \vect \vex \vec
     s = re.sub(r'\\uve[cx]\{([^{}]*)\}', r'\\hat{\1}', s)    # \uvec \uvex
     # \unit{…} may contain a nested \up{N} exponent; render the unit name in
@@ -369,7 +370,8 @@ class PhysnetConverter:
             arg, i = get_arg(text, i)
             return f'<strong>{self._process(arg)}</strong>', i
 
-        if name in ('textit', 'emph', 'textsl'):
+        if name in ('textit', 'emph', 'textsl', 'booktitle', 'journal',
+                    'italic', 'Title'):
             arg, i = get_arg(text, i)
             return f'<em>{self._process(arg)}</em>', i
 

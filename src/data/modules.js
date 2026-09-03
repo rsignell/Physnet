@@ -24,7 +24,7 @@ export const SUBJECTS = [
       { id: 'm408', title: 'Theory of Motion', hasHtml: true },
       { id: 'm409', title: 'Applications of the Theory of Motion', hasHtml: true },
       { id: 'm410', title: 'Newton\'s Second Law - One-Dimensional' },
-      { id: 'm411', title: 'Newton\'s Second Law - Two-Dimensional' , hasHtml: true},
+      { id: 'm411', title: 'Electric Force and Charged Particles', hasHtml: true },
       { id: 'm412', title: 'Energy and Work', hasHtml: true },
       { id: 'm413', title: 'Potential Energy and Conservation', hasHtml: true },
       { id: 'm414', title: 'Simple Harmonic Motion' , hasHtml: true},
