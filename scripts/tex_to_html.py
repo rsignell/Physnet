@@ -118,7 +118,8 @@ def convert_math(s):
     s = s.replace(r'\degreesC', r'^{\circ}\,\text{C}')
     s = s.replace(r'\degreesF', r'^{\circ}\,\text{F}')
     s = s.replace(r'\AA', r'\text{Å}')
-    s = s.replace(r'\dfrac', r'\frac')
+    s = re.sub(r'\\[dt]?frac(?![A-Za-z])', r'\\frac', s)
+    s = re.sub(r'\\fract(?![A-Za-z])', r'\\frac', s)
     # MISN shorthands KaTeX doesn't know
     s = re.sub(r'\\ds\b', r'\\displaystyle ', s)
     s = re.sub(r'\\OverArc\{([^{}]*)\}', r'\\overset{\\frown}{\1}', s)
@@ -532,12 +533,25 @@ class PhysnetConverter:
             content, i = get_arg(text, i)
             return f'<span class="help-ref">{self._process(content)}</span>', i
 
+        if name in ('TxtCapPrac', 'TxtCapPra'):
+            content, i = get_arg(text, i)
+            return (f'<p class="txt-prac"><em>Practice:</em> '
+                    f'{self._process(content)}</p>\n'), i
+
+        if name == 'SummaryItem':
+            head, i = get_arg(text, i)
+            return f'<h4 class="summary-head">{self._process(head)}</h4>\n', i
+
         if name == 'DisplayEqn':
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
             eq, i = get_arg(text, i)
-            eid = f'{sec}{num}'
-            return f'<div class="display-eqn" id="eqn-{eid}">\\[{eq}\\]</div>\n', i
+            eid = f'{sec}{num}'.strip()
+            block = f'\\[{convert_math(eq)}\\]'
+            if eid:
+                return (f'<span class="eqn-block" id="eqn-{eid}">{block}'
+                        f'<span class="eqn-number">({eid})</span></span>'), i
+            return f'<div class="display-eqn">{block}</div>\n', i
 
         if name == 'UnframedFigure':
             sec, i = get_arg(text, i)
@@ -561,6 +575,17 @@ class PhysnetConverter:
             a = self._reif_fig(f'{sec1}{num1}', self._process(cap1), f1)
             b = self._reif_fig(f'{sec2}{num2}', self._process(cap2), f2)
             return f'<div class="two-figures">{a}{b}</div>\n', i
+
+        if name == 'TableAndFigure':
+            # {tsec}{tnum}{tcap}{tabular}{fsec}{fnum}{fcap}{fname}
+            (tsec, tnum, tcap, tbody, fsec, fnum, fcap, fname), i = get_n_args(text, i, 8)
+            tbl = self._process(tbody)
+            fig = self._reif_fig(f'{fsec}{fnum}', self._process(fcap), fname)
+            return (f'<div class="two-figures">'
+                    f'<figure class="module-figure"><figcaption>'
+                    f'<strong>Table&nbsp;{tsec}-{tnum}.</strong> '
+                    f'{self._process(tcap)}</figcaption>{tbl}</figure>'
+                    f'{fig}</div>\n'), i
 
         if name in ('SugFrameRef', 'PraFrameRef'):
             ref, i = get_arg(text, i)
@@ -622,9 +647,11 @@ class PhysnetConverter:
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
             title, i = get_arg(text, i)
+            body, i = get_arg(text, i)          # \TxtExample{s}{n}{title}{body}
             eid = f'{sec}{num}'
             return (f'<div class="example" id="ex-{eid}">'
-                    f'<p><strong>Example&nbsp;{eid}: {self._process(title)}</strong>\n'), i
+                    f'<p><strong>Example&nbsp;{eid}: {self._process(title)}</strong> '
+                    f'{self._process(body)}</div>\n'), i
 
         if name == 'TxtHelpTwo':
             h1, i = get_arg(text, i)
@@ -1398,7 +1425,16 @@ class PhysnetConverter:
     def _sect(self, text, i):
         # Skip optional [index entries] argument if present
         i = skip_opt_arg(text, i)
-        (num, title, sect_type_raw, content), i = get_n_args(text, i, 4)
+        # \Sect comes in a 4-arg form  {num}{title}{\SectType{..} or {}}{body}
+        # and an older 3-arg form      {num}{title}{body}.  Grab three, then
+        # decide whether the third is a section-type marker or the body.
+        (num, title, third), i = get_n_args(text, i, 3)
+        if third.strip() == '' or '\\SectType' in third:
+            sect_type_raw = third
+            content, i = get_arg(text, i)
+        else:
+            sect_type_raw = ''
+            content = third
         inner      = self._process(content)
         title_html = self._process(title)
 
@@ -1509,11 +1545,14 @@ class PhysnetConverter:
         env, i = get_arg(text, i)
         content, i = find_env_end(text, i, env)
 
-        if env in ('itemize',):
+        if env in ('itemize', 'SummarySubItems', 'zero-digit-list'):
             return self._list(content, 'ul'), i
 
         if env in ('enumerate', 'one-digit-list', 'two-digit-list'):
             return self._list(content, 'ol'), i
+
+        if env == 'SummaryItems':
+            return (f'<div class="summary-items">{self._process(content)}</div>\n'), i
 
         if env in ('eqnarray', 'eqnarray*'):
             return self._eqnarray(content), i
