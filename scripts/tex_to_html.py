@@ -374,14 +374,18 @@ class PhysnetConverter:
             return f'<a href="#as-{num}" class="as-ref">AS&nbsp;{num}</a>', i
 
         if name == 'help':
+            # Printed module renders this as a small superscript [S-N] pointing
+            # to Sequence [S-N] in the Special Assistance Supplement.
             num, i = get_arg(text, i)
-            return (f'<a href="#help-{num}" class="help-link">'
-                    f'<span title="Special Assistance">[help&nbsp;{num}]</span></a>'), i
+            return (f'<sup class="help-link"><a href="#help-{num}" '
+                    f'title="see Sequence [S-{num}] in the Special Assistance '
+                    f'Supplement">[S-{num}]</a></sup>'), i
 
         if name == 'parenhelp':
             num, i = get_arg(text, i)
-            return (f'<a href="#help-{num}" class="parenhelp-link" '
-                    f'title="Special Assistance">(help&nbsp;{num})</a>'), i
+            return (f'<a href="#help-{num}" class="help-link help-link-inline" '
+                    f'title="see Sequence [S-{num}] in the Special Assistance '
+                    f'Supplement">[S-{num}]</a>'), i
 
         if name in ('prrqone', 'prrqtwo'):
             ref, i = get_arg(text, i)
@@ -804,6 +808,7 @@ class PhysnetConverter:
         if name == 'CenteredUnframedFixedFigure':
             # args: {filename} optional {caption}
             fname, i = get_arg(text, i)
+            fname = re.sub(r'\.(eps|ps|pdf|png|jpg|jpeg)$', '', fname.strip())
             # peek for optional caption arg
             j = i
             while j < len(text) and text[j] in ' \t\n':
@@ -909,8 +914,11 @@ class PhysnetConverter:
         if name == 'AsItem':
             (num, ref, content), i = get_n_args(text, i, 3)
             inner = self._process(content)
+            origin = self._pretty_asref(ref)
+            origin_html = (f' <span class="help-origin">(from {origin})</span>'
+                           if origin else '')
             return (f'<div id="help-{num}" class="help-item">'
-                    f'<span class="help-num">{num}.</span>'
+                    f'<h3 class="help-num">S-{num}{origin_html}</h3>'
                     f'<div class="help-body">{inner}</div></div>\n'), i
 
         # ── Metadata macros (dat file) ──
@@ -1340,6 +1348,32 @@ class PhysnetConverter:
         return (f'<section id="{sec_id}" class="module-section {css_cls}">'
                 f'{h_tag}\n{inner}</section>\n'), i
 
+    def _pretty_asref(self, ref):
+        """The 2nd \\AsItem arg records where the hint is used, e.g.
+        'TX-4a', 'PS-19c', 'PS-Problem~1', 'TX-2a, TX-2f, [S-6]'.
+        Render it the way the printed module does: 'Section 4a', etc."""
+        ref = ref.replace('~', ' ').replace('\\,', ' ').strip()
+        if not ref:
+            return ''
+        out = []
+        for part in (p.strip() for p in ref.split(',')):
+            if not part:
+                continue
+            m = re.match(r'TX-(.+)$', part)
+            if m:
+                out.append(f'Section&nbsp;{m.group(1)}')
+                continue
+            m = re.match(r'PS-Problem\s+(.+)$', part)
+            if m:
+                out.append(f'Problem&nbsp;Supplement, Problem&nbsp;{m.group(1)}')
+                continue
+            m = re.match(r'PS-(.+)$', part)
+            if m:
+                out.append(f'Problem&nbsp;Supplement&nbsp;{m.group(1)}')
+                continue
+            out.append(part)
+        return ', '.join(out)
+
     # ── Figure handler ────────────────────────────────────────────────────────
 
     def _figures(self, text, i, count, full=False):
@@ -1490,9 +1524,12 @@ class PhysnetConverter:
         # First arg is the column spec {lcc|r} — consume and discard
         col_spec, pos = get_arg(content, 0)
         content = content[pos:]
+        # A leading \hline before the first row marks it as a header row.
+        header_first = content.lstrip().startswith('\\hline')
         # Split rows on \\
         rows = re.split(r'\\\\', content)
         html_rows = []
+        seen_row = False
         for row in rows:
             row = re.sub(r'\\hline|\\cline\{[^}]*\}', '', row).strip()
             if not row:
@@ -1500,8 +1537,10 @@ class PhysnetConverter:
             cells = row.split('&')
             if not any(c.strip() for c in cells):
                 continue
+            tag = 'th' if (header_first and not seen_row) else 'td'
+            seen_row = True
             html_cells = ''.join(
-                f'<td>{self._process(c.strip())}</td>' for c in cells)
+                f'<{tag}>{self._process(c.strip())}</{tag}>' for c in cells)
             html_rows.append(f'<tr>{html_cells}</tr>')
         if not html_rows:
             return ''

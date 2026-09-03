@@ -527,29 +527,47 @@ figure figcaption {
   letter-spacing: 0.04em;
   margin-bottom: 0.5rem;
 }
-/* Help / assistance */
-.help-link {
-  font-family: system-ui, sans-serif;
-  font-size: 0.75rem;
-  color: #7c3aed;
-  text-decoration: none;
-  vertical-align: super;
-}
-.parenhelp-link {
-  font-family: system-ui, sans-serif;
-  font-size: 0.85em;
+/* Help / Special Assistance */
+.help-link,
+.help-link a {
   color: #7c3aed;
   text-decoration: none;
   white-space: nowrap;
 }
-.parenhelp-link:hover { text-decoration: underline; }
+.help-link:hover,
+.help-link a:hover { text-decoration: underline; }
+sup.help-link { font-size: 0.7em; }
+.help-link-inline { font-size: 0.9em; }
+
 .help-item {
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.75rem 0;
+  padding: 0.25rem 0 0.75rem;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 5rem;   /* clear the sticky nav when jumped to */
 }
-.help-num { font-weight: 700; color: var(--navy); flex-shrink: 0; }
+.help-item .help-num {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0.75rem 0 0.4rem;
+}
+.help-origin {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+/* Tabular environments (\begin{tabular}) */
+.physnet-table {
+  border-collapse: collapse;
+  margin: 1.25rem auto;
+  font-size: 0.95rem;
+}
+.physnet-table td,
+.physnet-table th {
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.9rem;
+  text-align: right;
+}
+.physnet-table th { font-weight: 700; background: rgba(0, 0, 0, 0.03); }
 /* Footnotes */
 .footnotes {
   margin-top: 2rem;
