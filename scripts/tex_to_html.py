@@ -651,6 +651,12 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             return f'<span class="def-ref">Defn.&nbsp;{sec}{num}</span>', i
 
+        if name in ('TxtRuleRef', 'TxtStaRef', 'TxtStatementRef'):
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            word = 'Rule' if name == 'TxtRuleRef' else 'Statement'
+            return f'<span class="def-ref">{word}&nbsp;{sec}{num}</span>', i
+
         if name == 'TxtExample':
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
