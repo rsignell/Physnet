@@ -587,6 +587,14 @@ sup.help-link {
   font-size: 0.95rem;
   color: var(--text-muted);
 }
+/* \TxtStatement -- a highlighted rule */
+.module-content .statement {
+  border-left: 3px solid var(--accent, #2c7);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 0.6rem 1rem;
+  margin: 1.25rem 0;
+}
+.statement-label { font-weight: 700; color: var(--navy); }
 /* Footnotes */
 .footnotes {
   margin-top: 2rem;

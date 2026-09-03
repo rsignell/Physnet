@@ -225,6 +225,35 @@ class PhysnetConverter:
                     out.append('&thinsp;')
                     i += 1
                     continue
+                if text[i] in ';:!':        # \; \: \! math spacing in text
+                    i += 1
+                    continue
+
+                # Accents.  Symbol accents (\'e \`a \"o \^i \=o \.z) may take
+                # the base letter immediately; letter-name accents (\c{c},
+                # \v{s}, \u{g}) need a brace or a space so we don't eat the
+                # tail of \vec, \check, \dot, ...
+                _comb = {"'": '́', '`': '̀', '"': '̈', '^': '̂', '=': '̄',
+                         '.': '̇', 'c': '̧', 'v': '̌', 'u': '̆', 'H': '̋',
+                         'k': '̨', 'r': '̊', 'd': '̣', 'b': '̱'}
+                if text[i] in _comb:
+                    acc = text[i]
+                    j = i + 1
+                    had_space = False
+                    while j < n and text[j] in ' \t':
+                        j += 1
+                        had_space = True
+                    base = ''
+                    if j < n and text[j] == '{':
+                        base, j = get_arg(text, j)
+                    elif j < n and text[j].isalpha() and (
+                            acc in "'`\"^=." or had_space):
+                        base, j = text[j], j + 1
+                    if base:
+                        import unicodedata as _ud
+                        out.append(_ud.normalize('NFC', base[:1] + _comb[acc] + base[1:]))
+                        i = j
+                        continue
 
                 # Macro name
                 j = i
@@ -433,10 +462,25 @@ class PhysnetConverter:
 
         # ── Reif-style section structure (older module format) ──
         if name == 'SubSect':
+            i = skip_opt_arg(text, i)          # [\Index{...}] entries
             title, i = get_arg(text, i)
+            # \SubSect{title}{body} -- body is a second braced group
+            body = ''
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '%':
+                while j < len(text) and text[j] != '\n':
+                    j += 1
+                while j < len(text) and text[j] in ' \t\n':
+                    j += 1
+            if j < len(text) and text[j] == '{':
+                body, i = get_arg(text, j)
             title_html = self._process(title)
             sid = re.sub(r'\W+', '-', title.lower()).strip('-')
-            return f'<h2 id="subsect-{sid}">{title_html}</h2>\n', i
+            body_html = self._process(body) if body else ''
+            return (f'<h3 id="subsect-{sid}" class="subsect-title">'
+                    f'{title_html}</h3>\n{body_html}\n'), i
 
         if name == 'xpSubSubSect':
             num, i = get_arg(text, i)
@@ -752,11 +796,14 @@ class PhysnetConverter:
 
         # \SectTitle{label}{TITLE} — section title (older format)
         if name == 'SectTitle':
+            i = skip_opt_arg(text, i)          # [\Index{...}] entries
             label, i = get_arg(text, i)
             title, i = get_arg(text, i)
             title_html = self._process(title)
             sid = f'sect-{label}'
-            return f'<section id="{sid}" class="module-section section-text"><h2 id="{sid}">{label}. {title_html}</h2>\n', i
+            lead = f'{label}. ' if label.strip() else ''
+            return (f'<section id="{sid}" class="module-section section-text">'
+                    f'<h2 id="{sid}">{lead}{title_html}</h2>\n'), i
 
         # \TxtTwoDisplayEqns{label}{lhs1}{rhs1}{lhs2}{rhs2}
         if name == 'TxtTwoDisplayEqns':
@@ -780,6 +827,14 @@ class PhysnetConverter:
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
             return f'<span class="def-ref">({sec}{num})</span>', i
+
+        if name == 'TxtStatement':
+            # \TxtStatement{sec}{num}{text} -- a highlighted rule/statement
+            (sec, num, body), i = get_n_args(text, i, 3)
+            tag = f'{sec}{num}'.strip()
+            label = (f'<span class="statement-label">Statement&nbsp;{tag}:</span> '
+                     if tag else '')
+            return (f'<div class="statement">{label}{self._process(body)}</div>\n'), i
 
         if name == 'SubSubSect':
             (_id, title, content), i = get_n_args(text, i, 3)
