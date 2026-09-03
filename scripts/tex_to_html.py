@@ -120,6 +120,10 @@ def convert_math(s):
     s = s.replace(r'\AA', r'\text{Å}')
     s = re.sub(r'\\[dt]?frac(?![A-Za-z])', r'\\frac', s)
     s = re.sub(r'\\fract(?![A-Za-z])', r'\\frac', s)
+    # Text macros that sometimes leak inside \m{}: drop the wrapper.
+    s = re.sub(r'\\Index\{(?:[^{}]|\{[^{}]*\})*\}', '', s)
+    s = re.sub(r'\\(?:Emph|Quote|textit|textbf|Term)\{((?:[^{}]|\{[^{}]*\})*)\}',
+               r'\1', s)
     # MISN shorthands KaTeX doesn't know
     s = re.sub(r'\\ds\b', r'\\displaystyle ', s)
     s = re.sub(r'\\OverArc\{([^{}]*)\}', r'\\overset{\\frown}{\1}', s)
@@ -554,11 +558,15 @@ class PhysnetConverter:
             return f'<div class="display-eqn">{block}</div>\n', i
 
         if name == 'UnframedFigure':
-            sec, i = get_arg(text, i)
+            a1, i = get_arg(text, i)
+            # 1-arg form \UnframedFigure{filename}, or the 4-arg
+            # \UnframedFigure{sec}{num}{cap}{filename}
+            if re.match(r'[A-Za-z]*\d+gr\d', a1) or a1.endswith('.eps'):
+                return self._reif_fig('', '', a1), i
             num, i = get_arg(text, i)
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
-            return self._reif_fig(f'{sec}{num}', self._process(cap), fname), i
+            return self._reif_fig(f'{a1}{num}', self._process(cap), fname), i
 
         if name == 'LeftFigure':
             sec, i = get_arg(text, i)
