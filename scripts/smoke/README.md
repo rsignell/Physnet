@@ -22,3 +22,29 @@ HTML, used to shake out converter bugs before a bulk re-run.
 6. Cover cartoon (`mNgr00`, placed by the nphmods.sty module template, never
    referenced in the body) is now injected after the header when its SVG
    exists.
+
+---
+
+# Smoke test — m10 (figure-heavy: 14 figures, multi-figure rows)
+
+- `m10_src/m10-tx.tex`, `m10_src/m10-dat.tex` — MISN-0-10 v. 9/12/02, from Drive.
+- Regenerate:  `python3 scripts/tex_to_html.py scripts/smoke/m10_src m10 > src/content/modules/m10.html`
+
+## Additional converter bugs this found (fixed)
+
+7. `\newsavebox{\hlp}` / `\sbox{\hlp}{…}` / `\usebox{\hlp}` — LaTeX box
+   plumbing used to defer a `\help{}` link into an equation. `\usebox`
+   leaked into `\Eqn{}` math and broke that equation in KaTeX. Now all
+   three are stripped in `_strip_preamble` (the deferred fragment is lost).
+8. Empty figure captions (`\ThreeCaptionedFramedFigures{1}{}{m10gr01}…`)
+   rendered as "Fig. 1. " with dangling punctuation → now "Fig. 1.".
+
+## Confirmed working (thanks to the m1 fixes)
+
+- Figure number ≠ file name: Fig 12 → m10gr16.svg, Fig 13 → m10gr17.svg, etc.
+- `\ThreeCaptionedFramedFigures` / `\TwoCaptionedFramedFigures` rows.
+- `\Figref{N}` inside figure captions.
+- `\begin{eqnarray*}` with `\unit{lb}`, `\degrees`, `\text{}` subscripts.
+- Nested `\unit{ft/s\up{2}}`.
+- `\SubSubSect{}{Example:}{…}`, `\icap{Rule 1}`, `\begin{itemize}`,
+  `\begin{one-digit-list}`, `\vect`/`\uvec` vectors.

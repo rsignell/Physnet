@@ -168,6 +168,13 @@ class PhysnetConverter:
         # into the text as literal characters (present in the official PDF
         # too).  Drop these bare markers.
         text = re.sub(r'(?<![A-Za-z/])/(?:par|Sect|SubSect|SubSubSect)\b', '', text)
+        # LaTeX box save/restore used to defer a fragment (usually a \help{}
+        # link) into an equation.  We cannot honour it, so drop the plumbing;
+        # \usebox expands to nothing (the deferred fragment is lost).
+        _grp = r'\{(?:[^{}]|\{[^{}]*\})*\}'
+        text = re.sub(r'\\newsavebox\s*' + _grp, '', text)
+        text = re.sub(r'\\s(?:box|avebox)\s*' + _grp + r'\s*' + _grp, '', text)
+        text = re.sub(r'\\usebox\s*' + _grp, '', text)
         return text
 
     # ── Core recursive processor ──────────────────────────────────────────────
@@ -1347,11 +1354,13 @@ class PhysnetConverter:
         css_cls = 'figure-full' if full else f'figure-row figure-row-{count}'
         parts   = []
         for num, cap_html, fname in figs:
+            cap_html = cap_html.strip()
+            caption = f'Fig.&nbsp;{num}.' + (f' {cap_html}' if cap_html else '')
             parts.append(
                 f'<figure id="fig-{num}">'
                 f'<img src="{self.figures_path}/{fname}.svg" '
                 f'alt="Figure {num}" class="physnet-fig">'
-                f'<figcaption>Fig.&nbsp;{num}. {cap_html}</figcaption>'
+                f'<figcaption>{caption}</figcaption>'
                 f'</figure>'
             )
         return f'<div class="{css_cls}">{"".join(parts)}</div>\n', i
