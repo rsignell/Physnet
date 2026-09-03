@@ -462,13 +462,7 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
-            cap_html = self._process(cap)
-            fig_id = f'{sec}{num}'
-            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
-            return (f'<figure id="fig-{fig_id}" class="module-figure">'
-                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
-                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
-                    f'</figure>\n'), i
+            return self._reif_fig(f'{sec}{num}', self._process(cap), fname), i
 
         if name in ('TxtProb',):
             sec, i = get_arg(text, i)
@@ -502,43 +496,23 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
-            cap_html = self._process(cap)
-            fig_id = f'{sec}{num}'
-            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
-            return (f'<figure id="fig-{fig_id}" class="module-figure">'
-                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
-                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
-                    f'</figure>\n'), i
+            return self._reif_fig(f'{sec}{num}', self._process(cap), fname), i
 
         if name == 'LeftFigure':
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
-            cap_html = self._process(cap)
-            fig_id = f'{sec}{num}'
-            svg_path = f'../../modules/{self.module_id}/{fname}.svg'
-            return (f'<figure id="fig-{fig_id}" class="module-figure module-figure-left">'
-                    f'<img src="{svg_path}" alt="Figure {fig_id}">'
-                    f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong> {cap_html}</figcaption>'
-                    f'</figure>\n'), i
+            return self._reif_fig(f'{sec}{num}', self._process(cap), fname,
+                                  extra_cls=' module-figure-left'), i
 
         if name == 'TwoFigures':
             # \TwoFigures{sec}{num1}{cap1}{file1}{sec}{num2}{cap2}{file2}
             args, i = get_n_args(text, i, 8)
             sec1, num1, cap1, f1, sec2, num2, cap2, f2 = args
-            id1, id2 = f'{sec1}{num1}', f'{sec2}{num2}'
-            s1 = f'../../modules/{self.module_id}/{f1}.svg'
-            s2 = f'../../modules/{self.module_id}/{f2}.svg'
-            return (f'<div class="two-figures">'
-                    f'<figure id="fig-{id1}" class="module-figure">'
-                    f'<img src="{s1}" alt="Figure {id1}">'
-                    f'<figcaption><strong>Fig.&nbsp;{id1}.</strong> {self._process(cap1)}</figcaption>'
-                    f'</figure>'
-                    f'<figure id="fig-{id2}" class="module-figure">'
-                    f'<img src="{s2}" alt="Figure {id2}">'
-                    f'<figcaption><strong>Fig.&nbsp;{id2}.</strong> {self._process(cap2)}</figcaption>'
-                    f'</figure></div>\n'), i
+            a = self._reif_fig(f'{sec1}{num1}', self._process(cap1), f1)
+            b = self._reif_fig(f'{sec2}{num2}', self._process(cap2), f2)
+            return f'<div class="two-figures">{a}{b}</div>\n', i
 
         if name in ('SugFrameRef', 'PraFrameRef'):
             ref, i = get_arg(text, i)
@@ -1429,6 +1403,23 @@ class PhysnetConverter:
         return ', '.join(out)
 
     # ── Figure handler ────────────────────────────────────────────────────────
+
+    def _reif_fig(self, fig_id, cap_html, fname, extra_cls=''):
+        """<figure> for a Reif-format figure macro (\\FullFigure etc.).
+        Figures live in public/modules/<id>/figures/, referenced relative to
+        the module page as figures/<name>.svg."""
+        fname = re.sub(r'\.(eps|ps|pdf|png|jpe?g)$', '', fname.strip())
+        cap = cap_html.strip()
+        cap_html = (f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong>'
+                    + (f' {cap}' if cap else '') + '</figcaption>') if fig_id or cap else ''
+        if not fname:
+            # disabled/commented-out figure in the source -- keep the caption
+            # if there is one, drop the broken <img>.
+            return (f'<figure id="fig-{fig_id}" class="module-figure">{cap_html}'
+                    f'</figure>\n') if cap else ''
+        return (f'<figure id="fig-{fig_id}" class="module-figure{extra_cls}">'
+                f'<img src="figures/{fname}.svg" alt="Figure {fig_id}" '
+                f'class="physnet-fig">{cap_html}</figure>\n')
 
     def _figures(self, text, i, count, full=False):
         figs = []
