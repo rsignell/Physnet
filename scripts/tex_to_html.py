@@ -944,7 +944,10 @@ class PhysnetConverter:
 
         # ── Spacing / layout ──
         if name in ('noindent', 'medskip', 'bigskip', 'smallskip',
-                    'vspace', 'hspace', 'vskip', 'hskip'):
+                    'vspace', 'hspace', 'vskip', 'hskip',
+                    'enlargethispage', 'enlargethispage*', 'addvspace',
+                    'vfill', 'vfil', 'hfill', 'hfil', 'raggedright',
+                    'raggedbottom', 'flushbottom'):
             # Consume optional argument if present
             if i < len(text) and text[i] == '{':
                 _, i = get_arg(text, i)
