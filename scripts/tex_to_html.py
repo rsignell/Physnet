@@ -104,7 +104,7 @@ def find_env_end(text, pos, env_name):
 def convert_math(s):
     """Translate Physnet math macros to standard LaTeX for KaTeX."""
     # magnitude first (its argument may itself contain \vect)
-    s = re.sub(r'\\vecmag\{((?:[^{}]|\{[^{}]*\})*)\}', r'\\left|\1\\right|', s)
+    s = re.sub(r'\\ve[cx]mag\{((?:[^{}]|\{[^{}]*\})*)\}', r'\\left|\1\\right|', s)
     s = re.sub(r'\\ve[cx]t?prime\{([^{}]*)\}', r"{\\vec{\1}}'", s)
     s = re.sub(r'\\uve[cx]prime\{([^{}]*)\}', r"{\\hat{\1}}'", s)
     s = re.sub(r'\\ve[cx]t?\{([^{}]*)\}', r'\\vec{\1}', s)   # \vect \vex \vec
@@ -345,13 +345,22 @@ class PhysnetConverter:
                         f'\\end{{aligned}}\\]'), i
             return f'\\({convert_math(arg)}\\)', i
 
-        if name == 'vect':
+        # Vector macros in text context (titles, captions) -> inline math
+        if name in ('vect', 'vex', 'vec'):
             arg, i = get_arg(text, i)
             return f'\\(\\vec{{{convert_math(arg)}}}\\)', i
 
-        if name == 'uvec':
+        if name in ('uvec', 'uvex'):
             arg, i = get_arg(text, i)
-            return f'\\(\\hat{{{arg}}}\\)', i
+            return f'\\(\\hat{{{convert_math(arg)}}}\\)', i
+
+        if name in ('vectprime', 'vexprime', 'vecprime'):
+            arg, i = get_arg(text, i)
+            return f"\\({{\\vec{{{convert_math(arg)}}}}}'\\)", i
+
+        if name in ('vecmag', 'vexmag'):
+            arg, i = get_arg(text, i)
+            return f'\\(\\left|{convert_math(arg)}\\right|\\)', i
 
         # ── Superscript / units / degrees ──
         if name == 'up':
@@ -688,6 +697,13 @@ class PhysnetConverter:
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
             return f'<span class="eqn-ref">Eq.&nbsp;({sec}-{num}) of Ch.&nbsp;{ch}</span>', i
+        if name in ('TxtStaChRef', 'TxtDefChRef', 'TxtRuleChRef'):
+            ch, i = get_arg(text, i)
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            w = {'TxtStaChRef': 'Statement', 'TxtDefChRef': 'Defn.',
+                 'TxtRuleChRef': 'Rule'}[name]
+            return f'<span class="def-ref">{w}&nbsp;({sec}-{num}) of Ch.&nbsp;{ch}</span>', i
         if name in ('TxtEqnsRef', 'TxtEqnssRef'):
             sec, i = get_arg(text, i)
             num, i = get_arg(text, i)
@@ -720,9 +736,16 @@ class PhysnetConverter:
         if name in ('TxtRule',):
             return '<hr>\n', i
 
-        if name in ('TxtAdvice',):
+        if name in ('TxtAdvice', 'AfterSectionAdvice'):
             content, i = get_arg(text, i)
             return f'<div class="advice-box">{self._process(content)}</div>\n', i
+
+        if name in ('large', 'Large', 'LARGE', 'normalsize', 'small',
+                    'footnotesize', 'scriptsize', 'tiny', 'huge', 'Huge',
+                    'rm', 'sf', 'tt', 'bf', 'sl', 'sc', 'it', 'upshape',
+                    'mdseries', 'bfseries', 'rmfamily', 'sffamily', 'itshape',
+                    'centering', 'raggedleft'):
+            return '', i          # font-size / family switches: no-op in HTML
 
         if name in ('unitname',):
             content, i = get_arg(text, i)

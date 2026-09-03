@@ -4,6 +4,273 @@
 </header>
 
 
+<section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Small Displacements</h2>
+
+<p>Throughout this <em></em> and the next we shall consider a
+system consisting of a single moving particle which interacts with
+other particles fixed relative to an inertial frame. (For example,
+the particle might be a ball interacting with the earth, as illustrated
+in <span class="fig-ref">Fig.&nbsp;A1</span>a.) The equation of motion of the moving particle
+is then \(m\vec{a} = \vec{F}\), where \(\vec{a}\) is the acceleration of the particle 
+of mass \(m\) and where \(\vec{F}\) is the total force on the particle due 
+to all the other particles.
+<p>To relate information about the particle's position and velocity, let 
+us first use the definition of acceleration to express the
+equation of motion \(m\vec{a} = \vec{F}\) in terms of the velocity \(\vec{v}\) 
+of the particle. Thus we can write
+<p><div class="display-eqn">\[m \frac{d \vec{v}}{dt} = \vec{F}\]</div>
+ 
+or
+<span class="eqn-block" id="eqn-A1">\[m d \vec{v} = \vec{F} dt\]<span class="eqn-number">(A1)</span></span>
+<p>Furthermore, the velocity \(\vec{v}\) of the particle is related to its 
+position vector \(\vec{r}\) by the definition
+<p><div class="display-eqn">\[\vec{v} = \frac{d \vec{r}}{dt}\]</div>
+
+or
+<span class="eqn-block" id="eqn-A2">\[\vec{v} dt = d \vec{r}\]<span class="eqn-number">(A2)</span></span>
+<p>We should now like to eliminate the time interval \(dt\) between these
+two equations in order to obtain a direct relationship between small
+changes in the position \(\vec{r}\) and velocity \(\vec{v}\) of the particle.
+<p><figure id="fig-A1" class="module-figure module-figure-left"><img src="figures/m414gr01.svg" alt="Figure A1" class="physnet-fig"><figcaption><strong>Fig.&nbsp;A1.</strong> Motion of a particle acted on by a total
+force \(\vec{F}\). (a) Velocity \(\vec{v}\) of the particle at some instant,
+ (b) Component vectors of \(\vec{v}\) parallel and perpendicular to 
+\(\vec{F}\). [\(\vec{v} = v_F \hat{x} + \vec{v}_\perp\) if \(\hat{x}_F\) is 
+a unit vector along \(\vec{F}\).]</figcaption></figure>
+
+<p><h3 id="ss-argument-relating-position-and-velocity">Argument Relating Position And Velocity</h3>
+
+To avoid the complexities of vector equations, we shall consider the 
+numerical components of all vectors along the direction of
+the total force \(\vec{F}\). The equality of the vectors in <span class="def-ref">(A1)</span> implies
+the corresponding equality of their numerical components along \(\vec{F}\). 
+Thus
+<p><span class="eqn-block" id="eqn-A3">\[m dv_F = F dt\]<span class="eqn-number">(A3)</span></span>
+<p>where \(v_F\) is the numerical component of \(\vec{v}\) along \(\vec{F}\) 
+and where we have used the fact that the numerical component of 
+\(\vec{F}\) along its own direction is just equal to the magnitude \(F\) of
+\(\vec{F}\). Similarly, the equality of the vectors in <span class="def-ref">(A2)</span> implies the
+corresponding equality of their numerical components along \(\vec{F}\). 
+Thus
+<p><span class="eqn-block" id="eqn-A4">\[v_F dt = dr_F\]<span class="eqn-number">(A4)</span></span>
+<p>where \(dr_F\) is the numerical component of the particle's displacement 
+\(d \vec{r}\) along \(\vec{F}\). From <span class="def-ref">(A4)</span> we conclude that \(dt = dr_F/v_F\). 
+By substituting this value into <span class="def-ref">(A3)</span> we then find
+<p><div class="display-eqn">\[m dv_F = F \frac{dr_F}{v_F}\]</div>
+
+<p>or
+<p><span class="eqn-block" id="eqn-A5">\[m v_F dv_F = F dr_F\]<span class="eqn-number">(A5)</span></span>
+<p>Thus we have succeeded in eliminating the time interval \(dt\) and thereby 
+to obtain a direct relation connecting velocity and position.
+<p>We can write <span class="def-ref">(A5)</span> in a more convenient form. Thus we can express 
+\(v_F dv_F\) in terms of the change in the quantity \(v_F^2\) since the
+relation in <span class="eqn-ref">Eq.&nbsp;(C-9) of Ch.&nbsp;4</span> tells us that \(d(v_F^2) = 2 v_F dv_F\). Hence
+\(v_F dv_F = 1/2 d(v_F^2)\) so that <span class="def-ref">(A5)</span> can be written as
+<p><span class="eqn-block" id="eqn-A6">\[\frac{1}{2} m d(v_F^2) = F dr_F\]<span class="eqn-number">(A6)</span></span>
+<p>Furthermore, \(v_F^2\) can be expressed directly in terms of the magnitude 
+\(v\) of the particle's velocity since \(v^2 = v_F^2 + v_\perp^2\) where 
+\(v_\perp\) is the magnitude of the component vector \(\vec{v}_\perp\) of 
+\(\vec{v}\) perpendicular to \(\vec{F}\). (See <span class="fig-ref">Fig.&nbsp;A1</span>b.) Hence the 
+relation between the corresponding changes of these quantities is
+<p><span class="eqn-block" id="eqn-A7">\[d(v^2) = d(v_F^2) + d(v_\perp^2)\]<span class="eqn-number">(A7)</span></span>
+<p>But since the acceleration \(\vec{a}\) of the particle is parallel to the
+force \(\vec{F}\), the velocity change of the particle perpendicular to 
+\(\vec{F}\) is zero. *
+<p><div class="advice-box">* Indeed, <span class="def-ref">(A1)</span> shows explicitly that the velocity change 
+\(d \vec{v}\) is <em>parallel</em> to \(\vec{F}\).</div>
+
+Thus \(d \vec{v}_\perp = 0\) so that \(\vec{v}_\perp\), and hence also its 
+magnitude \(v_\perp\), remain unchanged. Therefore \(d(v_\perp^2) = 0\) 
+and <span class="def-ref">(A7)</span> implies simply that
+<p><span class="eqn-block" id="eqn-A8">\[d(v^2) = d(v_F^2)\]<span class="eqn-number">(A8)</span></span>
+<p>Accordingly, the left side of <span class="def-ref">(A6)</span> is equal to
+<p><div class="display-eqn">\[\frac{1}{2} m d(v_F^2) = \frac{1}{2} m d(v^2) = 
+d\left(\frac{1}{2} m v^2\right)\]</div>
+
+<p>and <span class="def-ref">(A6)</span> is equivalent to
+<p><div class="display-eqn" id="eqn-A9">\[d\left(\frac{1}{2} m v^2\right) = F d r_F\]</div>
+
+<p>This relation forms the basis of all subsequent discussion in this
+and the next two <em></em>s.
+<p><h3 id="ss-discussion">Discussion</h3>
+
+As we have seen, the equation of motion <span class="def-ref">(A1)</span> and the definition 
+<span class="def-ref">(A2)</span> of the velocity lead to the important relation <span class="def-ref">(A9)</span> which
+connects directly the speed and position of the particle. Let us
+then introduce some convenient abbreviations and terminology in order
+to express this relation in more compact form.
+<p>We begin by introducing the abbreviation
+<p><div class="display-eqn" id="eqn-A10">\[K = \frac{1}{2} m v^2\]</div>
+
+<p>and correspondingly this definition:
+<p><div class="definition" id="def-A11"><strong>Definition&nbsp;A11: Kinetic</strong> — The kinetic energy \(K\) of a particle
+is \(K = (1/2) m v^2\) where \(m\) is the mass of the particle and \(v\) 
+is its speed.</div>
+
+<p>Similarly, we introduce the abbreviation
+<p><div class="display-eqn" id="eqn-A12">\[\delta W = F dr_F\]</div>
+
+<p>and correspondingly this definition:
+<p><div class="definition" id="def-A13"><strong>Definition&nbsp;A13: Small work</strong> — The work \(\delta W\) done on a particle by 
+<em>any</em> force \(\vec{F}\) acting on the particle while it moves through
+a small enough displacement \(d\vec{r}\) is \(\delta W = F dr_F\) where \(F\) 
+is the magnitude of \(\vec{F}\) and \(dr_F\) is the numerical component of 
+the particle's displacement along \(\vec{F}\). *</div>
+
+<p><div class="advice-box">* Here we have used the symbol \(\delta\) (small Greek letter
+delta) to indicate explicitly that the quantity \(\delta W\) is
+small enough (so that the ratio \(\delta W/dr_F = F\) remains constant 
+for any smaller value of \(dr_F\)). Note that \(\delta W\) is
+ordinarily <em>not</em> a difference since it is obtained by multiplying 
+the difference \(dr_F\) by the quantity \(F\).</div>
+
+<p>By using the preceding definitions, we can write the relation
+<span class="def-ref">(A9)</span> as
+<p><div class="display-eqn" id="eqn-A14">\[dK = \delta W \mathrm{(by\;}\mathit{total}\mathrm{\;force)}\]</div>
+
+<p>where \(\delta W = F dr_F\) is the work done by the <em>total</em> force 
+\(\vec{F}\) acting on the particle. The result <span class="def-ref">(A14)</span> can
+be stated in words:
+<p><div class="statement"><span class="statement-label">Statement&nbsp;A15:</span> During any small displacement of a particle, the 
+change in the kinetic energy of the particle is equal to the work 
+done by the <em>total</em> force on the particle.</div>
+
+<p><h3 id="ss-"></h3>
+[]Properties of Kinetic Energy And Work
+According to its definition \(K = (1/2) m v^2\), the kinetic energy of
+a particle depends only on its mass \(m\) and speed \(v\). Since \(m\) and \(v\) 
+are numbers which are either positive or zero, the kinetic energy is
+thus an ordinary number which is either positive or zero.
+<p>The work \(\delta W = F dr_F\) done by any force \(\vec{F}\) is also an 
+ordinary number (and <em>not</em> a vector) since the magnitude \(F\) of the
+force and the numerical component \(dr_F\) of the displacement are 
+numbers. The work
+may be positive, zero, or negative since \(dr_F\) can have any sign. If
+\(\vec{F}\) is not zero, its magnitude \(F\) must be positive. Hence the 
+sign of the work \(\delta W = F dr_F\) is the same as that of the 
+numerical component \(dr_F\) of the particle's displacement \(d\vec{r}\) 
+along  the force \(\vec{F}\) and depends thus on the angle \(\theta\) 
+between \(d\vec{r}\) and \(\vec{F}\). If the particle moves along,
+or partly along, the force \(\vec{F}\) (as shown in <span class="fig-ref">Fig.&nbsp;A2</span>a), the work 
+is positive. If the particle moves in a direction perpendicular to the
+force \(\vec{F}\) (as shown in <span class="fig-ref">Fig.&nbsp;A2</span>b), the work is zero. If the 
+particle moves opposite, or partly opposite, to the force \(\vec{F}\) 
+(as shown in <span class="fig-ref">Fig.&nbsp;A2</span>c), the work is negative.
+<p><figure id="fig-A2" class="module-figure module-figure-left"><img src="figures/m414gr02.svg" alt="Figure A2" class="physnet-fig"><figcaption><strong>Fig.&nbsp;A2.</strong> Dependence of the work \(\delta W = F dr_F\) 
+on the angle \(\theta\) between the displacement \(d\vec{r}\) and the 
+force \(\vec{F}\).</figcaption></figure>
+
+<p>Irrespective of the magnitude of the force, the work \(\delta W = F dr_F\)
+must be zero whenever the displacement \(d\vec{r}\) of the particle is zero.
+For example, if a man is standing at a bus stop while holding a heavy
+suitcase in his hand, the work done on the suitcase by the force
+due to the hand is zero since the displacement of the suitcase is
+zero. (On the other hand, work is done by the forces acting on the
+moving atoms and electrons within the man's muscles since such “chemical” 
+work must be provided to maintain the tension in the muscles.
+Hence the man gets tired even if he does no work on the suitcase.)
+<p>According to the relation \(dK = \delta W\) of <span class="def-ref">(A14)</span>, the work \(\delta W\) 
+done by the <em>total</em> force \(\vec{F}\) on a particle is equal to the 
+change  \(dK\) in the kinetic energy of the particle. 
+Hence the sign of the work determines
+whether the change \(dK\) in the kinetic energy is positive, negative, or
+zero, i.e., whether the kinetic energy \(K\) increases, decreases, or
+remains the same. For example, <span class="fig-ref">Fig.&nbsp;A3</span> illustrates the motion of a
+ball moving under the sole influence of the gravitational force \(\vec{F}\) 
+due to the earth. During a small displacement \(d\vec{r}\) from the point \(A\), 
+the force \(\vec{F}\) does negative work on the ball since the ball moves 
+partly <em>opposite</em> to the force. Hence the kinetic energy \(K\) of the 
+ball (and thus also its speed \(v\)) <em>decreases</em> during this displacement. 
+But during the small displacement \(d\vec{r}\) from the point \(B\), the 
+force \(\vec{F}\) does positive work on the ball since the ball moves 
+partly <em>along</em> the force. Hence the kinetic energy \(K\) of the ball 
+(and thus also its speed \(v\)) <em>increases</em> during this displacement.
+<p><figure id="fig-A3" class="module-figure module-figure-left"><img src="figures/m414gr03.svg" alt="Figure A3" class="physnet-fig"><figcaption><strong>Fig.&nbsp;A3.</strong> Work done during various small
+displacements along the path of a ball moving near the surface of the
+earth.</figcaption></figure>
+
+<p>The unit of kinetic energy follows from its definition \(K= (1/2) m v^2\).
+Thus
+<p><div class="display-eqn" id="eqn-A16">\[\mathrm{unit\; of\;}
+ K = \,\text{(kg)}\, \left( \frac{\,\text{meter}}{\,\text{sec}} \right)^2
+    = \frac{\,\text{kg}\,\,\text{meter}^2}{\,\text{sec}^2} = \,\text{joule}\]</div>
+
+<p>where the unit “joule” is merely a convenient abbreviation for
+kg meter\(^2\)/sec\(^2\). [The unit “joule” is named in honor of the 
+British physicist James P. Joule (1818-1889) who carried out fundamental
+studies of various forms of energy.] Because of the relation \(dK = 
+\delta W\) of <span class="def-ref">(A14)</span>, the unit of work must be the same as the unit of 
+kinetic energy. Indeed, the definition \(\delta W = F dr_F\) of work 
+implies that the unit of work is
+<p><span class="eqn-block" id="eqn-A17">\[\mathrm{unit\; of\; work\;}
+    = \,\text{newton}\,\text{meter} =
+    \left(\,\text{kg} \frac{\,\text{meter}}{\,\text{sec}^2}\right)\,\text{(meter)} = \,\text{joule}\]<span class="eqn-number">(A17)</span></span>
+<p>since the combination of units appearing here is the same as that
+appearing in <span class="def-ref">(A16)</span>.
+<p><p class="order-note"><strong>&rarr;</strong> Go to tutorial section <span class="sect-ref">Tutorial&nbsp;Sect.&nbsp;A</span>.</p>
+
+<p><p><strong>Knowing About Small Work</strong></p>
+
+<p><div class="problem" id="prob-A1"><p><strong>Problem&nbsp;A1: </strong>
+
+After it is thrown, a 0.2&thinsp;kg ball moves along an arched trajectory, 
+hits a tree branch, and then falls vertically to the
+ground. During its motion, the ball moves under the sole influence
+of gravity through the four small displacements, each of magnitude
+0.3&thinsp;meter, shown in <span class="fig-ref">Fig.&nbsp;A4</span>. For each of these displacements, what
+is the small work \(\delta W\) done on the ball by the total force acting 
+on it? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[106]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;3]</span></span>
+<p><figure id="fig-A4" class="module-figure module-figure-left"><img src="figures/m414gr04.svg" alt="Figure A4" class="physnet-fig"><figcaption><strong>Fig.&nbsp;A4.</strong></figcaption></figure>
+
+
+<p><p><strong>Understanding the Definition of Kinetic Energy</strong></p>
+
+<p><div class="problem" id="prob-A2"><p><strong>Problem&nbsp;A2: Example</strong>
+
+What is the kinetic energy \(K\) of a 1000&thinsp;kg car (a) with
+a velocity of 20&thinsp;m/s north, (b) sitting at rest at a stop sign,
+and (c) with a velocity of 20&thinsp;m/s east? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[103]</span></p>
+
+
+<p><div class="problem" id="prob-A3"><p><strong>Problem&nbsp;A3: Properties</strong>
+
+List the following properties of the quantities
+kinetic energy and work: kind of quantity (number or vector),
+possible signs of numerical quantities, single SI unit, unit expressed
+in terms of kg, meter, and second. Which properties <em>differ</em> for the
+two quantities? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[101]</span></p>
+
+
+<p><div class="problem" id="prob-A4"><p><strong>Problem&nbsp;A4: Relating kinetic energy and speed</strong>
+
+The ball described in
+problem A-1 has a speed \(v_0 = 2\)&thinsp;m/s at the beginning of the 
+displacement labeled (1) in <span class="fig-ref">Fig.&nbsp;A4</span>. (a) What is the ball's initial
+kinetic energy \(K_0\) at the beginning of this displacement? (b) The
+change \(dK = K_c - K_0\) in the ball's kinetic energy during this 
+displacement is given by \(dK = \delta W\), where \(\delta W = -0.3\)&thinsp;joule 
+is the work done on the ball by the total force (as found in problem 
+A-1). At the end of this displacement, what is the ball's final 
+kinetic energy \(K_c\)? What is its final speed \(v_c\)? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[105]</span></p>
+
+
+<p><div class="problem" id="prob-A5"><p><strong>Problem&nbsp;A5: Dependence of kinetic energy on mass and speed</strong>
+
+A little boy
+sliding slowly down a playground slide has a kinetic energy of
+10&thinsp;joule. What is the kinetic energy of (a) the boy's big sister, who
+has twice the boy's mass, when she slides down with the same slow
+speed, and (b) the boy when he slides down with twice his original
+slow speed?
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[102]</span></p>
+
+
+<p>
 <p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. General Motion</h2>
 
 <p>In the preceding section we considered only small displacements of 
@@ -16,21 +283,18 @@ of the particle may be regarded as a series of successive small displacements
 (as illustrated in <span class="fig-ref">Fig.&nbsp;B1</span>) and the relation \(dK = \delta W\) of <span class="eqn-ref">Eq.&nbsp;(A14)</span> 
 may be applied to each one of them. Thus we can write for the first of
 these displacements
-<p><div class="display-eqn" id="eqn-B1">\[(dK)_1 = (\delta W)_1\]</div>
-
+<p><span class="eqn-block" id="eqn-B1">\[(dK)_1 = (\delta W)_1\]<span class="eqn-number">(B1)</span></span>
 <p>where \((\delta W)_1 = F_1(dr_F)_1\) is the work done on the particle by 
 the total force during this first displacement. Similarly we can write 
 for the second displacement
-<p><div class="display-eqn" id="eqn-B2">\[(dK)_2 = (\delta W)_2\]</div>
-
+<p><span class="eqn-block" id="eqn-B2">\[(dK)_2 = (\delta W)_2\]<span class="eqn-number">(B2)</span></span>
 <p>where \((\delta W)_2 = F_2(dr_F)_2\) is the work done on the particle by 
 the total force during this second displacement. By adding 
 corresponding sides of these equations for all the successive 
 displacements, we then obtain
-<p><div class="display-eqn" id="eqn-B3">\[(dK)_1 + (dK)_2 + \ldots = (\delta W)_1 + (\delta W)_2
-+ \ldots\]</div>
-
-<p><figure id="fig-B1" class="module-figure module-figure-left"><img src="../../modules/m414/m414gr05.svg" alt="Figure B1"><figcaption><strong>Fig.&nbsp;B1.</strong> Work done on a particle
+<p><span class="eqn-block" id="eqn-B3">\[(dK)_1 + (dK)_2 + \ldots = (\delta W)_1 + (\delta W)_2
++ \ldots\]<span class="eqn-number">(B3)</span></span>
+<p><figure id="fig-B1" class="module-figure module-figure-left"><img src="figures/m414gr05.svg" alt="Figure B1" class="physnet-fig"><figcaption><strong>Fig.&nbsp;B1.</strong> Work done on a particle
 along a path from a point \(P_a\) to a point \(P_b\).</figcaption></figure>
 
 <p>
@@ -47,13 +311,11 @@ Hence <span class="eqn-ref">Eq.&nbsp;(B3)</span> can be written as
 <p><div class="display-eqn" id="eqn-B4">\[K_b - K_a = W_{ab} \text{  (by total force)}\]</div>
 
 <p>if we introduce the abbreviation
-<p><div class="display-eqn" id="eqn-B5">\[W_{ab} = (\delta W)_1 + (\delta W)_2 + \ldots\]</div>
-
+<p><span class="eqn-block" id="eqn-B5">\[W_{ab} = (\delta W)_1 + (\delta W)_2 + \ldots\]<span class="eqn-number">(B5)</span></span>
 <p>to denote the sum of all the small works \(\delta W = F dr_F\) done by 
 the <em>total</em> force \(\vec{F}\) as the particle moves along its path 
 from state \(a\) to state \(b\). This sum can be written compactly as
-<p><div class="display-eqn" id="eqn-B6">\[W_{ab} = \int_a^b \delta W = \int_a^b F dr_F\]</div>
-
+<p><span class="eqn-block" id="eqn-B6">\[W_{ab} = \int_a^b \delta W = \int_a^b F dr_F\]<span class="eqn-number">(B6)</span></span>
 <p>where the symbol \(\int\) (which is a special form of the letter S) denotes
 the sum (or “integral”) obtained by adding the indicated small enough
 quantities, starting in state \(a\) and ending in state \(b\). *
@@ -104,8 +366,7 @@ is also <em>negative</em>. If a force on a particle is always
 particle by this force in any small displacement is zero. Hence the
 work done by this force along the entire path of the particle is then
 zero.
-<p><div class="example" id="ex-B1"><p><strong>Example&nbsp;B1: Work done by various forces on a skier</strong>
-
+<p><div class="example" id="ex-B1"><p><strong>Example&nbsp;B1: Work done by various forces on a skier</strong> 
 <span class="fig-ref">Fig.&nbsp;B2</span> illustrates a skier who is being pulled some distance
 up a slope by the rope of a ski tow. Since the tension force \(\vec{F}_t\)
 exerted on the skier by the rope is along the uphill direction of
@@ -117,6 +378,7 @@ frictional force is negative. Since the normal force \(\vec{F}_n\) exerted
 on the skier by the surface of the hill is always perpendicular to the
 path of the skier, the work done on the skier by this normal force
 is zero.
+</div>
 
 <p>Finally, suppose that a particle moves along some path from a
 point \(P_a\) to some point \(P_b\) and from there to some point \(P_c\). 
@@ -128,10 +390,10 @@ done by this force as the particle moves along the successive portions
 of its path. In other words,
 <p><div class="display-eqn" id="eqn-B8">\[W_{ac} = W_{ab} + W_{bc}\,.\]</div>
 
-<p><figure id="fig-B2" class="module-figure module-figure-left"><img src="../../modules/m414/m414gr06.svg" alt="Figure B2"><figcaption><strong>Fig.&nbsp;B2.</strong> Forces acting on a skier being 
+<p><figure id="fig-B2" class="module-figure module-figure-left"><img src="figures/m414gr06.svg" alt="Figure B2" class="physnet-fig"><figcaption><strong>Fig.&nbsp;B2.</strong> Forces acting on a skier being 
 pulled up a hill.</figcaption></figure>
 
-<p><figure id="fig-B3" class="module-figure module-figure-left"><img src="../../modules/m414/m414gr07.svg" alt="Figure B3"><figcaption><strong>Fig.&nbsp;B3.</strong> Work done on a particle
+<p><figure id="fig-B3" class="module-figure module-figure-left"><img src="figures/m414gr07.svg" alt="Figure B3" class="physnet-fig"><figcaption><strong>Fig.&nbsp;B3.</strong> Work done on a particle
 along successive portions of a path.</figcaption></figure>
 
 <p><p><strong>Knowing About the Definitions of Work and State</strong></p>
@@ -164,7 +426,7 @@ it. Is the state of the carriage the same at these two times? Why
 or why not? 
 <p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[112]</span></p>
 
-<p><figure id="fig-B4" class="module-figure module-figure-left"><img src="../../modules/m414/m414gr08.svg" alt="Figure B4"><figcaption><strong>Fig.&nbsp;B4.</strong> </figcaption></figure>
+<p><figure id="fig-B4" class="module-figure module-figure-left"><img src="figures/m414gr08.svg" alt="Figure B4" class="physnet-fig"><figcaption><strong>Fig.&nbsp;B4.</strong></figcaption></figure>
 
 
 <p><p><strong>Finding the Sign of Work Done by Special Forces</strong></p>
@@ -259,7 +521,375 @@ on this cell as it travels from the aorta to the capillary?
 
 </section>
 
-<hr class="section-divider">
+<p><section id="sect-C" class="module-section section-text"><h2 id="sect-C">C. Work Done by a Constant Force</h2>
 
+<p>Suppose that a force \(\vec{F}\) on a particle is constant (in both
+magnitude and direction) as the particle moves along its path. Then
+the work \(F dr_F\) done on the particle in every small displacement \(d\vec{r}\)
+of the particle depends only on the numerical component of this 
+displacement along the fixed direction of the force \(\vec{F}\) (a direction 
+indicated by the unit vector \(\hat{x}_F\) in <span class="fig-ref">Fig.&nbsp;C1</span>). Thus the work done 
+on the particle is completely independent of how the particle moves 
+perpendicularly to the fixed direction of the force.
+<p>What then is the work \(W\) done on the particle by the constant
+force \(\vec{F}\) along the path from a point \(P_a\) to another point \(P_b\)? 
+This work is the sum of the works done in all the successive small 
+displacements of the particle along this path, i.e.,
+<p>\[W = F(dr_F)_1 + F(dr_F)_2 + \ldots = F[(dr_F)_1 
++ (dr_F)_2 + \ldots]\]
+
+<p>since the constant force has the same magnitude F in all displacements.
+Hence
+<p><hr>
+C1if \(\vec{F}\) is constant, \(W = F D_F\)
+<p>where \(D_F = (dr_F)_1+ (dr_F)_2 + \ldots\), the sum of the numerical 
+components along \(\vec{F}\) of all the successive displacements of the 
+particle, is simply equal to the numerical component \(D_F\) along \(\vec{F}\) 
+of the <em>entire</em> displacement \(\vec{D}\)
+of the particle (See <span class="fig-ref">Fig.&nbsp;C1</span>b).  Note that the value of the component
+of a displacement will be positive if the component is in the same direction as
+\(\vec{F}\), negative if in the opposite direction.  Thus \(D_F\) can be either
+positive or negative (or zero).
+<p><figure id="fig-C1" class="module-figure module-figure-left"><img src="figures/m414gr09.svg" alt="Figure C1" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C1.</strong> Work done by a constant force.
+(a) Work done in a small displacement. (b) Work done along an entire
+path.</figcaption></figure>
+
+<p>Suppose now that the force \(\vec{F}\) on a particle is constant 
+throughout an entire region of space so that it has the same value along
+<em>any</em> path traversed by the particle in this region. (For example,
+\(\vec{F}\) might be the gravitational force near the surface of the earth.)
+Since \(\vec{F}\) has then everywhere the same value, the work \(F D_F\) 
+done on the
+particle by this force has the same value along all paths for which
+the numerical component \(D_F\) of the displacement along the force has 
+the same value. For example, the work done on a particle by the vertical
+gravitational force near the earth has the same value along <em>all</em> 
+paths whose end points are separated by the same difference in vertical
+height. (Thus the work done by the gravitational force is the same
+along all the different paths shown in <span class="fig-ref">Fig.&nbsp;C2</span>.)
+<p><div class="example" id="ex-C1"><p><strong>Example&nbsp;C1: Work along a path parallel to a constant force</strong> 
+The gravitational force on a brick of mass \(m = 2\)&thinsp;kg is \(mg =\)
+(2&thinsp;kg)(10&thinsp;meter/sec<sup>2</sup>) downward = 20&thinsp;newton downward. If the brick
+falls vertically <em>downward</em> through a distance of 3&thinsp;meter, the numerical
+component of the displacement along the gravitational force is \(D_F =
+3\)&thinsp;meter. Hence the work done on the brick by the gravitational force
+is \(F D_F = (20\)&thinsp;newton)(3&thinsp;meter) = 60&thinsp;joule. On the other hand, if
+the brick is thrown so that it moves vertically <em>upward</em> through a 
+distance of 3&thinsp;meter, the numerical component of the displacement of the
+brick along the gravitational force is \(D_F = -3\)&thinsp;meter since the upward
+displacement is opposite to the downward gravitational force. Hence
+the work done on the brick by the gravitational force is then \(F D_F =\)
+(20&thinsp;newton)(\(-3\)&thinsp;meter) = \(-60\)&thinsp;joule.
+</div>
+
+<p><figure id="fig-C2" class="module-figure module-figure-left"><img src="figures/m414gr10.svg" alt="Figure C2" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C2.</strong> Different paths between the same
+two heights near the surface of the earth.
+The work done by the constant gravitational force is the same along
+each of these paths.</figcaption></figure>
+
+<p><div class="example" id="ex-C2"><p><strong>Example&nbsp;C2: Relation between speed and height of a ball</strong> 
+A ball is thrown from the ground with a speed of 15&thinsp;meter/sec.
+If the ball moves under the sole influence of gravity, what is the
+speed of the ball when it is at the highest point of its trajectory
+6&thinsp;meter above the level ground?
+<p>Description: <span class="fig-ref">Fig.&nbsp;C3</span> illustrates the situation where the ball of
+mass \(m\) starts from the point \(P_a\) with a speed \(v_a = 15\)&thinsp;meter/sec.
+We should like to find the speed \(v_b\) when the ball is at its highest 
+point \(P_b\) at a height \(h = 6\)&thinsp;meter above the initial point \(P_a\).
+<p>Planning: To relate the speed directly to the height, we can
+use the relation between kinetic energy and work
+<p><span class="eqn-block" id="eqn-C2">\[K_b - K_a = W_{ab}\]<span class="eqn-number">(C2)</span></span>
+<p>To calculate the work, we note that the total force \(\vec{F}\) on the ball 
+is the constant gravitational force of magnitude \(F = mg\). The numerical
+component of the displacement of the ball along the vertically downward
+direction of the gravitational force is \(D_F = -h\). (Here \(D_F\) is
+negative because the component vector of the ball's displacement from
+\(P_a\) to \(P_b\) is in the upward direction <em>opposite</em> to the 
+gravitational force.) Thus
+<p><span class="eqn-block" id="eqn-C3">\[W_{ab} = F D_F = (mg)(-h) = -mgh\]<span class="eqn-number">(C3)</span></span>
+<p>Hence <span class="eqn-ref">Eq.&nbsp;(C2)</span> becomes
+<p><span class="eqn-block" id="eqn-C4">\[\frac{1}{2} m v_b^2 - \frac{1}{2} m v_a^2 = -mgh\]<span class="eqn-number">(C4)</span></span>
+<p>or
+<p><span class="eqn-block" id="eqn-C5">\[v_b^2 - v_a^2 = -2 gh\]<span class="eqn-number">(C5)</span></span>
+<p><figure id="fig-C3" class="module-figure module-figure-left"><img src="figures/m414gr11.svg" alt="Figure C3" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C3.</strong> Motion of a ball near the earth.</figcaption></figure>
+
+<p>
+This relation allows us to find \(v_b\) from the known information about
+\(v_a\) and \(h\).
+<p>Implementation: From <span class="eqn-ref">Eq.&nbsp;(C5)</span> we find
+<p><span class="eqn-block" id="eqn-C6">\[v_b^2 = v_a^2 - 2 gh\]<span class="eqn-number">(C6)</span></span>
+<p>Substituting the known values, we get
+<p>\[v_b^2 = (15\,\text{m/s})^2 - 2(10\,\text{m/s}^{2}\text{})(6\,m) = (225 - 120)(\,\text{m/s})^2
+= 105 (m/s)^2\]
+</div>
+
+<p>Hence
+<p>\[v_b = 10.2\,\text{m/s}\]
+
+<p>i.e., the speed of the ball at its highest point is 10.2&thinsp;meter/sec.
+<p>Checking: As anticipated, the speed of the ball at its highest
+point is smaller than its initial speed at ground level. Furthermore, 
+the result <span class="eqn-ref">Eq.&nbsp;(C6)</span> does not involve the mass \(m\) of the ball, as
+expected in the case of motion under the sole influence of gravity.
+<p><p><strong>Understanding the Relation <strong>\(W = F D_f\)</strong></strong></p>
+
+<p><div class="problem" id="prob-C1"><p><strong>Problem&nbsp;C1: Example</strong>
+
+A 1000&thinsp;kg elevator moves through a displacement of
+15 meter upward, and then a displacement of 15&thinsp;meter downward,
+returning to its original position. (a) For each of these displacements,
+and for the displacement corresponding to the elevator's entire
+trip up and down, find the numerical component \(D_F\) of the displacement
+along the gravitational force \(\vec{F}_g\) on the elevator, and the work 
+\(W\) done on the elevator by \(\vec{F}_g\). (b) Is the work done by \(\vec{F}_g\) 
+during the entire trip equal to the sum of the works done in the upward 
+and downward parts of the trip? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[118]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;5]</span></span>
+
+<p><div class="problem" id="prob-C2"><p><strong>Problem&nbsp;C2: Interpretation</strong>
+
+(a) What is the work done by the gravitational
+force on the 1200&thinsp;kg car shown in <span class="fig-ref">Fig.&nbsp;C4</span>a as the car travels
+a distance of 20&thinsp;meter up the indicated slope? (b) <span class="fig-ref">Fig.&nbsp;C4</span>b shows
+the path of an electron traveling between two charged deflecting
+plates in an oscilloscope tube. As the electron travels from the
+point \(A\) to the point \(B\), the total force acting on it is the constant
+electric force \(\vec{F}_e = 1 \times 10^{-14}\)&thinsp;N upward due to the charged 
+plates.
+What is the work done by the total force on the electron as it travels
+from \(A\) to \(B\)? (c) A 60&thinsp;kg hiker walks from a ranger station over a
+mountain pass to a lake. If the elevation of the lake is 1000&thinsp;meter
+higher than that of the ranger station, what is the work done by the
+gravitational force on the hiker during the journey? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[116]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;16]</span></span>
+<p><div class="two-figures"><figure id="fig-C4" class="module-figure"><img src="figures/m414gr12.svg" alt="Figure C4" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C4.</strong></figcaption></figure>
+<figure id="fig-C5" class="module-figure"><img src="figures/m414gr13.svg" alt="Figure C5" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C5.</strong></figcaption></figure>
+</div>
+
+
+<p><div class="problem" id="prob-C3"><p><strong>Problem&nbsp;C3: Comparison of work done by different forces</strong>
+
+To push a broom a distance of 5.0&thinsp;meter in a straight line across a 
+level floor,
+a man exerts on the broom a force \(\vec{F}_m\) having a constant magnitude 
+of 20&thinsp;N and a direction along the broom handle (<span class="fig-ref">Fig.&nbsp;C5</span>). During this
+motion, three other constant forces act on the broom: the gravitational 
+force \(\vec{F}_g\) of magnitude 20&thinsp;N, and the frictional force \(\vec{F}_f\) 
+of magnitude 10&thinsp;N and normal force \(\vec{F}_n\) of magnitude 37&thinsp;N due to 
+the floor.
+What is the work done on the broom by each of these forces during the
+broom's motion?
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[113]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;8]</span></span>
+
+<p><div class="problem" id="prob-C4"><p><strong>Problem&nbsp;C4: Applicability</strong>
+
+Suppose the man described in problem C-3 now
+pushes the broom in the same way once around a circle on the
+level floor. All the forces on the broom have the same constant
+magnitudes as before. For which of these forces can you <em>not</em> use the
+relation \(W = F D_F\) to find the work done on the broom, and why? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[120]</span></p>
+
+
+<p><div class="problem" id="prob-C5"><p><strong>Problem&nbsp;C5: Dependence of work on the direction of the displacement</strong>
+
+Figure C-6 shows six paths a bird might take from its original
+position on a roof. (a) For each path, describe the direction of the
+bird's displacement relative to the gravitational force \(\vec{F}_G\) on the
+bird. (Use the terms “along,” “partly along,” “perpendicular,”
+“partly opposite to,” and “opposite to.”) Then give the sign of the
+work done by \(\vec{F}_g\) on the bird as it moves along each path. (b) For
+which pairs of paths is the work done by \(\vec{F}_g\) the same? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[117]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;15]</span></span>
+<p><figure id="fig-C6" class="module-figure module-figure-left"><img src="figures/m414gr14.svg" alt="Figure C6" class="physnet-fig"><figcaption><strong>Fig.&nbsp;C6.</strong></figcaption></figure>
+
+
+<p><p><strong>Relating Work and Speed</strong></p>
+
+<p><div class="problem" id="prob-C6"><p><strong>Problem&nbsp;C6: </strong>
+
+A truck driver of mass \(M\) jumps off the back of his truck with
+an initial speed \(v_a\). He moves with negligible air resistance,
+and lands on the level pavement, a vertical distance \(h\) below, at a
+horizontal distance \(L\) from the back of the truck. (a) Find the work
+\(W_{ab}\) done on the driver by the total force during this jump, and the
+driver's final speed \(v_b\) just before hitting the pavement. Using the
+values \(M = 80\,\text{kg}\) and \(h = 0.8\,\text{meter}\), find the driver's final speed if
+he (b) simply drops vertically with an initial speed of zero, and
+(c) runs off the truck bed with an initial speed of 3<span class="unit">&thinsp;m/s</span>, so that
+he lands a horizontal distance of 1<span class="unit">&thinsp;meter</span> from the back of the truck.
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[124]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;13]</span></span>
+
+<p><div class="problem" id="prob-C7"><p><strong>Problem&nbsp;C7: </strong>
+
+The electron described in part (b) of problem C-2 has a speed
+of \(1 \times 10^7\,\text{m/s}\) when it passes the point \(B\). What was its speed
+when it passed the point \(A\)? (Use your previous result for the work
+done on the electron, and the value \(1 \times 10^{-30}\,\text{kg}\) for the mass 
+of the electron.) 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[121]</span></p>
+
+<p><div class="practice-note"><span class="frame-ref">[Practice&nbsp;3]</span></div>
+
+
+</section>
+
+<p><section id="sect-D" class="module-section section-text"><h2 id="sect-D">D. Superposition Principle for Work</h2>
+
+<p>The work done on a particle by a force \(\vec{F}\) is equal to \(F D_F\)
+for any displacement \(\vec{D}\) of the particle if the force on the particle
+is constant along its path. In particular, the relation \(W = F D_F\)
+holds for any displacement \(\vec{D} = d\vec{r}\) which is small enough 
+(so that \(\vec{F}\) remains constant within this displacement).
+<p>In practice, the work \(W\) can be calculated in various equivalent
+ways. For example, the numerical component \(D_F\) of the displacement \(\vec{D}\)
+along the force \(\vec{F}\) can be found from the magnitude \(D\) of the 
+displacement and the angle \(\theta\) between the displacement and the force. 
+Indeed, from <span class="fig-ref">Fig.&nbsp;D1</span>a we see that \(D_F = D \cos \theta\). Hence the 
+work \(W\) is equal to
+<p><span class="eqn-block" id="eqn-D1">\[W = F D_F = F D \cos \theta\]<span class="eqn-number">(D1)</span></span>
+<p>But from <span class="fig-ref">Fig.&nbsp;D1</span>b we also see that \(F \cos \theta = F_D\), the numerical 
+component of the force \(\vec{F}\) along the displacement \(\vec{D}\). 
+Hence the work in <span class="eqn-ref">Eq.&nbsp;(D1)</span> is also equal to
+<p><span class="eqn-block" id="eqn-D2">\[W = D(F \cos \theta) = D F_D\]<span class="eqn-number">(D2)</span></span>
+<p>Hence the work can be found either from <span class="eqn-ref">Eq.&nbsp;(D1)</span> by multiplying the
+magnitude of the force by the numerical component of the particle's
+displacement along this force, or from <span class="eqn-ref">Eq.&nbsp;(D2)</span> by multiplying the 
+magnitude of the particle's displacement by the numerical component
+of the force along this displacement.
+<p><figure id="fig-D1" class="module-figure module-figure-left"><img src="figures/m414gr15.svg" alt="Figure D1" class="physnet-fig"><figcaption><strong>Fig.&nbsp;D1.</strong> Displacement \(\vec{D}\)
+of a particle acted on by a force \(\vec{F}\).</figcaption></figure>
+
+<p>Suppose that a particle is acted on by several forces, e.g., by
+a force \(\vec{F}_1\) due to its interaction with one object and by a force 
+\(\vec{F}_2\) due to its interaction with a second object. Then we know 
+from the superposition principle that the total force \(\vec{F}\) on the 
+particle due to its interaction with all the other objects is
+<p><span class="eqn-block" id="eqn-D3">\[\vec{F} = \vec{F}_1 + \vec{F}_2\]<span class="eqn-number">(D3)</span></span>
+<p>How then is the work done on the particle by this total force \(\vec{F}\) 
+related to the works done by the individual forces \(\vec{F}_1\) and 
+\(\vec{F}_2\)?
+<p>According to <span class="eqn-ref">Eq.&nbsp;(D2)</span>, the work done by the total force \(\vec{F}\) in any
+small displacement \(\vec{D}\) of the particle is equal to \(D F_D\). But the
+numerical component \(F_D\) of the total force along \(D\) is just equal to
+the sum of the numerical components of the individual forces along 
+\(\vec{D}\). *
+<p><div class="advice-box">* We recall from <span class="def-ref">Statement&nbsp;(D-2) of Ch.&nbsp;7</span> that the numerical component 
+of the sum of vectors is just equal to the sum of
+their numerical components.</div>
+
+In other words \(F_D = F_{1D} + F_{2D}\). Hence \(D F_D = D F_{1D} + D F_{2D}\)
+so that the work done by the total force in any small displacement 
+\(\vec{D}\) is the sum of the works done by the individual forces. 
+Since this relationship is true for every small displacement, it must 
+also be true for the works done by these forces along any entire path. 
+Thus the superposition principle <span class="eqn-ref">Eq.&nbsp;(D3)</span> for forces implies correspondingly
+this conclusion:
+<p><hr>
+D4Superposition principle for work: The work done by
+several forces acting jointly is equal to the sum of the works done 
+by the individual forces separately.
+<p>Thus the work \(W\) done by the total force is related to the works \(W_1\)
+and \(W_2\) done by the individual forces so that
+<p><span class="eqn-block" id="eqn-D5">\[W = W_1 + W_2\]<span class="eqn-number">(D5)</span></span>
+<p>The conclusion in <span class="def-ref">Rule&nbsp;D4</span> is extremely useful and can greatly simplify 
+the calculation of work. Thus the work done by several forces
+acting jointly can be found without ever calculating the total force,
+i.e., without ever needing to calculate a cumbersome <em>vector</em> sum of
+individual forces. Instead, we need merely calculate the sum of the
+works done by the individual forces. Since these works are ordinary
+numbers, we need thus merely calculate a simple <em>numerical</em> sum 
+without ever having to add any vectors.
+<p><div class="example" id="ex-D1"><p><strong>Example&nbsp;D1: Work done on a skier descending a hill</strong> 
+A skier of mass \(m\) descends along an icy frictionless hill. What
+is the total work done by all forces on the skier after he has descended 
+through a vertical height \(h\)?
+<p>As illustrated in <span class="fig-ref">Fig.&nbsp;D2</span>, the skier is acted on by the downward 
+gravitational force \(\vec{F}_g\) due to the earth and by the normal force
+\(\vec{F}_n\) due to the surface. The total work done by these forces acting
+jointly (i.e., by the total force) is then, by <span class="def-ref">Rule&nbsp;D4</span>, simply the sum
+of the works done by these individual forces separately. But since
+the normal force \(\vec{F}_n\) is always perpendicular to the path of the 
+skier, the work done by this force is zero. Hence the total work consists
+merely of the work done by the constant gravitational force \(m\vec{g}\), 
+i.e., it is equal to \(mgh\) (since the numerical component of the skier's
+displacement along the downward gravitational force is just \(h\)).
+</div>
+
+<p><figure id="fig-D2" class="module-figure module-figure-left"><img src="figures/m414gr16.svg" alt="Figure D2" class="physnet-fig"><figcaption><strong>Fig.&nbsp;D2.</strong> Skier descending along
+the frictionless surface of a hill.</figcaption></figure>
+
+<p><p><strong>Understanding the Superposition Principle for Work</strong></p>
+
+<p><div class="problem" id="prob-D1"><p><strong>Problem&nbsp;D1: Example</strong>
+
+Using your previous results for the work done by each
+individual force on the broom described in problem C-3, find
+the work done by all forces (i.e., the total work done). <em>Review:</em> 
+Does the broom move with increasing, constant, or decreasing speed? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[123]</span></p>
+
+
+<p><div class="problem" id="prob-D2"><p><strong>Problem&nbsp;D2: Interpretation</strong>
+
+A simple pendulum (<span class="fig-ref">Fig.&nbsp;D3</span>) consists of a “bob”
+of mass \(m\) attached by a string of length \(L\) to a support \(S\).
+Suppose the bob is initially released at the point \(A\) where the string
+is horizontal. It then swings downward along a circular arc to the
+point \(B\) where the string is vertical. During this motion, the 
+gravitational force of magnitude \(mg\) and the string tension force of 
+magnitude \(F_t\) act on the bob. What is the total work \(W_{ab}\) done on 
+the bob by all forces as the bob moves from \(A\) to \(B\)? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[126]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;6]</span></span>
+<p><div class="two-figures"><figure id="fig-D3" class="module-figure"><img src="figures/m414gr17.svg" alt="Figure D3" class="physnet-fig"><figcaption><strong>Fig.&nbsp;D3.</strong></figcaption></figure>
+<figure id="fig-D4" class="module-figure"><img src="figures/m414gr18.svg" alt="Figure D4" class="physnet-fig"><figcaption><strong>Fig.&nbsp;D4.</strong></figcaption></figure>
+</div>
+
+
+<p><p><strong>Relating Work and Speed</strong></p>
+
+<p><div class="problem" id="prob-D3"><p><strong>Problem&nbsp;D3: </strong>
+
+(a) If the pendulum bob described in problem D-2 was initially
+at rest at the point \(A\), what is its speed \(v_b\) when it reaches
+the point \(B\)? (b) Suppose the bob is detached from the string and is
+simply dropped from rest at the support \(S\) so that it falls vertically
+to the point \(B\). What is the total work \(W_{sb}\) done on the bob during
+this motion? What now is the bob's speed \(v'_b\) at the point \(B\)? 
+How does \(v'_b\) compare with \(v_b\)? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[119]</span></p>
+
+
+<p><div class="problem" id="prob-D4"><p><strong>Problem&nbsp;D4: </strong>
+
+A 1000&thinsp;kg car is descending a “10 percent grade,” which means that
+the car descends 1&thinsp;meter vertically for every 10&thinsp;meter it
+travels along the road (<span class="fig-ref">Fig.&nbsp;D4</span>). The driver of the car wants to
+be able to bring the car to a stop within 50&thinsp;meter from the point
+he applies the brakes. To find the largest speed the car should have
+when the driver applies the brakes, assume that the car does travel
+50&thinsp;meter down the road before coming to rest, and that the frictional
+force exerted by the road on the locked wheels of the car has a constant 
+magnitude of \(5.0 \times 10^3\)&thinsp;N. What is the total work done on the
+car during the braking process? What is the car's initial speed when
+the driver applies the brakes? 
+<p class="prob-ans"><em>Answer:</em> <span class="ans-ref">[122]</span></p>
+
+<span class="help-ref"><span class="frame-ref">[Suggestion&nbsp;14]</span></span>
+<p><p class="txt-prac"><em>Practice:</em> <span class="frame-ref">[Practice&nbsp;4]</span>, <span class="frame-ref">[Practice&nbsp;5]</span></p>
+
+</section>
 
 <p>
