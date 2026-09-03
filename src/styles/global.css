@@ -444,7 +444,12 @@ footer a { color: rgba(255,255,255,0.8); }
 /* Display math */
 .module-content .katex-display {
   margin: 1.25rem 0;
+  /* x=auto lets wide equations scroll; y=hidden kills the phantom vertical
+     scrollbar Chrome/Windows draws from KaTeX's sub-pixel vertical overflow */
   overflow-x: auto;
+  overflow-y: hidden;
+  /* absorb the sub-pixel overflow so tall fractions aren't clipped */
+  padding: 0.15rem 0;
 }
 /* Numbered display equations: \Eqn{N}{…} → centered equation with the
    number (N) parked at the right margin, like a LaTeX \tag. */
