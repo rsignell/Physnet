@@ -49,6 +49,15 @@ source and emits an HTML fragment, and math is rendered client-side by KaTeX.
 
 ### 1. Source acquisition
 
+> **The LaTeX source is not committed to this repo.** A snapshot of every
+> source file the pipeline consumes — all `*.tex`, the `.bak` / `.org` /
+> date-versioned body variants, and the `.eps` / `.cdr` figures, in their
+> original tree — is published as the release asset
+> **`physnet-latex-source-v1.0.tar.gz`** (39 MiB) on the
+> [v1.0 release](https://github.com/rsignell/Physnet/releases/tag/v1.0).
+> Regenerable LaTeX build artifacts (`.aux .dvi .log .ps .pdf` …) are
+> stripped from it; `PROVENANCE.md` inside the archive has the details.
+
 All LaTeX source comes from **one** Google Drive folder:
 
 ```
