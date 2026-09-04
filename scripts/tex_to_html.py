@@ -143,7 +143,7 @@ def convert_math(s):
     s = re.sub(r'\\(?:Fig|Eqn|Equation|Sect|Def|Rule|Sta|Statement)ref\*?\{[^{}]*\}', '', s)
     s = re.sub(r'\\eqnno\{[^{}]*\}', '', s)
     s = re.sub(r'\\nonumber\b|\\hfill\b|\\hs\b|\\medskip\b|\\smallskip\b'
-               r'|\\noalign\b|\\indent\b|\\noindent\b', '', s)
+               r'|\\noalign\b|\\indent\b|\\noindent\b|\\newline\b', '', s)
     s = re.sub(r'\\(?:label|tag|setcounter|addtocounter|refstepcounter)'
                r'\{[^{}]*\}(?:\{[^{}]*\})?', '', s)
     # sub/superscript helpers
@@ -705,8 +705,11 @@ class PhysnetConverter:
 
         if name == 'SubSectTitle':
             title, i = get_arg(text, i)
+            th = self._process(title)
+            if not re.sub(r'<[^>]+>|\\[()]|\s+', '', th):
+                return '', i          # title was only a stripped \index{} etc.
             sid = re.sub(r'\W+', '-', title.lower()).strip('-')
-            return f'<h3 id="ss-{sid}">{self._process(title)}</h3>\n', i
+            return f'<h3 id="ss-{sid}">{th}</h3>\n', i
 
         if name == 'TxtRelRef':
             sec, i = get_arg(text, i)
@@ -950,6 +953,43 @@ class PhysnetConverter:
             num, i = get_arg(text, i)
             return f'<span class="eqn-ref">Eqs.&nbsp;({sec}-{num})</span>', i
 
+        if name in ('TxtProChRef', 'TxtProbChRef', 'TxtExampleChRef',
+                    'TxtDefEqnStaChRef'):
+            ch, i = get_arg(text, i)
+            sec, i = get_arg(text, i)
+            num, i = get_arg(text, i)
+            w = 'Example' if name == 'TxtExampleChRef' else 'Problem'
+            return (f'<span class="def-ref">{w}&nbsp;({sec}-{num}) of '
+                    f'Ch.&nbsp;{ch}</span>'), i
+
+        if name == 'TxtInst':
+            content, i = get_arg(text, i)
+            return (f'<p class="txt-inst"><em>Instructor’s note:</em> '
+                    f'{self._process(content)}</p>\n'), i
+
+        if name == 'Advice':
+            content, i = get_arg(text, i)
+            return f'<div class="advice-box">{self._process(content)}</div>\n', i
+
+        if name == 'CenteredTextBox':
+            content, i = get_arg(text, i)
+            return (f'<div class="centered-textbox">{self._process(content)}</div>\n'), i
+
+        if name == 'ProbNo':
+            pid, i = get_arg(text, i)
+            title, i = get_arg(text, i)
+            return (f'<div class="problem" id="prob-{pid}"><p><strong>'
+                    f'Problem&nbsp;{pid}: {self._process(title)}</strong>\n'), i
+
+        if name == 'Answer':
+            ref, i = get_arg(text, i)
+            return f'<span class="ans-ref">[answer&nbsp;{ref}]</span>', i
+
+        if name == 'AnsHelp':
+            a, i = get_arg(text, i)
+            h, i = get_arg(text, i)
+            return (f'<span class="ans-ref">[answer&nbsp;{a}, help&nbsp;{h}]</span>'), i
+
         if name == 'Order':
             content, i = get_arg(text, i)
             return (f'<p class="order-note"><strong>&rarr;</strong> '
@@ -1053,8 +1093,11 @@ class PhysnetConverter:
 
         if name == 'SubSubSectTitle':
             title, i = get_arg(text, i)
+            th = self._process(title)
+            if not re.sub(r'<[^>]+>|\\[()]|\s+', '', th):
+                return '', i          # title was only a stripped \index{} etc.
             sid = re.sub(r'\W+', '-', title.lower()).strip('-')
-            return f'<h4 id="sss-{sid}">{self._process(title)}</h4>\n', i
+            return f'<h4 id="sss-{sid}">{th}</h4>\n', i
 
         # \fract{num}{den} — fraction (older alternative to \frac)
         if name == 'fract':
@@ -1124,6 +1167,7 @@ class PhysnetConverter:
         if name == 'CaptionAfterFigure':
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
+            fname = self._fig_name(fname)
             cap_html = self._process(cap)
             return (f'<figure class="fig-centered">'
                     f'<img src="{self.figures_path}/{fname}.svg" '
@@ -1243,6 +1287,7 @@ class PhysnetConverter:
                     'CaptionAfterFullUnframedFigure'):
             cap, i = get_arg(text, i)
             fname, i = get_arg(text, i)
+            fname = self._fig_name(fname)
             cap_html = self._process(cap)
             return (f'<figure class="fig-centered">'
                     f'<img src="{self.figures_path}/{fname}.svg" '
@@ -1821,11 +1866,20 @@ class PhysnetConverter:
 
     # ── Figure handler ────────────────────────────────────────────────────────
 
+    @staticmethod
+    def _fig_name(fname):
+        """Normalise a figure basename: drop the graphics extension and
+        lowercase an all-caps reference like M240GR01 -> m240gr01."""
+        fname = re.sub(r'\.(eps|ps|pdf|png|jpe?g)$', '', fname.strip(), flags=re.I)
+        if re.fullmatch(r'[A-Za-z]+\d*GR\d+', fname):
+            fname = fname.lower()
+        return fname
+
     def _reif_fig(self, fig_id, cap_html, fname, extra_cls=''):
         """<figure> for a Reif-format figure macro (\\FullFigure etc.).
         Figures live in public/modules/<id>/figures/, referenced relative to
         the module page as figures/<name>.svg."""
-        fname = re.sub(r'\.(eps|ps|pdf|png|jpe?g)$', '', fname.strip())
+        fname = self._fig_name(fname)
         cap = cap_html.strip()
         cap_html = (f'<figcaption><strong>Fig.&nbsp;{fig_id}.</strong>'
                     + (f' {cap}' if cap else '') + '</figcaption>') if fig_id or cap else ''
@@ -2187,6 +2241,18 @@ def convert_module(module_dir, module_id):
             return f'src="figures/{module_id}gr{num}.svg"'
         return m.group(0)
     html = re.sub(r'src="figures/([A-Za-z0-9]+)gr(\d+)\.svg"', _localise, html)
+
+    # ── Drop <img> for figures with no available source ──
+    # Some modules (partial-source recoveries) reference figure files that
+    # are not in the archive at all.  Rather than ship a broken <img> that
+    # 404s, strip just the <img> and keep the <figcaption> as a text stub.
+    def _drop_missing(m):
+        fn = m.group(1)
+        if os.path.exists(os.path.join('public', 'modules', module_id,
+                                       'figures', f'{fn}.svg')):
+            return m.group(0)
+        return ''
+    html = re.sub(r'<img src="figures/([A-Za-z0-9]+)\.svg"[^>]*>', _drop_missing, html)
 
     return html
 

@@ -1,7 +1,30 @@
 <header class="module-header">
+  <h1 class="module-title">Newton's Second Law from Quantum Physics <span class="module-author">(Peter Signell)</span></h1>
   <div class="module-meta-row">
+    <span class="meta-pill">⏱ 1 hour(s)</span>
   </div>
 </header>
+
+<section id="objectives" class="module-section section-objectives">
+<h2>Learning Objectives</h2>
+
+    
+    
+    <div class="skills-block"><h4>Input Skills</h4><ul><li><strong>1.</strong> Explain deBroglie waves, their probabilistic interpretation and
+    their wave-particle duality <a href="../m240/" class="module-ref">MISN-0-240</a>.</li><li><strong>2.</strong> State the time-independent Schrodinger Equation and define the
+    momentum operator <a href="../m243/" class="module-ref">MISN-0-243</a>).</li><li><strong>3.</strong> Integrate by parts (any calculus textbook).</li><li><strong>4.</strong> Calculate quantum mechanical mean values from wave functions
+    <a href="../m243/" class="module-ref">MISN-0-243</a>.</li><li><strong>5.</strong> Expand a function about a point using a Taylor series <a href="../m4/" class="module-ref">MISN-0-4</a>.</li></ul></div>
+
+    
+    <div class="skills-block"><h4>Output Skills (Knowledge)</h4><ul><li><strong>K1.</strong> Discuss the reason(s) why any wave packet in a constant force
+    field must obey classical particle physics.</li><li><strong>K2.</strong> Given the Time-Dependent Schrodinger Equation, derive Newton's
+    Second Law and the first correction term to it.</li><li><strong>K3.</strong> Show and discuss the condition(s) under which
+    Newton's Second Law is a good approximation, including the details of how
+    the condition(s) would be evaluated in practice if you were given a wave
+    packet and force law.</li></ul></div>
+
+
+</section>
 
 
 <p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
@@ -9,7 +32,7 @@
  
 <h3 id="pcap-1-a">1a. A Time-Dependent Equation Needed</h3>
 
-Although the time-independent version of the Schr"odinger equation has had
+Although the time-independent version of the Schrödinger equation has had
 astonishing successes in the domains of atomic, molecular, nuclear, and
 solid state physics, and in chemistry, it cannot describe systems which
 change with time; it cannot deal with transition rates, spectral line
@@ -20,7 +43,7 @@ Then, from the resulting time-dependent wave function all observable
 quantities will be calculable.
 <p><h3 id="pcap-1-b">1b. When Classical and Quantum Mechanics Coincide</h3>
 
-In order to justify the time-dependent equation found by Schr"odinger, we
+In order to justify the time-dependent equation found by Schrödinger, we
 will argue that quantum mechanics and classical particle mechanics must
 coincide for certain cases.
 Then we will derive Newton's Second Law as the first term in a power series
@@ -35,29 +58,16 @@ than classical particle mechanics since the latter is included within it.
 <p>When will an electron, say, act like a classical particle and when like a
 quantum mechanical wave?
 One commonly given answer
-<p><sup class="fn-ref"><a href="#fn-See ``deBroglie Waves'' (MISN-0-240)." id="fnref-See ``deBroglie Waves'' (MISN-0-240).">See ``deBroglie Waves'' (MISN-0-240).</a></sup>is that it will act like a wave when its deBroglie wavelength is large
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
+<p>is that it will act like a wave when its deBroglie wavelength is large
 compared to the structural dimensions in an object with which it is
 interacting.
 Another answer is that it will act like a classical particle when the size
 of its wave packet is small compared to interacting structural dimensions.
 These two statements are not very satisfactory, being vague
-<p><sup class="fn-ref"><a href="#fn-What is a Gaussian wave packet's ``deBroglie wavelength?''
-Perhaps, its RMS uncertainty in position---but is that obvious?
-To what distance should the hydrogen-atom-electron's deBroglie wavelength
-be compared?
-To its non-existent orbital radius; or perhaps to the size of the proton
-with which it interacts, a number \m{10^7} times smaller?" id="fnref-What is a Gaussian wave packet's ``deBroglie wavelength?''
-Perhaps, its RMS uncertainty in position---but is that obvious?
-To what distance should the hydrogen-atom-electron's deBroglie wavelength
-be compared?
-To its non-existent orbital radius; or perhaps to the size of the proton
-with which it interacts, a number \m{10^7} times smaller?">What is a Gaussian wave packet's ``deBroglie wavelength?''
-Perhaps, its RMS uncertainty in position---but is that obvious?
-To what distance should the hydrogen-atom-electron's deBroglie wavelength
-be compared?
-To its non-existent orbital radius; or perhaps to the size of the proton
-with which it interacts, a number \m{10^7} times smaller?</a></sup>and not entirely equivalent.
-We will find a precise statement based on the Schr"odinger equation for the
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
+<p>and not entirely equivalent.
+We will find a precise statement based on the Schrödinger equation for the
 case where the above-stated wave packet condition becomes exact; namely, in
 the case of a constant force field.
 A constant field has no structure at all and hence there is no way we can
@@ -76,10 +86,11 @@ But what part of the wave packet is it that is to obey, say, Newton's
 Second Law?
 Is it the leading edge of the wave packet, its trailing edge, its middle?
 Since quantum mechanics deals with mean values,
-<p><sup class="fn-ref"><a href="#fn-See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243)." id="fnref-See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243).">See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243).</a></sup>it would seem natural to try the assumption that it is the wave packet's
+<p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
+<p>it would seem natural to try the assumption that it is the wave packet's
 mean position which exactly obeys Newton's Second Law for a constant force.
 In one dimension, Newton's Second Law for a wave packet's mean position is:
-<p><div class="eqn-block" id="eqn-1">\[F(\bar{x}) = m \fract{d^2\bar{x}}{dt^2}\,, \hs (F = ma)\]</div>
+<p><div class="eqn-block" id="eqn-1">\[F(\bar{x}) = m \frac{d^2\bar{x}}{dt^2}\,,  (F = ma)\]</div>
 
 <p>which says that the force at the particle's position is to be equal to the
 particle's mass times the second time derivative of its position.
@@ -89,83 +100,67 @@ Here ``position'' means ``mean position.''
 <p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Relation of \(\bar{v}\) to \(d\bar{x}/dt\)</h2>
                                                                                       to \(d\bar{x}/dt\)                                                                                                                                                                      </section>
 
-<p><h3 id="pcap-4-a">4a. The Time-Dependent Schr"odinger Equation</h3>
+<p><h3 id="pcap-4-a">4a. The Time-Dependent Schrödinger Equation</h3>
 
 The first step in obtaining Newton's Second Law is to obtain the particle's
 velocity, the velocity of its mean position:
-<p><sup class="fn-ref"><a href="#fn-We denote the time derivative of a symbol by a dot over it.
-This is a common notation." id="fnref-We denote the time derivative of a symbol by a dot over it.
-This is a common notation.">We denote the time derivative of a symbol by a dot over it.
-This is a common notation.</a></sup><div class="eqn-block" id="eqn-2">\[\dot{\bar{x}} \equiv \fract{d\bar{x}}{dt} =
-  \fract{d}{dt} \; \int_{-\infty}^{\infty} \, \psi^*(x,t) x \psi(x,t)\,dx
- = \int_{-\infty}^{\infty} \left[ \fract{d\psi^*}{dt} x \psi +
-   \psi^* x \fract{d\psi}{dt} \right] \,dx.\]</div>
+<p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
+<p><div class="eqn-block" id="eqn-2">\[\dot{\bar{x}} \equiv \frac{d\bar{x}}{dt} =
+  \frac{d}{dt} \; \int_{-\infty}^{\infty} \, \psi^*(x,t) x \psi(x,t)\,dx
+ = \int_{-\infty}^{\infty} \left[ \frac{d\psi^*}{dt} x \psi +
+   \psi^* x \frac{d\psi}{dt} \right] \,dx.\]</div>
 
 <p>One would expect that for a free packet or for one in a constant force
 field, where classical mechanics holds, the right hand side of
-<p>Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>2) would be equal to the mean momentum divided by the mass,
+<p>Eq.&thinsp;(<span class="eqn-number">(2)</span>) would be equal to the mean momentum divided by the mass,
 which we shall call the mean velocity:
-<p><div class="eqn-block" id="eqn-3">\[\dot{\bar{x}} = \bar{p}/m = \bar{v}; \hs {\rm constant\;force}.\]</div>
+<p><div class="eqn-block" id="eqn-3">\[\dot{\bar{x}} = \bar{p}/m = \bar{v};  {\mathrm{constant\;force}}.\]</div>
 
-<p>Schr"odinger discovered that the way to construct this equality was to
+<p>Schrödinger discovered that the way to construct this equality was to
 write the time-dependence of the wave function as:
-<p><div class="eqn-block" id="eqn-23">\[i \hbar \fract{d\psi (x,t)}{dt} =
-         - \fract{\hbar^2}{2 m} \fract{d^2\psi (x,t)}{dx^2} + V(x) \psi(x,t).\]</div>
+<p><div class="eqn-block" id="eqn-23">\[i \hbar \frac{d\psi (x,t)}{dt} =
+         - \frac{\hbar^2}{2 m} \frac{d^2\psi (x,t)}{dx^2} + V(x) \psi(x,t).\]</div>
 
 <p>In the usual succinct notation this is:
 <p><div class="eqn-block" id="eqn-13">\[i \hbar \dot{\psi} = - (\hbar^2/2m)\psi '' + V \psi.\]</div>
 
-<p>This is an addition to the rules for construction of the Schr"odinger
+<p>This is an addition to the rules for construction of the Schrödinger
 equation,
-<p><sup class="fn-ref"><a href="#fn-See ``The Schr\"{o}dinger Equation in One Dimension: Quantization of
-Energy'' (MISN-0-242)." id="fnref-See ``The Schr\"{o}dinger Equation in One Dimension: Quantization of
-Energy'' (MISN-0-242).">See ``The Schr\"{o}dinger Equation in One Dimension: Quantization of
-Energy'' (MISN-0-242).</a></sup>added for cases where one wishes to see a wave function's time
+<p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
+<p>added for cases where one wishes to see a wave function's time
 dependence.
-<p>Equations (<span class="tex-unknown" title="unknown macro">\eqnno</span>13) is called the Time-Dependent Schr"odinger Equation.
+<p>Equations (<span class="eqn-number">(13)</span>) is called the Time-Dependent Schrödinger Equation.
 <p><h3 id="pcap-4-b">4b. Velocity of Mean Position Equals Mean Velocity</h3>
 
-<p>Substituting Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>3) and its complex conjugate
-<p><sup class="fn-ref"><a href="#fn-See ``Some Simple Functions in the Complex Plane'' (MISN-0-59)." id="fnref-See ``Some Simple Functions in the Complex Plane'' (MISN-0-59).">See ``Some Simple Functions in the Complex Plane'' (MISN-0-59).</a></sup>into Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>2), we obtain:
-<p>\[\dot{\bar{x}} = \fract{\hbar}{2im}
+<p>Substituting Eq.&thinsp;(<span class="eqn-number">(3)</span>) and its complex conjugate
+<p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
+<p>into Eq.&thinsp;(<span class="eqn-number">(2)</span>), we obtain:
+<p>\[\dot{\bar{x}} = \frac{\hbar}{2im}
 
       \int_{-\infty}^{\infty}\,\psi^*{''}x\psi - \psi^*x\psi{''}\,dx.\]
 
 <p>Integrating by parts or, equivalently, making the substitution
 <p>\[\psi^*{''}x\psi - \psi^*x\psi{''} =
-   \fract{d}{dx}(\psi^*{'}x\psi - \psi^*x\psi{'}) -
+   \frac{d}{dx}(\psi^*{'}x\psi - \psi^*x\psi{'}) -
                (\psi^*{'}\psi - \psi^*\psi{'}),\]
 
 <p>and assuming the usual boundary conditions at infinity, we find:
-<p><sup class="fn-ref"><a href="#fn-The notation [S-3] at the end of the equation indicates that help
-is available in sequence [S-3] in this module's {\it Special Assistance
-Supplement}." id="fnref-The notation [S-3] at the end of the equation indicates that help
-is available in sequence [S-3] in this module's {\it Special Assistance
-Supplement}.">The notation [S-3] at the end of the equation indicates that help
-is available in sequence [S-3] in this module's {\it Special Assistance
-Supplement}.</a></sup><div class="eqn-block" id="eqn-4">\[\dot{\bar{x}} = \fract{\hbar}{2im}
-  \int_{-\infty}^{\infty}\,(\psi^*{'}\psi - \psi^*\psi{'})\,dx. \hs [S-5]\]</div>
+<p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
+<p><div class="eqn-block" id="eqn-4">\[\dot{\bar{x}} = \frac{\hbar}{2im}
+  \int_{-\infty}^{\infty}\,(\psi^*{'}\psi - \psi^*\psi{'})\,dx.  [S-5]\]</div>
 
 <p>The first term on the right hand side can be converted to the form of the
 second term using another integration by parts and again applying boundary
 conditions at infinity:
-<p><sup class="fn-ref"><a href="#fn-For wave packets whose probability is confined to finite distances
-from the origin, \m{\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )}.
-See Appendix A, this unit, and ``Wave Functions, Probability, and Mean
-Values'' (MISN-0-243)." id="fnref-For wave packets whose probability is confined to finite distances
-from the origin, \m{\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )}.
-See Appendix A, this unit, and ``Wave Functions, Probability, and Mean
-Values'' (MISN-0-243).">For wave packets whose probability is confined to finite distances
-from the origin, \m{\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )}.
-See Appendix A, this unit, and ``Wave Functions, Probability, and Mean
-Values'' (MISN-0-243).</a></sup>\[\int_{-\infty}^{\infty}\,\psi^*{'}\psi\,dx =
+<p><sup class="fn-ref"><a href="#fn-8" id="fnref-8">8</a></sup>
+<p>\[\int_{-\infty}^{\infty}\,\psi^*{'}\psi\,dx =
       - \int_{-\infty}^{\infty}\,\psi^*\psi{'}\,dx.\]
 
-<p>This converts equation (<span class="tex-unknown" title="unknown macro">\eqnno</span>4) to:
-<p><div class="eqn-block" id="eqn-5">\[\dot{\bar{x}} = \fract{1}{m}
+<p>This converts equation (<span class="eqn-number">(4)</span>) to:
+<p><div class="eqn-block" id="eqn-5">\[\dot{\bar{x}} = \frac{1}{m}
 
         \int_{-\infty}^{\infty}\,(\psi^*(x,t)
-        \left[ -i\hbar\fract{d}{dx}\right] \psi(x,t)\,dx,\]</div>
+        \left[ -i\hbar\frac{d}{dx}\right] \psi(x,t)\,dx,\]</div>
 
 <p>hence:
 <p><div class="eqn-block" id="eqn-6">\[\dot{\bar{x}} = \bar{p}/m \equiv \bar{v}.\]</div>
@@ -173,63 +168,64 @@ Values'' (MISN-0-243).</a></sup>\[\int_{-\infty}^{\infty}\,\psi^*{'}\psi\,dx =
 <p>Thus the velocity of the particle's mean position is exactly equal to its
 mean velocity.
 Note that we made no restriction on the potential function, \(V(x)\), and so
-<p>the result, Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>6), is valid for any force, constant or not.
+<p>the result, Eq.&thinsp;(<span class="eqn-number">(6)</span>), is valid for any force, constant or not.
 <p>
 <p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Relation of \(F(\bar{x})\) to \(m\ddot{\bar{x}}\)</h2>
 
 <p><h3 id="pcap-5-a">5a. Acceleration of Mean Position</h3>
 
 To derive Newton's Second Law we need the acceleration of the mean
-<p>position, for which we can differentiate equation (<span class="tex-unknown" title="unknown macro">\eqnno</span>5) with respect
+<p>position, for which we can differentiate equation (<span class="eqn-number">(5)</span>) with respect
 to time:
-<p>\[\ddot{\bar{x}} \equiv \fract{d^2\bar{x}}{dt^2} =
+<p>\[\ddot{\bar{x}} \equiv \frac{d^2\bar{x}}{dt^2} =
 
-  - \fract{i\hbar}{m}\int_{-\infty}^{\infty}\,
+  - \frac{i\hbar}{m}\int_{-\infty}^{\infty}\,
         (\dot{\psi}^*{'}\psi{'} + \psi^*\dot{\psi}{'})\,dx.\]
 
 <p>Then by integration by parts and use of the boundary conditions at infinity:
 <p>\[\ddot{\bar{x}} =
-  - \fract{i\hbar}{m}\int_{-\infty}^{\infty}\,
-        (\dot{\psi}^*{'}\psi{'} - \psi^*{'}\dot{\psi})\,dx. \hs [S-1] \]
+  - \frac{i\hbar}{m}\int_{-\infty}^{\infty}\,
+        (\dot{\psi}^*{'}\psi{'} - \psi^*{'}\dot{\psi})\,dx.  [S-1] \]
 
-<p>Substituting the time dependent Schr"odinger equation, Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>3),
+<p>Substituting the time dependent Schrödinger equation, Eq.&thinsp;(<span class="eqn-number">(3)</span>),
 and its complex conjugate, and integrating by parts, we obtain the
 acceleration of the particle's mean position:
-<p><div class="eqn-block" id="eqn-7">\[a = \ddot{\bar{x}} = - \fract{1}{m} \int \psi^* V'\psi\,dx = -
+<p><div class="eqn-block" id="eqn-7">\[a = \ddot{\bar{x}} = - \frac{1}{m} \int \psi^* V'\psi\,dx = -
 
-\fract{1}{m}\,\overline{\left[\fract{dV}{dx}\right]} \equiv + \overline{F(x)}/m. \hs [S-2] \]</div>
+\frac{1}{m}\,\overline{\left[\frac{dV}{dx}\right]} \equiv + \overline{F(x)}/m.  [S-2] \]</div>
 
 <p><h3 id="pcap-5-b">5b. A Constant Force \(\Rightarrow\) Classical Mechanics</h3>
 
 For a constant force,
-<p>\[\overline{F(x)} = F(\bar{x}) = F = {\rm constant},\]
+<p>\[\overline{F(x)} = F(\bar{x}) = F = {\mathrm{constant}},\]
 
 <p>hence Newton's Second Law is obeyed:
-<p>\[F = ma; \hs (F = {\rm constant}).\]
+<p>\[F = ma;  (F = {\mathrm{constant}}).\]
 
 <p>We conclude that, as anticipated, Newton's Second Law is exactly obeyed by
 a quantum mechanical wave packet in a constant force field.
 <p><h3 id="pcap-5-c">5c. The Case of a General Force</h3>
 
-For a general force we need to relate the mean force in (<span class="tex-unknown" title="unknown macro">\eqnno</span>6) to
+For a general force we need to relate the mean force in (<span class="eqn-number">(6)</span>) to
 the force at the mean position.
 To do this we expand F(x) in a power series about the mean position of the
 wave packet and then take the mean of the whole expansion.
 The expansion:
 <p>\[F(x) =
 
-F(\bar{x}) + F'(\bar{x})(x-\bar{x}) + \fract{1}{2} F''(\bar{x})(x-\bar{x})^2
+F(\bar{x}) + F'(\bar{x})(x-\bar{x}) + \frac{1}{2} F''(\bar{x})(x-\bar{x})^2
  + \ldots\]
 
 <p>Then taking the mean:
 <p><div class="eqn-block" id="eqn-8">\[\overline{F(x)} =
-     F(\bar{x}) + \fract{1}{2} F''(\bar{x}) \Delta_x^2 + \ldots \hs [S-8]\]</div>
+     F(\bar{x}) + \frac{1}{2} F''(\bar{x}) \Delta_x^2 + \ldots  [S-8]\]</div>
 
 <p>Here \(\Delta_x\) is the root-mean-square deviation of the wave packet from its
 mean.
-<p><sup class="fn-ref"><a href="#fn-See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243)." id="fnref-See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243).">See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243).</a></sup>Combining (<span class="tex-unknown" title="unknown macro">\eqnno</span>7) and (<span class="tex-unknown" title="unknown macro">\eqnno</span>8) we get:
+<p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
+<p>Combining (<span class="eqn-number">(7)</span>) and (<span class="eqn-number">(8)</span>) we get:
 <p><div class="eqn-block" id="eqn-9">\[ma \equiv m \ddot{\bar{x}} =
-  F(\bar{x}) + \fract{1}{2} F''(\bar{x}) \Delta_x^2 + \ldots \]</div>
+  F(\bar{x}) + \frac{1}{2} F''(\bar{x}) \Delta_x^2 + \ldots \]</div>
 
 <p>and the first term on the right side is the proper force for Newton's Second
 Law.
@@ -238,10 +234,10 @@ smaller:
 <p>\[\Delta_x^2 F''(\bar{x})  \ll F(\bar{x}),\]
 
 <p>or:
-<p><div class="eqn-block" id="eqn-10">\[{\rm If} \hs \Delta_x^2 \ll \fract{F(\bar{x})}{F''(\bar{x})}
-         \hs {\rm then} \hs F \approx ma.\]</div>
+<p><div class="eqn-block" id="eqn-10">\[{\mathrm{If}}  \Delta_x^2 \ll \frac{F(\bar{x})}{F''(\bar{x})}
+          {\mathrm{then}}  F \approx ma.\]</div>
 
-<p>Equation (<span class="tex-unknown" title="unknown macro">\eqnno</span>10) says that, for Newton's Second Law to be valid, the
+<p>Equation (<span class="eqn-number">(10)</span>) says that, for Newton's Second Law to be valid, the
 size of the wave packet must be much smaller than structure in the force
 field, here represented by the relative inverse of the second spatial
 derivative.
@@ -254,38 +250,30 @@ As a very simple example consider the one-dimensional simple harmonic
 oscillator, which has a linear force:
 <p>\[F(x) = - kx.\]
 
-<p>The second derivative, \(F''\), is zero and hence Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>9) becomes:
+<p>The second derivative, \(F''\), is zero and hence Eq.&thinsp;(<span class="eqn-number">(9)</span>) becomes:
 <p>\[m a \equiv m \ddot{\bar{x}} = F(\bar{x}),\]
 
 <p>and Newton's Second Law is obeyed exactly.
 One can envision some wave packet oscillating back and forth in this
 harmonic oscillator potential, continually changing its shape, but with an
 exactly sinusoidal mean position:
-<p>\[\bar{x}(t) = A \sin\omega_0 t ; \hs \omega_0 = \sqrt{k/m}.\]
+<p>\[\bar{x}(t) = A \sin\omega_0 t ;  \omega_0 = \sqrt{k/m}.\]
 
 <p><h3 id="pcap-6-b">6b. Coulomb Force: Hydrogen Atom Ground State</h3>
 
 Now consider the ground state of hydrogen, where \(\bar{r}^2 = a_0^2\),
 \(\Delta_r^2 =
 (3/4) a_0^2\), with \(a_0 \equiv \hbar^2/(m e^2) \approx 0.05\)&thinsp;nm.
-<p><sup class="fn-ref"><a href="#fn-For these values of \m{\Delta_r^2} and \m{\bar{r}^2}, see any quantum
-mechanics text.
-For example: {\it Introduction to Quantum Mechanics}, L.\,Pauling and
-R.\,Wilson, McGraw-Hill (1935)." id="fnref-For these values of \m{\Delta_r^2} and \m{\bar{r}^2}, see any quantum
-mechanics text.
-For example: {\it Introduction to Quantum Mechanics}, L.\,Pauling and
-R.\,Wilson, McGraw-Hill (1935).">For these values of \m{\Delta_r^2} and \m{\bar{r}^2}, see any quantum
-mechanics text.
-For example: {\it Introduction to Quantum Mechanics}, L.\,Pauling and
-R.\,Wilson, McGraw-Hill (1935).</a></sup>Then:
+<p><sup class="fn-ref"><a href="#fn-10" id="fnref-10">10</a></sup>
+<p>Then:
 <p>\[F(\bar{r}) =
-    - k_e \fract{e^2}{\bar{r}^2} = - k_e  \fract{e^2}{a_0^2}\,,\]
+    - k_e \frac{e^2}{\bar{r}^2} = - k_e  \frac{e^2}{a_0^2}\,,\]
 
 <p>\[F''(\bar{r}) =
-    - 6 k_e \fract{e^2}{\bar{r}^4} = - k_e \fract{6 e^2}{a_0^4}\,.\]
+    - 6 k_e \frac{e^2}{\bar{r}^4} = - k_e \frac{6 e^2}{a_0^4}\,.\]
 
 <p>
-<p>Putting these together, condition (<span class="tex-unknown" title="unknown macro">\eqnno</span>10) is not met.
+<p>Putting these together, condition (<span class="eqn-number">(10)</span>) is not met.
 Thus the electron in the normal hydrogen atom (the ground state) does not
 obey Newton's Second Law.
 That statement is in correspondence with the fact that the ground state wave
@@ -295,7 +283,7 @@ electron would have to be a tiny wave packet circling the nucleus.
 <p><span class="tryit">Try it:</span>  In a footnote to Section 2, a question is asked about the nuclear
 dimension to which a hydrogen atom electron's wave packet should be compared.
 What is the answer to that question?
-<p>It is interesting that condition (<span class="tex-unknown" title="unknown macro">\eqnno</span>10)  is met for the hydrogen
+<p>It is interesting that condition (<span class="eqn-number">(10)</span>)  is met for the hydrogen
 atom for \(n \gg 4\), where \(n\) is the principal quantum number.
 For such states there is very little probability near the nucleus.
 See for example,  Introduction to Quantum Mechanics, L.&thinsp;Pauling and
@@ -311,25 +299,14 @@ any Quantum Mechanics textbook.
 I wish to thank William Lane, Edward Spurlock, Jim Krebs, and Steve Smith,
 who provided valuable feedback on an earlier version.
 The basic expansion came from D.&thinsp;I.&thinsp;Blokhintsev.
-<p><sup class="fn-ref"><a href="#fn-D,\,I.\,Blokhintsev, {\it Principles of Quantum Mechanics},
-Allyn and Bacon, Boston (1964), pp.\,122-128.
-Blokhintsev also considers these phenomena in the transition to classical
-mechanics: spreading of the wave packet, derivation of the Hamilton-Jacobi
-Equation, and analogies to mechanics and optics." id="fnref-D,\,I.\,Blokhintsev, {\it Principles of Quantum Mechanics},
-Allyn and Bacon, Boston (1964), pp.\,122-128.
-Blokhintsev also considers these phenomena in the transition to classical
-mechanics: spreading of the wave packet, derivation of the Hamilton-Jacobi
-Equation, and analogies to mechanics and optics.">D,\,I.\,Blokhintsev, {\it Principles of Quantum Mechanics},
-Allyn and Bacon, Boston (1964), pp.\,122-128.
-Blokhintsev also considers these phenomena in the transition to classical
-mechanics: spreading of the wave packet, derivation of the Hamilton-Jacobi
-Equation, and analogies to mechanics and optics.</a></sup><p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+<p><sup class="fn-ref"><a href="#fn-11" id="fnref-11">11</a></sup>
+<p><p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
 </section>
 
 <p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Boundary Conditions At Infinity</h2>
 
 <p>In quantum mechanics one frequently encounters integrals of the type:
-<p><div class="eqn-block" id="eqn-11">\[I \equiv \int_{-\infty}^{\infty}\,\fract{d}{dx}
+<p><div class="eqn-block" id="eqn-11">\[I \equiv \int_{-\infty}^{\infty}\,\frac{d}{dx}
     (\psi^*{'}x\psi - \psi^*x\psi{'})\,dx =
     \left. (\psi^*{'}x\psi - \psi^*x\psi{'}) \right|_{-\infty}^{+\infty}.\]</div>
 
@@ -339,57 +316,38 @@ For example, consider the wave function for the simple harmonic oscillator:
 <p>\[\psi(x) = c x e^{-a x^2/2},\]
 
 <p>where \(c\) and \(a\) are constants.
-<p>The first term in equation (<span class="tex-unknown" title="unknown macro">\eqnno</span>11) is:
+<p>The first term in equation (<span class="eqn-number">(11)</span>) is:
 <p>\[\left. |c|^2 (1 - a x^2)^2 e^{-a x^2} x^2 \right|_{-\infty}^{+\infty}\,.\]
 
 <p>Since a decreasing exponential (or Gaussian) eventually falls off faster
 than any polynomial, we have that:
 <p>\[\lim_{x\rightarrow\infty}  (1 - a x^2)^2 x^2 e^{-a x^2} \rightarrow 0.\]
 
-<p>Thus the integral \(I\) of Eq.&thinsp;(<span class="tex-unknown" title="unknown macro">\eqnno</span>11) is zero.
+<p>Thus the integral \(I\) of Eq.&thinsp;(<span class="eqn-number">(11)</span>) is zero.
 Note that for any real wave function (one without an imaginary part) the
-two terms of the integrand in (<span class="tex-unknown" title="unknown macro">\eqnno</span>11) add to zero and hence the
+two terms of the integrand in (<span class="eqn-number">(11)</span>) add to zero and hence the
 <p>integral is zero.
 This is true for the Gaussian wave function used in the example.
 <p></section>
 
 <p>
-<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-See ``deBroglie Waves'' (MISN-0-240)."> <a href="#fnref-See ``deBroglie Waves'' (MISN-0-240)." class="fn-back">↩</a></li><li id="fn-What is a Gaussian wave packet's ``deBroglie wavelength?''
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">See ``deBroglie Waves'' (MISN-0-240). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">What is a Gaussian wave packet's ``deBroglie wavelength?''
 Perhaps, its RMS uncertainty in position---but is that obvious?
 To what distance should the hydrogen-atom-electron's deBroglie wavelength
 be compared?
 To its non-existent orbital radius; or perhaps to the size of the proton
-with which it interacts, a number \m{10^7} times smaller?"> <a href="#fnref-What is a Gaussian wave packet's ``deBroglie wavelength?''
-Perhaps, its RMS uncertainty in position---but is that obvious?
-To what distance should the hydrogen-atom-electron's deBroglie wavelength
-be compared?
-To its non-existent orbital radius; or perhaps to the size of the proton
-with which it interacts, a number \m{10^7} times smaller?" class="fn-back">↩</a></li><li id="fn-See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243)."> <a href="#fnref-See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243)." class="fn-back">↩</a></li><li id="fn-We denote the time derivative of a symbol by a dot over it.
-This is a common notation."> <a href="#fnref-We denote the time derivative of a symbol by a dot over it.
-This is a common notation." class="fn-back">↩</a></li><li id="fn-See ``The Schr\"{o}dinger Equation in One Dimension: Quantization of
-Energy'' (MISN-0-242)."> <a href="#fnref-See ``The Schr\"{o}dinger Equation in One Dimension: Quantization of
-Energy'' (MISN-0-242)." class="fn-back">↩</a></li><li id="fn-See ``Some Simple Functions in the Complex Plane'' (MISN-0-59)."> <a href="#fnref-See ``Some Simple Functions in the Complex Plane'' (MISN-0-59)." class="fn-back">↩</a></li><li id="fn-The notation [S-3] at the end of the equation indicates that help
-is available in sequence [S-3] in this module's {\it Special Assistance
-Supplement}."> <a href="#fnref-The notation [S-3] at the end of the equation indicates that help
-is available in sequence [S-3] in this module's {\it Special Assistance
-Supplement}." class="fn-back">↩</a></li><li id="fn-For wave packets whose probability is confined to finite distances
-from the origin, \m{\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )}.
+with which it interacts, a number \(10^7\) times smaller? <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See ``Wave Functions, Probability, and Mean Values.''(MISN-0-243). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">We denote the time derivative of a symbol by a dot over it.
+This is a common notation. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See ``The Schrödinger Equation in One Dimension: Quantization of
+Energy'' (MISN-0-242). <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-6">See ``Some Simple Functions in the Complex Plane'' (MISN-0-59). <a href="#fnref-6" class="fn-back">↩</a></li><li id="fn-7">The notation [S-3] at the end of the equation indicates that help
+is available in sequence [S-3] in this module's  Special Assistance
+Supplement. <a href="#fnref-7" class="fn-back">↩</a></li><li id="fn-8">For wave packets whose probability is confined to finite distances
+from the origin, \(\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )\).
 See Appendix A, this unit, and ``Wave Functions, Probability, and Mean
-Values'' (MISN-0-243)."> <a href="#fnref-For wave packets whose probability is confined to finite distances
-from the origin, \m{\psi(\pm\infty )  = 0 = \psi{'}(\pm\infty )}.
-See Appendix A, this unit, and ``Wave Functions, Probability, and Mean
-Values'' (MISN-0-243)." class="fn-back">↩</a></li><li id="fn-See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243)."> <a href="#fnref-See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243)." class="fn-back">↩</a></li><li id="fn-For these values of \m{\Delta_r^2} and \m{\bar{r}^2}, see any quantum
+Values'' (MISN-0-243). <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">See ``Wave Functions, Probability, and Mean Values'' (MISN-0-243). <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-10">For these values of \(\Delta_r^2\) and \(\bar{r}^2\), see any quantum
 mechanics text.
-For example: {\it Introduction to Quantum Mechanics}, L.\,Pauling and
-R.\,Wilson, McGraw-Hill (1935)."> <a href="#fnref-For these values of \m{\Delta_r^2} and \m{\bar{r}^2}, see any quantum
-mechanics text.
-For example: {\it Introduction to Quantum Mechanics}, L.\,Pauling and
-R.\,Wilson, McGraw-Hill (1935)." class="fn-back">↩</a></li><li id="fn-D,\,I.\,Blokhintsev, {\it Principles of Quantum Mechanics},
-Allyn and Bacon, Boston (1964), pp.\,122-128.
+For example:  Introduction to Quantum Mechanics, L.&thinsp;Pauling and
+R.&thinsp;Wilson, McGraw-Hill (1935). <a href="#fnref-10" class="fn-back">↩</a></li><li id="fn-11">D,&thinsp;I.&thinsp;Blokhintsev,  Principles of Quantum Mechanics,
+Allyn and Bacon, Boston (1964), pp.&thinsp;122-128.
 Blokhintsev also considers these phenomena in the transition to classical
 mechanics: spreading of the wave packet, derivation of the Hamilton-Jacobi
-Equation, and analogies to mechanics and optics."> <a href="#fnref-D,\,I.\,Blokhintsev, {\it Principles of Quantum Mechanics},
-Allyn and Bacon, Boston (1964), pp.\,122-128.
-Blokhintsev also considers these phenomena in the transition to classical
-mechanics: spreading of the wave packet, derivation of the Hamilton-Jacobi
-Equation, and analogies to mechanics and optics." class="fn-back">↩</a></li></ol></aside>
+Equation, and analogies to mechanics and optics. <a href="#fnref-11" class="fn-back">↩</a></li></ol></aside>

@@ -595,6 +595,24 @@ sup.help-link {
   margin: 1.25rem 0;
 }
 .statement-label { font-weight: 700; color: var(--navy); }
+/* \TxtInst -- instructor's note */
+.module-content .txt-inst {
+  border-left: 3px solid var(--border);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+/* \CenteredTextBox -- boxed, centered aside */
+.module-content .centered-textbox {
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 0.6rem 1rem;
+  margin: 1.25rem auto;
+  max-width: 34rem;
+  text-align: center;
+}
 /* Footnotes */
 .footnotes {
   margin-top: 2rem;
