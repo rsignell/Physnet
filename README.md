@@ -49,13 +49,49 @@ source and emits an HTML fragment, and math is rendered client-side by KaTeX.
 
 ### 1. Source acquisition
 
-The 287 module sources live in Google Drive. Pull the whole tree with rclone:
+All LaTeX source comes from **one** Google Drive folder:
 
-```bash
-rclone copy gdrive:<modules-folder> ~/physnet_src/LatexModsSource/
+```
+Physnet/PhysnetWebSiteModuleFiles_9_3_2015_DNU/LatexModsSource/
+folder id 1bm8aVOUj0KGYAxkuh3ZWcpsxbVKL6vSA
 ```
 
-Layout is three levels deep (`m-0-400/m-0-420/m422/`) and files are CRLF.
+Pulled in full with rclone and verified against the Drive:
+
+```bash
+rclone copy  gdrive:Physnet/PhysnetWebSiteModuleFiles_9_3_2015_DNU/LatexModsSource \
+             ~/physnet_src/LatexModsSource/
+rclone check gdrive:.../LatexModsSource ~/physnet_src/LatexModsSource
+#  → 10011 matching files, 0 differences   (~292 MiB)
+```
+
+**What the pulled tree contains** (`~/physnet_src/LatexModsSource/`):
+
+| Path | Contents |
+|---|---|
+| `m-0-000/` … `m-0-700/` | module sources, three levels deep: `m-0-N00/m-0-NN0/mNNN/` — one folder per module (~290). Every file for a given module (e.g. all `m1*.tex` / `.org` / `.bak`) lives in that one `mNNN/` folder. |
+| `p-0-000/` | "End Papers" — appendix tables (`p22.tex`, `p6a1.tex` … `p6a8.tex`). |
+| `cdr_templates/`, `mod_templates/`, `modcover/`, `policies_handbook/` | house-style templates and boilerplate. |
+
+Each `mNNN/` folder holds that module's `-tx.tex` / `-dat.tex` / `-ps.tex` /
+`-as.tex` / `-me.tex` / `-tc.tex` (plus `.bak`, `.org`, and version-numbered
+variants), its `.eps` / `.cdr` figure files, and LaTeX build cruft (`.aux`,
+`.dvi`, `.log`, `.idx`, `.pdf`, `.ps`) that the converter ignores. Files are
+CRLF (Windows).
+
+**Not pulled** — the sibling folders under
+`PhysnetWebSiteModuleFiles_9_3_2015_DNU/` contain no module `.tex` source:
+`support_programs/` (compiled BASIC/Fortran/C++ and `.exe`), `PdfMods/`
+(published PDF output), `SingleFiles/` (website index / license / revision-
+history HTML). The rest of the Drive `Physnet/` folder is unrelated applet
+projects.
+
+> **Caveat:** the folder is tagged `_DNU` ("Do Not Use", dated 2015-09-03).
+> It is the only LaTeX module-source set on the Drive — no newer copy
+> exists — so it is what the pipeline uses, but the name suggests it may
+> have been considered superseded. The ~53 modules with no convertible
+> body genuinely have no source *in this tree*.
+
 Body-file naming is inconsistent — identifying the real body is most of the
 work:
 
