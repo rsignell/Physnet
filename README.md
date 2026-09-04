@@ -156,6 +156,77 @@ committed individually together with its figures.
 
 ---
 
+## Known limitations / outstanding issues
+
+### Coverage
+* **~234 of 287 modules converted.** The remaining ~53 have no convertible
+  source in the archive — the module folder holds only supplementary files
+  (`-as`, `-me`, `-ps`, `-tc`) or is empty. These cannot be recovered
+  without new source.
+* A handful of converted fragments are **thin partial conversions** (only a
+  section or two survived in the archive): `m257`, `m405`, `m407`, `m404`,
+  `m417`, `m418`.
+
+### Partial-source modules
+Several modules were reassembled from whatever section files the archive
+contained; whole sections are missing:
+
+| Module(s) | Missing |
+|---|---|
+| `m402`–`m417` (Reif adaptations) | scattered sections + figures |
+| `m366` | sections A, B |
+| `m419` | sections B–E, G–I |
+| `m422` | everything except section F |
+| `m427` | sections A–E |
+| `m433` | section B |
+
+### Figures
+* **~149 broken figure references across ~33 modules.** These fragments
+  were converted before the "drop `<img>` when the SVG is missing" pass was
+  added, so they still emit `<img>` tags that 404 at build. Re-running each
+  through the current `tex_to_html.py` replaces them with caption-only
+  stubs; recovering the actual figures needs the missing EPS/CDR source.
+  Affected: `m122 m155 m180 m220 m231 m250 m251 m253 m255 m282 m283 m301
+  m305 m351 m401 m403 m404 m405 m406 m407 m408 m409 m411 m412 m414 m415
+  m416 m424 m466 m486 m501 m504 m505`.
+* Some referenced figures have **no digital source at all** (no `.eps` /
+  `.cdr`). Extracting them from the published 2-up landscape MISN PDFs is
+  not automated — frame detection catches the column rules, not the figure
+  borders.
+* `.cdr` files converted via LibreOffice (`soffice`) are **lower fidelity**
+  than the `epstopdf → pdftocairo` path used for EPS. `.cdx` "Collated"
+  files are unusable (every figure overlaid in one canvas).
+
+### Catalog
+* Module titles in `src/data/modules.js` needed correcting against
+  physnet.org — a whole block of `m402`–`m418` plus the 7 recovered
+  modules were mislabeled with unrelated Physics-1 topics. **The full
+  catalog has not been audited**; other stale titles are likely.
+
+### `.org`-format sources
+* `\rem{...}`-wrapped content is stripped entirely, which also drops
+  footnote-style `\TxtAdvice` asides that arguably belong in the output.
+* Subsection titles that are just an `\index{}` keyword render as terse
+  fragments (e.g. `m422` "V of") rather than a full phrase.
+
+### Process
+* **No CI QA gate.** `scripts/smoke/qa.py` runs manually against a local
+  `npm run preview` server; there is no automated check on build or PR.
+* KaTeX runs with `throwOnError: false`, so an unhandled math macro leaves
+  the raw `\[...\]` source as visible text **with no error styling**.
+  `qa.py` catches this, but adding new macro handlers can silently
+  reintroduce leaks elsewhere — re-run QA broadly after converter changes.
+* Converting a module with the current script can change unrelated output
+  (the drop-missing-figure pass, title normalisation); re-convert and
+  diff deliberately rather than in bulk.
+
+### Interactive problems
+* Only **1 of the 12** force-diagram problems is built (`problem1.html` /
+  `HangingBall`). The other 11 Java sources in `OneBodyForceDiagrams/`
+  are not yet ported.
+
+---
+
 ## Interactive problems
 
 Each problem under `public/interactive/force-diagrams/` is a self-contained
