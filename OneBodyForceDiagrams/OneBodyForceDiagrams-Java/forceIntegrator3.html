@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<body style="background-color:lightgreen;">
+
+<div align="center">
+<h3 style="padding-top:50px">Enter the number of vertical bins</h3>
+</div>
+
+<div align="center">
+<form id="userEntersNumbers" onSubmit="entered()" title="Enter only digits with optional minus sign and optional decimal point.">
+      <fieldset style = "border:none">
+         number of horizontal elements in the area (n=1-1000): <input type="text" name="n" id="n" pattern="^\-*\d*\.*\d*$" autocomplete="off" required autofocus /><br />
+         <button type="submit">Enter</button></p>
+     </fieldset>
+</form>
+</div>
+
+<div>
+<canvas id="myCanvas" width="900" height="400"></canvas>
+<script>
+      
+	  // draw the axes and curve
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  context.translate(420,340);
+      context.beginPath();
+	  context.lineWidth = 2;
+	  context.scale(1,1);
+	  var scale = 80;
+	  var beginX = 1;
+	  var beginY = 0;
+	  var controlX = 3;
+	  var controlY = 4;
+	  var endX = 5;
+	  var endY = 0;
+	  var peakY = 2;
+	  var pxBeginX = scale*beginX;
+	  var pxBeginY = -scale*beginY;
+	  var pxControlX = scale*controlX;
+	  var pxControlY = -scale*controlY;
+	  var pxEndX = scale*endX;
+	  var pxEndY = -scale*endY;
+	  var pxPeakY = -scale*peakY;
+	  
+      context.moveTo(pxBeginX,pxBeginY);
+      context.quadraticCurveTo(pxControlX,pxControlY,pxEndX,pxEndY);
+      context.strokeStyle = 'red';
+      context.stroke();
+	  context.beginPath();
+      context.moveTo(0,0);
+      // horizontal axis
+	  context.lineTo(pxEndX+scale,pxEndY);
+      context.moveTo(0,0);
+      // vertical axis
+	  context.lineTo(0,pxPeakY-scale/2);
+      context.strokeStyle = 'black';
+      context.stroke();
+	  // label the axes
+	  context.beginPath();
+	  context.font = '14pt TimesRoman';
+      context.fillStyle = 'red';
+	  context.fillText("F",-27,5-scale);
+      context.fillStyle = 'black';
+	  context.fillText("0",-14,5-0*scale);
+	  context.fillText("1",-14,5-1*scale);
+	  context.fillText("2",-14,5-2*scale);
+	  context.fillText("t",3*scale-5,30);
+	  context.fillText("0",0*scale-5,17);
+	  context.fillText("1",1*scale-5,17);
+	  context.fillText("2",2*scale-5,17);
+	  context.fillText("3",3*scale-5,17);
+	  context.fillText("4",4*scale-5,17);
+	  context.fillText("5",5*scale-5,17);
+
+      function entered() {
+		  
+		  // get the user's desired number of bins
+            var nmax = document.getElementById('n').value;
+            var x0=3;
+            var widthAtAxis=4;
+            var h=4;
+            console.log("x0=",x0);
+            console.log("h=",h);
+            var area = 0;
+            var deltaT=widthAtAxis/nmax;
+			// put x at the centers of the bins
+            var x = x0 - widthAtAxis/2-deltaT/2.;
+            var y;
+            var n;
+            for (n=1;n<=nmax;n++) {
+                x = x + deltaT;
+                y = 2*(1.0 - ((x - x0)*(x - x0))/4.0);
+                area = area + deltaT*y;
+				var topStartX = (x-deltaT/2)*scale;
+				var topEndX = (x+deltaT/2)*scale;
+				var topY = -y*scale;
+				// make horizontal bin-top line
+				context.beginPath();
+				context.moveTo(topStartX,topY);
+				context.lineTo(topEndX,topY);
+                context.stroke();
+				// make left vertical bid-side line
+				context.beginPath();
+				context.moveTo(topStartX,0);
+				context.lineTo(topStartX,topY);
+                context.stroke();
+				// make right bid-side line
+				context.beginPath();
+				context.moveTo(topEndX,0);
+				context.lineTo(topEndX,topY);
+                context.stroke();
+            }
+            //console.log(nmax,deltaT,a);
+            var text="n = " + nmax + ", deltaT = " + deltaT + ", area = I = " + area;
+	        //context.beginPath();
+			//context.fillText(text,2*scale,-3*scale);
+            alert(text);
+      }
+	  
+</script>
+</body>
+</html>

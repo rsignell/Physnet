@@ -1,0 +1,56 @@
+<html>
+<body class="HolyGrail">
+  <header>header</header>
+  <div class="HolyGrail-body">
+    <main class="HolyGrail-main">main: <a href="http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/">Holy Grail Layout</a> </main>
+    <nav class="HolyGrail-nav">nav</nav>
+    <aside class="HolyGrail-aside">aside</aside>
+  </div>
+  <footer>footer</footer>
+</body>
+</html>
+<style>
+.HolyGrail,
+.HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+  background-color:lightblue;
+}
+
+header {
+  background-color:pink;
+}
+
+.HolyGrail-main {
+  background-color:lightgreen;
+}
+
+.HolyGrail-nav {
+  order: -1;
+  background-color:white;
+}
+
+.HolyGrail-aside {
+  background-color:white;
+}
+
+footer {background-color:yellow;
+}
+
+@media (min-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: row;
+    flex: 1;
+	background-color:lightblue;
+  }
+  .HolyGrail-main {
+    flex: 1;
+	background-color:lightgreen;
+  }
+  .HolyGrail-nav, .HolyGrail-aside {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+	background-color:white;
+  }
+}
+</style>

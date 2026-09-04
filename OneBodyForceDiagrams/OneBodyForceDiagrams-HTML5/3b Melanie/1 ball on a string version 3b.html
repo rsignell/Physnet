@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> One-Body Force Diagram, ver 3b, 1/19/2016</title>
+	<style>
+		body{
+			background-color:black;
+			font-family:sans-serif;
+		}
+		h1{
+			margin:20px;
+		}
+		h2{
+			color:yellow;
+			font-size:18px;
+			font-weight:lighter;
+		}
+		h3{
+			width:300px;
+			height:100px;
+			border-width:1px;
+			border-style:solid;
+			border-color:black;
+			text-align:center;
+			text-size:14pt;
+		}
+		.flexbox {
+			display:flex;
+			flex-wrap:wrap;
+			flex-direction:row;
+			background-color: cornflowerblue;
+			height:400px;
+			margin-top:90px;
+			border-width: 8px;
+			border-style:solid;
+			border-color:purple;
+		}
+		.column1 {
+			padding:30px;
+			width:40%;
+			height:400px;
+		}
+		.column2 {
+			width:60%;
+			height:400px;
+			display:flex;
+			background-color:gainsboro;
+			width:600px;
+		}
+	</style>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+	
+<body onLoad="init(0)">
+	<h1 style="color:white">A ball hanging on a string </h1>
+	<div class="flexbox">
+		<div class="column1">
+			<h2>The ball's weight = 17 N </h2>
+			<svg height="90" width="200">
+			    <rect x="0" y="0" width="200" height="70" style="fill:cornflowerblue; stroke-width:2;stroke:black" />
+			    <text x="20" y="30" fill="black" font-family="sans-serif"> The unit vectors: </text>
+			    <text x="73" y="56" fill="black" font-family="sans-serif" font-size="11px" font-style="oblique" font-weight="700" > &#x00EE </text>
+				<text x="50" y="47" fill="black" font-family="sans-serif" font-size="11px" font-style="oblique" font-weight="700"> &#x0135 </text>
+			    <polyline points = "58,42 60,40 62,42 60,40 60,50 70,50 68,48 70,50 68,52" style="fill:none; stroke:black; stroke-width:2">
+			</svg>
+			<p> <b>List of correctly drawn forces:</b> </p>
+			<p id="correct forces list1" style="visibility:hidden"> \(\vec{F}(resultant) = 0\hat{i}+0\hat{j}\)</p>
+			<p id="correct forces list2" style="visibility:hidden"> \(\vec{F}(gravity) = 0\hat{i}-17\hat{\j}\)</p>
+			<p id="correct forces list3" style="visibility:hidden"> \(\vec{F}(string) = 0\hat{\i}+17\hat{\j}\)</p>
+		</div>
+		<div class="column2">
+			<canvas id="canvas" height="400px" width="600px" style="border:1px solid black; position:absolute; z-index:2; "> </canvas>
+			<canvas id="arrowlayer" height="400px" width="600px" style="border:1px solid black; position:absolute; z-index:1; "> </canvas>
+			<canvas id="backlayer" height="400px" width="600px" style="border:1px solid black; position:absolute; z-index:0; "> </canvas>
+		</div>
+	</div>
+</body>
+
+<script>
+	forceNames=[];
+	forceNames[0]=["resultant", "gravity", "string"]
+	forceNames[1]=["resultant", "gravity", "surface"]
+	forceValues=[];
+	forceValues[0]=[0,-17,17];
+	forceValues[1]=[0,-17,17];
+
+	var arrow = String.fromCharCode(8594);
+	var ihat = String.fromCharCode(238);
+	var jhat = String.fromCharCode(309);
+
+	var mouseIsDown=false;
+
+	// 
+	function init(n){
+		canvas.addEventListener("mousedown", mouseDown, false);
+			canvas.addEventListener("mousemove", mouseMoved, false);
+			document.body.addEventListener("mouseup", mouseUp, false);
+		function mouseUp(e) {
+			mouseIsDown = false;
+		}
+		function mouseDown(e) {
+			mouseIsDown = true;
+			drawVector(e.pageX - canvas.offsetLeft,e.pageY - canvas.offsetTop,canvas,ctx);
+			drawForce(e,n);
+		}
+		function mouseMoved(e) {
+			if (mouseIsDown) {
+				drawVector(e.pageX - canvas.offsetLeft,e.pageY - canvas.offsetTop,canvas,ctx);
+				drawForce(e,n);
+			}
+		}
+	}
+
+	// instruction for  p = 0
+	var c=document.getElementById("canvas");
+	var ctx=c.getContext("2d");
+	ctx.font="15px Arial";
+	ctx.fillStyle="green";
+	ctx.fillText("Draw the resultant force on the ball.", 10,20);
+	// draw the problem object for p = 0
+	// draw the ball
+	var c=document.getElementById("backlayer");
+	var ctx=c.getContext("2d");
+	ctx.lineWidth="2";
+	ctx.strokeStyle="teal";
+	ctx.beginPath();
+	ctx.arc(300, 200, 10, 0, 2*Math.PI);
+	ctx.stroke();
+	//draw the string
+	ctx.strokeStyle="teal";
+	ctx.beginPath();
+	ctx.moveTo(300,0);
+	ctx.lineTo(300,190);
+	ctx.stroke();
+    // end of drawing the problem object for p = 0
+
+	function drawForce(e,n){
+		//remove previous event listener and add new one
+		var old_element = document.getElementById("canvas");
+		var new_element = old_element.cloneNode(true);
+		old_element.parentNode.replaceChild(new_element, old_element);
+		canvas.addEventListener("mousedown", init(n));
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext("2d");
+		ctx.font="15px Arial";
+		ctx.fillStyle="green";
+		
+		// problem 0:
+		ctx.fillText("Draw the " + forceNames[0][n] + " force on the ball.", 10,20);
+		
+		//draw new vector
+		var x = e.pageX - canvas.offsetLeft;
+		var y = e.pageY - canvas.offsetTop;  
+
+		ctx.font="15px Arial";
+		var i = Math.round((x-300)/10);
+		var j = Math.round((200-y)/10);
+
+		var theta = 3*Math.PI/2-Math.atan(j/i);
+
+		ctx.fillStyle="green";
+		ctx.fillText(arrow, 2*canvas.width/3-2, 7*canvas.height/8-10);
+		if(j>=0){
+			ctx.fillText("F(" + forceNames[0][n] +") = "+i+ihat+" + " +j+jhat, 2*canvas.width/3, 7*canvas.height/8);
+		}
+		if (j<0){
+			ctx.fillText("F(" + forceNames[0][n] + ") = " +i+ihat+" - "+Math.abs(j)+jhat, 2*canvas.width/3, 7*canvas.height/8);
+		}
+		if (x<=305 && x>=295 && y<=200-10*forceValues[0][n]+5 && y>=200-10*forceValues[0][n]-5) {
+			if (n==0){
+				drawForce(e,1);
+				document.getElementById("correct forces list1").style.visibility="visible";
+				var c=document.getElementById("backlayer");
+				var ctx=c.getContext("2d");
+				ctx.font = "10px Arial";
+				ctx.fillStyle="black";
+				ctx.fillText("F(resultant) = 0" + ihat + " + 0" + jhat,310,200);
+				ctx.fillText(arrow, 310,193);
+			}
+			if (n==1){
+				drawForce(e,2); //
+				document.getElementById("correct forces list2").style.visibility="visible"; //
+				var c=document.getElementById("backlayer"); //
+				var ctx=c.getContext("2d"); //
+			    ctx.strokeStyle = "black"; //
+			    ctx.lineWidth="2";
+			    ctx.beginPath();
+			    ctx.moveTo(300, 200);
+			    ctx.lineTo(300, 365);
+			    ctx.stroke();
+
+			    ctx.moveTo(300, 370);
+			    ctx.lineTo(294, 350);
+			    ctx.lineTo(306, 350);
+			    ctx.lineTo(300, 370);
+			    ctx.fill();
+				
+				ctx.font="10px Arial"
+				ctx.fillStyle="black";
+				ctx.fillText(arrow, 310, 363);
+				ctx.fillText("F(gravity) = 0" + ihat + " - 17"+jhat,310,370);
+			}
+			if (n==2){
+				fin();
+			}
+		}
+	}
+	
+	// needs to have arg with n
+	function fin(){
+		arrowlayer.width=arrowlayer.width;
+		document.getElementById("canvas").style.visibility="hidden";
+		
+		var c=document.getElementById("backlayer");
+		var ctx=c.getContext("2d");
+		
+		var c=document.getElementById("backlayer");
+		var ctx=c.getContext("2d");
+		ctx.strokeStyle = "black";
+		ctx.moveTo(300, 200);
+		ctx.lineTo(300, 35);
+		ctx.stroke();
+
+		ctx.fillStyle = "black";
+		ctx.moveTo(300, 30);
+		ctx.lineTo(294, 50);
+		ctx.lineTo(306, 50);
+		ctx.lineTo(300, 30);
+		ctx.fill();
+
+		ctx.font = "10px Arial";
+		ctx.fillText("F(string) = 0" + ihat + " + 17" + jhat, 310,30);
+		ctx.fillText(arrow, 310, 23);
+		document.getElementById("correct forces list3").style.visibility="visible";
+	}
+	
+	// a utility, independent of problem number and force number
+	function drawVector(headPosX,headPosY,canvas,ctx) {
+		var c=document.getElementById("arrowlayer");
+		var ctx=c.getContext("2d");
+		arrowlayer.width=arrowlayer.width;
+		  
+		const headHalfWidth = 6;
+		const headLength = 20;
+		const vectorColor = "darkslategray";
+		const tailPosX = 300; // same as axesOriginX in this program
+		const tailPosY = 200; // same as axesOriginY in this program
+
+		var headsX = [];
+		var headsY = [];
+		var vectorLengthX, vectorLengthY;
+		var shankX, shankY;
+		var offsetX, offsetY;
+		var vectorLength;
+		var offsetFactor, shankReduction, offsetx, offsety, shankx, shanky;
+		  
+		// get the vector length
+		vectorLengthX = headPosX - tailPosX;
+		vectorLengthY = headPosY - tailPosY;
+		vectorLength = Math.sqrt(vectorLengthX * vectorLengthX + vectorLengthY * vectorLengthY);
+		  
+		// get ratios to use, instead of trig functions, for designing shaft and head of arrow
+		offsetFactor = headHalfWidth/vectorLength;
+		shankReduction =  headLength/vectorLength;
+		// start dealing with special case where entire vector length is < arrow's head length
+		if (vectorLength < headLength) {
+			offsetFactor = offsetFactor*vectorLength/headLength;
+			shankReduction = 1;
+		}
+		// get (x,y) where end of shank meets head; same as tail (x,y) for the special case
+		shankX = headPosX - vectorLengthX * shankReduction;
+		shankY = headPosY - vectorLengthY * shankReduction;
+		// get (x,y) components from shank end to head vertex #0
+		offsetX = vectorLengthY * offsetFactor;
+		offsetY = vectorLengthX * offsetFactor;
+		// get (x,y) for each of the 3 head vertices
+		headsX[0] = Math.round(shankX + offsetX);
+		headsX[1] = Math.round(shankX - offsetX);
+		headsX[2] = Math.round(headPosX);
+		headsY[0] = Math.round(shankY - offsetY);
+		headsY[1] = Math.round(shankY + offsetY);
+		headsY[2] = Math.round(headPosY);
+
+		// draw the shank; it is zero length if vector length <= head length
+		ctx.strokeStyle = vectorColor;
+		ctx.moveTo(tailPosX, tailPosY);
+		ctx.lineTo(headsX[2], headsY[2]);
+		ctx.stroke();
+
+		// draw the portion of the head for which there is room
+		ctx.fillStyle = vectorColor;
+		ctx.moveTo(headsX[0], headsY[0]);
+		ctx.lineTo(headsX[0], headsY[0]);
+		ctx.lineTo(headsX[1], headsY[1]);
+		ctx.lineTo(headsX[2], headsY[2]);
+		ctx.fill();
+		  
+		//drawComponentsValues(vectorLengthX,vectorLengthY,vectorLength,ctx);
+	}
+	
+</script>
+</html>

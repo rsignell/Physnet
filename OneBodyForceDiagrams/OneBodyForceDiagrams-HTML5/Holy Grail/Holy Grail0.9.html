@@ -1,0 +1,62 @@
+<html>
+<body class="HolyGrail">
+  <header>The Holy Grail Layout</header>
+  <!-- v 1.2, 2015-11-10 -->
+  <div class="HolyGrail-body">
+    <main class="HolyGrail-main">main: <a href="http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/">The Holy Grail Layout description.</a></main>
+    <nav class="HolyGrail-nav">nav</nav>
+    <aside class="HolyGrail-aside">aside</aside>
+  </div>
+  <footer>footer</footer>
+</body>
+</html>
+<style>
+.HolyGrail, .HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+  background-color:lightblue;
+}
+
+header {
+  background-color:pink;
+  text-align:center;
+  font-size:16pt;
+  font-weight:bold;
+}
+
+.HolyGrail-main {
+  background-color:white;
+  font-size:12pt;
+  height:10em;
+}
+
+.HolyGrail-nav {
+  order: -1;
+  background-color:lightgreen;
+}
+
+.HolyGrail-aside {
+  background-color:lightgreen;
+}
+
+footer {
+  background-color:yellow;
+}
+
+/* large screen: 768px is portrait width of iPad & iPad 2 *, 800px for Android */
+@media (min-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: row;
+	/* flex=1 means width growable=ON */
+    flex: 1;
+  }
+  .HolyGrail-main {
+    flex: 1;
+  }
+  .HolyGrail-nav, .HolyGrail-aside {
+	/* flex=0 0 12em means growable=OFF, shrinkable=OFF, each col width is 12em */
+    flex: 0 0 12em;
+    height:10em;
+  }
+}
+</style>

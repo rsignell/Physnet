@@ -1,0 +1,3 @@
+1. These programs do not work in Firefox.  I do not know why.  At least they seem fine in Explorer and Chrome.
+2. I am guessing that based on the way I have formatted some things, it will be glitchy when viewing on a cell phone, but I have not tested this.
+3. Once one diagram is working just right, it should be relatively easy to essentially use it as a template for the others.

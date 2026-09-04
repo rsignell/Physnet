@@ -1,0 +1,208 @@
+<!doctype html>
+<!-- comments
+  0. make a One Object Force Diagram
+  1. The vector, axes, and vector-components-values drawing functions are each encapsulated so they can be copied and used elsewhere "as is."
+  2. The input/output position and length variables in the 3 drawing functions are in canvas pixels.
+  3. The symbol for a unit vector, a "hat" (overhead caret), is inserted from the next text line rather than by using the poorer-looking Unicode "combining" method.
+  4. Additional vectors can be drawn by adding more canvases and by calling the present vector-drawing function for each vector in turn.
+  5. Adding more vectors would also require some modification to the vector-components-values function, probabably including adding location data to the input.
+  6. use "OK" as trigger for evaluation
+ -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>user makes a One Object Force Diagram: v0.1, 30 Nov 2015</title>
+  </head>
+
+	<style>
+	 body {background-color:black;}
+	 main {width:600px; height:400px; margin: auto;}
+     #canvasesContainer {position:relative; float:left; width:600px; height:400px; margin:0; border:none; padding:0;}
+	   #canvas_bkgr {z-index:0; position:absolute; left:0; top:0;}
+       #canvas_draw {z-index:1; position:absolute; left:0; top:0;}
+    </style>
+  <body onLoad="init()" >
+    <main>
+      <div id="canvasesContainer">
+	    <canvas id="canvas_bkgr" height="400" width="600" style="background-color:black"></canvas>
+	    <canvas id="canvas_draw" height="400" width="600"></canvas>
+	  </div>
+	</main>
+  </body>
+
+  <script>
+   "use strict";
+   // no global variables!
+   // initialize quantities and the screen before any action is taken by the user
+   // draw:
+   //   1. the problem and its data (init)
+   //   2. the resultant force
+   //   3. the non-contact gravity force
+   //   4. the contact earth-connected surface force
+   //   5. any other contact force such as a rope
+   
+   function init() {
+      var mouseIsDown = false;
+      // get the background canvas and the drawing canvas elements and contexts
+      var canvas_bkgr = document.getElementById("canvas_bkgr");
+      var canvas_draw = document.getElementById("canvas_draw");
+      var ctx_bkgr = canvas_bkgr.getContext("2d");
+      var ctx_draw = canvas_draw.getContext("2d");
+	  
+	  // create mouse-down & mouse-drag event listeners on the top canvas
+	  // on event, communicate the mouse-event location to drawVector which also gets the id of the cansvas to draw the vector on; e is the event object
+	  
+	  var color = "yellow";
+	  canvas_draw.onmousedown = function(e){mouseIsDown = true; drawVector(e.pageX - canvasesContainer.offsetLeft,e.pageY - canvasesContainer.offsetTop,canvas_draw,color,ctx_draw)};
+	  canvas_draw.onmousemove = function(e){if (mouseIsDown) {drawVector(e.pageX - canvasesContainer.offsetLeft,e.pageY - canvasesContainer.offsetTop,canvas_draw,color,ctx_draw)}};
+      // put a mouse-up listener on the entire document since the user may mouse-up anywhere
+      document.body.onmouseup = function(event) {mouseIsDown = false};
+	  // draw the axes on the background canvas; their constants are declared and set within the drawAxes function
+	  drawAxes(ctx_bkgr);
+   }
+   //---------------------------------------------------------------------------
+  	  // draw the x and y axes
+   function drawAxes(ctx) {
+      const axesColor = "lightblue";
+	  const axesFont = "10pt bold Helvetica sans-serif";
+	  const axesLineWidth = 2;
+	  const axisLengthX = 150;
+	  const axisLengthY = 150;
+	  const axesOriginX = 200; // same as vectorOriginX in this program
+	  const axesOriginY = 200; // same as vectorOriginY in this program
+
+      ctx.strokeStyle = axesColor;
+	  ctx.font = axesFont;
+	  ctx.lineWidth = axesLineWidth;
+      ctx.moveTo(axesOriginX-axisLengthX, axesOriginY);
+      ctx.lineTo(axesOriginX+axisLengthX, axesOriginY);
+	  ctx.moveTo(axesOriginX, axesOriginY-axisLengthY);
+	  ctx.lineTo(axesOriginX, axesOriginY+axisLengthY);
+      ctx.stroke();
+	  
+      ctx.fillStyle = axesColor;
+	  var thefont = ctx.font;
+ 	  ctx.font = "italic bold 12pt New Times Roman";
+	  ctx.fillText("x",axesOriginX+axisLengthX+3,axesOriginY+3);
+	  ctx.fillText("y",axesOriginX-3,axesOriginY-axisLengthY-5);
+	  ctx.font = thefont;
+
+   }
+   // draw a vector in a canvas context (input positions are in the canvas coordinates)
+   //function drawVector(headPosX, headPosY, ctx) {
+   function drawVector(headPosX,headPosY,canvas,color,ctx) {
+      // clear the canvas
+	  canvas.width=canvas.width;
+	  
+      const headHalfWidth = 6;
+      const headLength = 20;
+      const vectorColor = color;
+	  const tailPosX = 200; // same as axesOriginX in this program
+	  const tailPosY = 200; // same as axesOriginY in this program
+
+      var headsX = [];
+      var headsY = [];
+      var vectorLengthX, vectorLengthY;
+      var shankX, shankY;
+      var offsetX, offsetY;
+      var vectorLength;
+      var offsetFactor, shankReduction, offsetx, offsety, shankx, shanky;
+	  
+      // get the vector length
+      vectorLengthX = headPosX - tailPosX;
+      vectorLengthY = headPosY - tailPosY;
+      vectorLength = Math.sqrt(vectorLengthX * vectorLengthX + vectorLengthY * vectorLengthY);
+      
+      // get ratios to use, instead of trig functions, for designing shaft and head of arrow
+      offsetFactor = headHalfWidth/vectorLength;
+      shankReduction =  headLength/vectorLength;
+      // start dealing with special case where entire vector length is < arrow's head length
+      if (vectorLength < headLength) {
+         offsetFactor = offsetFactor*vectorLength/headLength;
+         shankReduction = 1;
+      }
+      // get (x,y) where end of shank meets head; same as tail (x,y) for the special case
+      shankX = headPosX - vectorLengthX * shankReduction;
+      shankY = headPosY - vectorLengthY * shankReduction;
+      // get (x,y) components from shank end to head vertex #0
+      offsetX = vectorLengthY * offsetFactor;
+      offsetY = vectorLengthX * offsetFactor;
+      // get (x,y) for each of the 3 head vertices
+      headsX[0] = Math.round(shankX + offsetX);
+      headsX[1] = Math.round(shankX - offsetX);
+      headsX[2] = Math.round(headPosX);
+      headsY[0] = Math.round(shankY - offsetY);
+      headsY[1] = Math.round(shankY + offsetY);
+      headsY[2] = Math.round(headPosY);
+
+      // draw the shank; it is zero length if vector length <= head length
+      ctx.strokeStyle = vectorColor;
+      ctx.moveTo(tailPosX, tailPosY);
+      ctx.lineTo(headsX[2], headsY[2]);
+      ctx.stroke();
+
+      // draw the portion of the head for which there is room
+      ctx.fillStyle = vectorColor;
+      ctx.moveTo(headsX[0], headsY[0]);
+      ctx.lineTo(headsX[0], headsY[0]);
+      ctx.lineTo(headsX[1], headsY[1]);
+      ctx.lineTo(headsX[2], headsY[2]);
+      ctx.fill();
+	  
+	  drawComponentsValues(vectorLengthX,vectorLengthY,vectorLength,ctx);
+   }
+   //----------------------------------------------------------------------------------
+   // draw the values of the components of the vector
+   function drawComponentsValues(vectorLengthX,vectorLengthY,vectorLength,ctx) {
+      const componentsPosX = 380;
+      const componentsPosY = 300;
+      const componentsLineSpacing = 24;
+      const componentsFont = "12pt bold Helvetica sans-serif";
+      const caretFont = "italic bold 12pt New Times Roman";
+      const componentsColor = "yellow";
+	  
+	  // show the drawn-axes Cartesian coordinates of the arrow point in parens format
+      ctx.fillStyle = componentsColor;
+      ctx.font = componentsFont;
+	  var vX = vectorLengthX;
+	  var vY = -vectorLengthY;
+      ctx.fillText("(x,y) = (" + vX + "px, " + vY + "px)",componentsPosX,componentsPosY);
+	  
+      // show the drawn-axes Cartesian coordinates of the arrow point in unit-vector format
+	  var     textAll = "Vector = " + vX + "px x " + vY + "px y";
+	  var textForYhat = "Vector = " + vX + "px x " + vY + "px ";
+	  // if y>0 put explicit + signs in front of Vy
+	  if (vY > 0)     textAll = "Vector = " + vX + "px x + " + vY + "px y";
+ 	  if (vY > 0) textForYhat = "Vector = " + vX + "px x + " + vY + "px ";
+	  // construct line without carets
+      ctx.fillText(textAll,componentsPosX,componentsPosY+componentsLineSpacing);
+	  // add caret over x and y
+	  var textForXhat = "Vector = " + vX + "px ";
+	  var metricsForXhat = ctx.measureText(textForXhat);
+	  var widthForXhat = metricsForXhat.width-2;
+	  var metricsForYhat = ctx.measureText(textForYhat);
+	  var widthForYhat = metricsForYhat.width-2;
+ 	  ctx.font = caretFont;
+      ctx.fillText("^", componentsPosX+widthForXhat, componentsPosY-4 + componentsLineSpacing);
+      ctx.fillText("^", componentsPosX+widthForYhat, componentsPosY-4 + componentsLineSpacing);
+	  
+      // show the polar coordinates of the arrow point going CCW from the drawn right-side x-axis
+      vectorLength = Math.round(vectorLength);
+	  ctx.font = componentsFont;
+      ctx.fillText("polar length = " + vectorLength + "px", componentsPosX, componentsPosY + 2*componentsLineSpacing);
+      // get the polar angle in degrees
+	  var add = 0;
+	  var angle = 0;
+      if (vX > 0 && vY >= 0) add = 0;
+      if (vX < 0) add = 180;
+      if (vX > 0 && vY <= 0) add = 360;
+      if (vX !== 0) angle = Math.round(add + Math.atan(vY/vX)*180/(Math.PI));
+      if (vX == 0 && vY > 0) angle = 90;
+      if (vX == 0 && vY < 0) angle = 270;
+      if (angle == 360) angle = 0;
+	  var utext = "degrees";
+	  if (angle == 1) utext = "degree";
+      ctx.fillText("polar angle = "+angle+utext,componentsPosX,componentsPosY+3*componentsLineSpacing);
+   }
+</script>
+</html>

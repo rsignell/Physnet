@@ -1,0 +1,277 @@
+<!doctype html>
+<!-- comments
+  Draw N vectors of different colors which accumulate on the background canvas.
+  To do: Vertically align the vector vomponent values
+ -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Draw One-Body Force Diagrams: v0.3, 8 Dec 2015</title>
+    </head>
+
+	<style>
+	    body {background-color:black;}
+	    main {width:600px; height:400px; margin: auto;}
+		span {display:inline-block; width:8em; textalign:right;}
+        #canvasesContainer {position:relative; float:left; width:600px; height:400px; margin:0; border:none; padding:0;}
+	    #canvas_bkgr {z-index:0; position:absolute; left:0; top:0;}
+        #canvas_draw {z-index:1; position:absolute; left:0; top:0;}
+    </style>
+    <body onLoad=init()> <!-- load menu as html elements then, when the user chooses a problem, execute the problem js script starting with the chosen init -->
+		<main>
+		    <div id="canvasesContainer">
+			    <canvas id="canvas_bkgr" height="400" width="600" style="background-color:black"></canvas>
+			    <canvas id="canvas_draw" height="400" width="600"></canvas>
+		    </div>
+		</main>
+    </body>
+
+    <script>
+        "use strict";
+		// global vars
+		var canvas_bkgr = document.getElementById("canvas_bkgr");
+		var canvas_draw = document.getElementById("canvas_draw");
+		var ctx_bkgr = canvas_bkgr.getContext("2d");
+		var ctx_draw = canvas_draw.getContext("2d");
+		var mouseIsDown;
+		var numberOfForces = 3;
+		var numberOfProblems = 1;
+		var forceColors = ["yellow","red","green"];
+		// 2D arrays: 1st index is Problem No, 2nd is Force No within problem
+		var problemNumber;
+		var forceNumber;
+		var forceValue;
+		var forceName;
+		var forceNames = [];
+		var forceNames[0] = ["resultant","gravity","string"];
+		var forceNames[1] = ["resultant","gravity","surface"];
+		var forceValues = [];
+		var forceValues[0] = [0,-17,17];
+		var forceValues[1] = [0,-17,17];
+		// example in 2D format for problemNummber = 0, forceNumber = 2:
+		// alert ("forceName  = " + ForceNames [0][2]); // "string"
+		// alert ("forceValue = " + ForceValues[0][2]); // "17"
+
+	    function init() {
+			mouseIsDown = false;
+			drawMenu();
+			// menu should do the init for the problem at hand, drawing the problem data on canvas_bkgr and drawing the force-drawing request on canvas_draw
+			// add the listeners on the draw canvas
+			forceNumber = 0;
+			canvas_draw.addEventListener("mousedown", mouseWentDown);
+			canvas_draw.addEventListener("mousemove", mouseMoved);
+			canvas_draw.addEventListener("mouseup"  , mouseCameUp);
+			// put up a problems menu wherein the user makes a choice
+			
+		}
+	
+		function mouseWentDown(e){
+			// update var mouseIsDown
+			mouseIsDown = true;
+			// erase the draw canvas
+			canvas_draw.width=canvas_draw.width;
+			// draw the vector on the draw canvas
+			drawForce(e.pageX - canvasesContainer.offsetLeft, e.pageY-canvasesContainer.offsetTop, canvas_draw, ctx_draw, forceColors[forceNumber]);
+		}
+	
+		// on "moved the down mouse": clear the draw canvas, draw a vector on it with the current color, wait for "up"
+		// do nothing if mouse moved while "up"
+		function mouseMoved(e) {
+			if (mouseIsDown) {
+				canvas_draw.width=canvas_draw.width;
+				drawForce(e.pageX-canvasesContainer.offsetLeft, e.pageY-canvasesContainer.offsetTop, canvas_draw, ctx_draw, forceColors[forceNumber])
+				}
+			}
+		function mouseCameUp(e) {
+			// update mouseIsDown 
+			mouseIsDown = false;
+			// erase the draw canvas
+			canvas_draw.width=canvas_draw.width;
+			// draw the vector on the bkgr canvas
+			drawForce(e.pageX-canvasesContainer.offsetLeft, e.pageY-canvasesContainer.offsetTop, canvas_bkgr, ctx_bkgr, forceColors[forceNumber]);
+			// if the forceNumber is not the last, increment it; else end the program by removing the listeners
+			if (forceNumber < numberOfForces - 1) {
+				forceNumber += 1;
+			}
+			else {
+				canvas_draw.removeEventListener('mousedown',mouseWentDown);
+				canvas_draw.removeEventListener('mousemove',mouseMoved);
+				canvas_draw.removeEventListener('mouseup'  ,mouseCameUp);
+			}
+		}
+
+		// draw the x and y axes
+		function drawTheAxes() {
+			var ctx = ctx_bkgr;
+			var axesColor = "lightblue";
+			var axesFont = "10pt bold Helvetica sans-serif";
+			var axesLineWidth = 2;
+			var axisLengthX = 150;
+			var axisLengthY = 150;
+			var axesOriginX = 200; // same as vectorOriginX in this program
+			var axesOriginY = 200; // same as vectorOriginY in this program
+			// draw the axes
+			var strokeStyle = ctx.strokeStyle;
+			ctx.strokeStyle = axesColor;
+			ctx.font = axesFont;
+			ctx.lineWidth = axesLineWidth;
+			ctx.moveTo(axesOriginX-axisLengthX, axesOriginY);
+			ctx.lineTo(axesOriginX+axisLengthX, axesOriginY);
+			ctx.moveTo(axesOriginX, axesOriginY-axisLengthY);
+			ctx.lineTo(axesOriginX, axesOriginY+axisLengthY);
+			ctx.stroke();
+			ctx.strokeStyle = strokeStyle;
+            var fillStyle = ctx.fillStyle;
+			ctx.fillStyle = axesColor;
+			// draw the axis labels
+			var thefont = ctx.font;
+			ctx.font = "italic bold 12pt New Times Roman";
+			ctx.fillText("x",axesOriginX+axisLengthX+3,axesOriginY+3);
+			ctx.fillText("y",axesOriginX-3,axesOriginY-axisLengthY-5);
+			ctx.font = thefont;
+			ctx.fillStyle = fillStyle;
+		}
+   
+		// draw a vector in a canvas context (input positions are in the canvas coordinates)
+		function drawForce(headPosX,headPosY,canvas,ctx,color) {
+		  
+			var headHalfWidth = 6;
+			var headLength = 20;
+			var tailPosX = 200; // same as axesOriginX in this program
+			var tailPosY = 200; // same as axesOriginY in this program
+
+			var headsX = [];
+			var headsY = [];
+			var vectorLengthX, vectorLengthY;
+			var shankX, shankY;
+			var offsetX, offsetY;
+			var vectorLength;
+			var offsetFactor, shankReduction, offsetx, offsety, shankx, shanky;
+		  
+			// get the vector length
+			vectorLengthX = headPosX - tailPosX;
+			vectorLengthY = headPosY - tailPosY;
+			vectorLength = Math.sqrt(vectorLengthX * vectorLengthX + vectorLengthY * vectorLengthY);
+		  
+			// get ratios to use, instead of trig functions, for designing shaft and head of arrow
+			offsetFactor = headHalfWidth/vectorLength;
+			shankReduction =  headLength/vectorLength;
+			// start dealing with special case where entire vector length is < arrow's head length
+			if (vectorLength < headLength) {
+				offsetFactor = offsetFactor*vectorLength/headLength;
+				shankReduction = 1;
+			}
+			// get (x,y) where end of shank meets head; same as tail (x,y) for the special case
+			shankX = headPosX - vectorLengthX * shankReduction;
+			shankY = headPosY - vectorLengthY * shankReduction;
+			// get (x,y) components from shank end to head vertex #0
+			offsetX = vectorLengthY * offsetFactor;
+			offsetY = vectorLengthX * offsetFactor;
+			// get (x,y) for each of the 3 head vertices
+			headsX[0] = Math.round(shankX + offsetX);
+			headsX[1] = Math.round(shankX - offsetX);
+			headsX[2] = Math.round(headPosX);
+			headsY[0] = Math.round(shankY - offsetY);
+			headsY[1] = Math.round(shankY + offsetY);
+			headsY[2] = Math.round(headPosY);
+
+			// draw the shank; it is zero length if vector length <= head length
+			var strokeStyle = ctx.strokeStyle;
+			ctx.strokeStyle = color;
+			ctx.beginPath();
+			ctx.moveTo(tailPosX, tailPosY);
+			ctx.lineTo(headsX[2], headsY[2]);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.strokeStyle = strokeStyle;
+
+			// draw the portion of the head for which there is room
+			var fillStyle = ctx.fillStyle;
+			ctx.fillStyle = color;
+			ctx.beginPath();
+			ctx.moveTo(headsX[0], headsY[0]);
+			ctx.lineTo(headsX[0], headsY[0]);
+			ctx.lineTo(headsX[1], headsY[1]);
+			ctx.lineTo(headsX[2], headsY[2]);
+			ctx.closePath();
+			ctx.fill();
+			ctx.fillStyle = fillStyle;
+			
+			drawComponentsValues(vectorLengthX,vectorLengthY,vectorLength,ctx,color);
+        }
+		
+        // draw the values of the components of the vector
+        function drawComponentsValues(vectorLengthX,vectorLengthY,vectorLength,ctx,color) {
+            var componentsPosX = 380;
+            var componentsPosY = 300;
+            var componentsLineSpacing = 24;
+            var componentsFont = "12pt bold Helvetica sans-serif";
+            var caretFont = "italic bold 12pt New Times Roman";
+	  
+	        // show the drawn-axes Cartesian coordinates of the arrow point in parens format
+			var fillStyle = ctx.fillStyle;
+            ctx.fillStyle = color;
+            ctx.font = componentsFont;
+	        var vX = Math.round(vectorLengthX);
+	        var vY = Math.round(-vectorLengthY);
+			var vXwidth = ctx.measureText(vX).width;
+			var vYwidth = ctx.measureText(vY).width;
+			alert(vX + "," + vY + "," + vXwidth + "," + vYwidth)
+			var xSpace = ' ';
+			var ySpace = ' ';
+			if (vX < 0) {xSpace = ''}
+			if (vY < 0) {ySpace = ''}
+            ctx.fillText("(x,y) = (" + vX + "px, " + ySpace + vY + "px)",componentsPosX,componentsPosY+componentsLineSpacing*(forceNumber+1));
+			ctx.fillStyle = fillStyle;
+        }
+		
+		function (drawMenu) {
+	        <div id="centeredbox">
+
+			<h2>
+
+			<hr WIDTH="100%">
+			</h2></center>
+
+			<center><h><font colo="#000066">
+			Drawing One-Body Force Diagrams
+			<p style="margin-top: -0.5em; padding-top: -0.5em;">
+			<span style="font-size: smaller;">
+			<br>
+			- for Fun and Profit -
+
+			<div style="font-size: smaller; margin-top: 0.3em;">and for <a href="http://www.physnet.org">Physnet</a> Units <a href="http://www.physnet.org/modules/pdfmodules/m10.pdf">m10</a>, <a href="http://www.physnet.org/modules/pdfmodules/m16.pdf">m16</a>
+			</div></font></h2></center>
+
+			<hr width="100%">
+
+			<div style="text-align: left">
+			<!-- NOTE: the HTML SELECT command does not work with visible links, only with drop-down lists, check boxes, etc.
+					   That is, visible links cannot cause anything to happen except to display a page
+			-->
+
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="ForcesMasterPreamble.html">(click here if you wish extensive advice and a sample for practice)</a>
+			//<p style="margin-top: 0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;The problems are in order of increasing complexity. For m10 do 1-7; for m16 do 3-4.
+			<ol style="margin-top: 0em;">
+			<li style="padding-top: -0.5em">
+			    <a href="Problem1.html">Ball hanging from a string:</a> static, 1D, 1 contact force</li>
+			<!-- <li><a href="Problem2.html">Stationary person on level surface:</a> static, 1D, 1 contact force</li>
+			<li><a href="Problem4.html">Accelerating person on level surface:</a> dynamic, 2D, 1 contact force</li>
+			<li><a href="Problem5.html">Stationary block on inclined surface:</a> static, 2D, 1 contact force</li>
+			<li><a href="Problem7.html">Stationary person on inclined surface:</a> static, 2D, 1 contact force</li> -->
+			<!--<li><a href="Problem8.html">Accelerating person on inclined surface:</a> static, 2D, 1 contact force-->
+			<!--<li><a href="Problem9.html">Stationary person on inclined surface holding rope:</a> static, 2D, pulley</li>
+			<li><a href="Problem10.html">Stationary person on inclined surface holding rope:</a> static, 2D, 2 contact forces</li>-->
+			<!-- <li><a href="Problem10.html">Stationary person on inclined surface holding rope:</a> static, 1D, normal, friction -->
+			</ol>
+			<!--<p style="margin-top: -0.5em;">&nbsp;&nbsp;&nbsp;&nbsp;For m16 do 3-4 above.:
+			<ol start="9" style="margin-top: 0em;">
+			<li><a href="Problem5.html">Stationary block on inclined surface:</a> static, 2D, 1 contact force, normal, friction
+			<li><a href="Problem4.html">Accelerating person on level surface:</a> static, 2D, 1 contact force, normal, friction
+			</ol>-->
+			</div>
+			<hr width="100%">
+			</div>
+		}
+    </script>
+</html>

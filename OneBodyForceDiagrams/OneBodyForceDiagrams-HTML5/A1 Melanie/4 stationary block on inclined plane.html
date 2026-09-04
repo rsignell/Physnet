@@ -1,0 +1,501 @@
+
+<html>
+<head>
+<title> One-Body Force Diagram </title>
+<style>
+body{
+background-color:black;
+font-family:sans-serif;
+}
+h1{
+margin:20px;
+}
+
+h2{
+color:yellow;
+font-size:18px;
+font-weight:lighter;}
+
+h3{
+width:300px;
+height:100px;
+border-width:1px;
+border-style:solid;
+border-color:black;
+text-align:center;
+text-size:14pt;
+}
+
+.flexbox {
+display:flex;
+flex-wrap:wrap;
+flex-direction:row;
+background-color: cornflowerblue;
+height:400px;
+margin-top:90px;
+border-width: 8px;
+border-style:solid;
+border-color:purple;
+}
+
+.column1 {
+padding:30px;
+width:40%;
+height:400px;
+}
+
+.column2 {
+width:60%;
+height:400px;
+display:flex;
+background-color:gainsboro;
+width:600px;}
+</style>
+</head>
+<body>
+<h1 style="color:white">Stationary block on an inclined plane </h1>
+<div class="flexbox">
+<div class="column1">
+<h2>The block's weight = 19N</h2>
+
+<svg height="90" width="200">
+  <rect x="0" y="0" width="200" height="70" style="fill:cornflowerblue; stroke-width:2;stroke:black" />
+  <text x="20" y="30" fill="black" font="sans-serif"> The unit vectors: </text>
+  <polyline points = "58,42 60,40 62,42 60,40 60,50 70,50 68,48 70,50 68,52" style="fill:none; stroke:black; stroke-width:2">
+  </svg>
+
+
+<p> <b>List of correctly drawn forces:</b> </p>
+<p id="correct forces list1"> </p>
+<p id="correct forces list2"> </p>
+<p id="correct forces list3"> </p>
+</div>
+<div class="column2">
+
+<canvas id="canvas" height="400px" width="600px" style="border:1px solid black">
+</canvas>
+
+</div>
+</div>
+
+</body>
+<script>
+//write instructions
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+ctx.font="15px Arial";
+ctx.fillStyle="green";
+ctx.fillText("Draw the resultant force on the block.", 10,20);
+
+
+//draw the box and slope
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(180,265);
+ctx.lineTo(420,165);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="3";
+ctx.strokeStyle="green";
+ctx.moveTo(245,235);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(345,135);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(245,235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(345,135);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+//draw the force vector
+	document.getElementById("canvas").addEventListener("mousedown", vectorFunction);
+function vectorFunction() {
+//clear the canvas
+	canvas.width=canvas.width;
+//draw original diagram
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+ctx.font="15px Arial";
+ctx.fillStyle="green";
+ctx.fillText("Draw the resultant force on the block.", 10,20);
+
+ctx.beginPath();
+ctx.moveTo(180,265);
+ctx.lineTo(420,165);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="3";
+ctx.strokeStyle="green";
+ctx.moveTo(245,235);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(345,135);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(245,235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(345,135);
+ctx.lineTo(365,185);
+ctx.stroke();
+//draw new vector
+    var coordinates = canvas.getBoundingClientRect();
+    var x = event.clientX - coordinates.left;
+    var y = event.clientY - coordinates.top;  
+ctx.beginPath();
+ctx.lineWidth="1";
+ctx.strokeStyle="blue";
+ctx.moveTo(300, 200);
+ctx.lineTo(x, y);
+ctx.stroke();
+ctx.font="15px Arial";
+var i = Math.round((x-300)/10);
+var j = Math.round((200-y)/10);
+
+var theta = 3*Math.PI/2-Math.atan(j/i);
+
+
+
+ctx.fillText("F(resultant) = "+i+"i + " +j+"j", 2*canvas.width/3, 7*canvas.height/8);
+if (x>=300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8, -8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8,-8);
+ctx.stroke();
+}
+
+if (x<300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8, 8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8,8);
+ctx.stroke();
+}
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+ 
+
+if(x<=305 && x>=295 && y<=205 &&y>=195){gravFunction()};}
+function gravFunction(){
+document.getElementById("correct forces list1").innerHTML="<b>F</b>(resultant) = (0<b>i</b> +0<b>j</b>) N.";
+//clear the canvas
+	canvas.width=canvas.width;
+	document.getElementById("canvas").removeEventListener("mousedown", vectorFunction);
+	document.getElementById("canvas").addEventListener("mousedown", gravFunction);
+//draw original diagram
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+
+
+ctx.font="15px Arial";
+ctx.fillStyle="green";
+ctx.fillText("Draw the gravity force on the block.", 10,20);
+
+ctx.beginPath();
+ctx.moveTo(180,265);
+ctx.lineTo(420,165);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="3";
+ctx.strokeStyle="green";
+ctx.moveTo(245,235);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(345,135);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(245,235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(345,135);
+ctx.lineTo(365,185);
+ctx.stroke();
+//draw resultant vector
+ctx.font = "10px Arial";
+ctx.fillText("F(resultant) = 0i + 0j",310,200);
+//draw new vector
+    var coordinates = canvas.getBoundingClientRect();
+    var x = event.clientX - coordinates.left;
+    var y = event.clientY - coordinates.top;  
+
+ctx.beginPath();
+ctx.lineWidth="1";
+ctx.strokeStyle="blue";
+ctx.moveTo(300, 200);
+ctx.lineTo(x, y);
+ctx.stroke();
+ctx.font="15px Arial";
+var i = Math.round((x-300)/10);
+var j = Math.round((200-y)/10);
+ctx.fillText("F(gravity) = "+i+"i + "+j+"j", 3*canvas.width/4, 7*canvas.height/8);
+
+var theta = 3*Math.PI/2-Math.atan(j/i);
+if (x>=300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8, -8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8,-8);
+ctx.stroke();
+}
+
+if (x<300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8, 8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8,8);
+ctx.stroke();
+}
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+if(x<=305 && x>=295 && y<=395 &&y>=385){stringFunction();}
+}
+function stringFunction(){
+canvas.width=canvas.width;
+	document.getElementById("canvas").removeEventListener("mousedown", gravFunction);
+	document.getElementById("canvas").addEventListener("mousedown", stringFunction);
+document.getElementById("correct forces list2").innerHTML="<b>F</b>(gravity) = (0<b>i</b> - 19<b>j</b>) N.";
+//draw original diagram plus resultant plus gravity vector
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+
+ctx.font="15px Arial";
+ctx.fillStyle="green";
+ctx.fillText("Draw the surface force on the block.", 10,20);
+
+ctx.beginPath();
+ctx.moveTo(180,265);
+ctx.lineTo(420,165);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="3";
+ctx.strokeStyle="green";
+ctx.moveTo(245,235);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(345,135);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(245,235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(345,135);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+	ctx.beginPath();
+	ctx.lineWidth="2";
+	ctx.strokeStyle="black";
+	ctx.moveTo(300, 200);
+	ctx.lineTo(300, 390);
+	ctx.stroke();
+	ctx.beginPath();
+	
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 390);
+ctx.lineTo(295, 383);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 390);
+ctx.lineTo(305, 383);
+ctx.stroke();
+ctx.font = "10px Arial";
+ctx.fillText("F(resultant) = 0i + 0j",310,200);
+ctx.fillText("F(gravity) = 0i - 19j",310,390);
+//draw new vector
+    var coordinates = canvas.getBoundingClientRect();
+    var x = event.clientX - coordinates.left;
+    var y = event.clientY - coordinates.top;  
+var i = Math.round((x-300)/10);
+var j = Math.round((200-y)/10);
+ctx.font = "15px Arial";
+ctx.fillText("F(surface) = "+i+"i + "+j+"j", 3*canvas.width/4, 7*canvas.height/8);
+ctx.beginPath();
+ctx.lineWidth="1";
+ctx.strokeStyle="blue";
+ctx.moveTo(300, 200);
+ctx.lineTo(x, y);
+ctx.stroke();
+
+var theta = 3*Math.PI/2-Math.atan(j/i);
+
+if (x>=300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8, -8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8,-8);
+ctx.stroke();
+}
+
+if (x<300){
+ctx.translate(x,y);
+
+ctx.rotate(theta);
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(-8, 8);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(8,8);
+ctx.stroke();
+}
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+if(x<=305 && x>=295 && y<=15 &&y>=5){fin();}
+function fin(){
+canvas.width=canvas.width;
+document.getElementById("canvas").removeEventListener("mousedown", stringFunction);
+	
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(180,265);
+ctx.lineTo(420,165);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="3";
+ctx.strokeStyle="green";
+ctx.moveTo(245,235);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(345,135);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(225,185);
+ctx.lineTo(245,235);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(345,135);
+ctx.lineTo(365,185);
+ctx.stroke();
+
+ctx.stroke();
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 200);
+ctx.lineTo(300, 10);
+ctx.stroke();
+
+ctx.stroke();
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 200);
+ctx.lineTo(300, 390);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 390);
+ctx.lineTo(295, 383);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 390);
+ctx.lineTo(305, 383);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 10);
+ctx.lineTo(295, 17);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth="2";
+ctx.strokeStyle="black";
+ctx.moveTo(300, 10);
+ctx.lineTo(305, 17);
+ctx.stroke();
+
+ctx.font = "10px Arial";
+ctx.fillText("F(resultant) = 0i + 0j",310,200);
+ctx.fillText("F(gravity) = 0i - 19j",310,380);
+ctx.fillText("F(surface) = 0i + 19j", 310,15);
+document.getElementById("correct forces list3").innerHTML="<b>F</b>(surface) = (0<b>i</b> + 19<b>j</b>) N. Exercise completed."};
+}
+</script>
+</html>

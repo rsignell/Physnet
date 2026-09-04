@@ -1,0 +1,27 @@
+<html>
+    <canvas id="canvas" height="400" width="400"></canvas>
+</html>
+<script>
+      // good for (x,y) but not (i,j) so division by 8.0 is inadequate; charWidth is 8 for x,  for i
+	  
+	  var canvas = document.getElementById("canvas");
+	  var ctx = canvas.getContext("2d");
+	  
+      const fontHeight = 12;
+	  const charFont = "bold " + fontHeight.toString() + "pt Helvetica sans-serif";
+      const caretFont = "italic bold " + fontHeight.toString() + "pt New Times Roman";
+	  
+	  var char = "j";
+	  var charXpos = 30;
+	  var charYpos = 30;
+	  
+	  var ctxSave = ctx;
+	  ctx.font = charFont;
+	  var metricsForChar = ctx.measureText(char);
+	  var charWidth  = metricsForChar.width;  // backup at 12 pt: 8 => 1 for "x,y", 4.45 => 2.5 for "i,j"; needs to be higher visually
+	  ctx.fillText(char,charXpos,charYpos);
+	  ctx.font = caretFont;
+	  //ctx.fillText("^",charXpos-charWidth/8.0,charYpos-charHeight/3.6); // to move the caret up, reduce the 3.6
+	  ctx.fillText("^",charXpos-2.5,charYpos-fontHeight/3.6); // to move the caret up, reduce the 3.6
+	  ctx = ctxSave;
+</script>
