@@ -118,12 +118,15 @@ def convert_math(s):
         return r'\,\text{' + body + '}'
     s = re.sub(r'\\unit\{((?:[^{}]|\{[^{}]*\})*)\}', _unit, s)
     s = re.sub(r'\\up\{([^{}]*)\}',   r'^{\1}',     s)
-    s = s.replace(r'\degrees', r'^\circ')
-    s = s.replace(r'\degreesC', r'^{\circ}\,\text{C}')
-    s = s.replace(r'\degreesF', r'^{\circ}\,\text{F}')
+    # Use the literal degree sign -- valid in KaTeX math *and* inside \text{},
+    # so it survives \m{..\degreesC..} landing inside a \text{} wrapper.
+    s = re.sub(r'\\degreesC\b|\\circC\b', '°C', s)
+    s = re.sub(r'\\degreesF\b|\\circF\b', '°F', s)
+    s = re.sub(r'\\degrees\b|\\degree\b', '°', s)
     s = s.replace(r'\AA', r'\text{Å}')
     s = re.sub(r'\\[dt]?frac(?![A-Za-z])', r'\\frac', s)
     s = re.sub(r'\\fract(?![A-Za-z])', r'\\frac', s)
+    s = re.sub(r'\\protect\b', '', s)   # fragile-command guard, meaningless here
     # Text macros that sometimes leak inside \m{}: drop the wrapper.
     s = re.sub(r'\\Index\{(?:[^{}]|\{[^{}]*\})*\}', '', s)
     s = re.sub(r'\\(?:Emph|Quote|textit|textbf|Term)\{((?:[^{}]|\{[^{}]*\})*)\}',
@@ -132,7 +135,59 @@ def convert_math(s):
     s = re.sub(r'\\ds\b', r'\\displaystyle ', s)
     s = re.sub(r'\\OverArc\{([^{}]*)\}', r'\\overset{\\frown}{\1}', s)
     s = re.sub(r'\\Overline\{([^{}]*)\}', r'\\overline{\1}', s)
+
+    # ── Physnet math macros that otherwise trip a KaTeX ParseError ──
+    # cross-reference / help markers embedded in equation bodies: drop them
+    s = re.sub(r'\\(?:paren)?help\{[^{}]*\}', '', s)
+    s = re.sub(r'\\furtherhelp\{[^{}]*\}', '', s)
+    s = re.sub(r'\\(?:Fig|Eqn|Equation|Sect|Def|Rule|Sta|Statement)ref\*?\{[^{}]*\}', '', s)
+    s = re.sub(r'\\eqnno\{[^{}]*\}', '', s)
+    s = re.sub(r'\\nonumber\b|\\hfill\b|\\hs\b|\\medskip\b|\\smallskip\b'
+               r'|\\noalign\b|\\indent\b|\\noindent\b', '', s)
+    s = re.sub(r'\\(?:label|tag|setcounter|addtocounter|refstepcounter)'
+               r'\{[^{}]*\}(?:\{[^{}]*\})?', '', s)
+    # sub/superscript helpers
+    s = re.sub(r'\\dn\{([^{}]*)\}', r'_{\1}', s)
+    # differential-operator shorthands (2-arg numerator/denominator, then
+    # the 1-arg operator form \partiald{x} = d/dx)
+    s = re.sub(r'\\partiald\{([^{}]*)\}\{([^{}]*)\}',
+               r'\\frac{\\partial \1}{\\partial \2}', s)
+    s = re.sub(r'\\partiald\{([^{}]*)\}', r'\\frac{\\partial}{\\partial \1}', s)
+    s = re.sub(r'\\(?:totald|dd)\{([^{}]*)\}\{([^{}]*)\}', r'\\frac{d\1}{d\2}', s)
+    s = re.sub(r'\\(?:totald|dd)\{([^{}]*)\}', r'\\frac{d}{d\1}', s)
+    s = s.replace(r'\Grad', r'\nabla').replace(r'\grad', r'\nabla')
+    s = s.replace(r'\Div', r'\nabla\cdot').replace(r'\Curl', r'\nabla\times')
+    s = s.replace(r'\Lap', r'\nabla^2')
+    s = re.sub(r'\\eexp\{([^{}]*)\}', r'e^{\1}', s)
+    s = re.sub(r'\\conj\{([^{}]*)\}', r'\\overline{\1}', s)
+    s = re.sub(r'\\conj\b', r'^{*}', s)              # bare: z\conj -> z^{*}
+    s = re.sub(r'\\linefill\{[^{}]*\}|\\linefill\b', r'\\underline{\\quad\\quad}', s)
+    # KaTeX rejects the [pos] optional arg on array/tabular
+    s = re.sub(r'(\\begin\{(?:array|tabular)\*?\})\[[a-z]\]', r'\1', s)
+    # collapse empty / doubled superscripts & subscripts
+    s = re.sub(r'\^\{\}', '', s)
+    s = re.sub(r'_\{\}', '', s)
+    s = re.sub(r'(\^\{[^{}]*\})\s*\^', r'\1{}^', s)   # a^{x}^{y} -> a^{x}{}^{y}
+    s = s.replace(r'\ccon', 'c').replace(r'\hbarc', r'\hbar c')
+    s = re.sub(r'\\ld\{[^{}]*\}', '', s)            # transparent size wrapper
+    s = re.sub(r"\\[,!;:](?=\s*[\^'_])", '', s)     # space macro before ^ _ ' breaks binding
+    s = re.sub(r'\\m\{([^{}]*)\}', r'\1', s)        # redundant \m{} inside math / \text{}
+    s = s.replace(r'\vect', r'\vec').replace(r'\vex', r'\vec')  # any leftover form
+    s = s.replace(r'\uvex', r'\hat')
+    s = re.sub(r'\\m([A-Z])\b', r'\1', s)          # \mZ \mW \mN ... -> Z W N
+    # old-style {\rm text} / {\cal X} font groups -> modern commands
+    s = re.sub(r'\{\\rm\s+([^{}]*)\}',  r'{\\mathrm{\1}}',  s)
+    s = re.sub(r'\{\\it\s+([^{}]*)\}',  r'{\\mathit{\1}}',  s)
+    s = re.sub(r'\{\\bf\s+([^{}]*)\}',  r'{\\mathbf{\1}}',  s)
+    s = re.sub(r'\{\\(?:cal|mathcal)\s+([^{}]*)\}', r'{\\mathcal{\1}}', s)
+    # bare font switches KaTeX rejects -> drop (content stays)
+    s = re.sub(r'\\(?:rm|it|bf|sf|tt|sl|sc|cal|mit|boldmath|unboldmath)\b(?![a-zA-Z])',
+               '', s)
     s = re.sub(r'\\text\{([^{}]*)\}', r'\\text{\1}', s)   # passthrough
+    # a bare < or > in the emitted \(..\) would be eaten as an HTML tag by the
+    # browser before KaTeX's auto-render sees it
+    s = re.sub(r'(?<![\\<>=!])<(?![=>])', r' \\lt ', s)
+    s = re.sub(r'(?<![\\<>=!-])>(?![=<])', r' \\gt ', s)
     return s
 
 
@@ -222,6 +277,19 @@ class PhysnetConverter:
                     out.append(specials.get(text[i], text[i]))
                     i += 1
                     continue
+
+                # Raw \[ ... \] / \( ... \) math delimiters in the source
+                if text[i] in '[(':
+                    close = '\\]' if text[i] == '[' else '\\)'
+                    end = text.find(close, i + 1)
+                    if end != -1:
+                        eq = convert_math(text[i + 1:end])
+                        if text[i] == '[':
+                            out.append(f'\\[{eq}\\]')
+                        else:
+                            out.append(f'\\({eq}\\)')
+                        i = end + 2
+                        continue
                 if text[i] == '\\':
                     out.append('<br>')
                     i += 1
@@ -365,6 +433,8 @@ class PhysnetConverter:
         # ── Superscript / units / degrees ──
         if name == 'up':
             arg, i = get_arg(text, i)
+            if '\\' in arg:
+                return f'\\(^{{{convert_math(arg)}}}\\)', i
             return f'<sup>{arg}</sup>', i
 
         if name == 'unit':
@@ -379,7 +449,7 @@ class PhysnetConverter:
             arg, i = get_arg(text, i)
             return f'<strong>{self._process(arg)}</strong>', i
 
-        if name in ('textit', 'emph', 'textsl', 'booktitle', 'journal',
+        if name in ('textit', 'emph', 'textsl', 'booktitle', 'BookTitle', 'journal',
                     'italic', 'Title'):
             arg, i = get_arg(text, i)
             return f'<em>{self._process(arg)}</em>', i
@@ -422,10 +492,15 @@ class PhysnetConverter:
 
         # ── Footnotes ──
         if name == 'Footnote':
-            num,  i = get_arg(text, i)
-            body, i = get_arg(text, i)
-            fn_html = self._process(body)
-            self.footnotes.append((num, fn_html))
+            a1, i = get_arg(text, i)
+            # \Footnote{n}{text}  vs  \Footnote{text}  (auto-numbered)
+            if a1.strip().isdigit() and len(a1.strip()) <= 3:
+                num = a1.strip()
+                body, i = get_arg(text, i)
+            else:
+                self._fn_seq = getattr(self, '_fn_seq', 0) + 1
+                num, body = str(self._fn_seq), a1
+            self.footnotes.append((num, self._process(body)))
             return (f'<sup class="fn-ref"><a href="#fn-{num}" id="fnref-{num}">'
                     f'{num}</a></sup>'), i
 
@@ -685,6 +760,172 @@ class PhysnetConverter:
         if name == 'ChRefNo':
             ch, i = get_arg(text, i)
             return ch, i
+
+        # ── Common Physnet macros (batch: mechanics/gravitation/E&M) ──
+        if name == 'FnRef':
+            n, i = get_arg(text, i)
+            return (f'<sup class="fn-ref"><a href="#fn-{n}" '
+                    f'id="fnref-{n}">{n}</a></sup>'), i
+
+        if name in ('Modref', 'ModRef', 'modref'):
+            n, i = get_arg(text, i)
+            title = ''
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '{':
+                title, i = get_arg(text, j)
+            t = f' title="{self._process(title)}"' if title else ''
+            b = re.sub(r'^m', '', self.module_id)          # not used, just guard
+            return (f'<a href="../m{n}/" class="module-ref"{t}>'
+                    f'MISN-0-{n}</a>'), i
+
+        if name in ('Sectref', 'SectRef'):
+            s, i = get_arg(text, i)
+            n = ''
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '{':
+                n, i = get_arg(text, j)
+            return f'<span class="sect-ref">Sect.&nbsp;{s}{n}</span>', i
+
+        if name == 'Derivation':
+            note, i = get_arg(text, i)
+            j = i
+            while j < len(text) and text[j] in ' \t\n':
+                j += 1
+            if j < len(text) and text[j] == '{':
+                _, i = get_arg(text, j)              # 2nd arg: where -- discard
+            return f'<span class="derivation-note">{self._process(note)}</span>', i
+
+        if name == 'eqnline':
+            eq, i = get_arg(text, i)
+            return f'\\[{convert_math(eq)}\\]\n', i
+
+        if name in ('textbox', 'Textbox', 'TextBox'):
+            content, i = get_arg(text, i)
+            return f'<div class="text-box">{self._process(content)}</div>\n', i
+
+        if name in ('TextAndFigurePage', 'TextPage', 'FigurePage'):
+            content, i = get_arg(text, i)
+            return self._process(content), i
+
+        if name == 'furtherhelp':
+            n, i = get_arg(text, i)
+            return (f'<a href="#help-{n}" class="help-link help-link-inline" '
+                    f'title="Special Assistance">[S-{n}]</a>'), i
+
+        if name in ('ProbSet', 'ProbSetTitle'):
+            title, i = get_arg(text, i)
+            return f'<h3 class="probset-title">{self._process(title)}</h3>\n', i
+
+        if name == 'ComputerProgram':
+            nm, i = get_arg(text, i)
+            return (f'<p class="prog-note">Computer program: '
+                    f'<em>{self._process(nm)}</em></p>\n'), i
+
+        if name in ('MinipageFigure', 'MiniFigure'):
+            n, i = get_arg(text, i)
+            fn = f'{self.module_id}gr{int(n):02d}' if n.strip().isdigit() else n
+            return self._reif_fig(f'{n}', '', fn), i
+
+        if name == 'tabularoneline':
+            a, i = get_arg(text, i)
+            return f'<div class="tab-line">{self._process(a)}</div>\n', i
+        if name == 'tabulartwolines':
+            _, i = get_arg(text, i)                 # width
+            a, i = get_arg(text, i)
+            b, i = get_arg(text, i)
+            return (f'<div class="tab-line">{self._process(a)}'
+                    f'<span class="tab-gap"></span>{self._process(b)}</div>\n'), i
+
+        if name in ('linefill', 'Linefill'):
+            _, i = get_arg(text, i)                 # width -- ignore
+            return '<span class="fill-line">&nbsp;</span>', i
+        if name in ('hrulefill', 'dotfill'):
+            return '<span class="fill-line">&nbsp;</span>', i
+
+        if name in ('PrintUrl', 'printurl', 'Url', 'url', 'href'):
+            u, i = get_arg(text, i)
+            if name == 'href':                     # \href{url}{text}
+                t2, i = get_arg(text, i)
+                return f'<a href="{u}">{self._process(t2)}</a>', i
+            return f'<a href="{u}">{u}</a>', i
+
+        if name in ('web', 'screenonly'):
+            content, i = get_arg(text, i)
+            return self._process(content), i
+        if name in ('print', 'printonly'):
+            _, i = get_arg(text, i)                 # print-only: hidden on web
+            return '', i
+        if name == 'dropmatrix':
+            a, i = get_arg(text, i)
+            return f'\\[\\begin{{matrix}}{convert_math(a)}\\end{{matrix}}\\]\n', i
+
+        if name in ('jot', 'protect', 'tempval', 'templen',
+                    'indent', 'LeftTable', 'linewidth', 'columnwidth',
+                    'textwidth', 'displaywidth', 'ReadingsAccess'):
+            return '', i                            # arg-less no-ops
+
+        if name in ('UnframedEpsFigure', 'FullFramedFixedFigure',
+                    'FramedFixedFigure', 'UnframedFixedFigure',
+                    'FullUnframedFixedFigure'):
+            fn, i = get_arg(text, i)
+            fn = re.sub(r'\.(eps|ps|pdf)$', '', fn.strip())
+            return self._reif_fig('', '', fn), i
+
+        if name in ('ld', 'lD', 'LD'):
+            a, i = get_arg(text, i)
+            return self._process(a), i               # transparent size wrapper
+
+        if name == 'bullet':
+            return '&bull;', i
+        if name in ('underline', 'uline'):
+            a, i = get_arg(text, i)
+            return f'<u>{self._process(a)}</u>', i
+
+        if name in ('mNumber', 'ModNumber'):
+            n, i = get_arg(text, i)
+            return n, i
+
+        if name in ('textcc', 'textsc', 'sc'):
+            a, i = get_arg(text, i)
+            return f'<span class="small-caps">{self._process(a)}</span>', i
+
+        if name in ('boxedline', 'BoxedLine'):
+            a, i = get_arg(text, i)
+            return f'<div class="boxed-line">{self._process(a)}</div>\n', i
+
+        if name in ('boxed', 'Boxed', 'fbox', 'framebox'):
+            a, i = get_arg(text, i)
+            return f'<span class="boxed">{self._process(a)}</span>', i
+
+        if name == 'eqnno':
+            n, i = get_arg(text, i)
+            return f'<span class="eqn-number">({n})</span>', i
+
+        if name in ('footnote', 'Footnotetext'):
+            body, i = get_arg(text, i)
+            self._fn_seq = getattr(self, '_fn_seq', 0) + 1
+            n = self._fn_seq
+            self.footnotes.append((str(n), self._process(body)))
+            return (f'<sup class="fn-ref"><a href="#fn-{n}" '
+                    f'id="fnref-{n}">{n}</a></sup>'), i
+        if name in ('footnotemark',):
+            self._fn_seq = getattr(self, '_fn_seq', 0) + 1
+            return f'<sup class="fn-ref">{self._fn_seq}</sup>', i
+        if name in ('newlength', 'setlength', 'addtolength', 'settowidth',
+                    'setcounter', 'addtocounter'):
+            for _ in range(3):                      # eat 1-3 trailing {..}
+                j = i
+                while j < len(text) and text[j] in ' \t':
+                    j += 1
+                if j < len(text) and text[j] == '{':
+                    _, i = get_arg(text, j)
+                else:
+                    break
+            return '', i
         if name in ('TutSectRef',):
             sec, i = get_arg(text, i)
             return f'<span class="sect-ref">Tutorial&nbsp;Sect.&nbsp;{sec}</span>', i
@@ -1450,6 +1691,8 @@ class PhysnetConverter:
         # ── dn (subscript in particle physics tables) ──
         if name == 'dn':
             arg, i = get_arg(text, i)
+            if '\\' in arg:
+                return f'\\(_{{{convert_math(arg)}}}\\)', i
             return f'<sub>{self._process(arg)}</sub>', i
 
         # ── Particle physics symbols ──
@@ -1464,7 +1707,8 @@ class PhysnetConverter:
         _MESONS = {
             'mpi': 'π', 'mK': 'K', 'mKb': 'K̄', 'meta': 'η', 'metap': 'η′',
             'mrho': 'ρ', 'momega': 'ω', 'mphi': 'φ', 'mW': 'W', 'mgamma': 'γ',
-            'mAtwo': 'A₂', 'mf': 'f', 'mfp': 'f′',
+            'mAtwo': 'A₂', 'mf': 'f', 'mfp': 'f′', 'mZ': 'Z', 'mA': 'A',
+            'mN': 'N', 'mZero': '0',
         }
         if name in _MESONS:
             return f'<em class="meson">{_MESONS[name]}</em>', i
@@ -1572,7 +1816,7 @@ class PhysnetConverter:
             if m:
                 out.append(f'Problem&nbsp;Supplement&nbsp;{m.group(1)}')
                 continue
-            out.append(part)
+            out.append(self._process(part))
         return ', '.join(out)
 
     # ── Figure handler ────────────────────────────────────────────────────────
@@ -1632,7 +1876,8 @@ class PhysnetConverter:
         if env == 'SummaryItems':
             return (f'<div class="summary-items">{self._process(content)}</div>\n'), i
 
-        if env in ('eqnarray', 'eqnarray*'):
+        if env in ('eqnarray', 'eqnarray*', 'lefteqnarray', 'lefteqnarray*',
+                   'righteqnarray', 'matheqnarray', 'eqnarraystar'):
             return self._eqnarray(content), i
 
         if env in ('equation', 'equation*', 'displaymath'):
@@ -1683,14 +1928,26 @@ class PhysnetConverter:
 
     def _list(self, content, tag):
         """Convert a LaTeX list environment to HTML <ul>/<ol>."""
-        # Split on \item, keeping optional label
-        items_raw = re.split(r'\\item\b', content)
+        # Split on \item, but only at brace depth 0 -- a nested list inside a
+        # braced macro arg (e.g. \ItemFigure{... \begin{one-digit-list}
+        # \item[a.] ... }) must not be split here.
+        items_raw, depth, last = [], 0, 0
+        for mm in re.finditer(r'\{|\}|\\item\b', content):
+            tok = mm.group(0)
+            if tok == '{':
+                depth += 1
+            elif tok == '}':
+                depth = max(0, depth - 1)
+            elif depth == 0:
+                items_raw.append(content[last:mm.start()])
+                last = mm.end()
+        items_raw.append(content[last:])
         html_items = []
         for raw in items_raw[1:]:   # first split before first \item is preamble
             # Optional label: [a.] or [K1.] etc.
             m = re.match(r'\s*\[([^\]]*)\]\s*', raw)
             if m:
-                label = m.group(1).strip()
+                label = self._process(m.group(1).strip())
                 body  = raw[m.end():]
             else:
                 label = ''

@@ -51,8 +51,8 @@ equation.
 <p><h3 id="pcap-2-a">2a. The Wave Equation and its Solutions</h3>
 
 The solutions of the equation:
-<p>\[\frac{\partial^2\xi}{\partial t^2} =
-                     v^2\frac{\partial^2\xi}{\partial x^2}\,,\]
+<p><span class="eqn-block" id="eqn-1">\[\frac{\partial^2\xi}{\partial t^2} =
+                     v^2\frac{\partial^2\xi}{\partial x^2}\,,\]<span class="eqn-number">(1)</span></span>
 <p>are waves of displacement \(\xi\) traveling at speed \(v\) in the positive
 and negative \(x\)-direction.
 <p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
@@ -123,15 +123,15 @@ previous section):
 <p>\[T \,\Delta\theta = 
              \mu \,\Delta x \partial^2 y/\partial t^2\,.\]
 <p>This implies:
-<p>\[T\frac{\Delta\theta}{\Delta x} =
-           \mu \frac{\partial^2 y}{\partial t^2}\,.\]
+<p><span class="eqn-block" id="eqn-2">\[T\frac{\Delta\theta}{\Delta x} =
+           \mu \frac{\partial^2 y}{\partial t^2}\,.\]<span class="eqn-number">(2)</span></span>
 <p>We can now let \(\Delta x\) and \(\Delta\theta\) shrink until
 \(\Delta\theta/\Delta x\) becomes \(\partial\theta/\partial x\) so
 <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> becomes:
-<p>\[T\frac{\partial\theta}{\partial x} =
-                  \mu \frac{\partial^2 y}{\partial t^2}\,.\]
-<p><h3 id="pcap--">. </h3>
-[]3dGetting the Wave Equation
+<p><span class="eqn-block" id="eqn-3">\[T\frac{\partial\theta}{\partial x} =
+                  \mu \frac{\partial^2 y}{\partial t^2}\,.\]<span class="eqn-number">(3)</span></span>
+<p><h3 id="pcap-3-d">3d. Getting the Wave Equation</h3>
+
 For a wave equation, <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, we need \(\partial^2 y/\partial x^2\)
 rather than the \(\partial\theta/\partial x\) of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a>.
 Let us therefore rewrite \(\partial\theta/\partial x\) in terms of \(y\) and
@@ -139,16 +139,16 @@ Let us therefore rewrite \(\partial\theta/\partial x\) in terms of \(y\) and
 These quantities are related by:
 <p>\[\tan\theta = \text{ slope of curve } = \partial y/\partial x\,.\]
 <p>Differentiating with respect to \(x\) gives us:
-<p>\[\partiald{x}\tan\theta = \partiald{x}\left(\frac{\partial y}{\partial x}\right)\,,\]
+<p>\[\frac{\partial}{\partial x}\tan\theta = \frac{\partial}{\partial x}\left(\frac{\partial y}{\partial x}\right)\,,\]
 <p>\[\frac{1}{\cos^2\theta}\frac{\partial\theta}{\partial x} =
                      \frac{\partial^2 y}{\partial x^2}\,,\]
 <p>where we now have the second derivative we need.
 Remembering that \(\cos\theta \approx 1\) for small \(\theta\), we have finally:
-<p>\[\frac{\partial^2 y}{\partial t^2} =
-      \frac{T}{\mu} \frac{\partial^2 y}{\partial x^2}\,.\]
+<p><span class="eqn-block" id="eqn-4">\[\frac{\partial^2 y}{\partial t^2} =
+      \frac{T}{\mu} \frac{\partial^2 y}{\partial x^2}\,.\]<span class="eqn-number">(4)</span></span>
 <p>This is the wave equation for any small traveling wave on a stretched string.
 Comparing to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> we see that the speed of the wave is:
-<p>\[v = \sqrt{T/\mu}\,.\]
+<p><span class="eqn-block" id="eqn-5">\[v = \sqrt{T/\mu}\,.\]<span class="eqn-number">(5)</span></span>
 <p><h3 id="pcap-3-e">3e. Physical Solutions</h3>
 
 The wave equation contains symbols whose values must come from the physical 
@@ -170,15 +170,15 @@ a compression occurs when, for example, a rod is struck on one end,
 displacing the individual particles of the rod in the direction of the 
 rod's length and causing a displacement wave to travel down the rod in the 
 same direction as the motion of the particles.
-<p><h3 id="pcap--">. </h3>
-[]4bStress, Strain, Young's Modulus
+<p><h3 id="pcap-4-b">4b. Stress, Strain, Young's Modulus</h3>
+
 In general, when a rod is subjected to a force in the direction of its 
 length and acting over its cross section---when, for example, it is 
 vertical and holds up the roadbed of a bridge or some other weight 
 suspended from its end---Hooke's Law applies. This law states, in general,
 that in an elastic medium:
 <p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
-<p>\[\frac{\text{stress}}{\text{strain}} = \text{ constant}\,,\]
+<p><span class="eqn-block" id="eqn-6">\[\frac{\text{stress}}{\text{strain}} = \text{ constant}\,,\]<span class="eqn-number">(6)</span></span>
 <p>where stress is the applied force per unit cross sectional area and strain 
 is the rod's fractional deformation due to the stress.
 <p>\[\text{stress } = F / A\,.\]
@@ -208,14 +208,14 @@ x\)'s of the rod equals the total elongation \(\Delta L\). In this case,
 Hooke's law for the segment gives us:
 <p>\[F = Y A \,\Delta\xi/\Delta x\,.\]
 <p>We now let \(\Delta x\) shrink until that expression becomes:
-<p>\[F = Y A \frac{d\xi}{dx}\,.\]
+<p><span class="eqn-block" id="eqn-7">\[F = Y A \frac{d\xi}{dx}\,.\]<span class="eqn-number">(7)</span></span>
 <p><h3 id="pcap-4-d">4d. Force on a Segment: Dynamic Case</h3>
 
 When a wave is traveling along the rod, the situation is not static and the 
 forces at the two ends of any particular segment are not equal. The 
 acceleration of the segment at any particular time \(t\) is due to the net 
 force on it at that time:
-<p>\[\begin{aligned}dF_\text{net} & = F(x + dx) - F(x) \\              & = \frac{dF}{dx}\,dx \nonumber \\              & = Y A \frac{d^2 \xi}{d x^2}\,dx. \qquad \text{(fixed time)}\,.\end{aligned}\]
+<p>\[\begin{aligned}dF_\text{net} & = F(x + dx) - F(x) \\              & = \frac{dF}{dx}\,dx  \\              & = Y A \frac{d^2 \xi}{d x^2}\,dx. \qquad \text{(fixed time)}\,.\end{aligned}\]
 
 <p>We must remember what \(\xi(x,t)\) is, though. It is the displacement, from 
 equilibrium, of the individual particles in the rod as the wave travels 
@@ -236,11 +236,11 @@ gives us:
 <p>\[Y A \frac{\partial^2\xi}{\partial x^2}\,dx =
                     \rho A\,dx \frac{\partial^2 \xi}{\partial t^2}\,,\]
 <p>which can be written:
-<p>\[\frac{\partial^2 \xi}{\partial t^2} =
-        \frac{Y}{\rho} \frac{\partial^2 \xi}{\partial x^2}\,.\]
+<p><span class="eqn-block" id="eqn-9">\[\frac{\partial^2 \xi}{\partial t^2} =
+        \frac{Y}{\rho} \frac{\partial^2 \xi}{\partial x^2}\,.\]<span class="eqn-number">(9)</span></span>
 <p>This is the wave equation so by comparison to <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> speed for a 
 longitudinal wave on a rod is:
-<p>\[v = (Y/\rho)^{1/2}\,.\]
+<p><span class="eqn-block" id="eqn-10">\[v = (Y/\rho)^{1/2}\,.\]<span class="eqn-number">(10)</span></span>
 </section>
 
 <p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Longitudinal Waves In a Gas</h2>
@@ -249,7 +249,7 @@ longitudinal wave on a rod is:
 
 Longitudinal waves in a gas, such as sound waves through the air, obey 
 Hooke's law:
-<p>\[\frac{\text{stress}}{\text{strain}} = \text{ constant}\,.\]
+<p><span class="eqn-block" id="eqn-11">\[\frac{\text{stress}}{\text{strain}} = \text{ constant}\,.\]<span class="eqn-number">(11)</span></span>
 <p>This equation also applies to a long thin rod where a stress causes a 
 one-dimensional strain (a change in length). Actually, a more thorough 
 analysis of that case shows that the rod's cross section decreases slightly 
@@ -260,17 +260,17 @@ is the gas's bulk modulus of elasticity,
 \(K\), usually defined by:
 <p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
 <p>\[K = -\frac{dP}{dV}\,V\,.\]
-<p><h3 id="pcap--">. </h3>
-[]5bThe Wave Equation
+<p><h3 id="pcap-5-b">5b. The Wave Equation</h3>
+
 The equation of motion for a volume element of a gas is mathematically more 
 complicated than that for a segment of a rod. However, in advanced texts it 
 is shown that the wave equation for a longitudinal wave in a gas is like 
 that for a longitudinal wave in a rod, except that \(K\) replaces \(Y\) and the 
 mass density is specifically designated as that at equilibrium:
-<p>\[\frac{\partial^2\xi}{\partial t^2} =
-         \frac{K}{\rho_0} \frac{\partial^2 \xi}{\partial x^2}\,.\]
+<p><span class="eqn-block" id="eqn-12">\[\frac{\partial^2\xi}{\partial t^2} =
+         \frac{K}{\rho_0} \frac{\partial^2 \xi}{\partial x^2}\,.\]<span class="eqn-number">(12)</span></span>
 <p>For a gas, then, the wave speed is
-<p>\[v = \sqrt{K/\rho_0}\,\]
+<p><span class="eqn-block" id="eqn-13">\[v = \sqrt{K/\rho_0}\,\]<span class="eqn-number">(13)</span></span>
 <p><h3 id="pcap-5-c">5c. Pressure, Density, and Heat Capacity Ratio</h3>
 
 Using the definition of \(K\), we can write the wave velocity in terms of gas 
@@ -298,7 +298,7 @@ relationship is the one for adiabatic conditions,
 <p>and hence:
 <p>\[K = \gamma\,P\,.\]
 <p>Thus the wave speed in a gas becomes
-<p>\[v = (\gamma P/\rho_0)^{1/2}\,.\]
+<p><span class="eqn-block" id="eqn-14">\[v = (\gamma P/\rho_0)^{1/2}\,.\]<span class="eqn-number">(14)</span></span>
 <p><h3 id="pcap-5-d">5d. Dependence on Temperature</h3>
 
 Starting from the expression for wave speed as a function of pressure, 
@@ -310,7 +310,7 @@ the speed as a function of temperature. That is, we can substitute
                 \left(\frac{\gamma n R T}{m}\right)^{1/2}\,.\]
 <p>We can put this in a form useful for determining sound speeds in different gases by writing it
 in terms of \(M = m/n\), the mass of one mole of the gas:
-<p>\[v = \left( \frac{\gamma R T}{M} \right)^{1/2}\,.\]
+<p><span class="eqn-block" id="eqn-15">\[v = \left( \frac{\gamma R T}{M} \right)^{1/2}\,.\]<span class="eqn-number">(15)</span></span>
 </section>
 
 <p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
@@ -367,9 +367,9 @@ The Equation Of State</em>, MISN-0-157.) <a href="#fnref-7" class="fn-back">↩<
 <p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
 
 <p>\(\frac{T}{\mu} \frac{\partial^2\xi}{\partial x^2} =
-                               \frac{\partial^2\xi}{\partial t^2} \hfill
+                               \frac{\partial^2\xi}{\partial t^2} 
 \frac{Y}{\rho} \frac{\partial^2\xi}{\partial x^2} =
-                               \frac{\partial^2\xi}{\partial t^2} \hfill
+                               \frac{\partial^2\xi}{\partial t^2} 
 \frac{\gamma P}{\rho_0} \frac{\partial^2\xi}{\partial x^2} =
                                \frac{\partial^2\xi}{\partial t^2}\)
 
@@ -387,7 +387,7 @@ Determine the speed of transverse waves traveling in the string when plucked.</l
 attached at one end to an oscillator with a period of
 \(4.00\times10^{-4}\,\text{sec}\).
 Given that the diameter of the wire is 0.3572&thinsp;cm and that the density of steel
-is \(7.850\times10^3\unit{kg/m^{3}}\), determine the speed of propagation, frequency,
+is \(7.850\times10^3\,\text{kg/m}^{3}\text{}\), determine the speed of propagation, frequency,
 and wavelength of transverse waves traveling along the wire.
 Write the equation for the waveform of the wave.</li>
 <li><span class="item-label">3.</span> In Westerns, the “Indians” frequently detected an approaching
@@ -397,7 +397,7 @@ Calculate the speed of sound in the steel track, treating the problem as
 compressional waves in a simple rod.
 Determine the speed of sound in air at 75°F (23.9°C).
 How do the two speeds compare?
-<div class="centered"><table class="physnet-table"><tbody><tr><td> Steel:</td><td> Air:</td></tr><tr><td>\(Y = 1.95\times10^{11}\unit{N/m^{2}}\)</td><td>\(\gamma\) = 1.4</td></tr><tr><td>\(\rho = 7.850\times10^3\unit{kg/m^{3}}\)</td><td>\(M = 29.8\,\text{grams/mole}\)</td></tr><tr><td>\(R = 8.31\,\text{J/(K\,mole)}\)</td></tr></tbody></table>
+<div class="centered"><table class="physnet-table"><tbody><tr><td> Steel:</td><td> Air:</td></tr><tr><td>\(Y = 1.95\times10^{11}\,\text{N/m}^{2}\text{}\)</td><td>\(\gamma\) = 1.4</td></tr><tr><td>\(\rho = 7.850\times10^3\,\text{kg/m}^{3}\text{}\)</td><td>\(M = 29.8\,\text{grams/mole}\)</td></tr><tr><td>\(R = 8.31\,\text{J/(K\,mole)}\)</td></tr></tbody></table>
 </div>
 </li>
 <li><span class="item-label">4.</span> A copper and an aluminum rod, each of cross section 0.75<span class="unit">&thinsp;cm<sup>2</sup></span>,
@@ -406,7 +406,7 @@ Longitudinal waves are excited in the copper rod by a vibrating source with a
 frequency of 675&thinsp;Hz.
 If the wavelength of longitudinal waves in the copper portion of the rod is
 5.25&thinsp;m, determine the wavelength of the waves in the aluminum.
-<div class="centered"><table class="physnet-table"><tbody><tr><td> Copper:</td><td> Aluminum:</td></tr><tr><td>\(Y = 11.2\times10^{10}\unit{N/m^{2}}\)</td><td>\(Y = 6.9\times10^{10}\unit{N/m^{2}}\)</td></tr><tr><td>\(\rho = 8.93\unit{grams/cm^{3}}\)</td><td>\(\rho = 2.7\unit{grams/cm^{3}}\)</td></tr></tbody></table>
+<div class="centered"><table class="physnet-table"><tbody><tr><td> Copper:</td><td> Aluminum:</td></tr><tr><td>\(Y = 11.2\times10^{10}\,\text{N/m}^{2}\text{}\)</td><td>\(Y = 6.9\times10^{10}\,\text{N/m}^{2}\text{}\)</td></tr><tr><td>\(\rho = 8.93\,\text{grams/cm}^{3}\text{}\)</td><td>\(\rho = 2.7\,\text{grams/cm}^{3}\text{}\)</td></tr></tbody></table>
 </div>
 </li>
 <li><span class="item-label">5.</span> Scuba divers must use exotic mixtures of gases instead of air when
@@ -429,19 +429,19 @@ Also, the temperature is assumed to be the same in both environments.
 to generate longitudinal waves traveling down the air-filled tube.
 The speaker cone is made to oscillate harmonically as described by the
 equation:
-\[y = (0.010\,\text{cm}) \sin{[(8.0\times10^2\,\pi\unit{sec^{-1}})\,t]}\]
+\[y = (0.010\,\text{cm}) \sin{[(8.0\times10^2\,\pi\,\text{sec}^{-1}\text{})\,t]}\]
 
 where \(y\) is the horizontal displacement of the speaker surface as a function
 of time.
 Assuming the equilibrium pressure of the air is atmospheric pressure, determine
 the speed of waves travelling in the tube and write the equation for the
 waveform (for air, \(\gamma\)&thinsp;=&thinsp;1.4,
-\(\rho_0\,=\,1.33\times10^{-3}\unit{grams/cm^{3}}\),
-\(1\,\text{atmosphere}\,=\,1.01\times10^5\unit{N/m^{2}}\)).</li>
-<li><span class="item-label">7.</span> The density of Aluminum is \(2.7\times10^3\unit{kg/m^{3}}\) and
-\(Y_{Al} = 0.70\times10^{11}\unit{N/m^{2}}\).
+\(\rho_0\,=\,1.33\times10^{-3}\,\text{grams/cm}^{3}\text{}\),
+\(1\,\text{atmosphere}\,=\,1.01\times10^5\,\text{N/m}^{2}\text{}\)).</li>
+<li><span class="item-label">7.</span> The density of Aluminum is \(2.7\times10^3\,\text{kg/m}^{3}\text{}\) and
+\(Y_{Al} = 0.70\times10^{11}\,\text{N/m}^{2}\text{}\).
 A thinly-drawn aluminum wire of length 10.00&thinsp;m and cross-sectional area of
-\(5.0\unit{mm^{2}}\) is held under a tension of \(2.0\times10^2\,\text{N}\).
+\(5.0\,\text{mm}^{2}\text{}\) is held under a tension of \(2.0\times10^2\,\text{N}\).
 <ol>
 
 </ol>
@@ -462,8 +462,8 @@ Oxygen is diatomic while krypton is monatomic so the relevant \(\gamma\)'s are:
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <p><ol>
-<li><span class="item-label">1.</span> \(v = 132\)&thinsp;m/s.<span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
-<li><span class="item-label">2.</span> \(v = 437\)&thinsp;m/s;<span class="tex-unknown" title="unknown macro">\</span> <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<li><span class="item-label">1.</span> \(v = 132\)&thinsp;m/s.<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup><sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup></li>
+<li><span class="item-label">2.</span> \(v = 437\)&thinsp;m/s;<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup><sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup><sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup><sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 <br>
 
 \(\nu = 2.5\times10^3\)&thinsp;Hz;
@@ -472,22 +472,22 @@ Oxygen is diatomic while krypton is monatomic so the relevant \(\gamma\)'s are:
 \(\lambda = 0.175\)&thinsp;m;
 <br>
 
-\(y = y_0\,\sin{[(35.9\unit{m^{-1}}\,x \pm
-(1.57\times10^4\unit{s^{-1}})\,t\,+\,\theta_0]}\)</li>
-<li><span class="item-label">3.</span> \(v_\text{steel} = 4.98\times10^3\)&thinsp;m/s;<span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+\(y = y_0\,\sin{[(35.9\,\text{m}^{-1}\text{}\,x \pm
+(1.57\times10^4\,\text{s}^{-1}\text{})\,t\,+\,\theta_0]}\)</li>
+<li><span class="item-label">3.</span> \(v_\text{steel} = 4.98\times10^3\)&thinsp;m/s;<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup><sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 <br>
 
-\(v_\text{air} = 3.40\times10^2\)&thinsp;m/s<span class="tex-unknown" title="unknown macro">\</span> <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+\(v_\text{air} = 3.40\times10^2\)&thinsp;m/s<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup><sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 <br>
 
 The speed of sound is \(14.4\) times larger in steel than in air.</li>
-<li><span class="item-label">4.</span> \(\lambda = 7.5\)&thinsp;m<span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
-<li><span class="item-label">5.</span> \(\nu_\text{helium} = 662\)&thinsp;Hz; nearly 2 octaves higher.<span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
-<li><span class="item-label">6.</span> \(v = 327\)&thinsp;m/s;<span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a><span class="tex-unknown" title="unknown macro">\</span>  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+<li><span class="item-label">4.</span> \(\lambda = 7.5\)&thinsp;m<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup><sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup></li>
+<li><span class="item-label">5.</span> \(\nu_\text{helium} = 662\)&thinsp;Hz; nearly 2 octaves higher.<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup></li>
+<li><span class="item-label">6.</span> \(v = 327\)&thinsp;m/s;<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup><sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 <br>
 
 \(\xi = 0.010\,\text{cm}\,
-\sin{[(7.7\unit{m^{-1}}\,x\,-\,(8.00\times10^2\,\pi\unit{s^{-1}})
+\sin{[(7.7\,\text{m}^{-1}\text{}\,x\,-\,(8.00\times10^2\,\pi\,\text{s}^{-1}\text{})
 \,t\,+\,\theta_0]}\)</li>
 <li><span class="item-label">7.</span> a. \(v_\text{mechanical} = 121\,\)m/s, \(v_\text{sound} =
 5.09\times10^3\)&thinsp;m/s.
@@ -500,7 +500,7 @@ The speed of sound is \(14.4\) times larger in steel than in air.</li>
 The tensile strength of aluminum is less than that so the aluminum would pull
 apart.
 </li>
-<li><span class="item-label">8.</span> \(v_\text{O} = 1.52\,v_\text{Kr}\). \qquad  [NOT 1.07, NOT 1.62] <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">8.</span> \(v_\text{O} = 1.52\,v_\text{Kr}\). &emsp;&emsp; [NOT 1.07, NOT 1.62]<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup></li>
 </ol>
 
 <p></section>
@@ -511,32 +511,32 @@ apart.
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The problem statement says  transverse waves in a  wire,
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;2)</span></h3><div class="help-body">The problem statement says  transverse waves in a  wire,
  not <em>longitudinal</em> waves in a <em>rod</em> or a <em>gas</em>.
  Use the right wave equation.
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Non-MKS units (e.g., “feet,” “grams,” “cm,”) must be converted to
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;Problems 1, 2, 3, 4, 5, 6)</span></h3><div class="help-body">Non-MKS units (e.g., “feet,” “grams,” “cm,”) must be converted to
  MKS units.
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(M_O/M_{Kr} = (M_O/M_H)/(M_{Kr}/M_H)\) which is <em>given</em> to you as 16/42.
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;8)</span></h3><div class="help-body">\(M_O/M_{Kr} = (M_O/M_H)/(M_{Kr}/M_H)\) which is <em>given</em> to you as 16/42.
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">\(\mu = 1.148 \times 10^{-3}\)&thinsp;kg/m.
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;3)</span></h3><div class="help-body">\(\mu = 1.148 \times 10^{-3}\)&thinsp;kg/m.
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">\(\mu = 0.0787\)&thinsp;kg/m.
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;2)</span></h3><div class="help-body">\(\mu = 0.0787\)&thinsp;kg/m.
  If I buy 1&thinsp;m of the wire I get 0.0787&thinsp;kg of wire.
  If I buy 2&thinsp;m of the wire I get 0.1574&thinsp;kg of wire.
  That is what “linear density” \(\mu\) is all about.
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Kindly read Note 2 at the head of the <em>Problem Supplement</em> and do what
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;3)</span></h3><div class="help-body">Kindly read Note 2 at the head of the <em>Problem Supplement</em> and do what
  it says to do.
 </div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\(v_{al} = 5.06 \times 10^3\)&thinsp;m/s.  Think about what happens physically at
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;4)</span></h3><div class="help-body">\(v_{al} = 5.06 \times 10^3\)&thinsp;m/s.  Think about what happens physically at
  the interface between the two metals.
  What quantity is preserved across the interface?  Wavelength? Velocity?
  Frequency?
@@ -551,16 +551,16 @@ apart.
 <p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
 
 <p>\(\frac{T}{\mu} \frac{\partial^2\xi}{\partial x^2} =
-\frac{\partial^2\xi}{\partial t^2} \hfill
+\frac{\partial^2\xi}{\partial t^2} 
 \frac{Y}{\rho} \frac{\partial^2\xi}{\partial x^2} =
-\frac{\partial^2\xi}{\partial t^2} \hfill
+\frac{\partial^2\xi}{\partial t^2} 
 \frac{\gamma P}{\rho_0} \frac{\partial^2\xi}{\partial x^2} =
 \frac{\partial^2\xi}{\partial t^2}\)
 <p><ol>
 <li><span class="item-label">1.</span> See Output Skills K1-K3 in this module's <em>ID Sheet</em>.
 One or more of these skills, or none, may be on the actual exam.</li>
-<li><span class="item-label">2.</span> The density of Aluminum is \(2.7\times10^3\unit{kg/m^{3}}\) and
-\(Y_{Al} = 0.70\times10^{11}\unit{N/m^{2}}\).
+<li><span class="item-label">2.</span> The density of Aluminum is \(2.7\times10^3\,\text{kg/m}^{3}\text{}\) and
+\(Y_{Al} = 0.70\times10^{11}\,\text{N/m}^{2}\text{}\).
 A thinly-drawn aluminum wire of length 10.00&thinsp;m and cross-sectional area of
 5.0<span class="unit">&thinsp;mm<sup>2</sup></span> is held under a tension of \(2.0\times10^2\,\text{N}\).
 <ol>

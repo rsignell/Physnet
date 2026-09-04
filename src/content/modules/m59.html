@@ -35,7 +35,7 @@ For some subjects, it provides a sort of rich, full view of an object where
 the real numbers provide only a sort of silhouette.
 In other cases it provides quick and easy means of analysis, synthesis and
 solution.
-Finally, there are cases like the time-dependent Schr<span class="tex-unknown" title="unknown macro">\</span>"odinger where
+Finally, there are cases like the time-dependent Schrödinger where
 it is an integral part of the theoretical framework.
 </section>
 
@@ -53,9 +53,9 @@ complex numbers.
 <p>Suppose we have two complex numbers, \(z_1=(x_1,y_1)\) and \(z_2=(x_2,y_2)\).
 Here are the addition, subtraction, and multiplication rules for those two
 complex numbers:
-<p>\[z_1 \pm z_2 \equiv (x_1\pm x_2,y_1\pm y_2)\]
-<p>\[z_1 \cdot z_2 \equiv (x_1,y_1)\cdot (x_2,y_2) =
-(x_1 x_2\,-\,y_1 y_2, x_1 y_2\,+\,x_2 y_1).\]
+<p><span class="eqn-block" id="eqn-1">\[z_1 \pm z_2 \equiv (x_1\pm x_2,y_1\pm y_2)\]<span class="eqn-number">(1)</span></span>
+<p><span class="eqn-block" id="eqn-2">\[z_1 \cdot z_2 \equiv (x_1,y_1)\cdot (x_2,y_2) =
+(x_1 x_2\,-\,y_1 y_2, x_1 y_2\,+\,x_2 y_1).\]<span class="eqn-number">(2)</span></span>
 <p><h3 id="pcap-2-b">2b. “Real” and “Imaginary” Numbers</h3>
 
 Complex numbers with no second number (\(x\),0), are referred to as “purely
@@ -86,36 +86,36 @@ axis.”
 <p>In the physical sciences and engineering the combinatorial rules in
 <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)–(2)</a> are remembered and denoted by use of the symbol
 \(i\), which is treated like any other algebraic symbol except that:
-<p>\[i^2 = -1\,.\]
+<p><span class="eqn-block" id="eqn-3">\[i^2 = -1\,.\]<span class="eqn-number">(3)</span></span>
 <p>It is in this sense that we say:
-<p>\[i \equiv \sqrt{-1}.\]
+<p><span class="eqn-block" id="eqn-4">\[i \equiv \sqrt{-1}.\]<span class="eqn-number">(4)</span></span>
 <p>Complex numbers are then written:
-<p>\[z = x + iy = Re(z) + i \, Im(z)\]
+<p><span class="eqn-block" id="eqn-5">\[z = x + iy = Re(z) + i \, Im(z)\]<span class="eqn-number">(5)</span></span>
 <p>The combinatorial rules of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> can be derived from
-<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> in a few lines. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+<a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> in a few lines.<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
 <p><h3 id="pcap-2-e">2e. The Complex Conjugate</h3>
 
 Only real numbers can correspond to the results of physical measurements,
 so one must have mechanisms for obtaining real numbers from complex ones.
 One of the most common ways is to combine a complex number with its
 “complex conjugate,” either additively or multiplicatively.
-The complex conjugate of a complex number \(z\) is written \(z\conj\), and is
+The complex conjugate of a complex number \(z\) is written \(z^{*}\), and is
 defined as the same number-pair except that the sign of the imaginary part
 is reversed:
-<p>\[z\conj \equiv (x + i y)\conj  \equiv x - i y.\]
+<p><span class="eqn-block" id="eqn-6">\[z^{*} \equiv (x + i y)^{*}  \equiv x - i y.\]<span class="eqn-number">(6)</span></span>
 <p>The process of complex conjugation is obviously equivalent to a reflection
 about the \(x\)-axis in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
 <p>Both the product and sum of a complex number and its complex conjugate are
 real.
-That is, (\(z\cdot z\conj \)) and (\(z\,+\,z\conj \)) are real.
+That is, (\(z\cdot z^{*} \)) and (\(z\,+\,z^{*} \)) are real.
 <p><figure id="fig-2" class="fig-left-framed"><img src="figures/m59gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The magnitude \(|z|\) of a complex number.</figcaption></figure>
 
 <p><h3 id="pcap-2-f">2f. Polar Representation: Magnitude and Phase</h3>
 
 The “magnitude” of a complex number \(z=x+iy\) is written \(|z|\) and is
 defined by
-<p>\[|z|\equiv\sqrt{|z|^2}\equiv\sqrt{z\conj z} =
-\sqrt{(x-iy)(x+iy)} = \sqrt{x^2+y^2}.\]
+<p><span class="eqn-block" id="eqn-7">\[|z|\equiv\sqrt{|z|^2}\equiv\sqrt{z^{*} z} =
+\sqrt{(x-iy)(x+iy)} = \sqrt{x^2+y^2}.\]<span class="eqn-number">(7)</span></span>
 <p>In terms of the complex plane, the <em>magnitude</em> of a complex number \(z\)
 is the polar radius to \(z\)'s point (\(x\),\(y\)) in the complex plane, as
 illustrated in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
@@ -133,18 +133,18 @@ point (\(x\),\(y\)):
 <p>formula, \(e^{i\phi} = \cos{\phi} + i \sin{\phi}\), to put \(z\) in the
 form:
 <p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
-<p>\[z = |z|\,e^{i \phi}\,,\]
+<p><span class="eqn-block" id="eqn-8">\[z = |z|\,e^{i \phi}\,,\]<span class="eqn-number">(8)</span></span>
 <p>where \(e\) is the base of the natural logarithms.
 This neatly separates \(z\) into its magnitude \(|z|\) and phase \(\phi\):
 compare <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> and <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
 In the polar representation, complex conjugation reverses the sign of the phase.
 For example,
-<p>\[(4+3i)\conj  = (5\,e^{i 36.9^\circ})\conj = 5\,e^{-i 36.9^\circ}. \qquad \help{2}\]
+<p>\[(4+3i)^{*}  = (5\,e^{i 36.9°})^{*} = 5\,e^{-i 36.9°}. \qquad \]
 <p>Here are some other interesting applications of Euler's representation:
 <p>\[z_1/z_2 = \frac{|z_1|}{|z_2|}\,e^{i(\phi_1 - \phi_2)}\]
-<p>\[\sqrt{z} = \pm \sqrt{|z|}\,e^{i \phi /2} \qquad \help{3}\]
+<p>\[\sqrt{z} = \pm \sqrt{|z|}\,e^{i \phi /2} \qquad \]
 <p>\[\sqrt{i} = \pm e^{i\pi /4} = \pm(\cos{\pi /4} + i \sin{\pi /4}) =
-\pm \frac{1}{\sqrt{2}}\,(1 + i). \qquad \help{4}\]
+\pm \frac{1}{\sqrt{2}}\,(1 + i). \qquad \]
 <p><span class="tryit">Try it:</span>  Work out the four applications shown above.
 </section>
 
@@ -153,7 +153,7 @@ For example,
 <p><h3 id="pcap-3-a">3a. Real Function Silhouettes</h3>
 
 Consider the function
-<p>\[f(x) = \frac{a^2}{x^2 + a^2},\]
+<p><span class="eqn-block" id="eqn-9">\[f(x) = \frac{a^2}{x^2 + a^2},\]<span class="eqn-number">(9)</span></span>
 <p>where \(a\) is a constant.
 If we vary \(a\) we get the \(f(x)\) curves shown in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
 We are going to relate the shape of the central bumps in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> to what is
@@ -253,11 +253,12 @@ That will enhance the three-dimensional appearance of the figures.
 We suggest you color the vertical faces along the real axis light blue
 and the line on or above the entire imaginary axis (and up the \(y=0\) line on
 the vertical face) red.
-<p><span class="tex-unknown" title="unknown macro">\MinipageFigure</span>9As in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>, \(a\) = 1, 2, 3 (top to bottom).m59gr09
+<p><figure id="fig-9" class="module-figure"><img src="figures/m59gr09.svg" alt="Figure 9" class="physnet-fig"><figcaption><strong>Fig.&nbsp;9.</strong></figcaption></figure>
+As in <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>, \(a\) = 1, 2, 3 (top to bottom).m59gr09
 <p></section>
 
 <p>
-<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Pronounced “Ar\('\)g<span class="tex-unknown" title="unknown macro">\</span>"and” in English. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Pronounced “Oiler.” <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Taylor's Series for the Expansion of a Function About a
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Pronounced “Ar\('\)gänd” in English. <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">Pronounced “Oiler.” <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “Taylor's Series for the Expansion of a Function About a
           Point” (MISN-0-4) for a Taylor series proof of Euler's formula. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">Note we have not given a precise definition of poles;
           see math texts for further discussions. <a href="#fnref-4" class="fn-back">↩</a></li></ol></aside>
 
@@ -282,8 +283,8 @@ Describe the motions of the pole(s) along trajectories.</li>
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <ol>
-<li><span class="item-label">1.</span> \(z\conj = 8 - 6i;\ |z| = 10;\ \phi = \tan^{-1}{(3/4)} = 36.9\).</li>
-<li><span class="item-label">2.</span> \(z_1 = -4 + 3i;\ z_2 = - 4 - 3i\).<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> [S-5]</li>
+<li><span class="item-label">1.</span> \(z^{*} = 8 - 6i;\ |z| = 10;\ \phi = \tan^{-1}{(3/4)} = 36.9\).</li>
+<li><span class="item-label">2.</span> \(z_1 = -4 + 3i;\ z_2 = - 4 - 3i\).  [S-5]</li>
 <li><span class="item-label">3.</span> The arrowheads show the directions the poles travel as \(a\) increases
 from \(- \infty\) to \(+ \infty\).
 The numbers show the values of \(a\).
@@ -302,7 +303,7 @@ Those parts actually coincide with the \(x\)-axis.</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;2d)</span></h3><div class="help-body">
  Addition/subtraction rule resulting from \(i=\sqrt{-1}\): <br>
 
 \(z_1\pm z_2 = (x_1 + iy_1)\pm (x_2 + iy_2)\).<br>
@@ -327,24 +328,24 @@ This can also be written:<br>
 |z_1|\cdot|z_2|\,e^{i(\phi_1 + \phi_2)}\).
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;4)</span></h3><div class="help-body">
  Computation of Polar Coordinates for the Example<br>
 
 By use of Eqs.&thinsp;(6), (7), and (8):<br>
 
 \(4 + 3i = \sqrt{(4)^2 + (3)^2}\,e^{i \tan^{-1}{(3/4)}}
-        = 5 e^{i 36.9^\circ}\). <br>
+        = 5 e^{i 36.9°}\). <br>
 
 To obtain the complex conjugate, just replace \(i\) by \(-i\) throughout.
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Section&nbsp;4)</span></h3><div class="help-body">
 \(\sqrt{z} = (|z|\,e^{i\phi})^{1/2} = (|z|)^{1/2}\,(e^{i\phi})^{1/2} =
 \pm \sqrt{|z|}\,e^{i\phi /2}\).
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
-\(i = 0 + i = \cos{\pi /2} + i \sin{\pi /2} = e^{i\pi /2}\).<span class="tex-unknown" title="unknown macro">\</span> <span class="tex-unknown" title="unknown macro">\</span> Then: <br>
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Section&nbsp;4)</span></h3><div class="help-body">
+\(i = 0 + i = \cos{\pi /2} + i \sin{\pi /2} = e^{i\pi /2}\).  Then: <br>
 
 \(i^{1/2} =  \left(e^{i\pi /2}\right)^{1/2} = \pm e^{i\pi /4} =
 \pm (\cos{\pi/4} + i \sin{\pi /4}) = \pm \frac{1}{\sqrt{2}}(1 + i)\). <br>
@@ -352,7 +353,7 @@ To obtain the complex conjugate, just replace \(i\) by \(-i\) throughout.
 Check the answer by squaring it!
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;2)</span></h3><div class="help-body">
 We want to make the function zero so its inverse will be infinite;
 the zeros of the function are the pole positions of its inverse.
 We denote those values of \(z\), that make the function zero, by \(z_p\):
@@ -365,7 +366,7 @@ formula, which you should have on instant recall:
 We check our answer by multiplying out the resulting function to make sure
 it reproduces the original polynomial :<br>
 
-\((z - z_1)(z - z_2) = [z - (-4 + 3i)]\,[z - (-4 - 3i)]  =\) \ldots  .<br>
+\((z - z_1)(z - z_2) = [z - (-4 + 3i)]\,[z - (-4 - 3i)]  =\) &hellip; .<br>
 
 Here we denoted the two values of \(z_p\) by \(z_1\) and \(z_2\) and we showed the
 polynomial in factored form (note that either \(z = z_1\) or \(z = z_2\) makes
@@ -376,7 +377,7 @@ Apply the quadratic root formula and then do the check yourself!
 
 <p>
 <p>
-<span class="fbox"><div class="env-minipage">[t]4.3in
+<span class="boxed"><div class="env-minipage">[t]4.3in
 [S-6]  from TX-3e: Connection between <a href="#fig-6" class="fig-ref">Fig.&nbsp;6</a> and <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
 <figure class="fig-centered"><img src="figures/m59gr13.svg" alt="" class="physnet-fig"></figure>
 

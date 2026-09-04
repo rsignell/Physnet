@@ -61,14 +61,14 @@ the sign of the forces between adjacent current-carrying wires.
 <p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. The Ampere-Laplace-Biot-Savart Law</h2>
 
 <p><figure id="fig-1" class="fig-left-framed"><img src="figures/m125gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. An infinitesimal segment of a current
-\(I\) of length \(d\ell\) and with tangent \(\hat{\cal T}\), and a point \(P\) at
+\(I\) of length \(d\ell\) and with tangent \(\hat{\mathcal{T}}\), and a point \(P\) at
 which we wish to know \(\vec{B}\).</figcaption></figure>
 
 <p>The ALBS law for the magnetic field \(\vec{B}\) due to a current \(I\) is:
-<p>\[\vec{B} =
-    k_m \, I \int \frac{\hat{\cal T} \times \hat{r}}{r^2}\,d\ell\,.\]
+<p><span class="eqn-block" id="eqn-1">\[\vec{B} =
+    k_m \, I \int \frac{\hat{\mathcal{T}} \times \hat{r}}{r^2}\,d\ell\,.\]<span class="eqn-number">(1)</span></span>
 <p>where \(k_m\) is the magnetic force constant, \(d\ell\) is an element of length
-along the path taken by the current, \(\hat{\cal T}\) is a unit vector tangent
+along the path taken by the current, \(\hat{\mathcal{T}}\) is a unit vector tangent
 to the path at the element \(d\ell\), and \(\vec{r}\) is the position vector
 of the point at which \(\vec{B}\) is being determined, as seen from the
 current element \(d\ell\).
@@ -102,7 +102,7 @@ of current \(I\) spread out uniformly over an infinitesimal length \(d\ell\).
 distance \(d\ell\), we have \(I = q\,v/\,d\ell\).
 <p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
 <p>The direction of the charge velocity is the same as the local direction of the current
-so we have: \(I\,\vect{\cal{I}} = q\,\vec{v}/\,d\ell\).
+so we have: \(I\,\vec{{I}} = q\,\vec{v}/\,d\ell\).
 This can be done more elegantly using the Dirac delta function.
 <p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
 <p>Since there is no current outside \(d\ell\), which is the width of the charged
@@ -110,61 +110,61 @@ particle, the integrand is zero everywhere except over \(d\ell\).
 Then we can trivially integrate the essentially-constant integrand over the
 length \(d\ell\) and get:
 <p>\[\vec{B} =
-    k_m \, I \, \frac{\hat{\cal T} \times \hat{r}}{r^2}\,\ell\,.\]
+    k_m \, I \, \frac{\hat{\mathcal{T}} \times \hat{r}}{r^2}\,\ell\,.\]
 <p>Now we know that, for a point charge \(q\) of length \(d\ell\) and
-velocity \(v\), \(I \hat{\cal T}\) is given by:
+velocity \(v\), \(I \hat{\mathcal{T}}\) is given by:
 <p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
-<p>\[q \, \vec{v} = d\ell \,I\, \hat{\cal T}\]
+<p><span class="eqn-block" id="eqn-2">\[q \, \vec{v} = d\ell \,I\, \hat{\mathcal{T}}\]<span class="eqn-number">(2)</span></span>
 <p>so we finally have the familiar equation for the magnetic field due to a
 moving point charge:
-<p>\[\vec{B}= k_m \frac{q \, \vec{v} \times \hat{r}}{r^2}\,.\]
+<p><span class="eqn-block" id="eqn-3">\[\vec{B}= k_m \frac{q \, \vec{v} \times \hat{r}}{r^2}\,.\]<span class="eqn-number">(3)</span></span>
 <p><figure id="fig-2" class="fig-left-framed"><img src="figures/m125gr02.svg" alt="Figure 2" class="physnet-fig"><figcaption>Fig.&nbsp;2. The magnetic field at the center of a
 circular loop of current.</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]3cA Circular Loop of Current
+<p><h3 id="pcap-3-c">3c. A Circular Loop of Current</h3>
+
 We here calculate the magnetic field at the center of a circular loop of
 current lying in the \(x\)-\(z\) plane.
-First, notice that \(\hat{\cal T}\) and \(\hat{r}\) in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> are
-always perpendicular and \(\hat{\cal T} \times \hat{r} = \hat{y}\).
+First, notice that \(\hat{\mathcal{T}}\) and \(\hat{r}\) in <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> are
+always perpendicular and \(\hat{\mathcal{T}} \times \hat{r} = \hat{y}\).
 The distance \(r\) is just the radius of the circle and the path of
 integration is the circumference of the circle (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>):
-<p>\[\vec{B} = 
+<p><span class="eqn-block" id="eqn-4">\[\vec{B} = 
        k_m I \int \frac{\hat{y}}{R^2}\,d\ell =
                 k_m I \left(\frac{1}{R^2}\right) (2 \pi R) \hat{y}
-                = 2 \pi k_m \frac{I}{R} \hat{y}\,.\]
+                = 2 \pi k_m \frac{I}{R} \hat{y}\,.\]<span class="eqn-number">(4)</span></span>
 <p>Note that for this case, with the current traveling counterclockwise as
 seen from above, the field is in the positive \(y\)-direction at the origin.
-If the current had been clockwise, the direction of \(\hat{\cal T}\) and
+If the current had been clockwise, the direction of \(\hat{\mathcal{T}}\) and
 hence of \(\hat{B}\) would have been reversed.
 <p><div class="figure-row figure-row-2"><figure id="fig-3"><img src="figures/m125gr03.svg" alt="Figure 3" class="physnet-fig"><figcaption>Fig.&nbsp;3. Calculating the magnetic field near a long straight current-carrying wire.</figcaption></figure><figure id="fig-4"><img src="figures/m125gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The magnetic field of <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> is tangential to an imaginary circle around the current.</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]3dA Long Straight Current-Carrying Wire
+<p><h3 id="pcap-3-d">3d. A Long Straight Current-Carrying Wire</h3>
+
 Now we calculate the magnetic field near a long straight current-carrying
 wire located along the \(y\)-axis with current moving in the positive
 \(y\)-direction.
-First, notice that \(\hat{\cal T} \times \hat{r}\) and \(r\) are not constant
+First, notice that \(\hat{\mathcal{T}} \times \hat{r}\) and \(r\) are not constant
 here as they were in the case of a circle.
 That means they must be written in terms of the variable of integration
 before they can be integrated.
 Since the integral extends the length of the \(y\)-axis, as it is drawn in
 <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>, let us write all of the variables in terms of \(y\) for a point \(P\)
 that is in the plane of the page and to the right of the wire.
-<p>\[d\ell = dy\,,\]
-<p>\[\hat{\cal T} \times \hat{r} = - \hat{z} \sin\theta =
-        - \hat{z}\,R (R^2 + y^2)^{-1/2}\,,\]
+<p><span class="eqn-block" id="eqn-11">\[d\ell = dy\,,\]<span class="eqn-number">(11)</span></span>
+<p><span class="eqn-block" id="eqn-12">\[\hat{\mathcal{T}} \times \hat{r} = - \hat{z} \sin\theta =
+        - \hat{z}\,R (R^2 + y^2)^{-1/2}\,,\]<span class="eqn-number">(12)</span></span>
 <p>and
-<p>\[r = (R^2 + y^2)^{1/2}\,.\]
+<p><span class="eqn-block" id="eqn-13">\[r = (R^2 + y^2)^{1/2}\,.\]<span class="eqn-number">(13)</span></span>
 <p>Then
-<p>\[\vec{B} = - \hat{z}\, k_m\, I\, R\,
-           \int_{-\infty}^{+\infty} \left(R^2 + y^2\right)^{-3/2}\,dy\,.\]
+<p><span class="eqn-block" id="eqn-14">\[\vec{B} = - \hat{z}\, k_m\, I\, R\,
+           \int_{-\infty}^{+\infty} \left(R^2 + y^2\right)^{-3/2}\,dy\,.\]<span class="eqn-number">(14)</span></span>
 <p>We can look up this integral in a Table of Integrals and get
 <p>\[\begin{aligned}\vec{B} & = \left. - \hat{z} k_m I R
                       \frac{y}{R^2} \left(R^2 +
                         y^2\right)^{-1/2} \right|_{-\infty}^{+\infty}\,, \\  & = - \hat{z} k_m I R
                 \left( \frac{2}{R^2} \right) =
-                2 k_m \frac{I}{R}\,(- \hat{z}) \,.\; \help{1}\end{aligned}\]
+                2 k_m \frac{I}{R}\,(- \hat{z}) \,.\; \end{aligned}\]
 
 <p>The result, displayed in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>, is obtained more easily using Ampere's law.
 <p><figure id="fig-5" class="fig-left-framed"><img src="figures/m125gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. Two long parallel current-carrying
@@ -183,15 +183,15 @@ wires is relatively long so that the magnetic field due to the ends is small
 compared to the magnetic field due to the long straight part.
 We know that the magnetic field due to a long straight wire along the
 \(y\)-axis, as shown in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>, is:
-<p>\[\vec{B} = - 2 k_m \frac{I}{R}\,\hat{z}\,,\]
+<p><span class="eqn-block" id="eqn-16">\[\vec{B} = - 2 k_m \frac{I}{R}\,\hat{z}\,,\]<span class="eqn-number">(16)</span></span>
 <p>and we know that the force on a current-carrying wire in a magnetic field
 <p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
 <p>is \(\vec{F}_B = I \vec{\ell} \times \vec{B}\).
 If we take \(I_1\) as the source of the magnetic field and calculate the force
 on a wire carrying a current \(I_2\) in the same direction as \(I_1\) we have
-<p>\[\vec{F}_{2,1} =
+<p><span class="eqn-block" id="eqn-17">\[\vec{F}_{2,1} =
         - I_2 \vec{\ell} \times 2 k_m \frac{I_1 \hat{z}}{R} =
-        - \hat{x} 2 k_m \frac{I_1 I_2 \ell}{R}\]
+        - \hat{x} 2 k_m \frac{I_1 I_2 \ell}{R}\]<span class="eqn-number">(17)</span></span>
 <p>where the direction \(-\hat{x}\) indicates the force is attractive.
 Often both wires are relatively long; in that case the quantity of interest
 is the force per unit of each wire on the other:
@@ -217,7 +217,7 @@ used to evaluate the law's integral.
 </section>
 
 <p>
-<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Pronunciations: l<span class="tex-unknown" title="unknown macro">\</span>"a-pl<span class="tex-unknown" title="unknown macro">\</span>"ass\('\), bee-oh\('\), sav-ar\('\). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Magnetic Field of a Moving Charge: Magnetic
+<aside class="footnotes"><h4>Notes</h4><ol><li id="fn-1">Pronunciations: lä-pläss\('\), bee-oh\('\), sav-ar\('\). <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">See “The Magnetic Field of a Moving Charge: Magnetic
           Interactions” (MISN-0-124). <a href="#fnref-2" class="fn-back">↩</a></li><li id="fn-3">See “The Magnetic Field of a Moving Charge: Magnetic
 Interactions” (MISN-0-124). <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-8">Later we will let the size of the charge shrink to zero. <a href="#fnref-8" class="fn-back">↩</a></li><li id="fn-9">This relation is derived in the Appendix. <a href="#fnref-9" class="fn-back">↩</a></li><li id="fn-4">If interested, see “The Dirac Delta Function,” MISN-0-380.
 If you are not familiar with this function, it may require a significant
@@ -229,7 +229,7 @@ amount of studying before you feel comfortable with it. <a href="#fnref-4" class
 
 <p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
 
-<p>\(k_m = 10^{-7}\,\text{N}\unit{s^{2}}\,\text{C}^{-2}\)
+<p>\(k_m = 10^{-7}\,\text{N}\,\text{s}^{2}\text{}\,\text{C}^{-2}\)
 <p>Note: Problems&nbsp;6 and 7 also occur in this module's <em>Model Exam</em>.
 <p><ol>
 <li><span class="item-label">1.</span> Calculate the magnetic field at the center of a circular current
@@ -245,7 +245,7 @@ distance \(R = 1.0 \times 10^{1}\)&thinsp;cm.
 </ol>
 </li>
 <li><span class="item-label">a.</span> Find the force per unit length on one wire due to the current
-in the other. <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+in the other.<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup></li>
 <li><span class="item-label">b.</span> Show whether the force is attractive or repulsive.</li>
 <li><span class="item-label">c.</span> Calculate \(\vec{B}\) at a point half-way between the two wires.
 </li>
@@ -275,8 +275,8 @@ Find the magnitude of the magnetic field at the center of the square:
 </ol>
 </li>
 <li><span class="item-label">a.</span> if all the currents are in the same direction (apply <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>
-twice). <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
-<li><span class="item-label">b.</span> if only three are in the same direction. <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+twice).<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup></li>
+<li><span class="item-label">b.</span> if only three are in the same direction.<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup></li>
 <li><span class="item-label">c.</span> two are in one direction, the other two are in the opposite
 direction (two cases).
 </li>
@@ -307,11 +307,11 @@ is repulsive) <br>
 </li>
 <li><span class="item-label">c.</span> \(\vec{B} = - 2.4 \times 10^{-7}\,\text{T}\,\hat{z}\)
 </li>
-<li><span class="item-label">3.</span> \(I_1 = 18.8\)&thinsp;A, in direction shown. <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a> <br>
+<li><span class="item-label">3.</span> \(I_1 = 18.8\)&thinsp;A, in direction shown.<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup> <br>
 
 <figure class="fig-centered"><img src="figures/m125gr12.svg" alt="" class="physnet-fig"></figure>
 </li>
-<li><span class="item-label">4.</span> \(\vec{F}/\ell = 4.3 \times 10^{-6}\,\text{N/m}\,\hat{y}\) <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+<li><span class="item-label">4.</span> \(\vec{F}/\ell = 4.3 \times 10^{-6}\,\text{N/m}\,\hat{y}\)<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup></li>
 <li><span class="item-label">5.</span> 
 <ol>
 
@@ -337,7 +337,7 @@ is repulsive) <br>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">To take the limits \(\ell = +\infty\) and \(\ell = -\infty\) in this integral,
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;3b)</span></h3><div class="help-body">To take the limits \(\ell = +\infty\) and \(\ell = -\infty\) in this integral,
 realize that when
 <p>\[\ell \gg R,\; (R^2 + \ell^2)^{-1/2}
                   \approx (\ell^2)^{-1/2} = \ell^{-1}\]
@@ -350,7 +350,7 @@ realize that when
  \left( R^2 +\ell^2 \right)^{-1/2} = \frac{\ell}{R |\ell|} = -\frac{1}{R}.\]
 <p></div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The fields due to the long straight wire and the current loop must be
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from PS, problem 3)</span></h3><div class="help-body">The fields due to the long straight wire and the current loop must be
 equal in magnitude and opposite in direction at the center of the loop.
 By applying the Ampere-Laplace-Biot-Savart law to a counterclockwise
 current loop, the magnetic field at the center of the loop is out of the
@@ -359,38 +359,38 @@ Therefore you must decide, based on the directions involved in evaluating
 \(\hat{T} \times \hat{r}\) for the Ampere-Laplace-Biot-Savart law as applied
 to a long, straight current-carrying wire, which direction for \(\hat{T}\)
 (the direction of the current) will give a magnetic field into the page.
-<p><em>Numerical</em> <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<p><em>Numerical</em><sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup>
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m125gr14.svg" alt="" class="physnet-fig"><figcaption>The forces on wire #3 due to wire #1 and wire #2 are both
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from PS, problem 4)</span></h3><div class="help-body"><figure class="fig-centered"><img src="figures/m125gr14.svg" alt="" class="physnet-fig"><figcaption>The forces on wire #3 due to wire #1 and wire #2 are both
 repulsive and directed as shown in the figure at right.
 The resultant force is the vector sum of the two equal magnitude forces
 <p>\[|\vec{F}_{31}| = |\vec{F}_{32}|;\]
 <p>\[\vec{F}_\text{resultant} = 2 F_{31} \cos\theta\, \hat{y} =
                   2\,F_{32}\,\cos\theta\, \hat{y}\]
-<p><em>Numerical</em> <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a></figcaption></figure>
+<p><em>Numerical</em><sup class="help-link"><a href="#help-8" title="see Sequence [S-8] in the Special Assistance Supplement">[S-8]</a></sup></figcaption></figure>
 
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Take the wires in diagonal pairs.
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from PS, problem 5a)</span></h3><div class="help-body">Take the wires in diagonal pairs.
 Then you should be able to easily show that the \(\vec{B}\) from one member of
 such a pair cancels the \(\vec{B}\) from the other member of the same pair.
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">See [S-4] for one pair, but be able to argue your choice for the pair to
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from PS, problem 5b)</span></h3><div class="help-body">See [S-4] for one pair, but be able to argue your choice for the pair to
 use the technique of [S-4] on.
 Then use <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a> to double the \(\vec{B}\) from one wire of the remaining pair,
 and be able to argue why you can do this.
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">\[\frac{(2)(10^{-7}\unit{N/A^{2}})(0.02\,\text{A})(0.04\,\text{A})}
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from PS, problem 2a)</span></h3><div class="help-body">\[\frac{(2)(10^{-7}\,\text{N/A}^{2}\text{})(0.02\,\text{A})(0.04\,\text{A})}
               {0.1\,\text{m}} = 1.6 \times 10^{-9}\,\text{N/m}\]
 </div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">(10&thinsp;cm/5&thinsp;cm)(\(\pi\))(3&thinsp;A) = 18.8&thinsp;A
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from [S-2])</span></h3><div class="help-body">(10&thinsp;cm/5&thinsp;cm)(\(\pi\))(3&thinsp;A) = 18.8&thinsp;A
 </div></div>
 
-<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">\[F/\ell = \frac{(2)(10^{-7}\unit{N/A^{2}})({\cos}30^\circ)
+<p><div id="help-8" class="help-item"><h3 class="help-num">S-8 <span class="help-origin">(from [S-3])</span></h3><div class="help-body">\[F/\ell = \frac{(2)(10^{-7}\,\text{N/A}^{2}\text{})({\cos}30°)
                         (0.5\,\text{A}+0.5\,\text{A})(0.5\,\text{A})}
                        {2 \times 10^{-2}\,\text{m}} = 4.3 \times 10^{-6} \,\text{N/m}\]
 </div></div>
@@ -403,9 +403,9 @@ and be able to argue why you can do this.
 
 <p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
 
-<p>\(k_m = 10^{-7}\unit{N/A^{2}}\)
+<p>\(k_m = 10^{-7}\,\text{N/A}^{2}\text{}\)
 <p>\(\vec{B} =
-    k_m \, I \int \frac{\hat{\cal T} \times \hat{r}}{r^2}\,d\ell\,.\)
+    k_m \, I \int \frac{\hat{\mathcal{T}} \times \hat{r}}{r^2}\,d\ell\,.\)
 <p><ol>
 <li><span class="item-label">1.</span> See Output Skills K1-K4 in this module's it ID Sheet.</li>
 <li><span class="item-label">2.</span> <figure class="fig-centered"><img src="figures/m125gr10.svg" alt="" class="physnet-fig"><figcaption>Given a circular current loop in the \(x\)-\(z\) plane,

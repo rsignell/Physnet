@@ -61,8 +61,8 @@ involves a surface integral,
                                                       4 \pi k_e Q_S\,,\]
 <p>while Ampere's law involves a “line integral”:
 <p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
-<p>\[\text{Ampere's law:} \qquad \oint_C \vec{B} \cdot d\vec{\ell} =
-                  4 \pi k_m I_C \,.\]
+<p><span class="eqn-block" id="eqn-1">\[\text{Ampere's law:} \qquad \oint_C \vec{B} \cdot d\vec{\ell} =
+                  4 \pi k_m I_C \,.\]<span class="eqn-number">(1)</span></span>
 <p>Here: 
 <ul>
 <li>\(k_m\) is the “magnetic force constant.”</li>
@@ -107,8 +107,8 @@ tangent to \(C\), the circular integration path.</figcaption></figure>
 
 <p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Simple Applications</h2>
 
-<p><h3 id="pcap--">. </h3>
-[]3aMagnetic Field Near a Long Thin Wire
+<p><h3 id="pcap-3-a">3a. Magnetic Field Near a Long Thin Wire</h3>
+
 The magnetic field \(\vec{B}\) at some point in space, associated with a
 current \(I\) in a long straight wire, can be calculated using Ampere's law.
 The integration path we choose is a circle, centered on the
@@ -123,16 +123,16 @@ circle at each point on that circle.
 \(B \oint d\ell\) and \(\oint d\ell\) is just the circumference of the circle.
 Calling the radius of the circle \(r\), which is also the distance from the
 wire to the point where we wish to know \(\vec{B}\), Ampere's law gives:
-<p>\[(B)(2 \pi r) = 4 \pi k_m\,I\,,\]
+<p><span class="eqn-block" id="eqn-2">\[(B)(2 \pi r) = 4 \pi k_m\,I\,,\]<span class="eqn-number">(2)</span></span>
 <p>so:
-<p>\[B =
-   2 k_m \left(\frac{I}{r}\right)\,.\qquad \text{(long straight wire)}\,.\]
+<p><span class="eqn-block" id="eqn-3">\[B =
+   2 k_m \left(\frac{I}{r}\right)\,.\qquad \text{(long straight wire)}\,.\]<span class="eqn-number">(3)</span></span>
 <p>If the wire is not infinitely long, and no wire is, this value of \(B\) is
 accurate to the extent that \(r\) is much less than the distance from the
 field-point to either end of the wire.
 <p><sup class="fn-ref"><a href="#fn-7" id="fnref-7">7</a></sup>
-<p><h3 id="pcap--">. </h3>
-[]3b\(B\) Outside a Long Cylindrical Conductor
+<p><h3 id="pcap-3-b">3b. \(B\) Outside a Long Cylindrical Conductor</h3>
+
 Ampere's law can be used to show that the magnetic field at points outside a
 long circular cylinder carrying a current uniformly distributed over its
 cross section is the same as if all the current were concentrated in a line
@@ -141,22 +141,22 @@ For points outside the cylinder, a circular path of integration will enclose
 all of the current and, again by symmetry, \(\vec{B}\) and \(d\vec{\ell}\)
 are parallel.
 By the same analysis that was used for the long wire, we find:
-<p>\[B = 2 k_m \left(\frac{I}{r}\right); \qquad r > R \,,\]
+<p><span class="eqn-block" id="eqn-4">\[B = 2 k_m \left(\frac{I}{r}\right); \qquad r  \gt  R \,,\]<span class="eqn-number">(4)</span></span>
 <p>where \(r\) is the distance from the center of the wire and \(R\) is the radius
 of the cylinder.
 <p><figure id="fig-4" class="fig-left-framed"><img src="figures/m138gr04.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. Circular path of integration for a
 current uniformly distributed throughout the cross section.</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]3c\(B\) Inside a Long Cylindrical Conductor
+<p><h3 id="pcap-3-c">3c. \(B\) Inside a Long Cylindrical Conductor</h3>
+
 The magnetic field at a point inside a cylindrical conductor carrying
 a current depends on how the current is distributed.
 If it is uniformly distributed over its cross section and a circular path of
 integration is again chosen (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>), the fraction of the current
 enclosed by the path will be \(\pi r^2/\pi R^2\), so that Ampere's law gives:
-<p>\[(B)(2 \pi r) = 4 \pi k_m I \left(\frac{\pi r^2}{\pi R^2}\right)\,,\]
+<p><span class="eqn-block" id="eqn-5">\[(B)(2 \pi r) = 4 \pi k_m I \left(\frac{\pi r^2}{\pi R^2}\right)\,,\]<span class="eqn-number">(5)</span></span>
 <p>or
-<p>\[B = 2 k_m \left(\frac{I \, r}{R^2}\right) \,.\]
+<p><span class="eqn-block" id="eqn-6">\[B = 2 k_m \left(\frac{I \, r}{R^2}\right) \,.\]<span class="eqn-number">(6)</span></span>
 <p>Note that the magnetic field is linearly proportional to \(r\), the distance
 of the field point from the axis.
 <p>
@@ -178,11 +178,11 @@ on each side of the plane would be a good choice (see <a href="#fig-5" class="fi
 Along the sides of the path, normal to the plane, \(\vec{B}\) is perpendicular
 to \(d\vec{\ell}\) so \(\int \vec{B} \cdot d\vec{\ell}\) is zero there.
 Then Ampere's law yields:
-<p>\[\oint \vec{B} \cdot d\vec{\ell} = 2 B \ell = 4 \pi k_m n \ell I\,,\]
+<p><span class="eqn-block" id="eqn-7">\[\oint \vec{B} \cdot d\vec{\ell} = 2 B \ell = 4 \pi k_m n \ell I\,,\]<span class="eqn-number">(7)</span></span>
 <p>where \(n\) is the number of wires per unit length and \(n\ell\) is the total
 number enclosed.
 Solving for \(B\) gives:
-<p>\[B = 2 \pi k_m n I\,.\]
+<p><span class="eqn-block" id="eqn-8">\[B = 2 \pi k_m n I\,.\]<span class="eqn-number">(8)</span></span>
 <p>This equation indicates that the field associated with an infinite plane of
 current is independent of the distance from the plane.
 <p><figure id="fig-7" class="fig-left-framed"><img src="figures/m138gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. The integration path for a very long
@@ -192,8 +192,8 @@ current is independent of the distance from the plane.
 
 <p><section id="sect-4" class="module-section section-text"><h2 id="sect-4">4. Example Devices</h2>
 
-<p><h3 id="pcap--">. </h3>
-[]4aThe Solenoid
+<p><h3 id="pcap-4-a">4a. The Solenoid</h3>
+
 A solenoid is a tightly wound cylindrical helix of current-carrying
 wire, used to make an electrical signal cause a one-directional
 mechanical force (for example, operating a plunger).
@@ -216,17 +216,17 @@ Inside, \(\vec{B}\) is at right angles to the ends of the rectangle so
 the only non-zero contribution to the integral is along the length \(\ell\)
 that is inside the solenoid.
 Therefore:
-<p>\[\oint_C \vec{B} \cdot d\vec{\ell} = B \ell\,.\]
+<p><span class="eqn-block" id="eqn-9">\[\oint_C \vec{B} \cdot d\vec{\ell} = B \ell\,.\]<span class="eqn-number">(9)</span></span>
 <p>The net current through the rectangle is \(n \ell I\), where \(n\) is the number
 of turns per unit length over the entire length \(\ell\).
 Ampere's law then gives for the magnetic field:
-<p>\[B = 4 \pi k_m n I\,, \qquad \text{(solenoid)}\]
+<p><span class="eqn-block" id="eqn-10">\[B = 4 \pi k_m n I\,, \qquad \text{(solenoid)}\]<span class="eqn-number">(10)</span></span>
 <p>indicating a uniform field.
 <p><div class="figure-row figure-row-2"><figure id="fig-8"><img src="figures/m138gr25.svg" alt="Figure 8" class="physnet-fig"><figcaption>Fig.&nbsp;8. A toroid.</figcaption></figure><figure id="fig-9"><img src="figures/m138gr08.svg" alt="Figure 9" class="physnet-fig"><figcaption>Fig.&nbsp;9. The circular path of integration inside a toroid.</figcaption></figure></div>
 
                
-<h3 id="pcap--">. </h3>
-[]4cThe Toroid
+<h3 id="pcap-4-c">4c. The Toroid</h3>
+
 A toroid is a solenoid that has been bent into a circle, assuming the
 space-saving shape of a doughnut (see <a href="#fig-8" class="fig-ref">Fig.&nbsp;8</a>).
 The magnetic field inside a toroid carrying a current \(I\) can be found
@@ -234,16 +234,16 @@ using Ampere's law.
 By symmetry, the magnetic field is tangent to the circular integration path
 shown in <a href="#fig-9" class="fig-ref">Fig.&nbsp;9</a>.
 Therefore:
-<p>\[\oint_C \vec{B} \cdot d\vec{\ell} = (B) (2 \pi r)\,,\]
+<p><span class="eqn-block" id="eqn-11">\[\oint_C \vec{B} \cdot d\vec{\ell} = (B) (2 \pi r)\,,\]<span class="eqn-number">(11)</span></span>
 <p>and the enclosed current is \(N I\), where \(N\) is the total number of turns
 on the solendoid.
 Then:
-<p>\[B = 2 k_m \left(\frac{N I}{r}\right)\,.\]
+<p><span class="eqn-block" id="eqn-12">\[B = 2 k_m \left(\frac{N I}{r}\right)\,.\]<span class="eqn-number">(12)</span></span>
 <p>Notice that, unlike the solenoid, the magnetic field inside the toroid is
 not constant over the cross section of the coil but varies inversely as
 the distance \(r\).
 For points outside a toroid, it can be shown that the field is essentially
-zero if the turns of wire are very close together. <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a> 
+zero if the turns of wire are very close together.<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup> 
 </section>
 
 <p><section id="sect-5" class="module-section section-text"><h2 id="sect-5">5. Using Current Density</h2>
@@ -269,8 +269,8 @@ one space-point to another.
 <p><figure id="fig-10" class="fig-left-framed"><img src="figures/m138gr09.svg" alt="Figure 10" class="physnet-fig"><figcaption>Fig.&nbsp;10. The current density \(\vec{j}\) is not
 always along the normal \(\hat{n}\) to an arbitrary surface element \(dS\).</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]5bThe Current Through a Surface
+<p><h3 id="pcap-5-b">5b. The Current Through a Surface</h3>
+
 We now assume we know the current density \(\vec{j}\) at various space-points
 of interest and we want to find the \(I_C\) used in Ampere's law,
 <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>.
@@ -285,38 +285,38 @@ If we know \(dS\), \(\hat{n}_S\), and \(\hat{j}\), we can get \(dA\) by (see
 Appendix B):
 <p>\[dA = \hat{j} \cdot \hat{n} \,dS\,.\]
 <p>Substituting \(dI = j dA\) we get:
-<p>\[dI = \vec{j} \cdot \hat{n}\, dS\,.\]
+<p><span class="eqn-block" id="eqn-18">\[dI = \vec{j} \cdot \hat{n}\, dS\,.\]<span class="eqn-number">(18)</span></span>
 <p>For the special case of a uniform current flowing perpendicular to
 a plane surface of area \(A\), the equation simplifies to \(I = j A\); a
 simple statement that the current is the current density times area.
 <p>Finally, we integrate both sides of <a href="#eqn-18" class="eqn-ref">Eq.&nbsp;(18)</a> to get:
-<p>\[I_C = \int_S\;\vec{j} \cdot \hat{n}\,dS\,.\]
-<p><h3 id="pcap--">. </h3>
-[]5cAmpere's Law in Terms of the Current Density
+<p><span class="eqn-block" id="eqn-13">\[I_C = \int_S\;\vec{j} \cdot \hat{n}\,dS\,.\]<span class="eqn-number">(13)</span></span>
+<p><h3 id="pcap-5-c">5c. Ampere's Law in Terms of the Current Density</h3>
+
 Ampere's law may be rewritten in terms of the current density, using
 <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, giving:
-<p>\[\oint_C \vec{B} \cdot d\vec{\ell} =
-             4 \pi k_m \int_S \vec{j} \cdot \hat{n} \,dS\,.\]
+<p><span class="eqn-block" id="eqn-14">\[\oint_C \vec{B} \cdot d\vec{\ell} =
+             4 \pi k_m \int_S \vec{j} \cdot \hat{n} \,dS\,.\]<span class="eqn-number">(14)</span></span>
 <p>Here \(C\) is the closed path around the perimeter of the surface \(S\).
 <p><figure id="fig-11" class="fig-left-framed"><img src="figures/m138gr10.svg" alt="Figure 11" class="physnet-fig"><figcaption>Fig.&nbsp;11. A hollow conducting cylinder with a
 non-uniform current density \(j = k/r\).</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]5dExample: Hollow Conducting Cylinder
+<p><h3 id="pcap-5-d">5d. Example: Hollow Conducting Cylinder</h3>
+
 What is the magnetic field at points inside a hollow conducting cylinder
 which is made such that its current density varies inversely as the distance
 from the center of the cylinder?
 The conductor is shown in <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a> and the current density in this problem
 is:
-<p>\[j = \frac{k}{r}; \qquad a < r < b\,,\]
+<p><span class="eqn-block" id="eqn-15">\[j = \frac{k}{r}; \qquad a  \lt  r  \lt  b\,,\]<span class="eqn-number">(15)</span></span>
 <p>where \(k\) is a constant.
 If a circular integration path is chosen, the current enclosed by it,
 the right side of <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>, is:
-<p>\[I_C = \int_a^r \frac{k}{r'} 2 \pi r'\,dr' =
-                              2 \pi k (r - a)\,. \qquad a < r < b \qquad \help{2}\]
+<p><span class="eqn-block" id="eqn-16">\[I_C = \int_a^r \frac{k}{r'} 2 \pi r'\,dr' =
+                              2 \pi k (r - a)\,. \qquad a  \lt  r  \lt  b \qquad \]<span class="eqn-number">(16)</span></span>
 <p>Ampere's law then gives:
-<p>\[B = 4 \pi k_m k \left( \frac{r-a}{r}\right)\,, \qquad a < r < b\]
-<p>for the magnetic field within the conducting material. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><span class="eqn-block" id="eqn-17">\[B = 4 \pi k_m k \left( \frac{r-a}{r}\right)\,, \qquad a  \lt  r  \lt  b\]<span class="eqn-number">(17)</span></span>
+<p>for the magnetic field within the conducting material.<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
 </section>
 
 <p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
@@ -354,7 +354,7 @@ current-carrying wire.
 
 <p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Line Integrals</h2>
 
-<p><div class="figure-full"><figure id="fig-A1"><img src="figures/m138gr11.svg" alt="Figure A1" class="physnet-fig"><figcaption>Fig.&nbsp;A1. </figcaption></figure></div>
+<p><div class="figure-full"><figure id="fig-A1"><img src="figures/m138gr11.svg" alt="Figure A1" class="physnet-fig"><figcaption>Fig.&nbsp;A1.</figcaption></figure></div>
 
 <p>The line integral
 <p>\[\int_a^b \vec{B} \cdot d\vec{\ell}\,,\]
@@ -389,7 +389,7 @@ Two examples of such simplifications are:
 
 <p>If a planar (flat) area \(S\) is projected onto another plane,
 the area \(A\) on the projected-onto plane is given by:
-<p>\[A = \hat{j} \cdot \hat{n}\, S\,.\]
+<p><span class="eqn-block" id="eqn-19">\[A = \hat{j} \cdot \hat{n}\, S\,.\]<span class="eqn-number">(19)</span></span>
 <p>
 Here \(\hat{n}\) is a unit vector normal to the plane of the original area
 and \(\hat{j}\) is a unit vector normal to the projected-onto plane (see
@@ -397,7 +397,7 @@ the sketch).
 This is entirely equivalent to the statement that the areas are related by
 the cosine of the angle between the planes (again see the sketch):
 m138gr24
-<p>\[A = S \cos\theta\,.\]
+<p><span class="eqn-block" id="eqn-20">\[A = S \cos\theta\,.\]<span class="eqn-number">(20)</span></span>
 <p>By “projection” we mean that from every point on the periphery
 of the original area \(S\) we drop a perpendicular to the projected-onto
 plane.
@@ -470,7 +470,7 @@ through the rectangle \(ABCD\).
 </li>
 <li><span class="item-label">3.</span> A long cylindrical conductor of radius R has a uniform current
 density \(\vec{j}\) spread over its cross section.
-Determine the magnetic field produced at points \(r < R\) and \(r > R\) and
+Determine the magnetic field produced at points \(r  \lt  R\) and \(r  \gt  R\) and
 sketch the magnitude of \(\vec{B}\) as a function of \(r\).</li>
 <li><span class="item-label">4.</span> A very long non-conducting cylinder has \(N\) conducting wires
 placed tightly together around its circumference and running parallel to its
@@ -482,17 +482,15 @@ and outside the cylinder.</li>
 <li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m138gr15.svg" alt="" class="physnet-fig"><figcaption>A hollow cylindrical conductor of radii \(a\) and \(b\) has a current
 \(I\) uniformly spread over its cross section.
 <ol>
-
-</ol>
-</figcaption></figure>
-</li>
-<li><span class="item-label">a.</span> Show that the magnetic field inside the conductor (\(a < r < b\))
+<li><span class="item-label">a.</span> Show that the magnetic field inside the conductor (\(a  \lt  r  \lt  b\))
 is:
 <p>\[B = \frac{2 k_m I \left( r^2 - a^2\right)}
                            {\left(b^2 - a^2\right) r}\]</li>
 <li><span class="item-label">b.</span> Express \(B\) in terms of the current density \(j\).</li>
 <li><span class="item-label">c.</span> Show that when \(a \rightarrow 0\) you get the same answer as in
-problem&nbsp;3.
+problem&nbsp;3.</li>
+</ol>
+</figcaption></figure>
 </li>
 <li><span class="item-label">6.</span> A long coaxial cable consists of two concentric conductors.
 The outside conductor carries a current \(I\) equal to that in the
@@ -504,10 +502,10 @@ inside conductor, but in the opposite direction.
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> inside the inner conductor (\(r < a\)),</li>
-<li><span class="item-label">b.</span> between the conductors (\(a < r < b\)),</li>
-<li><span class="item-label">c.</span> inside the outer conductor (\(b < r < c\)), and</li>
-<li><span class="item-label">d.</span> outside the cable (\(r > c\)).
+<li><span class="item-label">a.</span> inside the inner conductor (\(r  \lt  a\)),</li>
+<li><span class="item-label">b.</span> between the conductors (\(a  \lt  r  \lt  b\)),</li>
+<li><span class="item-label">c.</span> inside the outer conductor (\(b  \lt  r  \lt  c\)), and</li>
+<li><span class="item-label">d.</span> outside the cable (\(r  \gt  c\)).
 </li>
 <li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m138gr17.svg" alt="" class="physnet-fig"></figure>
 
@@ -519,7 +517,7 @@ in the above diagram.
 </ol>
 </li>
 <li><span class="item-label">a.</span> Apply Ampere's law to determine the magnetic field at a height \(h\)
-above the center line of the slab for \(h > t/2\).
+above the center line of the slab for \(h  \gt  t/2\).
 Explain carefully how you make use of symmetry in setting up your
 integration path.</li>
 <li><span class="item-label">b.</span> Suppose your integration path had been a rectangular loop with
@@ -615,23 +613,23 @@ the point.
 <li><span class="item-label">f.</span> \(\oint \vec{B} \cdot d\vec{\ell} = 0\) so \(I = 0\) through
 rectangle \(ABCD\).
 </li>
-<li><span class="item-label">3.</span> \(r < R\): \(B = 2 \pi k_m j r\)</li>
-<li>\(r > R\): \(B = 2 \pi k_m \frac{j R^2}{r}\)</li>
+<li><span class="item-label">3.</span> \(r  \lt  R\): \(B = 2 \pi k_m j r\)</li>
+<li>\(r  \gt  R\): \(B = 2 \pi k_m \frac{j R^2}{r}\)</li>
 <li><figure class="fig-centered"><img src="figures/m138gr20.svg" alt="" class="physnet-fig"></figure>
 </li>
-<li><span class="item-label">4.</span> \(r < R\): \(B = 0\)</li>
-<li>\(r > R\): \(B = 2 k_m \frac{N I}{r}\)</li>
+<li><span class="item-label">4.</span> \(r  \lt  R\): \(B = 0\)</li>
+<li>\(r  \gt  R\): \(B = 2 k_m \frac{N I}{r}\)</li>
 <li><span class="item-label">5.</span> \(B = 2 \pi k_m j \left(\frac{r^2 - a^2}{r}\right)\)</li>
 <li><span class="item-label">6.</span> 
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(r < a\):	\(B = 2 k_m \frac{I r}{a^2}\)</li>
-<li><span class="item-label">b.</span> \(a < r < b\):	\(B = 2 k_m \frac{I}{r}\)</li>
-<li><span class="item-label">c.</span> \(b < r < c\):	\(B = 2 k_m \frac{I}{r}
+<li><span class="item-label">a.</span> \(r  \lt  a\):	\(B = 2 k_m \frac{I r}{a^2}\)</li>
+<li><span class="item-label">b.</span> \(a  \lt  r  \lt  b\):	\(B = 2 k_m \frac{I}{r}\)</li>
+<li><span class="item-label">c.</span> \(b  \lt  r  \lt  c\):	\(B = 2 k_m \frac{I}{r}
                     \left(\frac{c^2 - r^2}{c^2 - b^2}\right)\)</li>
-<li><span class="item-label">d.</span> \(r > c\):	\(B = 0\)
+<li><span class="item-label">d.</span> \(r  \gt  c\):	\(B = 0\)
 </li>
 <li><span class="item-label">7.</span> 
 <ol>
@@ -644,7 +642,7 @@ Symmetry tells you that the field, at all points on the line \(CD\), has the
 same value directed to the left and this is also the same as the field at
 all points on line \(AB\) (but there, directed to the right).
 <p>\[B = 2 \pi k_m j t\,,\]
-<p>independent of \(h\) if \(h > t/2\) (the slab is infinitely long).</li>
+<p>independent of \(h\) if \(h  \gt  t/2\) (the slab is infinitely long).</li>
 <li><span class="item-label">b.</span> If the distance below the center line had been \(h'\) in the sketch
 [see part (a)], then Ampere's law would give you \(B x + B' x =
 4 \pi k_m j t x\), where \(B'\) is the field value at points \(h'\) below the
@@ -673,7 +671,7 @@ determine \(B\).</li>
 <p>so at point \(A\):
 <p>\[B = 2 \pi k_m \frac{j R^2}{r}\]</li>
 <li><span class="item-label">H.</span> \(- 4.0\)&thinsp;T&thinsp;m</li>
-<li><span class="item-label">I.</span> \(- 4.0\times10^1\)&thinsp;T&thinsp;m <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">I.</span> \(- 4.0\times10^1\)&thinsp;T&thinsp;m<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup></li>
 <li><span class="item-label">J.</span> \(\oint \vec{B} \cdot d\vec{\ell} = 0\) around the closed path.</li>
 <li><span class="item-label">K.</span> Zero</li>
 <li><span class="item-label">L.</span> \(3.2 \times 10^6\)&thinsp;A, directed into the page.</li>
@@ -691,17 +689,17 @@ determine \(B\).</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><figure class="fig-centered"><img src="figures/m138gr23.svg" alt="" class="physnet-fig"><figcaption>For any shaped path enclosing the entire toroid, the net current is zero.
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;4c)</span></h3><div class="help-body"><figure class="fig-centered"><img src="figures/m138gr23.svg" alt="" class="physnet-fig"><figcaption>For any shaped path enclosing the entire toroid, the net current is zero.
  By Ampere's law,
  
  \[\oint_C \vec{B} \cdot d\vec{\ell} = 0\,,\]
  
  which implies \(B = 0\) since the path is arbitrary.</figcaption></figure>
 
- <span class="tex-unknown" title="unknown macro">\</span>
+ 
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(I = \int_S \vec{j} \cdot \hat{n} \,dS\) with \(\vec{j} =
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;4e)</span></h3><div class="help-body">\(I = \int_S \vec{j} \cdot \hat{n} \,dS\) with \(\vec{j} =
  \frac{k}{r}\hat{r}\), giving:
  
 <p> \(I = \int_0^{2\pi} \int_a^r
@@ -714,14 +712,14 @@ determine \(B\).</li>
  
 <p></div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">\(\oint \vec{B} \cdot d\vec{\ell} = 4 \pi k_m I\)
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Section&nbsp;4e)</span></h3><div class="help-body">\(\oint \vec{B} \cdot d\vec{\ell} = 4 \pi k_m I\)
  
 <p> \((B) (2 \pi r) = 8 \pi^2 k_m k (r - a)\)
  
 <p> \(B = 4 \pi k_m k \left(\frac{r - a}{r} \right)\)
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">An integral is just the limit of a sum:
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;problem 8)</span></h3><div class="help-body">An integral is just the limit of a sum:
 \[\oint \vec{B} \cdot d\vec{\ell} =
        \lim_{\Delta \vec{\ell} \rightarrow 0}
 	   \sum \vec{B} \cdot \Delta\vec{\ell}\,.\]

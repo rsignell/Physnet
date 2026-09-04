@@ -77,10 +77,10 @@ Hence, with forces \(\vec{F}_1\), \(\vec{F}_2\), \(\ldots\), \(\vec{F}_n\) produ
 torques \(\vec{\tau}_1\), \(\vec{\tau}_2\), \(\ldots\), \(\vec{\tau}_n\) relative to
 some arbitrary fixed point, the conditions for equilibrium are that the resultant force,
 \(\vec{F}_R\), and the resultant torque, \(\vec{\tau}_R\), are both zero:
-<p>\[\vec{F}_R \equiv \sum^n_{i=1} \vec{F}_i \equiv \vec{F}_1 + \vec{F}_2 + \dots +
-         \vec{F}_n = 0\,,\]
-<p>\[\vec{\tau}_R \equiv \sum^n_{i=1} \vec{\tau}_i =
-          \vec{\tau}_1 + \vec{\tau}_2 + \ldots + \vec{\tau}_n = 0\,.\]
+<p><span class="eqn-block" id="eqn-1">\[\vec{F}_R \equiv \sum^n_{i=1} \vec{F}_i \equiv \vec{F}_1 + \vec{F}_2 + \dots +
+         \vec{F}_n = 0\,,\]<span class="eqn-number">(1)</span></span>
+<p><span class="eqn-block" id="eqn-2">\[\vec{\tau}_R \equiv \sum^n_{i=1} \vec{\tau}_i =
+          \vec{\tau}_1 + \vec{\tau}_2 + \ldots + \vec{\tau}_n = 0\,.\]<span class="eqn-number">(2)</span></span>
 <p><h3 id="pcap-2-b">2b. Using Vector Components</h3>
 
 In finding solutions to problems, component equations are often found to be more useful
@@ -88,8 +88,8 @@ than vector equations such as <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a>
 To find the Cartesian \(x\)-component equations equivalent to <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, we simply
 multiply each of those equations by the \(x\)-coordinate unit vector, \(\hat{x}\), and obtain the
 \(x\)-components of the resultant force and torque vectors:
-<p>\[F_{Rx} = \vec{F}_R \cdot \hat{x} = \sum^N_{i=1}(\vec{F}_i \cdot \hat{x}) = \sum^N_{i=1}F_{ix} = 0\,,\]
-<p>\[\tau_{Rx} = \vec{\tau}_R \cdot \hat{x} = \sum^N_{i=1}(\vec{\tau}_i \cdot \hat{x}) = \sum^N_{i=1}\tau_{ix} = 0\,,\]
+<p><span class="eqn-block" id="eqn-3">\[F_{Rx} = \vec{F}_R \cdot \hat{x} = \sum^N_{i=1}(\vec{F}_i \cdot \hat{x}) = \sum^N_{i=1}F_{ix} = 0\,,\]<span class="eqn-number">(3)</span></span>
+<p><span class="eqn-block" id="eqn-4">\[\tau_{Rx} = \vec{\tau}_R \cdot \hat{x} = \sum^N_{i=1}(\vec{\tau}_i \cdot \hat{x}) = \sum^N_{i=1}\tau_{ix} = 0\,,\]<span class="eqn-number">(4)</span></span>
 <p>where \(F_{ix}\) indicates the \(x\)-component of the i<sup>th</sup> force.
 There are similar equations for the \(y\)- and \(z\)-components, obtained
 through multiplying by the unit vectors \(\hat{y}\) and \(\hat{z}\) rather than by \(\hat{x}\).
@@ -124,7 +124,7 @@ An object's Center of Gravity is a single point whose position can be calculated
 of weight within the actual object.
 Once the position of the Center of Gravity, \(\vec{r}\)<sub>CG</sub>, has been determined, the resultant gravitational torque on the object
 is given by (see this module's Appendix A):
-<p>\[\vec{\tau}_R = \vec{r}_{CG} \times W\hat{g}\,,\]
+<p><span class="eqn-block" id="eqn-5">\[\vec{\tau}_R = \vec{r}_{CG} \times W\hat{g}\,,\]<span class="eqn-number">(5)</span></span>
 <p>where \(\hat{g}\) is a unit vector pointing downward, toward the center of the earth, and \(W\) is
 the weight of the object (the weight of the object is the magnitude of the gravitational
 force on the object).
@@ -148,7 +148,7 @@ in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>b.
 The point where the two lines cross is the Center of Gravity.
 If we repeat the procedure again, as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>c, all three lines will cross at the Center of Gravity.
 Any number of such lines can be drawn and the lines will all cross each other at the Center of Gravity
-<span class="tex-unknown" title="unknown macro">\Derivation</span>(derived in Appendix C; Appendices A and B are prerequisites)Appendix A.
+<span class="derivation-note">(derived in Appendix C; Appendices A and B are prerequisites)</span>.
 <p><span class="tryit">Try it:</span>  Cut out an oblong piece of cardboard or wood and suspend it from an edge using a thread or
 string as appropriate for its weight.
 Then: (1) carry out the above-outlined procedure and see for yourself that all of the lines you draw on
@@ -160,13 +160,13 @@ orientation about this point.
 
 The vector to the Center of Gravity of a system of \(N\) particles, for cases where the system is small
 compared to the size of the earth, can be calculated to high accuracy from this equation for the
-system's Center of Mass <span class="tex-unknown" title="unknown macro">\Derivation</span>(derived in Appendix A)Appendix A:
-<p>\[\vec{r}_{CG} = \vec{r}_{CM} =
-        \frac{1}{M}\sum^N_{i=1} m_i\,\vec{r}_i \qquad \text{(system small compared to earth)}\,,\]
+system's Center of Mass <span class="derivation-note">(derived in Appendix A)</span>:
+<p><span class="eqn-block" id="eqn-6">\[\vec{r}_{CG} = \vec{r}_{CM} =
+        \frac{1}{M}\sum^N_{i=1} m_i\,\vec{r}_i \qquad \text{(system small compared to earth)}\,,\]<span class="eqn-number">(6)</span></span>
 <p>where the i<sup>th</sup> particle has mass \(m_i\) and position vector \(\vec{r}_i\).
-For an extended object we have a similar equation <span class="tex-unknown" title="unknown macro">\Derivation</span>(derived in Appendix B; Appendix A is
-prerequisite)Appendix B:
-<p>\[\vec{r}_{CG} = \vec{r}_{CM} = \frac{1}{M}\int \vec{r}\,dm(\vec{r}) \qquad \text{(object small compared to earth)}\,,\]
+For an extended object we have a similar equation <span class="derivation-note">(derived in Appendix B; Appendix A is
+prerequisite)</span>:
+<p><span class="eqn-block" id="eqn-7">\[\vec{r}_{CG} = \vec{r}_{CM} = \frac{1}{M}\int \vec{r}\,dm(\vec{r}) \qquad \text{(object small compared to earth)}\,,\]<span class="eqn-number">(7)</span></span>
 <p>where the integral is over the volume of the extended object.
 <p></section>
 
@@ -187,25 +187,25 @@ for the sign in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.</figcaption></
 for the sign in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.</figcaption></figure>
 
 <p>We start by taking the \(x\)-component of <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>:
-<p>\[x_{CG} = x_{CM} = \frac{1}{M} \int x\,dM\,.\]
+<p><span class="eqn-block" id="eqn-8">\[x_{CG} = x_{CM} = \frac{1}{M} \int x\,dM\,.\]<span class="eqn-number">(8)</span></span>
 <p>To convert to an integral over space, we define the surface density of the sign, its mass per
 unit area, as \(\sigma\) so that \(M = \sigma\,A\) and \(dM = \sigma\,dA\).
 Here \(A\) is the area of the sign.
 Then we can rewrite <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> as:
-<p>\[x_{CM} = \frac{1}{A} \int x\,dA\,.\]
+<p><span class="eqn-block" id="eqn-9">\[x_{CM} = \frac{1}{A} \int x\,dA\,.\]<span class="eqn-number">(9)</span></span>
 <p>We now interpret \(dA\) to be all parts of the area that have the same value for \(x\).
 An example is shown as the shaded area in <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>.
 The size of the area is \(dA = y\,dx\) and all parts of it have the same value for \(x\).
 Therefore the integral over all area becomes:
-<p>\[x_{CM} = \frac{1}{A} \int_0^b x\,y(x)\,dx\,.\]
+<p><span class="eqn-block" id="eqn-10">\[x_{CM} = \frac{1}{A} \int_0^b x\,y(x)\,dx\,.\]<span class="eqn-number">(10)</span></span>
 <p>We interpret this integral as: “We weight each element of area, \(dA = y(x)\,dx\), with its
 value of \(x\), and integrate over the whole area.”
 Now \(y(x) = hx/b\) and \(A = bh/2\) so we get:
-<p>\[x_{CM} = \frac{2}{bh} \int_0^b x\,\frac{hx}{b}\,dx = \frac{2}{b^2} \int_0^b\,x^2\,dx =
-\frac{2}{3}\,b\,,\]
+<p><span class="eqn-block" id="eqn-11">\[x_{CM} = \frac{2}{bh} \int_0^b x\,\frac{hx}{b}\,dx = \frac{2}{b^2} \int_0^b\,x^2\,dx =
+\frac{2}{3}\,b\,,\]<span class="eqn-number">(11)</span></span>
 <p>hence:
 <p>\[x_{CG} = \frac{2}{3}\,b\,.\]
-<p><span class="tryit">Try it:</span>  Show that the \(y\)-position of the Center of Gravity is at \(h/3\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+<p><span class="tryit">Try it:</span>  Show that the \(y\)-position of the Center of Gravity is at \(h/3\).<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>
 <p></section>
 
 <p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
@@ -222,41 +222,41 @@ This means that the force on each particle in the system is just the force of gr
 weight.
 We write the weight of the i<sup>th</sup> particle as \(\vec{w}\)<sub>i</sub>, whereupon the gravitational
 torque on the i<sup>th</sup> particle becomes:
-<p>\[\vec{\tau}_i = \vec{r}_i \times \vec{F}_i = \vec{r}_i \times \vec{w}_i\,.\]
+<p><span class="eqn-block" id="eqn-A1">\[\vec{\tau}_i = \vec{r}_i \times \vec{F}_i = \vec{r}_i \times \vec{w}_i\,.\]<span class="eqn-number">(A1)</span></span>
 <p>Then <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> for the resultant torque on the system is:
-<p>\[\vec{\tau}_R = \sum^N_{i=1} \vec{\tau}_i =  \sum^N_{i=1} \vec{r}_i \times \vec{w}_i\,.\]
+<p><span class="eqn-block" id="eqn-A4">\[\vec{\tau}_R = \sum^N_{i=1} \vec{\tau}_i =  \sum^N_{i=1} \vec{r}_i \times \vec{w}_i\,.\]<span class="eqn-number">(A4)</span></span>
 <p>The weights are all forces in the downward direction, toward the center of the earth.
 We denote that direction with the unit vector \(\hat{g}\) so \(\vec{w}_i = w_i \hat{g}\) and we have:
-<p>\[\vec{\tau}_R = \sum^N_{i=1} \vec{r}_i \times \vec{w}_i =
+<p><span class="eqn-block" id="eqn-A8">\[\vec{\tau}_R = \sum^N_{i=1} \vec{r}_i \times \vec{w}_i =
                         \sum^N_{i=1} \vec{r}_i \times w_i \hat{g} =
-                        \left(\sum^N_{i=1} \vec{r}_i w_i\right) \times \hat{g}\,,\]
+                        \left(\sum^N_{i=1} \vec{r}_i w_i\right) \times \hat{g}\,,\]<span class="eqn-number">(A8)</span></span>
 <p>where we have factored out the cross product with \(\hat{g}\) because it is common to all terms in the sum.
 The vector sum in the parenthesis in <a href="#eqn-A8" class="eqn-ref">Eq.&nbsp;(A8)</a> is just the sum of the position vectors
 to the individual particles but with each position vector weighted by the weight of the particle.
 This vector sum, divided by the weight of the system, is the “Center of Gravity”
 of the system:
-<p>\[\vec{r}_{CG} = \frac{1}{W}\,\sum^N_{i=1} w_i\,\vec{r}_i\,.\]
+<p><span class="eqn-block" id="eqn-A7">\[\vec{r}_{CG} = \frac{1}{W}\,\sum^N_{i=1} w_i\,\vec{r}_i\,.\]<span class="eqn-number">(A7)</span></span>
 <p>Finally, we rewrite <a href="#eqn-A7" class="eqn-ref">Eq.&nbsp;(A7)</a> to emphasize that each particle's position vector is weighted
 by the particle's fraction of the system's weight:
-<p>\[\vec{r}_{CG} = \sum^N_{i=1} \frac{w_i}{W}\,\vec{r}_i\,.\]
+<p><span class="eqn-block" id="eqn-A9">\[\vec{r}_{CG} = \sum^N_{i=1} \frac{w_i}{W}\,\vec{r}_i\,.\]<span class="eqn-number">(A9)</span></span>
 <p>Using <a href="#eqn-A9" class="eqn-ref">Eq.&nbsp;(A9)</a>, <a href="#eqn-A8" class="eqn-ref">Eq.&nbsp;(A8)</a> can be written:
-<p>\[\vec{\tau}_R = \vec{r}_{CG} \times W\hat{g}\,.\]
+<p><span class="eqn-block" id="eqn-A10">\[\vec{\tau}_R = \vec{r}_{CG} \times W\hat{g}\,.\]<span class="eqn-number">(A10)</span></span>
 <p>This demonstrates that the resultant gravitational torque on a system of particles is exactly
 the same as what would be produced by a single point particle weighing \(W\), located at the
 system's Center of Gravity.
 <p>We can write the weight of each contributing particle as its mass times the acceleration of gravity,
 \(g\), and the total weight of the system, \(W\), as \(g\) times the total mass of the system, \(M\).
 Then <a href="#eqn-A9" class="eqn-ref">Eq.&nbsp;(A9)</a> becomes:
-<p>\[\vec{r}_{CG} = \frac{1}{M} \sum^N_{i=1} m_i\,\vec{r}_i \qquad \text{(system small compared to earth)}\,.\]
+<p><span class="eqn-block" id="eqn-A11">\[\vec{r}_{CG} = \frac{1}{M} \sum^N_{i=1} m_i\,\vec{r}_i \qquad \text{(system small compared to earth)}\,.\]<span class="eqn-number">(A11)</span></span>
 <p>For an ordinary-size system near the surface of the earth, this equation for the Center of Gravity,
 <a href="#eqn-A11" class="eqn-ref">Eq.&nbsp;(A11)</a>, no longer contains any reference to gravity.
 In fact, it is the equation that defines the position vector to the “Center of Mass” of the system,
 defined by giving each particle's position vector a weight equal to its fraction of the mass
 of the system of particles:
 <p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
-<p>\[\vec{r}_{CM} \equiv \frac{1}{M} \sum^N_{i=1} m_i\,\vec{r}_i\,.\]
+<p><span class="eqn-block" id="eqn-A12">\[\vec{r}_{CM} \equiv \frac{1}{M} \sum^N_{i=1} m_i\,\vec{r}_i\,.\]<span class="eqn-number">(A12)</span></span>
 <p>Then one can write:
-<p>\[\vec{r}_{CG} = \vec{r}_{CM} \qquad \text{(system small compared to earth)}\,,\]
+<p><span class="eqn-block" id="eqn-A13">\[\vec{r}_{CG} = \vec{r}_{CM} \qquad \text{(system small compared to earth)}\,,\]<span class="eqn-number">(A13)</span></span>
 <p></section>
 
 <p><section id="sect-B" class="module-section section-text"><h2 id="sect-B">B. Centers of Gravity and Mass for an Object</h2>
@@ -265,19 +265,19 @@ Any extended object can be treated as if it is composed of many infinitesimal ob
 each having an infinitesimal mass \(dm\) that contributes to <a href="#eqn-A9" class="eqn-ref">Eq.&nbsp;(A9)</a>.
 Then the sum in <a href="#eqn-A9" class="eqn-ref">Eq.&nbsp;(A9)</a> becomes an integral over the entire object:
 <p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
-<p>\[\vec{r}_{CG} = \frac{1}{M}\int \vec{r}\,dm(\vec{r}) \qquad \text{(object small compared to earth)}\,,\]
+<p><span class="eqn-block" id="eqn-B1">\[\vec{r}_{CG} = \frac{1}{M}\int \vec{r}\,dm(\vec{r}) \qquad \text{(object small compared to earth)}\,,\]<span class="eqn-number">(B1)</span></span>
 <p>Here the integral is over the mass of each infinitesimal element of the extended object.
 The infinitesimal mass of the infinitesimal element at position \(\vec{r}\) has been written as
 \(dm(\vec{r})\).
 <a href="#eqn-B1" class="eqn-ref">Eq.&nbsp;(B1)</a> is actually the definition of an extended object's Center of Mass:
-<p>\[\vec{r}_{CM} \equiv \frac{1}{M}\int \vec{r}\,dm(\vec{r})\,,\]
+<p><span class="eqn-block" id="eqn-B4">\[\vec{r}_{CM} \equiv \frac{1}{M}\int \vec{r}\,dm(\vec{r})\,,\]<span class="eqn-number">(B4)</span></span>
 <p>so one can write:
-<p>\[\vec{r}_{CG} = \vec{r}_{CM} \qquad \text{(object small compared to earth)}\,,\]
+<p><span class="eqn-block" id="eqn-B2">\[\vec{r}_{CG} = \vec{r}_{CM} \qquad \text{(object small compared to earth)}\,,\]<span class="eqn-number">(B2)</span></span>
 <p>Note that <a href="#eqn-A10" class="eqn-ref">Eq.&nbsp;(A10)</a> is the same as <a href="#eqn-B2" class="eqn-ref">Eq.&nbsp;(B2)</a> so the same equation is valid for both extended
 systems and discrete ones.
 <p>One can multiply <a href="#eqn-B1" class="eqn-ref">Eq.&nbsp;(B1)</a> by the unit vector in the \(x\)-direction and get the \(x\)-component
 of the vector to the Center of Gravity:
-<p>\[x_{CG} = \frac{1}{M}\int x\,dm\,. \qquad \text{(object small compared to earth)}\,,\]
+<p><span class="eqn-block" id="eqn-B3">\[x_{CG} = \frac{1}{M}\int x\,dm\,. \qquad \text{(object small compared to earth)}\,,\]<span class="eqn-number">(B3)</span></span>
 <p>and there are similar equations for the \(y\)- and \(z\)-components, obtained by using \(\hat{y}\) and
 \(\hat{z}\) in place of \(\hat{x}\).
 </section>
@@ -309,9 +309,7 @@ through the Center of Gravity, no matter what suspension point is used.
 <p>
 <aside class="footnotes"><h4>Notes</h4><ol><li id="fn-3">Note that in this sentence the word “weight” is used in the mathematical or statistical
 sense, not in the gravitational sense. <a href="#fnref-3" class="fn-back">↩</a></li><li id="fn-4">The conversion of a sum over discrete objects to an integral over infinitesimal
-parts of an extended object is developed in <span class="tex-unknown" title="unknown macro">\Modref</span>1Simple Differentiation and Integration. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See Sect.&thinsp;3 for the reason this is correct. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-PS1">See sequence [S-1] near the end of this module's <em>Special
-Assistance Supplement</em>. <a href="#fnref-PS1" class="fn-back">↩</a></li><li id="fn-AS1">\(\rho\) is a function of position---we allow the mass density to
-vary across the object. <a href="#fnref-AS1" class="fn-back">↩</a></li></ol></aside>
+parts of an extended object is developed in <a href="../m1/" class="module-ref" title="Simple Differentiation and Integration">MISN-0-1</a>. <a href="#fnref-4" class="fn-back">↩</a></li><li id="fn-5">See Sect.&thinsp;3 for the reason this is correct. <a href="#fnref-5" class="fn-back">↩</a></li><li id="fn-1">PS1 <a href="#fnref-1" class="fn-back">↩</a></li><li id="fn-2">AS1 <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
 
 <hr class="section-divider">
 
@@ -354,8 +352,7 @@ the points (\(x\),\(y\)) = (0<span class="unit">&thinsp;cm</span>,0<span class="
 <li><span class="item-label">b.</span> Find the force exerted on the bridge by the wall of the building at
            point \(P\).
            (Hint: you can consider the weight of the drawbridge to be acting on
-           its center of gravity at a point halfway along its length.)
-           <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+           its center of gravity at a point halfway along its length.)<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
 </li>
 <li><span class="item-label">5.</span> <figure class="fig-centered"><img src="figures/m6gr11.svg" alt="" class="physnet-fig"></figure>
 
@@ -375,16 +372,14 @@ the points (\(x\),\(y\)) = (0<span class="unit">&thinsp;cm</span>,0<span class="
             The boom weighs 1000<span class="unit">&thinsp;lb</span>.
             The center of gravity of the boom is halfway along its length.
 <ol>
-
-</ol>
-</figcaption></figure>
-</li>
 <li><span class="item-label">a.</span> Draw a one-body force diagram showing all the forces acting on the boom.</li>
 <li><span class="item-label">b.</span> Find the tension in the cable.</li>
 <li><span class="item-label">c.</span> Find the force exerted by the wall on the boom at the pivot point
-           \(P\).
+           \(P\).</li>
+</ol>
 
-           </li>
+           </figcaption></figure>
+</li>
 <li><span class="item-label">7.</span> <figure class="fig-centered"><img src="figures/m6gr13.svg" alt="" class="physnet-fig"><figcaption>Find the center of mass of this right triangle with
            base \(b\) and height \(h\), assuming it has a constant surface mass
            density \(\sigma\).  (Hint: \(dM = \sigma\,dy\,dx\)).</figcaption></figure>
@@ -437,8 +432,9 @@ the points (\(x\),\(y\)) = (0<span class="unit">&thinsp;cm</span>,0<span class="
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(T = 2000\,\text{lb}\). (NOT 2000<span class="unit">&thinsp;lb</span>/\(\cos 60^\circ\)) <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>&thinsp;
-<p><sup class="fn-ref"><a href="#fn-PS1" id="fnref-PS1">PS1</a></sup></li>
+<li><span class="item-label">a.</span> \(T = 2000\,\text{lb}\). (NOT 2000<span class="unit">&thinsp;lb</span>/\(\cos 60°\))<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>&thinsp;
+<p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>See sequence [S-1] near the end of this module's <em>Special
+Assistance Supplement</em>.</li>
 <li><span class="item-label">b.</span> \(F_{\text{wall},x} = 1000\sqrt{3}\,\text{lb}\).\( = 1.7 \times 10^3\,\text{lb}\)<br>
 
            \(F_{\text{wall},y} = 1000\,\text{lb}\).</li>
@@ -488,29 +484,29 @@ the points (\(x\),\(y\)) = (0<span class="unit">&thinsp;cm</span>,0<span class="
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> Statement <span class="dotfill">&thinsp;·····&thinsp;</span> AS1</li>
-<li><span class="item-label">b.</span> Properties <span class="dotfill">&thinsp;·····&thinsp;</span> AS1
+<li><span class="item-label">a.</span> Statement <span class="fill-line">&nbsp;</span> AS1</li>
+<li><span class="item-label">b.</span> Properties <span class="fill-line">&nbsp;</span> AS1
 </li>
 <li><span class="item-label">2.</span> APPLICATION OF THE CONDITIONS
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> Strategies for Problem Solving <span class="dotfill">&thinsp;·····&thinsp;</span> AS2</li>
-<li><span class="item-label">b.</span> An Example <span class="dotfill">&thinsp;·····&thinsp;</span> AS3</li>
-<li><span class="item-label">c.</span> Forces Add to Zero <span class="dotfill">&thinsp;·····&thinsp;</span> AS4</li>
-<li><span class="item-label">d.</span> Torques Add to Zero <span class="dotfill">&thinsp;·····&thinsp;</span> AS5
+<li><span class="item-label">a.</span> Strategies for Problem Solving <span class="fill-line">&nbsp;</span> AS2</li>
+<li><span class="item-label">b.</span> An Example <span class="fill-line">&nbsp;</span> AS3</li>
+<li><span class="item-label">c.</span> Forces Add to Zero <span class="fill-line">&nbsp;</span> AS4</li>
+<li><span class="item-label">d.</span> Torques Add to Zero <span class="fill-line">&nbsp;</span> AS5
 </li>
 <li><span class="item-label">3.</span> CENTER OF GRAVITY OR CENTER OF MASS
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> Volume Mass Distribution <span class="dotfill">&thinsp;·····&thinsp;</span> AS5</li>
-<li><span class="item-label">b.</span> Surface Mass Distribution <span class="dotfill">&thinsp;·····&thinsp;</span> AS7</li>
-<li><span class="item-label">c.</span> Constant Surface Density <span class="dotfill">&thinsp;·····&thinsp;</span> AS7</li>
-<li><span class="item-label">d.</span> Guessing the CM <span class="dotfill">&thinsp;·····&thinsp;</span> AS8</li>
-<li><span class="item-label">e.</span> Objects with Holes <span class="dotfill">&thinsp;·····&thinsp;</span> AS8
+<li><span class="item-label">a.</span> Volume Mass Distribution <span class="fill-line">&nbsp;</span> AS5</li>
+<li><span class="item-label">b.</span> Surface Mass Distribution <span class="fill-line">&nbsp;</span> AS7</li>
+<li><span class="item-label">c.</span> Constant Surface Density <span class="fill-line">&nbsp;</span> AS7</li>
+<li><span class="item-label">d.</span> Guessing the CM <span class="fill-line">&nbsp;</span> AS8</li>
+<li><span class="item-label">e.</span> Objects with Holes <span class="fill-line">&nbsp;</span> AS8
 </li>
 </ol>
 
@@ -626,10 +622,10 @@ and \(W_2\).</figcaption></figure>
 
 <p>From the condition that the clockwise and counterclockwise torques balance:
 <p>\[h T = r_1 W_1 + r_2 W_2\]
-<p>\[r_1 = \frac{L_1}{2} \cos 30^\circ = \sqrt{3} \frac{L_1}{4} = \frac{5 \sqrt{3}}{4}\,\text{ft}\,.\]
-<p>\[r_2 = L_1 \cos 30^\circ + \frac{L_2}{2} \sin 30^\circ =
+<p>\[r_1 = \frac{L_1}{2} \cos 30° = \sqrt{3} \frac{L_1}{4} = \frac{5 \sqrt{3}}{4}\,\text{ft}\,.\]
+<p>\[r_2 = L_1 \cos 30° + \frac{L_2}{2} \sin 30° =
 \left( \frac{5 \sqrt{3}}{2} + \frac{3}{4} \right)\,\text{ft}\,.\]
-<p>\[h = L_1 \cos 60^\circ = \frac{L_1}{2} = 2.5\,\text{ft}\,.\]
+<p>\[h = L_1 \cos 60° = \frac{L_1}{2} = 2.5\,\text{ft}\,.\]
 <p>This allows us to solve for \(T\),
 <p>\[2.5\,\text{ft}\,T = \frac{5 \sqrt{3}}{4}\,\text{ft} \times 150\,\text{lb} +
        \left( \frac{5 \sqrt{3}}{2} + \frac{3}{4} \right)\,\text{ft} \times 90\,\text{lb}.\]
@@ -654,7 +650,8 @@ We can make the above equations easier to grasp if we replace the
 “infinitesimal mass element” \(dM\) by the more physical infinitesimal volume
 element \(dV = dx\,dy\,dz\).
 If the mass density of the object is \(\rho (\vec{r}) = \rho(x,y,z)\),
-<p><sup class="fn-ref"><a href="#fn-AS1" id="fnref-AS1">AS1</a></sup>
+<p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>\(\rho\) is a function of position---we allow the mass density to
+vary across the object.
 <p>in units of mass per unit volume (e.g.,<span class="unit">&thinsp;kg/m<sup>3</sup></span>) then the (infinitesimal)
 amount of mass contained in the (infinitesimal) volume element \(dV\) around the
 point \(\vec{r}\) is
@@ -707,19 +704,9 @@ Therefore, the position of the center of mass is given by:
 <p>The surface mass density \(\sigma\) is a constant and comes outside both
 integrals, where it cancels out of the problem entirely.
 <p>We work out the integrals:
-<p><span class="tex-unknown" title="unknown macro">\FiveEqns</span>
-x_\text{CM} & = \(\dfrac{1}{b h/2}\) \int _0^b &thinsp;dx \int _0^(h/b)x &thinsp;dy&thinsp; &thinsp;x
-           & = \(\dfrac{2}{b h}\) \int _0^b &thinsp;dx&thinsp;x \left | y \right |_0^(h/b)x
-           & = \(\dfrac{2}{b h}\) \int _0^b &thinsp;dx&thinsp;(h/b)x^2
-           & = \(\dfrac{2}{b^2}\) \left | \(\dfrac{1}{3}\) x^3 \right |_0^b
-           & = \(\dfrac{2}{3}\)b,
+<p>\[\begin{aligned}x_\text{CM} & = \frac{1}{b h/2} \int_0^b \,dx \int_0^{(h/b)x} \,dy\, \,x \\ & = \frac{2}{b h} \int_0^b \,dx\,x \left| y \right|_0^{(h/b)x} \\ & = \frac{2}{b h} \int_0^b \,dx\,(h/b)x^2 \\ & = \frac{2}{b^2} \left| \frac{1}{3} x^3 \right|_0^b \\ & = \frac{2}{3}b,\end{aligned}\]
 <p>and
-<p><span class="tex-unknown" title="unknown macro">\FiveEqns</span>
-y_\text{CM} & = \(\dfrac{1}{b h\sigma/2}\)\int _0^b&thinsp;dx&thinsp;\int _0^(h/b)x&thinsp;dy&thinsp;y
-           & = \(\dfrac{2}{b h}\)\int _0^b&thinsp;dx&thinsp;\left |\(\dfrac{1}{2}\)y^2\right |_0^(h/b)x
-           & = \(\dfrac{1}{b h}\)\int _0^b&thinsp;dx&thinsp;(h/b)^2 x^2
-           & = \(\dfrac{h}{b^3}\) \left | \(\dfrac{1}{3}\)x^3 \right |_0^b
-           & = \(\dfrac{1}{3}\) h&thinsp;,
+<p>\[\begin{aligned}y_\text{CM} & = \frac{1}{b h\sigma/2}\int_0^b\,dx\,\int_0^{(h/b)x}\,dy\,y \\ & = \frac{2}{b h}\int_0^b\,dx\,\left|\frac{1}{2}y^2\right|_0^{(h/b)x} \\ & = \frac{1}{b h}\int_0^b\,dx\,(h/b)^2 x^2 \\ & = \frac{h}{b^3} \left| \frac{1}{3}x^3 \right|_0^b \\ & = \frac{1}{3} h\,,\end{aligned}\]
 <p>The only conceptual problem was picking the right limits---the rest is
 ordinary calculus and algebra.
 <p><h3 id="pcap-3-d">3d. Guessing the CM</h3>
@@ -794,7 +781,7 @@ cutout:
                            M_\text{cut-out} \vec{r}_\text{CM,cut-out}\]
 <p>where:
 \[M_\text{total} = M_\text{object} + M_\text{cut-out}\,.\]
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><ul>
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;problem 4)</span></h3><div class="help-body"><ul>
 <li><span class="item-label">1.</span> <figure class="fig-centered"><img src="figures/m6gr22.svg" alt="" class="physnet-fig"><figcaption>Sketch a one-body diagram of the forces on the drawbridge, giving
             the force at \(P\) an unknown magnitude \(F\) and an angle \(\phi\) above
             the horizontal.</figcaption></figure>
@@ -807,7 +794,7 @@ cutout:
 
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">The integral for \(y_{CM}\) proceeds similarly to that for \(x_{CM}\), starting with
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;Sect. 4c)</span></h3><div class="help-body">The integral for \(y_{CM}\) proceeds similarly to that for \(x_{CM}\), starting with
  
  \[y_{CM} = \frac{1}{M} \int y\,dM\,,\]
  
@@ -827,9 +814,9 @@ cutout:
 <p>
 </section>
 
-<p><span class="tex-unknown" title="unknown macro">\endinput</span>
+<p>
 <p><br>
- CENTER OF FORCE <span class="dotfill">&thinsp;·····&thinsp;</span> AS2
+ CENTER OF FORCE <span class="fill-line">&nbsp;</span> AS2
 <p><a href="#as-2" class="as-ref">AS&nbsp;2</a>Center of Force
 <p>A rod of length \(\ell\) has forces acting on it (see sketch).
 Here \(F_1 = F_3 = 2f\) and \(F_2 = f\) where \(f\) is not specified.

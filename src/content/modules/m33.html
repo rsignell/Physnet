@@ -63,11 +63,11 @@ constant, we describe its rate of change by introducing an
 angular acceleration in a manner analogous to linear acceleration.
 Recall that acceleration in linear motion is defined as the rate of change
 of velocity with time:
-<p>\[\vec{a} = \frac{d\vec{v}}{dt}.\]
+<p><span class="eqn-block" id="eqn-1">\[\vec{a} = \frac{d\vec{v}}{dt}.\]<span class="eqn-number">(1)</span></span>
 <p> In a similar manner, the angular acceleration
 <p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
 <p>is defined as the rate of change of angular velocity with time:
-<p>\[\vec{\alpha} = \frac{d\vec{\omega}}{dt}.\]
+<p><span class="eqn-block" id="eqn-2">\[\vec{\alpha} = \frac{d\vec{\omega}}{dt}.\]<span class="eqn-number">(2)</span></span>
 <p><figure id="fig-1" class="fig-left-framed"><img src="figures/m33gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The tangential component \(\vec{a}_T\), of
 acceleration \(\vec{a}\), is that component perpendicular to \(\vec{r}\).</figcaption></figure>
 
@@ -81,13 +81,13 @@ component which is perpendicular to the radius vector, as shown
 in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>.
 <p>For circular motion, velocity is related to angular velocity by:
 <p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
-<p>\[v = \omega r. \qquad \text{(circular motion)}\]
+<p><span class="eqn-block" id="eqn-3">\[v = \omega r. \qquad \text{(circular motion)}\]<span class="eqn-number">(3)</span></span>
 <p>This velocity is entirely tangential (\(\vec{v}_T = \vec{v}\)).
 <p>Then taking the time derivative of <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> and using the chain rule:
 <p>\[a_T = \frac{dv}{dt} = r \frac{d\omega}{dt} + \omega \frac{dr}{dt} =
 r \frac{d\omega}{dt} \qquad \text{(circular motion)}\,.\]
 <p>Thus:
-<p>\[a_T = r \alpha \qquad \text{(circular motion)}.\]
+<p><span class="eqn-block" id="eqn-4">\[a_T = r \alpha \qquad \text{(circular motion)}.\]<span class="eqn-number">(4)</span></span>
 <p>Note that in these equations the units of \(\omega\) must be radians
 per unit time and the units of \(\alpha\) must be radians per unit time squared.
 <p><h3 id="pcap-2-c">2c. Relationship of \(\vec{\alpha}\) to \(\vec{a}\)</h3>
@@ -103,7 +103,7 @@ angular velocity,
 <p>\[\vec{\omega} = (\vec{r} \times \vec{v})/r^2\,,\]
 <p>and then making use of:
 \(\vec{v} \times \vec{v} = 0\), \(\vec{\alpha} \equiv d\vec{\omega}/dt\) and, for
-a point on a rigid rotator, \(dr/dt = 0\). <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+a point on a rigid rotator, \(dr/dt = 0\).<sup class="help-link"><a href="#help-9" title="see Sequence [S-9] in the Special Assistance Supplement">[S-9]</a></sup>
 </section>
 
 <p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Producing Angular Acceleration</h2>
@@ -115,16 +115,16 @@ radius \(r\), we can easily relate torque to angular acceleration.
 We start with the mass's tangential acceleration [see Equation (4)]:
 <p>\[a_T = \alpha r\,.\]
 <p>By Newton's second law, the tangential force \(F_T\) is:
-<p>\[F_T = m r \alpha. \qquad \help{1}\]
+<p><span class="eqn-block" id="eqn-5">\[F_T = m r \alpha. \qquad \]<span class="eqn-number">(5)</span></span>
 <p>so the magnitude of the torque \(\vec{\tau}\) is:
 <p><sup class="fn-ref"><a href="#fn-9" id="fnref-9">9</a></sup>
-<p>\[\tau = r F_T = I \alpha\,.\]
+<p><span class="eqn-block" id="eqn-9">\[\tau = r F_T = I \alpha\,.\]<span class="eqn-number">(9)</span></span>
 <p>where \(I \equiv m r^2\) is the moment of inertia of that mass about
 the rotation axis.
 Although it will not be shown here, the fact that \(\alpha\) is the same for all
 points in a rigidly rotating object allows one to prove that:
 <p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
-<p>\[\tau_\text{ext} = I \alpha.\]
+<p><span class="eqn-block" id="eqn-6">\[\tau_\text{ext} = I \alpha.\]<span class="eqn-number">(6)</span></span>
 <p>for the object as a whole.
 Here \(I\) is the total moment of inertia of the object about the axis,
 obtained by summing the values of \(I\) for the object's component masses, and
@@ -161,9 +161,9 @@ Just as in the case of linear motion,
 \(\alpha\) to obtain those quantities as functions of time.
 First we integrate \(d\omega /dt = \alpha\), assuming constant \(\alpha\), to
 obtain:
-<p>\[\omega = \omega_0 + \alpha t ; \qquad (\text{constant } \alpha).\]
+<p><span class="eqn-block" id="eqn-7">\[\omega = \omega_0 + \alpha t ; \qquad (\text{constant } \alpha).\]<span class="eqn-number">(7)</span></span>
 <p>Next we integrate \(d\theta/dt \equiv \omega\) (see above) to obtain:
-<p>\[\theta = \theta_0 + \omega_0 t + \alpha t^2/2; \qquad (\text{constant } \alpha).\]
+<p><span class="eqn-block" id="eqn-8">\[\theta = \theta_0 + \omega_0 t + \alpha t^2/2; \qquad (\text{constant } \alpha).\]<span class="eqn-number">(8)</span></span>
 <p><a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> can easily be checked by differentiation plus evaluation
 at \(t = 0\).
 <p><h3 id="pcap-4-b">4b. From a Dead Start, \(\omega = (2 \alpha \theta)^{1/2}\)</h3>
@@ -175,10 +175,10 @@ We can eliminate the time variable between Eqs. (7) and (8) for the case
 
 Most of us find it easy to remember the circular-motion
 constant-\(\alpha\) equations by analogy with the linear-motion constant-a equations:
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td><strong>Kinematics Magnitudes</strong></td></tr><tr><td></td><td></td><td>Dead-Start</td></tr><tr><td>Position</td><td>Velocity</td><td>Velocity</td></tr><tr><td>\(s = s_0 + v_0 t + a t^2/2\)</td><td>\(v = v_0 + a t\)</td><td>\(v = (2 a s)^{1/2}\)</td></tr><tr><td>\(\theta = \theta_0 + \omega_0 t + \alpha t^2/2\)</td><td>\(\omega = \omega_0 + \alpha t\)</td><td>\(\omega = (2 \alpha \theta)^{1/2}\)</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th><strong>Kinematics Magnitudes</strong></th></tr><tr><td></td><td></td><td>Dead-Start</td></tr><tr><td>Position</td><td>Velocity</td><td>Velocity</td></tr><tr><td>\(s = s_0 + v_0 t + a t^2/2\)</td><td>\(v = v_0 + a t\)</td><td>\(v = (2 a s)^{1/2}\)</td></tr><tr><td>\(\theta = \theta_0 + \omega_0 t + \alpha t^2/2\)</td><td>\(\omega = \omega_0 + \alpha t\)</td><td>\(\omega = (2 \alpha \theta)^{1/2}\)</td></tr></tbody></table>
 </div>
 
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td><strong>Force/Torque, Energy, Power Magnitudes</strong></td></tr><tr><td>Kinetic energy</td><td>Force/Torque</td><td>Constant-Velocity Power</td></tr><tr><td>\(E_k = m v^2/2\)</td><td>\(F = m\,a\)</td><td>\(P = F v\)</td></tr><tr><td>\(E_k = I \omega^2/2\)</td><td>\(\tau = I \alpha\)</td><td>\(P = \tau \omega\)</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th><strong>Force/Torque, Energy, Power Magnitudes</strong></th></tr><tr><td>Kinetic energy</td><td>Force/Torque</td><td>Constant-Velocity Power</td></tr><tr><td>\(E_k = m v^2/2\)</td><td>\(F = m\,a\)</td><td>\(P = F v\)</td></tr><tr><td>\(E_k = I \omega^2/2\)</td><td>\(\tau = I \alpha\)</td><td>\(P = \tau \omega\)</td></tr></tbody></table>
 </div>
 
 Some of the equations shown in these two tables can be rewritten in vector form so
@@ -234,8 +234,7 @@ radians and \(t\) in seconds.
 </li>
 <li><span class="item-label">2.</span> A Volvo marine engine goes from 1800<span class="unit">&thinsp;rpm</span> to 5400<span class="unit">&thinsp;rpm</span> in 24<span class="unit">&thinsp;seconds</span>.
 Assume the engine's moment of inertia is 100<span class="unit">&thinsp;ft&thinsp;lb&thinsp;s<sup>2</sup></span>.
-What average torque is developed by the engine? 
-<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+What average torque is developed by the engine?<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup></li>
 <li><span class="item-label">3.</span> Assume the mass of a coasting flywheel is 140<span class="unit">&thinsp;kg</span>, essentially
 all located at the rim at a radius of 1.2<span class="unit">&thinsp;m</span> from the axis of rotation.
 The bearings are located at a radius of 4<span class="unit">&thinsp;cm</span> and the initial angular
@@ -247,11 +246,11 @@ By the end of one minute, friction has decreased the angular velocity to
 </ol>
 </li>
 <li><span class="item-label">a.</span> The moment of inertia of the flywheel. </li>
-<li><span class="item-label">b.</span> The flywheel's average angular acceleration.  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+<li><span class="item-label">b.</span> The flywheel's average angular acceleration.<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup></li>
 <li><span class="item-label">c.</span> The average frictional torque exerted by the bearings on the
-flywheel.  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+flywheel.<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup></li>
 <li><span class="item-label">d.</span> The total average frictional force exerted by the bearings on
-the flywheel.  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+the flywheel.<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 </li>
 <li><span class="item-label">4.</span> The flywheel of a miniature steam engine has a mass
 of 0.20<span class="unit">&thinsp;kg</span>, located almost entirely along the rim at a radius of 8.0<span class="unit">&thinsp;cm</span>.
@@ -267,8 +266,8 @@ flywheel's:
 <li><span class="item-label">a.</span> moment of inertia </li>
 <li><span class="item-label">b.</span> angular acceleration </li>
 <li><span class="item-label">c.</span> tangential acceleration of a point on the rim </li>
-<li><span class="item-label">d.</span> total braking time  <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
-<li><span class="item-label">e.</span> total number of turns (a “turn” is one complete rotation)  <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+<li><span class="item-label">d.</span> total braking time<sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup></li>
+<li><span class="item-label">e.</span> total number of turns (a “turn” is one complete rotation)<sup class="help-link"><a href="#help-8" title="see Sequence [S-8] in the Special Assistance Supplement">[S-8]</a></sup>
 </li>
 </ol>
 
@@ -284,16 +283,16 @@ flywheel's:
 <li><span class="item-label">7.</span> <span class="unit">&thinsp;rad/s<sup>2</sup></span></li>
 <li><span class="item-label">8.</span> Yes</li>
 <li><span class="item-label">9.</span> <span class="unit">&thinsp;1570&thinsp;ft&thinsp;lb</span></li>
-<li><span class="item-label">10.</span> \(-0.01\unit{rad/s^{2}}\)</li>
+<li><span class="item-label">10.</span> \(-0.01\,\text{rad/s}^{2}\text{}\)</li>
 <li><span class="item-label">11.</span> 50.4<span class="unit">&thinsp;N</span>, opposite to direction of flywheel velocity at bearings.</li>
 <li><span class="item-label">12.</span> 201.6<span class="unit">&thinsp;kg&thinsp;m<sup>2</sup></span></li>
 <li><span class="item-label">13.</span> 2.016<span class="unit">&thinsp;N&thinsp;m</span>, opposite to direction of flywheel angular velocity
 vector.</li>
 <li><span class="item-label">14.</span> 4.02<span class="unit">&thinsp;turns</span></li>
-<li><span class="item-label">15.</span> \(-0.25\unit{m/s^{2}}\)</li>
-<li><span class="item-label">16.</span> \(1.28 \times 10^{-3}\unit{kg\,m^{2}}\)</li>
+<li><span class="item-label">15.</span> \(-0.25\,\text{m/s}^{2}\text{}\)</li>
+<li><span class="item-label">16.</span> \(1.28 \times 10^{-3}\,\text{kg\,m}^{2}\text{}\)</li>
 <li><span class="item-label">17.</span> 4.02<span class="unit">&thinsp;s</span></li>
-<li><span class="item-label">18.</span> \(-3.13\unit{rad/s^{2}}\)</li>
+<li><span class="item-label">18.</span> \(-3.13\,\text{rad/s}^{2}\text{}\)</li>
 </ol>
 
 <p></section>
@@ -304,19 +303,19 @@ vector.</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Note that the vectors \(\vec{r}\) and \(\vec{F}_T\) are at right angles so that
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;3a)</span></h3><div class="help-body">Note that the vectors \(\vec{r}\) and \(\vec{F}_T\) are at right angles so that
  \(\theta\) is 90° in the expression:
  \(| \vec{r} \times \vec{F}_T | = r F_T \sin\theta\).
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">\(\tau = I\,\alpha\).
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from PS, problem 2)</span></h3><div class="help-body">\(\tau = I\,\alpha\).
  Therefore, averaging over both sides (\(I\) is constant):
  \(\bar{\tau} = I\,\bar{\alpha}\).
 <p> Also: \(\bar{\alpha} = \frac{\Delta \omega}{\Delta t}\).
- <span class="tex-unknown" title="unknown macro">\furtherhelp</span>3
+ <a href="#help-3" class="help-link help-link-inline" title="Special Assistance">[S-3]</a>
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">What are the units of angular velocity?
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from [S-2])</span></h3><div class="help-body">What are the units of angular velocity?
 <p> What are the units of frequency?
 <p> Which one is given in the problem?
 <p> Which one occurs in the equation you are using?
@@ -326,22 +325,22 @@ vector.</li>
  <em>Index</em>.
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Do Problem&nbsp;2 completely and successfully before attempting this one.</div></div>
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from PS, problem 3b)</span></h3><div class="help-body">Do Problem&nbsp;2 completely and successfully before attempting this one.</div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">First calculate the torque exerted on the flywheel, without considering
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from PS, problem 3c)</span></h3><div class="help-body">First calculate the torque exerted on the flywheel, without considering
  where it is coming from.</div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The torque is exerted by the bearings at their surface of contact with
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from PS, problem 3d)</span></h3><div class="help-body">The torque is exerted by the bearings at their surface of contact with
  the flywheel.</div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">\(\Delta\omega = \alpha\,\Delta t\). Also, see [S-2].
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from PS, problem 4d)</span></h3><div class="help-body">\(\Delta\omega = \alpha\,\Delta t\). Also, see [S-2].
 </div></div>
 
-<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">Under constant angular acceleration, \(\theta = (1/2) \alpha t^2\).
+<p><div id="help-8" class="help-item"><h3 class="help-num">S-8 <span class="help-origin">(from PS, problem 4e)</span></h3><div class="help-body">Under constant angular acceleration, \(\theta = (1/2) \alpha t^2\).
  How many radians are there in a “turn”?
 </div></div>
 
-<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">We take the time-derivative of both sides of the beginning equation and that yields the
+<p><div id="help-9" class="help-item"><h3 class="help-num">S-9 <span class="help-origin">(from Section&nbsp;2c)</span></h3><div class="help-body">We take the time-derivative of both sides of the beginning equation and that yields the
 final equation.  Here are the details.<br>
 
 (1) For the left-hand side of the equation:<br>

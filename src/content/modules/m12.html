@@ -35,7 +35,7 @@ Consider an object \(O\) with (one-dimensional) velocity \(v_\text{OA}(t)\) as
 determined by (“relative to”) observer \(A\) and velocity \(v_\text{OB}(t)\),
 relative to observer \(B\).
 The ordinary velocity addition law states that:
-<p>\[v_\text{OB}(t) = v_\text{OA}(t) - v_\text{BA}\,,\]
+<p><span class="eqn-block" id="eqn-1">\[v_\text{OB}(t) = v_\text{OA}(t) - v_\text{BA}\,,\]<span class="eqn-number">(1)</span></span>
 <p>where \(v_\text{BA}\) is the velocity of observer \(B\) relative to observer \(A\).
 <p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
 <p>Velocity \(v_\text{BA}\) is restricted to being independent of time for the
@@ -47,7 +47,7 @@ equation.
 This is easy since
 <p>\[v_\text{OB}(t_\text{B}) \equiv dx_\text{OB}(t_\text{B})/dt_B\,,\]
 <p>and
-<p>\[v_\text{OA}(t_\text{A}) \equiv dx_\text{OA}(t_\text{A})/dt_\text{A}\,,\]
+<p><span class="eqn-block" id="eqn-2">\[v_\text{OA}(t_\text{A}) \equiv dx_\text{OA}(t_\text{A})/dt_\text{A}\,,\]<span class="eqn-number">(2)</span></span>
 <p>where \(t_A\) is the time as measured on \(A\)'s clock, while \(t_\text{B}\) is the time
 as measured on \(B\)'s clock.
 Then \(v_\text{OB}(t_\text{B})\) is the velocity of \(O\) as seen by \(B\) at the time \(t_\text{B}\).
@@ -72,7 +72,7 @@ Integrating, we get
 \(x\)-axis origins at such places that they coincide at time zero.
 Then the two observers' measured positions of the object will agree at that
 time and so:
-<p>\[x_\text{OB}(t) = x_\text{OA}(t) - v_\text{BA}t\,.\]
+<p><span class="eqn-block" id="eqn-3">\[x_\text{OB}(t) = x_\text{OA}(t) - v_\text{BA}t\,.\]<span class="eqn-number">(3)</span></span>
 <p>This equation, along with \(t_\text{B} = t_\text{A} \equiv t\) is the Galilean
 transformation.
 <p><h3 id="pcap-1-d">1d. Invariance Under Label Interchange</h3>
@@ -115,14 +115,14 @@ the Lorentz transformation.
 <p><h3 id="pcap-2-b">2b. The Transformation</h3>
 
 The Lorentz transformation is given by:
-<p>\[x_\text{OB} = k \left( x_\text{OA} - v_\text{BA} t_\text{A} \right)\,,\]
-<p>\[t_\text{B} = k \left( t_\text{A} - v_\text{BA} x_\text{OA}/c^2 \right)\,,\]
-<p>\[k \equiv \left( 1 - v_\text{BA}^2/c^2 \right)^{-1/2}\,.\]
+<p><span class="eqn-block" id="eqn-4">\[x_\text{OB} = k \left( x_\text{OA} - v_\text{BA} t_\text{A} \right)\,,\]<span class="eqn-number">(4)</span></span>
+<p><span class="eqn-block" id="eqn-5">\[t_\text{B} = k \left( t_\text{A} - v_\text{BA} x_\text{OA}/c^2 \right)\,,\]<span class="eqn-number">(5)</span></span>
+<p><span class="eqn-block" id="eqn-6">\[k \equiv \left( 1 - v_\text{BA}^2/c^2 \right)^{-1/2}\,.\]<span class="eqn-number">(6)</span></span>
 <p>The Lorentz transformation has the peculiar features that the length of an
 object such as a meter stick is contracted and the rate of a clock is slowed
 when observed from a moving reference frame.
 <p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
-<p>Note, that, in the limit that \(v_\text{BA} << c\), the Lorentz transformation
+<p>Note, that, in the limit that \(v_\text{BA}  \lt < c\), the Lorentz transformation
 reduces to the Galilean transformation.
 </section>
 
@@ -133,9 +133,9 @@ reduces to the Galilean transformation.
 The relativistic velocity addition law can be easily derived from the
 Lorentz transformation.
 First,
-<p>\[v_\text{OB} = \frac{dx_\text{OB}}{dt_B} = \frac{dx_\text{OB}}{dt_A} \cdot
+<p><span class="eqn-block" id="eqn-7">\[v_\text{OB} = \frac{dx_\text{OB}}{dt_B} = \frac{dx_\text{OB}}{dt_A} \cdot
                   \frac{dt_A}{dt_B} = \frac{dx_\text{OB}}{dt_A} \cdot
-                             \left( \frac{dt_B}{dt_A} \right)^{-1}\,.\]
+                             \left( \frac{dt_B}{dt_A} \right)^{-1}\,.\]<span class="eqn-number">(7)</span></span>
 <p>Differentiating <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> with respect to t\(_\text{OA}\) gives:
 <p>\[\frac{dx_\text{OB}}{dt_A} = k \left( \frac{dx_\text{OA}}{dt_A} -
              v_\text{BA}\frac{dt_A}{dt_A} \right) = k(v_\text{OA} - v_\text{BA})\,.\]
@@ -146,11 +146,11 @@ First,
 <p>\[ v_\text{OB} = k (v_\text{OA} - v_\text{BA}) \left[k (1 - v{BA}
                                      v{OA}/c^2) \right]^{-1}\,,\]
 <p>so:
-<p>\[v_\text{OB} = \frac{v_\text{OA} - v_\text{BA}}{1 - v_\text{BA} v_\text{OA}/c^2}\,,\]
+<p><span class="eqn-block" id="eqn-8">\[v_\text{OB} = \frac{v_\text{OA} - v_\text{BA}}{1 - v_\text{BA} v_\text{OA}/c^2}\,,\]<span class="eqn-number">(8)</span></span>
 <p>which is the relativistic velocity addition law.
 <p><h3 id="pcap-3-b">3b. Velocity Much Less Than the Speed of Light</h3>
 
-Note that here, too, in the limit that \(v_\text{BA} << c\), our result reduces
+Note that here, too, in the limit that \(v_\text{BA}  \lt < c\), our result reduces
 to the “ordinary” velocity addition law.
 <p><h3 id="pcap-3-c">3c. Predicting Constant Light Speed</h3>
 
@@ -169,9 +169,9 @@ addition laws and comparing the results.
 <p><h3 id="pcap-3-e">3e. A Numerical Example</h3>
 
 <div class="centered">
-<span class="tex-unknown" title="unknown macro">\linefill</span>0.50in \(\stackrel{A}{.}\) <span class="tex-unknown" title="unknown macro">\linefill</span>0.75in
-                  \(\stackrel{B}{.}\) <span class="tex-unknown" title="unknown macro">\linefill</span>0.75in
-                  \(\stackrel{O}{.}\) <span class="tex-unknown" title="unknown macro">\linefill</span>0.75in
+<span class="fill-line">&nbsp;</span> \(\stackrel{A}{.}\) <span class="fill-line">&nbsp;</span>
+                  \(\stackrel{B}{.}\) <span class="fill-line">&nbsp;</span>
+                  \(\stackrel{O}{.}\) <span class="fill-line">&nbsp;</span>
 </div>
 
 <p>Consider, for instance, the following situation.
@@ -185,9 +185,9 @@ see object \(O\) as having velocity:
 <p>That is, \(O\) is seen by \(B\) as approaching him/her at 2000<span class="unit">&thinsp;m/s</span>.
 Using the relativistic velocity addition law, \(B\) sees \(O\) as having
 velocity
-<p><span class="tex-unknown" title="unknown macro">\jot</span>=10pt
+<p>=10pt
 \[\begin{aligned}v_\text{OB} & = \frac{v_\text{OA} - v_\text{BA}}{1 - v_\text{BA} v_\text{OA}/c^2} \\        & = \frac{(-1000\,\text{m/s}) - 1000\,\text{m/s}}{1-(1000\,\text{m/s})(-1000\,\text{m/s})/
-                                      (3 \times 10^8\,\text{m/s})^2} \\        & = \frac{-2000\,\text{m/s}}{1 + \frac{10^6\unit{m^{2}/s^{2}}}{9 \times 10^{16}\unit{m^{2}/s^{2}}}}
+                                      (3 \times 10^8\,\text{m/s})^2} \\        & = \frac{-2000\,\text{m/s}}{1 + \frac{10^6\,\text{m}^{2}\text{/s}^{2}\text{}}{9 \times 10^{16}\,\text{m}^{2}\text{/s}^{2}\text{}}}
                                     \simeq \frac{-2000\,\text{m/s}}{1 + 1.1 \times 10^{-11}} \\        & = \frac{-2000\,\text{m/s}}{1.000000000011} = - 1999.9999978\,\text{m/s}\,.\end{aligned}\]
 
 <p>The difference between the two results is of the order of one part in a

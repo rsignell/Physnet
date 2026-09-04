@@ -81,7 +81,7 @@ in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
 orbit?
 Call an initial trial radius \(r_0\) and the radius resulting from a
 transit of one complete orbit \(r_1\), as in <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>.
-(The value of \(r_0\)<span class="tex-unknown" title="unknown macro">\</span> was read into the computer; the value of \(r_1\) was
+(The value of \(r_0\) was read into the computer; the value of \(r_1\) was
 taken from the computer output.)
 Plot the pair (\(r_0\),\(r_1\)) as a point on a graph of \(r_0\) vs \(r_1\), as
 in <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>.
@@ -135,14 +135,14 @@ When you have reached the Microlab Class Menu - Page 2, select PHYCBI by
 hitting the 2 key.
 That will cause the program M127-P.EXE to be downloaded from a remote hard
 disk to the one in your machine.
-Your hard disk is called drive C (note the “<span class="tex-unknown" title="unknown macro">\lstset</span>language=[LaTeX]TeX<span class="tex-unknown" title="unknown macro">\lstinline</span>�C:<br>>� ”
+Your hard disk is called drive C (note the “<code></code>�C:<br>>� ”
 prompt that appears on the screen).</li>
 <li><span class="item-label">d.</span> If all went well, lights will blink and the program will start running.</li>
 <li><span class="item-label">e.</span> The first run of the program establishes the initial velocity,
-\(v_0\). <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>  Initial values for the radial and tangential
+\(v_0\).<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>  Initial values for the radial and tangential
 components of the velocity are assigned by the computer, using your CBI ID.
-An initial trial radius \(r_0\) will be requested  (<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>&thinsp; ) and a value of \(r_1\)
-will be returned. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a> The run will be quite slow, since these machines do not have
+An initial trial radius \(r_0\) will be requested  (<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>&thinsp; ) and a value of \(r_1\)
+will be returned.<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup> The run will be quite slow, since these machines do not have
 a math chip.
 There is no need to see the whole orbit until you have a solution.
 Determine as many pairs of (\(r_0\),\(r_1\)) values as you need to construct the
@@ -150,8 +150,8 @@ graph of successive radii and determine a value of \(r_0\) which yields
 a closed orbit (to within 5% or so).
 Then run again, this time asking for the whole orbit (we usually prefer to
 see every tenth point on this run).</li>
-<li><span class="item-label">f.</span> At the “ <span class="tex-unknown" title="unknown macro">\lstinline</span>!C:<br>WORK<br>PHYCBI>! ” prompt, type <span class="tex-unknown" title="unknown macro">\lstinline</span>!EXIT! so the screen looks
-like this <span class="fbox"><span class="tex-unknown" title="unknown macro">\lstinline</span>�C:<br>WORK<br>PHYCBI>EXIT�</span> and then hit the RETURN key.
+<li><span class="item-label">f.</span> At the “ <code></code>!C:<br>WORK<br>PHYCBI>! ” prompt, type <code></code>!EXIT! so the screen looks
+like this <span class="boxed"><code></code>�C:<br>WORK<br>PHYCBI>EXIT�</span> and then hit the RETURN key.
 That should take you back to the “classes” menu.
 Look at the menu and hit the key that takes you back to the “main menu.”</li>
 <li><span class="item-label">g.</span> Annotate your two graphs, showing the information asked for in the
@@ -170,7 +170,7 @@ graphical parts but do not give the physics explanation.</li>
 
 <p><em>Questions for Additional Understanding</em>:
 <ol>
-<li><span class="item-label">*1.</span> What makes the 240° and 360° radii equal to the \(0^\circ\) and
+<li><span class="item-label">*1.</span> What makes the 240° and 360° radii equal to the \(0°\) and
 120° radii for the solution-orbit?
 Is it related to the symmetry properties of the magnetic field geometry?</li>
 <li><span class="item-label">*2.</span> How could you have solved this cyclotron problem exactly, in terms
@@ -200,17 +200,17 @@ not shown in the figures of this module. <a href="#fnref-1" class="fn-back">↩<
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
-The speed \(v_{0}\), called <span class="tex-unknown" title="unknown macro">\lstset</span>language=Basic<span class="tex-unknown" title="unknown macro">\lstinline</span>�V0� in the program, is assigned by M127-P.BAS from your Physics
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Procedure, part e)</span></h3><div class="help-body">
+The speed \(v_{0}\), called <code></code>�V0� in the program, is assigned by M127-P.BAS from your Physics
 Course ID number during your first run, 
 and is kept at that value on succeeding runs as long as you do not leave the program.</div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Procedure, part e)</span></h3><div class="help-body">
 The maximum value \(r_{0}\) can have is the radius of the cyclotron (See <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>&thinsp;).
 Note that the program assumes values of \(r_{0}\) that are in meters and \(v_{0}\) in 
 meters/sec.</div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Procedure, part e)</span></h3><div class="help-body">
 If the value of \(r_{1}\) is greater than the dimensions of the cyclotron the prgram will print:
 “YOUR PARTICLE HAS EXCEEDED THE CYCLOTRON BOUNDARIES”
 and the program execution will terminate.  If this occurs, start over again.</div></div>

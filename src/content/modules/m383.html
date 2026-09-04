@@ -124,7 +124,8 @@ uncertainty principle.</li>
 The function \(e^{-ax^2}\) is-called a <em>Gaussian</em> function.
 It is frequently met in physics and in statistics so the method of solution
 of its integral is worthwhile knowing.
-<p><span class="tex-unknown" title="unknown macro">\boxedline</span>Method 1
+<p><div class="boxed-line">Method 1</div>
+
 Find the appropriate form in a Table of Integrals.
 <p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
 <p>For example, in <em>A Short Table of Integrals</em>, B.&thinsp;O.&thinsp;Peirce, Ginn &amp; Co.
@@ -139,22 +140,19 @@ Find the appropriate form in a Table of Integrals.
 <p>Now by No.&thinsp;494 in Peirce's book this becomes:
 <p>\[\overline{x^2} =
            \sqrt{a/\pi}\; 2\, \frac{1}{4a} \sqrt{\pi/a} = \frac{1}{2a}.\]
-<p><span class="tex-unknown" title="unknown macro">\boxedline</span>Method 2
+<p><div class="boxed-line">Method 2</div>
+
 <p>Start with the square root of the square of the complete integral:
 <p>\[\begin{aligned}\int_{-\infty}^{+\infty} e^{-a x^2}\,dx & = 
          \sqrt{\int_{-\infty}^{+\infty} e^{-ax^2}\,dx\;
-               \int_{-\infty}^{+\infty} e^{-ay^2}\,dy} \\
- & = \sqrt{\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}
-                                         e^{-a(x^2+y^2)}\,dx\,dy} \\
- & = \sqrt{\int_0^{+\infty} e^{-ar^2}\,2\pi r\,dr}\,. \\\end{aligned}\]
+               \int_{-\infty}^{+\infty} e^{-ay^2}\,dy} \\ & = \sqrt{\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}
+                                         e^{-a(x^2+y^2)}\,dx\,dy} \\ & = \sqrt{\int_0^{+\infty} e^{-ar^2}\,2\pi r\,dr}\,.\end{aligned}\]
 
 <p>where the planar area integration has been re-expressed in polar coordinates.
 Now let \(z \equiv r^2\) so that \(dz = 2rdr\):
 <p>\[\int_{-\infty}^{+\infty} e^{-a x^2}\,dx = 
          \sqrt{\pi \int_0^{+\infty} e^{-az}\,dz} = \sqrt{\pi/a}.\]
-<p>\[\begin{aligned}\overline{x^2} & = \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx \\
-               & = -\frac{d}{da} \int_{-\infty}^{+\infty} e^{-a x^2}\,dx \\
-               & = -\frac{d}{da} \sqrt{\pi/a} = \frac{1}{2a} \sqrt{\pi/a}\,.\\\end{aligned}\]
+<p>\[\begin{aligned}\overline{x^2} & = \int_{-\infty}^{+\infty} x^2 e^{-a x^2}\,dx \\ & = -\frac{d}{da} \int_{-\infty}^{+\infty} e^{-a x^2}\,dx \\ & = -\frac{d}{da} \sqrt{\pi/a} = \frac{1}{2a} \sqrt{\pi/a}\,.\end{aligned}\]
 
 <p></section>
 

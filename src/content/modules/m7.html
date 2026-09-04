@@ -37,8 +37,8 @@
 <p><figure id="fig-1" class="fig-left-framed"><img src="figures/m7gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Height of the bottom of a flag, as a function of
 time, as it is being raised and then lowered to half mast.</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]1aKinematics
+<p><h3 id="pcap-1-a">1a. Kinematics</h3>
+
 Kinematics is the study of the motion of particles in terms of space and
 time.
 By a particle we mean an identifiable physical object with spatial
@@ -106,8 +106,8 @@ where 1<span class="unit">&thinsp;meter</span> equals 3.28<span class="unit">&th
 Position is a vector quantity; for example, \(\vec{r} = x \hat{x}\).
 Displacement, written \(\Delta\vec{r}\), is defined as change in position.
 For example,
-<p>\[\Delta\vec{r} = \vec{r}_f - \vec{r}_o = (x_f - x_o)\,\hat{x}  =
-                             \hat{x} \Delta x\,,\]
+<p><span class="eqn-block" id="eqn-1">\[\Delta\vec{r} = \vec{r}_f - \vec{r}_o = (x_f - x_o)\,\hat{x}  =
+                             \hat{x} \Delta x\,,\]<span class="eqn-number">(1)</span></span>
 <p>where the subscript \(f\) indicates final position and the subscript \(o\) indicates
 starting or originating position for the time interval \(t_f - t_o\), and
 \(\hat{x}\) is a unit vector in the positive \(x\)-direction (see <a href="#fig-2" class="fig-ref">Fig.&nbsp;2</a>).
@@ -135,23 +135,23 @@ In fact, Newton invented calculus just so he could deal with the real world's
 infinite continuum of instants.
 To make things a little easier, we will first deal with a finite number
 of average quantities, then graduate to the real thing.
-<p><h3 id="pcap--">. </h3>
-[]3bAverage Velocity
+<p><h3 id="pcap-3-b">3b. Average Velocity</h3>
+
 If a particle is at position (\(x_o\hat{x}\)) at time \(t_o\) and at position
 (\(x_f\hat{x}\)) at a later time \(t_f\), the average velocity over the time
-interval is (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>): (<a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>)
-<p>\[\vec{v}_{av}=\frac{\Delta \vec{r}}{\Delta t} =
+interval is (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>): (<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>)
+<p><span class="eqn-block" id="eqn-2">\[\vec{v}_{av}=\frac{\Delta \vec{r}}{\Delta t} =
               \frac{\left(x_f - x_o\right)\hat{x}}{t_f - t_o} =
-                                \hat{x} \frac{\Delta x}{\Delta t}\,.\]
+                                \hat{x} \frac{\Delta x}{\Delta t}\,.\]<span class="eqn-number">(2)</span></span>
 <p><h3 id="pcap-3-c">3c. Instantaneous Velocity and Speed from \(x(t)\)</h3>
 
 The instantaneous velocity, called simply “the velocity,” is the limit of the
 average velocity as the length of the time interval over which one is
 averaging approaches zero; that is, as \(t_f\) approaches \(t_o\).
 Dropping the unit vectors in <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> and taking the limit, we get:
-<p>\[v=\lim_{\Delta t\rightarrow 0} v_{av} =
+<p><span class="eqn-block" id="eqn-3">\[v=\lim_{\Delta t\rightarrow 0} v_{av} =
       \lim_{\Delta t\rightarrow 0} \frac{\Delta x}{\Delta t} \equiv
-                                                       \frac{dx}{dt}\,.\]
+                                                       \frac{dx}{dt}\,.\]<span class="eqn-number">(3)</span></span>
 <p>The always-positive magnitude of \(v\), written \(|v|\), is the instantaneous speed,
 or simply “the speed.”
 It is the quantity a car's speedometer is designed to display, in miles per
@@ -194,7 +194,7 @@ The speed of sound is approximately \(330\,\text{SI\;units}\), \(330\,\text{m/s}
 The motion of a particle traveling along a straight line can be described
 roughly by giving its position at a number of times.
 Here is an example:
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(t\)(<span class="unit">&thinsp;s</span>)</td><td>0.10</td><td>0.20</td><td>0.30</td><td>0.40</td><td>0.50</td><td>0.60</td></tr><tr><td>\(x\)(<span class="unit">&thinsp;m</span>)</td><td>0.15</td><td>0.55</td><td>0.60</td><td>0.40</td><td>0.35</td><td>0.50</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th>\(t\)(<span class="unit">&thinsp;s</span>)</th><th>0.10</th><th>0.20</th><th>0.30</th><th>0.40</th><th>0.50</th><th>0.60</th></tr><tr><td>\(x\)(<span class="unit">&thinsp;m</span>)</td><td>0.15</td><td>0.55</td><td>0.60</td><td>0.40</td><td>0.35</td><td>0.50</td></tr></tbody></table>
 </div>
 
 <p>This information can also be shown by plotting a graph, as in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
@@ -243,28 +243,28 @@ Both direction and magnitude of velocity change are important.
 For example, a ball thrown upward into the air slows down, momentarily
 stops, then picks up downward velocity, all because of the constant downward
 acceleration due to gravity.
-<p><h3 id="pcap--">. </h3>
-[]4bAverage Acceleration
+<p><h3 id="pcap-4-b">4b. Average Acceleration</h3>
+
 If a particle has a velocity \(v_0\hat{x}\) at time \(t_0\), and a velocity
 \(v_f\hat{x}\) at a later time \(t_f\), the average acceleration over that time
 interval is:
-<p>\[\vec{a}_{av}=\frac{\Delta \vec{v}}{\Delta t} =
+<p><span class="eqn-block" id="eqn-4">\[\vec{a}_{av}=\frac{\Delta \vec{v}}{\Delta t} =
          \frac{\left(v_f - v_o\right)\hat{x}}{t_f-t_0} =
-                           \hat{x}\frac{\Delta v}{\Delta t}\,.\]
-<p><h3 id="pcap--">. </h3>
-[]4cInstantaneous Acceleration
+                           \hat{x}\frac{\Delta v}{\Delta t}\,.\]<span class="eqn-number">(4)</span></span>
+<p><h3 id="pcap-4-c">4c. Instantaneous Acceleration</h3>
+
 The instantaneous acceleration, called simply “the acceleration,” is the
 limit of the average acceleration as \(t_f \rightarrow t_0\).
 Dropping the unit vectors in <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> and going to the limit,
-<p>\[a = \lim_{\Delta t\rightarrow 0}\frac{\Delta v}{\Delta t} \equiv
-                  \frac{dv}{dt}=\frac{d^2x}{dt^2}\,.\]
+<p><span class="eqn-block" id="eqn-5">\[a = \lim_{\Delta t\rightarrow 0}\frac{\Delta v}{\Delta t} \equiv
+                  \frac{dv}{dt}=\frac{d^2x}{dt^2}\,.\]<span class="eqn-number">(5)</span></span>
 <p>This is “the acceleration of a particle at the time \(t_0\).”
 The acceleration is in the direction of the \(x\)-axis and has the dimensions
-\(\unit{length/time^{2}}\).
+\(\,\text{length/time}^{2}\text{}\).
 When its value is non-zero, its direction may be to the right (positive
 value) or to the left (negative value).
-<p><h3 id="pcap--">. </h3>
-[]4dInstantaneous Acceleration From Velocity Graph
+<p><h3 id="pcap-4-d">4d. Instantaneous Acceleration From Velocity Graph</h3>
+
 A curve of velocity versus time, whether the velocities are obtained from
 graphs or tables, can be quite useful.
 Not only does the slope give instantaneous acceleration but, as we shall see
@@ -280,8 +280,8 @@ determine instantaneous acceleration \(\Delta v/\Delta t\) at times
 \(t_1\), \(t_2\), \(t_3\), \(t_4\).
 This is not the velocity corresponding to the displacement in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]4eInstantaneous Acceleration From Position Graph
+<p><h3 id="pcap-4-e">4e. Instantaneous Acceleration From Position Graph</h3>
+
 Since the slope of the velocity curve, \(dv/dt\), is the time rate of change of
 velocity, it is \(d^2x/dt^2\) which is called the “bending function” of the
 position/time curve.
@@ -344,8 +344,8 @@ velocity and acceleration are not, as can be easily seen by evaluating the
 derivatives.
 This illustrates the difficulty in accurately determining
 position, velocity, and acceleration relationships from graphs.
-<p><h3 id="pcap--">. </h3>
-[]4fHigher Order Derivatives
+<p><h3 id="pcap-4-f">4f. Higher Order Derivatives</h3>
+
 Derivatives of position beyond the second can be taken and in general they
 will be non-zero.
 For example, the first derivative of acceleration, which is the third
@@ -360,13 +360,13 @@ it is directly related to some other quantity involved in the motion.
 
 One of the most common accelerations is that due to gravity near the surface
 of the earth.
-Generally called “\(g\),” this is \(9.8\unit{m/s^{2}}\), or \(32\unit{ft/s^{2}}\).
+Generally called “\(g\),” this is \(9.8\,\text{m/s}^{2}\text{}\), or \(32\,\text{ft/s}^{2}\text{}\).
 One SI unit of acceleration, therefore, is about one tenth the acceleration
 of gravity near the surface of the earth.
 When dropped from rest near the surface of the earth, a particle undergoes
 an increase in velocity of about \(1\,\text{m/s}\) every tenth of a second.
 Half way to the moon (a distance of \(30\,\text{earth radii}\), or \(2\times10^7\,\text{m}\)), the
-acceleration of gravity is about one SI unit, \(1\unit{m/s^{2}}\).
+acceleration of gravity is about one SI unit, \(1\,\text{m/s}^{2}\text{}\).
 A particle in that vicinity and in free fall would find its velocity
 increasing toward the earth at the rate of 1<span class="unit">&thinsp;m/s</span> every second.
 <p><h3 id="pcap-4-h">4h. Example</h3>
@@ -375,7 +375,7 @@ with acceleration \(a(t) = A + B t^2\), starting from rest at \(x = 5.0\,\text{m
 \(t = 0\).
 Find its position at all instants of time, \(x(t)\).
 <br>
-: Since a = dv/dt, write:<span class="tex-unknown" title="unknown macro">\FnRef</span>1
+: Since a = dv/dt, write:<sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
 <p>\[\begin{aligned}v & = \int\,dv = \int a\,dt = \int[A + Bt^2]\,dt =
                    A \int dt + B \int t^2\,dt \\   & = At + \frac{1}{3}Bt^3 + C\,,\end{aligned}\]
 
@@ -408,8 +408,8 @@ Assuming the acceleration has been obtained as a function of time during
 a journey, either by instrument or from known forces, the velocity and
 position of the traveler can be obtained provided they are known for some
 one time in the journey (for example, at the beginning point).
-<p><h3 id="pcap--">. </h3>
-[]5bChange in Velocity From Acceleration Graph
+<p><h3 id="pcap-5-b">5b. Change in Velocity From Acceleration Graph</h3>
+
 The area between an acceleration curve and the time axis is the
 integral \(\int a(t)\,dt\), so this gives the change in velocity over the period
 of time being used.
@@ -421,8 +421,8 @@ is equal to the net area that is bounded by the beginning and ending times
 The average acceleration for the interval
 is the change in velocity during the time interval, the net area, divided by the length of
 the time interval.
-<p><h3 id="pcap--">. </h3>
-[]5cVelocity as an Integral
+<p><h3 id="pcap-5-c">5c. Velocity as an Integral</h3>
+
 Starting with the defining equation for acceleration, \(a(t) =  dv(t)/dt\),
 we change the symbol for time from \(t\) to \(t'\) and then integrate both sides
 of the equation with respect to \(t'\):
@@ -434,7 +434,7 @@ of the equation with respect to \(t'\):
 <p>Then:
 <p>\[v - v_0 = \int_{t_0}^t\,a(t')\,dt'\,.\]
 <p>Rearranging,
-<p>\[v = v_0 + \int_{t_0}^t a(t')\,dt'\,.\]
+<p><span class="eqn-block" id="eqn-6">\[v = v_0 + \int_{t_0}^t a(t')\,dt'\,.\]<span class="eqn-number">(6)</span></span>
 <p>We can think of “\(a(t')\,dt'\)” as representing the change in velocity over
 the small  time increment \(dt'\).
 Then we can think of summing over all such small changes in velocity made during
@@ -445,8 +445,8 @@ zero so the number of such increments in our time interval goes to infinity.
 The net area between the curve and the time axis gives the object's
 change in velocity from time \(t_0\) to time \(t_f\).</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]5dDisplacement From Velocity Graph
+<p><h3 id="pcap-5-d">5d. Displacement From Velocity Graph</h3>
+
 The net area between the \(v(t)\) curve and the time-axis is the
 integral \(\int v(t)\,dt\), and this is the displacement, the change in
 position during the period concerned (see <a href="#fig-12" class="fig-ref">Fig.&nbsp;12</a>).
@@ -457,13 +457,13 @@ The net area between the curve and the time axis gives the
 displacement from \(t_0\) to \(t_f\).
 The curve is not the \(v(t)\) corresponding to the \(a(t)\) of <a href="#fig-11" class="fig-ref">Fig.&nbsp;11</a>.</figcaption></figure></div>
 
-<p><h3 id="pcap--">. </h3>
-[]5ePosition as an Integral
+<p><h3 id="pcap-5-e">5e. Position as an Integral</h3>
+
 Writing \(v(t) = dx(t)/dt\) in the form \(dx(t') = v(t')\,dt'\) and integrating,
 we get:
 <p>\[\int_{x_0}^x\,dx' = \int_{t_0}^t\,v(t')\,dt'\,.\]
 <p>Integrating the left hand side, we get:
-<p>\[x(t) = x_0 + \int_{t_0}^t\,v(t')\,dt'\,,\]
+<p><span class="eqn-block" id="eqn-7">\[x(t) = x_0 + \int_{t_0}^t\,v(t')\,dt'\,,\]<span class="eqn-number">(7)</span></span>
 <p>where \(v(t')dt'\) can be thought of as the small displacement of the particle
 in the small increment of time \(dt'\)(see <a href="#fig-12" class="fig-ref">Fig.&nbsp;12</a>).
 We can think of the integral as the sum of many small changes in
@@ -482,20 +482,20 @@ approximations.
 The chief merit in using constant-acceleration equations is their
 mathematical simplicity.
 <p>Starting with <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> and with \(a(t') = a\), a constant, we get:
-<p>\[v = v_0 + a t\,.\]
+<p><span class="eqn-block" id="eqn-8">\[v = v_0 + a t\,.\]<span class="eqn-number">(8)</span></span>
 <p>Note that we have chosen \(t_0 = 0\).
 Substituting that result into <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> we get:
 <p>\[\begin{aligned}x(t) & = x_0 + \int_0^t\,(v_0 + a t')\,dt' \\         & = x_0 + v_0 \int_0^t\,dt' + a \int_0^t\,t'\,dt' \\         & = x_0 + v_0 t + \frac{1}{2} a t^2\,.\end{aligned}\]
 
 <p>If \(v_0\) is not given in a constant-acceleration problem, you can eliminate
 it between Eqs.&thinsp;(8) and (9).
-Try it now and make sure you get: <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
-<p>\[x = x_0 + v t - \frac{1}{2} a t^2\,.\]
+Try it now and make sure you get:<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
+<p><span class="eqn-block" id="eqn-10">\[x = x_0 + v t - \frac{1}{2} a t^2\,.\]<span class="eqn-number">(10)</span></span>
 <p>Do not memorize that equation: just make sure you can derive it when you
 need it.
 <p>Similarly, if \(t\) is not given you can eliminate it between Eqs.&thinsp;(8) and (9).
-Try it now and make sure you get: <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
-<p>\[v^2 - v_0^2 = 2\,a\,(x - x_0)\,.\]
+Try it now and make sure you get:<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
+<p><span class="eqn-block" id="eqn-11">\[v^2 - v_0^2 = 2\,a\,(x - x_0)\,.\]<span class="eqn-number">(11)</span></span>
 <p>Remember, whenever you see \(a\), rather than a(t), as in the equations of this
 section, it means that the equations you are looking at are valid only for
 problems involving constant acceleration.
@@ -522,18 +522,18 @@ We introduce you to a slight variation here as we give one more example.
  Given:  \(x(1.0\,\text{s}) = 7.0\,\text{m}\);<br>
 
   \(v(t) = \alpha t^2 + \beta t + \gamma; \alpha =
-9.0\unit{m/s^{3}}\);<br>
+9.0\,\text{m/s}^{3}\text{}\);<br>
 
-  \(\beta = 4.0\unit{m/s^{2}}; \gamma = - 8.0\,\text{m/s}\).<br>
+  \(\beta = 4.0\,\text{m/s}^{2}\text{}; \gamma = - 8.0\,\text{m/s}\).<br>
 
  Find:   \(a(t)\) for \(t = 2.0\,\text{s}\) and \(t = 4.0\,\text{s}\), and \(x(t)\).
 <ol>
 <li><span class="item-label">a.</span> \(a(t) = \frac{dv(t)}{dt} = 2\alpha t + \beta\)</li>
-<li>\(a(2.0\,\text{s}) = (2)(9.0\unit{m/s^{3}})(2.0\,\text{s}) + (4.0\unit{m/s^{2}})\)</li>
-<li>\(\phantom{a(2.0\,\text{s})} = 36.0\unit{m/s^{2}} + 4.0\unit{m/s^{2}}\)</li>
-<li>\(\phantom{a(2.0\,\text{s})} = 40.0\unit{m/s^{2}}\)</li>
-<li><span class="item-label">b.</span> \(a(4.0\,\text{s}) = (2)(9.0\unit{m/s^{3}})(4.0\,\text{s}) + (4.0\unit{m/s^{2}}) =
-76.0\unit{m/s^{2}}\)</li>
+<li>\(a(2.0\,\text{s}) = (2)(9.0\,\text{m/s}^{3}\text{})(2.0\,\text{s}) + (4.0\,\text{m/s}^{2}\text{})\)</li>
+<li>\(\phantom{a(2.0\,\text{s})} = 36.0\,\text{m/s}^{2}\text{} + 4.0\,\text{m/s}^{2}\text{}\)</li>
+<li>\(\phantom{a(2.0\,\text{s})} = 40.0\,\text{m/s}^{2}\text{}\)</li>
+<li><span class="item-label">b.</span> \(a(4.0\,\text{s}) = (2)(9.0\,\text{m/s}^{3}\text{})(4.0\,\text{s}) + (4.0\,\text{m/s}^{2}\text{}) =
+76.0\,\text{m/s}^{2}\text{}\)</li>
 <li><span class="item-label">c.</span> \(x(t) = \int v(t)\,dt = \frac{\alpha t^3}{3} +
 \frac{\beta t^2}{2}+\gamma t + C\).<br>
 
@@ -548,8 +548,8 @@ at \(t = 0\) is \(x(0) = C\):<br>
 <li><span class="item-label">d.</span> \(x(t) = x(0) + \frac{\alpha t^3}{3} + \frac{\beta t^2}{2} +
 \gamma t\)<br>
 
-7.0<span class="unit">&thinsp;m</span> = \(x(0) + \frac{(9.0\unit{m/s^{3}})(1.0\unit{s^{3}})}{3} +
-         \frac{(4.0\unit{m/s^{2}})(1.0\unit{s^{2}})}{2} +
+7.0<span class="unit">&thinsp;m</span> = \(x(0) + \frac{(9.0\,\text{m/s}^{3}\text{})(1.0\,\text{s}^{3}\text{})}{3} +
+         \frac{(4.0\,\text{m/s}^{2}\text{})(1.0\,\text{s}^{2}\text{})}{2} +
 (-8.0\,\text{m/s})(1.0\,\text{s})\)<br>
 
 \(x(0) = 7.0\,\text{m} - 3.0\,\text{m} - 2.0\,\text{m} + 8.0\,\text{m} =
@@ -599,7 +599,7 @@ mathematically. <a href="#fnref-2" class="fn-back">↩</a></li></ol></aside>
 <p><ol>
 <li><span class="item-label">1.</span> A particle moving along a straight line has the following positions
 at the indicated times:
-<p><table class="physnet-table"><tbody><tr><td>\(t\)(in <span class="unit">&thinsp;s</span>)</td><td>0.0</td><td>0.1</td><td>0.2</td><td>0.3</td><td>0.4</td><td>0.5</td><td>0.6</td><td>0.7</td><td>0.8</td></tr><tr><td>\(x\)(in <span class="unit">&thinsp;m</span>)</td><td>5.2</td><td>5.5</td><td>5.9</td><td>6.4</td><td>7.0</td><td>7.7</td><td>8.5</td><td>9.4</td><td>10.4</td></tr></tbody></table>
+<p><table class="physnet-table"><tbody><tr><th>\(t\)(in <span class="unit">&thinsp;s</span>)</th><th>0.0</th><th>0.1</th><th>0.2</th><th>0.3</th><th>0.4</th><th>0.5</th><th>0.6</th><th>0.7</th><th>0.8</th></tr><tr><td>\(x\)(in <span class="unit">&thinsp;m</span>)</td><td>5.2</td><td>5.5</td><td>5.9</td><td>6.4</td><td>7.0</td><td>7.7</td><td>8.5</td><td>9.4</td><td>10.4</td></tr></tbody></table>
 
 <p><ol>
 
@@ -643,7 +643,7 @@ For each interval, indicate (above the curve) whether the average velocity
 zero.
 </li>
 <li><span class="item-label">3.</span> The position of an object moving in a straight line is given by
-\(x = A + B t + C t^2\), where \(A = 1.0\,\text{m}\), \(B = 2.0\,\text{m/s}\) and \(C = -3.0\unit{m/s^{2}}\).
+\(x = A + B t + C t^2\), where \(A = 1.0\,\text{m}\), \(B = 2.0\,\text{m/s}\) and \(C = -3.0\,\text{m/s}^{2}\text{}\).
 <ol>
 
 </ol>
@@ -654,9 +654,9 @@ zero.
 <li><span class="item-label">c.</span> What is its acceleration at each of these times?
 </li>
 <li><span class="item-label">4.</span> A rocket is fired vertically, and ascends with a constant vertical
-acceleration of \(+20.0\unit{m/s^{2}}\) for \(80.0\,\text{s}\).
+acceleration of \(+20.0\,\text{m/s}^{2}\text{}\) for \(80.0\,\text{s}\).
 Its fuel is then all used and it continues with an acceleration
-\(g = - 9.8\unit{m/s^{2}}\).
+\(g = - 9.8\,\text{m/s}^{2}\text{}\).
 Air resistance can be neglected.
 <ol>
 
@@ -702,7 +702,7 @@ It takes a total of \(1.0\,\text{s}\) to go from hand to bottom.
 <li><span class="item-label">9.</span> A truck traveling at \(60.0\,\text{mph}\) (\(88\,\text{ft/s}\)) passes a car pulling out
 of a gas station.
 The driver of the car instantaneously steps on the gas and accelerates at
-\(8.0\unit{ft/s^{2}}\) and catches the truck in \(0.200\,\text{mi}\) (\(1056\,\text{ft}\)).
+\(8.0\,\text{ft/s}^{2}\text{}\) and catches the truck in \(0.200\,\text{mi}\) (\(1056\,\text{ft}\)).
 How fast was the car traveling when the truck passed it and how long did it
 take to catch the truck?</li>
 <li><span class="item-label">10.</span> In a certain amusement park, a bell will ring when struck from
@@ -715,7 +715,7 @@ station was able to track an unidentified flying object (UFO).
 Initially the UFO was at rest, but as soon as it was sighted it started to
 move away from the station in a straight line.
 Its speed along this line was measured to be \(v = \alpha t - \beta t^3\)
-where \(\alpha = 300\unit{mi/s^{2}}\) and \(\beta = 0.75\unit{mi/s^{4}}\) during the time it
+where \(\alpha = 300\,\text{mi/s}^{2}\text{}\) and \(\beta = 0.75\,\text{mi/s}^{4}\text{}\) during the time it
 was observed, until it disappeared \(20\,\text{s}\) after first sighting.
 <ol>
 
@@ -834,7 +834,7 @@ zero.
 <li>At \(t_1\) = 0, \(t_2\) = 2<span class="unit">&thinsp;s</span>:</li>
 <li>\(v_{av} = \frac{(A + B t_2 + C t_2^2) - (A)}{t_2} =
            \frac{t_2 ( B + C t_2)}{t_2} = B + C t_2\)</li>
-<li>\(\phantom{v_{av}} = (2.0\,\text{m/s}) + (-3.0\unit{m/s^{2}})(2.0\,\text{s}) =
+<li>\(\phantom{v_{av}} = (2.0\,\text{m/s}) + (-3.0\,\text{m/s}^{2}\text{})(2.0\,\text{s}) =
            2.0\,\text{m/s} - 6.0\,\text{m/s}\)</li>
 <li>\(\phantom{v_{av}} = - 4.0\,\text{m/s}\).
 
@@ -842,7 +842,7 @@ zero.
                                intervals \(t_0 - t_5\) and \(t_5 - t_8\).</figcaption></figure></div>
 
 
-<span class="tex-unknown" title="unknown macro">\enlargethispage*</span>1pc
+
 <div class="figure-full"><figure id="fig-14"><img src="figures/m7gr17.svg" alt="Figure 14" class="physnet-fig"><figcaption>Fig.&nbsp;14. The triangles show that the average velocity for the interval
                                      \(t_0 - t_8\) equals the instantaneous velocity at \(t_4\).</figcaption></figure></div>
 
@@ -857,34 +857,34 @@ zero.
 <li><span class="item-label">b.</span> \(v(t)  = \frac{dx(t)}{dt} =
            \frac{d}{dt}(A + B t + C t^2) = B + 2 C t\)</li>
 <li>\(v(0) = B = 2.0\,\text{m/s}\)</li>
-<li>\(v(2.0\,\text{s}) = 2.0\,\text{m/s} + 2(-3.0\unit{m/s^{2}})(2.0\,\text{s}) =
+<li>\(v(2.0\,\text{s}) = 2.0\,\text{m/s} + 2(-3.0\,\text{m/s}^{2}\text{})(2.0\,\text{s}) =
             - 10\,\text{m/s}\).</li>
 <li><span class="item-label">c.</span> \(a(t) = \frac{dv(t)}{dt} =
-           \frac{d}{dt}(B + 2 C t) = 2 C = -6.0\unit{m/s^{2}}\) at \(t_1\) and \(t_2\).
+           \frac{d}{dt}(B + 2 C t) = 2 C = -6.0\,\text{m/s}^{2}\text{}\) at \(t_1\) and \(t_2\).
 
 <p></li>
-<li><span class="item-label">4.</span> Given \(v_0 = 0\), \(a = + 20\unit{m/s^{2}}\), \(t = 80\,\text{s}\),
-           \(g = - 10\unit{m/s^{2}}\),
+<li><span class="item-label">4.</span> Given \(v_0 = 0\), \(a = + 20\,\text{m/s}^{2}\text{}\), \(t = 80\,\text{s}\),
+           \(g = - 10\,\text{m/s}^{2}\text{}\),
 <ol>
 
 </ol>
 </li>
 <li><span class="item-label">a.</span> \(x_1 = v_0 t + \frac{1}{2} a t^2\)</li>
-<li>\(\phantom{x_1} = 0 + \frac{1}{2}(20\unit{m/s^{2}})(80\,\text{s})^2 =
+<li>\(\phantom{x_1} = 0 + \frac{1}{2}(20\,\text{m/s}^{2}\text{})(80\,\text{s})^2 =
            6.4 \times 10^4\,\text{m}\)</li>
-<li>\(v = v_0 + at = 0 + (20\unit{m/s^{2}})(80\,\text{s}) = 1600\,\text{m/s}\).</li>
+<li>\(v = v_0 + at = 0 + (20\,\text{m/s}^{2}\text{})(80\,\text{s}) = 1600\,\text{m/s}\).</li>
 <li>The rocket continues upward until it stops;</li>
 <li>\(t = \frac{v - v_0}{g} =
-           \frac{0-1600\,\text{m/s}}{-10\unit{m/s^{2}}} = 160\,\text{s}\).</li>
+           \frac{0-1600\,\text{m/s}}{-10\,\text{m/s}^{2}\text{}} = 160\,\text{s}\).</li>
 <li><span class="item-label">b.</span> \(\text{Total time to rise } = 80\,\text{s} + 160\,\text{s} = 2.4 \times 10^2\,\text{s}\).</li>
 <li>Distance upward after burnout:</li>
 <li>\(x = v_b t + \frac{1}{2} g t^2\)</li>
 <li>\(\phantom{x} = (1600\,\text{m/s})(160\,\text{s}) +
-           \frac{1}{2}(- 10\unit{m/s^{2}})(160\,\text{s})^2 = 128,000\,\text{m}\).</li>
+           \frac{1}{2}(- 10\,\text{m/s}^{2}\text{})(160\,\text{s})^2 = 128,000\,\text{m}\).</li>
 <li>Alternatively,</li>
 <li>\(v^2 - v_0^2 = 2\,a\,x\)</li>
 <li>\(x = \frac{-v_0^2}{2a} =
-           \frac{-(1600\,\text{m/s})^2}{2(-10\unit{m/s^{2}})} = 128,000\,\text{m}\).</li>
+           \frac{-(1600\,\text{m/s})^2}{2(-10\,\text{m/s}^{2}\text{})} = 128,000\,\text{m}\).</li>
 <li><span class="item-label">c.</span> \(\text{Maximum altitude } = 64,000\,\text{m} + 128,000\,\text{m} = 1.92 \times 10^5\,\text{m}\)
 </li>
 <li><span class="item-label">5.</span> Since \(a_x = \frac{dv_x}{dt}\), you can write</li>
@@ -906,25 +906,25 @@ zero.
 <li>If we set \(v_0\) = 0 at \(t\) = 0,</li>
 <li>\(a = \frac{2(x - x_0)}{t^2} =
            \frac{2 (100.0\,\text{cm})}{(4.053\,\text{s})^2} =
-           12.18\unit{cm/s^{2}}\).</li>
-<li>If \(v_0 > 0\) at \(t\) = 0, \(a < 12.18\unit{cm/s^{2}}\).</li>
+           12.18\,\text{cm/s}^{2}\text{}\).</li>
+<li>If \(v_0  \gt  0\) at \(t\) = 0, \(a  \lt  12.18\,\text{cm/s}^{2}\text{}\).</li>
 <li><span class="item-label">7.</span> Since this problem is one-dimensional, it is convenient to take the direction for the positively-increasing
 \(x\)-axis as downward.
-Then \(x\) = 72<span class="unit">&thinsp;in</span> = 6<span class="unit">&thinsp;ft</span>, \(v_0\) = 0 at \(t\) = 0, \(a = g = 32\unit{ft/s^{2}}\),
+Then \(x\) = 72<span class="unit">&thinsp;in</span> = 6<span class="unit">&thinsp;ft</span>, \(v_0\) = 0 at \(t\) = 0, \(a = g = 32\,\text{ft/s}^{2}\text{}\),
 <ol>
 
 </ol>
 </li>
 <li><span class="item-label">a.</span> \(v^2 - v_0^2 = 2\,a\,x\)</li>
-<li>\(v = (2\,a\,x)^{1/2} = \left[(2)(32\unit{ft/s^{2}})(6\,\text{ft})\right]^{1/2}\)</li>
+<li>\(v = (2\,a\,x)^{1/2} = \left[(2)(32\,\text{ft/s}^{2}\text{})(6\,\text{ft})\right]^{1/2}\)</li>
 <li>\(\phantom{v} = 20\,\text{ft/s}\).</li>
 <li><span class="item-label">b.</span> \(v - v_0 = a t\)</li>
-<li>\(t = \frac{v}{a} = \frac{20\,\text{ft/s}}{32\unit{ft/s^{2}}} =
+<li>\(t = \frac{v}{a} = \frac{20\,\text{ft/s}}{32\,\text{ft/s}^{2}\text{}} =
            0.62\,\text{s}\).</li>
 <li>Alternatively,</li>
 <li>\(x = v_0 t + \frac{1}{2} a t^2\)</li>
 <li>\(t = (2x/a)^{1/2} =
-           \left[ \frac{(2)(6\,\text{ft})}{32\unit{ft/s^{2}}}\right]^{1/2} =
+           \left[ \frac{(2)(6\,\text{ft})}{32\,\text{ft/s}^{2}\text{}}\right]^{1/2} =
            0.615\,\text{s}\).
 The difference in time results from rounding error.
 </li>
@@ -941,14 +941,14 @@ The difference in time results from rounding error.
 <li>\(d_a = \frac{1}{2} g t_a^2\),</li>
 <li>where \(t_a \equiv \text{ time through air}\).</li>
 <li>\(t_a = (2d_a/g)^{1/2} =
-           \left[2(4.0\,\text{ft})/(32\unit{ft/s^{2}})\right]^{1/2}\)</li>
-<li>\(\phantom{t_a} = \left(\frac{1}{4}\unit{s^{2}}\right)^{1/2} =
+           \left[2(4.0\,\text{ft})/(32\,\text{ft/s}^{2}\text{})\right]^{1/2}\)</li>
+<li>\(\phantom{t_a} = \left(\frac{1}{4}\,\text{s}^{2}\text{}\right)^{1/2} =
            \frac{1}{2}\,\text{s}\).</li>
 <li><span class="item-label">b.</span> Let \(t_w \equiv\) time in water, \(t_t\) = total time from hand to
            bottom \( = t_w + t_a\)</li>
 <li>\(t_w = t_t - t_a = 1.0\,\text{s} - \frac{1}{2}\,\text{s} = \frac{1}{2}\,\text{s}\).</li>
 <li><span class="item-label">c.</span> Velocity at water \(\equiv v_w = v(t_a) = g t_a =
-           (32\unit{ft/s^{2}})\left(\frac{1}{2}\,\text{s}\right) = 16\,\text{ft/s}\).</li>
+           (32\,\text{ft/s}^{2}\text{})\left(\frac{1}{2}\,\text{s}\right) = 16\,\text{ft/s}\).</li>
 <li><span class="item-label">d.</span> \(\text{Let } d_w \equiv \text{ distance in water } = v_w t_w
             = (16\,\text{ft/s})\left(\frac{1}{2}\,\text{s}\right) = 8\,\text{ft}\).
 </li>
@@ -958,36 +958,36 @@ The difference in time results from rounding error.
 <li>\(v_0 = (x-\frac{1}{2}at^2)/t\)</li>
 <li>\(\phantom{v_0} = x/t - \frac{1}{2} a t =
            \frac{1056\,\text{ft}}{12\,\text{s}} -
-           \frac{1}{2}\left(8\unit{ft/s^{2}}\right)(12\,\text{s}) = 40\,\text{ft/s}\).</li>
-<li><span class="item-label">10.</span> Take \(x = 36\,\text{ft}\), \(v = 10\,\text{ft/s}\), \(a = g = - 32\unit{ft/s^{2}}\).</li>
+           \frac{1}{2}\left(8\,\text{ft/s}^{2}\text{}\right)(12\,\text{s}) = 40\,\text{ft/s}\).</li>
+<li><span class="item-label">10.</span> Take \(x = 36\,\text{ft}\), \(v = 10\,\text{ft/s}\), \(a = g = - 32\,\text{ft/s}^{2}\text{}\).</li>
 <li>\(v^2 - v_0^2 = 2 a x\)</li>
 <li>\(v_0 = (v^2 - 2 a x)^{1/2} =
-           \left[(10\,\text{ft/s})^2 - 2(-32\unit{ft/s^{2}})(36\,\text{ft})\right]^{1/2}\),</li>
-<li>\(\phantom{v_0} = (2400\unit{ft^{2}}/\unit{s^{2}})^{1/2} = 49\,\text{ft/s}\)</li>
+           \left[(10\,\text{ft/s})^2 - 2(-32\,\text{ft/s}^{2}\text{})(36\,\text{ft})\right]^{1/2}\),</li>
+<li>\(\phantom{v_0} = (2400\,\text{ft}^{2}\text{}/\,\text{s}^{2}\text{})^{1/2} = 49\,\text{ft/s}\)</li>
 <li>\(t = \frac{v - v_0}{a} =
-           \frac{10\,\text{ft/s} - 49\,\text{ft/s}}{-32\unit{ft/s^{2}}} =
+           \frac{10\,\text{ft/s} - 49\,\text{ft/s}}{-32\,\text{ft/s}^{2}\text{}} =
            1.22\,\text{s}\).</li>
 <li>Checking:</li>
 <li>\(x = v_0 t + \frac{1}{2} a t^2\)</li>
 <li>\(\phantom{x} =
            (49\,\text{ft/s})(1.22\,\text{s}) +
-           \frac{1}{2}(-32\unit{ft/s^{2}})(1.22\,\text{s})^2 = 36.0\,\text{ft}\).</li>
+           \frac{1}{2}(-32\,\text{ft/s}^{2}\text{})(1.22\,\text{s})^2 = 36.0\,\text{ft}\).</li>
 <li>It is often convenient to carry an extra significant figure in calculations.</li>
-<li><span class="item-label">11.</span> \(v(t) = \alpha t - \beta t^3\); \(\alpha = 300\unit{mi/s^{2}}\),
-            \(\beta = \frac{3}{4}\unit{mi/s^{4}}\).
+<li><span class="item-label">11.</span> \(v(t) = \alpha t - \beta t^3\); \(\alpha = 300\,\text{mi/s}^{2}\text{}\),
+            \(\beta = \frac{3}{4}\,\text{mi/s}^{4}\text{}\).
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(v(20\,\text{s}) = (300\unit{mi/s^{2}})(20\,\text{s}) -
-           (\frac{3}{4}\unit{mi/s^{4}})(20\,\text{s})^3\)</li>
+<li><span class="item-label">a.</span> \(v(20\,\text{s}) = (300\,\text{mi/s}^{2}\text{})(20\,\text{s}) -
+           (\frac{3}{4}\,\text{mi/s}^{4}\text{})(20\,\text{s})^3\)</li>
 <li>\(\phantom{v(20\,\text{s})} =
            6.0 \times 10^3\,\text{mi/s} - 6.0 \times 10^3\,\text{mi/s} = 0.\)</li>
 <li><span class="item-label">b.</span> \(a(t) = \frac{dv(t)}{dt} = \alpha - 3 \beta t^2\).</li>
 <li>When the object “first started to move” probably means \(t = 0\) since that is
            the first time when \(v = 0\).
            The acceleration at that time was:</li>
-<li>\(a(0) = \alpha = 300\unit{mi/s^{2}}\).</li>
+<li>\(a(0) = \alpha = 300\,\text{mi/s}^{2}\text{}\).</li>
 <li><span class="item-label">c.</span> \(x(t) = \int (\alpha t - \beta t^3) dt =
            \frac{\alpha t^2}{2} - \frac{\beta t^4}{4} + C\).
            \(x(0) = C\), hence
@@ -997,8 +997,8 @@ The difference in time results from rounding error.
            Then:</li>
 <li>\(d(t) = x(t) - x(0) =
            \frac{\alpha t^2}{2} - \frac{\beta t^4}{4}\),</li>
-<li>\(d(20\,\text{s}) = \frac{(300\unit{mi/s^{2}})(20\,\text{s})^2}{2} -
-           \frac{\left( \frac{3}{4}\unit{mi/s^{4}}\right)(20\,\text{s})^4}{4}\)</li>
+<li>\(d(20\,\text{s}) = \frac{(300\,\text{mi/s}^{2}\text{})(20\,\text{s})^2}{2} -
+           \frac{\left( \frac{3}{4}\,\text{mi/s}^{4}\text{}\right)(20\,\text{s})^4}{4}\)</li>
 <li>\(\phantom{d(20\,\text{s})} = 6.0 \times 10^4\,\text{mi} -
            3.0 \times 10^4\,\text{mi} = 3.0 \times 10^4\,\text{mi}\).
 </li>
@@ -1007,7 +1007,7 @@ The difference in time results from rounding error.
 <li>We may neglect the time it takes for light to reach us.</li>
 <li>\(x = v t = (3.3 \times 10^2\,\text{m/s})(5.0\,\text{s}) = 1.7 \times 10^3\,\text{m}\).</li>
 <li><span class="item-label">13.</span> \(x(t) = x(0) + v(0) t + a t^2/2\).</li>
-<li>We orient \(x(t)\) downward, so \(a = g = 9.8\unit{m/s^{2}}\).</li>
+<li>We orient \(x(t)\) downward, so \(a = g = 9.8\,\text{m/s}^{2}\text{}\).</li>
 <li>For the padlock, \(x = g t^2/2\).</li>
 <li>For the key, \(v_0 = 12\,\text{m/s}\),
             \(x = v_0 (t - 1.0\,\text{s}) + \frac{1}{2} g(t - 1.0\,\text{s})^2\).</li>
@@ -1033,7 +1033,7 @@ The difference in time results from rounding error.
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(a = 2.42\unit{m/s^{2}}\), \(x = 228\,\text{m}\).</li>
+<li><span class="item-label">a.</span> \(a = 2.42\,\text{m/s}^{2}\text{}\), \(x = 228\,\text{m}\).</li>
 <li><span class="item-label">b.</span> \(x = 121\,\text{m}\), \(t = 8.32\,\text{s}\).
 </li>
 <li><span class="item-label">17.</span> <figure class="fig-centered"><img src="figures/m7gr19.svg" alt="" class="physnet-fig"></figure>
@@ -1047,7 +1047,7 @@ The difference in time results from rounding error.
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The two referenced equations each contain the <em>symbol</em> that you are
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;Sect. 6)</span></h3><div class="help-body">The two referenced equations each contain the <em>symbol</em> that you are
  being asked to eliminate.
  Label either one of the equations #1, the other #2.
  Solve equation&nbsp;#1 for the <em>symbol</em>.
@@ -1063,7 +1063,7 @@ The difference in time results from rounding error.
 <p> If necessary, solve the resulting equation for whatever is of interest.
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">Here is the calculus derivation, which starts with the rule for finding the average of any quantity:
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;3b)</span></h3><div class="help-body">Here is the calculus derivation, which starts with the rule for finding the average of any quantity:
 <p>\[\overline{v} = \frac{\int_{t_o}^{t_f} v(t)\,dt}{\int_{t_o}^{t_f} \,dt} =
        \frac{\int_{t_o}^{t_f} [dx(t)/dt]\,dt}{\int_{t_o}^{t_f} \,dt} =
        \frac{\int_{t_o}^{t_f} dx(t)}{\int_{t_o}^{t_f} \,dt} =

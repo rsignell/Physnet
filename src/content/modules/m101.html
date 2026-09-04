@@ -59,11 +59,11 @@ This distance is the radius of the moon's orbit around the center of the
 earth and is \(r = 3.84 \times 10^8\)&thinsp;m, just about sixty times the radius of
 the earth (\(R_e = 6.37 \times 10^6\)&thinsp;m, see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
 Since for uniform circular motion
-<p>\[T = \frac{2\pi r}{v}\,,\]
+<p><span class="eqn-block" id="eqn-1">\[T = \frac{2\pi r}{v}\,,\]<span class="eqn-number">(1)</span></span>
 <p>the orbital speed \(v\) of the moon can be calculated knowing \(T\) and \(r\),
 hence also its centripetal acceleration \(a = v^2/r\).
 The associated centripetal force is then
-<p>\[F = m a = \frac{m v^2}{r}\,,\]
+<p><span class="eqn-block" id="eqn-2">\[F = m a = \frac{m v^2}{r}\,,\]<span class="eqn-number">(2)</span></span>
 <p>where \(m\) is the mass of the moon.
 Newton assumed that this centripetal force acting on the moon is provided by 
 the gravitational attraction between the earth and the moon and therefore the
@@ -85,16 +85,16 @@ local acceleration of gravity is reduced by a factor of \((60)^2\), Newton
 concluded that the force of earth's gravity, \(mg\), on an object of mass \(m\)
 is inversely proportional to the square of the distance of this object from
 the center of the earth and directly proportional to its mass \(m\), i.e.,
-<p>\[F = \text{ constant } \times \frac{m}{r^2}\,.\]
+<p><span class="eqn-block" id="eqn-3">\[F = \text{ constant } \times \frac{m}{r^2}\,.\]<span class="eqn-number">(3)</span></span>
 <p>Since Newton's third law requires that two interacting objects exert mutual
 forces of equal magnitude and opposite direction, the above force would also
 have to meet the requirement
-<p>\[F = \text{ constant } \times \frac{M}{r^2}\,,\]
+<p><span class="eqn-block" id="eqn-4">\[F = \text{ constant } \times \frac{M}{r^2}\,,\]<span class="eqn-number">(4)</span></span>
 <p>where \(M\) is the mass of the earth, so it must meet the combined requirement:
-<p>\[F = \text{ constant } \times \frac{M m}{r^2}\,.\]
+<p><span class="eqn-block" id="eqn-5">\[F = \text{ constant } \times \frac{M m}{r^2}\,.\]<span class="eqn-number">(5)</span></span>
 <p>We give the proportionality constant the special symbol \(G\), so
 <p><a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> may be written as:
-<p>\[F = \frac{G M m}{r^2}\,.\]
+<p><span class="eqn-block" id="eqn-6">\[F = \frac{G M m}{r^2}\,.\]<span class="eqn-number">(6)</span></span>
 <p>This equation requires that in SI units the constant \(G\) has the
 dimensions of <span class="unit">&thinsp;N&thinsp;m<sup>2</sup>/kg<sup>2</sup></span>.
 The constant \(G\) must not be confused with \(g\), the local acceleration of gravity which has
@@ -175,20 +175,20 @@ Consider an apple of mass m a distance \(r\) from the center of the earth (and
 therefore a distance (\(r - R_e\)) above the surface of the earth).
 The force of gravity \(F\) on the apple is its local weight \(mg\), and therefore
 the law of gravitation, <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, gives
-<p>\[mg = G \frac{M m}{r^2}\,,\]
+<p><span class="eqn-block" id="eqn-7">\[mg = G \frac{M m}{r^2}\,,\]<span class="eqn-number">(7)</span></span>
 <p>or, the local acceleration of gravity at the distance \(r\) from the center of
 the earth is
-<p>\[g = G\frac{M}{r^2}, \qquad (r \ge R_e)\,.\]
+<p><span class="eqn-block" id="eqn-8">\[g = G\frac{M}{r^2}, \qquad (r \ge R_e)\,.\]<span class="eqn-number">(8)</span></span>
 <p>Applying this equation to a point on the earth's surface where 
 \(r = R_e = 6.37 \times 10^6\)&thinsp;m and \(g = g_e = 9.81\)&thinsp;m/s<sup>2</sup>, we obtain
-<p>\[G = \frac{3.98 \times 10^{14}\,\text{N}\unit{m^{2}}\,\text{kg}^{-1}}{M}\,.\]
+<p><span class="eqn-block" id="eqn-9">\[G = \frac{3.98 \times 10^{14}\,\text{N}\,\text{m}^{2}\text{}\,\text{kg}^{-1}}{M}\,.\]<span class="eqn-number">(9)</span></span>
 <p>Thus, \(G\) can be calculated if the mass of the earth \(M\) is known.
 <p><h3 id="pcap-4-b">4b. Newton Estimated the Earth's Mass</h3>
 
 Newton did not know the mass of the earth, but he obtained a good estimate
 using the following reasoning.
 The mass of a spherical object of volume (\(4 \pi R_e^3/3\)) is given by
-<p>\[M = \left( \frac{4}{3} \pi R_e^3 \right) \rho\,,\]
+<p><span class="eqn-block" id="eqn-10">\[M = \left( \frac{4}{3} \pi R_e^3 \right) \rho\,,\]<span class="eqn-number">(10)</span></span>
 <p>where \(\rho\) is the average density of the earth and \(R_e\) its known radius.
 To estimate the average density of the earth, Newton observed that the
 density of water is 1<span class="unit">&thinsp;g/cm<sup>3</sup></span>, and the density of a heavy metal like iron
@@ -197,7 +197,7 @@ A reasonable guess for the average density of the earth would thus be
 about 5<span class="unit">&thinsp;g/cm<sup>3</sup></span>.
 This approach gave Newton an estimate of \(G\) which was within 10% of the
 present accepted value of
-<p>\[G = 6.673 \times 10^{-11}\unit{N\,m^{2}/kg^{2}}\,.\]
+<p><span class="eqn-block" id="eqn-11">\[G = 6.673 \times 10^{-11}\,\text{N\,m}^{2}\text{/kg}^{2}\text{}\,.\]<span class="eqn-number">(11)</span></span>
 <p>The smallness of \(G\) requires that at least one of two gravitationally
 attracting objects be massive (like the earth) for the gravitational force
 to be readily apparent.
@@ -226,7 +226,7 @@ called the “universal gravitational constant.”
 There does not exist convincing evidence that the numerical value of \(G\) is
 changing in time on a geological or even a cosmic time scale.
 Thus universally any two point-like masses interact with forces of magnitude
-<p>\[F = G \frac{m_1 m_2}{r^2}\,.\]
+<p><span class="eqn-block" id="eqn-12">\[F = G \frac{m_1 m_2}{r^2}\,.\]<span class="eqn-number">(12)</span></span>
 <p>Spherically symmetric objects can be treated as equivalent point-like masses.
 More irregularly shaped objects can also be treated by the law of universal
 gravitation with the help of integral calculus.
@@ -318,17 +318,17 @@ Thus you can consider them as parallel for the purposes of this problem.</li>
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <p><ol>
-<li><span class="item-label">1.</span> \((F_s/F_e) = 2.18\) <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+<li><span class="item-label">1.</span> \((F_s/F_e) = 2.18\)<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup></li>
 <li><span class="item-label">2.</span> To get numbers to compare to your own answers, put your weight into each of the lines below and, in
 the second and third lines, complete the indicated calculation.
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(F_e =\) your weight \qquad  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a></li>
-<li>\(F_s =\) your weight \(\times (6.00\times10^{-4})\) \qquad  <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+<li><span class="item-label">a.</span> \(F_e =\) your weight &emsp;&emsp;<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup></li>
+<li>\(F_s =\) your weight \(\times (6.00\times10^{-4})\) &emsp;&emsp;<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup></li>
 <li>\(F_m =\) your weight \(\times (3.38\times10^{-6})\)</li>
-<li>Note: the answers given above are <em>not</em> off by a factor of 10. <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<li>Note: the answers given above are <em>not</em> off by a factor of 10.<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup>
 </li>
 <li><span class="item-label">3.</span> 
 <ol>
@@ -336,21 +336,21 @@ the second and third lines, complete the indicated calculation.
 </ol>
 </li>
 <li><span class="item-label">a.</span> <table class="physnet-table"><tbody><tr><td>[t] c c c c c 
- \(e\)</td><td>\(\;\;F_e\;\;\)</td><td>\(s\)</td><td>\(\;\;F_v\;\;\)</td><td>\(v\) </td></tr><tr><td>.</td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(\leftarrow\)</td><td>.</td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(\rightarrow\)</td><td>.</td></tr></tbody></table>
+ \(e\)</td><td>\(\;\;F_e\;\;\)</td><td>\(s\)</td><td>\(\;\;F_v\;\;\)</td><td>\(v\) </td></tr><tr><td>.</td><td>\(\leftarrow\)</td><td>.</td><td>\(\rightarrow\)</td><td>.</td></tr></tbody></table>
 <br>
 
 \(F_{net} = 2.01\times10^{22}\)&thinsp;N
 <p></li>
 <li><span class="item-label">b.</span> <table class="physnet-table"><tbody><tr><td>[t] r c c c 
-  \(v\)</td><td>.</td><td></td></tr><tr><td>\(F_v\)</td><td>\(\uparrow\)</td><td></td></tr><tr><td></td><td>.</td><td>\(\;\; \ld{}\rightarrow \;\;\)</td><td>. </td></tr><tr><td></td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(s\)</td><td> <span class="tex-unknown" title="unknown macro">\ld</span>\(F_e\) </td><td><span class="tex-unknown" title="unknown macro">\ld</span>\(e\)</td></tr></tbody></table>
+  \(v\)</td><td>.</td><td></td></tr><tr><td>\(F_v\)</td><td>\(\uparrow\)</td><td></td></tr><tr><td></td><td>.</td><td>\(\;\; \rightarrow \;\;\)</td><td>. </td></tr><tr><td></td><td>\(s\)</td><td> \(F_e\) </td><td>\(e\)</td></tr></tbody></table>
 <br>
 
-\(F_{net} = 6.57\times10^{22}\,\text{N}\) <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+\(F_{net} = 6.57\times10^{22}\,\text{N}\)<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup>
 </li>
 <li><span class="item-label">4.</span> \(\vec{F} = (2.36\times10^{-9}\,\text{N}) \hat{x} + (9.03\times10^{-9}\,\text{N}) \hat{y}\)</li>
 <li><span class="item-label">5.</span> \(F\text{(electron-proton)}/F\text{(earth-sun)} = 1.02\times10^{-69}\)</li>
 <li><span class="item-label">6.</span> \(F = 8.3\times10^{-8}\,\text{lb}\)</li>
-<li><span class="item-label">7.</span> \(\rho = 5.51 \times 10^3\unit{kg/m^{3}}\)</li>
+<li><span class="item-label">7.</span> \(\rho = 5.51 \times 10^3\,\text{kg/m}^{3}\text{}\)</li>
 <li><span class="item-label">8.</span> 0.01°</li>
 </ol>
 
@@ -362,16 +362,16 @@ the second and third lines, complete the indicated calculation.
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">The (non-contact) gravitational force of the earth on you is what is commonly
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;problem 2)</span></h3><div class="help-body">The (non-contact) gravitational force of the earth on you is what is commonly
  called your “weight.”
  It can be stated in pounds or in newtons.
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">According to <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>, the force varies linearly with mass and inversely
- with the square of the distance.  <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;problem 2)</span></h3><div class="help-body">According to <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>, the force varies linearly with mass and inversely
+ with the square of the distance.<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">From <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>:
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from [S-2])</span></h3><div class="help-body">From <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>:
  \[\begin{aligned}F_s/F_e & = (G\,m_s\,m_{you}/r_{sy}^2)/(G\,m_e\,m_{you}/r_{ey}^2) \\         & = (m_s/m_e)\cdot\,(r_{ey}/r_{sy})^2 \\         & = \frac{1.99\times10^{30}\,\text{kg}}{5.98\times10^{24}
                 \,\text{kg}}\cdot\left[\frac{6.37\times10^6\,\text{m}}{1.50\times10^{11}\,\text{m}}\right]^2 \\         & = \ldots \end{aligned}\]
 
@@ -380,16 +380,16 @@ the second and third lines, complete the indicated calculation.
         sun to you, etc.
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">If you convert between mass and weight, do it properly.
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from PS, problem 2)</span></h3><div class="help-body">If you convert between mass and weight, do it properly.
  If you can't remember, look it up in the Index.
  Also, see [S-1].
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">If you don't remember how to add vectors, look up vector addition in
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from PS, problem 3)</span></h3><div class="help-body">If you don't remember how to add vectors, look up vector addition in
  the Index.
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">The distance of the moon from the sun is not given in the table of data so what should
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from PS, problem 1)</span></h3><div class="help-body">The distance of the moon from the sun is not given in the table of data so what should
  you use for that distance?
  To answer that question, use the distances of the moon from
  the earth and the earth from the sun to calculate the
@@ -401,10 +401,10 @@ the second and third lines, complete the indicated calculation.
  <figure class="fig-centered"><img src="figures/m101gr05.svg" alt="" class="physnet-fig"></figure>
 
  
- If you still can't get the correct numerical answer, see <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+ If you still can't get the correct numerical answer, see<sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup>
 </div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">When people did not get the right numerical answer, we have found that they did not pay close attention to the wording
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from PS, problem 1)</span></h3><div class="help-body">When people did not get the right numerical answer, we have found that they did not pay close attention to the wording
  of the problem and hence chose the wrong masses to put into the calculation.
 </div></div>
 

@@ -30,7 +30,7 @@
 </section>
 
 
-<p><span class="tex-unknown" title="unknown macro">\mNumber</span>104
+<p>104
 <p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
 
 <p>Many problems in science and engineering cannot be solved in terms of known
@@ -50,7 +50,7 @@ a single gravitational source, such as the earth.
 The equation governing such motion can be obtained by combining Newton's
 Second Law,
 <p><sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup>
-<p>\[\vec{F} = m \frac{d^2\vec{r}(t)}{dt^2} \equiv m \vec{r}\,''(t),\]
+<p>\[\vec{F} = m \frac{d^2\vec{r}(t)}{dt^2} \equiv m \vec{r}''(t),\]
 <p>with Newton's Law of Gravitation,
 <p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
 <p>\[\vec{F} = - \frac{G m m_E}{r^2(t)}\,\hat{r}(t).\]
@@ -83,7 +83,7 @@ Then taking components and writing the magnitude of \(\vec{r}\) in terms of
 <p>\[x'' = - \frac{G\,m_E}{\left[ x^2(t) + y^2(t) \right]^{3/2}}\,x(t)
            \equiv f(t)\,x(t).\]
 <p>Similarly for the y equation:
-<p>\[y\,''(t) = f(t)\,y(t).\]
+<p>\[y''(t) = f(t)\,y(t).\]
 </section>
 
 <p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Second-Order Numerov Solution</h2>
@@ -108,27 +108,27 @@ the net-point times:
 <p>\[x_n \equiv x(t_n) \equiv x(n \Delta),\]
 <p>\[y_n \equiv y(t_n) \equiv y(n \Delta),\]
 <p>and our equations become:
-<p>\[x_n\,'' = f_n x_n,\]
-<p>\[y_n\,'' = f_n y_n,\]
+<p><span class="eqn-block" id="eqn-1">\[x_n'' = f_n x_n,\]<span class="eqn-number">(1)</span></span>
+<p>\[y_n'' = f_n y_n,\]
 <p>where:
 <p>\[f_n \equiv - G\, m_E\, \left( x_n^2 + y_n^2 \right)^{-3/2}.\]
 <p><h3 id="pcap-3-b">3b. Finite Difference Approximation</h3>
 
 We will now connect the consecutive values of \(x\) and \(y\) by using the finite
 difference approximation to any function's \(g\)'s second derivative:
-<p>\[g_n\,'' \approx \left( g_{n+1} - 2 g_n + g_{n-1} \right)/\Delta^2.\]
+<p><span class="eqn-block" id="eqn-2">\[g_n'' \approx \left( g_{n+1} - 2 g_n + g_{n-1} \right)/\Delta^2.\]<span class="eqn-number">(2)</span></span>
 <p><a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> is the result of truncating the following series after
 the second term:
 <p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
-<p>\[g_{n+1} + g_{n-1} = 2 g_n + \Delta^2 g_n'' + (\Delta^4/12) g_n^{iv} + \ldots \]
+<p><span class="eqn-block" id="eqn-3">\[g_{n+1} + g_{n-1} = 2 g_n + \Delta^2 g_n'' + (\Delta^4/12) g_n^{iv} + \ldots \]<span class="eqn-number">(3)</span></span>
 <p>The truncation is justifiable to the extent that numerical values of \(Delta\)
 will be small so that \(\Delta^4\) will be insignificant compared to
 \(\Delta^2\).
 Keeping that in mind, we apply <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> to the \(x\) and \(y\) functions
 of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> and get, with a little rearrangement:
-<p>\[x_{n+1} = (2 + \Delta^2 f_n) x_n - x_{n-1}.\]
+<p><span class="eqn-block" id="eqn-4">\[x_{n+1} = (2 + \Delta^2 f_n) x_n - x_{n-1}.\]<span class="eqn-number">(4)</span></span>
 <p>Similarly, the \(y\)-coordinate relation is:
-<p>\[y_{n+1} = (2 + \Delta^2 f_n) y_n - y_{n-1}.\]
+<p><span class="eqn-block" id="eqn-14">\[y_{n+1} = (2 + \Delta^2 f_n) y_n - y_{n-1}.\]<span class="eqn-number">(14)</span></span>
 <p>Such truncation of the series at the second term results in an algorithm that
 is referred to as “being of second order.”
 <p><span class="tryit">Try it:</span>  Derive <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a>.
@@ -152,15 +152,15 @@ This means that we specify:
 
 In order to convert \(x_0\), \(y_0\), \(x_0'\), \(y_0'\), into \(x0\), \(y0\), \(x_1\),
 and \(y_1\), we subtract <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a> at \(t = 0\) to obtain:
-<p>\[x_1 - x_{-1} = 2 \Delta x_0',\]
+<p><span class="eqn-block" id="eqn-5">\[x_1 - x_{-1} = 2 \Delta x_0',\]<span class="eqn-number">(5)</span></span>
 <p>while the \(t = 0\) sum <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(14)</a> are:
-<p>\[x_1 = (2 + \Delta^2 f_0)\, x_0 - x_{-1}.\]
+<p><span class="eqn-block" id="eqn-15">\[x_1 = (2 + \Delta^2 f_0)\, x_0 - x_{-1}.\]<span class="eqn-number">(15)</span></span>
 <p>The unknown \(x_{-1}\) can be eliminated from <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> to give:
-<p>\[x_1 = (1 + 2 \Delta^2 f_0)\,x_0 + \Delta x_0\,'.\]
+<p><span class="eqn-block" id="eqn-6">\[x_1 = (1 + 2 \Delta^2 f_0)\,x_0 + \Delta x_0'.\]<span class="eqn-number">(6)</span></span>
 <p>Similarly,
-<p>\[y_1 = (1 + 2 \Delta^2 f_0)\,y_0 + \Delta y_0\,'.\]
+<p><span class="eqn-block" id="eqn-16">\[y_1 = (1 + 2 \Delta^2 f_0)\,y_0 + \Delta y_0'.\]<span class="eqn-number">(16)</span></span>
 <p>To summarize, we specify the initial position and velocity components, \(x_0\),
-\(y_0\), \(x_0\,'\), \(y_0\,'\), and then use <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> to obtain \(x_1\) and
+\(y_0\), \(x_0'\), \(y_0'\), and then use <a href="#eqn-6" class="eqn-ref">Eqs.&nbsp;(6)</a> to obtain \(x_1\) and
 \(y_1\).
 These are combined with \(x_0\) and \(y_0\) to start the recurrence relations
 <a href="#eqn-4" class="eqn-ref">Eqs.&nbsp;(4)–(14)</a>.

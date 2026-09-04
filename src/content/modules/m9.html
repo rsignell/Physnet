@@ -68,7 +68,7 @@ Below we list some statements assumed to be familiar to the reader of
 this module from prior study.
 If any of these statements are not apparent to you, at least upon
 reflection, you should immediately go back and study the relevant
-prerequisites<span class="tex-unknown" title="unknown macro">\FnRef</span>1 before plunging into this module's material.
+prerequisites<sup class="fn-ref"><a href="#fn-1" id="fnref-1">1</a></sup> before plunging into this module's material.
 The statements refer to a particle executing circular motion (see <a href="#fig-1" class="fig-ref">Figs.&nbsp;1–3</a>):
 <ol>
 <li><span class="item-label">1.</span> its radius vector, going from the center of the circle to the particle,
@@ -121,19 +121,19 @@ its distance s measured along its circular trajectory, starting from
 the \(x\)-axis (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>) as the point with \(s = 0\).
 The sign convention for \(s\) is important:
 \(s\) is defined to be positive when measured CCW from the \(x\)-axis.
-Thus if \(s\) is increasing, so \(ds/dt > 0\), the motion is CCW (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
+Thus if \(s\) is increasing, so \(ds/dt  \gt  0\), the motion is CCW (see <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
 The particle's angle from the \(x\)-axis, \(\theta\), is given by the ratio of
 \(s\) to \(r\):
-<p>\[\theta = \frac{s}{r} \qquad (\text{only for } \theta \text{ in radians!})\]
+<p><span class="eqn-block" id="eqn-1">\[\theta = \frac{s}{r} \qquad (\text{only for } \theta \text{ in radians!})\]<span class="eqn-number">(1)</span></span>
 <p>Can you write down the more complicated expression for \(\theta\) in
-degrees? <a href="#help-9" class="help-link"><span title="Special Assistance">[help&nbsp;9]</span></a>
+degrees?<sup class="help-link"><a href="#help-9" title="see Sequence [S-9] in the Special Assistance Supplement">[S-9]</a></sup>
 Because we like to use simple relationships, most of us think
 of radians, not degrees, as the natural units for angles in most of physics.
 <p><h3 id="pcap-2-c">2c. The Radius Vector in Polar Coordinates</h3>
 
 It is often convenient to express a particle's radius vector in
 polar coordinates:
-<p>\[\vec{r} = r \hat{r}\,.\]
+<p><span class="eqn-block" id="eqn-2">\[\vec{r} = r \hat{r}\,.\]<span class="eqn-number">(2)</span></span>
 <p>In this system the orthogonal unit vectors are \(\hat{r}\) and \(\hat{\theta}\),
 illustrated in <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>.
 The unit vector \(\hat{\theta}\) always points CCW because its direction is
@@ -154,37 +154,36 @@ unchanged.
 
 The velocity of a particle is always tangential to its trajectory, so for
 circular motion it is tangential to the circle:
-<p>\[\vec{v} = (ds/dt) \, \hat{\theta} \qquad (\text{see \Figref{4}})\,.\]
-<p>From <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> we see that: for CCW motion we have \(ds/dt\,>\,0\) and
+<p><span class="eqn-block" id="eqn-3">\[\vec{v} = (ds/dt) \, \hat{\theta} \qquad (\text{see })\,.\]<span class="eqn-number">(3)</span></span>
+<p>From <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> we see that: for CCW motion we have \(ds/dt\, \gt \,0\) and
 \(\vec{v}\) points in the same direction as \(\hat{\theta}\); for CW motion,
-\(ds/dt\,<\,0\) and \(\vec{v}\) points in the direction opposite to
+\(ds/dt\, \lt \,0\) and \(\vec{v}\) points in the direction opposite to
 \(\hat{\theta}\).
 Speed \(v\) is defined to be the magnitude of the velocity:
-<p>\[v = |\vec{v}| = |{ds/dt}|\,.\]
+<p><span class="eqn-block" id="eqn-4">\[v = |\vec{v}| = |{ds/dt}|\,.\]<span class="eqn-number">(4)</span></span>
 <p>Thus speed is the (positive) rate at which distance is being traversed
 around the circle, no matter in which direction:
 <p>\[\vec{v} = v \, \hat{v} = \pm v \, \hat{\theta}\,.\]
 <p><figure id="fig-5" class="fig-left-framed"><img src="figures/m9gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. \(\vec{a}_r\) for an example of circular
 motion.</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]
-2eRadial
+<p><h3 id="pcap-2-e">2e. Radial</h3>
+
 Circular-motion acceleration must almost always be computed in terms
 of its tangential and radial components and then those two components must
 be added vectorially (easy since they are orthogonal).
 These two components can be derived by differentiating <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> with
 respect to time (see the Appendix for details), with the result:
-<p>\[\vec{a} = d\vec{v}/dt = \vec{a}_t + \vec{a}_r\,,\]
+<p><span class="eqn-block" id="eqn-5">\[\vec{a} = d\vec{v}/dt = \vec{a}_t + \vec{a}_r\,,\]<span class="eqn-number">(5)</span></span>
 <p>where the tangential and radial vector components are:
-<p>\[\vec{a}_t = (dv/dt) \hat{\theta}\,,\]
-<p>\[\vec{a}_r = (-v^2/r) \hat{r}\,.\]
+<p><span class="eqn-block" id="eqn-6">\[\vec{a}_t = (dv/dt) \hat{\theta}\,,\]<span class="eqn-number">(6)</span></span>
+<p><span class="eqn-block" id="eqn-7">\[\vec{a}_r = (-v^2/r) \hat{r}\,.\]<span class="eqn-number">(7)</span></span>
 <p> A radial component is illustrated in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> for a case where \(\vec{a}_t\)
 and \(\vec{v}\) are in the same direction so the speed is increasing.
 Note that \(\vec{a}_r\) always points toward the origin in circular motion.
 <p>The radial and tangential components of the acceleration are mutually
 perpendicular so the magnitude of the acceleration is:
-<p>\[a = [ (dv/dt)^2 + (v^2/r)^2 ]^{1/2}\,.\]
+<p><span class="eqn-block" id="eqn-8">\[a = [ (dv/dt)^2 + (v^2/r)^2 ]^{1/2}\,.\]<span class="eqn-number">(8)</span></span>
 </section>
 
 <p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Uniform Circular Motion</h2>
@@ -235,8 +234,8 @@ The descriptor “2.3 cycles” would denote two and three-tenths trips around
 the circle.
 A point on the second hand of an analog clock completes 60<span class="unit">&thinsp;cycles</span> for each
 cycle of a point on the clock's minute hand.
-<p><h3 id="pcap--">. </h3>
-[]4cPeriod
+<p><h3 id="pcap-4-c">4c. Period</h3>
+
 The period \(T\) is defined as the time required for each cycle.
 For example, a point on the minute hand of an analog clock has a period of
 60<span class="unit">&thinsp;minutes</span> while the period of the hour hand is 12&thinsp;<span class="unit">&thinsp;hours</span>.
@@ -244,7 +243,7 @@ Thus the period \(T\) of a point moving at speed \(v\) around a circle of radius
 is the time for one cycle so it is just the distance traveled in that time divided by
 the (constant) speed:
 <p><sup class="fn-ref"><a href="#fn-5" id="fnref-5">5</a></sup>
-<p>\[T = \frac{2\pi r}{v}\,.\]
+<p><span class="eqn-block" id="eqn-9">\[T = \frac{2\pi r}{v}\,.\]<span class="eqn-number">(9)</span></span>
 <p>Another way of getting <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> is to compute the speed as the distance traveled in one cycle (the
 circumference of the circle) divided by the time for that cycle (the period),
 \(v = 2 \pi r/T\), then solve that equation for the period and obtain <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a>.
@@ -259,7 +258,7 @@ period \(T\) by noting that the period is the time for one cycle.
 Inverting this gives the number of cycles per unit time: \(\nu = 1/T\).
 <p><sup class="fn-ref"><a href="#fn-6" id="fnref-6">6</a></sup>
 <p>Using this expression in Eq.&thinsp;9 gives a second expression for the frequency:
-<p>\[\nu = \frac{1}{T} = \frac{v}{2 \pi r}\,.\]
+<p><span class="eqn-block" id="eqn-10">\[\nu = \frac{1}{T} = \frac{v}{2 \pi r}\,.\]<span class="eqn-number">(10)</span></span>
 <p>For an analog clock, the frequency of a spot on the minute hand is 1<span class="unit">&thinsp;cycle/hr</span>
 while the frequency of the hour hand is 1<span class="unit">&thinsp;cycle per half day</span>.
 <p>The SI (international standard) unit of frequency is the “cycle per
@@ -267,7 +266,7 @@ second,” called the hertz and abbreviated as Hz.
 Thus the earth's rotational frequency is \(\nu = (1/86400) \,\text{Hz} = 1.1574 \times 10^{-5} \,\text{Hz}\).
 <p><span class="tryit">Try it:</span>  Show that the frequency of a spot on an analog clock's second hand is
 \(\nu = 0.0167\,\text{Hz}\), to 3 significant digits, while that of the hour hand is
-\(\nu = 0.0000231\,\text{Hz}\). <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a>
+\(\nu = 0.0000231\,\text{Hz}\).<sup class="help-link"><a href="#help-17" title="see Sequence [S-17] in the Special Assistance Supplement">[S-17]</a></sup>
 <p><h3 id="pcap-4-e">4e. Angular Speed</h3>
 
 Angular speed is defined as the time rate of change of
@@ -275,32 +274,32 @@ angular position
 \(\theta\), and is denoted by the Greek letter \(\omega\).
 In English \(\omega\) is written “omega” and pronounced “oh-may'-gah.”
 Mathematically,
-<p>\[\omega = | {d\theta/dt} |\,.\]
+<p><span class="eqn-block" id="eqn-11">\[\omega = | {d\theta/dt} |\,.\]<span class="eqn-number">(11)</span></span>
 <p>Using the relation \(\theta = s/r\) (where \(\theta\) is measured in
 radians) we obtain:
-<p>\[\omega = \left| \frac{d}{dt}\left(\frac{s}{r}\right) \right| =
-\frac{1}{r} \left| \frac{ds}{dt} \right| = \frac{1}{r} v\,. \help{16}\]
+<p><span class="eqn-block" id="eqn-12">\[\omega = \left| \frac{d}{dt}\left(\frac{s}{r}\right) \right| =
+\frac{1}{r} \left| \frac{ds}{dt} \right| = \frac{1}{r} v\,. \]<span class="eqn-number">(12)</span></span>
 <p>Thus the tangential speed, \(v = | {ds/dt} |\), is related to \(\omega\) by:
-<p>\[v = \omega r\,.\]
+<p><span class="eqn-block" id="eqn-13">\[v = \omega r\,.\]<span class="eqn-number">(13)</span></span>
 <p>Note that \(v\), \(\omega\), and \(r\) are either positive or zero, never
 negative.
 <p>We can derive a very important relation by noting that there are \(2 \pi\)
 radians per circular cycle, so the rate at which radians are swept out by
 the radius vector is \(2 \pi\) times the rate at which cycles are completed:
-<p>\[\omega = 2 \pi (\,\text{radians}) \nu\,.\]
+<p><span class="eqn-block" id="eqn-14">\[\omega = 2 \pi (\,\text{radians}) \nu\,.\]<span class="eqn-number">(14)</span></span>
 <p>We normally just write “\(\omega = 2 \pi \nu\)” and leave the
 “(radians)” as understood.
 <p><span class="tryit">Try it:</span>  Show that the angular speed of a point on the minute hand of an
-analog clock is 0.00175<span class="unit">&thinsp;rad/sec</span>. <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a>
+analog clock is 0.00175<span class="unit">&thinsp;rad/sec</span>.<sup class="help-link"><a href="#help-18" title="see Sequence [S-18] in the Special Assistance Supplement">[S-18]</a></sup>
 <p><figure id="fig-7" class="fig-left-framed"><img src="figures/m9gr07.svg" alt="Figure 7" class="physnet-fig"><figcaption>Fig.&nbsp;7. Direction of \(\vec{\omega}\) for
 circular motion: 2 methods.</figcaption></figure>
 
-<p><h3 id="pcap--">. </h3>
-[]4fAngular Velocity
+<p><h3 id="pcap-4-f">4f. Angular Velocity</h3>
+
 Angular velocity is defined as the vector-like quantity \(\vec{\omega}\) whose
 magnitude is defined to be the angular speed, \(\omega\), and whose direction
-is defined to be: <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
-<p>\[\hat{\omega} = \hat{r} \times \hat{v}\,. \qquad \text{(circular motion only)}\]
+is defined to be:<sup class="help-link"><a href="#help-8" title="see Sequence [S-8] in the Special Assistance Supplement">[S-8]</a></sup>
+<p><span class="eqn-block" id="eqn-15">\[\hat{\omega} = \hat{r} \times \hat{v}\,. \qquad \text{(circular motion only)}\]<span class="eqn-number">(15)</span></span>
 <p>The direction \(\hat{\omega}\) always lies along the “axis of rotation.”
 There are two ways of determining the direction in which \(\hat{\omega}\)
 points along the rotation axis (see <a href="#fig-7" class="fig-ref">Fig.&nbsp;7</a>).
@@ -363,13 +362,12 @@ You can just go ahead and calculate the acceleration.
 <p><h3 id="pcap-1-">1. Show: \(\vec{v} \perp \vec{r}\)</h3>
 
 First we write down the unit vector in the radial direction:
-<p>\[\hat{r} = \hat{x} \cos{\frac{s}{r}} +
-                          \hat{y} \sin{\frac{s}{r}}\,.\]
+<p><span class="eqn-block" id="eqn-16">\[\hat{r} = \hat{x} \cos{\frac{s}{r}} +
+                          \hat{y} \sin{\frac{s}{r}}\,.\]<span class="eqn-number">(16)</span></span>
 <p><div class="centered">
-<span class="fbox">Exercise 1:  Show that:
+<span class="boxed">Exercise 1:  Show that:
   (a) \(\hat{r}\) is a  unit vector; and
-  (b) \(\hat{r}\) points in the same direction as \(\vec{r}\).
-  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+  (b) \(\hat{r}\) points in the same direction as \(\vec{r}\).<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
  
 </span>
 </div>
@@ -377,21 +375,21 @@ First we write down the unit vector in the radial direction:
 <p>Differentiating <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-16" class="eqn-ref">Eq.&nbsp;(16)</a> with respect to time
 gives the velocity:
 <p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup>
-<p><a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
+<p><sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup>
 <p>\[\vec{v} = \frac{d\vec{r}}{dt} = \frac{d(r\hat{r})}{dt} =
      r \frac{d\hat{r}}{dt} = r \frac{d\hat{r}}{ds} \frac{ds}{dt}\,,\]
-<p>\[= \frac{ds}{dt} \left( - \hat{x} \sin{\frac{s}{r}} +
-                                    \hat{y} \cos{\frac{s}{r}} \right) \,.\]
+<p><span class="eqn-block" id="eqn-17">\[= \frac{ds}{dt} \left( - \hat{x} \sin{\frac{s}{r}} +
+                                    \hat{y} \cos{\frac{s}{r}} \right) \,.\]<span class="eqn-number">(17)</span></span>
 <p>We can write this as:
 <p>\[\vec{v} = \frac{ds}{dt} \hat{\theta}\,,\]
 <p>where
-<p>\[\hat{\theta} = - \hat{x} \sin{\frac{s}{r}} +
-                               \hat{y} \cos{\frac{s}{r}}\,.\]
+<p><span class="eqn-block" id="eqn-18">\[\hat{\theta} = - \hat{x} \sin{\frac{s}{r}} +
+                               \hat{y} \cos{\frac{s}{r}}\,.\]<span class="eqn-number">(18)</span></span>
 <p><div class="centered">
-<span class="fbox">Exercise 2:  Show that:
+<span class="boxed">Exercise 2:  Show that:
   (a) \(\hat{\theta}\) is a unit vector;
   (b) \(\hat{\theta} \cdot \vec{r} = 0\); and
-  (c) \(\hat{\theta}\) is perpendicular to \(\vec{r}\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+  (c) \(\hat{\theta}\) is perpendicular to \(\vec{r}\).<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>
  
 </span>
 </div>
@@ -408,18 +406,17 @@ particularize it to the case of circular motion:
 <p>\[\frac{d\hat{\theta}}{dt} =
             - \frac{1}{r} \frac{ds}{dt} \hat{r}\,.\]
 <p>Then:
-<p>\[\vec{a} = \left(\frac{d^2s}{dt^2}\right) \hat{\theta} -
-                 \frac{1}{r} \left(\frac{ds}{dt}\right)^2 \hat{r}\,.\]
+<p><span class="eqn-block" id="eqn-19">\[\vec{a} = \left(\frac{d^2s}{dt^2}\right) \hat{\theta} -
+                 \frac{1}{r} \left(\frac{ds}{dt}\right)^2 \hat{r}\,.\]<span class="eqn-number">(19)</span></span>
 <p>Since \(\hat{\theta}\) is tangent to the circle, the tangential component of
 the acceleration is:
 <p>\[\vec{a}_t = (d^2s/dt^2) \hat{\theta}\,,\]
 <p>and its magnitude is
 <p>\[a_t = | \vec{a}_t | = | d^2s/dt^2 | = | dv/dt |\,.\]
 <p><div class="centered">
-<span class="fbox">Exercise 3:  Show that if \(\vec{a}_t\) and \(\vec{v}\) in the same direction
+<span class="boxed">Exercise 3:  Show that if \(\vec{a}_t\) and \(\vec{v}\) in the same direction
   then the speed is increasing; and that if \(\vec{a}_t\) and \(\vec{v}\) are in
-  opposing directions then the speed is decreasing.
-  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+  opposing directions then the speed is decreasing.<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup>
  
 </span>
 </div>
@@ -455,17 +452,18 @@ and Integration” (MISN-0-1). <a href="#fnref-3" class="fn-back">↩</a></li></
 
 <p><section id="problem-supplement" class="module-section section-problems"><h2 id="problem-supplement">Problem Supplement</h2>
 
-<p><span class="tex-unknown" title="unknown macro">\ProbSet</span>Exercises
+<p><h3 class="probset-title">Exercises</h3>
+
 <ol>
 <li><span class="item-label">1.</span> Show that, for uniform circular motion:
-           \(a_r = 4 \pi^2 r / T^2 = 4 \pi^2 \nu^2 r\).  <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a></li>
+           \(a_r = 4 \pi^2 r / T^2 = 4 \pi^2 \nu^2 r\).<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup></li>
 <li><span class="item-label">2.</span> Show that, for uniform circular motion:
 <ol>
 
 </ol>
 </li>
 <li><span class="item-label">a.</span> \(\omega = 2 \pi \nu\)</li>
-<li><span class="item-label">b.</span> \(a_r = \omega^2 r\)   <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+<li><span class="item-label">b.</span> \(a_r = \omega^2 r\)<sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup>
 </li>
 <li><span class="item-label">3.</span> 
 <ol>
@@ -473,26 +471,27 @@ and Integration” (MISN-0-1). <a href="#fnref-3" class="fn-back">↩</a></li></
 </ol>
 </li>
 <li><span class="item-label">a.</span> Explain why \(v = | ds/dt |\), \(v \neq ds/dt\).</li>
-<li><span class="item-label">b.</span> If \(s\) is graphed versus time, how can \(v\) be determined from this graph?   <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+<li><span class="item-label">b.</span> If \(s\) is graphed versus time, how can \(v\) be determined from this graph?<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
 </li>
 </ol>
 
 
-<p><span class="tex-unknown" title="unknown macro">\ProbSet</span>Problems
+<p><h3 class="probset-title">Problems</h3>
+
  Note:  Remember to set your calculator to the proper angular
-measure, radians or degrees, for the equations you are using! <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+measure, radians or degrees, for the equations you are using!<sup class="help-link"><a href="#help-12" title="see Sequence [S-12] in the Special Assistance Supplement">[S-12]</a></sup>
 <ol>
 <li><span class="item-label">1.</span> The moon orbits the earth in an approximately circular path (mean
 radius&thinsp;\( = 3.84 \times 10^5\,\text{km}\)) every 27.3<span class="unit">&thinsp;days</span>.  Calculate the moon's
-speed and radial acceleration in this orbit. <a href="#help-25" class="help-link"><span title="Special Assistance">[help&nbsp;25]</span></a></li>
+speed and radial acceleration in this orbit.<sup class="help-link"><a href="#help-25" title="see Sequence [S-25] in the Special Assistance Supplement">[S-25]</a></sup></li>
 <li><span class="item-label">2.</span> Calculate the speed and acceleration of a person on the equator 
 resulting from the earth's spinning about its axis through the poles.
-The earth's mean radius is \(6.37 \times 10^6\,\text{m}\). <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></li>
+The earth's mean radius is \(6.37 \times 10^6\,\text{m}\).<sup class="help-link"><a href="#help-10" title="see Sequence [S-10] in the Special Assistance Supplement">[S-10]</a></sup></li>
 <li><span class="item-label">3.</span> At a particular instant of time a car on a circular track
 (radius&thinsp;\( = 8.0 \times 10^2\,\text{ft}\)) is traveling at 50.0<span class="unit">&thinsp;miles per hour</span>
 and is increasing its speed at a rate of 5.0<span class="unit">&thinsp;miles per hour per second</span>.
 Determine the magnitude of its acceleration, at this particular instant of
-time, in <span class="unit">&thinsp;ft/s<sup>2</sup></span>. <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a></li>
+time, in <span class="unit">&thinsp;ft/s<sup>2</sup></span>.<sup class="help-link"><a href="#help-11" title="see Sequence [S-11] in the Special Assistance Supplement">[S-11]</a></sup></li>
 <li><span class="item-label">4.</span> Calculate the acceleration of a pilot at the bottom of a dive in
 a plane  traveling at a constant \(5.0 \times 10^2\,\text{miles per hour}\) along a
 circular path of radius 2.0<span class="unit">&thinsp;miles</span>.</li>
@@ -508,9 +507,9 @@ Is its speed increasing, decreasing, or constant?m9gr10</li>
 module's text; (2) work all of the other problems successfully before tackling
 this one; (3) if necessary, review the prerequisite material on derivatives
 in MISN-0-1 and unit vectors in MISN-0-2; and (4) use the references,
-labeled <a href="#help-\ " class="help-link"><span title="Special Assistance">[help&nbsp;\ ]</span></a>, that refer to this module's Special Assistance Supplement.</em>m9gr11
+labeled<sup class="help-link"><a href="#help-\ " title="see Sequence [S-\ ] in the Special Assistance Supplement">[S-\ ]</a></sup>, that refer to this module's Special Assistance Supplement.</em>m9gr11
 <p>An object moves around the circle shown such in the sketch, with:
-<p>\[s(t) = (8.0\,\text{m/s}) t - (1.00\unit{m/s^{2}}) t^2\,.\]
+<p>\[s(t) = (8.0\,\text{m/s}) t - (1.00\,\text{m/s}^{2}\text{}) t^2\,.\]
 <p>The problem is to determine the object's kinematic variables at several
 different times.
 <p><ol>
@@ -519,18 +518,16 @@ different times.
 </li>
 <li><span class="item-label">a.</span> To start out with, write: \(s(t) = b t + c t^2\).</li>
 <li>Determine \(\vec{r}\) in terms of \(r\), \(\theta\), \(\hat{r}\), \(\hat{\theta}\), \(b\), \(c\), and \(t\).</li>
-<li><span class="item-label">b.</span> Determine \(\vec{v}\) in terms of \(r\), \(\theta\), \(\hat{r}\), \(\hat{\theta}\), \(b\), \(c\), and \(t\).
-<a href="#help-19" class="help-link"><span title="Special Assistance">[help&nbsp;19]</span></a></li>
-<li><span class="item-label">c.</span> Determine \(\vec{a}\) in terms of \(r\), \(\theta\), \(\hat{r}\), \(\hat{\theta}\), \(b\), \(c\), and \(t\).
-<a href="#help-20" class="help-link"><span title="Special Assistance">[help&nbsp;20]</span></a></li>
+<li><span class="item-label">b.</span> Determine \(\vec{v}\) in terms of \(r\), \(\theta\), \(\hat{r}\), \(\hat{\theta}\), \(b\), \(c\), and \(t\).<sup class="help-link"><a href="#help-19" title="see Sequence [S-19] in the Special Assistance Supplement">[S-19]</a></sup></li>
+<li><span class="item-label">c.</span> Determine \(\vec{a}\) in terms of \(r\), \(\theta\), \(\hat{r}\), \(\hat{\theta}\), \(b\), \(c\), and \(t\).<sup class="help-link"><a href="#help-20" title="see Sequence [S-20] in the Special Assistance Supplement">[S-20]</a></sup></li>
 <li><span class="item-label">d.</span> Substitute the numerical values for \(r\), \(b\), and \(c\) and determine the object's position
 vectors, \(\vec{r}(t)\), at \(t = 2.0\,\text{sec}\), \(4.0\,\text{sec}\), and \(6.0\,\text{sec}\).</li>
 <li><span class="item-label">e.</span> Same as in part (d) but for the object's velocity.</li>
 <li><span class="item-label">f.</span> Same as in part (d) but for the object's acceleration.</li>
 <li><span class="item-label">g.</span> Determine the speed and direction of travel (CW or CCW) at \(t = 2.0\,\text{sec}\),
-           \(4.0\,\text{sec}\), and \(6.0\,\text{sec}\). <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a></li>
+           \(4.0\,\text{sec}\), and \(6.0\,\text{sec}\).<sup class="help-link"><a href="#help-22" title="see Sequence [S-22] in the Special Assistance Supplement">[S-22]</a></sup></li>
 <li><span class="item-label">h.</span> Determine the magnitude and direction of the acceleration (CW/CCW and inward/outward) at \(t = 2.0\,\text{sec}\),
-           \(4.0\,\text{sec}\), and \(6.0\,\text{sec}\). <a href="#help-22" class="help-link"><span title="Special Assistance">[help&nbsp;22]</span></a></li>
+           \(4.0\,\text{sec}\), and \(6.0\,\text{sec}\).<sup class="help-link"><a href="#help-22" title="see Sequence [S-22] in the Special Assistance Supplement">[S-22]</a></sup></li>
 <li><span class="item-label">j.</span> Sketch \(\vec{r}\), \(\vec{v}\), and \(\vec{a}\) for each of the times
            of part (d).</li>
 <li><span class="item-label">k.</span> Determine whether the speed is increasing, decreasing, or not
@@ -542,7 +539,7 @@ vectors, \(\vec{r}(t)\), at \(t = 2.0\,\text{sec}\), \(4.0\,\text{sec}\), and \(
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <p><ol>
-<li><span class="item-label">1.</span> \(1.02 \times 10^3\,\text{m/s}\), \(2.72 \times 10^{-3}\unit{m/s^{2}}\) inward.</li>
+<li><span class="item-label">1.</span> \(1.02 \times 10^3\,\text{m/s}\), \(2.72 \times 10^{-3}\,\text{m/s}^{2}\text{}\) inward.</li>
 <li><span class="item-label">2.</span> 463<span class="unit">&thinsp;m/s</span>, 0.0337<span class="unit">&thinsp;m/s<sup>2</sup></span> (toward the center of the earth).</li>
 <li><span class="item-label">3.</span> 9.9<span class="unit">&thinsp;ft/s<sup>2</sup></span>.</li>
 <li><span class="item-label">4.</span> 51<span class="unit">&thinsp;ft/s<sup>2</sup></span> (toward the center of the circle).</li>
@@ -556,21 +553,21 @@ vectors, \(\vec{r}(t)\), at \(t = 2.0\,\text{sec}\), \(4.0\,\text{sec}\), and \(
 <li><span class="item-label">a.</span> \(\vec{r} = r \, \hat{r}(\theta)\), where \(\theta = \frac{s}{r} = \frac{bt + ct^2}{r}\)&thinsp;.</li>
 <li><span class="item-label">b.</span> \(\vec{v} = (b + 2ct)\,\hat{\theta}(\theta)\)&thinsp;.</li>
 <li><span class="item-label">c.</span> \(\vec{a} = 2c\,\hat{\theta}(\theta) - \frac{(b + 2ct)^2}{r}\,\hat{r}(\theta)\)&thinsp;.</li>
-<li><span class="item-label">d.</span> \(\vec{r}(2.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_2)\); \(\theta_2 = 3.00\,\text{rad} = 171.9^\circ \,\rightarrow\, 1.7 \times 10^2\,\text{degrees}\).</li>
-<li>\(\vec{r}(4.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_4)\); \(\theta_4 = 4.00\,\text{rad} = 229.2^\circ \,\rightarrow\, 2.3 \times 10^2\,\text{degrees}\).</li>
-<li>\(\vec{r}(6.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_6)\); \(\theta_6 = 3.00\,\text{rad} = 171.9^\circ \,\rightarrow\, 1.7 \times 10^2\,\text{degrees}\).</li>
+<li><span class="item-label">d.</span> \(\vec{r}(2.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_2)\); \(\theta_2 = 3.00\,\text{rad} = 171.9° \,\rightarrow\, 1.7 \times 10^2\,\text{degrees}\).</li>
+<li>\(\vec{r}(4.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_4)\); \(\theta_4 = 4.00\,\text{rad} = 229.2° \,\rightarrow\, 2.3 \times 10^2\,\text{degrees}\).</li>
+<li>\(\vec{r}(6.0\,\text{s}) = 4.0\,\text{m}\,\hat{r}(\theta_6)\); \(\theta_6 = 3.00\,\text{rad} = 171.9° \,\rightarrow\, 1.7 \times 10^2\,\text{degrees}\).</li>
 <li><span class="item-label">e.</span> \(\vec{v}(2.0\,\text{s}) = 4.0\,\text{m/s}\;\hat{\theta}(\theta_2)\).</li>
 <li>\(\vec{v}(4.0\,\text{s}) = 0.0\).</li>
 <li>\(\vec{v}(6.0\,\text{s}) = -4.0\,\text{m/s}\;\hat{\theta}(\theta_6)\).</li>
-<li><span class="item-label">f.</span> \(\vec{a}(2.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_2)-4.0\,\hat{r}(\theta_2)]\unit{m/s^{2}}\),</li>
-<li>\(\vec{a}(4.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_4)]\unit{m/s^{2}}\),</li>
-<li>\(\vec{a}(6.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_6)-4.0\,\hat{r}(\theta_6)]\unit{m/s^{2}}\),</li>
+<li><span class="item-label">f.</span> \(\vec{a}(2.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_2)-4.0\,\hat{r}(\theta_2)]\,\text{m/s}^{2}\text{}\),</li>
+<li>\(\vec{a}(4.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_4)]\,\text{m/s}^{2}\text{}\),</li>
+<li>\(\vec{a}(6.0\,\text{s}) = [-2.0\;\hat{\theta}(\theta_6)-4.0\,\hat{r}(\theta_6)]\,\text{m/s}^{2}\text{}\),</li>
 <li><span class="item-label">g.</span> \(v(2.0\,\text{s}) = 4.0\,\text{m/s}\), CCW.</li>
 <li>\(v(4.0\,\text{s}) = 0.0\,\text{m/s}\), (stationary).</li>
 <li>\(v(6.0\,\text{s}) = 4.0\,\text{m/s}\), CW.</li>
-<li><span class="item-label">h.</span> \(a(2.0\,\text{s}) = 4.5\unit{m/s^{2}}\), CW and inward.</li>
-<li>\(a(4.0\,\text{s}) = 2.0\unit{m/s^{2}}\), CW.</li>
-<li>\(a(6.0\,\text{s}) = 4.5\unit{m/s^{2}}\), CW and inward.</li>
+<li><span class="item-label">h.</span> \(a(2.0\,\text{s}) = 4.5\,\text{m/s}^{2}\text{}\), CW and inward.</li>
+<li>\(a(4.0\,\text{s}) = 2.0\,\text{m/s}^{2}\text{}\), CW.</li>
+<li>\(a(6.0\,\text{s}) = 4.5\,\text{m/s}^{2}\text{}\), CW and inward.</li>
 <li><span class="item-label">i.</span> The sketch is for \(t = 2\) sec.
 For the other times, check that the vectors agree with the values you
 computed above and with common sense.m9gr13</li>
@@ -587,7 +584,7 @@ computed above and with common sense.m9gr13</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body"><ol>
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;Appendix Exercise 1)</span></h3><div class="help-body"><ol>
 <li><span class="item-label">a.</span> \(\hat{r} \cdot \hat{r} = \left| \frac{\vec{r}}{r}\right|
  \left| \frac{\vec{r}}{r}\right|
  (\cos{\theta}) = \frac{\left| \vec{r} \right|^2}{r^2}\,(1) = 1\), so
@@ -598,7 +595,7 @@ computed above and with common sense.m9gr13</li>
 
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body"><ol>
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;Appendix Exercise 2)</span></h3><div class="help-body"><ol>
 <li><span class="item-label">a.</span> See if \(\hat{\theta} \cdot \hat{\theta} = 1\)
  as for \(\hat{r}\) in [S-1].</li>
 <li><span class="item-label">b.</span> \(\hat{\theta} \cdot \hat{r} = 0\), so either:
@@ -609,7 +606,7 @@ computed above and with common sense.m9gr13</li>
 
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><ol>
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;Exercise 3)</span></h3><div class="help-body"><ol>
 <li><span class="item-label">a.</span> \( | ds/dt |\) and ds/dt could differ in sign.
  What is the sign of the magnitude of a vector?</li>
 <li><span class="item-label">b.</span> The derivative is the slope of the graph.</li>
@@ -617,28 +614,28 @@ computed above and with common sense.m9gr13</li>
 
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Use the chain rule:
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Section&nbsp;Appendix, Sect. 1)</span></h3><div class="help-body">Use the chain rule:
  
  \[\frac{d\hat{r}}{dt}=\frac{d\hat{r}}{ds}\frac{ds}{dt} \qquad \text{and} \qquad
  \frac{d\hat{\theta}}{dt}=\frac{d\hat{\theta}}{ds}\frac{ds}{dt}\]
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">You are given \(\vec{v}\) and are asked about \(\vec{v} + \Delta \vec{v}\)
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Section&nbsp;Appendix Exercise 3)</span></h3><div class="help-body">You are given \(\vec{v}\) and are asked about \(\vec{v} + \Delta \vec{v}\)
  a short time \(\Delta t\) later.  \(\Delta \vec{v}\) is \(\vec{a}_t \Delta t\).
  Draw vector addition diagrams to decide if \(\vec{v} + \Delta \vec{v}\)
  is longer than, shorter than, or the same length as \(\vec{v}\).
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">Use \(a_r = v^2/r\)&thinsp; and \(v = 2 \pi r / T\).</div></div>
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;Exercise 1)</span></h3><div class="help-body">Use \(a_r = v^2/r\)&thinsp; and \(v = 2 \pi r / T\).</div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body"><ol>
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;Exercise 2)</span></h3><div class="help-body"><ol>
 <li><span class="item-label">a.</span> Use \(v = \omega\,r\) and \(\nu = v/2 \pi r\).</li>
 <li><span class="item-label">b.</span> Use \(a = v^2/r\) and \(v = \omega \,r\).</li>
 </ol>
 
 </div></div>
 
-<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">The direction of \(\vec{\omega} \times \vec{r}\), by definition of the
+<p><div id="help-8" class="help-item"><h3 class="help-num">S-8 <span class="help-origin">(from Section&nbsp;4f)</span></h3><div class="help-body">The direction of \(\vec{\omega} \times \vec{r}\), by definition of the
  vector product, must be perpendicular to \(\vec{\omega}\).
  Therefore this vector product lies in the plane of motion.
  It must also be perpendicular to \(\vec{r}\); therefore it lies along the
@@ -650,41 +647,39 @@ computed above and with common sense.m9gr13</li>
  This, in turn, is just the magnitude of the tangential velocity, \(v\).
 </div></div>
 
-<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">Here is one answer: \(\theta/180^\circ = s/(\pi r)\).
- Here is another equivalent one: \(\theta/360^\circ = s/(2 \pi r)\).</div></div>
+<p><div id="help-9" class="help-item"><h3 class="help-num">S-9 <span class="help-origin">(from Section&nbsp;2b)</span></h3><div class="help-body">Here is one answer: \(\theta/180° = s/(\pi r)\).
+ Here is another equivalent one: \(\theta/360° = s/(2 \pi r)\).</div></div>
 
-<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">The Earth makes one complete rotation per day: that's what a day is!
- Therefore the Earth's period of rotation \(T\) is \ldots  (you finish it).
+<p><div id="help-10" class="help-item"><h3 class="help-num">S-10 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;2)</span></h3><div class="help-body">The Earth makes one complete rotation per day: that's what a day is!
+ Therefore the Earth's period of rotation \(T\) is &hellip; (you finish it).
  Draw a diagram and put the vectors on it.
 </div></div>
 
-<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">The car's speed is 50<span class="unit">&thinsp;mph</span> only at the quoted instant of time.
+<p><div id="help-11" class="help-item"><h3 class="help-num">S-11 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;3)</span></h3><div class="help-body">The car's speed is 50<span class="unit">&thinsp;mph</span> only at the quoted instant of time.
  Slightly earlier in time its speed was less than that, and slightly later
  its speed will be greater.
  Therefore it has tangential acceleration.
- Because it is in circular motion, it also has radial acceleration.
- <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a>
+ Because it is in circular motion, it also has radial acceleration.<sup class="help-link"><a href="#help-13" title="see Sequence [S-13] in the Special Assistance Supplement">[S-13]</a></sup>
 </div></div>
 
-<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">For help on whether you should use radians or degrees, read the text of
+<p><div id="help-12" class="help-item"><h3 class="help-num">S-12 <span class="help-origin">(from Section&nbsp;2a)</span></h3><div class="help-body">For help on whether you should use radians or degrees, read the text of
  this module.
 </div></div>
 
-<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">The tangential acceleration is 5.0<span class="unit">&thinsp;miles per hour per second</span>, which is
+<p><div id="help-13" class="help-item"><h3 class="help-num">S-13 <span class="help-origin">(from [S-11])</span></h3><div class="help-body">The tangential acceleration is 5.0<span class="unit">&thinsp;miles per hour per second</span>, which is
  7.33<span class="unit">&thinsp;ft/s<sup>2</sup></span> (you must check that conversion from miles to feet and from
- hour to seconds to make sure you understand what is going on).
- <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a>
+ hour to seconds to make sure you understand what is going on).<sup class="help-link"><a href="#help-14" title="see Sequence [S-14] in the Special Assistance Supplement">[S-14]</a></sup>
 </div></div>
 
-<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">You must compute \(\vec{a}_r\) and \(\vec{a}_t\) and add them as vectors.
+<p><div id="help-14" class="help-item"><h3 class="help-num">S-14 <span class="help-origin">(from [S-13])</span></h3><div class="help-body">You must compute \(\vec{a}_r\) and \(\vec{a}_t\) and add them as vectors.
  Note that they are mutually perpendicular vectors.
 </div></div>
 
-<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">Note that \(r\) is constant for circular motion and use the chain rule for
+<p><div id="help-16" class="help-item"><h3 class="help-num">S-16 <span class="help-origin">(from Section&nbsp;4e)</span></h3><div class="help-body">Note that \(r\) is constant for circular motion and use the chain rule for
  differentiation of products (see MISN-0-1).
 </div></div>
 
-<p><div id="help-17" class="help-item"><span class="help-num">17.</span><div class="help-body">The “second” hand makes one complete circuit of the dial in one minute,
+<p><div id="help-17" class="help-item"><h3 class="help-num">S-17 <span class="help-origin">(from Section&nbsp;4d)</span></h3><div class="help-body">The “second” hand makes one complete circuit of the dial in one minute,
  which is 60<span class="unit">&thinsp;seconds</span>, so its period is: \(T = 60\,\text{sec}\).
  Now convert this to frequency.
 <p> The “hour” hand makes one complete circuit of the dial in 12<span class="unit">&thinsp;hours</span>, which
@@ -692,26 +687,26 @@ computed above and with common sense.m9gr13</li>
  Now convert this to frequency.
 </div></div>
 
-<p><div id="help-18" class="help-item"><span class="help-num">18.</span><div class="help-body">See Table of Contents, “Angular Speed.”</div></div>
+<p><div id="help-18" class="help-item"><h3 class="help-num">S-18 <span class="help-origin">(from Section&nbsp;4e)</span></h3><div class="help-body">See Table of Contents, “Angular Speed.”</div></div>
 
-<p><div id="help-19" class="help-item"><span class="help-num">19.</span><div class="help-body">\(\vec{v} = \frac{d\vec{r}}{dt}\); \(\frac{d\hat{r}(\theta)}{dt} = \frac{d\theta}{dt}\;\hat{\theta}(\theta)\); \(\frac{dr}{dt} = 0\)
+<p><div id="help-19" class="help-item"><h3 class="help-num">S-19 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;7b)</span></h3><div class="help-body">\(\vec{v} = \frac{d\vec{r}}{dt}\); \(\frac{d\hat{r}(\theta)}{dt} = \frac{d\theta}{dt}\;\hat{\theta}(\theta)\); \(\frac{dr}{dt} = 0\)
 </div></div>
 
-<p><div id="help-20" class="help-item"><span class="help-num">20.</span><div class="help-body">\(\vec{a} = \frac{d\vec{v}}{dt}\); \(\frac{d\hat{\theta}(\theta)}{dt} = -\frac{d\theta}{dt}\;\hat{r}(\theta)\)
+<p><div id="help-20" class="help-item"><h3 class="help-num">S-20 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;7c)</span></h3><div class="help-body">\(\vec{a} = \frac{d\vec{v}}{dt}\); \(\frac{d\hat{\theta}(\theta)}{dt} = -\frac{d\theta}{dt}\;\hat{r}(\theta)\)
 </div></div>
 
-<p><div id="help-22" class="help-item"><span class="help-num">22.</span><div class="help-body">To get the direction of motion (CW or CCW), use the values of the components of the radius and velocity
+<p><div id="help-22" class="help-item"><h3 class="help-num">S-22 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;7e)</span></h3><div class="help-body">To get the direction of motion (CW or CCW), use the values of the components of the radius and velocity
 vectors to either draw the velocity vector in your head or to sketch it on a piece of paper (see the
 velocity vectors sketched throughout the text of this module).  To get the direction of the acceleration,
 do the same with the radius and acceleration vectors.  In each case the radius vector is said to be needed
 only in order to get the correct angle for the unit vectors.
 </div></div>
 
-<p><div id="help-24" class="help-item"><span class="help-num">24.</span><div class="help-body">See the <em>Table of Contents</em>, “Velocity and Speed,” and
+<p><div id="help-24" class="help-item"><h3 class="help-num">S-24 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;7g)</span></h3><div class="help-body">See the <em>Table of Contents</em>, “Velocity and Speed,” and
  “Acceleration: Tangential and Radial.”
 </div></div>
 
-<p><div id="help-25" class="help-item"><span class="help-num">25.</span><div class="help-body">Do all the Exercises (above the Problems) successfully before tackling this
+<p><div id="help-25" class="help-item"><h3 class="help-num">S-25 <span class="help-origin">(from Problem&nbsp;Supplement, Problem&nbsp;1)</span></h3><div class="help-body">Do all the Exercises (above the Problems) successfully before tackling this
  problem.
 </div></div>
 
@@ -728,7 +723,7 @@ only in order to get the correct angle for the unit vectors.
 the cover.</li>
 <li><span class="item-label">2.</span> A particle moves CCW on a circle of radius \(r = 4.0\,\text{m}\).
 Its trajectory position \(s\) along the circular arc is given by:
-<p>\[s(t) = (8.0\,\text{m/s}) t - (1.00\unit{m/s^{2}}) t^2\,.\]
+<p>\[s(t) = (8.0\,\text{m/s}) t - (1.00\,\text{m/s}^{2}\text{}) t^2\,.\]
 <p><ol>
 
 </ol>

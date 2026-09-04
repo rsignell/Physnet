@@ -27,7 +27,7 @@
 
     
     <div class="skills-block"><h4>Output Skills (Rule Application)</h4><ul><li><strong>R1.</strong> Perform simple calculations involving the elementary functions [i.e.,
-    <span class="tex-unknown" title="unknown macro">\mbox</span>\(\sin(z)\), <span class="tex-unknown" title="unknown macro">\mbox</span>\(\cos(z)\), <span class="tex-unknown" title="unknown macro">\mbox</span>\(\sinh(z)\), <span class="tex-unknown" title="unknown macro">\mbox</span>\(\cosh(z)\), <span class="tex-unknown" title="unknown macro">\mbox</span>\(\exp(z)\).]</li><li><strong>R2.</strong> Test whether a function is analytic by using the Cauchy-Riemann
+    \(\sin(z)\), \(\cos(z)\), \(\sinh(z)\), \(\cosh(z)\), \(\exp(z)\).]</li><li><strong>R2.</strong> Test whether a function is analytic by using the Cauchy-Riemann
     conditions.</li><li><strong>R3.</strong> Construct the real (imaginary) part of an analytic function by using the
     C.R. conditions when given the imaginary (real) part of the function.</li></ul></div>
 
@@ -43,3 +43,101 @@
 
 
 </section>
+
+
+<p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Introduction</h2>
+
+<p>This unit will introduce you to one of the most powerful mathematical
+techniques available to the scientist and engineer. You have already 
+become acquainted with several physical problems giving rise to Laplace's
+equation. One of the chief implications of a function of a complex variable
+being differentiable is that the real and imaginary parts of these functions
+each satisfy Laplace's equation. Therefore, the theorems for analytic functions 
+(functions of a complex variable differentiable in some open region)
+can be used when studying physical problems where Laplace' s equation applies.
+This unit introduces the idea of a function of a complex variable as well as
+continuity and the derivative of such a function. Analytic functions are
+then studied.
+<p></section>
+
+<p><section id="sect-2" class="module-section section-text"><h2 id="sect-2">2. Procedures</h2>
+
+<p><ol>
+<li><span class="item-label">1.</span> Review procedure. You should know the definition of complex 
+numbers in rectangular form as well as complex algebra including
+addition, subtraction, multiplication, and division of complex
+numbers. If you do not, then see your instructor for further
+instructions.</li>
+<li><span class="item-label">2.</span> Read pages 286-287 of Spiegel. Do not read the section on page
+287 entitled Integrals and Cauchy's Theorem.</li>
+<li><span class="item-label">3.</span> Read Sections 6.1 and 6.2 of Arfken. Do not read
+Section 6.3.</li>
+<li><span class="item-label">4.</span> Underline in the texts or write out the definitions and explanations
+of the terms and concepts of Output Skill K1. Note: A discussion of
+the logarithm and the concept of branch is included in the 
+Supplementary Notes which should be read now.</li>
+<li><span class="item-label">5.</span> Write out the definitions of the trigonometric functions \(\sin z\) and
+\(\cos z\) and the hyperbolic functions \(\sinh z\) and \(\cosh z\) as given in
+problem 6.1.9 of Arfken in terms of power of series. The
+exponential function \(e^z\) is defined by:
+<p>\[e^z = \sum_{n=1}^\infty \frac{z^n}{n!}\,.\]
+
+<p>These definitions are asked for in Output Skill K1.</li>
+<li><span class="item-label">6.</span> Read through Solved Problems 13.1, 13.2, 13.3, 13.5, and 13.7,
+pages 294-296, of Spiegel.</li>
+<li><span class="item-label">7.</span> Solve these problems in Arfken: 6.1.9, 6.1.10, 6.1.14, and
+6.1.15. All of these problems involve deriving various properties
+of the complex trigonometric and hyperbolic functions.</li>
+<li><span class="item-label">8.</span> Solve these Supplementary Problems in Spiegel:
+<p><ol>
+
+</ol>
+</li>
+<li>13.55 (loci in complex plane)</li>
+<li>13.56 (regions in complex plane)</li>
+<li>13.57 (real and imaginary parts
+of complex functions)</li>
+<li>13.60 (derivative of a complex function)</li>
+<li>13.61 (Cauchy-Riemann conditions. Harmonic functions)</li>
+<li>13.62 (analyticity)</li>
+<li>13.64 (construction of an analytic function)</li>
+<li>13.65 (construction of an analytic function)
+</li>
+<li><span class="item-label">9.</span> Solve this problem in Arfken on the construction of an
+analytic function using the C.&thinsp;R.&thinsp; conditions: 6.2.5.</li>
+</ol>
+
+<p></section>
+
+<p><section id="sect-3" class="module-section section-text"><h2 id="sect-3">3. Supplementary Notes</h2>
+
+<div class="centered">
+<span class="boxed">Branch Point and Branch Cut. Logarithm</span>
+</div>
+
+<p>
+Consider eq.&thinsp;(6.13b) of Arfken,
+<p>\[\ln(z) = \ln(r) + \imath (\theta + 2 \pi n)\]
+
+<p>where the parameter \(n\) may be any integer. It is conventional to restrict
+the angle \(\theta\) so that \(0  \lt  \theta  \lt  2 \pi\). Obviously \(\ell n\) is multi-valued. However,
+by restricting \(n\) to be a single integer and \(\theta\) to lie in the range above,
+a single-valued function is obtained. Such a single-valued function obtained
+by restricting the phase of \(\ell n\) as above is called a  branch of the logarithm.
+The principle branch of the logarithm (or any multi-valued function) is just
+the single-valued function obtained by restricting to the range above and
+choosing \(n = 0\). The point \(z - 0\) is the  branch point of \(\ell n\) in the same
+sense as branch point is explained for \(z^2\) in Spiegel, page 310. The function
+\(\ell n\) is made single-valued by arguing never to cross the line \(\theta = 2 \pi\) in the
+\(z\)-plane . Such a line of demarcation is called a  branch or cut line. The
+branch point \(z = 0\) lies at the point of termination of the branch line.
+<p><figure id="fig-" class="module-figure"><img src="figures/m487gr01.svg" alt="Figure " class="physnet-fig"></figure>
+
+<p></section>
+
+<p><section id="acknowledgments" class="module-section section-ack"><h2 id="acknowledgments">Acknowledgments</h2>
+<p class="acknowledgment">This module was developed at Iowa State University.</p>
+<p class="acknowledgment">This module was developed by Project PHYSNET with support from the National Science Foundation.</p>
+</section>
+
+<p>

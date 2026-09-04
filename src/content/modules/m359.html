@@ -114,7 +114,7 @@ to the curve in the \(y\) direction is no greater than the assigned
 measurement error \(\sigma_j\), in which case the error bar intersects
 the curve.This vertical distance from the data point to the curve is 
 the “residual” for the point \((x_j,y_j)\), and is given by
-<p>\[r_j = y_j - f(x_j).\]
+<p><span class="eqn-block" id="eqn-1">\[r_j = y_j - f(x_j).\]<span class="eqn-number">(1)</span></span>
 <p>Note that the residual \(r_j\) is positive or negative, depending
 on whether the data point is above or below the curve.
 <p><h3 id="pcap-1-c">1c. Consistency Measured In Terms of Probability</h3>
@@ -144,16 +144,16 @@ measurements to lie right on the curve. Furthermore, for any single
 measurement \(y_j\), there is a \(68\%\) chance that the residual \(r_j\)
 is less than \(\sigma_j\).
 Thus, there is a \(68\%\) chance that 
-\(|r_j/^s_j|<1\) 
+\(|r_j/^s_j| \lt 1\) 
 (error bar intersects curve), and a \(32\%\) chance that 
-\(|r_j/\sigma_j|>1\)
+\(|r_j/\sigma_j| \gt 1\)
 (error bar does not intersect curve).
 <p><h3 id="pcap-1-d">1d. Chi-Squared and Probability</h3>
 
 <p>The quantity chi-squared \((x^2)\) is a measure of the overall
 discrepancy between all the data points and the theoretical curve, 
 where \(x^2\) is defined as 
-<p>\[\chi^2 = \sum_{j=1}^{n}t_j^2= \sum_{j=1}^{n}\left(\frac{r_j}{\sigma_j}\right).\]
+<p><span class="eqn-block" id="eqn-2">\[\chi^2 = \sum_{j=1}^{n}t_j^2= \sum_{j=1}^{n}\left(\frac{r_j}{\sigma_j}\right).\]<span class="eqn-number">(2)</span></span>
 <p>Thus the value of \(x^2\) is a measure of the goodness of fit of a theoretical
 curve \(y=f(x)\) to a set of data points.
 In the best conceivable fit, the case where all data points would be lying
@@ -171,7 +171,7 @@ great as the value actually computed, assuming that the hypothesized
 function \(y=f(x)\) is correct and that the deviations for each data point are 
 only the result of random measurement error.
 A chi-squared table is given in Table&nbsp;1.
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table 1. Chi-squared values for sample size and confidence level.</td></tr><tr><td>Sample</td><td>Confidence Level (\(P\))</td></tr><tr><td>Size (\(n\))</td><td>\(.90\)</td><td>\(.80\)</td><td>\(.50\)</td><td>\(.30\)</td><td>\(.01\)</td></tr><tr><td>1</td><td>.0158</td><td>.0642</td><td>.455</td><td>1.074</td><td>6.635</td></tr><tr><td>2</td><td>.211</td><td>.446</td><td>1.386</td><td>2.408</td><td>9.210</td></tr><tr><td>3</td><td>.584</td><td>1.005</td><td>2.366</td><td>3.665</td><td>11.345</td></tr><tr><td>4</td><td>1.064</td><td>1.649</td><td>3.357</td><td>4.878</td><td>13.277</td></tr><tr><td>5</td><td>1.610</td><td>2.343</td><td>4.351</td><td>6.064</td><td>15.086</td></tr><tr><td>6</td><td>2.204</td><td>3.070</td><td>5.348</td><td>7.231</td><td>16.812</td></tr><tr><td>7</td><td>2.833</td><td>3.822</td><td>6.346</td><td>8.383</td><td>18.475</td></tr><tr><td>8</td><td>3.490</td><td>4.594</td><td>7.344</td><td>9.524</td><td>20.090</td></tr><tr><td>9</td><td>4.168</td><td>5.380</td><td>8.343</td><td>10.656</td><td>21.666</td></tr><tr><td>10</td><td>4.865</td><td>6.179</td><td>9.342</td><td>11.781</td><td>23.209</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th>Table 1. Chi-squared values for sample size and confidence level.</th></tr><tr><td>Sample</td><td>Confidence Level (\(P\))</td></tr><tr><td>Size (\(n\))</td><td>\(.90\)</td><td>\(.80\)</td><td>\(.50\)</td><td>\(.30\)</td><td>\(.01\)</td></tr><tr><td>1</td><td>.0158</td><td>.0642</td><td>.455</td><td>1.074</td><td>6.635</td></tr><tr><td>2</td><td>.211</td><td>.446</td><td>1.386</td><td>2.408</td><td>9.210</td></tr><tr><td>3</td><td>.584</td><td>1.005</td><td>2.366</td><td>3.665</td><td>11.345</td></tr><tr><td>4</td><td>1.064</td><td>1.649</td><td>3.357</td><td>4.878</td><td>13.277</td></tr><tr><td>5</td><td>1.610</td><td>2.343</td><td>4.351</td><td>6.064</td><td>15.086</td></tr><tr><td>6</td><td>2.204</td><td>3.070</td><td>5.348</td><td>7.231</td><td>16.812</td></tr><tr><td>7</td><td>2.833</td><td>3.822</td><td>6.346</td><td>8.383</td><td>18.475</td></tr><tr><td>8</td><td>3.490</td><td>4.594</td><td>7.344</td><td>9.524</td><td>20.090</td></tr><tr><td>9</td><td>4.168</td><td>5.380</td><td>8.343</td><td>10.656</td><td>21.666</td></tr><tr><td>10</td><td>4.865</td><td>6.179</td><td>9.342</td><td>11.781</td><td>23.209</td></tr></tbody></table>
 </div>
 
 <p>
@@ -259,12 +259,12 @@ The difference \(n-m\) is known as the number of “degrees of freedom.”
 \(a\), which multiplies a function \(f(x)\) that is otherwise completely specified:
 \(y=af(x)\).
 In this case, we may write for \(S\):
-<p>\[S =\sum_{j}{}\left(\frac{r_j}{\sigma_j}\right)^2=\sum_{j}{}\frac{\left(y_j-\alpha\,f(x_j)\right)^2}{\sigma_j^2}\]
+<p><span class="eqn-block" id="eqn-3">\[S =\sum_{j}{}\left(\frac{r_j}{\sigma_j}\right)^2=\sum_{j}{}\frac{\left(y_j-\alpha\,f(x_j)\right)^2}{\sigma_j^2}\]<span class="eqn-number">(3)</span></span>
 <p>To find the value of the parameter \(\alpha\) which minimizes \(S\), we set the partial
 derivative \(\partial S/\partial\alpha = 0\):
 <p>\[\frac{\partial S}{\partial\alpha}=\sum_{j}{}\frac{-2f(x_j)(y_j-\alpha f(x_j)}{\sigma_j^2}=0.\]
 <p>Solving for \(\alpha\), we obtain the expression
-<p>\[\alpha^\ast = \frac{\sum_{j}{}\frac{f(x_j)y_j}{\sigma_j^2}}{\sum_{j}{}\frac{\left(f(x_j)\right)^2}{\sigma_j^2}},\]
+<p><span class="eqn-block" id="eqn-4">\[\alpha^\ast = \frac{\sum_{j}{}\frac{f(x_j)y_j}{\sigma_j^2}}{\sum_{j}{}\frac{\left(f(x_j)\right)^2}{\sigma_j^2}},\]<span class="eqn-number">(4)</span></span>
 <p>where the asterisk indicates that this is the value of \(\alpha\) which gives the
 minimum value of \(S\), which is \(\chi^2\).
 We can obtain an estimate of the uncertainty in \(\alpha\) by determining the change
@@ -275,7 +275,7 @@ The uncertainty \(\Delta\alpha\) is usually defined so that the value of \(S\) f
 (see <a href="#fig-3" class="fig-ref">Fig.&nbsp;3</a>).
 It can be shown that, for a one-parameter fit, the uncertainty \(\Delta\alpha\) is given
 by
-<p>\[\Delta\alpha = \left[\sum_{j}{}\frac{\left(f(x_j)\right)^2}{\sigma_j^2}\right]^{-1/2}.\]
+<p><span class="eqn-block" id="eqn-5">\[\Delta\alpha = \left[\sum_{j}{}\frac{\left(f(x_j)\right)^2}{\sigma_j^2}\right]^{-1/2}.\]<span class="eqn-number">(5)</span></span>
 <p>A special case of a one-parameter fit that occurs quite frequently is 
 \(f(x)=1\), which gives \(y=\alpha\) for the theoretical curve.
 In this case, the least squares fit value of \(\alpha^*\) given by <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a> is the
@@ -291,7 +291,7 @@ proportional to the square of the measurement errors \(\sigma_1, ..., \sigma_n\)
 measurements \((y_1, ..., y_9)\) of the mass of the omega meson (a subatomic
 particle), together with estimated measurement errors \((\sigma_1, ...,\sigma_9)\) from
 nine different experiments.
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table 2. Values of \(\omega\) mass and year reported.</td></tr><tr><td>Mass \((MeV/c^2)\)</td><td>Error \((MeV/c^2)\)</td><td>Year Reported</td></tr><tr><td>779.4</td><td>1.4</td><td>1962</td></tr><tr><td>784.0</td><td>1.0</td><td>1963</td></tr><tr><td>781.0</td><td>2.0</td><td>1964</td></tr><tr><td>785.6</td><td>1.2</td><td>1965</td></tr><tr><td>786.0</td><td>1.0</td><td>1966</td></tr><tr><td>779.5</td><td>1.5</td><td>1967</td></tr><tr><td>784.8</td><td>1.1</td><td>1968</td></tr><tr><td>784.8</td><td>1.1</td><td>1969</td></tr><tr><td>784.1</td><td>1.2</td><td>1970</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th>Table 2. Values of \(\omega\) mass and year reported.</th></tr><tr><td>Mass \((MeV/c^2)\)</td><td>Error \((MeV/c^2)\)</td><td>Year Reported</td></tr><tr><td>779.4</td><td>1.4</td><td>1962</td></tr><tr><td>784.0</td><td>1.0</td><td>1963</td></tr><tr><td>781.0</td><td>2.0</td><td>1964</td></tr><tr><td>785.6</td><td>1.2</td><td>1965</td></tr><tr><td>786.0</td><td>1.0</td><td>1966</td></tr><tr><td>779.5</td><td>1.5</td><td>1967</td></tr><tr><td>784.8</td><td>1.1</td><td>1968</td></tr><tr><td>784.8</td><td>1.1</td><td>1969</td></tr><tr><td>784.1</td><td>1.2</td><td>1970</td></tr></tbody></table>
 </div>
 
 <p> For the nine \(x\)-values \(x_1, ..., x_9\), we use the year each measurement was
@@ -367,9 +367,9 @@ parameters \(a_1\) and \(\alpha_2\), we require that the two partial derivatives
 Thus, with \(S\) given by 
 <p>\[S = \sum_{j}{}\frac{(y_j - \alpha_1 -\alpha_2x_j)^2}{\sigma_j^2},\]
 <p>we require that
-<p>\[\frac{\partial S}{\partial \alpha_1} = \sum_{j}{}\frac{-2(y_j - \alpha_1 -\alpha_2 x_j)}{\sigma_j^2} = 0\]
+<p><span class="eqn-block" id="eqn-6">\[\frac{\partial S}{\partial \alpha_1} = \sum_{j}{}\frac{-2(y_j - \alpha_1 -\alpha_2 x_j)}{\sigma_j^2} = 0\]<span class="eqn-number">(6)</span></span>
 <p>and
-<p>\[\frac{\partial S}{\partial \alpha_2} = \sum_{j}{}\frac{-2x_j(y_j - \alpha_1 -\alpha_2 x_j)}{\sigma^2}= 0.\]
+<p><span class="eqn-block" id="eqn-7">\[\frac{\partial S}{\partial \alpha_2} = \sum_{j}{}\frac{-2x_j(y_j - \alpha_1 -\alpha_2 x_j)}{\sigma^2}= 0.\]<span class="eqn-number">(7)</span></span>
 <p>Solving Eqs.(6) and (7) simultaneously for the two unknowns, \(\alpha_1\) and \(\alpha_2\), we
 obtain the values of \(\alpha_1\) and \(\alpha_2\)
 which minimize \(S\):
@@ -399,12 +399,12 @@ variables which do obey a linear relation.
 For example, if we measure the level of radioactivity \((R)\) from a radioactive
 source as a function of time \((t)\) it is found that \(R\) is an exponential
 function of time given by
-<p>\[R = R_0e^{-t/T}.\]
+<p><span class="eqn-block" id="eqn-10">\[R = R_0e^{-t/T}.\]<span class="eqn-number">(10)</span></span>
 <p>where \(R_0\) is the level of radioactivity at time \(t=0\), and \(T\) is the so-called
 “lifetime,” the time for the level of radioactivity to drop to \(e^{-1}\cong 37\%\) of
 its original value.
 Taking the logarithm of each side of Eq.(10) yields:
-<p>\[\ln R = \ln R_0 - t/T.\]
+<p><span class="eqn-block" id="eqn-11">\[\ln R = \ln R_0 - t/T.\]<span class="eqn-number">(11)</span></span>
 <p>Now substitute \(y=\ln R\) and \(x=t\) and see that you have transformed the
 radioactive decay law [Eq.(10)] into a relationship in which the \(y\) and \(x\)
 variables are linearly related.
@@ -423,13 +423,13 @@ with negligible friction (an air track).
 The angle of inclination from the horizontal is \(\theta = 0.005546\,rad\).
 The data represent the measured times for a cart released from rest to travel
 various distances along the track.
-<p><table class="physnet-table"><tbody><tr><td>Table&nbsp;3. Distance (\(d\)) vs. time (\(t\)) for an air-track cart.</td></tr><tr><td>\(t\)(sec):</td><td>0.7</td><td>1.3</td><td>1.9</td><td>2.5</td><td>3.1</td><td>3.7</td><td>4.1</td><td>4.9</td><td>5.6</td></tr><tr><td>\(d\)(cm):</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td><td>64</td><td>81</td></tr><tr><td>\(t\)(sec):</td><td>7.5</td><td>7.9</td><td>8.5</td><td>9.1</td><td>6.1</td><td>6.7</td><td></td><td></td><td></td></tr><tr><td>\(d\)(cm):</td><td>144</td><td>169</td><td>196</td><td>225</td><td>100</td><td>121</td><td></td><td></td><td></td></tr></tbody></table>
+<p><table class="physnet-table"><tbody><tr><th>Table&nbsp;3. Distance (\(d\)) vs. time (\(t\)) for an air-track cart.</th></tr><tr><td>\(t\)(sec):</td><td>0.7</td><td>1.3</td><td>1.9</td><td>2.5</td><td>3.1</td><td>3.7</td><td>4.1</td><td>4.9</td><td>5.6</td></tr><tr><td>\(d\)(cm):</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td><td>64</td><td>81</td></tr><tr><td>\(t\)(sec):</td><td>7.5</td><td>7.9</td><td>8.5</td><td>9.1</td><td>6.1</td><td>6.7</td><td></td><td></td><td></td></tr><tr><td>\(d\)(cm):</td><td>144</td><td>169</td><td>196</td><td>225</td><td>100</td><td>121</td><td></td><td></td><td></td></tr></tbody></table>
 
 <p> We expect the data to be consistent with the relation:
-<p>\[d = \frac{1}{2}g\sin\theta\, t^2,\]
+<p><span class="eqn-block" id="eqn-12">\[d = \frac{1}{2}g\sin\theta\, t^2,\]<span class="eqn-number">(12)</span></span>
 <p>where \(g\) is the acceleration due to gravity.
 We can solve Eq.(12) for t to obtain
-<p>\[t = \left(\frac{2}{g\sin\theta}\right)^{1/2}d^{1/2}.\]
+<p><span class="eqn-block" id="eqn-13">\[t = \left(\frac{2}{g\sin\theta}\right)^{1/2}d^{1/2}.\]<span class="eqn-number">(13)</span></span>
 <p>We can therefore get a linear relation if we make the transformation \(t\rightarrow y\),
 \(d^{1/2}\rightarrow x\).
 The transformed data points (\(t\) against \(d^{1/2}\)) are plotted in <a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a>.
@@ -450,17 +450,17 @@ using <a href="#eqn-8" class="eqn-ref">Eqs.&nbsp;(8)</a> and <a href="#eqn-9" cl
 We can determine a value for \(g\), the acceleration due to gravity, from the 
 slope of the line.
 According to the form of <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a>, the slope \(\alpha_2\) is given by
-<p>\[\alpha_2 = \left( \frac{2}{g\sin\theta}\right)^{1/2},\]
+<p><span class="eqn-block" id="eqn-14">\[\alpha_2 = \left( \frac{2}{g\sin\theta}\right)^{1/2},\]<span class="eqn-number">(14)</span></span>
 <p>which can be solved for \(g\), to obtain
-<p>\[g = \frac{2}{\alpha_2^2\sin\theta}.\]
+<p><span class="eqn-block" id="eqn-15">\[g = \frac{2}{\alpha_2^2\sin\theta}.\]<span class="eqn-number">(15)</span></span>
 <p>The theory of first-order error propagation can be used to find the
 uncertainty in a quantity calculated from a known function of the parameters
 \(\alpha_1\) and \(\alpha_2\).
 Since \(g\) depends only on \(\alpha_2\), we can find the magnitude of the error in \(g\) using
-<p>\[\Delta g = \left|\frac{dg}{d\alpha_2}\right| \Delta\alpha_2.\]
+<p><span class="eqn-block" id="eqn-16">\[\Delta g = \left|\frac{dg}{d\alpha_2}\right| \Delta\alpha_2.\]<span class="eqn-number">(16)</span></span>
 <p>From Eqs.(15) and (16), we find that the percentage error in \(g\) is twice the
 percentage error in \(\alpha_2\):
-<p>\[\frac{\Delta g}{g} = 2\frac{\Delta\alpha_2}{\alpha_2}.\]
+<p><span class="eqn-block" id="eqn-17">\[\frac{\Delta g}{g} = 2\frac{\Delta\alpha_2}{\alpha_2}.\]<span class="eqn-number">(17)</span></span>
 <p>In this example, we could have used our a priori knowledge that the
 \(y\)-intercept should be zero, and found a one-parameter least squares fit to
 the function \(y=\alpha x\).
@@ -480,14 +480,14 @@ We can find a least squares fit even in cases where the measurement errors
 \(\sigma_1, ..., \sigma_n\), are unknown, by assuming that the errors are the same for all
 points.
 If we call the common (but unknown) error \(\sigma\), then Eq.(2) becomes
-<p>\[S = \frac{1}{\sigma^2}\sum_{j=1}^{n}r_j^2.\]
+<p><span class="eqn-block" id="eqn-18">\[S = \frac{1}{\sigma^2}\sum_{j=1}^{n}r_j^2.\]<span class="eqn-number">(18)</span></span>
 <p>Since \(\sigma\) is a constant, we can minimize \(S\) with respect to the parameters 
 \(\alpha_1, \alpha_2, ..., \alpha_m\), without knowing the value of \(\sigma\).
 However, if we wish to determine the uncertainties in the parameters for the
 best fit: \(\Delta\alpha_1, \Delta\alpha_2, ..., \Delta\alpha_m\), a value for \(\sigma\) is needed.
 A reasonable estimate for \(\sigma\) is the root mean square (RMS) value of the
 residuals:
-<p>\[\left(\frac{\sum{}{}r_j^2}{n}\right)^{1/2},\]
+<p><span class="eqn-block" id="eqn-19">\[\left(\frac{\sum{}{}r_j^2}{n}\right)^{1/2},\]<span class="eqn-number">(19)</span></span>
 <p>which is a measure of the average “scatter” of the points about the least
 squares fit curve.
 Thus it is possible to find values for the parameters \(\alpha_1, \alpha_2, ..., \alpha_m\), and
@@ -516,7 +516,7 @@ unknown.
 In that case, all the \(\sigma_j\) are assumed to be equal to the computed RMS value
 of the residuals and then chi-squared will not be a meaningful indicator of
 the goodness of fit.
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table 4. Computer output: Residuals for some air-track data.</td></tr><tr><td>NUMBER OF DATA POINTS = 15.00000</td></tr><tr><td>X</td><td>Y</td><td>DY</td><td>RESIDUALS</td></tr><tr><td>1.00000</td><td>0.70000</td><td>0.10000</td><td>.02083</td></tr><tr><td>2.00000</td><td>1.30000</td><td>0.10000</td><td>.01690</td></tr><tr><td>3.00000</td><td>1.90000</td><td>0.10000</td><td>.01298</td></tr><tr><td>4.00000</td><td>2.50000</td><td>0.10000</td><td>.00905</td></tr><tr><td>5.00000</td><td>3.10000</td><td>0.10000</td><td>.00512</td></tr><tr><td>6.00000</td><td>3.70000</td><td>0.10000</td><td>.00119</td></tr><tr><td>7.00000</td><td>4.10000</td><td>0.10000</td><td>-.20274</td></tr><tr><td>8.00000</td><td>4.90000</td><td>0.10000</td><td>-.00667</td></tr><tr><td>9.00000</td><td>5.60000</td><td>0.10000</td><td>.08940</td></tr><tr><td>10.00000</td><td>6.10000</td><td>0.10000</td><td>-.01452</td></tr><tr><td>11.00000</td><td>6.70000</td><td>0.10000</td><td>-.01845</td></tr><tr><td>12.00000</td><td>7.50000</td><td>0.10000</td><td>.17762</td></tr><tr><td>13.00000</td><td>7.90000</td><td>0.10000</td><td>-.02631</td></tr><tr><td>14.00000</td><td>8.50000</td><td>0.10000</td><td>-.03024</td></tr><tr><td>15.00000</td><td>9.10000</td><td>0.10000</td><td>-.03417</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th>Table 4. Computer output: Residuals for some air-track data.</th></tr><tr><td>NUMBER OF DATA POINTS = 15.00000</td></tr><tr><td>X</td><td>Y</td><td>DY</td><td>RESIDUALS</td></tr><tr><td>1.00000</td><td>0.70000</td><td>0.10000</td><td>.02083</td></tr><tr><td>2.00000</td><td>1.30000</td><td>0.10000</td><td>.01690</td></tr><tr><td>3.00000</td><td>1.90000</td><td>0.10000</td><td>.01298</td></tr><tr><td>4.00000</td><td>2.50000</td><td>0.10000</td><td>.00905</td></tr><tr><td>5.00000</td><td>3.10000</td><td>0.10000</td><td>.00512</td></tr><tr><td>6.00000</td><td>3.70000</td><td>0.10000</td><td>.00119</td></tr><tr><td>7.00000</td><td>4.10000</td><td>0.10000</td><td>-.20274</td></tr><tr><td>8.00000</td><td>4.90000</td><td>0.10000</td><td>-.00667</td></tr><tr><td>9.00000</td><td>5.60000</td><td>0.10000</td><td>.08940</td></tr><tr><td>10.00000</td><td>6.10000</td><td>0.10000</td><td>-.01452</td></tr><tr><td>11.00000</td><td>6.70000</td><td>0.10000</td><td>-.01845</td></tr><tr><td>12.00000</td><td>7.50000</td><td>0.10000</td><td>.17762</td></tr><tr><td>13.00000</td><td>7.90000</td><td>0.10000</td><td>-.02631</td></tr><tr><td>14.00000</td><td>8.50000</td><td>0.10000</td><td>-.03024</td></tr><tr><td>15.00000</td><td>9.10000</td><td>0.10000</td><td>-.03417</td></tr></tbody></table>
 </div>
 
 <p><h3 id="pcap-5-b">5b. Sample Output</h3>
@@ -549,8 +549,8 @@ The fact that the value is a bit further from zero than the uncertainty \(\Delta
 is probably not significant.
 From the value for the slope \(\alpha_2\), we can compute values for \(g\) and \(\Delta g\) using
 Eqs.(15) and (17):
-<p>\[g = 986 \pm 20\unit{cm/sec^{2}},\]
-<p>which is consistent with the accepted value, \(980\unit{cm/sec^{2}}\).
+<p>\[g = 986 \pm 20\,\text{cm/sec}^{2}\text{},\]
+<p>which is consistent with the accepted value, \(980\,\text{cm/sec}^{2}\text{}\).
 <p><div class="figure-full"><figure id="fig-6"><img src="figures/m359gr06.svg" alt="Figure 6" class="physnet-fig"><figcaption>Fig.&nbsp;6. Sample output from the least squares fitting
 program.</figcaption></figure></div>
 
@@ -569,7 +569,7 @@ measurements which might have been obtained from a radioactive decay
 measurement.
 Note that the parameters of the fit will be \(\alpha_1=\ln R_0\) and \(\alpha_2=-1/T\) in this 
 case.
-<p><table class="physnet-table"><tbody><tr><td>Table&nbsp;4. Simulated Data from a Radioactive Decay.</td></tr><tr><td>\(t\) (sec)</td><td>\(\ln R\)</td><td>\(\Delta (\ln R)\)</td></tr><tr><td>1.0</td><td>10.2</td><td>0.2</td></tr><tr><td>2.0</td><td>9.6</td><td>0.2</td></tr><tr><td>3.0</td><td>8.2</td><td>0.2</td></tr><tr><td>4.0</td><td>5.0</td><td>0.2</td></tr><tr><td>5.0</td><td>6.2</td><td>0.2</td></tr><tr><td>6.0</td><td>4.8</td><td>0.2</td></tr><tr><td>7.0</td><td>4.2</td><td>0.2</td></tr><tr><td>8.0</td><td>2.8</td><td>0.2</td></tr><tr><td>9.0</td><td>2.2</td><td>0.2</td></tr><tr><td>10.0</td><td>3.0</td><td>0.2</td></tr><tr><td>11.0</td><td>-0.6</td><td>0.2</td></tr><tr><td>12.0</td><td>-1.2</td><td>0.2</td></tr></tbody></table>
+<p><table class="physnet-table"><tbody><tr><th>Table&nbsp;4. Simulated Data from a Radioactive Decay.</th></tr><tr><td>\(t\) (sec)</td><td>\(\ln R\)</td><td>\(\Delta (\ln R)\)</td></tr><tr><td>1.0</td><td>10.2</td><td>0.2</td></tr><tr><td>2.0</td><td>9.6</td><td>0.2</td></tr><tr><td>3.0</td><td>8.2</td><td>0.2</td></tr><tr><td>4.0</td><td>5.0</td><td>0.2</td></tr><tr><td>5.0</td><td>6.2</td><td>0.2</td></tr><tr><td>6.0</td><td>4.8</td><td>0.2</td></tr><tr><td>7.0</td><td>4.2</td><td>0.2</td></tr><tr><td>8.0</td><td>2.8</td><td>0.2</td></tr><tr><td>9.0</td><td>2.2</td><td>0.2</td></tr><tr><td>10.0</td><td>3.0</td><td>0.2</td></tr><tr><td>11.0</td><td>-0.6</td><td>0.2</td></tr><tr><td>12.0</td><td>-1.2</td><td>0.2</td></tr></tbody></table>
 
 <p> Run the program using this data and use the output to find the lifetime
 \((T)\) of the radioactive source.
@@ -581,7 +581,7 @@ Use the computed value of chi-squared for the fit to find a value for the
 confidence level using the \(\chi^2\) table.
 Based on the computed residuals, are there any very “bad” data points,
 “bad” in the sense of having residuals large compared to the measurement
-uncertainty?<span class="tex-unknown" title="unknown macro">\</span> 
+uncertainty? 
 Redo the fit with these “bad” data points removed.
 How does the computed lifetime \(T\) now agree with the expected value?
 How good is the fit with the “bad” data points removed, based on the 
@@ -596,18 +596,18 @@ chi-squared table?
 
 
 All programs are at
-<div class="centered"><a href="http://www.physnet.org/home/modules/support_programs" class="url">http://www.physnet.org/home/modules/support_programs</a></div>
+<div class="centered"><a href="http://www.physnet.org/home/modules/support_programs">http://www.physnet.org/home/modules/support_programs</a></div>
 
 which can be navigated to from the home page at
-<div class="centered"><a href="http://www.physnet.org" class="url">http://www.physnet.org</a></div>
+<div class="centered"><a href="http://www.physnet.org">http://www.physnet.org</a></div>
 
-by following the links: \(\rightarrow\) <a href="modules" class="url">modules</a> \(\rightarrow\) <a href="support programs" class="url">support programs</a>,
+by following the links: \(\rightarrow\) <a href="modules">modules</a> \(\rightarrow\) <a href="support programs">support programs</a>,
 where the programs are:
 <div class="centered">
-<a href="m359p1f.for" class="url">m359p1f.for</a>, Fortran;<br>
-<a href="m359p1b.bas" class="url">m359p1b.bas</a>, Basic;<br>
-<a href="m359p1c.cpp" class="url">m359p1c.cpp</a>, C++;<br>
-<a href="lib351.h" class="url">lib351.h</a>, needed Library for C++ program;
+<a href="m359p1f.for">m359p1f.for</a>, Fortran;<br>
+<a href="m359p1b.bas">m359p1b.bas</a>, Basic;<br>
+<a href="m359p1c.cpp">m359p1c.cpp</a>, C++;<br>
+<a href="lib351.h">lib351.h</a>, needed Library for C++ program;
 </div>
 
 </section>

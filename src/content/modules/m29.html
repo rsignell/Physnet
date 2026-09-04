@@ -59,7 +59,7 @@ With the device, its motion gradually dies out.
 This fluid resists the motion of the piston through it.
 This resistance can be controlled by varying the viscosity of the fluid or by
 otherwise varying its ability to bypass the piston.
-<p><span class="tex-unknown" title="unknown macro">\TextAndFigurePage</span>
+<p>
 <h3 id="pcap-1-c">1c. Varying the Resistance to Motion</h3>
 
 If we gradually increase the ability of the damping device in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a> to resist
@@ -98,16 +98,15 @@ The restoring force is the force that, at all times, accelerates the oscillator
 back toward the position of static equilibrium.
 If the displacement is sufficiently small for the case at hand, the restoring
 force will be linear to a good approximation so we write it:
-<p>\[F = -\,kx\,.\]
+<p><span class="eqn-block" id="eqn-1">\[F = -\,kx\,.\]<span class="eqn-number">(1)</span></span>
 <p>A force that obeys <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a>, with an interpretation of \(k\) appropriate for that
 force, is called a “Hooke's law force.”
 If it is the only force acting on a mass, the mass will undergo Simple Harmonic
 Motion (hereafter referred to as “SHM”):
-<p>\[x(t) = x(0)\,\cos{(\omega_0 t + \alpha)}\,.\]
+<p><span class="eqn-block" id="eqn-2">\[x(t) = x(0)\,\cos{(\omega_0 t + \alpha)}\,.\]<span class="eqn-number">(2)</span></span>
 <p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-2" class="eqn-ref">Eqs.&nbsp;(2)</a> and <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> into
 \(F=ma\) and show that the equation is satisfied if the constant \(\omega_0\)
-is equal to the correct combination of \(m\) and \(k\).
-<a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>&thinsp;
+is equal to the correct combination of \(m\) and \(k\).<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>&thinsp;
 <p><sup class="fn-ref"><a href="#fn-2" id="fnref-2">2</a></sup>
 <p><h3 id="pcap-2-b">2b. The Damping Force</h3>
 
@@ -124,26 +123,26 @@ whereas the damping force (by itself) is to make the motion stop and then
 stay stopped.
 If the damping is sufficiently small for the case at hand, it is likely to
 be linear to a good approximation:
-<p>\[F = -\lambda v\,.\]
+<p><span class="eqn-block" id="eqn-3">\[F = -\lambda v\,.\]<span class="eqn-number">(3)</span></span>
 <p>If this is the only force acting on a mass, the velocity will decrease
 to zero exponentially in time:
-<p>\[v(t) = v(0)\,\exp{(-\gamma t)}\,.\]
+<p><span class="eqn-block" id="eqn-7">\[v(t) = v(0)\,\exp{(-\gamma t)}\,.\]<span class="eqn-number">(7)</span></span>
 <p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-7" class="eqn-ref">Eqs.&nbsp;(7)</a> and <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> into
 \(F=ma\) and show that the equation is satisfied if the constant \(\gamma\)
-is equal to the correct combination of \(\lambda\) and \(m\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a>
+is equal to the correct combination of \(\lambda\) and \(m\).<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup>
 Since the differential equation is second order and homogeneous, this
 solution is the unique solution (apart from transformations to mathematically
 equivalent functions).
 <p><span class="tryit">Try it:</span>  Visualize <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> as a graph and think of how the
 curve on it changes as the damping constant \(\lambda\) and mass \(m\) are
-increased and decreased. <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a>
+increased and decreased.<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup>
 <p><span class="tryit">Try it:</span>  Integrate <a href="#eqn-3" class="eqn-ref">Eq.&nbsp;(3)</a> to give:
 \(x(t) = x(0) - [v(0)/\gamma]\,\exp{(-\gamma t)}\).
 <p><h3 id="pcap-2-c">2c. The Two Forces Together</h3>
 
 A linearly-damped linearly-restored oscillator is one in which the force
 acting on the mass is the sum of <a href="#eqn-1" class="eqn-ref">Eqs.&nbsp;(1)</a> and <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>:
-<p>\[F = -\,kx\,-\lambda v\,.\]
+<p><span class="eqn-block" id="eqn-5">\[F = -\,kx\,-\lambda v\,.\]<span class="eqn-number">(5)</span></span>
 <p>In this case we will write the solution differently depending on whether
 \(\lambda\) is smaller, equal to, or larger than the combination \(2\sqrt{mk}\).
 These three cases are referred to as “underdamped,” “critically damped,”
@@ -152,7 +151,7 @@ We could write a single solution for all three cases but it would involve
 complex variables.
 To avoid that, we separate the three cases:
 
-<div class="centered"><table class="physnet-table"><tbody><tr><td>underdamped:       </td><td>\(\lambda\)</td><td>\(<\)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>critically damped: </td><td>\(\lambda\)</td><td>\(=\)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>overdamped:        </td><td>\(\lambda\)</td><td>\(>\)</td><td>\(2\sqrt{mk}\)</td></tr></tbody></table>
+<div class="centered"><table class="physnet-table"><tbody><tr><td>underdamped:       </td><td>\(\lambda\)</td><td>\( \lt \)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>critically damped: </td><td>\(\lambda\)</td><td>\(=\)</td><td>\(2\sqrt{mk}\)</td></tr><tr><td>overdamped:        </td><td>\(\lambda\)</td><td>\( \gt \)</td><td>\(2\sqrt{mk}\)</td></tr></tbody></table>
 </div>
 
 <p><span class="tryit">Try it:</span>  Note that the progression in the names matches the progression in the
@@ -164,7 +163,7 @@ size of the damping constant \(\lambda\).
 <p><h3 id="pcap-3-a">3a. The Underdamped Solution</h3>
 
 For the underdamped case, the solution to \(F=ma\) can be written in the form:
-<p>\[x(t) = A\,e^{-\gamma t}\,\cos{(\omega t + \alpha)}\,.\]
+<p><span class="eqn-block" id="eqn-6">\[x(t) = A\,e^{-\gamma t}\,\cos{(\omega t + \alpha)}\,.\]<span class="eqn-number">(6)</span></span>
 <p> Here \(A\) and \(\alpha\) must be fixed by two known values of \(x\), or
 its derivatives, at one or two specific times.
 For example, \(A\) and \(\alpha\) could be fixed by knowing \(x\) at two different
@@ -172,14 +171,13 @@ times or by knowing \(x\) at a specific time and the velocity \(v\) at a specifi
 time.
 <p><span class="tryit">Try it:</span>  Substitute <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> and <a href="#eqn-5" class="eqn-ref">Eq.&nbsp;(5)</a> into
 \(F=ma\) and show that the equation is satisfied if the constants \(\gamma\)
-and \(\omega\) are equal to the correct combinations of \(k\), \(\lambda\), and \(m\):
-<a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a>
-<p>\[\gamma = \lambda/(2 m)\,,\]
-<p>\[\omega = \sqrt{\omega_0^2 - \gamma^2}\,,\]
+and \(\omega\) are equal to the correct combinations of \(k\), \(\lambda\), and \(m\):<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup>
+<p><span class="eqn-block" id="eqn-8">\[\gamma = \lambda/(2 m)\,,\]<span class="eqn-number">(8)</span></span>
+<p><span class="eqn-block" id="eqn-9">\[\omega = \sqrt{\omega_0^2 - \gamma^2}\,,\]<span class="eqn-number">(9)</span></span>
 <p>where we define the undamped frequency, \(\omega_0\), as usual:
-<p>\[\omega_0 = \sqrt{k/m}\,.\]
+<p><span class="eqn-block" id="eqn-10">\[\omega_0 = \sqrt{k/m}\,.\]<span class="eqn-number">(10)</span></span>
 <p>Note that the condition for the underdamped case can be written:
-\(\lambda < \omega_0\).
+\(\lambda  \lt  \omega_0\).
 <p><span class="tryit">Try it:</span>  Sketch a graph of <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>.
 Note that the frequency of the oscillations, \(\omega\), remains constant in time
 but that the amplitude of the oscillations dies out exponentially.
@@ -188,14 +186,14 @@ exponential functions on the graph using dashed lines.
 The result should be a graph that is symmetric under reflections about the time
 axis.
 Now draw the constant-frequency exponentially-dying oscillations inside the
-dashed-lines “envelope.” <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a>
+dashed-lines “envelope.”<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup>
 <p><h3 id="pcap-3-b">3b. The Overdamped Solution</h3>
 
-<p>For the overdamped case, \(\gamma > \omega_0\), the solution can be written in
+<p>For the overdamped case, \(\gamma  \gt  \omega_0\), the solution can be written in
 the form:
-<p>\[x(t) = A'\,e^{-(\gamma + \omega ')t} + B'\,e^{-(\gamma - \omega ')t}\,.\]
+<p><span class="eqn-block" id="eqn-11">\[x(t) = A'\,e^{-(\gamma + \omega ')t} + B'\,e^{-(\gamma - \omega ')t}\,.\]<span class="eqn-number">(11)</span></span>
 <p>where \(\gamma\) and \(\omega_0\) are as before and:
-<p>\[\omega ' = \sqrt{\gamma^2-\,\omega_0^2}\,.\]
+<p><span class="eqn-block" id="eqn-19">\[\omega ' = \sqrt{\gamma^2-\,\omega_0^2}\,.\]<span class="eqn-number">(19)</span></span>
 <p>As in the underdamped case, \(A'\) and \(B'\) must be fixed by two known values of
 \(x(t)\) and/or its derivatives.
 <a href="#eqn-11" class="eqn-ref">Eq.&nbsp;(11)</a> can be shown to be mathematically equivalent to
@@ -215,7 +213,7 @@ Using this, we can create a simpler form of <a href="#eqn-6" class="eqn-ref">Eq.
 <p>of those equations.
 <p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
 <p>This gives:
-<p>\[x(t) = (A'' + B'' t)\,e^{-\gamma t}\,.\]
+<p><span class="eqn-block" id="eqn-12">\[x(t) = (A'' + B'' t)\,e^{-\gamma t}\,.\]<span class="eqn-number">(12)</span></span>
 <p>Again, \(A''\) and \(B''\) must be fixed by two known values of \(x(t)\) and/or its
 derivatives.
 <p><span class="tryit">Try it:</span>   Sketch a graph of <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>.
@@ -254,12 +252,12 @@ Foundation and from IBM.
 To see that the two equations are equivalent, note that \(\omega^2=-\omega^2\)
 so \(\omega ' = i \omega\) where \(i = \sqrt{-1}\).
 Make this substitution and finish the conversion using
-\(e^{ix} = \cos{x} + i \sin{x}\). <a href="#help-6" class="help-link"><span title="Special Assistance">[help&nbsp;6]</span></a>
+\(e^{ix} = \cos{x} + i \sin{x}\).<sup class="help-link"><a href="#help-6" title="see Sequence [S-6] in the Special Assistance Supplement">[S-6]</a></sup>
 <p><h3 id="pcap--b">b. Derivation of <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a></h3>
 
 To show that <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a> is the limit of
 <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> as \(\omega\) approaches zero, use the
-approximation: \(e^x \approx 1 + x\) for small \(x\). <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a>
+approximation: \(e^x \approx 1 + x\) for small \(x\).<sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup>
 <p><h3 id="pcap--c">c. Uniqueness of the solution</h3>
 
 A fundamental existence theorem in mathematics guarantees that there is only
@@ -320,7 +318,7 @@ Determine the damping constant \(\gamma\) of the board.</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Section&nbsp;2a)</span></h3><div class="help-body">
 \(F=ma\) becomes: <br>
 
 \(-kx=m(d^2x/dt^2)x=m[-x(0)\omega_0^2 \cos{(\omega_0 t + \alpha)}] =
@@ -331,7 +329,7 @@ We set \(\omega_0^2 = k/m\), substitute it in on the right hand side,
 and the equation is satisfied.
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Section&nbsp;2b)</span></h3><div class="help-body">
 \(f=ma\) becomes: <br>
 
 \( - \lambda v = m (d/dt) v = m [-v(0) \gamma \exp{(-\gamma t)}] =
@@ -341,11 +339,11 @@ We set \(\gamma = \lambda /m\), substitute it in on the right hand side,
 and the equation is satisfied.
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body">
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Section&nbsp;2b)</span></h3><div class="help-body">
 As \(\gamma\) increases the curve falls off more sharply.
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Section&nbsp;3a)</span></h3><div class="help-body">
 \(x=A\exp{-\gamma t}\cos{(\omega t + \alpha)}\) <br>
 
 Differentiate \(x\) to get: <br>
@@ -376,14 +374,14 @@ We set \(\gamma=\lambda/(2m)\) and \(\omega^2=\omega_0^2 - \gamma^2\) and the
 equation is satisfied (with \(\omega_0^2 = k/m\)).
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">
- \underline Step 1:  \underline Step 2: <br>
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Section&nbsp;3b)</span></h3><div class="help-body">
+ <u>Step 1</u>:  <u>Step 2</u>: <br>
 
 <figure class="fig-centered"><img src="figures/m29gr03.svg" alt="" class="physnet-fig"></figure>
 
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body">
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from Appendix-a)</span></h3><div class="help-body">
 Compare the definitions of \(\omega\) and \(\omega '\) and you will see
 that: \(\omega ' = i \omega\).
 We substitute that into <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> and find:<br>
@@ -402,7 +400,7 @@ so we get:
 Note: \(\cos{x} = (e^{ix} + e^{-ix})/2\).
 </div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Appendix-b)</span></h3><div class="help-body">
 Write <a href="#eqn-10" class="eqn-ref">Eq.&nbsp;(10)</a> as: <br>
 
 \(x = e^{-\gamma t} (A' e^{-\omega ' t} + B' e^{+\omega ' t})\)&thinsp;. <br>

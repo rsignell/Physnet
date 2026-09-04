@@ -90,7 +90,7 @@ so the probability of any one particular value occurring is infinitesimal.
 
 We can characterize the probability of occurrence of values of a continuous
 variable \(x\) by the probability density function \(p(x)\), where
-<p><div class="env-tabularx"><span class="tex-unknown" title="unknown macro">\linewidth</span>r X
+<p><div class="env-tabularx">r X
 \(p(x_0) dx = \) & the (infinitesimal) probability that
                              the value of the variable \(x\) lies somewhere in the
                              interval between \(x_0\) and \(x_0 + dx\).
@@ -106,12 +106,12 @@ The actual probability \(P(x)\) (\(x_1 \leq x \leq x_2\)) that a continuous rand
 on the finite interval between \(x_1\) and \(x_2\) can be obtained by
 integrating the probability density function between those
 two limits:
-<p>\[p(x_1 \leq x \leq x_2) = \int^{x_2}_{x_1} p(x') dx'.\]
+<p><span class="eqn-block" id="eqn-1">\[p(x_1 \leq x \leq x_2) = \int^{x_2}_{x_1} p(x') dx'.\]<span class="eqn-number">(1)</span></span>
 <p>Since the random variable \(x\) is certain to assume a value somewhere
 between its lowest and highest values \(x_\ell\) and \(x_\mu\),
 the integral of \(p(x)\) over the total range of the variable
 must be equal to one:
-<p>\[ \int^{x_u}_{x_l} p(x') dx' = 1.\]
+<p><span class="eqn-block" id="eqn-2">\[ \int^{x_u}_{x_l} p(x') dx' = 1.\]<span class="eqn-number">(2)</span></span>
 <p>That is, \(p(x)\) is “normalized” to one.
 <p><div class="figure-full"><figure id="fig-1"><img src="figures/m214gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. The cumulative probability function \(P_c(x)\)
 is the integral of the probability density function \(p(x)\).</figcaption></figure></div>
@@ -119,7 +119,7 @@ is the integral of the probability density function \(p(x)\).</figcaption></figu
 <p><h3 id="pcap-2-f">2f. The Cumulative Probability Function</h3>
 
 The cumulative probability function \(P_c(x)\) is defined as
-<p>\[P_c(x) \equiv \int^{x}_{x_l} p(x') dx'.\]
+<p><span class="eqn-block" id="eqn-3">\[P_c(x) \equiv \int^{x}_{x_l} p(x') dx'.\]<span class="eqn-number">(3)</span></span>
 <p>\(P_c(x_0)\) is the probability that the value of \(x\) lies somewhere between
 \(x_\ell\) and \(x_0\).
 \(P_c(x_0)\) increases monotonically from zero at \(x_\ell\) to one at \(x_u\)
@@ -177,7 +177,7 @@ will be distributed according to \(p(x)\).
 Using the method of Sect.&thinsp;3, we effectively started with a
 probability density function \(p(x)\), and found a set of random variables
 \(x_i\), each given by solving the following equation for \(x_i\):
-<p>\[r_i = P_c(x_i) = \int^{x_i}_{x_l} p(x') dx'.\]
+<p><span class="eqn-block" id="eqn-4">\[r_i = P_c(x_i) = \int^{x_i}_{x_l} p(x') dx'.\]<span class="eqn-number">(4)</span></span>
 <p>We must show that the resulting probability density function for the
 variables \(x_i\) (let us call it \(p_1(x)\)) is the same as \(p(x)\).
 Since for each r\(_i\) there corresponds an \(x_i\), on a one to one basis,
@@ -185,14 +185,14 @@ the (infinitesimal) probability that \(x_i\) has a value in the interval
 between \(x_0\) and \(x_0 + dx\) is equal to the probability that \(r_i\) has its
 value in the corresponding interval \(r_0\) to \(r_0 + dr\).
 That is,
-<p>\[p_1(x_o)dx = p_2(r_o)dr,\]
+<p><span class="eqn-block" id="eqn-5">\[p_1(x_o)dx = p_2(r_o)dr,\]<span class="eqn-number">(5)</span></span>
 <p>or, in general,
-<p>\[p_1(x) = p_2(r)\frac{dr}{dx},\]
+<p><span class="eqn-block" id="eqn-6">\[p_1(x) = p_2(r)\frac{dr}{dx},\]<span class="eqn-number">(6)</span></span>
 <p>Since \(r\) has a uniform distribution on the interval zero to one, \(p_2(r) = K\),
 a constant.
 The normalization condition, <a href="#eqn-2" class="eqn-ref">Eq.&nbsp;(2)</a>, demands that \(K = 1\).
 <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a> becomes
-<p>\[p_1(x) = \frac{dr}{dx} = \frac{d}{dx} \int^x_{x_l} p(x')dx' = p(x).\]
+<p><span class="eqn-block" id="eqn-7">\[p_1(x) = \frac{dr}{dx} = \frac{d}{dx} \int^x_{x_l} p(x')dx' = p(x).\]<span class="eqn-number">(7)</span></span>
 <p>That is, \(p_1(x) = p(x)\), as needed.
 </section>
 
@@ -211,7 +211,7 @@ is also Lorentzian.
 <p><h3 id="pcap-4-b">4b. The Lorentzian Function</h3>
 
 The Lorentzian probability density function is
-<p>\[P_L(x) = \frac{1}{\pi}\frac{\Gamma/2}{(x-\mu)^2+(\Gamma/2)^2},\]
+<p><span class="eqn-block" id="eqn-8">\[P_L(x) = \frac{1}{\pi}\frac{\Gamma/2}{(x-\mu)^2+(\Gamma/2)^2},\]<span class="eqn-number">(8)</span></span>
 <p>where \(\mu\) is the mean value of the variable \(x\) and \(\Gamma\) is the “full
 width at half maximum” of the peak (see <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
 <p><div class="figure-full"><figure id="fig-4"><img src="figures/m214gr05.svg" alt="Figure 4" class="physnet-fig"><figcaption>Fig.&nbsp;4. The Lorentzian distribution is peaked symmetrically
@@ -220,16 +220,16 @@ about the mean value \(\mu\). Its shape depends upon the value for \(\Gamma\).</
 <p><h3 id="pcap-4-c">4c. \(P_c(x)\) for the Lorentzian</h3>
 
 The cumulative probability function for the Lorentzian distribution is
-<p>\[P_c(x) = \int^x_{-\infty} \frac{1}{\pi} \frac{\Gamma/2}{(x'-\mu)^2+(\Gamma/2)^2} dx',\]
+<p><span class="eqn-block" id="eqn-9">\[P_c(x) = \int^x_{-\infty} \frac{1}{\pi} \frac{\Gamma/2}{(x'-\mu)^2+(\Gamma/2)^2} dx',\]<span class="eqn-number">(9)</span></span>
 <p>since the values of \(x\) may range from \(- \infty\) to \(+ \infty\).
 Performing the integration yields
-<p>\[P_c(x) = \frac{1}{\pi} \tan^{-1}\left(\frac{x - \mu}{\Gamma/2}\right) + \frac{1}{2}.\]
+<p><span class="eqn-block" id="eqn-10">\[P_c(x) = \frac{1}{\pi} \tan^{-1}\left(\frac{x - \mu}{\Gamma/2}\right) + \frac{1}{2}.\]<span class="eqn-number">(10)</span></span>
 <p><h3 id="pcap-4-d">4d. Generating Lorentzian Data</h3>
 
 Our process involves repeatedly setting \(P_c\)(x) equal to some random
 number \(r_i\) between zero and one, and solving for the corresponding \(x_i\).
 We can solve for \(x_i\) algebraically, yielding
-<p>\[x_i = \frac{\Gamma}{2} \tan\left[\pi\left(r_i - \frac{1}{2}\right)\right] + \mu.\]
+<p><span class="eqn-block" id="eqn-11">\[x_i = \frac{\Gamma}{2} \tan\left[\pi\left(r_i - \frac{1}{2}\right)\right] + \mu.\]<span class="eqn-number">(11)</span></span>
 <p><h3 id="pcap-4-e">4e. Sample Data</h3>
 
 We now use random numbers \(r_i\) to generate Lorentzian data \(x_i\).
@@ -237,8 +237,8 @@ Table I lists data generated by this method for two different cases.
 The first is for
 \(\mu = 1/2\), \(\Gamma = 0.05\) (a “narrow” distribution).
 The second is for \(\mu = 1/2\), \(\Gamma = 0.5\) (a “wide” distribution).
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>Table I. Simulated “Lorentzian” data depend
-on \(\Gamma\), the “width” of the distribution.</td></tr><tr><td>\(x_i\) Data</td><td>\(x_i\) Data</td><td>Original</td></tr><tr><td>“Narrow”</td><td>“Wide”</td><td>\(r_i^\dag\)</td></tr><tr><td>0.48792</td><td>0.37915</td><td>.35667</td></tr><tr><td>0.48465</td><td>0.34646</td><td>.32469</td></tr><tr><td>0.46490</td><td>0.14899</td><td>.19700</td></tr><tr><td>0.53481</td><td>0.84810</td><td>.80175</td></tr><tr><td>0.45384</td><td>0.03837</td><td>.15799</td></tr><tr><td>0.57377</td><td>1.23767</td><td>.89599</td></tr><tr><td>0.49331</td><td>0.43307</td><td>.41673</td></tr><tr><td>0.52238</td><td>0.72379</td><td>.73241</td></tr><tr><td>0.67149</td><td>2.21486</td><td>.95392</td></tr><tr><td>0.35731</td><td>-0.92688</td><td>.05521</td></tr><tr><td>Mean=0.504</td><td>Mean=0.544</td><td></td></tr><tr><td><span class="tex-unknown" title="unknown macro">\small</span> \(\dag\) Pseudorandom numbers generated by the power residue method.</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><th>Table I. Simulated “Lorentzian” data depend
+on \(\Gamma\), the “width” of the distribution.</th></tr><tr><td>\(x_i\) Data</td><td>\(x_i\) Data</td><td>Original</td></tr><tr><td>“Narrow”</td><td>“Wide”</td><td>\(r_i^\dag\)</td></tr><tr><td>0.48792</td><td>0.37915</td><td>.35667</td></tr><tr><td>0.48465</td><td>0.34646</td><td>.32469</td></tr><tr><td>0.46490</td><td>0.14899</td><td>.19700</td></tr><tr><td>0.53481</td><td>0.84810</td><td>.80175</td></tr><tr><td>0.45384</td><td>0.03837</td><td>.15799</td></tr><tr><td>0.57377</td><td>1.23767</td><td>.89599</td></tr><tr><td>0.49331</td><td>0.43307</td><td>.41673</td></tr><tr><td>0.52238</td><td>0.72379</td><td>.73241</td></tr><tr><td>0.67149</td><td>2.21486</td><td>.95392</td></tr><tr><td>0.35731</td><td>-0.92688</td><td>.05521</td></tr><tr><td>Mean=0.504</td><td>Mean=0.544</td><td></td></tr><tr><td> \(\dag\) Pseudorandom numbers generated by the power residue method.</td></tr></tbody></table>
 </div>
 
 <p>Note that just as in a real experiment, you do not get exactly the
@@ -264,7 +264,7 @@ exactly the same result because of these random errors.
 <p><h3 id="pcap-5-b">5b. The Gaussian Function</h3>
 
 A Gaussian distribution probability density function is
-<p>\[p(x) = \frac{1}{\sigma(2\pi)^{1/2}}\ e^{-\frac{(x - \mu)^2}{2\sigma}},\]
+<p><span class="eqn-block" id="eqn-12">\[p(x) = \frac{1}{\sigma(2\pi)^{1/2}}\ e^{-\frac{(x - \mu)^2}{2\sigma}},\]<span class="eqn-number">(12)</span></span>
 <p>where \(\mu\) is the mean value of the variable \(x\), and \(\sigma\) is the standard
 deviation of the measurements.
 (If many repeated measurements are made, about 68% of them will lie
@@ -272,11 +272,11 @@ in the range \(\mu \pm \sigma\).)
 <p><h3 id="pcap-5-c">5c. \(P_c(x)\) and \(P^{-1}_c (x)\) for the Gaussian</h3>
 
 The expression
-<p>\[P_c(x) = \int^x_{-\infty} \frac{1}{\sigma(2\pi)^{1/2}}\  e^{-\frac{(x - \mu)^2}{2\sigma}} dx,\]
+<p><span class="eqn-block" id="eqn-13">\[P_c(x) = \int^x_{-\infty} \frac{1}{\sigma(2\pi)^{1/2}}\  e^{-\frac{(x - \mu)^2}{2\sigma}} dx,\]<span class="eqn-number">(13)</span></span>
 <p>cannot be integrated analytically.
 However, algebraic formulas for \(P_c(x)\) and \(P^{-1}_c (x)\) do exist.
 The function we need is
-<p>\[x = P^{-1}_c(r) \simeq \sigma\left[t - \frac{c_o + c_1t + c_2t^2} {1 + d_1t + d_2t^2 + d_3t^3} \right] + \mu ,\]
+<p><span class="eqn-block" id="eqn-14">\[x = P^{-1}_c(r) \simeq \sigma\left[t - \frac{c_o + c_1t + c_2t^2} {1 + d_1t + d_2t^2 + d_3t^3} \right] + \mu ,\]<span class="eqn-number">(14)</span></span>
 <p>where \(t = \left[\ln(1 - r)^{-2}\right]^{1/2}\)
 <p>\(c_o\) = 2.515517;  \(c_1 = 0.802853\);  \(c_2 = 0.010328\)
 <p>\(d_1 = 1.432788\);  \(d_2 = 0.189269\);  \(d_3 = 0.001308\)
@@ -307,7 +307,7 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
 <p><ol>
 <li><span class="item-label">1.</span> The values of a variable \(x\) are distributed according to the
            probability density function \(p(x) = C\), a constant, in the interval
-           \(|x| \leq 1\) and \(p(x) = 0\) for \( 1 < |x| \).
+           \(|x| \leq 1\) and \(p(x) = 0\) for \( 1  \lt  |x| \).
 	<ol>
 
 </ol>
@@ -357,8 +357,8 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
 <li><span class="item-label">c.</span> How do the distributions of part (a) and (b) differ?</li>
 <li><span class="item-label">d.</span> Graph the probability density function for this data.</li>
 <li><span class="item-label">e.</span> Write the equation for the normalized probability function in
-	           four regions: \(x < 0\), \(0 \leq x \leq 0.5\), \(0.5 \leq x \leq 1.0\)
-	           and \(x > 1.0\).
+	           four regions: \(x  \lt  0\), \(0 \leq x \leq 0.5\), \(0.5 \leq x \leq 1.0\)
+	           and \(x  \gt  1.0\).
     </li>
 </ol>
 
@@ -375,7 +375,7 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
 <li><span class="item-label">c.</span> 1/2 or 50%</li>
 <li><span class="item-label">d.</span> 
 	            <table class="physnet-table"><tbody><tr><td>[t]lrcrcccr
-	            \(P_c(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\(<\)</td><td>\(-1\)</td></tr><tr><td>\(P_c(x) = \frac{1}{2} (x+1)\)</td><td>for</td><td>\(-1\)</td><td>\(<\)</td><td>\(x\)</td><td>\(<\)</td><td>\(+1\)</td></tr><tr><td>\(P_c(x) = 1\)</td><td>for</td><td>\(+1\)</td><td>\(<\)</td><td>\(x\)</td><td></td><td></td></tr></tbody></table>
+	            \(P_c(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\( \lt \)</td><td>\(-1\)</td></tr><tr><td>\(P_c(x) = \frac{1}{2} (x+1)\)</td><td>for</td><td>\(-1\)</td><td>\( \lt \)</td><td>\(x\)</td><td>\( \lt \)</td><td>\(+1\)</td></tr><tr><td>\(P_c(x) = 1\)</td><td>for</td><td>\(+1\)</td><td>\( \lt \)</td><td>\(x\)</td><td></td><td></td></tr></tbody></table>
 
 	           </li>
 <li><span class="item-label">e.</span> <figure class="fig-centered"><img src="figures/m214gr09.svg" alt="" class="physnet-fig"></figure>
@@ -409,14 +409,14 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
 </li>
 <li><span class="item-label">a.</span> A uniform distribution over the interval.</li>
 <li><span class="item-label">b.</span> A uniform distribution over the interval.</li>
-<li><span class="item-label">c.</span> The density (and therefore \(p(x)\)) for the interval \(0.5 < x \leq 1\) is
+<li><span class="item-label">c.</span> The density (and therefore \(p(x)\)) for the interval \(0.5  \lt  x \leq 1\) is
 	           three times that of the interval \(0 \leq x \leq 0.5\).</li>
 <li><span class="item-label">d.</span> <figure class="fig-centered"><img src="figures/m214gr12.svg" alt="" class="physnet-fig"></figure>
 </li>
 <li><span class="item-label">e.</span> The normalization requirement gives \(C = 1/2\).
 			   <br>
 
-               <table class="physnet-table"><tbody><tr><td>\(p(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\(<\)</td><td>0.0</td></tr><tr><td>\(p(x) = 1/2\)</td><td>for</td><td>0.0</td><td>\(\leq\)</td><td>\(x\)</td><td>\(\leq\)</td><td>0.5</td></tr><tr><td>\(p(x) = 3/2\)</td><td>for</td><td>0.5</td><td>\(<\)</td><td>\(x\)</td><td>\(\leq\)</td><td>1.0</td></tr><tr><td>\(p(x) = 0\)</td><td>for</td><td>1</td><td>\(<\)</td><td>\(x\)</td><td>\(>\)</td><td>1.0</td></tr></tbody></table>
+               <table class="physnet-table"><tbody><tr><td>\(p(x) = 0\)</td><td>for</td><td></td><td></td><td>\(x\)</td><td>\( \lt \)</td><td>0.0</td></tr><tr><td>\(p(x) = 1/2\)</td><td>for</td><td>0.0</td><td>\(\leq\)</td><td>\(x\)</td><td>\(\leq\)</td><td>0.5</td></tr><tr><td>\(p(x) = 3/2\)</td><td>for</td><td>0.5</td><td>\( \lt \)</td><td>\(x\)</td><td>\(\leq\)</td><td>1.0</td></tr><tr><td>\(p(x) = 0\)</td><td>for</td><td>1</td><td>\( \lt \)</td><td>\(x\)</td><td>\( \gt \)</td><td>1.0</td></tr></tbody></table>
 
 	</li>
 </ol>
@@ -442,7 +442,7 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
            \(\int^{x_2}_{x_1} p(x) dx\).</li>
 <li><span class="item-label">d.</span> \(P_c(x) = \int^x_{x_\ell} p(x) dx\).
            The integral must be evaluated three times, for \(x\) in the
-           three regions \(x < -1\), \(-1 \leq x \leq +1\), and \(x > +1\).
+           three regions \(x  \lt  -1\), \(-1 \leq x \leq +1\), and \(x  \gt  +1\).
            In each case, \(x_\ell = -\infty\).</li>
 <li><span class="item-label">f.</span> Solve the equation \(P_c(x) = r\) for the variable \(x\).</li>
 <li><span class="item-label">g.</span> Generate 20 random numbers \(r_i\) (or use tables), and plug each
@@ -486,14 +486,14 @@ See Sect.&thinsp;5 of “Error Analysis of 50 Readings of 5 Second Intervals”
 <p><section id="model-exam" class="module-section section-exam"><h2 id="model-exam">Model Exam</h2>
 
 <p><ol>
-<li><span class="item-label">1.</span> Given: \(p(x) = kx\) for: \(0 < x < 2\); \(p(x) = 0\) otherwise
+<li><span class="item-label">1.</span> Given: \(p(x) = kx\) for: \(0  \lt  x  \lt  2\); \(p(x) = 0\) otherwise
 <ol>
 
 </ol>
 </li>
 <li><span class="item-label">a.</span> Use the normalization condition to find \(k\).</li>
 <li><span class="item-label">b.</span> Sketch \(p(x)\) vs. \(x\).</li>
-<li><span class="item-label">c.</span> What is the probability that \(x\) will occur in the range \(0 < x < +1\)?</li>
+<li><span class="item-label">c.</span> What is the probability that \(x\) will occur in the range \(0  \lt  x  \lt  +1\)?</li>
 <li><span class="item-label">d.</span> Find \(P_c(x)\) and sketch \(P_c(x)\) vs. \(x\).</li>
 <li><span class="item-label">e.</span> Generate 20 data points \(x_i\).
 Describe their distribution qualitatively.

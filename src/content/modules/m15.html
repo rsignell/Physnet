@@ -145,7 +145,7 @@ a velocity \(\vec{v}\) is defined by:
 <p>\[\vec{p} \equiv m\,\vec{v}.\]
 <p>As a particle moves, its velocity changes as a result of its interaction
 with other particles, so we can write:
-<p>\[\vec{p}(t) \equiv m\,\vec{v}(t)\]
+<p><span class="eqn-block" id="eqn-1">\[\vec{p}(t) \equiv m\,\vec{v}(t)\]<span class="eqn-number">(1)</span></span>
 <p><h3 id="pcap-2-b">2b. An Isolated Particle has a Constant Momentum</h3>
 
 First, let us consider the special case of an isolated particle, one having
@@ -154,7 +154,7 @@ This case is easy since, by Newton's first law, such a particle moves with a
 constant velocity.
 <p><sup class="fn-ref"><a href="#fn-4" id="fnref-4">4</a></sup>
 <p>Since the mass is constant, it thereby moves with a constant momentum:
-<p>\[\vec{p} = \text{constant}.\qquad \text{(Isolated Particle)}\]
+<p><span class="eqn-block" id="eqn-2">\[\vec{p} = \text{constant}.\qquad \text{(Isolated Particle)}\]<span class="eqn-number">(2)</span></span>
 <p>This is the purest and simplest statement of the Conservation of Momentum
 Principle.
 Unfortunately, in this form it is also the most useless statement.
@@ -165,14 +165,12 @@ make it useful.
 Before extending the conservation discussion, let's  investigate how a
 particle's momentum changes.
 To do so, differentiate each side of <a href="#eqn-1" class="eqn-ref">Eq.&nbsp;(1)</a> with respect to time:
-\[\begin{aligned}\frac{d\vec{p}}{dt} & = & \frac{d}{dt}(m\vec{v}) \\
-                     & = & m \frac{d\vec{v}}{dt} \qquad (m\text{ is constant}) \\
-                     & = & m \vec{a}. \qquad (\vec{a} \equiv \frac{d\vec{v}}{dt}:\text{ Definition})\end{aligned}\]
+\[\begin{aligned}\frac{d\vec{p}}{dt} &= \frac{d}{dt}(m\vec{v}) \\ &= m \frac{d\vec{v}}{dt} \qquad (m\text{ is constant}) \\ &= m \vec{a}. \qquad (\vec{a} \equiv \frac{d\vec{v}}{dt}:\text{ Definition})\end{aligned}\]
 
 Now, according to Newton's second law
  \(m \vec{a}\) equals the resultant force
 \(\vec{F}_R\) acting on the particle so:
-<p>\[\frac{d\vec{p}}{dt} = \vec{F}_R.\]
+<p><span class="eqn-block" id="eqn-3">\[\frac{d\vec{p}}{dt} = \vec{F}_R.\]<span class="eqn-number">(3)</span></span>
 <p>Equation (3) is another way to express Newton's second law
 (\(\vec{F}_R\) is the vector sum of all forces acting on the particle whose
 momentum is \(\vec{p}\)).
@@ -235,7 +233,7 @@ collision.
 So now we have:
 <p>\[\Delta \vec{p} = \vec{F} \Delta t;\]
 <p>or:
-<p>\[\vec{F} = \frac{\Delta \vec{p}}{\Delta t}. \qquad (\text{Constant Force})\]
+<p><span class="eqn-block" id="eqn-4">\[\vec{F} = \frac{\Delta \vec{p}}{\Delta t}. \qquad (\text{Constant Force})\]<span class="eqn-number">(4)</span></span>
 <p>To find the force on the ball, using <a href="#eqn-4" class="eqn-ref">Eq.&nbsp;(4)</a>, we
 must compute the ball's change in momentum, \(\Delta\vec{p}\), during the time
 interval \(\Delta t\).
@@ -243,9 +241,7 @@ Consider <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>, showing the initial a
 Note that the momentum of the ball is reversed in direction by the collision
 but is left unchanged in magnitude.
 Then:
-\[\begin{aligned}\Delta \vec{p} & = & \vec{p}_f - \vec{p}_i \\
-               & = & - m v_0 \hat{x} - (m v_0 \hat{x}) \\
-               & = & - 2 m v_0 \hat{x},\end{aligned}\]
+\[\begin{aligned}\Delta \vec{p} &= \vec{p}_f - \vec{p}_i \\ &= - m v_0 \hat{x} - (m v_0 \hat{x}) \\ &= - 2 m v_0 \hat{x},\end{aligned}\]
 
 where \(v_0\) is the ball's speed (30<span class="unit">&thinsp;m/s</span> in this case) and \(\hat{x}\) is a unit
 vector in the direction of motion before the collision.
@@ -278,14 +274,14 @@ With these estimates for \(\Delta \vec{p}\) and \(\Delta t\), we use <a href="#e
 get
 <p>\[\vec{F} \simeq \frac{- 2 m v_0^2 \hat{x}}{D}\]
 <p>or
-<p>\[F \simeq \left(\frac{2v_0^2}{g D}\right) m g =
-\left(\frac{2 v_0^2}{g D}\right) W,\]
+<p><span class="eqn-block" id="eqn-5">\[F \simeq \left(\frac{2v_0^2}{g D}\right) m g =
+\left(\frac{2 v_0^2}{g D}\right) W,\]<span class="eqn-number">(5)</span></span>
 <p>where \(W = m g\) is the ball's weight.
 Substituting approximate values for \(v_0 \simeq 30\,\text{m/s}\),
-\(g \simeq 10\unit{m/s^{2}}\), and \(D = 0.10\,\text{m}\),
+\(g \simeq 10\,\text{m/s}^{2}\text{}\), and \(D = 0.10\,\text{m}\),
 gives:
-<p>\[F \simeq \left(\frac{2 \times 900\unit{m^{2}}/\unit{s^{2}}}
-      {10\;\unit{m/s^{2}}\times 0.10\,\text{m}}\right) W = 1800 W.\]
+<p>\[F \simeq \left(\frac{2 \times 900\,\text{m}^{2}\text{}/\,\text{s}^{2}\text{}}
+      {10\;\,\text{m/s}^{2}\text{}\times 0.10\,\text{m}}\right) W = 1800 W.\]
 <p>So, if your answer in the original problem was (d), \(1000\,W\), congratulations!
 <p><span class="tryit">Try it:</span>  By the way, how many pounds or Newtons is that?
 <p><h3 id="pcap-3-c">3c. But the Collision Force Isn't Constant</h3>
@@ -302,7 +298,7 @@ respect to time, from \(t = 0\) (ball first touches bat) to \(t = \Delta t\)
 <p>\[\int_0^{\Delta t} \frac{d\vec{p}}{dt}\,dt = \vec{p}(\Delta t) - p(0) =
 \Delta \vec{p}.\]
 <p>Then:
-<p>\[\int_0^{\Delta t} \vec{F}_R(t)\,dt = \Delta \vec{p}.\]
+<p><span class="eqn-block" id="eqn-6">\[\int_0^{\Delta t} \vec{F}_R(t)\,dt = \Delta \vec{p}.\]<span class="eqn-number">(6)</span></span>
 <p>In the Appendix we show that an integral of a vector function of a single
 scalar variable, such as the one in <a href="#eqn-6" class="eqn-ref">Eq.&nbsp;(6)</a>, can be written as the average
 value of the function \(\vec{F}_{R,av}\) multiplied by the averaging interval
@@ -310,7 +306,7 @@ value of the function \(\vec{F}_{R,av}\) multiplied by the averaging interval
 So:
 <p>\[\vec{F}_{R,av} \Delta t = \Delta \vec{p};\]
 <p>or:
-<p>\[\vec{F}_{R,av} = \frac{\Delta \vec{p}}{\Delta t}.\]
+<p><span class="eqn-block" id="eqn-7">\[\vec{F}_{R,av} = \frac{\Delta \vec{p}}{\Delta t}.\]<span class="eqn-number">(7)</span></span>
 <p>Compare Eqs.&thinsp;(4) and (7).
 The time-average resultant force over a time interval \(\Delta t\) is exactly
 equal to the constant force which would cause that same momentum change
@@ -333,7 +329,7 @@ collision time decreases.
 And that's why pole vaulters land on a few feet of foam rubber rather than
 concrete!
 In each case, their momentum change would be the same, but the increased
-collision time resulting from the foam's compressibility saves the day \ldots 
+collision time resulting from the foam's compressibility saves the day &hellip;
 not to mention the pole vaulter.
 <p><h3 id="pcap-3-e">3e. The Impulse-Momentum Principle</h3>
 
@@ -354,11 +350,11 @@ hits a concrete wall and bounces off, as shown, with speed \(v^f\).
 If the collision time is measured from high speed movies to be \(\Delta t\),
 determine the average force (magnitude and direction) exerted on the car by the wall.m15gr24
 <p>We start with <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a>, written in terms of its Cartesian components:
-<p>\[\vec{F}_{R,av} = \frac{\Delta p_x}{\Delta t}\hat{x} + \frac{\Delta p_y}{\Delta t}\hat{y}
-                       + \frac{\Delta p_z}{\Delta t}\hat{z}\,.\]
+<p><span class="eqn-block" id="eqn-15">\[\vec{F}_{R,av} = \frac{\Delta p_x}{\Delta t}\hat{x} + \frac{\Delta p_y}{\Delta t}\hat{y}
+                       + \frac{\Delta p_z}{\Delta t}\hat{z}\,.\]<span class="eqn-number">(15)</span></span>
 <p>We take the scalar product of \(\hat{x}\) with each term in <a href="#eqn-15" class="eqn-ref">Eq.&nbsp;(15)</a> and we get the \(x\)-component
 of the average resultant force:
-<p>\[F_{R,av,x} = \frac{\Delta p_x}{\Delta t}\,,\]
+<p><span class="eqn-block" id="eqn-16">\[F_{R,av,x} = \frac{\Delta p_x}{\Delta t}\,,\]<span class="eqn-number">(16)</span></span>
 <p>and of course there are similar equations for the \(y\)- and \(z\)-components of \(\vec{F}_{R,av}\),
 obtained by mutiplying <a href="#eqn-7" class="eqn-ref">Eq.&nbsp;(7)</a> by \(\hat{y}\) or \(\hat{z}\).
 Putting in the given quantities for the \(x\)- and \(y\)-components of the car's initial momentum
@@ -395,12 +391,12 @@ interacting particles.
 This is a system in which two particles interact with each other but not
 with other particles.
 The system momentum at the time \(t\) is denoted by \(\vec{P}\)(t) and defined by
-<p>\[\vec{P}(t) = \vec{p}_1(t) + \vec{p}_2(t),\]
+<p><span class="eqn-block" id="eqn-8">\[\vec{P}(t) = \vec{p}_1(t) + \vec{p}_2(t),\]<span class="eqn-number">(8)</span></span>
 <p>where \(\vec{p}_n(t)\) is the momentum of particle \(n\) at time \(t\) (See <a href="#fig-4" class="fig-ref">Fig.&nbsp;4</a>).
 Differentiating both sides of <a href="#eqn-8" class="eqn-ref">Eq.&nbsp;(8)</a> with respect to time, and using
 Newton's second law, we get:
-<p>\[\frac{d\vec{P}}{dt} = \frac{d\vec{p}_1}{dt} +
-\frac{d\vec{p}_2}{dt} = \vec{F}_{R1}(t) + \vec{F}_{R2}(t),\]
+<p><span class="eqn-block" id="eqn-9">\[\frac{d\vec{P}}{dt} = \frac{d\vec{p}_1}{dt} +
+\frac{d\vec{p}_2}{dt} = \vec{F}_{R1}(t) + \vec{F}_{R2}(t),\]<span class="eqn-number">(9)</span></span>
 <p>where \(\vec{F}_{Rn}(t)\) is the resultant force on particle \(n\) at time \(t\).
 Since the system is assumed to be isolated, particle&nbsp;1 interacts only with
 particle&nbsp;2 so:
@@ -417,7 +413,7 @@ Then <a href="#eqn-9" class="eqn-ref">Eq.&nbsp;(9)</a> becomes:
 \vec{F}_{1 \text{ on } 2}(t) = 0.\]
 <p>Since its time rate of change is zero, the total linear momentum for an
 isolated two-particle system must not change with time; i.e.,
-<p>\[\vec{P}(t) = \text{ Constant}. \qquad \text{(Isolated System)}\]
+<p><span class="eqn-block" id="eqn-10">\[\vec{P}(t) = \text{ Constant}. \qquad \text{(Isolated System)}\]<span class="eqn-number">(10)</span></span>
 <p>Very interesting.
 While \(\vec{p}_1\) and \(\vec{p}_2\) may be changing very rapidly because of the
 two particles' mutual interaction, their sum \(\vec{P}\) remains constant.
@@ -454,7 +450,7 @@ Now let \(\vec{F}_R^\text{ext}\) be the sum of the external force on the system;
 i.e.,
 <p>\[\vec{F}_R^\text{ext}(t) = \vec{F}_1^\text{ext} + \vec{F}_2^\text{ext},\]
 <p>so that
-<p>\[\frac{d\vec{P}}{dt}=\vec{F}_R^\text{ext}.\]
+<p><span class="eqn-block" id="eqn-11">\[\frac{d\vec{P}}{dt}=\vec{F}_R^\text{ext}.\]<span class="eqn-number">(11)</span></span>
 <p>Comparing this result with the corresponding equation for a one-particle
 system, \(d\vec{p}/dt = \vec{F}_R\), you see that the momentum for the
 two-particle system changes just as if the system were a single particle acted
@@ -480,25 +476,25 @@ interactions and this fact is often used in solving two-dimensional and three-di
 collision problems.
 <p>The proof of momentum component conservation starts with the statement of conservation
 of momentum,
-<p>\[\vec{p}^{\,f} = \vec{p}^{\,i}\,,\]
+<p><span class="eqn-block" id="eqn-13">\[\vec{p}^{\,f} = \vec{p}^{\,i}\,,\]<span class="eqn-number">(13)</span></span>
 <p>where \(\vec{p}^{\,f}\) is the momentum of the system being studied at some “final” time, and
 \(\vec{p}^{\,i}\) is the momentum of the system at some “initial” time.
 <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> just says that the system's momentum does not change with time; that it is “conserved.”
 We now expand each momentum vector in <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> in its Cartesian components:
-<p>\[p^{\,f}_x\,\hat{x} + p^{\,f}_y\,\hat{y} + p^{\,f}_z\,\hat{z} =
-p^{\,i}_x\,\hat{x} + p^{\,i}_y\,\hat{y} + p^{\,i}_z\,\hat{z}\,.\]
+<p><span class="eqn-block" id="eqn-14">\[p^{\,f}_x\,\hat{x} + p^{\,f}_y\,\hat{y} + p^{\,f}_z\,\hat{z} =
+p^{\,i}_x\,\hat{x} + p^{\,i}_y\,\hat{y} + p^{\,i}_z\,\hat{z}\,.\]<span class="eqn-number">(14)</span></span>
 <p><a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> can be written more succinctly as:
-<p>\[\sum_{n=1}^{n=3} p^{\,f}_n\,\hat{x}_n = \sum_{n=1}^{n=3} p^{\,i}_n\,\hat{x}_n\,,\]
+<p><span class="eqn-block" id="eqn-20">\[\sum_{n=1}^{n=3} p^{\,f}_n\,\hat{x}_n = \sum_{n=1}^{n=3} p^{\,i}_n\,\hat{x}_n\,,\]<span class="eqn-number">(20)</span></span>
 <p>where \(x_1 \equiv x\), \(x_2 \equiv y\), and \(x_3 \equiv z\).
 Finally, we multiply <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> or <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a> by any one of the three unit vectors and we
 get conservation of momentum for that component of momentum.
 For example, taking the scalar (“dot”) product of <a href="#eqn-14" class="eqn-ref">Eq.&nbsp;(14)</a> and \(\hat{x}\) gives conservation of the
 \(x\)-component of momentum:
-<p>\[p^{\,f}_x = p^{\,i}_x\,.\]
+<p><span class="eqn-block" id="eqn-21">\[p^{\,f}_x = p^{\,i}_x\,.\]<span class="eqn-number">(21)</span></span>
 <p>To complete the proof, one need only say “and the same for the \(y\)- and \(z\)-components.”
 More succinctly, taking the dot product of <a href="#eqn-20" class="eqn-ref">Eq.&nbsp;(20)</a> and the \(\text{n}^\text{th}\) unit vector,
 \(\hat{x}_n\), gives conservation of the \(\text{n}^\text{th}\) component of momentum:
-<p>\[p^{\,f}_n = p^{\,i}_n; \qquad n = 1, 2, 3\,.\]
+<p><span class="eqn-block" id="eqn-22">\[p^{\,f}_n = p^{\,i}_n; \qquad n = 1, 2, 3\,.\]<span class="eqn-number">(22)</span></span>
 <p>In collisions, each momentum in <a href="#eqn-13" class="eqn-ref">Eq.&nbsp;(13)</a> is the sum of the momenta of the individual particles
 participating in the collision.
 Thus one must equate the sum of the \(x\)-components of the particles in the system before the collision to
@@ -522,7 +518,7 @@ For this module the problems you are to solve will not assume energy conservatio
 Problem: A mass \(m\) moving with a speed \(u\) collides with a mass \(M\) at rest.
 After the collision, each moves as shown.
 Assuming momentum conservation, we want to determine the speeds \(w\) and \(V\) after the collision.m15gr11
-<p>Adopting the notation introduced in <span class="tex-unknown" title="unknown macro">\Sectref</span>5b, and adding superscripts to identify the
+<p>Adopting the notation introduced in <span class="sect-ref">Sect.&nbsp;5b</span>, and adding superscripts to identify the
 individual particles, the momentum \(x\)-components of the individual particles are:
 <p>\[p_x^{m,i} = m u;\quad p_x^{m,f} = m w \cos\theta;\quad p_x^{M,i} = 0;\quad p_x^{M,f} = M V \cos\phi\,,\]
 <p>while the \(y\)-components are:
@@ -562,11 +558,11 @@ equals the shaded area.
 
 <p>If \(\vec{C}(\tau)\) is a vector function of a single variable \(\tau\) (e.g.,
 position as a function of time), the integral of \(\vec{C}\) on the interval
-\(a < \tau < b\) is defined in terms of the corresponding integrals of the
+\(a  \lt  \tau  \lt  b\) is defined in terms of the corresponding integrals of the
 components of \(\vec{C}\); i.e.,
-<p>\[\int_a^b \vec{C}(\tau)\,d\tau =
+<p><span class="eqn-block" id="eqn-12">\[\int_a^b \vec{C}(\tau)\,d\tau =
 \hat{x} \int_a^b C_x(\tau)\,d\tau + \hat{y} \int_a^b C_y(\tau)\,d\tau +
-\hat{z} \int_a^b C_z(\tau)\,d\tau.\]
+\hat{z} \int_a^b C_z(\tau)\,d\tau.\]<span class="eqn-number">(12)</span></span>
 <p>Each of these three integrals are just integrals of a real function of one
 variable of the form
 <p>\[\int_a^b f(\tau)\,d\tau.\]
@@ -594,7 +590,7 @@ write for the vector function:
 <p>Substituting these into <a href="#eqn-12" class="eqn-ref">Eq.&nbsp;(12)</a>, gives
 <p>\[\int_a^b \vec{C}(\tau)\,d\tau =
 \left(C_{x,av} \hat{x} + C_{y,av} \hat{y} + C_{z,av} \hat{z}\right)(b - a).\]
-<p>We define the average of \(\vec{C}(\tau)\) on \(a < \tau < b\) as
+<p>We define the average of \(\vec{C}(\tau)\) on \(a  \lt  \tau  \lt  b\) as
 <p>\[\vec{C}_{av} \equiv C_{x,av} \hat{x} + C_{y,av} \hat{y} + C_{z,av} \hat{z}
 \qquad (\text{Definition}).\]
 <p>Equation (13) may now be rewritten:
@@ -633,19 +629,20 @@ If they don't, make sure that you reconcile them.
 questions and answers.
 <p> PART I<br>
 
-A. One-dimensional Collision-Force Calculation <span class="dotfill">&thinsp;·····&thinsp;</span> PS1 <br>
+A. One-dimensional Collision-Force Calculation <span class="fill-line">&nbsp;</span> PS1 <br>
 
-B. Two-dimensional Collision-Force Calculation <span class="dotfill">&thinsp;·····&thinsp;</span> PS2 <br>
+B. Two-dimensional Collision-Force Calculation <span class="fill-line">&nbsp;</span> PS2 <br>
 
-C. One-dimensional Conservation of Momentum Problem <span class="dotfill">&thinsp;·····&thinsp;</span> PS3 <br>
+C. One-dimensional Conservation of Momentum Problem <span class="fill-line">&nbsp;</span> PS3 <br>
 
-D. Two-dimensional Conservation of Momentum Problem <span class="dotfill">&thinsp;·····&thinsp;</span> PS5 <br>
+D. Two-dimensional Conservation of Momentum Problem <span class="fill-line">&nbsp;</span> PS5 <br>
 
 <p> PART II<br>
 
-Problems&nbsp;1-12 <span class="dotfill">&thinsp;·····&thinsp;</span> PS8 <br>
+Problems&nbsp;1-12 <span class="fill-line">&nbsp;</span> PS8 <br>
 
-<p><span class="tex-unknown" title="unknown macro">\ProbSet</span>PART I
+<p><h3 class="probset-title">PART I</h3>
+
 <p><h3 id="pcap--A">A. One-dimensional Collision-Force Calculation</h3>
 <br>
 
@@ -734,7 +731,7 @@ Problem: A mass \(m\) moving with a speed \(u\) collides with a mass
 \(M\) at rest.
 After the collision, each moves as shown.
 Determine the speeds after the collision, if \(m = 0.15\,\text{kg}\), \(M = 0.20\,\text{kg}\),
-\(\theta = 39^\circ\), \(\phi = 74^\circ\), \(u = 20.0\,\text{m/s}\).m15gr11
+\(\theta = 39°\), \(\phi = 74°\), \(u = 20.0\,\text{m/s}\).m15gr11
 <p><ol>
 <li><span class="item-label">1.</span> Read the problem carefully.
             Consider the two particle system consisting of \(m\) and \(M\).
@@ -788,11 +785,12 @@ Determine the speeds after the collision, if \(m = 0.15\,\text{kg}\), \(M = 0.20
 </ol>
 
 
-<p><span class="tex-unknown" title="unknown macro">\ProbSet</span>PART II
-<p><span class="tex-unknown" title="unknown macro">\newlength</span><span class="tex-unknown" title="unknown macro">\tempval</span>
+<p><h3 class="probset-title">PART II</h3>
+
+<p>
 
 
-<div class="centered"><span class="fbox"> If you get stuck on any problem in
+<div class="centered"><span class="boxed"> If you get stuck on any problem in
 this part, you must go back and work the problems in Part I of this
 Supplement successfully before continuing.</span></div>
 
@@ -817,7 +815,7 @@ Supplement successfully before continuing.</span></div>
            Use Newton's laws to show that the total momentum for this system
            does not change with time.</li>
 <li><span class="item-label">b.</span> Extend the argument of part (a) to an isolated \(N\)-particle
-           system.  <a href="#help-1" class="help-link"><span title="Special Assistance">[help&nbsp;1]</span></a>
+           system.<sup class="help-link"><a href="#help-1" title="see Sequence [S-1] in the Special Assistance Supplement">[S-1]</a></sup>
 </li>
 <li><span class="item-label">3.</span> The only external forces on a two-particle system act in the
            \(y\)-direction.
@@ -835,13 +833,13 @@ Supplement successfully before continuing.</span></div>
 </ol>
 </li>
 <li><span class="item-label">a.</span> Calculate the ball's change in momentum during the collision, in
-           terms of \(\hat{x}\) and \(\hat{y}\). <a href="#help-2" class="help-link"><span title="Special Assistance">[help&nbsp;2]</span></a></li>
+           terms of \(\hat{x}\) and \(\hat{y}\).<sup class="help-link"><a href="#help-2" title="see Sequence [S-2] in the Special Assistance Supplement">[S-2]</a></sup></li>
 <li><span class="item-label">b.</span> Determine the average resultant force on the ball during the
            collision.
-           Express in terms of \(\hat{x}\) and \(\hat{y}\). <a href="#help-13" class="help-link"><span title="Special Assistance">[help&nbsp;13]</span></a></li>
+           Express in terms of \(\hat{x}\) and \(\hat{y}\).<sup class="help-link"><a href="#help-13" title="see Sequence [S-13] in the Special Assistance Supplement">[S-13]</a></sup></li>
 <li><span class="item-label">c.</span> What objects exert force on the ball during the collision?</li>
 <li><span class="item-label">d.</span> What is the average force on the floor during the collision?
-           Express in terms of \(\hat{x}\) and \(\hat{y}\). <a href="#help-14" class="help-link"><span title="Special Assistance">[help&nbsp;14]</span></a></li>
+           Express in terms of \(\hat{x}\) and \(\hat{y}\).<sup class="help-link"><a href="#help-14" title="see Sequence [S-14] in the Special Assistance Supplement">[S-14]</a></sup></li>
 <li><span class="item-label">e.</span> Is the floor frictionless?
            Explain. 
 </li>
@@ -859,7 +857,7 @@ Supplement successfully before continuing.</span></div>
 </ol>
 </li>
 <li><span class="item-label">a.</span> What is the total momentum for this two mass system at \(t\) = 0?</li>
-<li><span class="item-label">b.</span> Does this total momentum change for \(t > 0\)?
+<li><span class="item-label">b.</span> Does this total momentum change for \(t  \gt  0\)?
            Why?</li>
 <li><span class="item-label">c.</span> Express the total momentum in terms of \(m\), \(M\), \(\vec{w}\), and
            \(\vec{V}\).</li>
@@ -877,8 +875,7 @@ Supplement successfully before continuing.</span></div>
            Holding desperately onto each other, they slide off together,
            hopefully to happier times.</span><img src="figures/m15gr19.svg" alt="" class="fig-item">
 <p>           If Showboat weighs 150<span class="unit">&thinsp;lb</span> and Winsome 100.0<span class="unit">&thinsp;lb</span>, determine their
-           blissful velocity (magnitude and direction) after the collision.
-            <a href="#help-3" class="help-link"><span title="Special Assistance">[help&nbsp;3]</span></a></li>
+           blissful velocity (magnitude and direction) after the collision.<sup class="help-link"><a href="#help-3" title="see Sequence [S-3] in the Special Assistance Supplement">[S-3]</a></sup></li>
 <li><span class="item-label">9.</span> A child (mass = 40.0<span class="unit">&thinsp;kg</span>) standing at rest on a smooth frozen lake
            throws a 0.60<span class="unit">&thinsp;kg</span> ball toward a friend directly to the east.
            The initial speed of the ball is 10.0<span class="unit">&thinsp;m/s</span>.
@@ -898,7 +895,7 @@ Supplement successfully before continuing.</span></div>
             After the collision, the larger mass has a speed of 8.5<span class="unit">&thinsp;m/s</span> and
             the smaller is observed to be moving with a speed of 17.0<span class="unit">&thinsp;m/s</span>.
             Calculate the scattering angle for the larger mass; i.e., the angle between
-            its final and initial velocities.  <a href="#help-4" class="help-link"><span title="Special Assistance">[help&nbsp;4]</span></a></li>
+            its final and initial velocities.<sup class="help-link"><a href="#help-4" title="see Sequence [S-4] in the Special Assistance Supplement">[S-4]</a></sup></li>
 <li><span class="item-label">11.</span> A mass \(M\) moving with a speed \(V\) in a particular direction collides with
             a larger object, of mass \(3.0\,M\), that is initially at rest.
             After the collision the smaller mass is observed to be moving in a direction that
@@ -906,7 +903,7 @@ Supplement successfully before continuing.</span></div>
             with a speed \(V\)/(2.0).
             Determine the speed and direction of motion of the larger mass after the collision.
             Specify the direction of motion by giving the angle it makes to the pre-collision direction
-            of motion of the smaller mass.  <a href="#help-5" class="help-link"><span title="Special Assistance">[help&nbsp;5]</span></a></li>
+            of motion of the smaller mass.<sup class="help-link"><a href="#help-5" title="see Sequence [S-5] in the Special Assistance Supplement">[S-5]</a></sup></li>
 <li><span class="item-label">12.</span> A 5.0<span class="unit">&thinsp;kg</span> mass moving with a velocity of
             \((3.2 \hat{x} - 2.4 \hat{y})\,\text{m/s}\) at \(t = 0\) is acted upon by a
             force \(\hat{x} F_x(t) + \hat{y} F_y(t)\) where \(F_x(t)\) and \(F_y(t)\)
@@ -915,13 +912,11 @@ Supplement successfully before continuing.</span></div>
 <p>            Hint: Recall that \(\Delta\vec{p} = \vec{F}_{R,av} \Delta t =
             \int_0^{\Delta t} \vec{F}_R(t)\,dt\).
 <p>            <figure class="fig-centered"><img src="figures/m15gr20.svg" alt="" class="physnet-fig"></figure>
-<br>
-
-            <a href="#help-7" class="help-link"><span title="Special Assistance">[help&nbsp;7]</span></a></li>
+<br><sup class="help-link"><a href="#help-7" title="see Sequence [S-7] in the Special Assistance Supplement">[S-7]</a></sup></li>
 <li><span class="item-label">13.</span> At an instant when a 0.20<span class="unit">&thinsp;kg</span> particle has position, velocity, and
             acceleration given by \((2.1 \hat{x} - 4.8 \hat{y})\,\text{m}\),
             \(( 1.2 \hat{x} + 1.6 \hat{z})\,\text{m/s}\), and
-            \((-2.0 \hat{y} + 1.5 \hat{z})\unit{m/s^{2}}\):
+            \((-2.0 \hat{y} + 1.5 \hat{z})\,\text{m/s}^{2}\text{}\):
 <ol>
 
 </ol>
@@ -934,11 +929,11 @@ Supplement successfully before continuing.</span></div>
             When contact with the board ceases, 0.40<span class="unit">&thinsp;s</span> later, the diver's
             velocity is 23<span class="unit">&thinsp;ft/s</span> at an angle of 34° with the vertical.
 <p>            Calculate the magnitude of the average resultant force on the diver
-            while in contact with the board.  <a href="#help-20" class="help-link"><span title="Special Assistance">[help&nbsp;20]</span></a></span><img src="figures/m15gr21.svg" alt="" class="fig-item"></li>
+            while in contact with the board.<sup class="help-link"><a href="#help-20" title="see Sequence [S-20] in the Special Assistance Supplement">[S-20]</a></sup></span><img src="figures/m15gr21.svg" alt="" class="fig-item"></li>
 <li><span class="item-label">15.</span> <span class="item-text">A mass \(M\) moving with a speed \(v\) collides with
             a mass \(2 M\) initially at rest.
             After the collision the two move as shown.
-            Determine \(\theta\).  <a href="#help-10" class="help-link"><span title="Special Assistance">[help&nbsp;10]</span></a></span><img src="figures/m15gr22.svg" alt="" class="fig-item"></li>
+            Determine \(\theta\).<sup class="help-link"><a href="#help-10" title="see Sequence [S-10] in the Special Assistance Supplement">[S-10]</a></sup></span><img src="figures/m15gr22.svg" alt="" class="fig-item"></li>
 </ol>
 
 <p><h3 id="pcap--">. Answers</h3>
@@ -958,17 +953,17 @@ the instant his downward motion stops.</li>
            \(\Delta t \simeq (0.8\,\text{m})/(5.5\,\text{m/s}) \simeq 0.1\,\text{s}\).</li>
 <li><span class="item-label">4.</span> \(\Delta \vec{p} /\Delta t \simeq
            (869\,\text{kg\,m/s}\text{, up})/(0.1\,\text{s}) = 9 \times 10^3\,\text{N}\text{, up}\).</li>
-<li><span class="item-label">5.</span> \(9000\,\text{N}/(79\,\text{kg} \times 9.8\unit{m/s^{2}}) \simeq 10\).</li>
+<li><span class="item-label">5.</span> \(9000\,\text{N}/(79\,\text{kg} \times 9.8\,\text{m/s}^{2}\text{}) \simeq 10\).</li>
 <li><span class="item-label">6.</span> <span class="item-text">\(m = w/g = 100\,\text{slugs}\)
 <p>           \(p_i = mv_i = 6010\,\text{lb\,s}\)
 <p>           \(p_f = mv_f = 3230\,\text{lb\,s}\)</span><img src="figures/m15gr07.svg" alt="" class="fig-item"></li>
 <li><span class="item-label">7.</span> Since the angle between \(\vec{p}_i\) and \(\vec{p}_f\) is 90°,
            the Pythagorean theorem gives
 <p>           \(|\Delta \vec{p}| = \sqrt{p_i^2 + p_f^2 } = 6.8 \times 10^3 \,\text{lb\,s}\)</li>
-<li><span class="item-label">8.</span> <span class="item-text">\(\alpha = 60^\circ - \theta\)
+<li><span class="item-label">8.</span> <span class="item-text">\(\alpha = 60° - \theta\)
 <p>           \(\tan\theta = p_f/p_i = 0.537\)
-<p>           \(\theta = 28^\circ\)
-<p>           \(\alpha = 32^\circ\)</span><img src="figures/m15gr08.svg" alt="" class="fig-item"></li>
+<p>           \(\theta = 28°\)
+<p>           \(\alpha = 32°\)</span><img src="figures/m15gr08.svg" alt="" class="fig-item"></li>
 <li><span class="item-label">9.</span> \(\frac{|\Delta \vec{p}|}{\Delta t} =
            6823\,\text{lb\,s}/0.50\,\text{s} = 1.4\times10^4\,\text{lb}\)</li>
 <li><span class="item-label">10.</span> <figure class="fig-centered"><img src="figures/m15gr09.svg" alt="" class="physnet-fig"></figure>
@@ -994,9 +989,9 @@ the instant his downward motion stops.</li>
 <p>           Did you miss the sign on the \(MV\) term?
 <p>           Don't forget it's moving in the negative \(\hat{x}\) direction.</li>
 <li><span class="item-label">14.</span> \(\left(m w - M V/ m + M\right) \hat{x}\).
-<p>           If \(m w > M V\), \(\vec{u}\) is in the \(\hat{x}\) direction.
+<p>           If \(m w  \gt  M V\), \(\vec{u}\) is in the \(\hat{x}\) direction.
 <p>           If \(m w = M V\), \(\vec{u}\) is zero.
-<p>           If \(m w < M V\), \(\vec{u}\) is in the negative \(\hat{x}\) direction.</li>
+<p>           If \(m w  \lt  M V\), \(\vec{u}\) is in the negative \(\hat{x}\) direction.</li>
 <li><span class="item-label">15.</span> greater than, equal in magnitude, less than.</li>
 <li><span class="item-label">16.</span> If \(V = 0\), \(m w = (m + M) u\); or \(m(w - u) = M u\) and
            \(M/m = (w - u)/u\).</li>
@@ -1069,7 +1064,7 @@ the instant his downward motion stops.</li>
 <li><span class="item-label">b.</span> See this module's <em>Special Assistance Supplement</em>, [S-1].
 </li>
 <li><span class="item-label">32.</span> \(\vec{F} = d\vec{P}/dt\) may be written in scalar form as:
-<p>           \(F_x = dP_x/dt\), \qquad  \(F_y = dP_y/dt\), \qquad  \(F_z = dP_z/dr\).
+<p>           \(F_x = dP_x/dt\), &emsp;&emsp; \(F_y = dP_y/dt\), &emsp;&emsp; \(F_z = dP_z/dr\).
 <p>           Given \(F_x = F_z = 0\), then \(dP_x/dt = dP_z/dt = 0\) so
            \(P_x\) and \(P_z\) remain constant.</li>
 <li><span class="item-label">33.</span> By letting the gloved hand move with the ball, he increases the
@@ -1104,7 +1099,7 @@ the instant his downward motion stops.</li>
 <li><span class="item-label">e.</span> \(M = (w/V)\,m\).
 </li>
 <li><span class="item-label">37.</span> <span class="item-text">\(V = 3.4\,\text{ft/s}\).
-<p>           \(\theta = \tan^{-1}\left(\frac{1.6}{3.0}\right) = 28^\circ\).</span><img src="figures/m15gr23.svg" alt="" class="fig-item"></li>
+<p>           \(\theta = \tan^{-1}\left(\frac{1.6}{3.0}\right) = 28°\).</span><img src="figures/m15gr23.svg" alt="" class="fig-item"></li>
 <li><span class="item-label">38.</span> 
 <ol>
 
@@ -1117,7 +1112,7 @@ the instant his downward motion stops.</li>
 </li>
 <li><span class="item-label">39.</span> 28°.</li>
 <li><span class="item-label">40.</span> speed = \(\frac{\sqrt{7.0}}{6.0} V = 0.44 V\).
-<p>            \(\theta = \tan^{-1}\frac{\sqrt{3.0}}{5.0} = -19^\circ\).</li>
+<p>            \(\theta = \tan^{-1}\frac{\sqrt{3.0}}{5.0} = -19°\).</li>
 <li><span class="item-label">41.</span> \((4.8 \hat{x} - 1.2 \hat{y})\,\text{m/s}\).</li>
 <li><span class="item-label">42.</span> 
 <ol>
@@ -1125,10 +1120,10 @@ the instant his downward motion stops.</li>
 </ol>
 </li>
 <li><span class="item-label">a.</span> \(( 0.24 \hat{x} + 0.32 \hat{z})\,\text{kg\,m/s}\).</li>
-<li><span class="item-label">b.</span> \((-0.40 \hat{y} + 0.30 \hat{z})\unit{kg\,m/s^{2}}\).
+<li><span class="item-label">b.</span> \((-0.40 \hat{y} + 0.30 \hat{z})\,\text{kg\,m/s}^{2}\text{}\).
 </li>
 <li><span class="item-label">43.</span> \(4.1\times10^2\,\text{lb}\).</li>
-<li><span class="item-label">44.</span> \((5\times10^1)^\circ\).</li>
+<li><span class="item-label">44.</span> \((5\times10^1)°\).</li>
 </ol>
 
 
@@ -1139,18 +1134,18 @@ the instant his downward motion stops.</li>
 
 <p><section id="special-assistance-supplement" class="module-section section-assistance"><h2 id="special-assistance-supplement">Special Assistance Supplement</h2>
 
-<p><span class="tex-unknown" title="unknown macro">\enlargethispage</span>2cm
-<p><div id="help-1" class="help-item"><span class="help-num">1.</span><div class="help-body">Note: answers are in [S-6].
+<p>
+<p><div id="help-1" class="help-item"><h3 class="help-num">S-1 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 2b)</span></h3><div class="help-body">Note: answers are in [S-6].
 <ul>
 <li><span class="item-label">1.</span> If \(\vec{p}_k\) is the momentum of particle \(k\), then the total
-           momentum \(\vec{P}\) is given by: \(\vec{P}\) = <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in .</li>
+           momentum \(\vec{P}\) is given by: \(\vec{P}\) = <span class="fill-line">&nbsp;</span> .</li>
 <li><span class="item-label">2.</span> Differentiating with respect to time gives:</li>
-<li>\(d\vec{P}/dt = \sum_{k=1}^N\) <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in .</li>
+<li>\(d\vec{P}/dt = \sum_{k=1}^N\) <span class="fill-line">&nbsp;</span> .</li>
 <li><span class="item-label">3.</span> According to Newton's second law, \(d\vec{p}_k/dt = \vec{F}_{R,k}\)
-           where \(\vec{F}_{R,k}\) is <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in .</li>
+           where \(\vec{F}_{R,k}\) is <span class="fill-line">&nbsp;</span> .</li>
 <li><span class="item-label">4.</span> So \(d\vec{P}/dt\) may be expressed in terms of the \(\vec{F}_{R,k}\)
            as:</li>
-<li>\(d\vec{P}/dt = \vec{F}_{R,1} + \linefill{1.0in} = \sum_{k=1}^N \linefill{1.0in}\)</li>
+<li>\(d\vec{P}/dt = \vec{F}_{R,1} + \underline{\quad\quad} = \sum_{k=1}^N \underline{\quad\quad}\)</li>
 <li><span class="item-label">5.</span> Since the system is isolated, each particle interacts with only the
 other \(N-1\) particles.
 Thus,</li>
@@ -1161,7 +1156,7 @@ Thus,</li>
 <li>\(\ldots\)</li>
 <li>\(\vec{F}_{R,N} = \vec{F}_{1 \text{ on } N} + \vec{F}_{3 \text{ on } N} +
                     \ldots + \vec{F}_{N-1 \text{ on } N}\)</li>
-<li>where \(\vec{F}_{j,k}\) is <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in .</li>
+<li>where \(\vec{F}_{j,k}\) is <span class="fill-line">&nbsp;</span> .</li>
 <li><span class="item-label">6.</span> \(d\vec{P}/dt = \vec{F}_{2 \text{ on } 1} + \vec{F}_{3 \text{ on } 1} +
                    \ldots + \vec{F}_{N \text{ on } 1}\)</li>
 <li>\(\phantom{d\vec{P}/dt} = +\vec{F}_{1 \text{ on } 2} + \vec{F}_{3 \text{ on } 2} +
@@ -1172,14 +1167,14 @@ Thus,</li>
 \(\vec{F}_{k \text{ on } j}\) which appears once and only once.
 If the sum on the right side of this equation is regrouped so that these
 paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
-\(\vec{F}_{k \text{ on } j}\)), then each pair sums to <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in because of Newton's
-<span class="tex-unknown" title="unknown macro">\linefill</span>1.0in law.</li>
-<li><span class="item-label">7.</span> So \(d\vec{P}/dt =\) <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in and \(\vec{P}\) is <span class="tex-unknown" title="unknown macro">\linefill</span>1.0in&thinsp;.</li>
+\(\vec{F}_{k \text{ on } j}\)), then each pair sums to <span class="fill-line">&nbsp;</span> because of Newton's
+<span class="fill-line">&nbsp;</span> law.</li>
+<li><span class="item-label">7.</span> So \(d\vec{P}/dt =\) <span class="fill-line">&nbsp;</span> and \(\vec{P}\) is <span class="fill-line">&nbsp;</span>&thinsp;.</li>
 </ul>
 
 </div></div>
 
-<p><div id="help-2" class="help-item"><span class="help-num">2.</span><div class="help-body">You are probably subtracting the momentum vectors incorrectly.
+<p><div id="help-2" class="help-item"><h3 class="help-num">S-2 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 5)</span></h3><div class="help-body">You are probably subtracting the momentum vectors incorrectly.
  Here is a right way:
  <ol>
 <li><span class="item-label">1.</span> Calculate \(\vec{p}_i\) and \(\vec{p}_f\).</li>
@@ -1200,11 +1195,10 @@ paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
 
  Now calculate the \(x\)- and \(y\)-components of \(\Delta \vec{p}\), noting that
  getting the contribution of \(p_{i,y}\) involves taking the negative of a
- negative number.
- <a href="#help-11" class="help-link"><span title="Special Assistance">[help&nbsp;11]</span></a>
+ negative number.<sup class="help-link"><a href="#help-11" title="see Sequence [S-11] in the Special Assistance Supplement">[S-11]</a></sup>
 </div></div>
 
-<p><div id="help-3" class="help-item"><span class="help-num">3.</span><div class="help-body"><ol>
+<p><div id="help-3" class="help-item"><h3 class="help-num">S-3 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 8)</span></h3><div class="help-body"><ol>
 <li><span class="item-label">1.</span> Did you properly convert each of the given weights to masses before
             putting them into the expression for momentum?</li>
 <li><span class="item-label">2.</span> Did you calculate the total momentum, before the collision, using
@@ -1214,12 +1208,10 @@ paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
 <li><span class="item-label">4.</span> Did you set the “after” momentum equal to \(mv\)?</li>
 <li><span class="item-label">5.</span> Did you remember that the total mass after the collision is just
             the sum of the masses of the two?</li>
-</ol>
-
- <a href="#help-8" class="help-link"><span title="Special Assistance">[help&nbsp;8]</span></a>
+</ol><sup class="help-link"><a href="#help-8" title="see Sequence [S-8] in the Special Assistance Supplement">[S-8]</a></sup>
 </div></div>
 
-<p><div id="help-4" class="help-item"><span class="help-num">4.</span><div class="help-body">Solving this problem symbolically involves a lot of algebra.
+<p><div id="help-4" class="help-item"><h3 class="help-num">S-4 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 10)</span></h3><div class="help-body">Solving this problem symbolically involves a lot of algebra.
  We suggest solving this problem numerically.
  To do this, calculate the numerical magnitude of the  momentum of each of
  the outgoing particles separately and draw the initial momentum and final
@@ -1228,17 +1220,17 @@ paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
  For this special case the rest of the solution takes only a few lines.
 </div></div>
 
-<p><div id="help-5" class="help-item"><span class="help-num">5.</span><div class="help-body">Apply conservation of momentum separately to the \(x\)- and \(y\)-components of
+<p><div id="help-5" class="help-item"><h3 class="help-num">S-5 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 11)</span></h3><div class="help-body">Apply conservation of momentum separately to the \(x\)- and \(y\)-components of
  momentum, leaving symbols for the (unknown) \(x\)- and \(y\)-components of the
  momentum of the larger mass after the collision.
  That gives you two equations.
  Solve for the two components, combine them to form a vector, and find the
  magnitude of the vector.
  Finally, divide that by the mass to get the speed.
- Get the angle from the ratio of the components. <a href="#help-17" class="help-link"><span title="Special Assistance">[help&nbsp;17]</span></a>
+ Get the angle from the ratio of the components.<sup class="help-link"><a href="#help-17" title="see Sequence [S-17] in the Special Assistance Supplement">[S-17]</a></sup>
 </div></div>
 
-<p><div id="help-6" class="help-item"><span class="help-num">6.</span><div class="help-body"> Answers:
+<p><div id="help-6" class="help-item"><h3 class="help-num">S-6 <span class="help-origin">(from [S-1])</span></h3><div class="help-body"> Answers:
 <p><ul>
 <li><span class="item-label">1.</span> \(\vec{p}_1 + \vec{p}_2 + \ldots + \vec{p}_N =
            \sum_{k=1}^N \vec{p}_k\)</li>
@@ -1253,92 +1245,91 @@ paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
 
 </div></div>
 
-<p><div id="help-7" class="help-item"><span class="help-num">7.</span><div class="help-body">Note that an integral between two points is the area under the curve
- between those same two points.
- <a href="#help-18" class="help-link"><span title="Special Assistance">[help&nbsp;18]</span></a>
+<p><div id="help-7" class="help-item"><h3 class="help-num">S-7 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 12)</span></h3><div class="help-body">Note that an integral between two points is the area under the curve
+ between those same two points.<sup class="help-link"><a href="#help-18" title="see Sequence [S-18] in the Special Assistance Supplement">[S-18]</a></sup>
 </div></div>
 
-<p><div id="help-8" class="help-item"><span class="help-num">8.</span><div class="help-body">The \(x\)- and \(y\)-components of momentum are conserved separately. <a href="#help-15" class="help-link"><span title="Special Assistance">[help&nbsp;15]</span></a>
+<p><div id="help-8" class="help-item"><h3 class="help-num">S-8 <span class="help-origin">(from [S-3])</span></h3><div class="help-body">The \(x\)- and \(y\)-components of momentum are conserved separately.<sup class="help-link"><a href="#help-15" title="see Sequence [S-15] in the Special Assistance Supplement">[S-15]</a></sup>
 </div></div>
 
-<p><div id="help-9" class="help-item"><span class="help-num">9.</span><div class="help-body">The unit “lb” is a unit of weight, not mass.
+<p><div id="help-9" class="help-item"><h3 class="help-num">S-9 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 14)</span></h3><div class="help-body">The unit “lb” is a unit of weight, not mass.
 </div></div>
 
-<p><div id="help-10" class="help-item"><span class="help-num">10.</span><div class="help-body">\(Mv = M(0.8v)\cos 30^\circ + 2M(u)\cos\theta\) <br>
+<p><div id="help-10" class="help-item"><h3 class="help-num">S-10 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 15)</span></h3><div class="help-body">\(Mv = M(0.8v)\cos 30° + 2M(u)\cos\theta\) <br>
 
- \(0 = M(0.8v)\sin 30^\circ - 2M(u)\sin\theta\) <br>
+ \(0 = M(0.8v)\sin 30° - 2M(u)\sin\theta\) <br>
 
- Solve for \(\theta\). <a href="#help-12" class="help-link"><span title="Special Assistance">[help&nbsp;12]</span></a>
+ Solve for \(\theta\).<sup class="help-link"><a href="#help-12" title="see Sequence [S-12] in the Special Assistance Supplement">[S-12]</a></sup>
 </div></div>
 
-<p><div id="help-11" class="help-item"><span class="help-num">11.</span><div class="help-body">\(\vec{p}_i = \left( \frac{0.64\,\text{lb}}{32\unit{ft/s^{2}}} \right)
-            \left[ (30\,\text{ft/s})\cos 45^\circ\,\hat{x}
-                  -(30\,\text{ft/s})\sin 45^\circ\,\hat{y} \right]\)<br>
+<p><div id="help-11" class="help-item"><h3 class="help-num">S-11 <span class="help-origin">(from [S-2])</span></h3><div class="help-body">\(\vec{p}_i = \left( \frac{0.64\,\text{lb}}{32\,\text{ft/s}^{2}\text{}} \right)
+            \left[ (30\,\text{ft/s})\cos 45°\,\hat{x}
+                  -(30\,\text{ft/s})\sin 45°\,\hat{y} \right]\)<br>
 
  That's enough help!
 </div></div>
 
-<p><div id="help-12" class="help-item"><span class="help-num">12.</span><div class="help-body">Divide all terms by (\(Mu\)), then replace (\(v/u\)) by the symbol \(a\)
+<p><div id="help-12" class="help-item"><h3 class="help-num">S-12 <span class="help-origin">(from [S-10])</span></h3><div class="help-body">Divide all terms by (\(Mu\)), then replace (\(v/u\)) by the symbol \(a\)
  (an arbitrary symbol).
  That leaves two equations in two unknowns (\(a\) and \(\theta\)).
  Solve for \(\theta\).
- To an unwarranted number of digits, \(\theta = 52.5^\circ\).
- <span class="tex-unknown" title="unknown macro">\furtherhelp</span>21
+ To an unwarranted number of digits, \(\theta = 52.5°\).
+ <a href="#help-21" class="help-link help-link-inline" title="Special Assistance">[S-21]</a>
 </div></div>
 
-<p><div id="help-13" class="help-item"><span class="help-num">13.</span><div class="help-body">If you claim “I don't know how to get the average force,” then you did
+<p><div id="help-13" class="help-item"><h3 class="help-num">S-13 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 5)</span></h3><div class="help-body">If you claim “I don't know how to get the average force,” then you did
  not pay attention to this module's text or even bother to skim over it
  to find the relevant material.
 </div></div>
 
-<p><div id="help-14" class="help-item"><span class="help-num">14.</span><div class="help-body">Use Newton's third law.
+<p><div id="help-14" class="help-item"><h3 class="help-num">S-14 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 5)</span></h3><div class="help-body">Use Newton's third law.
 </div></div>
 
-<p><div id="help-15" class="help-item"><span class="help-num">15.</span><div class="help-body">\(\vec{p}_s + \vec{p}_w =
-     \left( \frac{150\,\text{lb}}{32\unit{ft/s^{2}}} \right)
+<p><div id="help-15" class="help-item"><h3 class="help-num">S-15 <span class="help-origin">(from [S-8])</span></h3><div class="help-body">\(\vec{p}_s + \vec{p}_w =
+     \left( \frac{150\,\text{lb}}{32\,\text{ft/s}^{2}\text{}} \right)
                                        (5.0\,\text{ft/s})\,\hat{x} +
-     \left( \frac{100\,\text{lb}}{32\unit{ft/s^{2}}} \right)
+     \left( \frac{100\,\text{lb}}{32\,\text{ft/s}^{2}\text{}} \right)
                                        (4.0\,\text{ft/s})\,\hat{y}\) <br>
 
- \(\vec{p}_{w+s} = \left( \frac{250\,\text{lb}}{32\unit{ft/s^{2}}} \right)
+ \(\vec{p}_{w+s} = \left( \frac{250\,\text{lb}}{32\,\text{ft/s}^{2}\text{}} \right)
                       (v_x\,\hat{x} + v_y\,\hat{y})\) <br>
 
  Now solve for \(v_x\) and \(v_y\).
 </div></div>
 
-<p><div id="help-16" class="help-item"><span class="help-num">16.</span><div class="help-body">Do problems&nbsp;1-8 successfully before attempting this one.
+<p><div id="help-16" class="help-item"><h3 class="help-num">S-16 <span class="help-origin">(from AS-II-problem 9)</span></h3><div class="help-body">Do problems&nbsp;1-8 successfully before attempting this one.
 </div></div>
 
-<p><div id="help-17" class="help-item"><span class="help-num">17.</span><div class="help-body">\(Mv = M(v/2)\cos 120^\circ + 3.0MV\cos\theta\) <br>
+<p><div id="help-17" class="help-item"><h3 class="help-num">S-17 <span class="help-origin">(from [S-5])</span></h3><div class="help-body">\(Mv = M(v/2)\cos 120° + 3.0MV\cos\theta\) <br>
 
- \(0 =  M(v/2)\sin 120^\circ + 3.0MV\sin\theta\) <br>
+ \(0 =  M(v/2)\sin 120° + 3.0MV\sin\theta\) <br>
 
- Solve for \(\theta\). <a href="#help-19" class="help-link"><span title="Special Assistance">[help&nbsp;19]</span></a>
+ Solve for \(\theta\).<sup class="help-link"><a href="#help-19" title="see Sequence [S-19] in the Special Assistance Supplement">[S-19]</a></sup>
 </div></div>
 
-<p><div id="help-18" class="help-item"><span class="help-num">18.</span><div class="help-body">\(\Delta v_x = \frac{1}{m} (400\,\text{N})(0.02\,\text{s}) =
+<p><div id="help-18" class="help-item"><h3 class="help-num">S-18 <span class="help-origin">(from [S-7])</span></h3><div class="help-body">\(\Delta v_x = \frac{1}{m} (400\,\text{N})(0.02\,\text{s}) =
                       1.6\,\text{N\,s}\)<br>
 
  \(\Delta v_y = \frac{1}{m} (400\,\text{N})(0.015\,\text{s}) =
                       1.2\,\text{N\,s}\)
 </div></div>
 
-<p><div id="help-19" class="help-item"><span class="help-num">19.</span><div class="help-body">Divide all terms by (\(Mv\)), then replace (\(V/v\)) by the symbol \(a\)
+<p><div id="help-19" class="help-item"><h3 class="help-num">S-19 <span class="help-origin">(from [S-17])</span></h3><div class="help-body">Divide all terms by (\(Mv\)), then replace (\(V/v\)) by the symbol \(a\)
  (an arbitrary symbol).
  That leaves two equations in two unknowns (\(a\) and \(\theta\)).
  Solve for \(\theta\).
 </div></div>
 
-<p><div id="help-20" class="help-item"><span class="help-num">20.</span><div class="help-body">\(\vec{F}_{av} = \left( \frac{1}{.40\,\text{s}} \right)
-           \left( \frac{160\,\text{lb}}{32\unit{ft/s^{2}}} \right)
-           \left[ (23\,\text{ft/s})(\cos 34^\circ \,\hat{y} +
-                                  \sin 34^\circ \,\hat{x})
+<p><div id="help-20" class="help-item"><h3 class="help-num">S-20 <span class="help-origin">(from Problem&nbsp;Supplement&nbsp;II-problem 14)</span></h3><div class="help-body">\(\vec{F}_{av} = \left( \frac{1}{.40\,\text{s}} \right)
+           \left( \frac{160\,\text{lb}}{32\,\text{ft/s}^{2}\text{}} \right)
+           \left[ (23\,\text{ft/s})(\cos 34° \,\hat{y} +
+                                  \sin 34° \,\hat{x})
                  -(-11\,\text{ft/s})\,\hat{y} \right]\) <br>
 
  \(\phantom{F_{av}} = (376\,\hat{y} + 160\,\hat{x})\,\text{lb}\)
 </div></div>
 
-<p><div id="help-21" class="help-item"><span class="help-num">21.</span><div class="help-body">Solving two equations that each contain the same two unknowns:
+<p><div id="help-21" class="help-item"><h3 class="help-num">S-21 <span class="help-origin">(from [S-12])</span></h3><div class="help-body">Solving two equations that each contain the same two unknowns:
  <ul>
 <li><span class="item-label">1.</span> Solve one of the equations for either of the unknowns
  (pick one).  Call it unknown&nbsp;#1.</li>
@@ -1368,7 +1359,7 @@ paired forces are added (i.e., \(\vec{F}_{j \text{ on } k}\) +
 acceleration given by
 \((2.1  \hat{x} - 4.8 \hat{y})\,\text{m}\),
 \((1.2  \hat{x} + 1.6 \hat{z})\,\text{m/s}\), and
-\((-2.0 \hat{y} + 1.5 \hat{z})\unit{m/s^{2}}\):
+\((-2.0 \hat{y} + 1.5 \hat{z})\,\text{m/s}^{2}\text{}\):
 <ol>
 
 </ol>

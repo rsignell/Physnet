@@ -47,8 +47,7 @@
 <p><section id="sect-1" class="module-section section-text"><h2 id="sect-1">1. Computer Program “Orbit”</h2>
 
 <p><div class="figure-full"><figure id="fig-1"><img src="figures/m105gr01.svg" alt="Figure 1" class="physnet-fig"><figcaption>Fig.&nbsp;1. Graphed output for these input values:
-<p><table class="physnet-table"><tbody><tr><td>ENTER X(KM)?</td><td>-6667</td></tr><tr><td>ENTER Y(KM)?</td><td>0</td></tr><tr><td>ENTER THETA(DEG)?</td><td>90</td></tr><tr><td>ENTER V(KM/SEC)?</td><td>8.357924</td></tr><tr><td>ENTER DELTA(SEC)?</td><td>2</td></tr><tr><td>MAX T(SEC)?</td><td>5040</td></tr><tr><td>PRINT EVERY Nth: N?</td><td>100</td></tr></tbody></table>
-</figcaption></figure></div>
+<p><table class="physnet-table"><tbody><tr><td>ENTER X(KM)?</td><td>-6667</td></tr><tr><td>ENTER Y(KM)?</td><td>0</td></tr><tr><td>ENTER THETA(DEG)?</td><td>90</td></tr><tr><td>ENTER V(KM/SEC)?</td><td>8.357924</td></tr><tr><td>ENTER DELTA(SEC)?</td><td>2</td></tr><tr><td>MAX T(SEC)?</td><td>5040</td></tr><tr><td>PRINT EVERY Nth: N?</td><td>100</td></tr></tbody></table></figcaption></figure></div>
 
 <p><h3 id="pcap-1-a">1a. Overview</h3>
 
@@ -68,7 +67,7 @@ A typical input and its corresponding pictorial representation are shown in
 The program ORBIT automatically puts in the earth's mass and the
 gravitational constant in SI units and then solves the differential equation
 of motion,
-<p>\[\frac{\vec{F}}{m} = \vec{a} = \frac{d^2\vec{r}}{dt^2} = -\frac{Gm_E}{r^2}\hat{r}\,,\]
+<p><span class="eqn-block" id="eqn-1">\[\frac{\vec{F}}{m} = \vec{a} = \frac{d^2\vec{r}}{dt^2} = -\frac{Gm_E}{r^2}\hat{r}\,,\]<span class="eqn-number">(1)</span></span>
 <p>for the position of the mass at the ends of successive time-intervals
 \(\Delta\) (“DELTA” in <a href="#fig-1" class="fig-ref">Fig.&nbsp;1</a>).
 The program ORBIT does not (in general) print out all the net-point time values
@@ -93,8 +92,8 @@ You should make 3 runs which differ only in the values used for v.
 Choose your three values to produce:
 <ol>
 <li><span class="item-label">1.</span> a circular orbit: \(v^2 = G\,m_E/r\),</li>
-<li><span class="item-label">2.</span> an elliptical orbit: \(G\,m_E/r\,<\,v^2\,<\,2\,G\,m_E/r\), and</li>
-<li><span class="item-label">3.</span> a hyperbolic trajectory: \(2\,G\,m_E/r\,<\,v^2\,<\,\infty\).
+<li><span class="item-label">2.</span> an elliptical orbit: \(G\,m_E/r\, \lt \,v^2\, \lt \,2\,G\,m_E/r\), and</li>
+<li><span class="item-label">3.</span> a hyperbolic trajectory: \(2\,G\,m_E/r\, \lt \,v^2\, \lt \,\infty\).
 <p><sup class="fn-ref"><a href="#fn-3" id="fnref-3">3</a></sup></li>
 </ol>
 
@@ -159,7 +158,7 @@ point on the orbit, and then from there to the other focus, is the same for all
 points on the orbit (using a ruler, check several such paths from one focus to
 the other via a point on the orbit).
 Another way is to show that the points on the orbit obey the equation
-<p>\[\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2 = 1\,,\]
+<p><span class="eqn-block" id="eqn-2">\[\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2 = 1\,,\]<span class="eqn-number">(2)</span></span>
 <p>which is the Cartesian form for the equation of the ellipse centered at the
 origin.
 Show that the equation holds for several points on the orbit.
@@ -201,8 +200,9 @@ plane has an equivalent point on the other side.
 
 <p><section id="sect-A" class="module-section section-text"><h2 id="sect-A">A. Basic to Calculate Orbits</h2>
 
-<p><span class="tex-unknown" title="unknown macro">\lstset</span>language=Basic
-<span class="tex-unknown" title="unknown macro">\lstinputlisting</span>m105p.bas
+<p>
+<pre class="code-listing"><em>[Listing: m105p.bas]</em></pre>
+
 <p></section>
 
 <p>

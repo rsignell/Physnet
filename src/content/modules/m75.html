@@ -106,17 +106,17 @@ Then the Lorentz transformation may be written:
 <p>where we have utilized the widely used notation:
 <p>\[\beta \equiv \frac{v}{c}; \qquad \gamma \equiv (1 - \beta^2)^{-1/2}.\]
 <p>This may be written as a matrix equation:
-<div class="centered">\(\left( \begin{array}[c]{c}
+<div class="centered">\(\left( \begin{array}{c}
  x' \\ 
  y' \\ 
  z' \\
 ct'	 
-\end{array} \right) = \left( \begin{array}[c]{c c c c}
+\end{array} \right) = \left( \begin{array}{c c c c}
  1 & 0 & 0              & 0              \\	     
  0 & 1 & 0              & 0              \\ 
  0 & 0 & \gamma	        & - \beta \gamma \\     
  0 & 0 & - \beta \gamma &  \gamma
-\end{array} \right) \cdot \left( \begin{array}[c]{c}
+\end{array} \right) \cdot \left( \begin{array}{c}
  x \\
  y \\
  z \\
@@ -126,13 +126,13 @@ ct'
 Since the \(x\) and \(y\) coordinates are not affected in 
 this case we may suppress them and write:
 <div class="centered">
-\(\left( \begin{array}[c]{c}
+\(\left( \begin{array}{c}
 z'  \\
 ct' 
-\end{array} \right) = \left( \begin{array}[c]{c c}
+\end{array} \right) = \left( \begin{array}{c c}
 \gamma         & -\beta \gamma \\
 -\beta \gamma  &   \gamma      
-\end{array} \right) \cdot \left( \begin{array}[c]{c}
+\end{array} \right) \cdot \left( \begin{array}{c}
  z \\
  ct\\
 \end{array} \right)\)
@@ -166,16 +166,16 @@ Consider a Lorentz frame moving with velocity \(v\) along the \(x\)-direction.
 Then, in this new frame, the particle is moving with velocity \(-v\) along
 \(x'\)-axis and:
 <div class="centered">
-\(\left( \begin{array}[c]{c}
+\(\left( \begin{array}{c}
 p_x' \\
 E'/c 
-\end{array} \right) = \left( \begin{array}[c]{c c}
+\end{array} \right) = \left( \begin{array}{c c}
 \gamma         & -\beta \gamma \\
 -\beta \gamma  &   \gamma      
-\end{array} \right) \cdot \left( \begin{array}[c]{c}
+\end{array} \right) \cdot \left( \begin{array}{c}
  0 \\
  m_0 c\\
-\end{array} \right) = \left( \begin{array}[c]{c}
+\end{array} \right) = \left( \begin{array}{c}
 - \beta \gamma m_0 c \\
  \gamma m_0 c
 \end{array} \right)\)
@@ -199,7 +199,7 @@ Lorentz frame.
 <p><div class="figure-full"><figure id="fig-5"><img src="figures/m75gr05.svg" alt="Figure 5" class="physnet-fig"><figcaption>Fig.&nbsp;5. A velocity as seen from a stationary
 frame and from a moving frame.</figcaption></figure></div>
 
-<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(\vec{p} = \frac{m_0 \vec{u}}{\sqrt{1 - (u/c)^2}}\)</td><td>\qquad </td><td>\(\vec{p}' = \frac{m_0 \vec{u}'}{\sqrt{1 - (u'/c)^2}}\)</td></tr><tr><td>\(\frac{E}{c} = \frac{m_0 c}{\sqrt{1 - (u/c)^2}}\)</td><td>\qquad </td><td>\(\frac{E'}{c} = \frac{m_0 c}{\sqrt{1 - (u'/c)^2}}\)</td></tr></tbody></table>
+<p><div class="centered"><table class="physnet-table"><tbody><tr><td>\(\vec{p} = \frac{m_0 \vec{u}}{\sqrt{1 - (u/c)^2}}\)</td><td>&emsp;&emsp;</td><td>\(\vec{p}' = \frac{m_0 \vec{u}'}{\sqrt{1 - (u'/c)^2}}\)</td></tr><tr><td>\(\frac{E}{c} = \frac{m_0 c}{\sqrt{1 - (u/c)^2}}\)</td><td>&emsp;&emsp;</td><td>\(\frac{E'}{c} = \frac{m_0 c}{\sqrt{1 - (u'/c)^2}}\)</td></tr></tbody></table>
 </div>
 
 <p><a href="#fig-5" class="fig-ref">Fig.&nbsp;5</a> shows a particle of mass \(m_0\) moving with velocity \(\vec{u}\) in the
@@ -208,7 +208,7 @@ The second frame is moving at velocity \(v\) with respect to the first frame,
 along the \(x\)-axis, and the particle has a velocity \(\vec{u}'\) as seen in the
 second frame.
 <p>As usual, let \(\beta = v/c\) and \(\gamma = \left( 1 - \beta^2 \right)^{-1/2}\).
-<span class="tex-unknown" title="unknown macro">\enlargethispage</span>1pc
+
 The velocity addition law gives us:
 <p>\[u_x' =
 \frac{u_x - v}{1 - \frac{u_x v}{c^2}} =
@@ -222,21 +222,16 @@ The velocity addition law gives us:
 <p>The quantity \(\sqrt{1 - (u'/c)^2)}\) occurs several times in the energy and
 momentum formulas so let us calculate it in terms of the velocity in the first
 (unprimed) frame:
-\[\begin{aligned}(u')^2 & = & (u'_x)^2 + (u'_y)^2 + (u'_z)^2 \\
-       & = & \frac{(u_x - \beta c)^2 + \gamma^{-2} (u_y^2 + u_z^2)}{\left( 1 - \frac{u_x}{c} \beta \right)^2}\end{aligned}\]
+\[\begin{aligned}(u')^2 &= (u'_x)^2 + (u'_y)^2 + (u'_z)^2 \\ &= \frac{(u_x - \beta c)^2 + \gamma^{-2} (u_y^2 + u_z^2)}{\left( 1 - \frac{u_x}{c} \beta \right)^2}\end{aligned}\]
 
 So:
-\[\begin{aligned}1 - \left( \frac{u'}{c} \right)^2 & = &
-       1 - \frac{\left( \frac{u_x}{c} - \beta \right)^2 +
-       \gamma^{-2} \left( \frac{u_y^2 + u_z^2}{c^2}\right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
- & = & \frac{1 - \frac{u_x^2}{c^2} - \beta^2 +
+\[\begin{aligned}1 - \left( \frac{u'}{c} \right)^2 &= 1 - \frac{\left( \frac{u_x}{c} - \beta \right)^2 +
+       \gamma^{-2} \left( \frac{u_y^2 + u_z^2}{c^2}\right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\ &= \frac{1 - \frac{u_x^2}{c^2} - \beta^2 +
        \frac{u_x^2 \beta^2}{c^2} -
-       (1 - \beta^2) \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
- & = & \frac{\left( 1 - \beta^2 \right)
+       (1 - \beta^2) \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\ &= \frac{\left( 1 - \beta^2 \right)
        \left( 1 - \frac{u_x^2}{c^2} \right) -
        \left( 1 - \beta^2 \right)
-       \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\
- & = & \frac{1}{\gamma^2}
+       \left( \frac{u_y^2 + u_z^2}{c^2} \right)}{\left( 1 - \frac{u_x}{c}\beta \right)^2} \\ &= \frac{1}{\gamma^2}
        \frac{1 - \frac{u_x^2 + u_y^2 + u_z^2}{c^2}}{\left( 1 - \frac{u_x}{c} \beta \right)^2} =
        \frac{1}{\gamma^2} \frac{1 - \frac{u^2}{c^2}}{\left( 1 - \frac{u_x}{c} \beta \right)^2}\end{aligned}\]
 
@@ -248,9 +243,8 @@ second (primed) frame in terms of the values as seen in the first (unprimed)
 frame:
 <p>\[p_x = \frac{m_0 u_x}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
 p_x' = \frac{m_0 u_x'}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
-<p>\[\begin{aligned}p_x' & = & m_0 \gamma \frac{u_x - \beta c}{\left( 1 - \frac{u_x}{c} \beta \right)}
-               \frac{\left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
-     & = & \frac{\gamma m_0 u_x - \gamma \beta m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} =
+<p>\[\begin{aligned}p_x' &= m_0 \gamma \frac{u_x - \beta c}{\left( 1 - \frac{u_x}{c} \beta \right)}
+               \frac{\left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\ &= \frac{\gamma m_0 u_x - \gamma \beta m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} =
             \gamma p_x - \beta \gamma \frac{E}{c}\end{aligned}\]
 
 <p>\[p_y = \frac{m_0 u_y}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
@@ -263,24 +257,22 @@ p_z' = \frac{m_0 u_z'}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
                \frac{\gamma \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} = p_z\]
 <p>\[\frac{E}{c} = \frac{m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \qquad \text{and} \qquad
 \frac{E'}{c} = \frac{m_0 c}{\left( 1 - \frac{u'^2}{c^2} \right)^{1/2}}\]
-\[\begin{aligned}\frac{E'}{c} & = & \frac{m_0 c \gamma
-                     \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
-     & = & - \beta \gamma \frac{m_0 u_x}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} +
-           \gamma \frac{m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\
-     & = & -\beta \gamma p_x + \gamma \frac{E}{c}.\end{aligned}\]
+\[\begin{aligned}\frac{E'}{c} &= \frac{m_0 c \gamma
+                     \left( 1 - \frac{u_x}{c} \beta \right)}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\ &= - \beta \gamma \frac{m_0 u_x}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} +
+           \gamma \frac{m_0 c}{\left( 1 - \frac{u^2}{c^2} \right)^{1/2}} \\ &= -\beta \gamma p_x + \gamma \frac{E}{c}.\end{aligned}\]
 
 If we write the above equations in matrix form we obtain:
-<p>\(\left( \begin{array}[c]{c}
+<p>\(\left( \begin{array}{c}
  p_x' \\ 
  p_y' \\ 
  p_z' \\
  E'/c	 
-\end{array} \right) = \left( \begin{array}[c]{c c c c}
+\end{array} \right) = \left( \begin{array}{c c c c}
  \gamma        & 0 & 0 & -\beta \gamma \\	     
    0           & 1 & 0 &       0       \\ 
    0           & 0 & 1 &       0       \\
  -\beta \gamma & 0 & 0 &   \gamma      \\
-\end{array} \right) = \left( \begin{array}[c]{c}
+\end{array} \right) = \left( \begin{array}{c}
  p_x \\
  p_y \\
  p_z \\
@@ -386,32 +378,32 @@ In non-flat spacetimes, coordinates are not the components of four-vectors. <a h
 <p><h4 class="brief-ans">Brief Answers</h4>
 
 <p><ol>
-<li><span class="item-label">1.</span> \(\left ( \begin{array}[c]{c} 1000 \\ 0 \end{array} \right)\)</li>
-<li><span class="item-label">2.</span> \(\left( \begin{array}[c]{c c}
+<li><span class="item-label">1.</span> \(\left ( \begin{array}{c} 1000 \\ 0 \end{array} \right)\)</li>
+<li><span class="item-label">2.</span> \(\left( \begin{array}{c c}
  \gamma             & -\frac{1}{2}\gamma \\
  -\frac{1}{2}\gamma & \gamma             \end{array} \right)
-\cdot \left ( \begin{array}[c]{c}
+\cdot \left ( \begin{array}{c}
      1000 \\ 0 \end{array} \right)
- = \left( \begin{array}[c]{c} 1000 \gamma \\
+ = \left( \begin{array}{c} 1000 \gamma \\
    -\frac{1}{2} 1000 \gamma \end{array} \right)
- = \left( \begin{array}[c]{c} \frac{2}{\sqrt{3}} \times 1000 \\
+ = \left( \begin{array}{c} \frac{2}{\sqrt{3}} \times 1000 \\
                        -\frac{1}{\sqrt{3}} \times 1000 \end{array} \right)\)
 <p>which used:
 <p>\(\gamma = \frac{1}{\left[ 1 - (1/4) \right]^{1/2}} =
           \frac{1}{\left( 3/4 \right)^{1/2}} =
           \frac{2}{\sqrt{3}}\)</li>
-<li><span class="item-label">3.</span> a. \(\left( \begin{array}[c]{c} 0 \\ 0 \end{array} \right)\) \qquad 
-           b. \(\left( \begin{array}[c]{c} 0 \\ \frac{c}{v} L_2 \end{array} \right)\)</li>
-<li><span class="item-label">4.</span> a. \(\left( \begin{array}[c]{c} 0 \\ 0 \end{array} \right)\) \qquad 
-           b. \(\left( \begin{array}[c]{c} L_1 \\ \frac{c}{v} L_1 \end{array} \right)\)</li>
-<li><span class="item-label">5.</span> \(\left( \begin{array}[c]{c} 0 \\
+<li><span class="item-label">3.</span> a. \(\left( \begin{array}{c} 0 \\ 0 \end{array} \right)\) &emsp;&emsp;
+           b. \(\left( \begin{array}{c} 0 \\ \frac{c}{v} L_2 \end{array} \right)\)</li>
+<li><span class="item-label">4.</span> a. \(\left( \begin{array}{c} 0 \\ 0 \end{array} \right)\) &emsp;&emsp;
+           b. \(\left( \begin{array}{c} L_1 \\ \frac{c}{v} L_1 \end{array} \right)\)</li>
+<li><span class="item-label">5.</span> \(\left( \begin{array}{c} 0 \\
                    \frac{L_2}{\beta} \end{array} \right) =
-           \left( \begin{array}[c]{c c}
+           \left( \begin{array}{c c}
                                  \gamma   & -\beta \gamma \\
                             -\beta \gamma &    \gamma     \end{array} \right)
-           \cdot \left( \begin{array}[c]{c}
+           \cdot \left( \begin{array}{c}
                    L_1 \\ \frac{L_1}{\beta}\end{array} \right)
-           = \left( \begin{array}[c]{c} 0 \\
+           = \left( \begin{array}{c} 0 \\
                          -\beta \gamma L_1 + \frac{\gamma L_1}{\beta}
              \end{array} \right)\)
 <p>           \(\Longrightarrow L_2 = \gamma L_1 (1 - \beta^2) =
@@ -424,70 +416,66 @@ In non-flat spacetimes, coordinates are not the components of four-vectors. <a h
 </ol>
 </li>
 <li><span class="item-label">a.</span> Lorentz Transformation in the \(z\)-direction:</li>
-<li>\(\left( \begin{array}[c]{c c c c}
+<li>\(\left( \begin{array}{c c c c}
  1 & 0 & 0             & 0              \\
  0 & 1 & 0             & 0              \\ 
  0 & 0 & \gamma        & - \beta \gamma \\
  0 & 0 &- \beta \gamma &     \gamma     \end{array} \right) \cdot
- \left( \begin{array}[c]{c}
+ \left( \begin{array}{c}
  r \cos(2 \pi t/T) \\
  r \sin(2 \pi t/T) \\
           0        \\
      ct            \end{array} \right)\)
-<p> = \(\left( \begin{array}[c]{c}
+<p> = \(\left( \begin{array}{c}
  r \cos( 2 \pi t/T ) \\ 
  r \sin( 2 \pi t/T ) \\ 
  - v \gamma t        \\ 
    c \gamma t        \end{array} \right)\)
-= \(\left( \begin{array}[c]{c} 
+= \(\left( \begin{array}{c} 
  x' \\
  y' \\
  z' \\
  ct' \end{array} \right) \)</li>
 <li><span class="item-label">b.</span> From answer to part (a):
-<p><div class="env-lefteqnarray">
-	t' & = \gamma  t<br>
-    x' & = r \cos \left (\(\dfrac{2 \pi t'}{\gamma T}\) \right )<br>
-    y' & = r \sin \left (\(\dfrac{2 \pi t'}{\gamma T}\) \right )<br>
-    z' & = - v t'
-</div>
+<p>\[\begin{aligned}t' & = \gamma t \\ x' & = r \cos\left(\frac{2 \pi t'}{\gamma T} \right) \\ y' & = r \sin\left(\frac{2 \pi t'}{\gamma T} \right) \\ z' & = - v t'\end{aligned}\]
 
 <p>Therefore the period is: \(\gamma T = T'.\)</li>
-<li><span class="item-label">c.</span> <span class="tex-unknown" title="unknown macro">\dropmatrix</span>r \cos (2 \pi  t' / T') <br>
-                       r \sin (2 \pi  t' / T') <br>
-                       - v t'                <br>
-                       c t'                  
+<li><span class="item-label">c.</span> \[\begin{matrix}r \cos(2 \pi t' / T') \\
+                       r \sin(2 \pi t' / T') \\
+                       - v t'                \\
+                       c t'                  \end{matrix}\]
+
 </li>
 <li><span class="item-label">8.</span> 
 <ol>
 
 </ol>
 </li>
-<li><span class="item-label">a.</span> \(\left(\begin{array}[c]{c} p \\ E_1/c \end{array} \right) +
-              \left(\begin{array}[c]{c} 0 \\ m c   \end{array} \right) =
-              \left(\begin{array}[c]{c} p \\
+<li><span class="item-label">a.</span> \(\left(\begin{array}{c} p \\ E_1/c \end{array} \right) +
+              \left(\begin{array}{c} 0 \\ m c   \end{array} \right) =
+              \left(\begin{array}{c} p \\
                   \left( m^2 c^2 + p^2 \right)^{1/2} + mc \end{array} \right)\)</li>
-<li><span class="item-label">b.</span> \(\left(\begin{array}[c]{c c}
+<li><span class="item-label">b.</span> \(\left(\begin{array}{c c}
              \gamma         & - \beta \gamma     \\
              - \beta \gamma & \gamma \end{array} \right) \cdot
-           \left(\begin{array}[c]{c} p \\ E/c  \end{array} \right) =
-           \left(\begin{array}[c]{c}
+           \left(\begin{array}{c} p \\ E/c  \end{array} \right) =
+           \left(\begin{array}{c}
              \gamma (p - \beta E/c) \\ (-\beta p + E/c) \gamma
            \end{array} \right) =
-           \left(\begin{array}[c]{c} 0 \\ \neq 0  \end{array} \right)\)
+           \left(\begin{array}{c} 0 \\ \neq 0  \end{array} \right)\)
 <p>           where:  \(E = \left( m^2 c^2 + p^2 \right)^{1/2} + mc\)
 
 <p>Therefore we obtain \(\beta = p c/E\), which is different from the single
 particle formula.
 Note that this \(\beta\) is not the velocity for any particular particle since
 \(E/c = m c + (m^2 c^2 + p^2)^{1/2}\).</li>
-<li><span class="item-label">9.</span> \(\left(\begin{array}[c]{c c c}
+<li><span class="item-label">9.</span> \(\left(\begin{array}{c c c}
        \gamma         & 0 & + \beta \gamma \\
           0           & 1 &      0         \\
        + \beta \gamma & 0 & \gamma \end{array} \right) \cdot
-      \left(\begin{array}[c]{c}
+      \left(\begin{array}{c}
             0 \\ p \\ \left( m^2 c^2 + p^2 \right)^{1/2} \end{array} \right)\) =
-<p> \(\left(\begin{array}[c]{c}
+<p> \(\left(\begin{array}{c}
               \beta \gamma \left( m^2 c^2 + p^2 \right)^{1/2} \\
                                    p                         \\
               \gamma \left( m^2 c^2 + p^2 \right)^{1/2} \end{array} \right)\)
@@ -499,43 +487,43 @@ Note that this \(\beta\) is not the velocity for any particular particle since
                     \frac{1}{\left( 1 - 0.36 \right)^{1/2}} =
                     \frac{1}{0.8}\)
 <p>           The Lorentz transformation in the \(y\)-direction is:
-<p>           \(\left( \begin{array}[c]{c c c c}
+<p>           \(\left( \begin{array}{c c c c}
            1   &   0  &    0  &     0   \\
            0   & \gamma &  0  & - \beta \gamma \\
            0   &   0    &  1  &     0          \\
            0   & - \beta \gamma & 0 &  \gamma \end{array} \right)\).
-    The event is: \(\left( \begin{array}[c]{c}
+    The event is: \(\left( \begin{array}{c}
                                x_1 \\ 0 \\ 0 \\ c t_1 \end{array} \right)\),
 <p>    where: \(x_1 = 10\)&thinsp;m, \(t_1 = 10^{-6}\)&thinsp;sec.
-<p>           \(\left( \begin{array}[c]{c c c c}
+<p>           \(\left( \begin{array}{c c c c}
            1   &   0  &    0  &     0   \\
            0   & \gamma &  0  & - \beta \gamma \\
            0   &   0    &  1  &     0          \\
            0   & - \beta \gamma & 0 &  \gamma \end{array} \right) \cdot
-           \left( \begin{array}[c]{c}
+           \left( \begin{array}{c}
                                x_1 \\ 0 \\ 0 \\ c t_1 \end{array} \right)
-       =  \left( \begin{array}[c]{c}
+       =  \left( \begin{array}{c}
             x_1 \\ - v \gamma t_1 \\ 0 \\ \gamma c t_1 \end{array} \right)\)
-<p>       =  \(\left( \begin{array}[c]{c}
+<p>       =  \(\left( \begin{array}{c}
             10\,\text{m} \\
  - \frac{0.6}{0.8} \left( 3 \times 10^8 \right) \times 10^{-6}\,\text{m}\\
                0        \\
   \left( \frac{1}{0.8} \times 10^{-6}\,\text{s} \right) c
             \end{array} \right)
-       =  \left( \begin{array}[c]{c}
+       =  \left( \begin{array}{c}
             10\,\text{m} \\
             -225\,\text{m} \\
                0        \\
            c\,1.25 \times 10^{-6} \,\text{s} \end{array} \right)\)</li>
-<li><span class="item-label">11.</span> \(\left( \begin{array}[c]{c} m_0 c \\ \sqrt{2} m_0 c \end{array} \right)
-          - \left( \begin{array}[c]{c} 0 \\ m_0 c \end{array} \right)
- = \left( \begin{array}[c]{c} m_0 c \\ (\sqrt{2} - 1) m_0 c \end{array} \right)\)
-<p> \(\left( \begin{array}[c]{c c}
+<li><span class="item-label">11.</span> \(\left( \begin{array}{c} m_0 c \\ \sqrt{2} m_0 c \end{array} \right)
+          - \left( \begin{array}{c} 0 \\ m_0 c \end{array} \right)
+ = \left( \begin{array}{c} m_0 c \\ (\sqrt{2} - 1) m_0 c \end{array} \right)\)
+<p> \(\left( \begin{array}{c c}
        \gamma  & - \beta \gamma \\
  -\beta \gamma &       \gamma   \end{array} \right) \cdot
-  \left( \begin{array}[c]{c}
+  \left( \begin{array}{c}
          m_0 c \\ \left(\sqrt{2} - 1 \right) m_0 c \end{array}\right) =
-  \left( \begin{array}[c]{c}
+  \left( \begin{array}{c}
       \gamma m_0 c \left( 1 - \beta \left( \sqrt{2} - 1 \right) \right) \\
       \gamma m_0 c \left( - \beta + \sqrt{2} - 1 \right) \end{array}\right)\)
 <p>  \(\Longrightarrow \beta = \sqrt{2} - 1\)</li>
@@ -561,7 +549,7 @@ Note that this \(\beta\) is not the velocity for any particular particle since
 <p>\[u_y' = \frac{1}{\gamma}\,\frac{u_y}{(1-\frac{u_x}{c}\beta)}\]
 <p>\[u_z' = \frac{1}{\gamma}\,\frac{u_z}{(1-\frac{u_x}{c}\beta)}\]
 <p>\[\frac{1}{\sqrt{1 - (\frac{u'}{c})^2}} =
-\gamma\,\frac{1 - \frac{u_x}{\ds c} \beta}{\sqrt{1 - (\frac{u}{\ds c})^2}}\]
+\gamma\,\frac{1 - \frac{u_x}{\displaystyle  c} \beta}{\sqrt{1 - (\frac{u}{\displaystyle  c})^2}}\]
 <p>           where \(\beta = v/c\) and \(\gamma = (1 - \beta^2)^{-1/2}\).</li>
 <li><span class="item-label">3.</span> An event is seen in \(S_1\) to be at the spacetime point
            (10.0&thinsp;m, 0, 0, \(t c\)), where \(t = 1.0 \times 10^{-6}\)&thinsp;s.
